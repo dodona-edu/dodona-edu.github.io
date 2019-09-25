@@ -1,3 +1,10 @@
 title: "Dodona Docs"
 remote_theme: pmarsceill/just-the-docs
+
+# theme config
 search_enabled: false
+aux_links:
+  "Ga naar Dodona":
+    - "https://dodona.ugent.be"
+heading_anchors: true
+ga_tracking: UA-76309350-2
