@@ -1,0 +1,18 @@
+on: [push]
+
+name: CI
+
+jobs:
+
+  jekyll:
+    name: Build Jekyll site
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@master
+
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run --rm \
+        --volume="${{ github.workspace }}:/srv/jekyll" \
+        jekyll/builder:3.8.5 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build"
