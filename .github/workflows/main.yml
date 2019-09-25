@@ -12,7 +12,9 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Install dependencies
-        run: bundle install
+        run: |
+          gem install bundler:2.0.2
+          bundle install
 
       - name: Build site
         run: bundle exec jekyll build
