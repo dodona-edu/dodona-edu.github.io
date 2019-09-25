@@ -1,18 +1,18 @@
-on: [push]
-
 name: CI
 
-jobs:
+on: [push]
 
+jobs:
   jekyll:
     name: Build Jekyll site
     runs-on: ubuntu-latest
+    container:
+      image: ruby:2.6.4
     steps:
+      - uses: actions/checkout@v1
 
-    - uses: actions/checkout@master
+      - name: Install dependencies
+        run: bundle install
 
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run --rm \
-        --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:3.8.5 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build"
+      - name: Build site
+        run: bundle exec jekyll build
