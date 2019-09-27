@@ -11,7 +11,7 @@ nav_order: 2
 
 Inside an exercise repository, Dodona handles every directory containing a `config.json` file as a separate exercise. We expect this exercise directory to have a specific structure:
 
-- **A `config.json` file**: this file contains the [exercise-specific configuration](Reference-exercise-config). This configuration will be merged with all `dirconfig.json` files in the exercise's ancestor directories. You can always override config values set by a higher directory.
+- **A `config.json` file**: this file contains the [exercise-specific configuration](/references/exercise-config). This configuration will be merged with all `dirconfig.json` files in the exercise's ancestor directories. You can always override config values set by a higher directory.
 - **A `description` directory**: this directory contains the files describing the exercise containing:
   - **A `description.en.md` and/or `description.nl.md` file**: these files contain the English and/or Dutch description of the exercise.
   - **An optional `media` directory**: this directory contains static files such as images used in the exercise description.
