@@ -2,7 +2,7 @@
 layout: default
 title: References
 description: "Referentiebestanden Dodona"
-permalink: /references
+permalink: /references/
 nav_order: 3
 has_children: true
 ---
