@@ -14,7 +14,13 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler:2.0.2
+          gem install html-proofer
           bundle install
 
       - name: Build site
         run: bundle exec jekyll build
+
+      - name: Run htmlproofer
+        run: htmlproofer ./_site
+        env:
+          LANG: C.UTF-8
