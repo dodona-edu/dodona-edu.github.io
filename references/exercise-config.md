@@ -4,7 +4,7 @@ title: Exercise config
 description: "Exercise config reference Dodona"
 permalink: /references/exercise-config
 parent: References
-nav_order: 1
+nav_order: 2
 ---
 
 # Exercise configuration
