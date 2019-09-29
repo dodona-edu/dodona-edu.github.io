@@ -29,6 +29,10 @@ Dodona supports exercise descriptions in HTML and Markdown with several addition
 
 ## Images
 
+To use images in your exercise description, be sure to put the images in the `description/media/` [directory](/references/exercise-directory-structure) of your exercise.
+
+### Lightboxes
+
 Dodona automatically adds [lightbox support](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) to all images in exercise descriptions. If you click on an image, the image will open in a lightbox. It is possible to specify a caption for an image and to set an alternative (high-resolution) version for use in the lightbox.
 
 You can also trigger a lightbox manually using a link by adding a `dodona-lightbox` class:
@@ -36,11 +40,12 @@ You can also trigger a lightbox manually using a link by adding a `dodona-lightb
 <a href="image.jpg" class="dodona-lightbox">Show image</a>
 ```
 
-### Captions
+#### Captions
+{: .no_toc }
 
 You can specify a caption by using the `data-caption` attribute. If you don't provide such attribute, Dodona uses the value of the `alt` attribute.
 
-#### HTML
+##### HTML
 {: .no_toc }
 
 <div class="code-example" markdown="1">
@@ -57,7 +62,7 @@ A caption set using the `alt` attribute.
 <img src="image.jpg" alt="image description that will also be used as lightbox caption" />
 ```
 
-#### Markdown
+##### Markdown
 {: .no_toc }
 
 <div class="code-example" markdown="1">
@@ -74,11 +79,12 @@ A caption set using the `alt` attribute.
 ![image description that will also be used as lightbox caption](image.jpg "title text")
 ```
 
-### Alternative version
+#### Alternative version
+{: .no_toc }
 
 You can use an alternative version of your image in the lightbox. You could, for example, specify a low-resolution version in the general description and only load the high-resolution version in the lightbox. You can use the `data-large` attribute to specify the path of this alternative image.
 
-#### HTML
+##### HTML
 {: .no_toc }
 
 <div class="code-example" markdown="1">
@@ -88,7 +94,7 @@ An alternative high-resolution version of an image, set using the `data-large` a
 <img src="image.jpg" data-large="large-image.jpg" />
 ```
 
-#### Markdown
+##### Markdown
 {: .no_toc }
 
 <div class="code-example" markdown="1">
@@ -97,6 +103,20 @@ An alternative high-resolution version of an image, set using the `data-large` a
 ```markdown
 ![alt text](image.jpg "title text"){:data-large="large-image.jpg"}
 ```
+
+### Centered groups
+
+If you have multiple (small) images in an exercise description, you can display them inline next to each other in a centered group. This is done by wrapping all images with a `div` element with the `dodona-centered-group` class.
+
+```html
+<div class="dodona-centered-group">
+  <img src="image1.jpg" />
+  <img src="image2.jpg" />
+  <img src="image3.jpg" />
+</div>
+```
+
+You can also include tables or other elements in a centered group.
 
 ---
 
@@ -270,7 +290,3 @@ In markdown, prefix each line with a `>`.
 ```markdown
 > This is a quote.
 ```
-
-
-- [centered groups](https://github.ugent.be/dodona/dodona/wiki/Feature:-centered-groups)
-
