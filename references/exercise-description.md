@@ -106,19 +106,19 @@ Both HTML and markdown tables are supported. You can add the `table` class for p
 
 ```html
 <table class="table">
-    <thead>
-        <tr>
-            <th>...</th>
-            <th>...</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>...</td>
-            <td>...</td>
-        </tr>
-        ...
-    </tbody>
+  <thead>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    ...
+  </tbody>
 </table>
 ```
 
@@ -249,6 +249,28 @@ You can swap out `callout-info` for `callout-success`, `callout-warning`, or `ca
 
 There is no specific syntax for markdown, but since you can use html in markdown, you can simply use the above.
 
+---
+
+## Quotes
+
+To style text as a quote, you can use a blockquote.
+
+<div class="code-example" markdown="1">
+In HTML, wrap the quote with `<blockquote>` and `</blockquote>`.
+</div>
+```html
+<blockquote>
+  This is a quote.
+</blockquote>
+```
+
+<div class="code-example" markdown="1">
+In markdown, prefix each line with a `>`.
+</div>
+```markdown
+> This is a quote.
+```
+
+
 - [centered groups](https://github.ugent.be/dodona/dodona/wiki/Feature:-centered-groups)
-- [blockquotes](https://github.ugent.be/dodona/dodona/wiki/Feature:-blockquotes)
 
