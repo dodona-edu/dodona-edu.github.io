@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Exercise description
+title: Exercise descriptions
 description: "Exercise description reference Dodona"
 permalink: /references/exercise-description
 parent: References
@@ -23,13 +23,18 @@ Dodona supports exercise descriptions in HTML and Markdown with several addition
 
 ## Markdown
 
-Although markdown is widely used on the internet, the format is not standardized. This led to existence of several markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the markdown source. More information about basic markdown formatting can be found on this [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html).
+ For Dodona exercises, we recommend using markdown over HTML. Although markdown is widely used on the internet, the format is not standardized. This led to existence of several markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the markdown source. More information about basic markdown formatting can be found on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 
 ## Images
 
-Dodona automatically adds [lightbox support](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) to all images in exercise descriptions. It is possible to specify a caption for an image and to set an alternative (high-resolution) version for use in the lightbox.
+Dodona automatically adds [lightbox support](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) to all images in exercise descriptions. If you click on an image, the image will open in a lightbox. It is possible to specify a caption for an image and to set an alternative (high-resolution) version for use in the lightbox.
+
+You can also trigger a lightbox manually using a link by adding a `dodona-lightbox` class:
+```html
+<a href="image.jpg" class="dodona-lightbox">Show image</a>
+```
 
 ### Captions
 
