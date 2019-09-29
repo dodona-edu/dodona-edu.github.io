@@ -23,7 +23,7 @@ Dodona supports exercise descriptions in HTML and Markdown with several addition
 
 ## Markdown
 
- For Dodona exercises, we recommend using markdown over HTML. Although markdown is widely used on the internet, the format is not standardized. This led to existence of several markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the markdown source. More information about basic markdown formatting can be found on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+ For Dodona exercises, we recommend using markdown over HTML. Although markdown is widely used on the internet, the format is not standardized. This led to existence of several markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the markdown source. You can find more information about basic markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 
@@ -149,14 +149,14 @@ Both HTML and markdown tables are supported. You can add the `table` class for p
 Dodona supports a LaTeX-style syntax to render mathematical formulas using the [MathJax project](https://www.mathjax.org).
 
 ### Inline formulas
-To display mathematical symbols and formulas inline, simply wrap them with a double dollar symbol. This syntax is the same for both markdown and HTML.
+To display mathematical symbols and formulas inline, wrap them with a double dollar symbol. This syntax is the same for both markdown and HTML.
 
 ```markdown
 Some text with symbol $$a$$ and a formula $$x^2$$.
 ```
 
-### Block formulas
-To display formulas on their own line, markdown and html use a different syntax.
+### Block 
+Markdown and HTML use a different syntax to display formulas on their own line.
 
 <div class="code-example" markdown="1">
 When using HTML, wrap the formula with `\[` and `\]`.
@@ -179,7 +179,7 @@ $$
 
 ## Code snippets
 
-You can easily render code fragments in a mono spaced font with syntax highlighting on Dodona.
+You can easily render code fragments in a monospaced font with syntax highlighting on Dodona.
 
 ### Inline code
 
@@ -267,7 +267,7 @@ To use a callout, create a `div` element with the `callout` class, containing an
 
 You can swap out `callout-info` for `callout-success`, `callout-warning`, or `callout-danger` to use green, yellow, or red instead of blue as highlight color.
 
-There is no specific syntax for markdown, but since you can use html in markdown, you can simply use the above.
+There is no specific syntax for markdown, but since you can use html in markdown, you can use the above.
 
 ---
 
