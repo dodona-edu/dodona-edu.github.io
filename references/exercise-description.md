@@ -117,17 +117,48 @@ Both HTML and markdown tables are supported. You can add the `table` class for p
             <td>...</td>
             <td>...</td>
         </tr>
-        <tr>
-            <td>...</td>
-            <td>...</td>
-        </tr>
+        ...
     </tbody>
 </table>
 ```
 
+---
+
+## Math snippets
+
+Dodona supports a LaTeX-style syntax to render mathematical formulas using the [MathJax project](https://www.mathjax.org).
+
+### Inline formulas
+To display mathematical symbols and formulas inline, simply wrap them with a double dollar symbol. This syntax is the same for both markdown and HTML.
+
+```markdown
+Some text with symbol $$a$$ and a formula $$x^2$$.
+```
+
+### Block formulas
+To display formulas on their own line, markdown and html use a different syntax.
+
+<div class="code-example" markdown="1">
+When using HTML, wrap the formula with `\[` and `\]`.
+</div>
+```html
+The solution can be found with the following formula: \[a^2 = b^2 + c^2\]
+```
+
+<div class="code-example" markdown="1">
+When using markdown, use the double dollar syntax but put everything a new line.
+</div>
+```html
+The solution can be found with the following formula: 
+$$
+a^2 = b^2 + c^2
+$$
+```
+
+
+
 - [centered groups](https://github.ugent.be/dodona/dodona/wiki/Feature:-centered-groups)
 - [blockquotes](https://github.ugent.be/dodona/dodona/wiki/Feature:-blockquotes)
 - [code snippets](https://github.ugent.be/dodona/dodona/wiki/Feature:-code-snippets)
-- [math snippets](https://github.ugent.be/dodona/dodona/wiki/Feature:-math-snippets)
 - [callouts](https://github.ugent.be/dodona/dodona/wiki/Feature:-callouts)
 
