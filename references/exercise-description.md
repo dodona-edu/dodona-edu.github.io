@@ -225,8 +225,30 @@ Using Markdown, Dodona can automatically add syntax highlighting if you provide 
     let b = 42;
     ```
 
+---
+
+## Callouts
+
+To highlight something in your exercise description, you can use the callout style. This will result in an element as shown below:
+
+<div class="callout callout-info">
+<h4>Hello</h4>
+<p>This is an important info message.</p>
+</div>
+
+To use a callout, create a `div` element with the `callout` class, containing an optional `h4` tag and a paragraph.
+
+```html
+<div class="callout callout-info">
+  <h4>Hello</h4>
+  <p>This is an important info message.</p>
+</div>
+```
+
+You can swap out `callout-info` for `callout-success`, `callout-warning`, or `callout-danger` to use green, yellow, or red instead of blue as highlight color.
+
+There is no specific syntax for markdown, but since you can use html in markdown, you can simply use the above.
 
 - [centered groups](https://github.ugent.be/dodona/dodona/wiki/Feature:-centered-groups)
 - [blockquotes](https://github.ugent.be/dodona/dodona/wiki/Feature:-blockquotes)
-- [callouts](https://github.ugent.be/dodona/dodona/wiki/Feature:-callouts)
 
