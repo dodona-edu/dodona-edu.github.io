@@ -100,12 +100,34 @@ An alternative high-resolution version of an image, set using the `data-large` a
 
 ---
 
+## Tables
 
-- [tables](https://github.ugent.be/dodona/dodona/wiki/Feature:-tables)
+Both HTML and markdown tables are supported. You can add the `table` class for prettier formatting.
+
+```html
+<table class="table">
+    <thead>
+        <tr>
+            <th>...</th>
+            <th>...</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>...</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <td>...</td>
+            <td>...</td>
+        </tr>
+    </tbody>
+</table>
+```
+
 - [centered groups](https://github.ugent.be/dodona/dodona/wiki/Feature:-centered-groups)
 - [blockquotes](https://github.ugent.be/dodona/dodona/wiki/Feature:-blockquotes)
 - [code snippets](https://github.ugent.be/dodona/dodona/wiki/Feature:-code-snippets)
 - [math snippets](https://github.ugent.be/dodona/dodona/wiki/Feature:-math-snippets)
-- [lightboxes](https://github.ugent.be/dodona/dodona/wiki/Feature:-lightboxes)
 - [callouts](https://github.ugent.be/dodona/dodona/wiki/Feature:-callouts)
 
