@@ -115,9 +115,9 @@ Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde g
 
 ---
 
-## Tables
+## Tabellen
 
-Both HTML and markdown tables are supported. You can add the `table` class for prettier formatting.
+Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *class* toevoegen voor een mooiere opmaak.
 
 ```html
 <table class="table">
@@ -139,32 +139,32 @@ Both HTML and markdown tables are supported. You can add the `table` class for p
 
 ---
 
-## Math snippets
+## Wiskundige formules
 
-Dodona supports a LaTeX-style syntax to render mathematical formulas using the [MathJax project](https://www.mathjax.org).
+Dodona ondersteunt de LaTeX syntax om wiskundige formules te tonen met behulp van het [MathJax project](https://www.mathjax.org).
 
-### Inline formulas
-To display mathematical symbols and formulas inline, wrap them with a double dollar symbol. This syntax is the same for both markdown and HTML.
+### Inline formules
+Om wiskundige formules en symbolen weer te geven op dezelfde regel als andere tekst (*inline*), volstaat het om voor en na de formule een dubbel dollarteken te plaatsen. Deze syntax is dezelfde voor zowel Markdown als HTML.
 
 ```markdown
-Some text with symbol $$a$$ and a formula $$x^2$$.
+Wat tekst met symbool $$a$$ en een formule $$x^2$$.
 ```
 
-### Block 
-Markdown and HTML use a different syntax to display formulas on their own line.
+### Uitgelichte formules 
+Om formules op een eigen regel te plaatsen gebruiken Markdown en HTML een andere syntax.
 
 <div class="code-example" markdown="1">
-When using HTML, wrap the formula with `\[` and `\]`.
+Omring de formule met `\[` en `\]` in HTML.
 </div>
 ```html
-The solution can be found with the following formula: \[a^2 = b^2 + c^2\]
+De oplossing kan gevonden worden met de volgende formule: \[a^2 = b^2 + c^2\]
 ```
 
 <div class="code-example" markdown="1">
-When using markdown, use the double dollar syntax but put everything a new line.
+In Markdown kan je de dubbele dollar syntax gebruiken waarbij je alles op een nieuwe regel plaatst.
 </div>
 ```html
-The solution can be found with the following formula: 
+De oplossing kan gevonden worden met de volgende formule:
 $$
 a^2 = b^2 + c^2
 $$

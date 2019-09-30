@@ -150,7 +150,7 @@ To display mathematical symbols and formulas inline, wrap them with a double dol
 Some text with symbol $$a$$ and a formula $$x^2$$.
 ```
 
-### Block 
+### Standout formulas 
 Markdown and HTML use a different syntax to display formulas on their own line.
 
 <div class="code-example" markdown="1">
