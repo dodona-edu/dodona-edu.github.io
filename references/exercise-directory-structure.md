@@ -5,6 +5,7 @@ description: "Exercise directory structure Dodona"
 permalink: /references/exercise-directory-structure/
 parent: References
 nav_order: 3
+lang: en
 ---
 
 # Exercise directory structure

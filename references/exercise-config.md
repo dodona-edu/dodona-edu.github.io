@@ -5,6 +5,7 @@ description: "Exercise config reference Dodona"
 permalink: /references/exercise-config/
 parent: References
 nav_order: 2
+lang: en
 ---
 
 # Exercise configuration

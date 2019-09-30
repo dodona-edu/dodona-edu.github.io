@@ -4,6 +4,7 @@ title: Home
 nav_order: 1
 description: "Documentatie- en informatiewebsite voor Dodona"
 permalink: /
+lang: nl
 ---
 
 # Dodona documentatie

@@ -5,6 +5,7 @@ description: "Handleidingen Dodona"
 permalink: /guides/
 nav_order: 2
 has_children: true
+lang: nl
 ---
 
-Hier vindt u enkele handleidingen voor lesgevers.
+Hier vind je enkele handleidingen voor lesgevers.

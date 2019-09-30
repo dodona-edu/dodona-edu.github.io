@@ -5,6 +5,7 @@ description: "Tutorial: creating a judge"
 permalink: /guides/creating-a-judge/
 parent: Handleidingen
 nav_order: 99
+lang: en
 ---
 
 # Creating a new Judge

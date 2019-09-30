@@ -5,6 +5,7 @@ description: "Exercise description reference Dodona"
 permalink: /references/exercise-description/
 parent: References
 nav_order: 1
+lang: en
 ---
 
 # Exercise descriptions
