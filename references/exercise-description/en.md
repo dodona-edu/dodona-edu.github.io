@@ -182,7 +182,7 @@ You can easily render code fragments in a monospaced font with syntax highlighti
 When using HTML, wrap your code with `<code>` and `</code>`.
 </div>
 ```html
-In your solution, use can use variable <code>someVariable</code>.
+In your solution, you can use variable <code>someVariable</code>.
 ```
 
 <div class="code-example" markdown="1">
@@ -262,7 +262,7 @@ To use a callout, create a `div` element with the `callout` class, containing an
 
 You can swap out `callout-info` for `callout-success`, `callout-warning`, or `callout-danger` to use green, yellow, or red instead of blue as highlight color.
 
-There is no specific syntax for Markdown, but since you can use html in Markdown, you can use the above.
+There is no specific syntax for Markdown, but since you can use HTML in Markdown, you can use the above.
 
 ---
 
