@@ -3,7 +3,7 @@ layout: default
 title: Exercise descriptions
 description: "Exercise description reference Dodona"
 permalink: /references/exercise-description/
-parent: References
+parent: Referenties
 nav_order: 1
 lang: en
 ---
