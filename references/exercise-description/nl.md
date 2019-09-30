@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Exercise descriptions
-description: "Exercise description reference Dodona"
-permalink: /references/exercise-description/
+title: Oefeningbeschrijvingen
+description: "Referentie features te gebruiken in oefeningbeschrijvingen"
+permalink: /nl/references/exercise-description/
 parent: Referenties
 nav_order: 1
-lang: en
+lang: nl
 ---
 
-# Exercise descriptions
+# Oefeningbeschrijvingen
 {: .no_toc }
 
-Dodona supports exercise descriptions in HTML and Markdown with several additional features such as support for mathematical formulas.
+Dodona ondersteunt oefeningbeschrijvingen in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
 {: .fs-6 .fw-300 }
 
-## Table of contents
+## Inhoudsopgave
 {: .no_toc .text-delta }
 
 1. TOC
@@ -24,90 +24,84 @@ Dodona supports exercise descriptions in HTML and Markdown with several addition
 
 ## Markdown
 
- For Dodona exercises, we recommend using markdown over HTML. Although markdown is widely used on the internet, the format is not standardized. This led to existence of several markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the markdown source. You can find more information about basic markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Voor oefeningen op Dodona raden we aan om de opgaven te schrijven in Markdown. Alhoewel Markdown veelgebruikt is op het Internet, is het formaat niet gestandaardiseerd. Dit heeft tot gevolg dat er verschillende Markdown varianten bestaan. Dodona gebruikt de [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) en Parser om HTML te genereren van de Markdown broncode. Meer informatie over opmaak in Markdown kan je vinden op deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 
-## Images
+## Afbeeldingen
 
-To use images in your exercise description, be sure to put the images in the `description/media/` [directory](/references/exercise-directory-structure) of your exercise.
+Om afbeeldingen te gebruiken in je opgave, dien je de afbeeldingen in de `description/media/` [map](/references/exercise-directory-structure) te plaatsen.
 
 ### Lightboxes
 
-Dodona automatically adds [lightbox support](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) to all images in exercise descriptions. If you click on an image, the image will open in a lightbox. It is possible to specify a caption for an image and to set an alternative (high-resolution) version for use in the lightbox.
+Dodona voegt automatisch een [lightbox](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) toe aan alle afbeeldingen in een opgave. Dat wil zeggen dat als je op een afbeelding klikt, deze zal openen in een lightbox. Het is ook mogelijk om zo een onderschrift toe te voegen en om een alternatieve (hoge-resolutie) versie van de afbeelding te tonen.
 
-You can also trigger a lightbox manually using a link by adding a `dodona-lightbox` class:
+Je kan zo'n lighbox ook manueel oproepen met een link door de `dodona-lightbox` *class* toe te voegen:
 ```html
 <a href="image.jpg" class="dodona-lightbox">Show image</a>
 ```
 
-#### Captions
+#### Onderschriften
 {: .no_toc }
 
-You can specify a caption by using the `data-caption` attribute. If you don't provide such attribute, Dodona uses the value of the `alt` attribute.
+Je kan een onderschrift (*caption*) specificeren met behulp van het `data-caption` attribuut. Als je dit niet expliciet opneemt, dan zal dodona de waarde van het `alt` attribuut gebruiken.
 
 ##### HTML
 {: .no_toc }
 
 <div class="code-example" markdown="1">
-A caption set using the `data-caption` attribute.
+Een onderschrift dat ingesteld wordt met het `data-caption` attribuut.
 </div>
 ```html
-<img src="image.jpg" data-caption="This is a longer caption of an image to be used in the lightbox" alt="image description" />
+<img src="image.jpg" data-caption="Dit is een langer onderschrift van een afbeelding dat gebruikt zal worden in de lightbox." alt="beschrijving van de afbeelding" />
 ```
 
 <div class="code-example" markdown="1">
-A caption set using the `alt` attribute.
+Een onderschrift dat ingesteld wordt met het `alt` attribuut.
 </div>
 ```html
-<img src="image.jpg" alt="image description that will also be used as lightbox caption" />
+<img src="image.jpg" alt="beschrijving van de afbeelding dat ook zal gebruikt worden als onderschrift in de lightbox." />
 ```
 
 ##### Markdown
 {: .no_toc }
 
 <div class="code-example" markdown="1">
-A caption set using the `data-caption` attribute using markdown.
+Een onderschrift dat ingesteld wordt met het `data-caption` attribuut in Markdown.
 </div>
 ```markdown
-![image description](image.jpg "title text"){:data-caption="This is a longer caption of an image to be used in the lightbox"}
+![image description](image.jpg){:data-caption="Dit is een langer onderschrift van een afbeelding dat gebruikt zal worden in de lightbox."}
 ```
 
 <div class="code-example" markdown="1">
-A caption set using the `alt` attribute.
+Een onderschrift dat ingesteld wordt met het `alt` attribuut in Markdown.
 </div>
 ```markdown
-![image description that will also be used as lightbox caption](image.jpg "title text")
+![beschrijving van de afbeelding dat ook zal gebruikt worden als onderschrift in de lightbox.](image.jpg)
 ```
 
-#### Alternative version
+#### Alternatieve versie
 {: .no_toc }
 
-You can use an alternative version of your image in the lightbox. You could, for example, specify a low-resolution version in the general description and only load the high-resolution version in the lightbox. You can use the `data-large` attribute to specify the path of this alternative image.
-
-##### HTML
-{: .no_toc }
+Je kan een alternatieve versie van je afbeelding gebruiken in de lightbox. Zo kan je bijvoorbeeld een lageresolutieversie gebruiken in de algemene beschrijving en enkel de versie in hoge resolutie inladen in de lightbox. Je kan het `data-large` attribuut gebruiken om het pad naar de alternatieve afbeelding op te geven.
 
 <div class="code-example" markdown="1">
-An alternative high-resolution version of an image, set using the `data-large` attribute.
+Een alternatieve versie van een afbeelding in hoge resolutie, ingesteld met het `data-large` attribuut in HTML.
 </div>
 ```html
 <img src="image.jpg" data-large="large-image.jpg" />
 ```
 
-##### Markdown
-{: .no_toc }
-
 <div class="code-example" markdown="1">
-An alternative high-resolution version of an image, set using the `data-large` attribute in markdown.
+Een alternatieve versie van een afbeelding in hoge resolutie, ingesteld met het `data-large` attribuut in Markdown.
 </div>
 ```markdown
-![alt text](image.jpg "title text"){:data-large="large-image.jpg"}
+![beschrijving afbeelding](image.jpg){:data-large="large-image.jpg"}
 ```
 
-### Centered groups
+### Gecentreerde groepen
 
-If you have multiple (small) images in an exercise description, you can display them inline next to each other in a centered group. This is done by wrapping all images with a `div` element with the `dodona-centered-group` class.
+Als je meerdere (kleine) afbeeldingen in een opgave gebruikt, dan kan je ze *inline* naast elkaar plaatsen in een gecentreerde groep. Dit kan door alle afbeeldingen in een `div` element te plaatsen met de `dodona-centered-group` *class*.
 
 ```html
 <div class="dodona-centered-group">
@@ -117,7 +111,7 @@ If you have multiple (small) images in an exercise description, you can display 
 </div>
 ```
 
-You can also include tables or other elements in a centered group.
+Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde groep plaatsen.
 
 ---
 
