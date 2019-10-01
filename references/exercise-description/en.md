@@ -3,10 +3,15 @@ layout: default
 title: Exercise descriptions
 description: "Exercise description reference Dodona"
 permalink: /en/references/exercise-description/
-parent: Referenties
+#parent: Referenties
+nav_exclude: true
 nav_order: 1
 lang: en
+lang-ref: reference-exercise-description
 ---
+
+Deze pagina is ook beschikbaar [in het Nederlands](/nl/references/exercise-description/)
+{: .fs-1 .lh-0 .align-right}
 
 # Exercise descriptions
 {: .no_toc }
