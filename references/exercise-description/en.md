@@ -2,11 +2,16 @@
 layout: default
 title: Exercise descriptions
 description: "Exercise description reference Dodona"
-permalink: /references/exercise-description/
-parent: Referenties
+permalink: /en/references/exercise-description/
+#parent: Referenties
+nav_exclude: true
 nav_order: 1
 lang: en
+lang-ref: reference-exercise-description
 ---
+
+Deze pagina is ook beschikbaar [in het Nederlands](/nl/references/exercise-description/)
+{: .fs-1 .lh-0 .align-right}
 
 # Exercise descriptions
 {: .no_toc }
@@ -24,7 +29,7 @@ Dodona supports exercise descriptions in HTML and Markdown with several addition
 
 ## Markdown
 
- For Dodona exercises, we recommend using markdown over HTML. Although markdown is widely used on the internet, the format is not standardized. This led to existence of several markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the markdown source. You can find more information about basic markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+ For Dodona exercises, we recommend using Markdown over HTML. Although Markdown is widely used on the internet, the format is not standardized. This led to existence of several Markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the Markdown source. You can find more information about basic Markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 
@@ -67,17 +72,17 @@ A caption set using the `alt` attribute.
 {: .no_toc }
 
 <div class="code-example" markdown="1">
-A caption set using the `data-caption` attribute using markdown.
+A caption set using the `data-caption` attribute using Markdown.
 </div>
 ```markdown
-![image description](image.jpg "title text"){:data-caption="This is a longer caption of an image to be used in the lightbox"}
+![image description](image.jpg){:data-caption="This is a longer caption of an image to be used in the lightbox"}
 ```
 
 <div class="code-example" markdown="1">
-A caption set using the `alt` attribute.
+A caption set using the `alt` attribute using Markdown.
 </div>
 ```markdown
-![image description that will also be used as lightbox caption](image.jpg "title text")
+![image description that will also be used as lightbox caption](image.jpg)
 ```
 
 #### Alternative version
@@ -85,24 +90,18 @@ A caption set using the `alt` attribute.
 
 You can use an alternative version of your image in the lightbox. You could, for example, specify a low-resolution version in the general description and only load the high-resolution version in the lightbox. You can use the `data-large` attribute to specify the path of this alternative image.
 
-##### HTML
-{: .no_toc }
-
 <div class="code-example" markdown="1">
-An alternative high-resolution version of an image, set using the `data-large` attribute.
+An alternative high-resolution version of an image, set using the `data-large` attribute in HTML.
 </div>
 ```html
 <img src="image.jpg" data-large="large-image.jpg" />
 ```
 
-##### Markdown
-{: .no_toc }
-
 <div class="code-example" markdown="1">
-An alternative high-resolution version of an image, set using the `data-large` attribute in markdown.
+An alternative high-resolution version of an image, set using the `data-large` attribute in Markdown.
 </div>
 ```markdown
-![alt text](image.jpg "title text"){:data-large="large-image.jpg"}
+![image description](image.jpg){:data-large="large-image.jpg"}
 ```
 
 ### Centered groups
@@ -123,7 +122,7 @@ You can also include tables or other elements in a centered group.
 
 ## Tables
 
-Both HTML and markdown tables are supported. You can add the `table` class for prettier formatting.
+Both HTML and Markdown tables are supported. You can add the `table` class for prettier formatting.
 
 ```html
 <table class="table">
@@ -150,13 +149,13 @@ Both HTML and markdown tables are supported. You can add the `table` class for p
 Dodona supports a LaTeX-style syntax to render mathematical formulas using the [MathJax project](https://www.mathjax.org).
 
 ### Inline formulas
-To display mathematical symbols and formulas inline, wrap them with a double dollar symbol. This syntax is the same for both markdown and HTML.
+To display mathematical symbols and formulas inline, wrap them with a double dollar symbol. This syntax is the same for both Markdown and HTML.
 
 ```markdown
 Some text with symbol $$a$$ and a formula $$x^2$$.
 ```
 
-### Block 
+### Standout formulas 
 Markdown and HTML use a different syntax to display formulas on their own line.
 
 <div class="code-example" markdown="1">
@@ -167,7 +166,7 @@ The solution can be found with the following formula: \[a^2 = b^2 + c^2\]
 ```
 
 <div class="code-example" markdown="1">
-When using markdown, use the double dollar syntax but put everything a new line.
+When using Markdown, use the double dollar syntax but put everything a new line.
 </div>
 ```html
 The solution can be found with the following formula: 
@@ -188,11 +187,11 @@ You can easily render code fragments in a monospaced font with syntax highlighti
 When using HTML, wrap your code with `<code>` and `</code>`.
 </div>
 ```html
-In your solution, use can use variable <code>someVariable</code>.
+In your solution, you can use variable <code>someVariable</code>.
 ```
 
 <div class="code-example" markdown="1">
-In markdown, wrap your code with backticks (\`).
+In Markdown, wrap your code with backticks (\`).
 </div>
 ```markdown
 In your solution, use can use variable `someVariable`.
@@ -211,7 +210,7 @@ let b = 42;
 ```
 
 <div class="code-example" markdown="0">
-If you want to use a multi-line code block using markdown, wrap your code with a triple backticks (```) and newlines.
+If you want to use a multi-line code block using Markdown, wrap your code with a triple backticks (```) and newlines.
 </div>
 
     ```
@@ -268,7 +267,7 @@ To use a callout, create a `div` element with the `callout` class, containing an
 
 You can swap out `callout-info` for `callout-success`, `callout-warning`, or `callout-danger` to use green, yellow, or red instead of blue as highlight color.
 
-There is no specific syntax for markdown, but since you can use html in markdown, you can use the above.
+There is no specific syntax for Markdown, but since you can use HTML in Markdown, you can use the above.
 
 ---
 
@@ -286,7 +285,7 @@ In HTML, wrap the quote with `<blockquote>` and `</blockquote>`.
 ```
 
 <div class="code-example" markdown="1">
-In markdown, prefix each line with a `>`.
+In Markdown, prefix each line with a `>`.
 </div>
 ```markdown
 > This is a quote.

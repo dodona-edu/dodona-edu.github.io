@@ -8,3 +8,6 @@ aux_links:
     - "https://dodona.ugent.be"
 heading_anchors: true
 ga_tracking: UA-76309350-2
+
+plugins:
+  - jekyll-redirect-from
