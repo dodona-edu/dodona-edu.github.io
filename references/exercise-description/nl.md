@@ -3,6 +3,8 @@ layout: default
 title: Oefeningbeschrijvingen
 description: "Referentie features te gebruiken in oefeningbeschrijvingen"
 permalink: /nl/references/exercise-description/
+redirect_from:
+  - /references/exercise-description/
 parent: Referenties
 nav_order: 1
 lang: nl
