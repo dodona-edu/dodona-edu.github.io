@@ -4,7 +4,7 @@ title: Creating a new exercise repository
 description: "Tutorial: creating a new exercise repository"
 permalink: /guides/new-exercise-repo/
 parent: Handleidingen
-nav_order: 1
+nav_order: 2
 lang: en
 ---
 
