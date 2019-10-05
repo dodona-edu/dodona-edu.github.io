@@ -99,7 +99,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
 
   - `format`, the format in which the message should be rendered. This format can be any of
     - `"plain"`, which will render the message as normal text;
-    - `"html"`, which allows for HTML markup in this message. Note that HTML output is stripped to prevent XSS issues. Most output that you would expect to be able to output should be fine.;
+    - `"html"`, which allows for HTML markup in this message. Note that the HTML output is sanitised to prevent [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting) issues. JavaScript, for example, is not allowed, but most other tags should work.
     - `"markdown"`, so the containing string is interpreted as markdown and converted to HTML;
     - `"code"`, which will render the message in monospace and preserve all included whitespace;
     - `"python"`, which is the same as `"code"` with Python highlighting;
