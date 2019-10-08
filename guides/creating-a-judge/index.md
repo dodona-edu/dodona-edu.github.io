@@ -18,7 +18,7 @@ For each judge in Dodona, there is one git repository. This git repository requi
 
 ## 1. Adding a Judge
 
-As a Dodona staff member, you can go to the "Judges" page through the administrator dropdown. To add a new judge, hit the `+` action button. Supply a human-readable name, the name of the Docker image the judge should run in, the git clone url, the pathname (where to store the repository on the server relative to the directory containing all judges, usually the name of the repository, however, this needs to be unique), the [feedback renderer](#4-feedback-renderers) and the [submission runner](#5-submission-runners).
+As a Dodona staff member, you can go to the "Judges" page through the administrator dropdown. To add a new judge, hit the `+` action button. Supply a human-readable name, the name of the Docker image the judge should run in, the git clone url, the pathname (where to store the repository on the server relative to the directory containing all judges, usually the name of the repository, however, this needs to be unique) and the [feedback renderer](#4-feedback-renderers).
 
 ## 2. Repository Structure
 
@@ -99,7 +99,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
 
   - `format`, the format in which the message should be rendered. This format can be any of
     - `"plain"`, which will render the message as normal text;
-    - `"html"`, which allows for HTML markup in this message;
+    - `"html"`, which allows for HTML markup in this message. Note that the HTML output is sanitised to prevent [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting) issues. JavaScript, for example, is not allowed, but most other tags should work.
     - `"markdown"`, so the containing string is interpreted as markdown and converted to HTML;
     - `"code"`, which will render the message in monospace and preserve all included whitespace;
     - `"python"`, which is the same as `"code"` with Python highlighting;
@@ -159,7 +159,3 @@ Note that the nesting of judgement, tab, context, testcase and test is enforced.
 ## 4. Feedback Renderers
 
 Currently two feedback renderers are available: the "FeedbackRenderer" and the "PythiaFeedbackRenderer". You should probably use the former, as the latter contains some extra features specifically for the Pythia judge.
-
-## 5. Submission Runners
-
-Currently two submission runner are available: the "SubmissionRunner" and the "PythiaSubmissionRunner". You should probably use the former, as the latter contains some extra features specifically for the Pythia judge.
