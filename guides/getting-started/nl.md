@@ -66,7 +66,7 @@ Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebr
 
 ![reeks-aanmaken](reeks-aanmaken.png)
 
-Elke oefeningenreeks bestaat uit een titel en een beschrijving die je kan gebruiken om bijvoorbeeld te verwijzen naar lesmateriaal. Naast gewone tekst kan je hier ook het [Markdownformaat](references/exercise-description/#markdown) gebruiken om extra opmaak toe te voegen. Daarnaast kan je ook een eventuele deadline opgeven.
+Elke oefeningenreeks bestaat uit een titel en een beschrijving die je kan gebruiken om bijvoorbeeld te verwijzen naar lesmateriaal. Naast gewone tekst kan je hier ook het [Markdownformaat](/nl/references/exercise-description/#markdown) gebruiken om extra opmaak toe te voegen. Daarnaast kan je ook een eventuele deadline opgeven.
 
 Voor elke oefeningenreeks kan je de zichtbaarheid instellen:
 - **Open**: Dit is de standaard instelling. De reeks is gewoon zichtbaar op je cursuspagina.
@@ -77,7 +77,7 @@ Nadat je een reeks hebt aangemaakt, kan je oefeningen toevoegen. Je kan hiervoor
 
 ![oefening-toevoegen](oefening-toevoegen.png)
 
-De handleiding om zelf oefeningen op te stellen volgt binnenkort. Een eerste aanzet vind je op [guides/new-exercise-repo/](deze pagina).
+De handleiding om zelf oefeningen op te stellen volgt binnenkort. Een eerste aanzet vind je op [deze pagina](/guides/new-exercise-repo/).
 
 ---
 
