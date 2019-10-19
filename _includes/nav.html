@@ -2,7 +2,7 @@
   <ul class="navigation-list">
     {%- assign pages_list = site.html_pages | sort:"nav_order" -%}
     {%- for node in pages_list -%}
-    {%- unless node.nav_exclude -%}
+    {%- unless node.nav_exclude or node.layout == "redirect" -%}
     {%- if node.parent == nil -%}
     <li
       class="navigation-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
