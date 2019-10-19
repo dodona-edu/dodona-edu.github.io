@@ -4,7 +4,8 @@ title: Nieuws
 description: "Dodona nieuwsberichten"
 permalink: /news/
 nav_order: 2
-has_children: false
+has_children: true
+has_toc: false
 lang: nl
 ---
 
