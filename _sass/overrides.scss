@@ -1,3 +1,16 @@
+.page-content .news-overview {
+  padding-left: 0;
+
+  li:before {
+    content: none;
+  }
+
+  .news-date {
+    float: right;
+    color: $grey-dk-000;
+  }
+}
+
 .align-right {
   text-align: right;
 }

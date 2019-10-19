@@ -11,13 +11,20 @@ lang: nl
 # Dodona nieuws
 {: .fs-9 }
 
-Dit is een overzicht van de Dodona nieuwsberichten
+Op deze pagina vind je een overzicht van alle Dodona nieuwsberichten.
 {: .fs-6 .fw-300 }
 
 --- 
 
-<ul>
+## Alle berichten
+
+<ul class='news-overview'>
 {% for news in site.news %}
-  <li><a href="{{ news.url }}">{{ news.title }}</a> ({{ news.date | date: "%d/%m/%Y"}})</li>
+  <li>
+    <article>
+      <a href="{{ news.url }}">{{ news.title }}</a>
+      <time class='news-date'>{{ news.date | date: "%d/%m/%Y"}}</time>
+    </article>
+  </li>
 {% endfor %}
 </ul>

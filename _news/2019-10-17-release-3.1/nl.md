@@ -6,4 +6,4 @@ date: "2019-10-17"
 lang: nl
 ---
 
-Dit is een nieuwspost
+Dit is een nieuwsbericht.
