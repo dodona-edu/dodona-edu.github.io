@@ -1,6 +1,6 @@
 ---
 title: "Dodona 3.0"
-description: "Release notes dodona 3.0"
+description: "Release notes Dodona 3.0"
 slug: "dodona-3.0"
 date: "2019-09-26"
 lang: en
