@@ -8,3 +8,22 @@ aux_links:
     - "https://dodona.ugent.be"
 heading_anchors: true
 ga_tracking: UA-76309350-2
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+collections:
+  news:
+    output: true
+    # here :name is the language
+    permalink: /:name/news/:year/:month/:day/:title/
+    sort_by: date
+
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: news
+      parent: Nieuws
