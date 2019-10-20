@@ -24,14 +24,4 @@ Op deze pagina vind je een overzicht van alle Dodona nieuwsberichten.
 
 ## Alle berichten
 
-<ul class='news-overview'>
-{%- assign all_news = site.news | where: "lang", page.lang -%}
-{%- for news in all_news -%}
-  <li>
-    <article>
-      <a href="{{ news.url }}">{{ news.title }}</a>
-      <time class='news-date'>{{ news.date | date: "%d/%m/%Y"}}</time>
-    </article>
-  </li>
-{% endfor %}
-</ul>
+{% include news_all.html %}

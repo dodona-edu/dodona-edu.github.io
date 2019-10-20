@@ -23,14 +23,4 @@ On this page, you can find an overview of all Dodona news.
 
 ## All news
 
-<ul class='news-overview'>
-{%- assign all_news = site.news | where: "lang", page.lang -%}
-{%- for news in all_news -%}
-  <li>
-    <article>
-      <a href="{{ news.url }}">{{ news.title }}</a>
-      <time class='news-date'>{{ news.date | date: "%B %d, %Y" }}</time>
-    </article>
-  </li>
-{%- endfor -%}
-</ul>
+{% include news_all.html %}

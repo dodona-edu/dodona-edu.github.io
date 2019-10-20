@@ -23,14 +23,5 @@ Voor de Dodona webapplicatie kunt u terecht op [https://dodona.ugent.be](https:/
 
 ---
 ## Recente berichten
-<ul class='news-overview'>
-{%- assign all_news = site.news | where: "lang", page.lang -%}
-{%- for news in all_news limit:5 -%}
-  <li>
-    <article>
-      <a href="{{ news.url }}">{{ news.title }}</a>
-      <time class='news-date'>{{ news.date | date: "%d/%m/%Y"}}</time>
-    </article>
-  </li>
-{% endfor %}
-</ul>
+
+{% include news_last.html %}
