@@ -1,5 +1,5 @@
 title: "Dodona Docs"
-remote_theme: pmarsceill/just-the-docs
+remote_theme: dodona-edu/just-the-docs@v0.2.7-1
 
 # theme config
 search_enabled: true
@@ -11,6 +11,7 @@ ga_tracking: UA-76309350-2
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 collections:
   news:
