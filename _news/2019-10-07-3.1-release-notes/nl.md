@@ -22,7 +22,7 @@ We hebben het ook visueler gemaakt wanneer de feedbacktabel ingeladen wordt. We 
 
 ## Volledige lijst van veranderingen
 
-Naast deze twee grote items zijn er natuurlijk ook een hoop andere kleine dingen verbeterd en foutjes opgelost. Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub release](https://github.com/dodona-edu/dodona/releases/tag/3.1), maar hieronder lijsten we ook kort de belangrijkste dingen op.
+Naast deze twee grote items zijn er natuurlijk ook een hoop andere kleine dingen verbeterd. Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub release](https://github.com/dodona-edu/dodona/releases/tag/3.1), maar hieronder lijsten we ook kort de belangrijkste dingen op.
 
 * Kuis de feedbacktabel op voor die aan de gebruiker getoond wordt
 * Toon de oefeningbeschrijvingen binnen een iframe
