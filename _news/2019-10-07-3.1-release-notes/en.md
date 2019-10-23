@@ -7,18 +7,19 @@ lang: en
 ---
 
 The release of Dodona 3.1 makes Dodona more secure and faster.
+{: .fs-6 .fw-300 }
 
 ## Security
 
-Until now, exercises could change the entire layout of Dodona and execute _scripts_. These _scripts_ were able to do anything the user looking at the page could do on Dodona, e.g. submit solutions. For teachers this meant that these _scripts_ could be used to extract data about students. To be clear, this has never happened. However, since an ever increasing number of people can add exercises to Dodona, it became time to fix this.
+Until now, exercises could change the entire layout of Dodona and execute _scripts_. These _scripts_ were able to do anything the user looking at the page could do on Dodona (e.g., submit solutions) which is a potential security risk. While we fully trust our exercise creators and don't have any evidence that this feature was misused, it is better to prevent any future problems.
 
-We fixed it by placing exercise descriptions in an _iframe_. This ensures that your browser will not allow the contents of the _iframe_ to do things outside of the _iframe_ (i.e. in the rest of Dodona). Additionally, we made sure that the contents of the feedback table of submitted solutions and the descriptions of courses and series are cleaned up before they are shown to users.
+We fixed it by placing exercise descriptions in an _iframe_. This ensures that your browser will not allow the contents of the _iframe_ to do things outside of the _iframe_ (i.e. in the rest of Dodona). Additionally, we made sure that the contents of the feedback table of submitted solutions and the descriptions of courses and series are stripped of any malicious code before they are shown to users.
 
 ## Speed
 
-For really large feedback tables it could take a while before the feedback table was shown after the submission was evaluated (sometimes up to 40 seconds!). By performing some smart tricks and where necessary showing the feedback in a simpler way we made sure that it never takes more than a second to load a feedback table.
+For really large feedback tables it could take a while before the feedback table was shown after the submission was evaluated (sometimes up to 40 seconds!). By performing some smart tricks and falling back to a simpler output format for large results, we managed to significantly reduce the loading time. Now, it should never takes more than a second to load a feedback table.
 
-We also made it more visual when the feedback table is loaded. We now show a loading icon that is replaced when the feedback table has finished loading.
+We also added a loading indicator to indicate that the feedback table is busy loading.
 
 ## Full list of changes
 

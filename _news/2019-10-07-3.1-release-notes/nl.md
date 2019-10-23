@@ -7,18 +7,19 @@ lang: nl
 ---
 
 De Dodona 3.1 release maakt Dodona een stuk veiliger en sneller.
-
+{: .fs-6 .fw-300 }
+ 
 ## Veiligheid
 
-Tot nu toe konden oefeningen de volledige layout van Dodona aanpassen en ook _scripts_ uitvoeren. Deze _scripts_ zouden alles kunnen doen hebben op Dodona dat je zelf ook kan, zoals bijvoorbeeld oplossingen indienen. Voor leerkrachten betekende dat dus ook dat deze _scripts_ gebruikt zouden kunnen worden om data te extraheren van leerlingen. Voor alle duidelijkheid: dit is nog nooit gebeurd, maar aangezien steeds meer mensen oefeningen aan het platform kunnen toevoegen werd het wel tijd om dit op te lossen.
+Tot nu toe konden oefeningen de volledige layout van Dodona aanpassen en ook _scripts_ uitvoeren. Deze _scripts_ konden, in theorie, alles op Dodona doen wat je zelf ook kan, zoals bijvoorbeeld oplossingen indienen. Dit is een potentieel beveiligingsprobleem. Alhoewel we de opstellers van oefeningen volledig vertrouwen en we geen enkele indicatie hebben dat deze mogelijkheid misbruikt werd, is het toch beter om problemen in de toekomst te vermijden.
 
-Dit hebben we gedaan door oefeningenbeschrijvingen in een _iframe_ te plaatsen. Dit zorgt er voor dat je browser niet toelaat dat de inhoud van dit _iframe_ dingen doet buiten het _iframe_. Daarnaast hebben we er ook voor gezorgd dat de feedbacktabel van oplossingen en de beschrijvingen van reeksen en cursussen opgekuist worden voor ze aan gebruikers getoond worden.
+Dit hebben we opgelost door de opgaven van oefeningen in een _iframe_ te plaatsen. Hierdoor zal je browser verhinderen dat de inhoud van dit _iframe_ ongewenste dingen uitvoert buiten het _iframe_. Daarnaast hebben we er ook voor gezorgd dat er geen kwaadwillige code meer kan voorkomen in de feedbacktabel van oplossingen en de beschrijvingen van reeksen en cursussen.
 
 ## Snelheid
 
-Voor echt grote feedbacktabellen kon het soms lang duren voor de feedbacktabel getoond werd nadat de oplossing geevalueerd werd (soms wel tot 40 seconden!). Door een aantal slimme trucjes toe te passen en waar nodig een iets simpelere weergave te tonen hebben we er voor gezorgd dat het nooit meer als een seconde duurt om een feedbacktabel in te laden.
+Voor echt grote feedbacktabellen kon het soms lang duren voor de feedbacktabel getoond werd nadat de oplossing geevalueerd werd (soms tot wel 40 seconden!). Door een aantal slimme trucjes toe te passen en waar nodig een iets simpelere weergave te tonen hebben we er voor gezorgd dat het nooit meer dan een seconde duurt om een feedbacktabel in te laden.
 
-We hebben het ook visueler gemaakt wanneer de feedbacktabel ingeladen wordt. We tonen nu een loading icon dat vervangen wordt op het moment dat de feedbacktabel geladen is.
+We hebben ook een visuele indicator toegevoegd om aan te geven dat de feedbacktabel wordt ingeladen.
 
 ## Volledige lijst van veranderingen
 
