@@ -2,10 +2,13 @@
 layout: default
 title: Creating a new exercise repository
 description: "Tutorial: creating a new exercise repository"
-permalink: /guides/new-exercise-repo/
-parent: Handleidingen
+permalink: /en/guides/new-exercise-repo/
+redirect_from:
+  - /guides/new-exercise-repo/
+parent: Guides
 nav_order: 2
 lang: en
+slug: new-exercise-repo
 ---
 
 # Creating a new exercise repository

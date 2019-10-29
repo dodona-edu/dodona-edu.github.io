@@ -2,8 +2,10 @@
 layout: default
 title: Creating a judge
 description: "Tutorial: creating a judge"
-permalink: /guides/creating-a-judge/
-parent: Handleidingen
+permalink: /en/guides/creating-a-judge/
+redirect_from:
+  - /guides/creating-a-judge/
+parent: Guides
 nav_order: 99
 lang: en
 ---
@@ -158,4 +160,4 @@ Note that the nesting of judgement, tab, context, testcase and test is enforced.
 
 ## 4. Feedback Renderers
 
-Currently two feedback renderers are available: the "FeedbackRenderer" and the "PythiaFeedbackRenderer". You should probably use the former, as the latter contains some extra features specifically for the Pythia judge.
+Currently two feedback renderers are available: the `FeedbackRenderer` and the `PythiaFeedbackRenderer`. You should probably use the former, as the latter contains some extra features specifically for the Python judge.
