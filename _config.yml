@@ -1,5 +1,5 @@
 title: "Dodona Docs"
-remote_theme: dodona-edu/just-the-docs@v0.2.7-3
+remote_theme: dodona-edu/just-the-docs@v0.2.7-4
 
 # theme config
 search_enabled: true
@@ -27,3 +27,8 @@ defaults:
     values:
       layout: news
       parent: Nieuws
+  - scope:
+      path: "**/en.md"
+      type: "news"
+    values:
+      parent: News
