@@ -8,6 +8,7 @@ redirect_from:
 parent: Guides
 nav_order: 99
 lang: en
+slug: guides-creating-a-judge
 ---
 
 # Creating a new Judge

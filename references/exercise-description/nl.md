@@ -8,7 +8,7 @@ redirect_from:
 parent: Referenties
 nav_order: 1
 lang: nl
-slug: reference-exercise-description
+slug: references-exercise-description
 ---
 
 # Oefeningbeschrijvingen

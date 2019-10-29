@@ -8,7 +8,7 @@ redirect_from:
 parent: Handleidingen
 nav_order: 1
 lang: nl
-slug: getting-started
+slug: guides-getting-started
 ---
 
 # Van start met Dodona

@@ -8,7 +8,7 @@ redirect_from:
 parent: Guides
 nav_order: 2
 lang: en
-slug: new-exercise-repo
+slug: guides-new-exercise-repo
 ---
 
 # Creating a new exercise repository

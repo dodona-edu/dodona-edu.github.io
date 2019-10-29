@@ -8,7 +8,7 @@ redirect_from:
 parent: Guides
 nav_order: 98
 lang: en
-slug: creating-an-api-token
+slug: guides-creating-an-api-token
 ---
 
 # Creating an API token

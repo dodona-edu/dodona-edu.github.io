@@ -6,7 +6,7 @@ permalink: /en/references/exercise-description/
 parent: References
 nav_order: 1
 lang: en
-slug: reference-exercise-description
+slug: references-exercise-description
 ---
 
 # Exercise descriptions
