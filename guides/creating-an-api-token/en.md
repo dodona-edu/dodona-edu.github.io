@@ -2,10 +2,13 @@
 layout: default
 title: Creating an API token
 description: "Tutorial: creating an API token"
-permalink: /guides/creating-an-api-token/
-parent: Handleidingen
+permalink: /en/guides/creating-an-api-token/
+redirect_from:
+  - /guides/creating-an-api-token/
+parent: Guides
 nav_order: 98
 lang: en
+slug: guides-creating-an-api-token
 ---
 
 # Creating an API token

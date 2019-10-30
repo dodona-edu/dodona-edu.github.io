@@ -2,10 +2,13 @@
 layout: default
 title: Exercise directory structure
 description: "Exercise directory structure Dodona"
-permalink: /references/exercise-directory-structure/
-parent: Referenties
+permalink: /en/references/exercise-directory-structure/
+redirect_from:
+  - /references/exercise-directory-structure/
+parent: References
 nav_order: 3
 lang: en
+slug: references-exercise-directory-structure
 ---
 
 # Exercise directory structure

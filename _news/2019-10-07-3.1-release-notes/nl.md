@@ -8,7 +8,7 @@ lang: nl
 
 De Dodona 3.1 release maakt Dodona een stuk veiliger en sneller.
 {: .fs-6 .fw-300 }
- 
+
 ## Veiligheid
 
 Tot nu toe konden oefeningen de volledige layout van Dodona aanpassen en ook _scripts_ uitvoeren. Deze _scripts_ konden, in theorie, alles op Dodona doen wat je zelf ook kan, zoals bijvoorbeeld oplossingen indienen. Dit is een potentieel beveiligingsprobleem. Alhoewel we de opstellers van oefeningen volledig vertrouwen en we geen enkele indicatie hebben dat deze mogelijkheid misbruikt werd, is het toch beter om problemen in de toekomst te vermijden.

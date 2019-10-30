@@ -3,8 +3,11 @@ layout: default
 title: Home
 nav_order: 1
 description: "Documentatie- en informatiewebsite voor Dodona"
-permalink: /
+permalink: /nl/
+redirect_from:
+  - /
 lang: nl
+slug: home
 ---
 
 # Dodona documentatie

@@ -2,10 +2,13 @@
 layout: default
 title: Exercise config
 description: "Exercise config reference Dodona"
-permalink: /references/exercise-config/
-parent: Referenties
+permalink: /en/references/exercise-config/
+redirect_from:
+  - /references/exercise-config/
+parent: References
 nav_order: 2
 lang: en
+slug: references-exercise-config
 ---
 
 # Exercise configuration

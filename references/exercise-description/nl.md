@@ -8,11 +8,8 @@ redirect_from:
 parent: Referenties
 nav_order: 1
 lang: nl
-lang-ref: reference-exercise-description
+slug: references-exercise-description
 ---
-
-This page is also available [in English](/en/references/exercise-description/)
-{: .fs-1 .lh-0 .align-right}
 
 # Oefeningbeschrijvingen
 {: .no_toc }

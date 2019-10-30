@@ -9,10 +9,8 @@ nav_order: 2
 has_children: true
 has_toc: false
 lang: nl
+slug: news
 ---
-
-This page is also available [in English](/en/news/)
-{: .fs-1 .lh-0 .align-right}
 
 # Dodona nieuws
 {: .fs-9 }
