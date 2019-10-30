@@ -14,7 +14,7 @@ slug: guides
 
 # Handleidingen
 
-Hier vind je enkele handleidingen, vooral gericht voor lesgevers.
+Hier vind je enkele handleidingen, vooral gericht op lesgevers.
 
 ---
 
