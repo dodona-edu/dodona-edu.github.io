@@ -24,7 +24,7 @@ Het exporteren van oplossingen kreeg een volledige make over. Via een wizard kan
 
 ## Statusoverzicht van een cursus
 
-Vroeger kon je als lesgever op het niveau van een cursus een CSV-bestand gedownload worden om de status van de studenten binnen een cursus te bekijken. Om deze functionaliteit meer zoals het statusoverzicht van een reeks te doen werken hebben we hiervoor ook een pagina binnen Dodona voorzien. De vroegere optie om het statusoverzicht te downloaden is er uiteraard weer bij. We hebben er dan ook ineens voor gezorgd dat dit overzicht sneller gegenereerd wordt en dat de pagina een stuk bruikbaarder wordt.
+Vroeger kon je als lesgever op het niveau van een cursus een CSV-bestand downloaden om de status van de studenten binnen een cursus te bekijken. Om deze functionaliteit meer zoals het statusoverzicht van een reeks te doen werken hebben we hiervoor ook een pagina binnen Dodona voorzien. De vroegere optie om het statusoverzicht te downloaden is er uiteraard weer bij. We hebben er dan ook ineens voor gezorgd dat dit overzicht sneller gegenereerd wordt en dat de pagina een stuk bruikbaarder wordt.
 
 ![Nieuwe statusoverzicht pagina](/assets/img/news/dodona-3.2/scoresheet-nl.png)
 
