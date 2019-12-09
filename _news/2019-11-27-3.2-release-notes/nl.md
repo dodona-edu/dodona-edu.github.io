@@ -11,20 +11,20 @@ De Dodona 3.2 release brengt een handig navigatiemenu naar de oefeningpagina, ee
 
 ## Navigatie voor oefeningen
 
-Als je een oefening binnen een reeks bekijkt, zal er op de pagina van die oefening nu een menu zijn waarmee je gemakkelijk naar de andere oefeningen binnen die reeks kan.
+Als je een oefening uit een oefeningenreeks bekijkt, dan verschijnt er vanaf nu in de rechtermarge een menu waarmee je gemakkelijk naar de andere oefeningen binnen die reeks kan.
 
 ![Navigatie voor oefeningen](/assets/img/news/dodona-3.2/exercise-navigation-nl.png)
 
 
 ## Exporteren van oplossingen
 
-Iedereen kan nu per cursus, reeks en persoon oplossingen downloaden. Het spreekt voor zich dat je enkel oplossingen kan downloaden waar je in Dodona ook aan kan. Deze nieuwe tool heeft enkele opties zodat je meteen aan de slag kan met het archief dat je download.
+Het exporteren van oplossingen kreeg een volledige make over. Via een wizard kan je nu eenvoudig per cursus, per reeks, of per oefening al je oplossingen downloaden. Als lesgever kan dit voor alle gebruikers uit je cursus. Deze nieuwe tool heeft enkele opties zodat je meteen aan de slag kan met het archief dat je download.
 
 ![Opties voor het exporteren van oplossingen](/assets/img/news/dodona-3.2/exercise-navigation-nl.png)
 
 ## Statusoverzicht van een cursus
 
-Vroeger kon op het niveau van een cursus enkel een informatief bestand gedownload worden om de status van de studenten binnen een cursus te bekijken. Om deze functionaliteit meer zoals het statusoverzicht van een reeks te doen werken hebben we hiervoor ook een pagina binnen Dodona voorzien. De vroegere optie om het statusoverzicht te downloaden is er uiteraard weer bij. We hebben er dan ook ineens voor gezorgd dat dit een stuk sneller kan en dat de statusoverzicht pagina's een stuk bruikbaarder werden.
+Vroeger kon je als lesgever op het niveau van een cursus een CSV-bestand gedownload worden om de status van de studenten binnen een cursus te bekijken. Om deze functionaliteit meer zoals het statusoverzicht van een reeks te doen werken hebben we hiervoor ook een pagina binnen Dodona voorzien. De vroegere optie om het statusoverzicht te downloaden is er uiteraard weer bij. We hebben er dan ook ineens voor gezorgd dat dit overzicht sneller gegenereerd wordt en dat de pagina een stuk bruikbaarder wordt.
 
 ![Nieuwe statusoverzicht pagina](/assets/img/news/dodona-3.2/scoresheet-nl.png)
 
@@ -37,4 +37,3 @@ Naast deze drie grote items zijn er natuurlijk ook een hoop andere kleine dingen
  * Statusoverzicht van een cursus
  * Geef de code van een student manueel weer in de feedback tabel in plaats van met de ACE editor.
  * Los enkele toegangsproblemen op met privé oefeningen in gemodereerde cursussen
-
