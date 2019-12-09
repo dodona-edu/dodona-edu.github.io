@@ -18,9 +18,9 @@ Als je een oefening uit een oefeningenreeks bekijkt, dan verschijnt er vanaf nu 
 
 ## Exporteren van oplossingen
 
-Het exporteren van oplossingen kreeg een volledige make over. Via een wizard kan je nu eenvoudig per cursus, per reeks, of per oefening al je oplossingen downloaden. Als lesgever kan dit voor alle gebruikers uit je cursus. Deze nieuwe tool heeft enkele opties zodat je meteen aan de slag kan met het archief dat je download.
+Het exporteren van oplossingen kreeg een volledige make over. Via een wizard kan je nu eenvoudig per cursus, per reeks, of gewoon al je oplossingen downloaden. Als lesgever kan dit voor alle gebruikers uit je cursus. Deze nieuwe tool heeft enkele opties zodat je meteen aan de slag kan met het archief dat je download.
 
-![Opties voor het exporteren van oplossingen](/assets/img/news/dodona-3.2/exercise-navigation-nl.png)
+![Opties voor het exporteren van oplossingen](/assets/img/news/dodona-3.2/export-nl.png)
 
 ## Statusoverzicht van een cursus
 
