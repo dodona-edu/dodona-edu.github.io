@@ -39,9 +39,13 @@ Om afbeeldingen te gebruiken in je opgave, dien je de afbeeldingen in de `descri
 
 Dodona voegt automatisch een [lightbox](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) toe aan alle afbeeldingen in een opgave. Dat wil zeggen dat als je op een afbeelding klikt, deze zal openen in een lightbox. Het is ook mogelijk om zo een onderschrift toe te voegen en om een alternatieve (hoge-resolutie) versie van de afbeelding te tonen.
 
-Je kan zo'n lighbox ook manueel oproepen met een link door de `dodona-lightbox` *class* toe te voegen:
+Je kan zo'n lightbox ook manueel oproepen met een link door de `dodona-lightbox` *class* toe te voegen:
 ```html
 <a href="image.jpg" class="dodona-lightbox">Show image</a>
+```
+
+```markdown
+[Show image](image.jpg){: .dodona-lightbox}
 ```
 
 #### Onderschriften
