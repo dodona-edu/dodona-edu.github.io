@@ -42,6 +42,10 @@ You can also trigger a lightbox manually using a link by adding a `dodona-lightb
 <a href="image.jpg" class="dodona-lightbox">Show image</a>
 ```
 
+```markdown
+[Show image](image.jpg){: .dodona-lightbox}
+```
+
 #### Captions
 {: .no_toc }
 

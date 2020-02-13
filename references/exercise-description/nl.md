@@ -44,6 +44,10 @@ Je kan zo'n lighbox ook manueel oproepen met een link door de `dodona-lightbox` 
 <a href="image.jpg" class="dodona-lightbox">Show image</a>
 ```
 
+```markdown
+[Show image](image.jpg){: .dodona-lightbox}
+```
+
 #### Onderschriften
 {: .no_toc }
 
