@@ -78,6 +78,10 @@ Nadat je een reeks hebt aangemaakt, kan je oefeningen toevoegen. Je kan hiervoor
 
 ![oefening-toevoegen](oefening-toevoegen.png)
 
+Bij het selecteren van oefeningen kun je meer info over een oefening bekijken door naar de infopagina te gaan. Hier vindt je voorbeeldoplossingen, beschikbare talen, instellingen, extra uitleg en contactgegevens van de auteur.
+
+![oefening-infopagina](oefening-infopagina.png)
+
 De handleiding om zelf oefeningen op te stellen volgt binnenkort. Een eerste aanzet vind je op [deze pagina](/guides/new-exercise-repo/).
 
 ---
