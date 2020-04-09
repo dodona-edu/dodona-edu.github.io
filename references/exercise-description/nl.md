@@ -144,6 +144,23 @@ Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *cla
 </table>
 ```
 
+```markdown
+|-----------------+------------+-----------------+----------------|
+| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+| Second line     |foo         | **strong**      | baz            |
+| Third line      |quux        | baz             | bar            |
+|-----------------+------------+-----------------+----------------|
+| Second body     |            |                 |                |
+| 2 line          |            |                 |                |
+|=================+============+=================+================|
+| Footer row      |            |                 |                |
+|-----------------+------------+-----------------+----------------|
+{:class="table"}
+```
+
+
 ---
 
 ## Wiskundige formules
@@ -251,7 +268,7 @@ Als je Markdown gebruikt, dan kan Dodona automatisch de code opmaken als je aang
 
 ## Callouts
 
-Om de aandacht te vestigen op een stukje uit je opgave, kan je gebruik maken van *callouts*. Dit zorgt er voor een opmaak zoals hier wordt getoond:
+Om de aandacht te vestigen op een stukje uit je opgave, kan je gebruik maken van *callouts*. Dit zorgt voor een opmaak zoals hier wordt getoond:
 
 <div class="callout callout-info">
 <h4>Hallo</h4>
@@ -269,7 +286,14 @@ Om een *callout* te gebruiken maak je een `div` element aan met de `callout` *cl
 
 In plaats van `callout-info` kan je ook `callout-success`, `callout-warning`, of `callout-danger` gebruiken om een element in het groen, geel of rood weer te geven.
 
-Voor Markdown is er geen specifieke syntax, maar aangezien je HTML kan gebruiken in Markdown, kan je gewoon voorgaande code gebruiken.
+In Markdown ziet het er als volgt uit:
+
+```markdown
+{:class="callout callout-info"}
+> #### Hallo
+> Dit is een belangrijk bericht.
+```
+
 
 ---
 
