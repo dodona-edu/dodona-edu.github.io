@@ -157,7 +157,7 @@ Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *cla
 |=================+============+=================+================|
 | Footer row      |            |                 |                |
 |-----------------+------------+-----------------+----------------|
-{:class="table"}
+{: .table}
 ```
 
 
@@ -174,7 +174,7 @@ Om wiskundige formules en symbolen weer te geven op dezelfde regel als andere te
 Wat tekst met symbool $$a$$ en een formule $$x^2$$.
 ```
 
-### Uitgelichte formules 
+### Uitgelichte formules
 Om formules op een eigen regel te plaatsen gebruiken Markdown en HTML een andere syntax.
 
 <div class="code-example" markdown="1">
@@ -289,7 +289,7 @@ In plaats van `callout-info` kan je ook `callout-success`, `callout-warning`, of
 In Markdown ziet het er als volgt uit:
 
 ```markdown
-{:class="callout callout-info"}
+{: .callout.callout-info}
 > #### Hallo
 > Dit is een belangrijk bericht.
 ```
