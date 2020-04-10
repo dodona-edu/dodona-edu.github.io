@@ -126,6 +126,9 @@ Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde g
 
 Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *class* toevoegen voor een mooiere opmaak.
 
+##### HTML
+{: .no_toc }
+
 ```html
 <table class="table">
   <thead>
@@ -144,6 +147,9 @@ Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *cla
 </table>
 ```
 
+##### Markdown
+{: .no_toc }
+
 ```markdown
 |-----------------+------------+-----------------+----------------|
 | Default aligned |Left aligned| Center aligned  | Right aligned  |
@@ -159,7 +165,6 @@ Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *cla
 |-----------------+------------+-----------------+----------------|
 {: .table}
 ```
-
 
 ---
 
@@ -293,7 +298,6 @@ In Markdown ziet het er als volgt uit:
 > #### Hallo
 > Dit is een belangrijk bericht.
 ```
-
 
 ---
 

@@ -124,6 +124,9 @@ You can also include tables or other elements in a centered group.
 
 Both HTML and Markdown tables are supported. You can add the `table` class for prettier formatting.
 
+##### HTML
+{: .no_toc }
+
 ```html
 <table class="table">
   <thead>
@@ -140,6 +143,25 @@ Both HTML and Markdown tables are supported. You can add the `table` class for p
     ...
   </tbody>
 </table>
+```
+
+##### Markdown
+{: .no_toc }
+
+```markdown
+|-----------------+------------+-----------------+----------------|
+| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+| Second line     |foo         | **strong**      | baz            |
+| Third line      |quux        | baz             | bar            |
+|-----------------+------------+-----------------+----------------|
+| Second body     |            |                 |                |
+| 2 line          |            |                 |                |
+|=================+============+=================+================|
+| Footer row      |            |                 |                |
+|-----------------+------------+-----------------+----------------|
+{: .table}
 ```
 
 ---
@@ -267,7 +289,13 @@ To use a callout, create a `div` element with the `callout` class, containing an
 
 You can swap out `callout-info` for `callout-success`, `callout-warning`, or `callout-danger` to use green, yellow, or red instead of blue as highlight color.
 
-There is no specific syntax for Markdown, but since you can use HTML in Markdown, you can use the above.
+In Markdown, you can emulate this style by using this syntax:
+
+```markdown
+{: .callout.callout-info}
+> #### Hello
+> This is an important message.
+```
 
 ---
 
