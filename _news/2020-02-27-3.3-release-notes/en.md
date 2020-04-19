@@ -11,13 +11,13 @@ Dodona 3.3 brings a new exercise information page for teachers.
 
 ## Exercise information page
 
-As a teacher, you now have access to an information page for each exercise. This page displays the applied settings such as the memory limit and who create the exercise. In addition, the creator of the exercise can also add additional information and the solution to the exercise.
+As a teacher, you now have access to an information page for each exercise. This page displays the applied settings such as the memory limit and who created the exercise. In addition, the creator of the exercise can also add additional information and the solution to the exercise.
 
 ![Info page of an exercise](/assets/img/news/dodona-3.3/info-page.jpeg)
 
 ## Feedback only visible for teachers
 
-Sometime, a judge outputs some feedback messages that are only visible to teacher. Up until now, it was impossible for teachers to know which messages were only available to them and which were also available to students. In this release, a gray marker and icon was added to messages that are only available for teachers.
+Sometimes, a judge outputs some feedback messages that are only visible to teachers. Up until now, it was impossible for teachers to know which messages were only available to them and which were also available to students. In this release, a gray marker and icon were added to messages that are only available for teachers.
 
 ![teacher only message](/assets/img/news/dodona-3.3/teacher-message.png)
 

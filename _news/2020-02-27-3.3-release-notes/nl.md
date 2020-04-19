@@ -11,7 +11,7 @@ Dodona 3.3 voegt voor elke oefening een nieuwe informatiepagina to met extra inf
 
 ## infopagina voor oefeningen
 
-Als leerkracht heb je nu toegang tot een informatiepagina voor elke oefening. Deze pagina toont een aantal instellingen voor de oefening zoals de geheugenlimiet, maar ook wie de oefening opstelde. Daarnaast kan de maker van de oefening er ook voor kiezen om extra info ter beschikking te stellen en een oplossing te delen.
+Als leerkracht heb je nu toegang tot een informatiepagina voor elke oefening. Deze pagina toont een aantal instellingen zoals de geheugenlimiet, maar ook wie de oefening opstelde. Daarnaast kan de maker van de oefening er ook voor kiezen om extra info ter beschikking te stellen en om een oplossing te delen.
 
 ![Infopagina van een oefening](/assets/img/news/dodona-3.3/info-page.jpeg)
 
@@ -20,7 +20,7 @@ Als leerkracht heb je nu toegang tot een informatiepagina voor elke oefening. De
 
 Soms toont de judge een bericht in de feedbacktabel dat enkel zichtbaar is voor leerkrachten. Tot nu was het onmogelijk om te weten welke berichten enkel zichtbaar waren voor leerkrachten en welke voor iedereen. In deze release wordt er een grijze markering en icoontje toegevoegd naast berichten die enkel zichtbaar zijn voor leerkrachten.
 
-![teacher only message](/assets/img/news/dodona-3.3/teacher-message.png)
+![bericht voor leerkrachten](/assets/img/news/dodona-3.3/teacher-message.png)
 
 ## Volledige lijst van veranderingen
 
