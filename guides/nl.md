@@ -28,12 +28,7 @@ Hier vind je enkele handleidingen, vooral gericht op lesgevers.
 {% endfor %}
 </ul>
 
-## In het Engels
+## Enkel in het Engels
 
-{% assign guides = site.html_pages | where: "parent", "Guides" | sort:"nav_order" %}
-
-<ul>
-{% for guide in guides %}
-  <li><a href='{{ guide.url }}'>{{ guide.title }}</a></li>
-{% endfor %}
-</ul>
+* [Creating an API token](/en/guides/creating-an-api-token/)
+* [Creating a Judge](/en/guides/creating-a-judge/)
