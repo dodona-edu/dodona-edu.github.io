@@ -26,12 +26,6 @@ Here you'll find a number of guides, primarily focused on teachers.
 {% endfor %}
 </ul>
 
-## In Dutch
+## Only in Dutch
 
-{% assign guides = site.html_pages | where: "parent", "Handleidingen" | sort:"nav_order" %}
-
-<ul>
-{% for guide in guides %}
-  <li><a href='{{ guide.url }}'>{{ guide.title }}</a></li>
-{% endfor %}
-</ul>
+* [Van start met Dodona](/nl/guides/getting-started/)

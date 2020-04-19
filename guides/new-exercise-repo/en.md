@@ -3,8 +3,6 @@ layout: default
 title: Creating a new exercise repository
 description: "Tutorial: creating a new exercise repository"
 permalink: /en/guides/new-exercise-repo/
-redirect_from:
-  - /guides/new-exercise-repo/
 parent: Guides
 nav_order: 2
 lang: en
@@ -25,7 +23,7 @@ All staff on Dodona has a "Repositories" link in the sidebar of the Dodona websi
 
 ![add repository](add-repository.png)
 
-In the creation form, choose a (preferably unique) name for your repository on Dodona. Next, enter the clone URL found on the GitHub page of your repository. Be sure to use the SSH link from GitHub, and not the HTTPS version. Finally, choose the default judge for the exercises in your repository. For Python exercises, pick the "Pythia" judge.
+In the creation form, choose a (preferably unique) name for your repository on Dodona. Next, enter the clone URL found on the GitHub page of your repository. Be sure to use the SSH link from GitHub, and not the HTTPS version. Finally, choose the default judge for the exercises in your repository.
 
 ![github clone url](github-clone-url.png)
 
