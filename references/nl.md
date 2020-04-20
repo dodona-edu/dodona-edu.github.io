@@ -30,10 +30,5 @@ Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en ma
 
 ## In het Engels
 
-{% assign references = site.html_pages | where: "parent", "References" | sort:"nav_order" %}
-
-<ul>
-{% for ref in references %}
-  <li><a href='{{ ref.url }}'>{{ ref.title }}</a></li>
-{% endfor %}
-</ul>
+* [Exercise config](/en/references/exercise-config)
+* [Exercise directory structure](/en/references/exercise-directory-structure)

@@ -30,5 +30,4 @@ Hier vind je enkele handleidingen, vooral gericht op lesgevers.
 
 ## Enkel in het Engels
 
-* [Creating an API token](/en/guides/creating-an-api-token/)
 * [Creating a Judge](/en/guides/creating-a-judge/)
