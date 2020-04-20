@@ -25,13 +25,3 @@ Here you can find up to date descriptions of the Dodona config files and directo
   <li><a href='{{ ref.url }}'>{{ ref.title }}</a></li>
 {% endfor %}
 </ul>
-
-## In Dutch
-
-{% assign references = site.html_pages | where: "parent", "Referenties" | sort:"nav_order" %}
-
-<ul>
-{% for ref in references %}
-  <li><a href='{{ ref.url }}'>{{ ref.title }}</a></li>
-{% endfor %}
-</ul>
