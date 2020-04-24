@@ -16,7 +16,7 @@ slug: references-exercise-directory-structure
 Inside an exercise repository, Dodona handles every directory containing a `config.json` file as a separate exercise. We expect this exercise directory to have a specific structure:
 
 - **A `config.json` file**: this file contains the [exercise-specific configuration](/references/exercise-config). This configuration will be merged with all `dirconfig.json` files in the exercise's ancestor directories. You can always override config values set by a higher directory.
-- **An optional `about.en.md` and/or `about.nl.md` file:** The content of these files will be shown on the exercise info page. These files are meant to give extra context to teachers who might be interested in using this exercise in a course.
+- **An optional `about.en.md` and/or `about.nl.md` file:** The content of these files will be shown on the exercise info page. These files are meant to give extra context to teachers who might be interested in using this exercise in a course. You may also use `about.md` and `readme.md`, but the localized alternatives take precedence over these files. Especially `readme.md` is useful because GitHub also displays this file when looking at the repository.
 - **A `description` directory**: this directory contains the files describing the exercise containing:
   - **A `description.en.md` and/or `description.nl.md` file**: these files contain the English and/or Dutch description of the exercise.
   - **An optional `media` directory**: this directory contains static files such as images used in the exercise description.
