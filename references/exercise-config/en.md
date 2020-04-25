@@ -32,7 +32,7 @@ Dodona allows setting the configuration of an exercise using config files. These
   - `memory_limit` (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 100MB.
   - `network_enabled` (boolean, optional): set to `true` if internet access should be enabled. This optional setting is false by default.
 - `labels` (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
-- `author` (string, optional): info about the author of this exercise, formatted like an email To header.
+- `contact` (string, optional): info about the author of this exercise, formatted like an email To header.
 
 ## Example config file
 
@@ -54,6 +54,6 @@ Dodona allows setting the configuration of an exercise using config files. These
     "network_enabled": true
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
-  "author": "Dodona <dodona@ugent.be>"
+  "contact": "Dodona <dodona@ugent.be>"
 }
 ```
