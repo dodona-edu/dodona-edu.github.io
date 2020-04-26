@@ -2,7 +2,7 @@
 title: "Dodona 3.6"
 description: "Release notes Dodona 3.6"
 slug: "dodona-3.6"
-date: "2020-04-27"
+date: "2020-04-26"
 lang: en
 ---
 
