@@ -9,7 +9,7 @@ lang: en
 Dodona 3.6 introduces the concept of reading activities, next to the existing exercises.
 {: .fs-6 .fw-300 }
 
-This release was the result of the [#EUvsVirus hackathon](https://euvsvirus.org/).
+This release was [the result](https://devpost.com/software/dodona-learn-to-code) of the [#EUvsVirus hackathon](https://euvsvirus.org/).
 
 ## Reading activities
 

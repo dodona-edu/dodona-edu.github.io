@@ -9,7 +9,7 @@ lang: nl
 Dodona 3.6 introduceert het concept van leesactiviteiten naast de bestaande oefeningen.
 {: .fs-6 .fw-300 }
 
-Deze release was het resultaat van de [#EUvsVirus hackathon](https://euvsvirus.org/).
+Deze release was [het resultaat](https://devpost.com/software/dodona-learn-to-code) van de [#EUvsVirus hackathon](https://euvsvirus.org/).
 
 ## Leesactiviteiten
 
