@@ -15,7 +15,7 @@ This release was [the result](https://devpost.com/software/dodona-learn-to-code)
 
 Next to exercises, Dodona now also supports reading activities. This type of content page can be used to introduce new programming concepts without being linked with an exercise. On such pages, the text editor at the bottom of the page is replaced with a "mark as read" button. You can mix both exercises and reading activities in the series of your course.
 
-TODO: add screenshot
+![Mark as read](/assets/img/news/dodona-3.6/mark-as-read.png)
 
 The creation of a reading activity is very similar to the way exercises are created. They use the same directory structure and description format. The only difference is that the config file contains an additional value: `type` is set to `content`.
 

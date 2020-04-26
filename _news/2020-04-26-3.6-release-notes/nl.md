@@ -15,7 +15,7 @@ Deze release was [het resultaat](https://devpost.com/software/dodona-learn-to-co
 
 Naast oefeningen ondersteunt Dodona nu ook leesactiviteiten. Dit type pagina kan gebruikt worden om bijvoorbeeld nieuwe programmeerconcepten uit te leggen zonder gelinkt te zijn aan een oefening. Op dergelijke pagina is de indienmogelijkheid onderaan de pagina vervangen door een "markeren als gelezen knop". Je kan eenvoudig oefeningen en leesactiviteiten combineren binnen een zelfde opdrachtenreeks binnen je cursus.
 
-TODO: add screenshot
+![Markeren als gelezen](/assets/img/news/dodona-3.6/markeren-als-gelezen.png)
 
 Het aanmaken van een leesactiviteit is zeer gelijkaardig aan hoe oefeningen worden aangemaakt. Ze gebruiken dezelfde mappenstructuur en hetzelfde beschrijvingsformaat. Het enige verschil is dat in het configuratiebestand de extra waarde `type` of `content` moet gezet worden.
 
