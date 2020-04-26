@@ -21,9 +21,9 @@ Het aanmaken van een leesactiviteit is zeer gelijkaardig aan hoe oefeningen word
 
 ## De Programmeursleerling
 
-Om de mogelijkheden van leesactiviteiten te demonstreren hebben we [een volledige Python programmeercursus](https://dodona.ugent.be/nl/courses/293/) gericht op het secundair onderwijs toegevoegd aan Dodona. Deze cursus is een aangepaste versie van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck van de Universiteit van Tilburg. Meer informatie over hoe je deze cursus zelf kan gebruiken kan gevonden worden in [deze handleiding](TODO).
+Om de mogelijkheden van leesactiviteiten te demonstreren hebben we [een volledige Python programmeercursus](https://dodona.ugent.be/nl/courses/293/) gericht op het secundair onderwijs toegevoegd aan Dodona. Deze cursus is een aangepaste versie van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck van de Universiteit van Tilburg. Meer informatie over hoe je deze cursus zelf kan gebruiken kan gevonden worden in [deze handleiding](/nl/guides/the-coders-apprentice/).
 
-TODO: embed youtube video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CGdVEJk1Y9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Volledige lijst van veranderingen
 
