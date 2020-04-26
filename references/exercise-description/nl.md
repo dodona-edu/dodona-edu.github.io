@@ -14,7 +14,7 @@ slug: references-exercise-description
 # Oefeningbeschrijvingen
 {: .no_toc }
 
-Dodona ondersteunt oefeningbeschrijvingen in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
+Dodona ondersteunt oefeningbeschrijvingen en leesactiviteiten in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
 {: .fs-6 .fw-300 }
 
 ## Inhoudsopgave
@@ -24,6 +24,8 @@ Dodona ondersteunt oefeningbeschrijvingen in HTML en Markdown met verschillende 
 {:toc}
 
 ---
+
+De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een tekst editor hebben, terwijl leesactiviteiten een "markeer als gelezen" knop hebben.
 
 ## Markdown
 

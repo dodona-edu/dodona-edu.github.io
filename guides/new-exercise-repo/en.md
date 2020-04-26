@@ -11,7 +11,7 @@ slug: guides-new-exercise-repo
 
 # Creating a new exercise repository
 
-Dodona uses git repositories to manage exercises. A repository can contain multiple exercises and must adhere to a [predefined structure](/references/exercise-directory-structure) to be machine-readable by Dodona.
+Dodona uses git repositories to manage exercises. A repository can contain multiple exercises and reading activities and must adhere to a [predefined structure](/references/exercise-directory-structure) to be machine-readable by Dodona.
 
 ## 1. Create a Git repository
 
@@ -43,6 +43,6 @@ The only thing left to do is adding this URL to GitHub. To do this, open your re
 
 ![github webhook](github-webhook.png)
 
-## 4. Create exercises
+## 4. Create learning activities
 
-You are now ready to add exercises to your repository. If all goes well, they should show up automatically on Dodona.
+You are now ready to add exercises and reading activities to your repository. If all goes well, they should show up automatically on Dodona.

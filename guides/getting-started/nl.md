@@ -29,7 +29,7 @@ Alle informatie om vlot van start te gaan met Dodona.
 
 Dodona is een online oefenplatform om te leren programmeren. De webapplicatie werd ontwikkeld aan de Universiteit Gent om practica aan grote groepen studenten te ondersteunen. Dodona focust daarom in de eerste plaats op het automatisch testen en geven van feedback op ingediende oplossingen van programmeeroefeningen. Op dit moment ondersteunt Dodona de programmeertalen Python, JavaScript, Java, C#, bash, Prolog, Haskell en R.
 
-Op Dodona kunnen lesgevers een eigen cursus aanmaken, opgebouwd uit verschillende oefeningenreeksen. Ze kunnen hiervoor beroep doen op bestaande cursussen en oefeningen, maar kunnen er ook voor kiezen om zelf aan de slag te gaan en eigen oefeningen op te stellen. Dankzij de ingebouwde *learning analytics* en datavisualisaties is het bovendien eenvoudig om de voortgang van studenten te meten.
+Op Dodona kunnen lesgevers een eigen cursus aanmaken, opgebouwd uit verschillende oefeningenreeksen. Ze kunnen hiervoor beroep doen op bestaande cursussen en oefeningen, maar kunnen er ook voor kiezen om zelf aan de slag te gaan en eigen oefeningen en lesmateriaal op te stellen. Dankzij de ingebouwde *learning analytics* en datavisualisaties is het bovendien eenvoudig om de voortgang van studenten te meten.
 
 Dodona wordt gratis aangeboden voor educatieve doeleinden.
 
@@ -74,7 +74,7 @@ Voor elke oefeningenreeks kan je de zichtbaarheid instellen:
 - **Gesloten**: De reeks zal voor studenten niet zichtbaar zijn op de cursuspagina. Je kan deze instelling bijvoorbeeld gebruiken om reeksen voor te bereiden die je nog niet wil vrijgeven aan de studenten.
 - **Verborgen**: De reeks zal voor studenten niet zichtbaar zijn op de cursuspagina, maar je kan ze wel toegang geven via een speciale link die je te zien krijgt na het aanmaken van de reeks.
 
-Nadat je een reeks hebt aangemaakt, kan je oefeningen toevoegen. Je kan hiervoor kiezen uit alle oefeningen die voor jou beschikbaar zijn in Dodona. Via het zoekveld kan je eenvoudig de lijst van oefeningen filteren. Hieronder zie je bijvoorbeeld dat enkel de Python oefeningen met het label "middelbaar" worden weergegeven.
+Nadat je een reeks hebt aangemaakt, kan je oefeningen en leesactiviteiten toevoegen. Je kan hiervoor kiezen uit alle oefeningen en activiteiten die voor jou beschikbaar zijn in Dodona. Via het zoekveld kan je eenvoudig de lijst van oefeningen filteren. Hieronder zie je bijvoorbeeld dat enkel de Python oefeningen met het label "middelbaar" worden weergegeven.
 
 ![oefening-toevoegen](oefening-toevoegen.png)
 

@@ -12,7 +12,7 @@ slug: references-exercise-description
 # Exercise descriptions
 {: .no_toc }
 
-Dodona supports exercise descriptions in HTML and Markdown with several additional features such as support for mathematical formulas.
+Dodona supports exercise descriptions and reading activities in HTML and Markdown with several additional features such as support for mathematical formulas.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
@@ -23,9 +23,11 @@ Dodona supports exercise descriptions in HTML and Markdown with several addition
 
 ---
 
+These features are available for both exercises and reading activities. They are rendered in exactly the same way. The only difference is that exercises have a text editor at the bottom of the exercise description, where a reading activity has a "mark as read" button.
+
 ## Markdown
 
- For Dodona exercises, we recommend using Markdown over HTML. Although Markdown is widely used on the internet, the format is not standardized. This led to existence of several Markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the Markdown source. You can find more information about basic Markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+ For Dodona exercises and reading activities, we recommend using Markdown over HTML. Although Markdown is widely used on the internet, the format is not standardized. This led to existence of several Markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the Markdown source. You can find more information about basic Markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 
