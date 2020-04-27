@@ -27,7 +27,7 @@ Labels die toegekend werden aan cursusgebruikers kunnen gebruikt worden bij het 
 
 ## Nieuwe onderwijs- en onderzoeksinstellingen
 
-Bij deze release verwelkomen we twee nieuwe middelbare scholen die Dodona gebruiken: [Sint-Jozefscollege](http://sjcaalst.be/) (Aalst, België) en [Atheneum De Ring](http://www.ka2ring.be/) (Leuven, België).  
+Bij deze release verwelkomen we twee nieuwe middelbare scholen die Dodona gebruiken: [Sint-Jozefscollege](http://sjcaalst.be/) (Aalst, België) en [Atheneum De Ring](https://deringleuven.be/) (Leuven, België).  
 
 ## Volledige lijst van veranderingen
 
