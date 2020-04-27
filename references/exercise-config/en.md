@@ -48,7 +48,7 @@ The structure for a reading activity is identical to that of an exercise. There 
     - `nl`: the name of the exercise in Dutch
     - `en`: the name of the exercise in English
 - `labels` (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
-- `contact` (string, optional): info about the author of this exercise, formatted like an email To header.
+- `contact` (string, optional): info about the author of this reading activity, formatted like an email To header.
 
 ## Example config file
 

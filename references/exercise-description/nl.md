@@ -29,7 +29,7 @@ De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oef
 
 ## Markdown
 
-Voor oefeningen op Dodona raden we aan om de opgaven te schrijven in Markdown. Alhoewel Markdown veelgebruikt is op het Internet, is het formaat niet gestandaardiseerd. Dit heeft tot gevolg dat er verschillende Markdown varianten bestaan. Dodona gebruikt de [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) en Parser om HTML te genereren van de Markdown broncode. Meer informatie over opmaak in Markdown kan je vinden op deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schrijven in Markdown. Alhoewel Markdown veelgebruikt is op het Internet, is het formaat niet gestandaardiseerd. Dit heeft tot gevolg dat er verschillende Markdown varianten bestaan. Dodona gebruikt de [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) en Parser om HTML te genereren van de Markdown broncode. Meer informatie over opmaak in Markdown kan je vinden op deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 
