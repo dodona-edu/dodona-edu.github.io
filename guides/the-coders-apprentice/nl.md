@@ -29,6 +29,8 @@ Als je zelf aan de slag wil gaan met deze cursus in jouw klas, dan raden we aan 
 * Je kan als cursusbeheerder eenvoudig de voortgang van je leerlingen opvolgen.
 * Je krijgt de mogelijkheid om deadlines voor huiswerk in te stellen.
 
+![De Programmeursleerling](course-copy-nl.png)
+
 Om een 
 
 
