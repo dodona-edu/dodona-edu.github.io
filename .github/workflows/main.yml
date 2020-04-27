@@ -21,6 +21,6 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Run htmlproofer
-        run: htmlproofer ./_site
+        run: htmlproofer --url-ignore "/smartschool.be/" ./_site
         env:
           LANG: C.UTF-8

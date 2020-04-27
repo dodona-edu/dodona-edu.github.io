@@ -13,7 +13,7 @@ slug: guides-new-exercise-repo
 
 # Een nieuwe repository met oefeningen maken
 
-Dodona gebruikt git repositories om oefeningen te beheren. Een repository kan meerdere oefeningen bevatten en moet aan een [bepaalde structuur](/references/exercise-directory-structure) voldoen om gelezen te kunnen worden door Dodona.
+Dodona gebruikt git repositories om oefeningen en ander lesmateriaal te beheren. Een repository kan meerdere oefeningen bevatten en moet aan een [bepaalde structuur](/references/exercise-directory-structure) voldoen om gelezen te kunnen worden door Dodona.
 
 ## 1. Een Git repository aanmaken
 
@@ -31,7 +31,7 @@ In het formulier om de repository toe te voegen kies je een unieke naam voor je 
 
 Voordat je op de toevoeg-knop klikt moet je er eerst voor zorgen dat de Dodona server zowel lees- als schrijfrechten heeft op je repository met oefeningen. We hebben deze schrijftoegang nodig om eenvoudig de oefeningen kunnen bewerken via de webinterface.
 
-Op github.com is de eenvoudigste manier om de gebruiker dodona-server](https://github.com/dodona-server) aan je repository toe te voegen. Van zodra wij deze uitnodiging accepteren kan je van start gaan. Op github.ugent.be voeg je op dezelfde wijze de gebruiker [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe. Op gitlab.com kan je [dodona-server](https://gitlab.com/dodona-server) toevoegen. Als je je repository op een eigen GitLab server host, dan zal je zelf een nieuwe gebruiker voor Dodona moeten aanmaken. Je kan onze [publieke ssh sleutel](/dodona.pub) hiervoor gebruiken.
+Op github.com is de eenvoudigste manier om de gebruiker [dodona-server](https://github.com/dodona-server) aan je repository toe te voegen. Van zodra wij deze uitnodiging accepteren kan je van start gaan. Op github.ugent.be voeg je op dezelfde wijze de gebruiker [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe. Op gitlab.com kan je [dodona-server](https://gitlab.com/dodona-server) toevoegen. Als je je repository op een eigen GitLab server host, dan zal je zelf een nieuwe gebruiker voor Dodona moeten aanmaken. Je kan onze [publieke ssh sleutel](/dodona.pub) hiervoor gebruiken.
 
 ![github gebruiker toevoegen](github-add-collab.png)
 
@@ -47,6 +47,6 @@ Deze URL moet je vervolgens toevoegen aan GitHub. Dit doe je door op GitHub naar
 
 ![github webhook](github-webhook.png)
 
-## 4. Oefeningen aanmaken
+## 4. Lesmateriaal aanmaken
 
-Je bent nu helemaal klaar om oefeningen toe te voegen aan je repository. Als alles goed gaat, dan zouden ze automatisch moeten verschijnen op Dodona.
+Je bent nu helemaal klaar om oefeningen en lesmateriaal toe te voegen aan je repository. Als alles goed gaat, dan zouden ze automatisch moeten verschijnen op Dodona.

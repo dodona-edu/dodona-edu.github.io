@@ -11,7 +11,7 @@ Dodona 2.11 allows to login with a Google for Education (G Suite) account, visua
 
 ## Login with G Suite account
 
-If your school uses [Google for Education](https://edu.google.com), you can now also log in to Dodona with a G Suite account. Note that your account must be linked to a G Suite organization. Logging in with a regular Google account will therefore not work. In addition, you can still continue to log in with an [Office 365](https://www.office.com/) or [Smartschool](http://www.smartschool.be/) account.
+If your school uses [Google for Education](https://edu.google.com), you can now also log in to Dodona with a G Suite account. Note that your account must be linked to a G Suite organization. Logging in with a regular Google account will therefore not work. In addition, you can still continue to log in with an [Office 365](https://www.office.com/) or [Smartschool](https://www.smartschool.be/) account.
 
 ![G Suite](/assets/img/news/dodona-2.11/google-for-education.png)
 

@@ -27,7 +27,7 @@ Labels assigned to course members can be used when searching submitted solutions
 
 ## New research and education institutes
 
-With this release we welcome to new secondary schools using Dodona: Sint-Jozefscollege (Aalst, Belgium) and [Atheneum De Ring](http://www.ka2ring.be/) (Leuven, Belgium).  
+With this release we welcome to new secondary schools using Dodona: Sint-Jozefscollege (Aalst, Belgium) and [Atheneum De Ring](https://deringleuven.be/) (Leuven, Belgium).  
 
 ## Full list of changes
 
