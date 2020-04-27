@@ -20,13 +20,13 @@ In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een
 
 ![De Programmeursleerling](codersapprentice.png){:style="width:80%;"}
 
-Om zelf aan de slag te gaan met het interactieve boek kan je best eerste [aanmelden op Dodona](https://dodona-edu.github.io/nl/guides/getting-started/#aanmelden). Door te [registreren voor de cursus]() kan je de secties die je verwerkt hebt markeren als gelezen en kan je ook oplossingen indienen voor de programmeeroefeningen. Voor elke ingediende oplossing zal Dodona je onmiddellijk feedback geven en je kan eventueel gebruikmaken van een [visuele debugger](http://www.pythontutor.com/){:target="_blank"} om fouten in je code op te sporen. Op die manier kan je je eigen voortgang opvolgen bij het verwerken van de leerstof.
+Om zelf aan de slag te gaan met het interactieve boek kan je best eerste [aanmelden op Dodona](https://dodona-edu.github.io/nl/guides/getting-started/#aanmelden). Door te [registreren voor de cursus]() (dit is gratis) kan je de secties die je verwerkt hebt markeren als gelezen en kan je ook oplossingen indienen voor de programmeeroefeningen. Voor elke ingediende oplossing zal Dodona je onmiddellijk feedback geven en je kan eventueel gebruikmaken van een [visuele debugger](http://www.pythontutor.com/){:target="_blank"} om fouten in je code op te sporen. Op die manier kan je je eigen voortgang opvolgen bij het verwerken van de leerstof.
 
 ## Hoe gebruik ik de cursus met de leerlingen van mijn klas?
 
 Als je samen met een groep leerlingen aan de slag wil gaan met de cursus, dan raden we je aan om een eigen kopie van de bestaande cursus te nemen. Dat kan je  eenvoudig doen door de optie *Deze cursus kopiëren* te kiezen in het cursusmenu en het stappenplan te volgen. 
 
-![De Programmeursleerling](course-copy-nl.png){:style="width:80%;"}
+![Een cursus kopiëren in Dodona](course-copy-nl.png){:style="width:80%;"}
 
 Omdat je beheerder wordt van de gekopieerde cursus kan je die [volledig inrichten](https://dodona-edu.github.io/nl/guides/getting-started/) volgens de noden van je doelgroep:
 
@@ -38,8 +38,6 @@ Omdat je beheerder wordt van de gekopieerde cursus kan je die [volledig inrichte
 - de [voortgang opvolgen](https://dodona-edu.github.io/nl/guides/getting-started/#je-cursus-gebruiken) van je leerlingen opvolgen
 - code reviews uitvoeren op de ingediende oplossingen van je leerlingen
 
-## Waarom kan ik de cursus niet kopiëren
+## Waarom kan ik de cursus niet kopiëren?
 
 Om zelf [cursussen aan te maken](https://dodona-edu.github.io/nl/guides/getting-started/#een-cursus-aanmaken) (vanaf nul of door een bestaande cursus te kopiëren) of om [zelf oefeningen op te stellen](https://dodona-edu.github.io/nl/guides/new-exercise-repo/), heb je extra beheersrechten nodig op Dodona die niet in een standaardaccount vervat zitten. Dit kan op eenvoudig verzoek door een email te sturen naar dodona@ugent.be of via het [contactformulier](https://dodona.ugent.be/nl/contact){:target="_blank"}, en dan geven we je account zo snel mogelijk de extra rechten.
-
-
