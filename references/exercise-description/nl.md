@@ -14,7 +14,7 @@ slug: references-exercise-description
 # Oefeningbeschrijvingen
 {: .no_toc }
 
-Dodona ondersteunt oefeningbeschrijvingen in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
+Dodona ondersteunt oefeningbeschrijvingen en leesactiviteiten in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
 {: .fs-6 .fw-300 }
 
 ## Inhoudsopgave
@@ -25,9 +25,11 @@ Dodona ondersteunt oefeningbeschrijvingen in HTML en Markdown met verschillende 
 
 ---
 
+De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een tekst editor hebben, terwijl leesactiviteiten een "markeer als gelezen" knop hebben.
+
 ## Markdown
 
-Voor oefeningen op Dodona raden we aan om de opgaven te schrijven in Markdown. Alhoewel Markdown veelgebruikt is op het Internet, is het formaat niet gestandaardiseerd. Dit heeft tot gevolg dat er verschillende Markdown varianten bestaan. Dodona gebruikt de [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) en Parser om HTML te genereren van de Markdown broncode. Meer informatie over opmaak in Markdown kan je vinden op deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schrijven in Markdown. Alhoewel Markdown veelgebruikt is op het Internet, is het formaat niet gestandaardiseerd. Dit heeft tot gevolg dat er verschillende Markdown varianten bestaan. Dodona gebruikt de [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) en Parser om HTML te genereren van de Markdown broncode. Meer informatie over opmaak in Markdown kan je vinden op deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 

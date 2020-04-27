@@ -11,7 +11,7 @@ Dodona 2.11 laat toe om aan te melden met een Google for Education (G Suite) acc
 
 ## Aanmelden met G Suite account
 
-Gebruikt je school [Google for Education](https://edu.google.com) dan kan je voortaan ook met een G Suite account aanmelden op Dodona. Merk op dat je account wel verbonden moet zijn met een G Suite organisatie. Aanmelden met een gewone Google account zal dus niet werken. Daarnaast kan je ook nog altijd blijven aanmelden met een [Office 365](https://www.office.com/) of [Smartschool](http://www.smartschool.be/) account.
+Gebruikt je school [Google for Education](https://edu.google.com) dan kan je voortaan ook met een G Suite account aanmelden op Dodona. Merk op dat je account wel verbonden moet zijn met een G Suite organisatie. Aanmelden met een gewone Google account zal dus niet werken. Daarnaast kan je ook nog altijd blijven aanmelden met een [Office 365](https://www.office.com/) of [Smartschool](https://www.smartschool.be/) account.
 
 ![G Suite](/assets/img/news/dodona-2.11/google-for-education.png)
 
