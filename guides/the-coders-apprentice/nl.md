@@ -20,7 +20,7 @@ In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een
 
 ![De Programmeursleerling](codersapprentice.png){:style="width:80%;"}
 
-Om zelf aan de slag te gaan met het interactieve boek kan je best eerste [aanmelden op Dodona](https://dodona-edu.github.io/nl/guides/getting-started/#aanmelden). Door te [registreren voor de cursus]() (dit is gratis) kan je de secties die je verwerkt hebt markeren als gelezen en kan je ook oplossingen indienen voor de programmeeroefeningen. Voor elke ingediende oplossing zal Dodona je onmiddellijk feedback geven en je kan eventueel gebruikmaken van een [visuele debugger](http://www.pythontutor.com/){:target="_blank"} om fouten in je code op te sporen. Op die manier kan je je eigen voortgang opvolgen bij het verwerken van de leerstof.
+Om zelf aan de slag te gaan met het interactieve boek kan je best eerste [aanmelden op Dodona](https://dodona-edu.github.io/nl/guides/getting-started/#aanmelden). Door te registreren voor de cursus (dit is gratis) kan je de secties die je verwerkt hebt markeren als gelezen en kan je ook oplossingen indienen voor de programmeeroefeningen. Voor elke ingediende oplossing zal Dodona je onmiddellijk feedback geven en je kan eventueel gebruikmaken van een [visuele debugger](http://www.pythontutor.com/){:target="_blank"} om fouten in je code op te sporen. Op die manier kan je je eigen voortgang opvolgen bij het verwerken van de leerstof.
 
 ## Hoe gebruik ik de cursus met de leerlingen van mijn klas?
 
@@ -36,7 +36,7 @@ Omdat je beheerder wordt van de gekopieerde cursus kan je die [volledig inrichte
   - aanvullen met [eigen oefeningen](https://dodona-edu.github.io/nl/guides/new-exercise-repo/)
 - [deadlines instellen](https://dodona-edu.github.io/nl/guides/getting-started/#een-cursus-opstellen) voor taken
 - de [voortgang opvolgen](https://dodona-edu.github.io/nl/guides/getting-started/#je-cursus-gebruiken) van je leerlingen opvolgen
-- code reviews uitvoeren op de ingediende oplossingen van je leerlingen
+- opmerkingen geven op de ingediende oplossingen van je leerlingen
 
 ## Waarom kan ik de cursus niet kopiëren?
 

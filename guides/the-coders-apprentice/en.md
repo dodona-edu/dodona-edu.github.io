@@ -34,7 +34,7 @@ Being the administrator of the copied version of the course gives you the comple
   - add your own programming assignments
 - set deadlines for specific tasks
 - monitor the progress of your students
-- review the submitted solutions of your students
+- review and comment on the submitted solutions of your students
 
 ## Why can't I copy the course?
 
