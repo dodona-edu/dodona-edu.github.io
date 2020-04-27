@@ -17,7 +17,7 @@ Naast oefeningen ondersteunt Dodona nu ook leesactiviteiten. Dit type pagina kan
 
 ![Markeren als gelezen](/assets/img/news/dodona-3.6/markeren-als-gelezen.png)
 
-Het aanmaken van een leesactiviteit is zeer gelijkaardig aan hoe oefeningen worden aangemaakt. Ze gebruiken dezelfde mappenstructuur en hetzelfde beschrijvingsformaat. Het enige verschil is dat in het configuratiebestand de extra waarde `type` of `content` moet gezet worden.
+Het aanmaken van een leesactiviteit is zeer gelijkaardig aan hoe oefeningen worden aangemaakt. Ze gebruiken dezelfde mappenstructuur en hetzelfde beschrijvingsformaat. Het enige verschil is dat in het configuratiebestand de extra waarde `type` op `content` moet gezet worden.
 
 ## De Programmeursleerling
 
