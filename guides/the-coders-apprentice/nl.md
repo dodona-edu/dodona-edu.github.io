@@ -22,12 +22,11 @@ In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een
 
 Om zelf aan de slag te gaan met het interactieve boek kan je best eerste [aanmelden op Dodona](https://dodona-edu.github.io/nl/guides/getting-started/#aanmelden). Door te registreren voor de cursus (dit is gratis) kan je de secties die je verwerkt hebt markeren als gelezen en kan je ook oplossingen indienen voor de programmeeroefeningen. Voor elke ingediende oplossing zal Dodona je onmiddellijk feedback geven en je kan eventueel gebruikmaken van een [visuele debugger](http://www.pythontutor.com/){:target="_blank"} om fouten in je code op te sporen. Op die manier kan je je eigen voortgang opvolgen bij het verwerken van de leerstof.
 
-{: .dodona-centered-group}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CGdVEJk1Y9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Hoe gebruik ik de cursus met de leerlingen van mijn klas?
 
-Als je samen met een groep leerlingen aan de slag wil gaan met de cursus, dan raden we je aan om een eigen kopie van de bestaande cursus te nemen. Dat kan je  eenvoudig doen door de optie *Deze cursus kopiëren* te kiezen in het cursusmenu en het stappenplan te volgen. 
+Als je samen met een groep leerlingen aan de slag wil gaan met de cursus, dan raden we je aan om een eigen kopie van de bestaande cursus te nemen. Dat kan je  eenvoudig doen door de optie *Deze cursus kopiëren* te kiezen in het cursusmenu en het stappenplan te volgen.
 
 ![Een cursus kopiëren in Dodona](course-copy-nl.png){:style="width:80%;"}
 
