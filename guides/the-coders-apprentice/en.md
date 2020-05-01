@@ -18,7 +18,7 @@ In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) you'll find
 
 ![The Coder's Apprentice](codersapprentice.png){:style="width:80%;"}
 
-It's a good idea to logon to Dodona first, before getting started with the interactive book. By registering for the course (which is free) you will be able to mark the sections you processed as read and to submit solutions for the programming assignments. Dodona will automatically give you feedback on each submitted solution and you can make use of a [visuele debugger](http://www.pythontutor.com/){:target="_blank"} to hunt for errors in your code. This way, you can monitor your own process while going through the learning activities.
+It's a good idea to logon to Dodona first, before getting started with the interactive book. By registering for the course (which is free) you will be able to mark the sections you processed as read and to submit solutions for the programming assignments. Dodona will automatically give you feedback on each submitted solution and you can make use of a [visual debugger](http://www.pythontutor.com/){:target="_blank"} to hunt for errors in your code. This way, you can monitor your own process while going through the learning activities.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eAp-ftrZQDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
