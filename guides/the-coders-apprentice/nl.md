@@ -13,7 +13,7 @@ slug: guides-the-coders-apprentice
 
 # De Programmeursleerling
 
-Leren programmeren in Python 3.
+Leren programmeren in Python 3
 {: .fs-6 .fw-300 }
 
 In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een **interactieve versie** van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck (Tilburg University). Dit boek is erop gericht om leerlingen uit het **secundair onderwijs** te leren programmeren in **Python 3**. We bieden zowel een [Nederlandstalige](https://dodona.ugent.be/nl/courses/293/) cursus als een [Engelstalige](https://dodona.ugent.be/nl/courses/293/) cursus aan.
@@ -21,6 +21,9 @@ In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een
 ![De Programmeursleerling](codersapprentice.png){:style="width:80%;"}
 
 Om zelf aan de slag te gaan met het interactieve boek kan je best eerste [aanmelden op Dodona](https://dodona-edu.github.io/nl/guides/getting-started/#aanmelden). Door te registreren voor de cursus (dit is gratis) kan je de secties die je verwerkt hebt markeren als gelezen en kan je ook oplossingen indienen voor de programmeeroefeningen. Voor elke ingediende oplossing zal Dodona je onmiddellijk feedback geven en je kan eventueel gebruikmaken van een [visuele debugger](http://www.pythontutor.com/){:target="_blank"} om fouten in je code op te sporen. Op die manier kan je je eigen voortgang opvolgen bij het verwerken van de leerstof.
+
+{: .dodona-centered-group}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CGdVEJk1Y9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Hoe gebruik ik de cursus met de leerlingen van mijn klas?
 
@@ -33,7 +36,7 @@ Omdat je beheerder wordt van de gekopieerde cursus kan je die [volledig inrichte
 - het leerpad van de cursus aanpassen
   - hoofdstukken en secties herschikken, toevoegen, weglaten of voorlopig verbergen
   - oefeningen herschikken, toevoegen, weglaten of voorlopig verbergen
-  - aanvullen met [eigen oefeningen](https://dodona-edu.github.io/nl/guides/new-exercise-repo/)
+  - aanvullen met [eigen oefeningen](https://dodona-edu.github.io/nl/guides/new-exercise-repo/) en die ook delen met collega's
 - [deadlines instellen](https://dodona-edu.github.io/nl/guides/getting-started/#een-cursus-opstellen) voor taken
 - de [voortgang opvolgen](https://dodona-edu.github.io/nl/guides/getting-started/#je-cursus-gebruiken) van je leerlingen opvolgen
 - opmerkingen geven op de ingediende oplossingen van je leerlingen

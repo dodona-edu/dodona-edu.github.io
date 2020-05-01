@@ -11,7 +11,7 @@ slug: guides-the-coders-apprentice
 
 # The Coder's Apprentice
 
-Learn to code with Python 3.
+Learn to code with Python 3
 {: .fs-6 .fw-300 }
 
 In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) you'll find an **interactive edition** of the book [The Coder's Apprentice](http://www.spronck.net/pythonbook/dutchindex.xhtml) by Pieter Spronck (Tilburg University). The book aims to teach **secondary school** students how to code with **Python 3**. The course is available both in [English](https://dodona.ugent.be/nl/courses/293/) and in [Dutch](https://dodona.ugent.be/nl/courses/293/).
@@ -19,6 +19,9 @@ In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) you'll find
 ![The Coder's Apprentice](codersapprentice.png){:style="width:80%;"}
 
 It's a good idea to logon to Dodona first, before getting started with the interactive book. By registering for the course (which is free) you will be able to mark the sections you processed as read and to submit solutions for the programming assignments. Dodona will automatically give you feedback on each submitted solution and you can make use of a [visuele debugger](http://www.pythontutor.com/){:target="_blank"} to hunt for errors in your code. This way, you can monitor your own process while going through the learning activities.
+
+{: .dodona-centered-group}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eAp-ftrZQDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How do I use the course with the students of my class?
 
@@ -31,7 +34,7 @@ Being the administrator of the copied version of the course gives you the comple
 - adjust the learning path of the course
   - rearrange, add, delete or temporarily hide chapters and sections
   - rearrange, add, delete or temporarily hide programming assignments
-  - add your own programming assignments
+  - add your own programming assignments and share them with your colleagues
 - set deadlines for specific tasks
 - monitor the progress of your students
 - review and comment on the submitted solutions of your students
