@@ -43,7 +43,7 @@ Omdat je beheerder wordt van de gekopieerde cursus, kan je die zelf [inrichten](
 - de [voortgang](https://dodona-edu.github.io/nl/guides/getting-started/#je-cursus-gebruiken) van leerlingen opvolgen (individueel of in groep)
 - online toetsen en examens organiseren
 - ingediende oplossingen becommentariëren
-- klassikaal ingediende oplossingen bespreken (gepseudonimiseerd via de demo modus)
+- klassikaal ingediende oplossingen bespreken (gepseudonomiseerd in demomodus)
 - collega's mee als cursusbeheerder aanduiden
 
 
@@ -56,4 +56,4 @@ Om zelf [cursussen aan te maken](https://dodona-edu.github.io/nl/guides/getting-
 
 Het leermateriaal zelf bestaat uit **uitleg** en **programmeeroefeningen met voorzieningen voor automatische feedback**. Die werk je uit in een eigen [git repository](https://dodona-edu.github.io/nl/guides/new-exercise-repo/). Door de repository aan Dodona te [koppelen](https://dodona-edu.github.io/nl/guides/new-exercise-repo/#3-de-webhook-instellen) wordt de laatste versie van het leermateriaal automatisch op het leerplatform gepubliceerd. Elders in de documentatie van Dodona kan je lezen hoe je leermateriaal kan [configureren](https://dodona-edu.github.io/en/references/exercise-config/) en [structureren](https://dodona-edu.github.io/en/references/exercise-directory-structure/), en hoe je beschrijvingen voorziet van [multimedia en speciale opmaak](https://dodona-edu.github.io/nl/references/exercise-description/).
 
-De [interactieve versie](https://dodona.ugent.be/nl/courses/293/){:target="_blank"} van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml){:target="_blank"} wordt uitgegeven onder de [Creative Commons BY-NC-SA 3.0](https://github.com/dodona-edu/programmeursleerling/blob/master/LICENSE.md){:target="_blank"} licentie. Daardoor kan je de configuratie van alle leermateriaal uit de interactieve versie integraal [op GitHub bekijken](https://github.com/dodona-edu/programmeursleerling){:target="_blank"}. Daarmee heb je meteen een voorbeeld waaraan je je kan spiegelen om zelf eigen leermateriaal voor Dodona op te stellen.
+Net als het [originele boek](http://www.spronck.net/pythonbook/dutchindex.xhtml){:target="_blank"} is ook de [interactieve versie](https://dodona.ugent.be/nl/courses/293/){:target="_blank"} van De Programmeursleerling uitgegeven onder de [Creative Commons BY-NC-SA 3.0](https://github.com/dodona-edu/programmeursleerling/blob/master/LICENSE.md){:target="_blank"} licentie. Bovendien is de broncode ervan beschikbaar op [GitHub](https://github.com/dodona-edu/programmeursleerling){:target="_blank"}, zodat je er de configuratie van alle leermateriaal integraal kunt bekijken. Daaraan kan je je kan spiegelen om zelf eigen leermateriaal voor Dodona te ontwikkelen.
