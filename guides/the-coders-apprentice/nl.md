@@ -13,8 +13,9 @@ slug: guides-the-coders-apprentice
 
 # De Programmeursleerling
 
-In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een **interactieve versie** van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck (Tilburg University). Dit boek is erop gericht om leerlingen uit het **secundair onderwijs** te leren programmeren in **Python 3**. We bieden zowel een [Nederlandstalige](https://dodona.ugent.be/nl/courses/293/) cursus als een [Engelstalige](https://dodona.ugent.be/nl/courses/293/) cursus aan.
+In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) vind je een **interactieve versie** van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck (Tilburg University). Dit boek is erop gericht om leerlingen uit het **secundair onderwijs** te leren programmeren in **Python 3**. We bieden zowel een [Nederlandstalige](https://dodona.ugent.be/nl/courses/293/) als een [Engelstalige](https://dodona.ugent.be/nl/courses/293/) cursus aan.
 
+{:style="text-align:center;"}
 ![De Programmeursleerling](codersapprentice.png){:style="width:80%;"}
 
 ## Leren programmeren in Python 3
