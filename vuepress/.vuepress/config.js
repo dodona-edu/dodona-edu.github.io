@@ -118,7 +118,11 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
       sidebarDepth: 2,
       children: [
         ['', FirstItem],
-        'getting-started/'
+        'getting-started/',
+        'new-exercise-repo/',
+        'the-coders-apprentice/',
+        'creating-an-api-token/',
+        'creating-a-judge/'
       ]
     },
     `/${lang}/references/`
