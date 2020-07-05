@@ -4,11 +4,22 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Dodona Docs',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
+
+  locales: {
+    '/': {
+      lang: 'nl-BE',
+      title: 'Dodona Docs'
+    }, 
+    '/en/': {
+      lang: 'en-US',
+      title: 'Dodona Docs'
+    }
+  },
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -32,31 +43,40 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
-    ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
+    locales: {
+      '/': {
+        label: 'Nederlands',
+        selectText: '🌐',
+        editLinkText: 'Bewerken op GitHub',
+        serviceWorker: {
+          updatePopup: {
+            message: "Nieuwe inhoud is beschikbaar.",
+            buttonText: "Herladen"
+          }
+        },
+        nav: [
+          { text: 'Nieuws', link: '/news/' },
+          { text: 'Handleidingen', link: '/guides/' },
+          { text: 'Referenties', link: '/references/' },
+          { text: 'Dodona', link: 'https://dodona.ugent.be' }
+        ],
+        sidebar: {
+          '/': getGeneralSidebar()
         }
-      ],
+      },
+      '/en/': {
+        label: 'English',
+        selectText: '🌐',
+        nav: [
+          { text: 'News', link: '/en/news/' },
+          { text: 'Guides', link: '/en/guides/' },
+          { text: 'References', link: '/en/references/' },
+          { text: 'Dodona', link: 'https://dodona.ugent.be' }
+        ],
+        sidebar: {
+          '/en/': getGeneralSidebar()
+        }
+      },
     }
   },
 
@@ -66,5 +86,14 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+  ]
+}
+
+function getGeneralSidebar() {
+  return [
+    '',
+    'news/',
+    'guides/',
+    'references/'
   ]
 }
