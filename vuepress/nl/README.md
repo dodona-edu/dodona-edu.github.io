@@ -13,3 +13,4 @@ Nog niet alle handleidingen van onze vorige documentatiewebsite zijn gemigreerd.
 Voor de Dodona webapplicatie kunt u terecht op [https://dodona.ugent.be](https://dodona.ugent.be).
 
 ## Recente berichten
+<NewsIndex category="current" lang="nl" limit="5" />

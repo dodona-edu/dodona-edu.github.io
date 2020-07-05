@@ -13,3 +13,4 @@ This website will become the definitive source of all Dodona documentation. Whil
 For the Dodona web application, please go to [https://dodona.ugent.be](https://dodona.ugent.be).
 
 ## Latest messages
+<NewsIndex category="current" lang="en" limit="5" />
