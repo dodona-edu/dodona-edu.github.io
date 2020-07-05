@@ -11,7 +11,7 @@ module.exports = {
   description: description,
 
   locales: {
-    '/': {
+    '/nl/': {
       lang: 'nl-BE',
       title: 'Dodona Docs'
     }, 
@@ -43,8 +43,9 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+    smoothScroll: true,
     locales: {
-      '/': {
+      '/nl/': {
         label: 'Nederlands',
         selectText: '🌐',
         editLinkText: 'Bewerken op GitHub',
@@ -55,14 +56,14 @@ module.exports = {
           }
         },
         nav: [
-          { text: 'Nieuws', link: '/news/' },
-          { text: 'Handleidingen', link: '/guides/' },
-          { text: 'Referenties', link: '/references/' },
+          { text: 'Nieuws', link: '/nl/news/' },
+          { text: 'Handleidingen', link: '/nl/guides/' },
+          { text: 'Referenties', link: '/nl/references/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
-          '/guides/': getGuidesSidebar('Handleidingen', 'Overzicht'),
-          '/': getGeneralSidebar()
+          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht'),
+          '/nl/': getGeneralSidebar()
         }
       },
       '/en/': {
@@ -75,7 +76,7 @@ module.exports = {
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
-          '/en/guides/': getGuidesSidebar('Guides', 'Overview'),
+          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -88,6 +89,14 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    [
+      'vuepress-plugin-redirect',
+      {
+        // provide i18n redirection
+        // it will automatically redirect `/foo/bar/` to `/:locale/foo/bar/` if exists
+        locales: true,
+      }
+    ]
   ]
 }
 
@@ -100,9 +109,9 @@ function getGeneralSidebar() {
   ]
 }
 
-function getGuidesSidebar(groupTitle, FirstItem) {
+function getGuidesSidebar(lang, groupTitle, FirstItem) {
   return [
-    '/news/',
+    `/${lang}/news/`,
     {
       title: groupTitle,
       collapsable: false,
@@ -112,6 +121,6 @@ function getGuidesSidebar(groupTitle, FirstItem) {
         'getting-started/'
       ]
     },
-    '/references/'
+    `/${lang}/references/`
   ]
 }
