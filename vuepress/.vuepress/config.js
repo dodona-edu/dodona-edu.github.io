@@ -63,6 +63,7 @@ module.exports = {
         ],
         sidebar: {
           '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht'),
+          '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
       },
@@ -77,6 +78,7 @@ module.exports = {
         ],
         sidebar: {
           '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview'),
+          '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -126,5 +128,23 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
       ]
     },
     `/${lang}/references/`
+  ]
+}
+
+function getReferencesSidebar(lang, groupTitle, FirstItem) {
+  return [
+    `/${lang}/news/`,
+    `/${lang}/guides/`,
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['', FirstItem],
+        'exercise-description/',
+        'exercise-config/',
+        'exercise-directory-structure/'
+      ]
+    }
   ]
 }

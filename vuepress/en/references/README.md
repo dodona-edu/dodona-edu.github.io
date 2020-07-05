@@ -1,11 +1,13 @@
-# Config
+---
+title: References
+sidebarDepth: 0
+---
+# References
 
-## foo
+Here you can find up to date descriptions of the Dodona config files and directory structures.
 
-- Type: `string`
-- Default: `/`
+## In English
 
-## bar
-
-- Type: `string`
-- Default: `/`
+* [Exercise descriptions](exercise-description)
+* [Exercise config](exercise-config)
+* [Exercise directory structure](exercise-directory-structure)
