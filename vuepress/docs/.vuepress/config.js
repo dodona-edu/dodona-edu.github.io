@@ -61,6 +61,7 @@ module.exports = {
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
+          '/guides/': getGuidesSidebar('Handleidingen', 'Overzicht'),
           '/': getGeneralSidebar()
         }
       },
@@ -74,6 +75,7 @@ module.exports = {
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
+          '/en/guides/': getGuidesSidebar('Guides', 'Overview'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -95,5 +97,21 @@ function getGeneralSidebar() {
     'news/',
     'guides/',
     'references/'
+  ]
+}
+
+function getGuidesSidebar(groupTitle, FirstItem) {
+  return [
+    '/news/',
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['', FirstItem],
+        'getting-started/'
+      ]
+    },
+    '/references/'
   ]
 }

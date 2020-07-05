@@ -1,11 +1,6 @@
-# Config
+---
+title: Referenties
+---
+# Referenties
 
-## foo
-
-- Type: `string`
-- Default: `/`
-
-## bar
-
-- Type: `string`
-- Default: `/`
+Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en mappenstructuren.
