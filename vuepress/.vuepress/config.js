@@ -1,4 +1,6 @@
 const { description } = require('../package')
+const fs = require("fs");
+const path = require("path");
 
 module.exports = {
   /**
@@ -44,6 +46,8 @@ module.exports = {
     editLinkText: '',
     lastUpdated: false,
     smoothScroll: true,
+    nextLinks: false,
+    prevLinks: false,
     locales: {
       '/nl/': {
         label: 'Nederlands',
@@ -62,6 +66,7 @@ module.exports = {
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
+          '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
           '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
           '/nl/': getGeneralSidebar()
@@ -77,6 +82,7 @@ module.exports = {
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
+          '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
           '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
           '/en/': getGeneralSidebar()
@@ -108,6 +114,22 @@ function getGeneralSidebar() {
     'news/',
     'guides/',
     'references/'
+  ]
+}
+
+function getNewsSidebar(lang, groupTitle, FirstItem) {
+  return [
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['', FirstItem],
+        ...getNewsLinks()
+      ]
+    },
+    `/${lang}/guides/`,
+    `/${lang}/references/`
   ]
 }
 
@@ -147,4 +169,13 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
       ]
     }
   ]
+}
+
+function getNewsLinks() {
+  return fs
+    .readdirSync(path.join(`${__dirname}/../nl/news`), {withFileTypes: true})
+    .filter(item => item.isDirectory())
+    .map(item => item.name + "/")
+    .reverse()
+    .slice(0, 5);
 }
