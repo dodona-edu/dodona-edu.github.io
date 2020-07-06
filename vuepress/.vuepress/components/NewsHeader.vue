@@ -8,7 +8,8 @@
   export default {
     props: [
       'title',
-      'date'
+      'date',
+      'lang'
     ],
     methods: {
       formatDate(date) {

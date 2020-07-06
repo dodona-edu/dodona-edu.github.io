@@ -7,6 +7,7 @@ date: "2020-04-26"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
+
 > Dodona 3.6 introduces the concept of reading activities, next to the existing exercises.
 
 This release was [the result](https://devpost.com/software/dodona-learn-to-code) of the [#EUvsVirus hackathon](https://euvsvirus.org/).
