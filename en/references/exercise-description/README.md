@@ -15,7 +15,7 @@ These features are available for both exercises and reading activities. They are
 
 ## Images
 
-To use images in your exercise description, be sure to put the images in the `description/media/` [directory](/references/exercise-directory-structure) of your exercise.
+To use images in your exercise description, be sure to put the images in the `description/media/` [directory](/en/references/exercise-directory-structure) of your exercise.
 
 ### Lightboxes
 

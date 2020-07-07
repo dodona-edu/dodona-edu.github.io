@@ -15,7 +15,7 @@ Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schri
 
 ## Afbeeldingen
 
-Om afbeeldingen te gebruiken in je opgave, dien je de afbeeldingen in de `description/media/` [map](/references/exercise-directory-structure) te plaatsen.
+Om afbeeldingen te gebruiken in je opgave, dien je de afbeeldingen in de `description/media/` [map](/nl/references/exercise-directory-structure) te plaatsen.
 
 ### Lightboxes
 

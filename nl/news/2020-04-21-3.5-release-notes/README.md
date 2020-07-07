@@ -15,4 +15,4 @@ De status van een oefening voor een student wordt nu bijgehouden in de databank 
 
 ## Volledige lijst van veranderingen
 
-Naast de aanpassingen onder de motorkap hebben ook de [infopagina voor oefeningen](/nl/news/2020/02/27/dodona-3.3/#infopagina-voor-oefeningen) en het [manueel toevoegen van annotaties](/nl/news/2020/03/16/dodona-3.4/#manuele-opmerkingen) wat extra aandacht gekregen. Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub release](https://github.com/dodona-edu/dodona/releases/tag/3.5).
+Naast de aanpassingen onder de motorkap hebben ook de [infopagina voor oefeningen](/nl/news/2020/02/27/_3-3-release-notes/#infopagina-voor-oefeningen) en het [manueel toevoegen van annotaties](/nl/news/2020/03/16/_3-4-release-notes/#manuele-opmerkingen) wat extra aandacht gekregen. Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub release](https://github.com/dodona-edu/dodona/releases/tag/3.5).

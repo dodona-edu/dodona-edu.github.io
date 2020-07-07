@@ -5,7 +5,7 @@ description: "Tutorial: een nieuwe repository met oefeningen maken"
 
 # Een nieuwe repository met oefeningen maken
 
-Dodona gebruikt git repositories om oefeningen en ander lesmateriaal te beheren. Een repository kan meerdere oefeningen bevatten en moet aan een [bepaalde structuur](/references/exercise-directory-structure) voldoen om gelezen te kunnen worden door Dodona.
+Dodona gebruikt git repositories om oefeningen en ander lesmateriaal te beheren. Een repository kan meerdere oefeningen bevatten en moet aan een [bepaalde structuur](/nl/references/exercise-directory-structure) voldoen om gelezen te kunnen worden door Dodona.
 
 ## 1. Een Git repository aanmaken
 

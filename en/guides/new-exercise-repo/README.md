@@ -5,7 +5,7 @@ description: "Tutorial: creating a new exercise repo"
 
 # Creating a new exercise repository
 
-Dodona uses git repositories to manage exercises. A repository can contain multiple exercises and reading activities and must adhere to a [predefined structure](/references/exercise-directory-structure) to be machine-readable by Dodona.
+Dodona uses git repositories to manage exercises. A repository can contain multiple exercises and reading activities and must adhere to a [predefined structure](/en/references/exercise-directory-structure) to be machine-readable by Dodona.
 
 ## 1. Create a Git repository
 

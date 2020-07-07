@@ -8,11 +8,11 @@ description: "Tutorial: vcreating a judge"
 This is an advanced guide aimed at developers. You will probably not need the info on this page. If you plan to create a judge, please contact us at <a href="mailto:dodona@ugent.be">dodona@ugent.be</a>.
 :::
 
-For each judge in Dodona, there is one git repository. This git repository requires a [predefined structure](#2-repository-structure) and [interface](#3-judge-interface) to fit into Dodona. Once created, a judge should be [added to Dodona](#1-adding-a-judge), so it can be used for exercises.
+For each judge in Dodona, there is one git repository. This git repository requires a [predefined structure](#_2-repository-structure) and [interface](#_3-judge-interface) to fit into Dodona. Once created, a judge should be [added to Dodona](#_1-adding-a-judge), so it can be used for exercises.
 
 ## 1. Adding a Judge
 
-As a Dodona staff member, you can go to the "Judges" page through the administrator dropdown. To add a new judge, hit the `+` action button. Supply a human-readable name, the name of the Docker image the judge should run in, the git clone url, the pathname (where to store the repository on the server relative to the directory containing all judges, usually the name of the repository, however, this needs to be unique) and the [feedback renderer](#4-feedback-renderers).
+As a Dodona staff member, you can go to the "Judges" page through the administrator dropdown. To add a new judge, hit the `+` action button. Supply a human-readable name, the name of the Docker image the judge should run in, the git clone url, the pathname (where to store the repository on the server relative to the directory containing all judges, usually the name of the repository, however, this needs to be unique) and the [feedback renderer](#_4-feedback-renderers).
 
 ## 2. Repository Structure
 
