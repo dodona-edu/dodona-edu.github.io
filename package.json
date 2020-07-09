@@ -1,0 +1,22 @@
+{
+  "name": "dodona-docs",
+  "version": "0.0.1",
+  "description": "Deze website bevat documentatie en informatie over het Dodona project.",
+  "main": "index.js",
+  "authors": {
+    "name": "Team Dodona",
+    "email": "dodona@ugent.be"
+  },
+  "repository": "https://github.com/dodona-edu/dodona-edu.github.io",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.2",
+    "@vuepress/plugin-medium-zoom": "^1.3.1",
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-redirect": "^1.2.4"
+  }
+}

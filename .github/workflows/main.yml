@@ -4,23 +4,21 @@ on: [push]
 
 jobs:
   jekyll:
-    name: Build Jekyll site
+    name: Build site
     runs-on: ubuntu-latest
-    container:
-      image: ruby:2.6.4
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: |
-          gem install bundler:2.0.2
-          gem install html-proofer
-          bundle install
+        run: yarn install
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: yarn build
 
-      - name: Run htmlproofer
-        run: htmlproofer --url-ignore "/smartschool.be/" ./_site
-        env:
-          LANG: C.UTF-8
+      - name: Run HTMLProofer
+        uses: chabad360/htmlproofer@v1.1
+        with:
+          directory: "./.vuepress/dist"
+          # The directory to scan
+          arguments: --url-ignore "/smartschool.be/"
