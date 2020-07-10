@@ -48,6 +48,10 @@ module.exports = {
     smoothScroll: true,
     nextLinks: false,
     prevLinks: false,
+    algolia: {
+      apiKey: '6479590fc338465f3439cfe6ef357683',
+      indexName: 'dodona-edu'
+    },
     locales: {
       '/nl/': {
         label: 'Nederlands',
