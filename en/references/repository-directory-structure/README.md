@@ -25,17 +25,17 @@ Dodona ignores every other file and directory. You can thus freely create additi
 |   +-- intsum                     # short name for the exercise
 |   |   +-- config.json            # configuration of the exercise
 |   |   +-- evaluation             #
-|   |   |   `-- intsum_test.hs     # A Haskell test file
+|   |   |   +-- intsum_test.hs     # A Haskell test file
 |   |   +-- description            #
 |   |   |   +-- description.nl.md  # The description in dutch
 |   |   |   +-- description.en.md  # The description in english
 |   |   |   +-- media              #
-|   |   |   |   `-- some_image.png # An image used in the description
-|   |   |   `-- boilerplate        #
+|   |   |   |   +-- some_image.png # An image used in the description
+|   |   |   +-- boilerplate        #
 |   |   |       +-- boilerplate    # Default (here dutch?) boilerplate code
-|   |   |       `-- boilerplate.en # English boilerplate code
-|   |   `-- workdir                # current working dir for student code
-|   |       `-- intlines.txt       # a file available to the student
+|   |   |       +-- boilerplate.en # English boilerplate code
+|   |   +-- workdir                # current working dir for student code
+|   |       +-- intlines.txt       # a file available to the student
 |   :
 :
 ```

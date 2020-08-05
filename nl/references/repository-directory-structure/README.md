@@ -25,17 +25,17 @@ Dodona negeert elk ander bestand of folder. Je kan dus zorgeloos andere bestande
 |   +-- intsum                     # Korte name voor deze oefening
 |   |   +-- config.json            # Configuratie voor deze oefening
 |   |   +-- evaluation             #
-|   |   |   `-- intsum_test.hs     # Een Haskell testbestand
+|   |   |   +-- intsum_test.hs     # Een Haskell testbestand
 |   |   +-- description            #
 |   |   |   +-- description.nl.md  # De beschrijving in het Nederlands
 |   |   |   +-- description.en.md  # De beschrijving in het Engels
 |   |   |   +-- media              #
-|   |   |   |   `-- some_image.png # Een afbeelding die enkel gebruikt wordt in de beschrijving van deze oefening
-|   |   |   `-- boilerplate        #
+|   |   |   |   +-- some_image.png # Een afbeelding die enkel gebruikt wordt in de beschrijving van deze oefening
+|   |   |   +-- boilerplate        #
 |   |   |       +-- boilerplate    # Standaard (hier Nederlands?) boilerplate code
-|   |   |       `-- boilerplate.en # Engelse boilerplate code
+|   |   |       +-- boilerplate.en # Engelse boilerplate code
 |   |   `-- workdir                # Huidige werkfolder voor de code van de student
-|   |       `-- intlines.txt       # Een bestand beschikbaar voor de student
+|   |       +-- intlines.txt       # Een bestand beschikbaar voor de student
 |   :
 :
 ```
