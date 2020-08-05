@@ -23,6 +23,8 @@ Dodona ignores every other file and directory. You can thus freely create additi
 
 ```
 +-- README.md                      # Describes the repository
++-- public                         # Contains files that belong to the course or series
+|   +-- CodersApprentice.png       # An example image to reuse throughout the course
 +-- dirconfig.json                 # Shared config for all exercises in subdirs
 +-- week01                         # We could group exercises per week
 |   +-- intsum                     # short name for the exercise
