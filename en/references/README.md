@@ -7,7 +7,7 @@ sidebarDepth: 0
 Here you can find up to date descriptions of the Dodona config files and directory structures.
 
 ## In English
-
+* [Repository directory structure](repository-directory-structure)
 * [Exercise descriptions](exercise-description)
 * [Exercise config](exercise-config)
 * [Exercise directory structure](exercise-directory-structure)
