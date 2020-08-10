@@ -94,7 +94,7 @@ Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde g
 
 ### Mode specifieke zichtbaarheid
 
-Als je twee verschillende afbeeldingen wil gebruiken voor light mode en dark mode kan je de `light-only` of `dark-only` klassen toevoegen aan een afbeelding. De `light-only` class zal de afbeelding enkel tonen in light mode terwijl de `dark-only` class de afbeelding enkel zal tonen in dark mode. Deze klassen werken voor alle sorten html tags.
+Als je twee verschillende afbeeldingen wil gebruiken voor light mode en dark mode kan je de `light-only` of `dark-only` klassen toevoegen aan een afbeelding. De `light-only` class zal de afbeelding enkel tonen in light mode terwijl de `dark-only` class de afbeelding enkel zal tonen in dark mode. Je kunt deze klassen toevoegen aan elke html tag.
 
 ```html
 <img src="dark-image.jpg" class="dark-only" />
