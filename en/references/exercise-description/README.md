@@ -94,7 +94,7 @@ You can also include tables or other elements in a centered group.
 
 ### Specific mode visibility
 
-If you want to use two different images for light mode and dark mode you can add the `light-only` or `dark-only` class to the image. The `light-only` class will only show the image when light mode is used while the `dark-only` class will only show the image when dark mode is used.
+If you want to use two different images for light mode and dark mode you can add the `light-only` or `dark-only` class to the image. The `light-only` class will only show the image when light mode is used while the `dark-only` class will only show the image when dark mode is used. These classes work for any html tag.
 
 ```html
 <img src="dark-image.jpg" class="dark-only" />
