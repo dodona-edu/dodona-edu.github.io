@@ -15,11 +15,11 @@ These features are available for both exercises and reading activities. They are
 
 ## Images
 
-To use images in your exercise description, be sure to put the images in the `description/media/` [directory](/en/references/exercise-directory-structure) of your exercise.
+To use images in your description, be sure to put the images in the `description/media/` [directory](/en/references/exercise-directory-structure) of your exercise.
 
 ### Lightboxes
 
-Dodona automatically adds [lightbox support](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) to all images in exercise descriptions. If you click on an image, the image will open in a lightbox. It is possible to specify a caption for an image and to set an alternative (high-resolution) version for use in the lightbox.
+Dodona automatically adds [lightbox support](https://en.wikipedia.org/wiki/Lightbox_(JavaScript)) to all images in descriptions. If you click on an image, the image will open in a lightbox. It is possible to specify a caption for an image and to set an alternative (high-resolution) version for use in the lightbox.
 
 You can also trigger a lightbox manually using a link by adding a `dodona-lightbox` class:
 ```html

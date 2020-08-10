@@ -9,7 +9,7 @@ A repository directory contains all the directories and files that make up a cou
 
 - **A `dirconfig.json` file**: this file contains the [repository-wide configuration](/en/references/exercise-config). This configuration will be merged with the `config.json` file in an exercise's directory. These values can be overridden by the config files in the lower directory.
 - **A `public` directory**: this directory contains files that can be used anywhere in Dodona:
-  You can add pictures or other resources that can then be referred to in the description of the course or a series. These are public elements, so these files should not be confidential.
+You can add pictures or other resources that can then be referred to in the description of the course or a series. These are public elements, so these files should not be confidential.
 - **A `media` directory**: this directory contains media files that can be used in all exercise descriptions in that repository only. Dodona will automatically fallback to this folder if a media item is referred to but not found in the media directory of the exercise it was used in.
 - **Optionally multiple `exercise` directories**: these directories contain the information for the individual exercises, possibly grouped within series. For more information regarding their structure, please see the [exercise directory structure page](/en/references/exercise-directory-structure).
 
@@ -30,12 +30,12 @@ Dodona ignores every other file and directory. You can thus freely create additi
 |   |   +-- evaluation             #
 |   |   |   +-- intsum_test.hs     # A Haskell test file
 |   |   +-- description            #
-|   |   |   +-- description.nl.md  # The description in dutch
-|   |   |   +-- description.en.md  # The description in english
+|   |   |   +-- description.nl.md  # The description in Dutch
+|   |   |   +-- description.en.md  # The description in English
 |   |   |   +-- media              #
 |   |   |   |   +-- some_image.png # An image used in the description
 |   |   |   +-- boilerplate        #
-|   |   |       +-- boilerplate    # Default (here dutch?) boilerplate code
+|   |   |       +-- boilerplate    # Default (here Dutch?) boilerplate code
 |   |   |       +-- boilerplate.en # English boilerplate code
 |   |   +-- workdir                # current working dir for student code
 |   |       +-- intlines.txt       # a file available to the student
