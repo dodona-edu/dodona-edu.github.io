@@ -92,9 +92,9 @@ If you have multiple (small) images in an exercise description, you can display 
 
 You can also include tables or other elements in a centered group.
 
-### Specific mode visibility
+### Dark mode visibility
 
-If you want to use two different images for light mode and dark mode you can add the `light-only` or `dark-only` class to the image. The `light-only` class will only show the image when light mode is used while the `dark-only` class will only show the image when dark mode is used. These classes work for any html tag.
+If you want to use separate images for light mode and dark mode (e.g. with a different background color) you can add the `light-only` or `dark-only` class to the image. The `light-only` class will only show the image when light mode is used while the `dark-only` class will only show the image when dark mode is used. These classes also work for other html elements.
 
 ```html
 <img src="dark-image.jpg" class="dark-only" />
