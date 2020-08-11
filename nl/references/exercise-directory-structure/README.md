@@ -1,5 +1,5 @@
 ---
-title: [en] Exercise directory structure
+title: "[en] Exercise directory structure"
 description: "Exercise directory structure Dodona"
 ---
 
