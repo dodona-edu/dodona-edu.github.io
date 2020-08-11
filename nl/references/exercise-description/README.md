@@ -92,6 +92,20 @@ Als je meerdere (kleine) afbeeldingen in een opgave gebruikt, dan kan je ze *inl
 
 Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde groep plaatsen.
 
+### Zichtbaarheid in donkere modus
+
+Als je een aparte afbeelding wil gebruiken voor lichte modus en donkere modus (bv. met een andere achtergrondkleur), dan kan je de `light-only` of `dark-only` klassen toevoegen aan een afbeelding. De `light-only` klasse zal de afbeelding enkel tonen in lichte modus terwijl de `dark-only` class de afbeelding enkel zal tonen in donkere modus. Deze klassen werken ook voor andere html elementen.
+
+```html
+<img src="dark-image.jpg" class="dark-only" />
+<img src="light-image.jpg" class="light-only" />
+```
+
+```markdown
+[Show image](dark-image.jpg){: .dark-only}
+[Show image](light-image.jpg){: .light-only}
+```
+
 ---
 
 ## Tabellen

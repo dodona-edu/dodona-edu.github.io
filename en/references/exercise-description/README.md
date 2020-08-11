@@ -92,6 +92,20 @@ If you have multiple (small) images in an exercise description, you can display 
 
 You can also include tables or other elements in a centered group.
 
+### Dark mode visibility
+
+If you want to use separate images for light mode and dark mode (e.g. with a different background color) you can add the `light-only` or `dark-only` class to the image. The `light-only` class will only show the image when light mode is used while the `dark-only` class will only show the image when dark mode is used. These classes also work for other html elements.
+
+```html
+<img src="dark-image.jpg" class="dark-only" />
+<img src="light-image.jpg" class="light-only" />
+```
+
+```markdown
+[Show image](dark-image.jpg){: .dark-only}
+[Show image](light-image.jpg){: .light-only}
+```
+
 ## Tables
 
 Both HTML and Markdown tables are supported. You can add the `table` class for prettier formatting.
