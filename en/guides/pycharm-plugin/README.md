@@ -8,7 +8,7 @@ description: "The Dodona PyCharm plugin"
 If you're programming in an IDE from JetBrains, e.g. PyCharm, you can make use of the Dodona plugin to easily submit your solutions.
 
 ## Create an API token
-Before installing the plugin, you need to create an API token on the Dodona website. Using such token, PyCharm can submit solution on your behalf without needing your password. To create an API token, follow [this guide](/en/guides/creating-an-api-token). Keep the created token nearby because you'll need it in a few minutes when you use the plugin for the first time.
+Before installing the plugin, you need to create an API token on the Dodona website. Using such a token allows PyCharm to submit solutions on your behalf without needing your password. To create an API token, follow [this guide](/en/guides/creating-an-api-token). Keep the created token nearby because you'll need it in a few minutes when you use the plugin for the first time.
 
 ## Install the plugin
 
