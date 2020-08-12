@@ -6,8 +6,8 @@ description: "Tutorial: gebruikersbeheer"
 # Gebruikersbeheer
 
 Alle **gebruikers** kunnen zich
-[aanmelden](#aanmelden) en hun
-[gebruikersprofiel](#profiel) beheren. Voor sommige acties heb je echter bijkomende
+[aanmelden](/nl/for-students#aanmelden) en hun
+[gebruikersprofiel](/nl/for-students#gebgruikersprofiel) beheren. Voor sommige acties heb je echter bijkomende
 [beheersrechten](#beheersrechten) nodig.
 Onder gebruikers onderscheiden we daarom
 [studenten](#studenten),
@@ -33,8 +33,8 @@ Onder de [geregistreerde](/nl/for-students#cursus-registreren) gebruikers van ee
 afhankelijk van de [beheersrechten](#beheersrechten) die ze gekregen hebben voor de cursus. Enkel
 cursusbeheerders kunnen een cursus beheren. Het
 [beheren](/nl/course-management#cursusgebruikers-beheren) van
-[cursusgebruikers](/nl/course-management/cursusgebruiker) en
-het [aanduiden](/nl/course-management/cursusbeheerders-aanduiden) van cursusbeheerders wordt behandeld in
+[cursusgebruikers](/nl/course-management#cursusgebruiker) en
+het [aanduiden](/nl/course-management#cursusbeheerders-aanduiden) van cursusbeheerders wordt behandeld in
 [cursus beheren](/nl/course-management).
 :::
 
