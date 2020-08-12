@@ -9,6 +9,7 @@ Hier vind je enkele handleidingen, vooral gericht op lesgevers.
 ## In het Nederlands
 * [Van start met Dodona als student](for-students)
 * [Van start met Dodona als leerkracht](getting-started)
+* [Gebruikersbeheer](user-management)
 * [Dodona PyCharm plugin](pycharm-plugin)
 * [Dodona VS Code extension](vs-code-extension)
 * [Een nieuwe repository met oefeningen maken](new-exercise-repo)
