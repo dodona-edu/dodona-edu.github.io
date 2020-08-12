@@ -5,7 +5,7 @@ description: "Exercise config reference Dodona"
 
 # Exercise configuration
 
-Dodona allows setting the configuration of an exercise and a reading activity using config files. These files are in the JSON format and must be named `config.json` in exercise directories and `dirconfig.json` for other directories. To determine the final config values for a learning activity, Dodona merges the default config file with the dirconfigs in the parent directories of the exercise and with the exercise config. Merging happens in such a way that you can always override values set in a parent directory.
+Dodona allows setting the configuration of an exercise or a reading activity using config files. These files are in the JSON format and must be named `config.json` in exercise directories and `dirconfig.json` for other directories. To determine the final config values for a learning activity, Dodona merges the default config file with the dirconfigs in the parent directories of the exercise and with the exercise config. Merging happens in such a way that you can always override values set in a parent directory.
 
 ## Config file structure for exercises
 

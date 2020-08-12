@@ -166,6 +166,7 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         ['', FirstItem],
         'exercise-description/',
         'exercise-config/',
+        'repository-directory-structure/',
         'exercise-directory-structure/'
       ]
     }
