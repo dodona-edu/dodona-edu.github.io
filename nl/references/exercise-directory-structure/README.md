@@ -5,7 +5,7 @@ description: "Exercise directory structure Dodona"
 
 # Exercise directory structure
 
-Inside an exercise repository, Dodona handles every directory containing a `config.json` file as a separate exercise: this can be a programming exercise or a reading task. We expect this directory to have a specific structure:
+Inside an exercise repository, Dodona handles every directory containing a `config.json` file as a separate learning activity: this can be a programming exercise or a reading activity. We expect this directory to have a specific structure:
 
 - **A `config.json` file**: this file contains the [exercise-specific configuration](/en/references/exercise-config). This configuration will be merged with all `dirconfig.json` files in the exercise's ancestor directories. You can always override config values set by a higher directory. 
 - **An optional  `readme.md`, `readme.en.md` and/or `readme.nl.md` file:** The content of these files will be shown on the exercise info page. These files are meant to give extra context to teachers who might be interested in using this exercise in a course. If a localized file is available for a user's language (`readme.<lang>.md`) that will be shown instead of the generic `readme.md`. This is useful because `readme.md` is rendered and shown by GitHub in the exercise directory. We suggest creating a `readme.md` in the language of your target audience and optionally creating a translated `readme.nl.md` or `readme.en.md` file in the other language. Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) to see some examples on how to use these files.
@@ -23,7 +23,7 @@ Inside the `description` directory, you can specify the following directories:
 - **An optional `workdir` directory**: The content of this directory is made available when running the judge and can, for example, contain data files needed during execution.
 - **An optional `solutions` directory**: Files in this directory will be shown on the exercise info page as sample solutions. Multiple sample solutions are possible, but files with a name starting with 'solution' will be sorted first.
 
-Dodona ignores every other file and directory. You can thus freely create additional files (for example, containing the solutions to your exercises) or create a personal exercise hierarchy. The only thing that isn't allowed is placing exericse directories inside other exercise directories.
+Dodona ignores every other file and directory. You can thus freely create additional files (for example, containing the solutions to your exercises) or create a personal exercise hierarchy. The only thing that isn't allowed is placing exercise directories inside other exercise directories.
 
 ## Example of a valid exercise directory structure
 
@@ -33,8 +33,8 @@ Dodona ignores every other file and directory. You can thus freely create additi
 |   +-- evaluation             #
 |   |   +-- intsum_test.hs     # A Haskell test file
 |   +-- description            #
-|   |   +-- description.nl.md  # The description in Dutch
-|   |   +-- description.en.md  # The description in English
+|   |   +-- description.nl.md  # The description in dutch
+|   |   +-- description.en.md  # The description in english
 |   |   +-- media              #
 |   |   |   +-- some_image.png # An image used in the description
 |   |   +-- boilerplate        #
@@ -45,12 +45,12 @@ Dodona ignores every other file and directory. You can thus freely create additi
 :
 ```
 
-## Example of a valid content page directory structure
+## Example of a valid reading activity directory structure
 
 ```
-+-- Aeneid                     # Short name for the reading task
-|   +-- config.json            # Configuration of the reading task
-|   +-- README.md              # Description of the reading task
++-- Aeneid                     # Short name for the reading activity
+|   +-- config.json            # Configuration of the reading activity
+|   +-- README.md              # Description of the reading activity
 |   +-- description            #
 |   |   +-- description.nl.md  # The description in Dutch
 |   |   +-- description.en.md  # The description in English

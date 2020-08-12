@@ -164,9 +164,9 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
       sidebarDepth: 2,
       children: [
         ['', FirstItem],
-        'repository-directory-structure/',
         'exercise-description/',
         'exercise-config/',
+        'repository-directory-structure/',
         'exercise-directory-structure/'
       ]
     }

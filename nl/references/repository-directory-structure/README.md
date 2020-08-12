@@ -9,11 +9,11 @@ Een repository bevat alle folders en bestanden waaruit een vak bestaat. We verwa
 
 - **Een `dirconfig.json` bestand**: dit bestand bevat de globale [oefeningenconfiguratie](/nl/references/exercise-config). Deze configuratie zal samengevoegd worden met het `config.json`-bestand in een oefeningenfolder. De waarden in dit bestand kunnen overschreven worden door deze in de configuratiebestanden van de kindfolders.
 - **Een folder `public`**: deze folder bevat bestanden die relevant zijn voor de hele cursus of reeks:
-Hier kan je afbeeldingen of andere zaken toevoegen waar je naar kan refereren vanuit een cursusbeschrijving of een reeksbeschrijving. Dit zijn publieke bestanden, dus ze mogen geen confidentiële informatie bevatten.
+Hier kan je afbeeldingen of andere zaken toevoegen waar je naar kan refereren vanuit een cursusbeschrijving of een reeksbeschrijving. De URL van deze bestanden vind je op de pagina van de repository op Dodona. Dit zijn publieke bestanden, dus ze mogen geen confidentiële informatie bevatten.
 - **Een folder `media`**: deze folder bevat media-bestanden die gebruikt kunnen worden in alle oefeningenbeschrijvingen binnen deze repository. Dodona zal automatisch terugvallen op deze folder indien er in een beschrijving gerefereerd wordt naar een media-item dat niet gevonden wordt in de media-folder van die specifieke oefening.
-- **Optioneel meerdere `oefening`folders**: deze folders bevatten de informatie voor de individuele activiteiten, optioneel gegroepeerd in reeksen. Voor meer informatie betreffende hun structuur, gelieve de pagina met de [oefeningenfolderstructuur](/nl/references/exercise-directory-structure).
+- **Optioneel meerdere `oefening`folders**: deze folders bevatten de informatie voor de individuele oefeningen. Voor meer informatie betreffende hun structuur, gelieve de pagina met de [oefeningenfolderstructuur](/nl/references/exercise-directory-structure).
 
-Dodona negeert elk ander bestand of folder. Je kan dus zorgeloos andere bestanden toevoegen (bijvoorbeeld bestanden met de oplossing voor je oefeningen) or een eigen oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenfolders binnen elkaar plaatsen.
+Dodona negeert andere bestanden en folders. Je kan dus zorgeloos andere bestanden toevoegen (bijvoorbeeld bestanden met de oplossing voor je oefeningen) or een eigen oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenfolders binnen elkaar plaatsen.
 
 ## Voorbeeld van een geldige repository-structuur
 
