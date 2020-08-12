@@ -71,25 +71,17 @@ Users can be assigned the following [management permissions](#management-permiss
  |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [teachers](#teachers) have all the permissions [students](#students) have and can additionally appoint teachers,, [edit](/en/for-students#user-profile-edit) the [profile](/en/for-students#user-profile) of students and teachers, [create](/en/course-management#create-a-course) [courses](/en/course-management#course) , [add](/en/course-management#add-exercise) [exercises](/en/for-students#exercise) and [add](/en/creating-a-judge) [judges](/en/for-students#judge) |
  |<span class="guilabel">Zeus</span>|      ![image](../../../images/role_icons/zeus.png)|    [admins](#admins) have all the permissions [teachers](#teachers) and course administrators have and can additionally assign all [management permissions](#management-permissions) (including course managers), [edit](/en/for-students#edit-user-profile) the [profile](/en/for-students#user-profile) of all users, [edit](/en/course-management#edit-course) all [courses](/en/course-management#course), [edit](/en/course-management#edit-exercise) all [exercises](/en/for-students#exercise) and [edit]((/en/judges#edit-judge)) all [judges](/en/for-students#judge).
 
-### Studenten
-Een gebruiker waarvoor de
-[beheersrechten](#beheersrechten)
-ingesteld zijn op <span class="guilabel">Student</span> noemen we
-een **student**. 
+### Students
+A user with <span class="guilabel">Student</span> [management permissions](#management-permissions)permissions is called a **student**.
 ### Lesgevers
-Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
-op <span class="guilabel">Staff</span> noemen we een
-**lesgever**.
+A user with <span class="guilabel">Staff</span> [management permissions](#management-permissions)permissions is called a **teacher**.
 ### Beheerders
-Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
-op <span class="guilabel">Zeus</span> noemen we een
-**beheerder**.
+A user with <span class="guilabel">Zeus</span> [management permissions](#management-permissions)permissions is called an **admin**.
 
-## Beheersrechten instellen
-Als je het [gebruikersprofiel](/en/for-students#gebruikersprofiel) van een gebruiker
-[bewerkt](/en/for-students#gebruikersprofiel-bewerken) dan
-kan je daar de [beheersrechten](#beheersrechten) van de gebruiker instellen. Als
-[lesgever](#lesgevers) kan je enkel de
+## Assigning permissions
+When you [edit](/en/for-students#user-profile-edit) the [profile](/en/for-students#gebruikersprofiel) of a user,
+you can also assign [permissions](#management-permissions) to that user.
+Als [lesgever](#lesgevers) kan je enkel de
 beheersrechten <span class="guilabel">Student</span> en
 <span class="guilabel">Staff</span> toekennen aan gebruikers
 (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot
