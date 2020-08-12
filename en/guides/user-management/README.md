@@ -5,7 +5,7 @@ description: "Tutorial: user management"
 
 # User management
 
-All **users** can [sign in](/en/for-students#sign-in) and manage their [user profile](/en/for-students#user-profile). Some actions on Dodona require more [privileges](#privileges). For this reason, we use three roles: [students](#students), [teachers](#teachers) and [admins](#admins). These roles can be [assigned](#assign-roles) to users, for instance a teacher can appoint another teacher.
+All **users** can [sign in](/en/for-students#sign-in) and manage their [user profile](/en/for-students#user-profile). Some actions on Dodona require more [permissions](#permissions). For this reason, we use three roles: [students](#students), [teachers](#teachers) and [admins](#admins). These roles can be [assigned](#assign-roles) to users, for instance a teacher can appoint another teacher.
 
 ::: tip
 
@@ -17,95 +17,59 @@ You can see that you are a [teacher](#teachers) when you can see the **managemen
 ::: tip Important
 
 We divide the [enrolled](/en/for-students#course-register) members of a [course](/en/course-management#course) in [students](#students) and
-[course managers](/en/course-management#course-manager) depending on the [management rights](#management-rights)they have been granted for the course. Only course managers can manage a course. The 
+[course managers](/en/course-management#course-manager) depending on the [management permissions](#management-permissions)they have been granted for the course. Only course managers can manage a course. The 
 [managing](/en/course-management#managing-course-users) of 
 [course users](/en/course-management#course-user) and [appointing](/en/course-management#appointing-course-managers) course managers is discussed in [course management](/en/course-management).
 :::
 
 ## Navigating to a user
 
-As a [teacher](#teachers), you navigate to 
-Als [lesgever](#lesgevers) navigeer je naar
-het [gebruikersoverzicht](#gebruikersoverzicht) door <span class="guilabel">Gebruikers</span>te
-selecteren in het [beheersmenu](#beheersmenu) aan de rechterkant van de
-[navigatiebalk](/en/for-students#navigatiabalk).
+As a [teacher](#teachers), you navigate to the [user overviewt](#user-overview) by selecting <span class="guilabel">Users</span> in the [management menu](#management-menu) at the right side of the [navigation panel](/en/for-students#navigation-panel).
 
 ![admin menu users](./staff.admin_menu_users.en.png)
 
-## Gebruikersoverzicht
-In het **gebruikersoverzicht** worden de gebruikersnaam, de naam, het
-emailadres en
-[voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het
-[gebruikersprofiel](/en/for-students#gebruikersprofiel)
-van alle gebruikers. Voor de naam van elke [lesgever](#lesgevers) en [beheerder](#beheerders)
-staat een
-[icoontje](#gebruikers-beheersrechten-icoontje) dat correspondeert met de
-[beheersrechten](#beheersrechten) die aan
-de gebruiker [toegewezen](#beheersrechten-instellen) werden.
+## User overview
+In the **user overview**, the user's username, real name, email and [progress statistics](#user-progress-statistics) are listed from the [user profile](/en/for-students#user-profile) from all users. In the first column, you can find an [icon](#user-permissions-icon) that corresponds to the [management permissions](#management-permissions) that have been [assigned](#assign-permissions) to that user.
 
 ![image](./staff.users.en.png)
 
-## Gebruiker zoeken
-Gebruik de zoekbalk bovenaan het
-[gebruikersoverzicht](#gebruikersoverzicht) om te zoeken naar specifieke gebruikers op basis van een
-gebruikersnaam, een naam of een emailadres.
+## Searching a user
+Use the search bar at the top of the [user overview](#user-overview) to search for specific users based on their usernames, names or email addresses.
 
 ![image](./staff.users_filtered.en.png)
 
-## Gebruiker selecteren
-Druk op een gebruikersnaam om naar de
-[profielpagina](/en/for-students#profielpagina) van de
-gebruiker te [navigeren](#gebruiker-navigeren).
+## Selecting a user
+Click on the username to [navigate](#navigating-to-a-user) to the [profile page](/en/for-students#profile-page) of te user.
 
 ![image](./staff.users_filtered_link.en.png)
 
-## Gebruiker voortgangsstatistieken
-De **voortgangsstatistieken** van een gebruiker bestaan uit twee
-getallen $c/i$. Daarbij staat $i$ voor het aantal
-[oefeningen](/en/for-students#oefening) waarvoor de
-gebruiker minstens één [oplossing](/en/for-students#oplossing) heeft [ingediend](/en/for-students#oplossing-indienen) en $c$ voor het aantal oefeningen waarvoor de gebruiker
-minstens één *correcte* oplossing heeft ingediend.
+## User progress statistics voortgangsstatistieken
+The **progress statistics** of a user consists of two numbers $c/s$, where $s$ is the number of [exercises](/en/for-students#exercise) for which that user has [submitted](/en/for-students#submitting-a-solution) atleast one [solution](/en/for-students#solution) and $c$ is the number of [exercises](/en/for-students#exercise) for which that user has [submitted](/en/for-students#submitting-a-solution) atleast one *correct* [solution](/en/for-students#solution).
 
 
-## Gebruikersprofiel bewerken
-
-
-Als [lesgever](#lesgevers) kan je het
-[gebruikersprofiel](/en/for-students#gebruikersprofiel)
-van [studenten](#studenten) en andere
-lesgevers bewerken. Druk daarvoor op de bewerkknop in de
-rechterbovenhoek van de
-[profielpagina](/en/for-students#profielpagina) van de
-gebruiker.
+## Editing a user profile
+As a [teacher](#teachers), you can edit the [user profile](/en/for-students#user-profile) of [students](#students) and other teachers. To do this, click the edit button in the top right corner of the [profile page](/en/for-students#profile-page) of the user.
 
 ![image](./staff.user_edit_link.en.png)
 
-Als alternatief kan je in het
-[gebruikersoverzicht](#gebruikersoverzicht) ook drukken op de bewerkknop aan de rechterkant van een
-gebruiker om onmiddellijk het
-[gebruikersprofiel](/en/for-students#gebruikersprofiel)
-van de gebruiker te bewerken.
+Alternatively, you can press the edit button at the right side of a user in the [user overview](#user-overview) to immediately edit their [user profile](/en/for-students#user-profile)
 
 ![image](./staff.users_filtered_edit_link.en.png)
 
-## Instellen van beheersrechten
+## Management permissions
 
-Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
-**beheersrechten** nodig. Als [lesgever](#lesgevers) kan je aan de eigenschap <span class="guilabel">Rechten</span> op de [profielpagina](/en/for-students#profielpagina) van een gebruiker zien welke beheersrechten de gebruiker
-heeft.
+In order to perform certain action on Dodona, you require additional **management permissions**. As a [teacher](#teachers), you can use the property <span class="guilabel">Permissions</span> on the [profile page](/en/for-students#profile-page) of a user to find out which permissions that user has.
 
 ![image](./staff.user_edit_permission.en.png)
 
-## Gebruiker beheersrechten icoontje
-Aan gebruikers kunnen de volgende
-[beheersrechten](#beheersrechten)
-toegekend worden:
+## User permissions icon
+Users can be assigned the following [management permissions](#management-permissions):
 
- | naam                                          | icoontje                                |permissies|
+ | name                                          | icon                                |permissions|
  | ----------------------------------------------|-----------------------------------------|----------|
- | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#studenten) kunnen hun [gebruikersprofiel](/en/for-students#gebruikersprofiel) [bewerken](/en/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/en/for-students#cursus-registreren) voor [cursussen](/en/course-management#cursus) en kunnen [oplossingen](/en/for-students#oplossing) [indienen](/en/for-students#oplossing-indienen) voor [oefeningen](/en/for-students#oefening)|
- |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgevers) krijgen alle permissies van [studenten](#studenten) en kunnen bovendien ook lesgevers aanduiden, het [gebruikersprofiel](/en/for-students#gebruikersprofiel) van studenten en lesgevers [bewerken](/en/for-students#gebruikersprofiel-bewerken), [cursussen](/en/course-management#cursus) [aanmaken](/en/course-management#cursus-aanmaken), [oefeningen](/en/for-students#oefening) [toevoegen](/en/course-management#oefening-toevoegen) en [judges](/en/for-students#judge) [toevoegen](/en/creating-a-judge)|
- |<span class="guilabel">Zeus</span>|      ![image](../../../images/role_icons/zeus.png)|    [beheerders](#beheerders) krijgen alle permissies van [lesgevers](#lesgevers) en cursusbeheerders en kunnen bovendien ook alle [beheersrechten](#beheersrechten) (inclusief cursusbeheerders) toewijzen, het [gebruikersprofiel](/en/for-students#gebruikersprofiel) van alle gebruikers [bewerken](/en/for-students#gebruikersprofiel-bewerken), alle [cursussen](/en/course-management#cursus) [bewerken](/en/course-management#cursus-bewerken), alle [oefeningen](/en/for-students#oefening) [bewerken](/en/course-management#oefening-bewerken) en alle [judges](/en/for-students#judge) [bewerken](/en/judges#judge-bewerken)
+ | <span class="guilabel">Student</span>|   *no icon*|                                  [students](#students) can [edit](/en/for-students#user-profile-edit) their [user profile](/en/for-students#user-profile),[register](/en/for-students#course-register) for [courses](/en/course-management#course) and [submit](/en/for-students#submit-solution) [solutions](/en/for-students#solution) for [exercises](/en/for-students#exercise)|
+ |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [teachers](#teachers) have all the permissions [students](#students) have and can additionally appoint teachers,, [edit](/en/for-students#user-profile-edit) the [profile](/en/for-students#user-profile) of students and teachers, [create](/en/course-management#create-a-course) [courses](/en/course-management#course) , [add](/en/course-management#add-exercise) [exercises](/en/for-students#exercise) and [add](/en/creating-a-judge) [judges](/en/for-students#judge) |
+ |<span class="guilabel">Zeus</span>|      ![image](../../../images/role_icons/zeus.png)|    [admins](#admins) have all the permissions [teachers](#teachers) and course administrators have and can additionally assign all [management permissions](#management-permissions) (including course managers), [edit](/en/for-students#edit-user-profile) the [profile](/en/for-students#user-profile) of all users, [edit](/en/course-management#edit-course) all [courses](/en/course-management#course), [edit](/en/course-management#edit-exercise) all [exercises](/en/for-students#exercise) and [edit]((/en/judges#edit-judge)) all [judges](/en/for-students#judge).
 
 ### Studenten
 Een gebruiker waarvoor de

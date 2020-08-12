@@ -103,7 +103,7 @@ van de gebruiker te bewerken.
 
 ![image](./staff.users_filtered_edit_link.nl.png)
 
-## Instellen van beheersrechten
+## Beheersrechten
 
 Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
 **beheersrechten** nodig. Als [lesgever](#lesgevers) kan je aan de eigenschap <span class="guilabel">Rechten</span> op de [profielpagina](/nl/for-students#profielpagina) van een gebruiker zien welke beheersrechten de gebruiker
@@ -145,7 +145,6 @@ beheersrechten <span class="guilabel">Student</span> en
 <span class="guilabel">Staff</span> toekennen aan gebruikers
 (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot
 lesgever of degraderen tot [student](#studenten).
-:::
 
 ![image](./staff.user_edit_permission.nl.png)
 
