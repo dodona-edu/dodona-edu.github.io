@@ -118,116 +118,101 @@ toegekend worden:
 
  | naam                                          | icoontje                                |permissies|
  | ----------------------------------------------|-----------------------------------------|----------|
- | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#students) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
+ | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#studenten) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
  |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgevers) krijgen alle permissies van [studenten](#studenten) en kunnen bovendien ook lesgevers aanduiden, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van studenten en lesgevers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), [cursussen](/nl/course-management#cursus) [aanmaken](/nl/course-management#cursus-aanmaken), [oefeningen](/nl/for-students#oefening) [toevoegen](/nl/course-management#oefening-toevoegen) en [judges](/nl/for-students#judge) [toevoegen](/nl/creating-a-judge)|
  |<span class="guilabel">Zeus</span>|      ![image](../../../images/role_icons/zeus.png)|    [beheerders](#beheerders) krijgen alle permissies van [lesgevers](#lesgevers) en cursusbeheerders en kunnen bovendien ook alle [beheersrechten](#beheersrechten) (inclusief cursusbeheerders) toewijzen, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van alle gebruikers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), alle [cursussen](/nl/course-management#cursus) [bewerken](/nl/course-management#cursus-bewerken), alle [oefeningen](/nl/for-students#oefening) [bewerken](/nl/course-management#oefening-bewerken) en alle [judges](/nl/for-students#judge) [bewerken](/nl/judges#judge-bewerken)
 
-::: {#student}
-::: {#lesgever}
-::: {#beheerder}
+### Studenten
 Een gebruiker waarvoor de
-`beheersrechten <beheersrechten>`{.interpreted-text role="ref"}
-ingesteld zijn op `Student`{.interpreted-text role="guilabel"} noemen we
-een **student**. Een gebruiker waarvoor de beheersrechten ingesteld zijn
-op `Staff`{.interpreted-text role="guilabel"} noemen we een
-**lesgever**. Een gebruiker waarvoor de beheersrechten ingesteld zijn op
-`Zeus`{.interpreted-text role="guilabel"} noemen we een **beheerder**.
-:::
-:::
-:::
+[beheersrechten](#beheersrechten)
+ingesteld zijn op <span class="guilabel">Student</span> noemen we
+een **student**. 
+### Lesgevers
+Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
+op <span class="guilabel">Staff</span> noemen we een
+**lesgever**.
+### Beheerders
+Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
+op <span class="guilabel">Zeus</span> noemen we een
+**beheerder**.
 
 ## Beheersrechten instellen
-Als je het `gebruikersprofiel <gebruikersprofiel>`{.interpreted-text
-role="ref"} van een gebruiker
-`bewerkt <gebruikersprofiel bewerken>`{.interpreted-text role="ref"} dan
-kan je daar de `beheersrechten <beheersrechten>`{.interpreted-text
-role="ref"} van de gebruiker instellen. Als
-`lesgever <lesgever>`{.interpreted-text role="ref"} kan je enkel de
-beheersrechten `Student`{.interpreted-text role="guilabel"} en
-`Staff`{.interpreted-text role="guilabel"} toekennen aan gebruikers
+Als je het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van een gebruiker
+[bewerkt](/nl/for-students#gebruikersprofiel-bewerken) dan
+kan je daar de [beheersrechten](#beheersrechten) van de gebruiker instellen. Als
+[lesgever](#lesgevers) kan je enkel de
+beheersrechten <span class="guilabel">Student</span> en
+<span class="guilabel">Staff</span> toekennen aan gebruikers
 (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot
-lesgever of degraderen tot `student <student>`{.interpreted-text
-role="ref"}.
+lesgever of degraderen tot [student](#studenten).
 :::
 
 ![image](./staff.user_edit_permission.nl.png)
 
-::: {.important}
-::: {.admonition-title}
-Important
-:::
+::: tip Belangrijk
 
-Als je jezelf als `lesgever <lesgever>`{.interpreted-text role="ref"}
-degradeert tot `student <student>`{.interpreted-text role="ref"}, dan
+Als je jezelf als [lesgever](#lesgevers)
+degradeert tot [student](#studenten), dan
 kan je jezelf daarna niet terug promoveren tot lesgever.
 :::
 
-Overnemen van een gebruikersaccount {#gebruikersaccount overnemen}
------------------------------------
+## Gebruikersaccount overnemen
 
-Als `lesgever <lesgever>`{.interpreted-text role="ref"} kan je tijdelijk
-de `gebruikersaccount <gebruikersaccount>`{.interpreted-text role="ref"}
-van een `student <student>`{.interpreted-text role="ref"} overnemen.
+Als [lesgever](#lesgevers) kan je tijdelijk
+de [gebruikersaccount](/nl/for-students#gebruikersaccount)
+van een [student](#studenten) overnemen.
 Daardoor krijg je de gepersonaliseerde versie van Dodona te zien door de
 ogen van de student. Dit kan interessant zijn voor het beantwoorden van
 vragen over iets wat een student waarneemt in Dodona of over een actie
 die ze in Dodona wil uitvoeren. Bovendien laat het je ook toe om zelf
 acties uit te voeren in naam van de student, zoals het
-`registreren <cursus registreren>`{.interpreted-text role="ref"} voor
-een `cursus <cursus>`{.interpreted-text role="ref"} of het
-`indienen <oplossing indienen>`{.interpreted-text role="ref"} van een
-`oplossing <oplossing>`{.interpreted-text role="ref"} voor een
-`oefening <oefening>`{.interpreted-text role="ref"}.
+[registreren](/nl/for-students#cursus-registreren) voor
+een [cursus](/nl/course-management#cursus) of het
+[indienen](/nl/for-students#oplossing-indienen) van een
+[oplossing](/nl/for-students#oplossing) voor een
+[oefening](/nl/for-students#oefening).
 
 ![image](./staff.impersonating.nl.png)
 
-::: {.important}
-::: {.admonition-title}
-Important
-:::
+::: tip Belangrijk
 
-Als je `registreert <cursus registreren>`{.interpreted-text role="ref"}
-voor een `cursus <cursus>`{.interpreted-text role="ref"} of een
-`oplossing <oplossing>`{.interpreted-text role="ref"}
-`indient <oplossing indienen>`{.interpreted-text role="ref"} voor een
-`oefening <oefening>`{.interpreted-text role="ref"} terwijl je de
-`gebruikersaccount <gebruikersaccount>`{.interpreted-text role="ref"}
-van een `student <student>`{.interpreted-text role="ref"} aan het
-`overnemen <gebruikersaccount overnemen>`{.interpreted-text role="ref"}
+Als je [registreert](/nl/for-students#cursus-registreren)
+voor een [cursus](/nl/course-management#cursus) of een
+[oplossing](/nl/for-students#oplossing)
+[indient](/nl/for-students#oplossing-indienen) voor een
+[oefening](/nl/for-students#oefening) terwijl je de
+[gebruikersaccount](/nl/for-students#gebruikersaccount)
+van een [student](#studenten) aan het
+[overnemen](#gebruikersaccount-overnemen)
 bent, dan hebben deze acties hetzelfde effect alsof ze door de student
 zelf zouden uitgevoerd worden. Wees je er dus van bewust of je deze
 acties in naam van de student wilt uitvoeren of dat je eerst wilt
-`terugkeren <eigen gebruikersaccount herstellen>`{.interpreted-text
-role="ref"} naar je eigen gebruikersaccount om daarna de acties onder
+[terugkeren](#eigen-gebruikersaccount-herstellen) naar je eigen gebruikersaccount om daarna de acties onder
 eigen naam uit te voeren.
 :::
 
-Druk op de knop `Account overnemen`{.interpreted-text role="guilabel"}
-op de `profielpagina <profielpagina>`{.interpreted-text role="ref"} van
-een student om haar
-`gebruikersaccount <gebruikersaccount>`{.interpreted-text role="ref"}
+Druk op de knop <span class="guilabel">Account overnemen</span>
+op de [profielpagina](/nl/for-students#profielpagina) van
+een student om zijn/haar
+[gebruikersaccount](/nl/for-students#gebruikersaccount)
 tijdelijk
-`over te nemen <gebruikersaccount overnemen>`{.interpreted-text
-role="ref"}.
+[over](#gebruikersaccount-overnemen).
 
 ![image](./staff.user_impersonate_link.nl.png)
 
 Als alternatief kan je de
-`gebruikersaccount <gebruikersaccount>`{.interpreted-text role="ref"}
+[gebruikersaccount](/nl/for-students#gebruikersaccount)
 van een student ook tijdelijk overnemen door in het
-`gebruikersoverzicht <gebruikersoverzicht>`{.interpreted-text
-role="ref"} aan de rechterkant van een student te drukken op de
+[gebruikersoverzicht](#gebruikersoverzicht) aan de rechterkant van een student te drukken op de
 actieknop voor het
-`overnemen <gebruikersaccount overnemen>`{.interpreted-text role="ref"}
+[overnemen](#gebruikersaccount-overnemen)
 van gebruikersaccounts.
 
 ![image](./staff.users_filtered_impersonate_link.nl.png)
 
-::: {#eigen gebruikersaccount herstellen}
-Terwijl je de `gebruikersaccount <gebruikersaccount>`{.interpreted-text
-role="ref"} van een `student <student>`{.interpreted-text role="ref"}
-aan het `overnemen <gebruikersaccount overnemen>`{.interpreted-text
-role="ref"} bent, wordt bovenaan elke pagina een mededeling getoond om
+### Eigen gebruikersaccount herstellen
+Terwijl je de [gebruikersaccount](/nl/for-students#gebruikersaccount) van een [student](#studenten)
+aan het [overnemen](#gebruikersaccount-overnemen) bent, wordt bovenaan elke pagina een mededeling getoond om
 je daaraan te herinneren. De mededeling bevat een link waarmee je kunt
 terugkeren naar je eigen gebruikersaccount.
 :::
