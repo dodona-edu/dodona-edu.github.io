@@ -5,7 +5,7 @@ description: "Tutorial: van start met Dodona voor studenten"
 
 # Dodona voor studenten
 
-Als student kan je [registreren](#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](#navigeren-naar-een-oefeningen) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](#navigeren-naar-een-oplossing) [indienen](#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](#aanmelden) beschikt en dat je [aangemeld](#aanmelden) bent op Dodona.
+Als student kan je [registreren](#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](#navigeren-naar-een-oplossing) [indienen](#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](#aanmelden) beschikt en dat je [aangemeld](#aanmelden) bent op Dodona.
 
 ## Selecteren van de taal
 
@@ -86,7 +86,7 @@ Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#sele
 
 ![image](./student.user_menu.nl.png)
 
-Als je [aangemeld](#aanmelden) bent dan verandert de neutrale [landingspagina]() in een gepersonaliseerde **startpagina** met een overzicht van alle [cursussen]() waarvoor je [geregistreerd]() bent, hun [oefeningenreeksen]() met nakende [deadlines]() en je voortgang bij het [indienen](#indienen-van-een-oplossing) van [oplossingen](#navigeren-naar-een-oplossing) voor [oefeningen](#navigeren-naar-een-oefeningen). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent.
+Als je [aangemeld](#aanmelden) bent dan verandert de neutrale [landingspagina]() in een gepersonaliseerde **startpagina** met een overzicht van alle [cursussen]() waarvoor je [geregistreerd]() bent, hun [oefeningenreeksen]() met nakende [deadlines]() en je voortgang bij het [indienen](#indienen-van-een-oplossing) van [oplossingen](#navigeren-naar-een-oplossing) voor [oefeningen](#navigeren-naar-een-oefening). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent.
 
 ::: tip
 
@@ -130,7 +130,7 @@ Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen
 
 ## Navigeren naar een cursus
 
-Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-een-oefeningen) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd]() bent dan kan je binnen de cursus ook [oplossingen](#navigeren-naar-een-oplossing) [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefeningen). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
+Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-een-oefening) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd]() bent dan kan je binnen de cursus ook [oplossingen](#navigeren-naar-een-oplossing) [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
 
 -   Aan de linkerkant van je [startpagina]() staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd]() bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop <span class="guilabel">GA NAAR DEZE CURSUS</span> te drukken.
 
@@ -155,7 +155,7 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-
     ![image](./student.courses.nl.png)
 
 ::: {#cursuspagina}
-Na [selectie]() van een [cursus]() navigeer je naar de **cursuspagina** met bovenaan een beschrijving van de cursus. Daaronder staan de [oefeningenreeksen]() met de [oefeningen](#navigeren-naar-een-oefeningen) van de cursus.
+Na [selectie]() van een [cursus]() navigeer je naar de **cursuspagina** met bovenaan een beschrijving van de cursus. Daaronder staan de [oefeningenreeksen]() met de [oefeningen](#navigeren-naar-een-oefening) van de cursus.
 :::
 
 ![image](./student.deadline_series.nl.png)
@@ -173,7 +173,7 @@ Voor elke [oefeningenreeks]() kan er door een cursusbeheerder optioneel een **de
 :::
 :::
 
-Onder de naam van een [oefeningenreeks]() staat optioneel een beschrijving, met daaronder een oplijsting van alle [oefeningen](#navigeren-naar-een-oefeningen) uit de reeks. De lijst toont voor elke oefening [statistieken]() en je [indienstatus](). Vóór elke oefening in de lijst staat ook een [icoontje]() dat correspondeert met je indienstatus voor de oefening.
+Onder de naam van een [oefeningenreeks]() staat optioneel een beschrijving, met daaronder een oplijsting van alle [oefeningen](#navigeren-naar-een-oefening) uit de reeks. De lijst toont voor elke oefening [statistieken]() en je [indienstatus](). Vóór elke oefening in de lijst staat ook een [icoontje]() dat correspondeert met je indienstatus voor de oefening.
 
 ::: {.belangrijk}
 Dezelfde [oefening]() kan voorkomen in meerdere [cursussen](). De [statistieken]() en je [indienstatus]() voor de oefening zijn dan doorgaans niet hetzelfde omdat ze voor elke cursus afzonderlijk bepaald worden en je telkens [oplossingen](#navigeren-naar-een-oplossing) [indient]() binnen een bepaalde cursus.
@@ -224,10 +224,10 @@ In het menu van een [oefeningenreeks]() vind je de volgende opties:
 
 <span class="guilabel">Toon overzicht</span>
 
-Toont een overzicht waarin de namen en beschrijvingen van alle [oefeningen](#navigeren-naar-een-oefeningen) uit de [oefeningenreeks]() netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus]() voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de [oplossing]() die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt [ingediend]() op basis waarvan de indienstatus kon bepaald worden).
+Toont een overzicht waarin de namen en beschrijvingen van alle [oefeningen](#navigeren-naar-een-oefening) uit de [oefeningenreeks]() netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus]() voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de [oplossing]() die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt [ingediend]() op basis waarvan de indienstatus kon bepaald worden).
 
 ::: tip
-Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](#navigeren-naar-een-oefeningen) uit een [oefeningenreeks](). Dodona voorziet dezelfde verzorgde opmaak als bij het [afdrukken]() van een individuele oefening.
+Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](#navigeren-naar-een-oefening) uit een [oefeningenreeks](). Dodona voorziet dezelfde verzorgde opmaak als bij het [afdrukken]() van een individuele oefening.
 :::
 
 
@@ -237,7 +237,7 @@ Downloadt een ZIP-bestand dat voor elke [oefening]() uit de [oefeningenreeks]() 
 
 ## Registreren voor een cursus
 
-Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](#navigeren-naar-een-oplossing) kan [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefeningen) uit de cursus.
+Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](#navigeren-naar-een-oplossing) kan [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus.
 
 Als je [navigeert]() naar een [cursus]() waarvoor je nog niet [geregistreerd]() bent, dan zie je bovenaan de [cursuspagina]() een paneel dat aangeeft of en hoe je je voor de cursus kan [registreren](#registreren-voor-een-cursus). Hierbij zijn er drie mogelijkheden:
 
@@ -284,7 +284,7 @@ Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-n
 
     ![image](./student.course_exercise_selection.nl.png)
 
--   Het bovenste paneel in de rechterkolom van je [startpagina]() bevat een lijst <span class="guilabel">RECENTE OEFENINGEN</span> met maximaal vijf [oefeningen](#navigeren-naar-een-oefeningen) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend]() hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje]() dat correspondeert met je [indienstatus]() voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
+-   Het bovenste paneel in de rechterkolom van je [startpagina]() bevat een lijst <span class="guilabel">RECENTE OEFENINGEN</span> met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend]() hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje]() dat correspondeert met je [indienstatus]() voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
 
     ![image](./student.exercise_all_submissions_page.nl.png)
 
@@ -343,7 +343,7 @@ Er zit geen beperking op het aantal keer dat je een [oplossing]() kan [indienen]
 
 ## Navigeren naar een oplossing
 
-Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefeningen) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
+Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
 
 -   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu]() aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina]() voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
