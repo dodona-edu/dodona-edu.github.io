@@ -5,7 +5,7 @@ description: "Tutorial: een nieuwe repository met oefeningen maken"
 
 # Een nieuwe repository met oefeningen maken
 
-Dodona gebruikt git repositories om oefeningen en ander lesmateriaal te beheren. Een repository kan meerdere oefeningen bevatten en moet aan een [bepaalde structuur](/nl/references/exercise-directory-structure) voldoen om gelezen te kunnen worden door Dodona.
+Dodona gebruikt git repositories om oefeningen en ander lesmateriaal te beheren. Een repository kan meerdere oefeningen bevatten en moet aan een [bepaalde structuur](/nl/references/repository-directory-structure) voldoen om gelezen te kunnen worden door Dodona.
 
 ## 1. Een Git repository aanmaken
 
@@ -13,17 +13,17 @@ Een eerste stap is om een git repository aan te maken. Je kan dit eenvoudig doen
 
 ## 2. Je repository aan Dodona toevoegen
 
-Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link "Repositories" die je naar een overzicht van alle repositories op Dodona brengt. Om een nieuwe repository toe te voegen klik je op de grote plus-knop bovenaan de pagina.
+Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link "Repositories" die je naar een overzicht van alle repositories op Dodona brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
 
 ![repository toevoegen](./add-repository.png)
 
-In het formulier om de repository toe te voegen kies je een unieke naam voor je repository binnen Dodona. Geef vervolgens de "clone URL" in die ja kan vinden op de GitHub pagina van je repository. Zorg er voor dat je de SSH link van GitHub kopieert en niet de HTTPS variant. Kies tot slot de standaard judge die je wil gebruiken voor oefeningen in deze repository.
+In het formulier om de repository toe te voegen kies je een unieke naam voor je repository binnen Dodona. Geef vervolgens de "clone URL" in die je kan vinden op de GitHub pagina van je repository. Zorg ervoor dat je de SSH link van GitHub kopieert en niet de HTTPS variant. Kies tot slot de standaard judge die je wil gebruiken voor oefeningen in deze repository.
 
 ![github clone url](./github-clone-url.png)
 
-Voordat je op de toevoeg-knop klikt moet je er eerst voor zorgen dat de Dodona server zowel lees- als schrijfrechten heeft op je repository met oefeningen. We hebben deze schrijftoegang nodig om eenvoudig de oefeningen kunnen bewerken via de webinterface.
+Voordat je op de toevoeg-knop klikt, moet je er eerst voor zorgen dat de Dodona server zowel lees- als schrijfrechten heeft op je repository met oefeningen. We hebben deze schrijftoegang nodig om eenvoudig de oefeningen kunnen bewerken via de webinterface.
 
-Op github.com is de eenvoudigste manier om de gebruiker [dodona-server](https://github.com/dodona-server) aan je repository toe te voegen. Van zodra wij deze uitnodiging accepteren kan je van start gaan. Op github.ugent.be voeg je op dezelfde wijze de gebruiker [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe. Op gitlab.com kan je [dodona-server](https://gitlab.com/dodona-server) toevoegen. Als je je repository op een eigen GitLab server host, dan zal je zelf een nieuwe gebruiker voor Dodona moeten aanmaken. Je kan onze [publieke ssh sleutel](/dodona.pub) hiervoor gebruiken.
+Op github.com is de eenvoudigste manier om de gebruiker [dodona-server](https://github.com/dodona-server) aan je repository toe te voegen. Van zodra wij deze uitnodiging accepteren, kan je van start gaan. Op github.ugent.be voeg je op dezelfde wijze de gebruiker [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe. Op gitlab.com kan je [dodona-server](https://gitlab.com/dodona-server) toevoegen. Als je je repository op een eigen GitLab server host, dan zal je zelf een nieuwe gebruiker voor Dodona moeten aanmaken. Je kan onze [publieke ssh sleutel](/dodona.pub) hiervoor gebruiken.
 
 ![github gebruiker toevoegen](./github-add-collab.png)
 
@@ -31,7 +31,7 @@ Je kan op de Dodona website het toevoegen van de repository nu finaliseren.
 
 ## 3. De webhook instellen
 
-Om je oefeningen up-to-date te houden moet Dodona weten wanneer je wijzigingen aanbrengt. We doen dit met behulp van een _webhook_. Dit is een unieke URL die er voor zorgt dat Dodona je repository opnieuw zal verwerken. Deze URL zou zichtbaar moeten zijn nadat je je repository aan Dodona hebt toegevoegd.
+Om je oefeningen up-to-date te houden, moet Dodona weten wanneer je wijzigingen aanbrengt. We doen dit met behulp van een _webhook_. Dit is een unieke URL die er voor zorgt dat Dodona je repository opnieuw zal verwerken. Deze URL zou zichtbaar moeten zijn nadat je je repository aan Dodona hebt toegevoegd.
 
 ![webhook url](./webhook-url.png)
 
