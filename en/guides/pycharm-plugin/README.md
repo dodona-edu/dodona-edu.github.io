@@ -24,7 +24,7 @@ You can also install the plugin directly from the JetBrains website. Surf to [ht
 
 ## Start a new exercise
 
-Of course, PyCharm must know for which exercise it has to submit your solution. The easiest way to do this is by right clicking an existing project or folder in Pycharm. In the `New` menu, choose `Dodona Exercise`.
+Of course, PyCharm must know for which exercise it has to submit your solution. The easiest way to do this is by right clicking an existing project or folder in PyCharm. In the `New` menu, choose `Dodona Exercise`.
 
 ![new exercise](./new_exercise.png)
 
