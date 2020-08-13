@@ -8,13 +8,13 @@ By creating an API token, you can authorize external applications, such as the [
 
 ## 1. Go to your profile page
 
-First, go to your profile page by clicking the link in the dropdown menu. Alternatively, you can enter the /profile URL in your searchbar.
+First, go to your profile page by clicking the link in the dropdown menu. Alternatively, you can browse to [dodona.ugent.be/profile](https://dodona.ugent.be/profile).
 
 ![My Profile](./my-profile.png)
 
 ## 2. Create a token
 
-Scroll to the middle of the page and generate a new token by clicking the `+`-button. Fill in a description of your choice. This allows you to identify the token later on, as it tells you which program uses that specific token.
+Scroll to the middle of the page and generate a new token by clicking the `+`-button. Fill in a description of your choice (ex. _pycharm_). This allows you to identify the token later on, as it tells you which program uses that specific token.
 
 ![Create a token](./create-new-token.png)
 
