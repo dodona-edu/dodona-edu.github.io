@@ -10,16 +10,16 @@ Alle **gebruikers** kunnen zich
 [gebruikersprofiel](/nl/for-students#gebgruikersprofiel) beheren. Voor sommige acties heb je echter bijkomende
 [beheersrechten](#beheersrechten) nodig.
 Onder gebruikers onderscheiden we daarom
-[studenten](#studenten),
-[lesgevers](#lesgevers) en
-[beheerders](#beheerders) afhankelijk van
+[studenten](#student),
+[lesgevers](#lesgever) en
+[beheerders](#beheerder) afhankelijk van
 de beheersrechten die aan hen
 [toegewezen](#beheersrechten-instellen)
 werden. Als lesgever kan je zelf ook andere lesgevers aanduiden.
 
 ::: tip
 
-Je herkent dat je [lesgever](#lesgevers) bent als je het **beheersmenu** (menu <span class="guilabel">Admin</span>) ziet staan links van het
+Je herkent dat je [lesgever](#lesgever) bent als je het **beheersmenu** (menu <span class="guilabel">Admin</span>) ziet staan links van het
 [gebruikersmenu](/nl/for-students#gebruikersmenu) aan de
 rechterkant van de [navigatiebalk](/nl/for-students#navigatiebalk).
 
@@ -40,7 +40,7 @@ het [aanduiden](/nl/course-management#cursusbeheerders-aanduiden) van cursusbehe
 
 ## Navigeren naar een gebruiker
 
-Als [lesgever](#lesgevers) navigeer je naar
+Als [lesgever](#lesgever) navigeer je naar
 het [gebruikersoverzicht](#gebruikersoverzicht) door <span class="guilabel">Gebruikers</span>te
 selecteren in het [beheersmenu](#beheersmenu) aan de rechterkant van de
 [navigatiebalk](/nl/for-students#navigatiabalk).
@@ -52,7 +52,7 @@ In het **gebruikersoverzicht** worden de gebruikersnaam, de naam, het
 emailadres en
 [voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het
 [gebruikersprofiel](/nl/for-students#gebruikersprofiel)
-van alle gebruikers. Voor de naam van elke [lesgever](#lesgevers) en [beheerder](#beheerders)
+van alle gebruikers. Voor de naam van elke [lesgever](#lesgever) en [beheerder](#beheerder)
 staat een
 [icoontje](#gebruikers-beheersrechten-icoontje) dat correspondeert met de
 [beheersrechten](#beheersrechten) die aan
@@ -85,9 +85,9 @@ minstens één *correcte* oplossing heeft ingediend.
 ## Gebruikersprofiel bewerken
 
 
-Als [lesgever](#lesgevers) kan je het
+Als [lesgever](#lesgever) kan je het
 [gebruikersprofiel](/nl/for-students#gebruikersprofiel)
-van [studenten](#studenten) en andere
+van [studenten](#student) en andere
 lesgevers bewerken. Druk daarvoor op de bewerkknop in de
 rechterbovenhoek van de
 [profielpagina](/nl/for-students#profielpagina) van de
@@ -106,7 +106,7 @@ van de gebruiker te bewerken.
 ## Beheersrechten
 
 Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
-**beheersrechten** nodig. Als [lesgever](#lesgevers) kan je aan de eigenschap <span class="guilabel">Rechten</span> op de [profielpagina](/nl/for-students#profielpagina) van een gebruiker zien welke beheersrechten de gebruiker
+**beheersrechten** nodig. Als [lesgever](#lesgever) kan je aan de eigenschap <span class="guilabel">Rechten</span> op de [profielpagina](/nl/for-students#profielpagina) van een gebruiker zien welke beheersrechten de gebruiker
 heeft.
 
 ![image](./staff.user_edit_permission.nl.png)
@@ -118,20 +118,20 @@ toegekend worden:
 
  | naam                                          | icoontje                                |permissies|
  | ----------------------------------------------|-----------------------------------------|----------|
- | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#studenten) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
- |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgevers) krijgen alle permissies van [studenten](#studenten) en kunnen bovendien ook lesgevers aanduiden, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van studenten en lesgevers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), [cursussen](/nl/course-management#cursus) [aanmaken](/nl/course-management#cursus-aanmaken), [oefeningen](/nl/for-students#oefening) [toevoegen](/nl/course-management#oefening-toevoegen) en [judges](/nl/for-students#judge) [toevoegen](/nl/creating-a-judge)|
- |<span class="guilabel">Zeus</span>|      ![image](../../../images/role_icons/zeus.png)|    [beheerders](#beheerders) krijgen alle permissies van [lesgevers](#lesgevers) en cursusbeheerders en kunnen bovendien ook alle [beheersrechten](#beheersrechten) (inclusief cursusbeheerders) toewijzen, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van alle gebruikers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), alle [cursussen](/nl/course-management#cursus) [bewerken](/nl/course-management#cursus-bewerken), alle [oefeningen](/nl/for-students#oefening) [bewerken](/nl/course-management#oefening-bewerken) en alle [judges](/nl/for-students#judge) [bewerken](/nl/judges#judge-bewerken)
+ | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#student) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
+ |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgever) krijgen alle permissies van [studenten](#student) en kunnen bovendien ook lesgevers aanduiden, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van studenten en lesgevers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), [cursussen](/nl/course-management#cursus) [aanmaken](/nl/course-management#cursus-aanmaken), [oefeningen](/nl/for-students#oefening) [toevoegen](/nl/course-management#oefening-toevoegen) en [judges](/nl/for-students#judge) [toevoegen](/nl/creating-a-judge)|
+ |<span class="guilabel">Zeus</span>|      ![image](../../../images/role_icons/zeus.png)|    [beheerders](#beheerder) krijgen alle permissies van [lesgevers](#lesgever) en cursusbeheerders en kunnen bovendien ook alle [beheersrechten](#beheersrechten) (inclusief cursusbeheerders) toewijzen, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van alle gebruikers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), alle [cursussen](/nl/course-management#cursus) [bewerken](/nl/course-management#cursus-bewerken), alle [oefeningen](/nl/for-students#oefening) [bewerken](/nl/course-management#oefening-bewerken) en alle [judges](/nl/for-students#judge) [bewerken](/nl/judges#judge-bewerken)
 
-### Studenten
+### Student
 Een gebruiker waarvoor de
 [beheersrechten](#beheersrechten)
 ingesteld zijn op <span class="guilabel">Student</span> noemen we
 een **student**. 
-### Lesgevers
+### Lesgever
 Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
 op <span class="guilabel">Staff</span> noemen we een
 **lesgever**.
-### Beheerders
+### Beheerder
 Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
 op <span class="guilabel">Zeus</span> noemen we een
 **beheerder**.
@@ -140,26 +140,26 @@ op <span class="guilabel">Zeus</span> noemen we een
 Als je het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van een gebruiker
 [bewerkt](/nl/for-students#gebruikersprofiel-bewerken) dan
 kan je daar de [beheersrechten](#beheersrechten) van de gebruiker instellen. Als
-[lesgever](#lesgevers) kan je enkel de
+[lesgever](#lesgever) kan je enkel de
 beheersrechten <span class="guilabel">Student</span> en
 <span class="guilabel">Staff</span> toekennen aan gebruikers
 (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot
-lesgever of degraderen tot [student](#studenten).
+lesgever of degraderen tot [student](#student).
 
 ![image](./staff.user_edit_permission.nl.png)
 
 ::: tip Belangrijk
 
-Als je jezelf als [lesgever](#lesgevers)
-degradeert tot [student](#studenten), dan
+Als je jezelf als [lesgever](#lesgever)
+degradeert tot [student](#student), dan
 kan je jezelf daarna niet terug promoveren tot lesgever.
 :::
 
 ## Gebruikersaccount overnemen
 
-Als [lesgever](#lesgevers) kan je tijdelijk
+Als [lesgever](#lesgever) kan je tijdelijk
 de [gebruikersaccount](/nl/for-students#gebruikersaccount)
-van een [student](#studenten) overnemen.
+van een [student](#student) overnemen.
 Daardoor krijg je de gepersonaliseerde versie van Dodona te zien door de
 ogen van de student. Dit kan interessant zijn voor het beantwoorden van
 vragen over iets wat een student waarneemt in Dodona of over een actie
@@ -181,7 +181,7 @@ voor een [cursus](/nl/course-management#cursus) of een
 [indient](/nl/for-students#oplossing-indienen) voor een
 [oefening](/nl/for-students#oefening) terwijl je de
 [gebruikersaccount](/nl/for-students#gebruikersaccount)
-van een [student](#studenten) aan het
+van een [student](#student) aan het
 [overnemen](#gebruikersaccount-overnemen)
 bent, dan hebben deze acties hetzelfde effect alsof ze door de student
 zelf zouden uitgevoerd worden. Wees je er dus van bewust of je deze
@@ -210,7 +210,7 @@ van gebruikersaccounts.
 ![image](./staff.users_filtered_impersonate_link.nl.png)
 
 ### Eigen gebruikersaccount herstellen
-Terwijl je de [gebruikersaccount](/nl/for-students#gebruikersaccount) van een [student](#studenten)
+Terwijl je de [gebruikersaccount](/nl/for-students#gebruikersaccount) van een [student](#student)
 aan het [overnemen](#gebruikersaccount-overnemen) bent, wordt bovenaan elke pagina een mededeling getoond om
 je daaraan te herinneren. De mededeling bevat een link waarmee je kunt
 terugkeren naar je eigen gebruikersaccount.
