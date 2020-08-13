@@ -16,15 +16,15 @@ You can see that you are a [teacher](#teacher) when you can see the **management
 
 ::: tip Important
 
-We divide the [enrolled](/en/for-students#course-register) members of a [course](/en/course-management#course) in [students](#student) and
-[course managers](/en/course-management#course-manager) depending on the [management permissions](#management-permissions)they have been granted for the course. Only course managers can manage a course. The 
-[managing](/en/course-management#managing-course-users) of 
+We categorize [enrolled](/en/for-students#course-register) members of a [course](/en/course-management#course) in [students](#student) and
+[course managers](/en/course-management#course-manager) depending on the [management permissions](#management-permissions)they have been granted for the course. Only course managers can manage a course.
+[Managing](/en/course-management#managing-course-users)
 [course users](/en/course-management#course-user) and [appointing](/en/course-management#appointing-course-managers) course managers is discussed in [course management](/en/course-management).
 :::
 
 ## Navigating to a user
 
-As a [teacher](#teacher), you navigate to the [user overviewt](#user-overview) by selecting <span class="guilabel">Users</span> in the [management menu](#management-menu) at the right side of the [navigation panel](/en/for-students#navigation-panel).
+As a [teacher](#teacher), you navigate to the [user overview](#user-overview) by selecting <span class="guilabel">Users</span> in the [management menu](#management-menu) at the right side of the [navigation panel](/en/for-students#navigation-panel).
 
 ![admin menu users](./staff.admin_menu_users.en.png)
 
@@ -39,7 +39,7 @@ Use the search bar at the top of the [user overview](#user-overview) to search f
 ![image](./staff.users_filtered.en.png)
 
 ## Selecting a user
-Click on the username to [navigate](#navigating-to-a-user) to the [profile page](/en/for-students#profile-page) of te user.
+Click on the username to [navigate](#navigating-to-a-user) to the [profile page](/en/for-students#profile-page) of the user.
 
 ![image](./staff.users_filtered_link.en.png)
 
