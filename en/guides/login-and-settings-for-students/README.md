@@ -9,13 +9,13 @@ In Dodona, you have two **languages** to choose from, Dutch and English. To chan
 
 ![image](./choose_language.en.png)
 
-If you select a [language]() while you are logged in it will be set as your preferred language in your [user settings]().
+If you select a [language]() while you are logged in, it will be set as your preferred language in your [user settings]().
 
 ::: details Note
 
-The language in which fixed components of Dodona (menubar, course structure, notifications, ...) are shown is fully controlled by the platform. These components are always shown in the selected [language]().
+The language used for fixed components of Dodona (menubar, course structure, notifications, ...) are shown is fully controlled by the platform. These components are always shown in the selected [language]().
 
-De name and description of a [course]() are fixed, as are names and descriptions of  [exercise series]() within a course. These components do not depend on the selected  [language](). The language of these components falls entirely under the control of the course administrators that created the course.
+The name and description of a [course]() are fixed, as are names and descriptions of  [exercise series]() within a course. These components do not depend on the selected  [language](). The language of these components falls entirely under the control of the course administrators that created the course.
 
 The name and description of an [exercise]() depend on the selected [language](). If a translation of the name and description was provided in the selected language when creating the exercise, theses components of the exercise will also be displayed in that language.
 
@@ -28,7 +28,7 @@ To be able to sign-in you need a user account on Dodona. In the associated user 
 
 ::: tip Important
 
-Sign-in on Dodona can be done by selecting your educational institution on the login page. If you are a High School student you can use your Smartschool, Office 365, or G Suite account of your school.
+Sign-in on Dodona can be done by selecting your educational institution on the login page. As High School student you can also use your Smartschool, Office 365, or G Suite account provided by your school.
 
 :::
 
@@ -39,10 +39,10 @@ Press on <span class="guilabel">Sign in</span>  on the right side of the navigat
 
 ::: tip
 
-You can only log in if you aren't logged in. You can see that you are logged out if you can see the <span class="guilabel">Sign in</span> button on the right side of the [navigation bar](). If you are logged in, the name of your account can be seen at the same place. This is the [user menu]().
+You can only log in if you aren't already logged in. You can see that you are logged out if you can see the <span class="guilabel">Sign in</span> button on the right side of the [navigation bar](). If you are logged in, the name of your account can be seen at the same place. This is the [user menu]().
 :::
 
-Select your educational or research institution on the login page. If you are a High School student you can select the Smartschool, Office 365, or G Suite options. After selecting your preferred log in follow the specified log in procedure.
+Select your educational or research institution on the login page. If you are a High School student you can select the Smartschool, Office 365, or G Suite options. After selecting your preferred log in, follow the specified log in procedure.
 
 ![image](./institution.en.png)
 
