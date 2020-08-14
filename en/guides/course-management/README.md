@@ -19,7 +19,7 @@ There are two options to choose from when creating a new course. Either you star
 
 ![new course menu](./new-course-menu.png)
 
-Press <span class="guilabel">Dodona<span> in the [navigation bar](/en/for-students#navigation-bar) to cancel the creation of the [course](#course).
+Press <span class="guilabel">Dodona</span> in the [navigation bar](/en/for-students#navigation-bar) to cancel the creation of the [course](#course).
 
 If you start from an existing course, you must first select it in the table. Use the search bar to filter the displayed courses and find the course of your liking. Click the radio button in the left column to proceed.
 
@@ -35,3 +35,35 @@ Now you must choose which elements from the existing [course](#course) you wish 
 With either choice of course creation, you must choose some course specific properties. When copying, these are pre-filled in with the original values. The following properties can be set.
 
 ![image](./course-properties.png)
+
+
+<span class="guilabel">Name</span>
+
+
+> A name for the [course](#course).
+> Different courses can have the same name. However, it is advised to make names as unique as possible.
+
+<span class="guilabel">Teachers</span>
+
+> The names of the [teachers](/en/user-management#teacher) of the [course](#course). If there are multiple teachers, use commas to separate their names.
+
+<span class="guilabel">Academic year</span>
+
+> The academic year in which this [course](#course) is offered. Use the format `yyyy-yyyy` to ensure that the course is sorted correctly on the [starting page](/en/for-students#startingpage) and in the [course overview](#course-overview).
+
+<span class="guilabel">Visibility</span>
+
+> The visibility determines whether [unregistered](/en/for-students#course-register) users can see the course. This property has the following possible values:
+
+>
+> 
+> <span class="guilabel">Visible</span>
+>
+>
+> > All users see the [course](#course) in the [course overview](#course-overview). They can also navigate to the [course page](/en/for-students#course-page) and [register](/en/for-students#course-register) if they want to.
+>
+> <span class="guilabel">Hidden</span>
+>
+> > Only [course admins](#course-admins) see the [course](#course) in the [course overview](#course-overview) and on their [starting page](/en/for-students#starting-page). An icon is displayed to point out the fact that other users cannot see this course there. This icon can also be found on the [course page](/en/for-students#course-page) itself. Only [registered](/en/for-students#course-register) users can navigate to that page. Other users can only register if they use the [registration link](#registration-link).
+> >
+> > ![image](./hidden-course.png)

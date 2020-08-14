@@ -33,7 +33,7 @@ kunnen na de deadline echter onbeperkt oplossingen blijven indienen voor de oefe
 
 Als [lesgever](/nl/user-management#lesgever) kan je een
 nieuwe [cursus](#cursus) aanmaken door op
-de knop <span class="guilabel">CURSUS AANMAKEN<span> te drukken
+de knop <span class="guilabel">CURSUS AANMAKEN</span> te drukken
 in de rechterbovenhoek van het
 [cursusoverzicht](#cursusoverzicht).
 
@@ -43,7 +43,7 @@ Om een nieuwe [cursus](#cursus) aan te maken, zijn er twee opties. Ofwel vertrek
 
 ![new course menu](./new-course-menu.png)
 
-Druk op <span class="guilabel">Dodona<span> in de
+Druk op <span class="guilabel">Dodona</span> in de
 [navigatiebalk](/nl/for-students#navigatiebalk) om het
 aanmaken van de [cursus](#cursus) te
 annuleren.
@@ -61,113 +61,60 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
 ![image](./course-properties.png)
 
-::: {#cursuseigenschappen}
-Voor een `cursus <cursus>`{.interpreted-text role="ref"} kunnen de
-volgende eigenschappen ingesteld worden:
-:::
+<span class="guilabel">Naam</span>
 
-::: {#cursus naam}
-`Naam`{.interpreted-text role="guilabel"}
-:::
 
-> Een naam voor de `cursus <cursus>`{.interpreted-text role="ref"}.
+> Een naam voor de [cursus](#cursus).
 > Verschillende curssen kunnen dezelfde naam hebben. Het is echter
 > aangeraden om cursussen zoveel mogelijk een unieke naam te geven.
 
-::: {#cursus lesgever}
-`Lesgevers`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Lesgevers</span>
 
-> De namen van de lesgevers van de `cursus <cursus>`{.interpreted-text
-> role="ref"}. Gebruik een komma om namen te scheiden als er meerdere
-> lesgevers zijn.
+> De namen van de lesgevers van de [cursus](#cursus). Gebruik een komma om namen te scheiden als er meerdere lesgevers zijn.
 
-::: {#cursus academiejaar}
-`Academiejaar`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Academiejaar</span>
 
-> Het academiejaar waarin de `cursus <cursus>`{.interpreted-text
-> role="ref"} wordt aangeboden. Gebruik het formaat `jjjj-jjjj` om
+> Het academiejaar waarin de [cursus](#cursus) wordt aangeboden. Gebruik het formaat `jjjj-jjjj` om
 > ervoor te zorgen dat de cursus correct gesorteerd wordt op de
-> `startpagina <startpagina>`{.interpreted-text role="ref"} en in het
-> `cursusoverzicht <cursusoverzicht>`{.interpreted-text role="ref"}.
+> [startpagina](/nl/for-students#startpagina) en in het
+> [cursusoverzicht](#cursusoverzicht).
 
+<span class="guilabel">Zichtbaarheid</span>
 
-
-::: {#cursus zichtbaarheid}
-`Zichtbaarheid`{.interpreted-text role="guilabel"}
-:::
-
-> De zichtbaarheid bepaalt of
-> `niet-geregistreerde <cursus registreren>`{.interpreted-text
-> role="ref"} gebruikers de `cursus <cursus>`{.interpreted-text
-> role="ref"} kunnen zien. Voor deze eigenschap kunnen de volgende
-> waarden ingesteld worden:
+> De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/for-students#cursus-registreren) gebruikers de [cursus](#cursus) kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 >
-> ::: {#cursus zichtbaar}
-> `Zichtbaar`{.interpreted-text role="guilabel"}
-> :::
+> 
+> <span class="guilabel">Zichtbaar</span>
 >
-> > Alle gebruikers zien de `cursus <cursus>`{.interpreted-text
-> > role="ref"} in het
-> > `cursusoverzicht <cursusoverzicht>`{.interpreted-text role="ref"}.
+>
+> > Alle gebruikers zien de [cursus](#cursus) in het
+> > [cursusoverzicht](#cursusoverzicht).
 > > Ze kunnen ook naar de
-> > `cursuspagina <cursuspagina>`{.interpreted-text role="ref"}
+> > [cursuspagina](/nl/for-students#cursuspagina)
 > > navigeren en zich daar eventueel voor de cursus
-> > `registreren <cursus registreren>`{.interpreted-text role="ref"}.
+> > [registreren](/nl/for-students#cursus-registreren).
 >
-> ::: {#cursus verborgen}
-> `Verborgen`{.interpreted-text role="guilabel"}
-> :::
+> <span class="guilabel">Verborgen</span>
 >
-> > Alleen `cursusbeheerders <cursusbeheerder>`{.interpreted-text
-> > role="ref"} zien de `cursus <cursus>`{.interpreted-text role="ref"}
-> > in het `cursusoverzicht <cursusoverzicht>`{.interpreted-text
-> > role="ref"} en op hun `startpagina <startpagina>`{.interpreted-text
-> > role="ref"}. Er staat een icoontje bij om hen er op te wijzen dat
-> > andere gebruikers de cursus daar niet kunnen zien.
+> > Alleen [cursusbeheerders](#cursusbeheerder) zien de [cursus](#cursus) in het [cursusoverzicht](#cursusoverzicht) en op hun [startpagina](/nl/for-students#startpagina). Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de [cursuspagina](/nl/for-students#cursuspagina) zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de [registratielink](#registratielink) gebruiken.
 > >
-> > ![image](images/staff.courses_hidden_course.nl.png)
-> >
-> > Alleen `geregistreerde <cursus registreren>`{.interpreted-text
-> > role="ref"} gebruikers kunnen naar de
-> > `cursuspagina <cursuspagina>`{.interpreted-text role="ref"}
-> > navigeren. `Cursusbeheerders <cursusbeheerder>`{.interpreted-text
-> > role="ref"} zien een duidelijke mededeling op de cursuspagina om hen
-> > er op te wijzen dat niet-geregistreerde gebruikers niet naar de
-> > cursuspagina kunnen navigeren en zich enkel voor de
-> > `cursus <cursus>`{.interpreted-text role="ref"} kunnen registreren
-> > als ze de
-> > `registratielink <cursus registratielink>`{.interpreted-text
-> > role="ref"} gebruiken.
-> >
-> > ![image](images/staff.hidden_course_message.nl.png)
-> >
-> > ![image](images/student.hidden_course_unregistered_link_message.nl.png)
+> > ![image](./hidden-course.png)
 
-::: {#cursus registratie}
-::: {#cursus registratieprocedure}
-`Registratieprocedure`{.interpreted-text role="guilabel"}
-:::
-:::
+<span class="guilabel">Registratieprocedure</span>
 
 > De registratieprocedure bepaalt of en hoe gebruikers zich voor de
 > `cursus <cursus>`{.interpreted-text role="ref"} kunnen
 > `registreren <cursus registreren>`{.interpreted-text role="ref"}. Voor
 > deze eigenschap kunnen de volgende waarden ingesteld worden:
 >
-> ::: {#cursus open}
-> `Open`{.interpreted-text role="guilabel"}
-> :::
+> <span class="guilabel">Open</span>
 >
 > > Gebruikers kunnen zich voor de `cursus <cursus>`{.interpreted-text
 > > role="ref"} `registreren <cursus registreren>`{.interpreted-text
 > > role="ref"} zonder expliciete goedkeuring van een
 > > `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}.
 >
-> ::: {#cursus gemodereerd}
-> `Gemodereerd`{.interpreted-text role="guilabel"}
-> :::
+> <span class="guilabel">Gemodereerd</span>
 >
 > > Gebruikers kunnen een
 > > `registratieverzoek <registratieverzoek>`{.interpreted-text
@@ -181,9 +128,7 @@ volgende eigenschappen ingesteld worden:
 > > `goedgekeurd <registratieverzoek goedkeuren>`{.interpreted-text
 > > role="ref"}.
 >
-> ::: {#cursus gesloten}
-> `Gesloten`{.interpreted-text role="guilabel"}
-> :::
+> <span class="guilabel">Gesloten</span>
 >
 > > Gebruikers kunnen zich niet meer voor de
 > > `cursus <cursus>`{.interpreted-text role="ref"}
@@ -206,20 +151,14 @@ volgende eigenschappen ingesteld worden:
 > role="ref"}.
 > :::
 
-::: {#cursus beschrijving}
-`Beschrijving`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Beschrijving</span>
 
 > Een optionele beschrijving die bovenaan de
 > `cursuspagina <cursuspagina>`{.interpreted-text role="ref"} wordt
 > weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken
 > van `Markdown <beschrijving markdown>`{.interpreted-text role="ref"}.
 >
-> ::: {#beschrijving markdown}
-> ::: {.tip}
-> ::: {.admonition-title}
-> Tip
-> :::
+> ::: tip
 >
 > De beschrijving van eigenschappen die aangeduid worden met het
 > Markdown-logo kan geschreven worden met behulp van
@@ -228,13 +167,8 @@ volgende eigenschappen ingesteld worden:
 > [kramdown](https://kramdown.gettalong.org) waardoor heel wat
 > uitbreidingen van de standaard Markdown ondersteund worden.
 > :::
-> :::
 
-::: {#cursus token}
-::: {#cursus registratielink}
-`Registratielink`{.interpreted-text role="guilabel"}
-:::
-:::
+<span class="guilabel">Registratielink</span>
 
 > Bij het `aanmaken <cursus aanmaken>`{.interpreted-text role="ref"} van
 > een `cursus <cursus>`{.interpreted-text role="ref"} wordt automatisch

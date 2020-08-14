@@ -9,6 +9,7 @@ Here you'll find a number of guides, primarily focused on teachers.
 ## In English
 * [Creating a new exercise repository](new-exercise-repo)
 * [User management](user-management)
+* [Course management](course-management)
 * [Dodona PyCharm plugin](pycharm-plugin)
 * [Dodona VS Code extension](vs-code-extension)
 * [The Coder's Apprentice](the-coders-apprentice)
