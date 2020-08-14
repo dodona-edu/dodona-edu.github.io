@@ -103,60 +103,44 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 <span class="guilabel">Registratieprocedure</span>
 
 > De registratieprocedure bepaalt of en hoe gebruikers zich voor de
-> `cursus <cursus>`{.interpreted-text role="ref"} kunnen
-> `registreren <cursus registreren>`{.interpreted-text role="ref"}. Voor
+> [cursus](#cursus) kunnen [registreren](/nl/for-students#cursus-registreren). Voor
 > deze eigenschap kunnen de volgende waarden ingesteld worden:
 >
 > <span class="guilabel">Open</span>
 >
-> > Gebruikers kunnen zich voor de `cursus <cursus>`{.interpreted-text
-> > role="ref"} `registreren <cursus registreren>`{.interpreted-text
-> > role="ref"} zonder expliciete goedkeuring van een
-> > `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}.
+> > Gebruikers kunnen zich voor de [cursus](#cursus) [registreren](/nl/for-students#cursus-registreren) zonder expliciete goedkeuring van een [cursusbeheerder](#cursusbeheerder).
 >
 > <span class="guilabel">Gemodereerd</span>
 >
 > > Gebruikers kunnen een
-> > `registratieverzoek <registratieverzoek>`{.interpreted-text
-> > role="ref"}
-> > `indienen <registratieverzoek indienen>`{.interpreted-text
-> > role="ref"} voor de `cursus <cursus>`{.interpreted-text role="ref"}
-> > maar zijn pas `geregistreerd <cursus registreren>`{.interpreted-text
-> > role="ref"} als een
-> > `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
+> > [registratieverzoek](/nl/for-students#registratieverzoek)
+> > [indienen](/nl/for-students#registratieverzoek-indienen) voor de [cursus](#cursus)
+> > maar zijn pas [geregistreerd](/nl/for-students#cursus-registreren) als een
+> > [cursusbeheerder](#cursusbeheerder)
 > > hun registratieverzoek heeft
-> > `goedgekeurd <registratieverzoek goedkeuren>`{.interpreted-text
-> > role="ref"}.
+> > [goedgekeurd](#registratieverzoek-goedkeuren).
 >
 > <span class="guilabel">Gesloten</span>
 >
 > > Gebruikers kunnen zich niet meer voor de
-> > `cursus <cursus>`{.interpreted-text role="ref"}
-> > `registreren <cursus registreren>`{.interpreted-text role="ref"}.
+> > [cursus](#cursus) [registreren](/nl/for-students#cursus-registreren).
 >
-> ::: {.important}
-> ::: {.admonition-title}
-> Important
-> :::
+> ::: tip Belangrijk
 >
 > Als je de registratieprocedure aanpast dan blijven bestaande
-> `registraties <cursus registreren>`{.interpreted-text role="ref"} voor
-> de `cursus <cursus>`{.interpreted-text role="ref"} gelden en blijven
-> `registratieverzoeken <registratieverzoek>`{.interpreted-text
-> role="ref"} voor de cursus openstaan. Je moet zelf de bestaande
-> `registratiestatus <cursusgebruiker registratiestatus>`{.interpreted-text
-> role="ref"} van `cursusgebruikers <cursusgebruiker>`{.interpreted-text
-> role="ref"}
-> `aanpassen <cursusgebruiker registratiestatus aanpassen>`{.interpreted-text
-> role="ref"}.
+> [registraties](/nl/for-students#cursus-registreren) voor
+> de [cursus](#cursus) gelden en blijven
+> [registratieverzoeken](/nl/for-students#registratieverzoek) voor de cursus openstaan. Je moet zelf de bestaande
+> [registratiestatus](#registratiestatus) van [cursusgebruikers](#cursusgebruikers)
+> [aanpassen](#registratiestatus-aanpassen).
 > :::
 
 <span class="guilabel">Beschrijving</span>
 
 > Een optionele beschrijving die bovenaan de
-> `cursuspagina <cursuspagina>`{.interpreted-text role="ref"} wordt
+> [cursuspagina](#<cursuspagina>) wordt
 > weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken
-> van `Markdown <beschrijving markdown>`{.interpreted-text role="ref"}.
+> van [Markdown](#Markdown).
 >
 > ::: tip
 >

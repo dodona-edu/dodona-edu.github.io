@@ -67,3 +67,24 @@ With either choice of course creation, you must choose some course specific prop
 > > Only [course admins](#course-admins) see the [course](#course) in the [course overview](#course-overview) and on their [starting page](/en/for-students#starting-page). An icon is displayed to point out the fact that other users cannot see this course there. This icon can also be found on the [course page](/en/for-students#course-page) itself. Only [registered](/en/for-students#course-register) users can navigate to that page. Other users can only register if they use the [registration link](#registration-link).
 > >
 > > ![image](./hidden-course.png)
+
+<span class="guilabel">Registration procedure</span>
+
+> The registration procedure deterimines whether and how users can [register](/en/for-students#course-register] for the [course](#course). This property can have the following values:
+>
+> <span class="guilabel">Open</span>
+>
+> > Any user can [register](/en/for-students#course-register) for this [course](#course) without explicit approval of a [course admin](#course-admin).
+>
+> <span class="guilabel">Moderated</span>
+>
+> > Users can [submit](/en/for-students#submit-registration-request) a [registration request](/en/for-students#registration-request) for the [course](#course) but are only [registered](/en/for-students#course-register) when a [course admin](#course-admin) [approves](#approve-registration-request) their registration request.
+>
+> <span class="guilabel">Closed</span>
+>
+> > Users can no longer [register](/en/for-students#course-register) for this [course](#course).
+>
+> ::: tip Important
+>
+> When you change the registration procedure, existing [registrations](/en/for-students#course-registeren) and [registration-requests](/en/for-students#registration-request) for the [course](#course) remain valid. You will have to manually edit the [registration status](#registration-status) of [course users](#course-users).
+> :::
