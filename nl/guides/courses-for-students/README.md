@@ -11,7 +11,7 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-
 
 -   Als je nog [registratieverzoeken]() voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](). Je kunt één van deze cursussen selecteren door op de naam van de cursus te drukken.
 
--   Het [gebruikersmenu]() aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) bevat onder de hoofding <span class="guilabel">Mijn vakken</span> een lijst met alle [cursussen]() waarvoor je [geregistreerd]() bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina]() moet navigeren.
+-   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal) bevat onder de hoofding <span class="guilabel">Mijn vakken</span> een lijst met alle [cursussen]() waarvoor je [geregistreerd]() bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina]() moet navigeren.
 
     ![image](./student.my_courses.nl.png)
 
