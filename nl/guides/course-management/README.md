@@ -2,7 +2,6 @@
 title: Cursusbeheer
 description: "Tutorial: cursusbeheer"
 ---
-
 Een **cursus** wordt
 [opgebouwd](#leerpad-uitstippelen) als een
 [leerpad](#leerpad) met
@@ -461,7 +460,7 @@ onderaan) weergegeven op de
 [cursuspagina](#cursuspagina).
 
 ### Oefening aan reeks toevoegen
-<span id="oefeningenreeks-toevoegen"></span>
+<h1 id="oefeningenreeks-toevoegen"></h1>
 Je ziet nu een uitgebreide versie van het paneel waarin je naast het
 [instellen](#oefeningenreeks-eigenschappen-instellen) van
 [eigenschappen](#oefeningenreeks-eigenschappen) ook oefeningen kunt koppelen aan de
@@ -486,11 +485,10 @@ Onder de hoofding <span class="guilabel">Oefeningen toevoegen</span>
  kan je de zoekbalk gebruiken om te zoeken naar
 specifieke [oefeningen](/nl/for-students#oefening) op
 basis van een naam, een padnaam, programmeertaal, labels of vertalingen.
-:::
 
 ![image](images/staff.series_search_exercises.nl.png)
 
-<span id="oefeningenreeks-oefening-toevoegen"></span>
+<h1 id="oefeningenreeks-oefening-toevoegen"></h1>
 Druk op de toevoegknop aan de rechterkant van een
 [oefening](#oefening) om de oefening aan
 de [oefeningenreeks](#oefeningenreeks) toe
@@ -498,7 +496,7 @@ te voegen.
 
 ![image](images/staff.series_add_exercise.nl.png)
 
-<span id="oefeningenreeks-oefening-verwijderen"></span>
+<h1 id="oefeningenreeks-oefening-verwijderen"></h1>
 Onder de hoofding <span clas="guilabel">Oefeningen in deze reeks</span> kan je aan de rechterkant van een
 [oefening](/nl/for-students#oefening) op de verwijderknop
 drukken om de oefening uit de
@@ -507,7 +505,7 @@ verwijderen.
 
 ![image](images/staff.series_remove_exercise.nl.png)
 
-<span id="oefeningenreeks-oefeningen-herschikken"></span>
+<h1 id="oefeningenreeks-oefeningen-herschikken"></h1>
 Versleep de verplaatsknop aan de linkerkant van de
 [oefeningen](#oefening) om de volgorde van
 de oefeningen aan te passen. De volgorde waarin de oefeningen onder de
@@ -518,7 +516,7 @@ worden in de oefeningenreeks.
 
 ![image](images/staff.series_move_exercise.nl.png)
 
-<span id="oefeningenreeks-oefeningen-afwerken"></span>
+<h1 id="oefeningenreeks-oefeningen-afwerken"></h1>
 Druk op de afwerkknop in de rechterbovenhoek van het paneel om de
 koppeling van [oefeningen](/nl/for-students#oefening) aan
 de [oefeningenreeks](#oefeningenreeks) af
@@ -535,7 +533,7 @@ toepassing is.
 
 ### Oefeningenreeks beheren
 
-<span id="oefeningenreeks-menu-cursusbeheerder"></span>
+<h1 id="oefeningenreeks-menu-cursusbeheerder"></h1>
 In het [menu](/nl/for-students#oefeningenreeks-menu) van
 een [oefeningenreeks](#oefeningenreeks)
 staan enkele bijkomende opties die corresponderen met acties die
@@ -623,141 +621,103 @@ Oplossingen herevalueren
 Als [cursusbeheerder](#cursusbeheerder)
 krijg je toegang tot alle **cursusgebruikers**. Dit zijn de gebruikers
 die ooit voor de cursus
-`geregistreerd <cursus registreren>`{.interpreted-text role="ref"}
+[geregistreerd](/nl/for-students#cursus-registreren)
 geweest zijn of die ooit een
-`registratieverzoek <registratieverzoek>`{.interpreted-text role="ref"}
+[registratieverzoek](/nl/for-students#registratieverzoek)
 voor de cursus ingediend hebben. Je kunt hun
-`gebruikersprofiel <gebruikersprofiel>`{.interpreted-text role="ref"}
-`bekijken <cursusgebruikers navigeren>`{.interpreted-text role="ref"},
-hun `gebruikersaccount <gebruikersaccount>`{.interpreted-text
-role="ref"} `overnemen <gebruikersaccount overnemen>`{.interpreted-text
-role="ref"}, hun
-`registratiestatus <cursusgebruiker registratiestatus>`{.interpreted-text
-role="ref"}
-`aanpassen <cursusgebruiker registratiestatus aanpassen>`{.interpreted-text
-role="ref"} en `cursusbeheerders <cursusbeheerder>`{.interpreted-text
-role="ref"} `aanduiden <cursusbeheerders aanduiden>`{.interpreted-text
-role="ref"}.
+[gebruikersprofiel](/nl/for-students#gebruikersprofiel)
+[bekijken](#cursusgebruikers navigeren), hun
+[registratiestatus](#cursusgebruiker-registratiestatus)
+[aanpassen](#cursusgebruiker-registratiestatus-aanpassen) en [cursusbeheerders](#cursusbeheerder) [aanduiden](#cursusbeheerders aanduiden).
 
 ### Navigeren naar cursusgebruikers
 
-Aan de onderkant van de `cursuspagina <cursuspagina>`{.interpreted-text
-role="ref"} zie je onder de hoofding `Gebruikers`{.interpreted-text
-role="guilabel"} een overzicht waarin alle
-`cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
+Aan de onderkant van de [cursuspagina](#cursuspagina) zie je onder de hoofding <span class="guilabel">Gebruikers</span> een overzicht waarin alle
+[cursusgebruikers](#cursusgebruiker)
 opgelijst worden met hun gebruikersnaam, naam, emailadres en
-`voortgangsstatistieken <cursusgebruiker voortgangsstatistieken>`{.interpreted-text
-role="ref"}.
+[voortgangsstatistieken](/nl/user-management#voortgangsstatistieken).
 
 ![image](images/staff.course_users.nl.png)
 
-::: {#cursus beheersrechten icoontje}
-::: {#cursusgebruiker voortgangsstatistieken}
-:::
-:::
-
-Het `zoeken <gebruiker zoeken>`{.interpreted-text role="ref"},
-`selecteren <gebruiker selecteren>`{.interpreted-text role="ref"} en
-`bewerken <gebruikersprofiel bewerken>`{.interpreted-text role="ref"}
-van `cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
+Het [zoeken](/nl/user-management#gebruiker-zoeken) en
+[selecteren](/nl/user-management#gebruiker-selecteren)
+van [cursusgebruikers](#cursusgebruiker)
 verloopt op dezelfde manier als in het
-`gebruikersoverzicht <gebruikersoverzicht>`{.interpreted-text
-role="ref"}.
+[gebruikersoverzicht](/nl/user-management#gebruikersoverzicht).
 
 ### Registratiestatus aanpassen
 
-In het `overzicht <cursusgebruikersoverzicht>`{.interpreted-text
-role="ref"} van alle
-`cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
+In het [overzicht](#cursusgebruikersoverzicht) van alle
+[cursusgebruikers](#cursusgebruiker)
 worden de cursusgebruikers in tabs gegroepeerd volgens hun
-**registratiestatus** voor de `cursus <cursus>`{.interpreted-text
-role="ref"}.
+**registratiestatus** voor de [cursus](#cursus).
 
-`Geregistreerd`{.interpreted-text role="guilabel"}
+<span class="guilabel">Geregistreerd</span>
 
-> Alle `cursusgebruikers <cursusgebruiker>`{.interpreted-text
-> role="ref"} die momenteel
-> `geregistreerd <cursus registreren>`{.interpreted-text role="ref"}
-> zijn.
+> Alle [cursusgebruikers](#cursusgebruiker) die momenteel
+> [geregistreerd](/nl/for-students#cursus-registreren) zijn.
 
-`Uitgeschreven`{.interpreted-text role="guilabel"}
+<span class="guilabel">Uitgeschreven</span>
 
-> Alle `cursusgebruikers <cursusgebruiker>`{.interpreted-text
-> role="ref"} die ooit
-> `geregistreerd <cursus registreren>`{.interpreted-text role="ref"}
+> Alle [cursusgebruikers](#cursusgebruiker) die ooit
+> [geregistreerd](/nl/for-students#cursus-registreren)
 > waren, maar die ondertussen
-> `uitgeschreven <cursus uitschrijven>`{.interpreted-text role="ref"}
-> zijn.
+> [uitgeschreven](/nl/for-students#cursus-uitschrijven) zijn.
 
-`Op de wachtlijst`{.interpreted-text role="guilabel"}
+<span class="guilabel">Op de wachtlijst</span>
 
-> Alle `cursusgebruikers <cursusgebruiker>`{.interpreted-text
-> role="ref"} waarvoor er nog een
-> `registratieverzoek <registratieverzoek>`{.interpreted-text
-> role="ref"} openstaat dat wacht op
-> `afhandeling <registratieverzoeken afhandelen>`{.interpreted-text
-> role="ref"} van een
-> `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}.
+> Alle [cursusgebruikers](#cursusgebruiker) waarvoor er nog een
+> [registratieverzoek](/nl/for-students#registratieverzoek) openstaat dat wacht op
+> [afhandeling](#registratieverzoeken-afhandelen) van een
+> [cursusbeheerder](#cursusbeheerder).
 
-::: {#registratieverzoek afkeuren}
-::: {#registratieverzoek goedkeuren}
-::: {#registratieverzoeken afhandelen}
+
+<h1 id="registratieverzoeken afhandelen"></h1>
 Elke tab heeft eigen actieknoppen aan de rechterkant van de
 cursusgebruikers waarmee je hun
-`registratiestatus <cursusgebruiker registratiestatus>`{.interpreted-text
-role="ref"} kunt aanpassen.
-:::
-:::
-:::
+[registratiestatus](#cursusgebruiker-registratiestatus) kunt aanpassen.
 
-  tab                                                         knop                                                       actie
-  ----------------------------------------------------------- ---------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  `Geregistreerd`{.interpreted-text role="guilabel"}          ![image](images/staff_registration_icons/unregister.png)   cursusgebruiker uitschrijven uit de cursus
-  `Uitgeschreven`{.interpreted-text role="guilabel"}          ![image](images/staff_registration_icons/register.png)     cursusgebruiker terug registreren voor de cursus
-  `Registratieverzoeken`{.interpreted-text role="guilabel"}   ![image](images/staff_registration_icons/approve.png)      goedkeuren van het `registratieverzoek <registratieverzoek>`{.interpreted-text role="ref"} dat door de gebruiker werd `ingediend <registratieverzoek indienen>`{.interpreted-text role="ref"}, waardoor de gebruiker `geregistreerd <cursus registreren>`{.interpreted-text role="ref"} wordt voor de cursus
-  `Registratieverzoeken`{.interpreted-text role="guilabel"}   ![image](images/staff_registration_icons/decline.png)      afkeuren van het `registratieverzoek <registratieverzoek>`{.interpreted-text role="ref"} dat door de gebruiker werd `ingediend <registratieverzoek indienen>`{.interpreted-text role="ref"}, waardoor de gebruiker `uitgeschreven <cursus uitschrijven>`{.interpreted-text role="ref"} wordt uit de cursus
 
-### Aanduiden van cursusbeheerders {#cursusbeheerders aanduiden}
+|tab                                                 |knop                    |actie |
+-----------------------------------------------------|------------------------|------| 
+<span class="guilabel">Geregistreerd</span>|          ![image](images/staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
+<span class="guilabel">Uitgeschreven</span>|          ![image](images/staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
+<span class="guilabel">Registratieverzoeken</span>|   ![image](images/staff_registration_icons/approve.png)|     goedkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [geregistreerd](/nl/for-students#cursus-registreren) wordt voor de cursus|
+<span class="guilabel">Registratieverzoeken</span>|   ![image](images/staff_registration_icons/decline.png)|      afkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [uitgeschreven](/nl/for-students#cursus-uitschrijven) wordt uit de cursus|
 
-::: {#cursusbeheerder}
+### Cursusbeheerders aanduiden
+
+<h1 id="cursusbeheerder"></span>
 Een **cursusbeheerder** is een
-`geregistreerde <cursus registreren>`{.interpreted-text role="ref"}
-`cursusgebruiker <cursusgebruiker>`{.interpreted-text role="ref"} met
-beheersrechten voor de `cursus <cursus>`{.interpreted-text role="ref"}.
-Een `lesgever <lesgever>`{.interpreted-text role="ref"} die een nieuwe
+[geregistreerde](/nl/for-students#cursus-registreren)
+[cursusgebruiker](#cursusgebruiker) met
+beheersrechten voor de [cursus](#cursus).
+Een [lesgever](/nl/user-management#lesgever) die een nieuwe
 cursus aanmaakt wordt er automatisch voor geregistreerd en wordt er
 meteen ook de eerste cursusbeheerder van. Lesgever hebben voor het
 beheren van cursussen echter geen bijkomende rechten ten opzichte van
-andere `cursusbeheerders`{.interpreted-text role="ref"} en kunnen ook
+andere cursusbeheerders en kunnen ook
 geen cursussen beheren waarvoor ze geen cursusbeheerder zijn.
-:::
 
-::: {#cursusbeheerder icoontje}
-In de tab `Geregistreerd`{.interpreted-text role="guilabel"} van het
-`overzicht <cursusgebruikersoverzicht>`{.interpreted-text role="ref"}
-met alle `cursusgebruikers <cursusgebruiker>`{.interpreted-text
-role="ref"} kan je de cursusbeheerders herkennen aan het icoontje in de
+In de tab <span class="guilabel">Geregistreerd</span> van het
+[overzicht](#cursusgebruikersoverzicht)
+met alle [cursusgebruikers](#cursusgebruiker) kan je de cursusbeheerders herkennen aan het icoontje in de
 linkermarge.
-:::
 
 ![image](images/staff.course_users_admin.nl.png)
 
 In de tab kan je de volgende actieknoppen gebruiken om cursusbeheerders
 aan te duiden:
 
-  knop                                                              actie
-  ----------------------------------------------------------------- -------------------------------------------------------------------------------------
-  ![image](images/staff_registration_icons/make_course_admin.png)   cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder
-  ![image](images/staff_registration_icons/make_student.png)        cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus
+|knop                                                              |actie                                                                                |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+![image](images/staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
+![image](images/staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
 
-::: {.important}
-::: {.admonition-title}
-Important
-:::
+::: tip Belangrijk
 
-Een `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
-die zich `uitschrijft <cursus uitschrijven>`{.interpreted-text
-role="ref"} uit een `cursus <cursus>`{.interpreted-text role="ref"}
+Een [cursusbeheerder](#cursusbeheerder)
+die zich [uitschrijft](/nl/for-students#cursus-uitschrijven) uit een [cursus](#cursus)
 verliest zijn status van cursusbeheerder.
 
 Om ervoor te zorgen dat een cursus altijd minstens één cursusbeheerder
@@ -771,119 +731,98 @@ cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder
 beheersrechten voor de cursus.
 :::
 
-Beheren van oplossingen {#oplossingen beheren}
------------------------
+# Oplossingen beheren
 
-Als `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
-krijg je toegang tot alle `oplossingen <oplossing>`{.interpreted-text
-role="ref"} die de
-`cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
-`ingediend <oplossing indienen>`{.interpreted-text role="ref"} hebben in
-de `cursus <cursus>`{.interpreted-text role="ref"}. Je kunt de
-oplossingen `herevalueren <oplossing herevalueren>`{.interpreted-text
-role="ref"} en er zijn verschillende plaatsen op de
-`cursuspagina <cursuspagina>`{.interpreted-text role="ref"} waar je een
+Als [cursusbeheerder](#cursusbeheerder)
+krijg je toegang tot alle [oplossingen](/nl/for-students#oplossing) die de
+[cursusgebruikers](#cursusgebruiker)
+[ingediend](/nl/for-students#oplossing-indienen) hebben in
+de [cursus](#cursus). Je kunt de
+oplossingen [herevalueren](#oplossing-herevalueren) en er zijn verschillende plaatsen op de
+[cursuspagina](#cursuspagina) waar je een
 overzicht kunt krijgen van (een deel van) de oplossingen.
 
-### Herevalueren van een oplossing {#oplossing herevalueren}
+### Oplossing herevalueren
 
 Bij het herevalueren van een oplossing wordt het
-`beoordelingsproces <oplossing beoordelingsproces>`{.interpreted-text
-role="ref"} opnieuw uitgevoerd zonder dat de oplossing opnieuw moet
-`ingediend <oplossing indienen>`{.interpreted-text role="ref"} worden.
+[beoordelingsproces](/nl/for-students#oplossing-beoordelingsproces) opnieuw uitgevoerd zonder dat de oplossing opnieuw moet
+[ingediend](/nl/for-students#oplossing-indienen) worden.
 Op die manier blijft het originele
-`tijdstip <oplossing tijdstip>`{.interpreted-text role="ref"} van
+[tijdstip](/nl/for-students#oplossing-tijdstip) van
 indienen behouden. Als de configuratie van de
-`oefening <oefening>`{.interpreted-text role="ref"} aangepast werd sinds
+[oefening](/nl/for-students#oefening) aangepast werd sinds
 de vorige beoordeling van de oplossing, dan kan de
-`status <oplossing status>`{.interpreted-text role="ref"} van de
+[status](/nl/for-students#oplossing-status) van de
 oplossing wijzigen door het herevalueren.
 
-::: {.important}
-::: {.admonition-title}
-Important
-:::
+::: tip Belangrijk
 
-Bij het `herevalueren <oplossing herevalueren>`{.interpreted-text
-role="ref"} krijgen `oplossingen <oplossing>`{.interpreted-text
-role="ref"} een lagere prioriteit in de
-`wachtrij <oplossing wachtrij>`{.interpreted-text role="ref"} dan
-oplossingen die nieuw `ingediend <oplossing indienen>`{.interpreted-text
-role="ref"} worden. Op die manier ondervindt het beoordelen van
+Bij het [herevalueren](#oplossing-herevalueren) krijgen [oplossingen](/nl/for-students#oplossing) een lagere prioriteit in de
+[wachtrij](/nl/for-students#oplossing wachtrij) dan
+oplossingen die nieuw [ingediend](/nl/for-students#oplossing-indienen) worden. Op die manier ondervindt het beoordelen van
 oplossingen die gebruikers indienen minimale vertaging, maar kan het
 herevalueren wel langer duren.
 :::
 
-::: {.important}
-::: {.admonition-title}
-Important
-:::
+::: tip Belangrijk
 
 Gebruikers krijgen geen melding van het platform als hun
-`oplossingen <oplossing>`{.interpreted-text role="ref"}
-`geherevalueerd <oplossing herevalueren>`{.interpreted-text role="ref"}
+[oplossingen](/nl/for-students#oplossing)
+[geherevalueerd](#oplossing herevalueren)
 worden. Als je beslist om oplossingen te herevalueren, is het belangrijk
 om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de
-`status <oplossing status>`{.interpreted-text role="ref"} van
-`oplossingen <oplossing>`{.interpreted-text role="ref"} die ze vroeger
-`ingediend <oplossing indienen>`{.interpreted-text role="ref"} hebben
+[status](/nl/for-students#oplossing-status) van
+[oplossingen](/nl/for-students#oplossing) die ze vroeger
+[ingediend](/nl/for-students#oplossing-indienen) hebben
 als van hun
-`indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-role="ref"} voor `oefeningen <oefening>`{.interpreted-text role="ref"}
-in de `oefeningenreeksen <oefeningenreeks>`{.interpreted-text
-role="ref"} van de cursus.
+[indienstatus](#oefeningenreeks-oefening-indienstatus) voor [oefeningen](/nl/for-students#oefening)
+in de [oefeningenreeksen](#oefeningenreeks) van de cursus.
 :::
 
 Druk op de herhaalknop in de rechterbovenhoek van de
-`feedbackpagina <feedbackpagina>`{.interpreted-text role="ref"} om een
-`oplossing <oplossing>`{.interpreted-text role="ref"} te
-`herevalueren <oplossing herevalueren>`{.interpreted-text role="ref"}.
+[feedbackpagina](/nl/for-students#feedbackpagina) om een
+[oplossing](/nl/for-students#oplossing) te
+[herevalueren](#oplossing herevalueren).
 
 ![image](images/staff.feedback_evaluate.nl.png)
 
-### Navigeren naar oplossingen {#cursusbeheerder oplossingen navigeren}
+### Navigeren naar oplossingen
 
-Elk overzicht met `oplossingen <oplossing>`{.interpreted-text
-role="ref"} die in de `cursus <cursus>`{.interpreted-text role="ref"}
+Elk overzicht met [oplossingen](/nl/for-students#oplossing) die in de [cursus](#cursus)
 ingediend werden, bevat voor
-`cursusbeheerders <cursusbeheerder>`{.interpreted-text role="ref"} de
+[cursusbeheerders](#cursusbeheerder) de
 oplossingen van alle
-`cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}.
+[cursusgebruikers](#cursusgebruiker).
 Daarom heeft het overzicht een extra kolom met de naam van de gebruiker
-die de `oplossing <oplossing>`{.interpreted-text role="ref"} heeft
-`ingediend <oplossing indienen>`{.interpreted-text role="ref"}. Druk op
+die de [oplossing](/nl/for-students#oplossing) heeft
+[ingediend](/nl/for-students#oplossing-indienen). Druk op
 de naam van de gebruiker om naar het
-`gebruikersprofiel <gebruikersprofiel>`{.interpreted-text role="ref"} te
+[gebruikersprofiel](/nl/for-students#gebruikersprofiel) te
 navigeren.
 
 ![image](images/staff.exercise_submissions_user_link.nl.png)
 
-Als je zoekt naar specifieke `oplossingen <oplossing>`{.interpreted-text
-role="ref"} met de zoekbalk aan de bovenkant van het
-`overzicht <cursusbeheerder oplossingen overzicht>`{.interpreted-text
-role="ref"}, dan wordt ook gezocht op de
-`naam <persoonsgegevens>`{.interpreted-text role="ref"} van gebruikers.
+Als je zoekt naar specifieke [oplossingen](/nl/for-students#oplossing) met de zoekbalk aan de bovenkant van het
+[overzicht](#cursusbeheerder-oplossingen-overzicht), dan wordt ook gezocht op de
+[naam](/nl/for-students#persoonsgegevens) van gebruikers.
 
 ![image](images/staff.exercise_submissions_search.nl.png)
 
-::: {#cursusbeheerder oplossingen overzicht menu}
+<h1 id="cursusbeheerder-oplossingen-overzicht-menu"></h1>
 Het overzicht heeft voor
-`cursusbeheerders <cursusbeheerder>`{.interpreted-text role="ref"} ook
-een `menu <oefeningenreeks menu>`{.interpreted-text role="ref"} met
+[cursusbeheerders](#cursusbeheerder) ook
+een [menu](/nl/for-students#oefeningenreeks-menu) met
 filters en acties die voor hen voorbehouden zijn:
-:::
 
-::: {#cursusbeheerder oplossingen overzicht filter recentste correcte}
-`Meest recente correcte oplossing per gebruiker`{.interpreted-text
-role="guilabel"} (filter)
-:::
+<span class="guilabel" id="cursusbeheerder-oplossingen-overzicht-filter-recentste-correcte">
+Meest recente correcte oplossing per gebruiker
+</span> (filter)
 
 > Beperkt het overzicht tot de meest recente correcte oplossing per
 > gebruiker.
 
-::: {#cursusbeheerder oplossingen herevalueren}
-`Oplossingen herevalueren`{.interpreted-text role="guilabel"} (actie)
-:::
+<span class="guilabel" id="cursusbeheerder-oplossingen-herevalueren">
+Oplossingen herevalueren</span>
+(actie)
 
-> Herevalueert alle `oplossingen <oplossing>`{.interpreted-text
-> role="ref"} uit het overzicht.
+> Herevalueert alle [oplossingen](/nl/for-students#oplossing) uit het overzicht.
