@@ -101,15 +101,17 @@ Druk op de bewerkknop in de rechterbovenhoek van je [profielpagina](#instellen-v
 
 ![image](./student.edit_profile.nl.png)
 
+<h1 id="tijdzone"/>
+
 In je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) kan je de **tijdzone** instellen die gebruikt wordt voor het weergeven van alle tijdsaanduidingen op het platform (bijvoorbeeld het [tijdstip]() waarop je een [oplossing]() hebt [ingediend]() of de [deadline]() voor een [oefeningenreeks]()).
 
 ![image](./student.edit_timezone.nl.png)
 
 ::: tip
 
-Als de [tijdzone]() uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
+Als de [tijdzone](#tijdzone) uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
 
 ![image](./student.wrong_timezone.nl.png)
 
-Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) de [tijdzone]() in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je [profielpagina]() kunt navigeren.
+Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) de [tijdzone](#tijdzone) in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je [profielpagina]() kunt navigeren.
 :::

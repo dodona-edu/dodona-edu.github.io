@@ -129,6 +129,7 @@ Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) n
 Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld <span class="guilabel">ongeveer 2 uur geleden</span>. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
 
 <h1 id="status"/>
+<h1 id="icoontjes"/>
 <span class="guilabel">Status</span>
 
 De **status** die Dodona of de [judge](#interpreteren-van-feedback) aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de [oplossing](#navigeren-naar-een-oplossing) wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
