@@ -19,9 +19,7 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-
 
     ![image](./student.profile_courses.nl.png)
 
--   ::: {#cursusoverzicht}
-    Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te drukken op de knop <span class="guilabel">MEER CURSUSSEN ...</span> onderaan in de rechterkolom op je [startpagina](). Als je nog voor geen enkele cursus [geregistreerd]() bent, dan kan je als alternatief ook drukken op de knop <span class="guilabel">VERKEN</span> naast de afbeelding op je startpagina.
-    :::
+-   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te drukken op de knop <span class="guilabel">MEER CURSUSSEN ...</span> onderaan in de rechterkolom op je [startpagina](). Als je nog voor geen enkele cursus [geregistreerd]() bent, dan kan je als alternatief ook drukken op de knop <span class="guilabel">VERKEN</span> naast de afbeelding op je startpagina.
 
     ![image](./student.explore_courses.nl.png)
 
@@ -29,9 +27,7 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-
 
     ![image](./student.courses.nl.png)
 
-::: {#cursuspagina}
 Na [selectie]() van een [cursus]() navigeer je naar de **cursuspagina** met bovenaan een beschrijving van de cursus. Daaronder staan de [oefeningenreeksen]() met de [oefeningen](#navigeren-naar-een-oefening) van de cursus.
-:::
 
 ![image](./student.deadline_series.nl.png)
 
@@ -42,29 +38,19 @@ Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de c
 ![image](./student.breadcrumb_course.nl.png)
 :::
 
-::: {#oefeningenreeks weergeven}
-::: {#oefeningenreeks deadline}
 Voor elke [oefeningenreeks]() kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone]() uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
-:::
-:::
 
 Onder de naam van een [oefeningenreeks]() staat optioneel een beschrijving, met daaronder een oplijsting van alle [oefeningen](#navigeren-naar-een-oefening) uit de reeks. De lijst toont voor elke oefening [statistieken]() en je [indienstatus](). Vóór elke oefening in de lijst staat ook een [icoontje]() dat correspondeert met je indienstatus voor de oefening.
 
-::: {.belangrijk}
+::: tip Belangrijk
 Dezelfde [oefening]() kan voorkomen in meerdere [cursussen](). De [statistieken]() en je [indienstatus]() voor de oefening zijn dan doorgaans niet hetzelfde omdat ze voor elke cursus afzonderlijk bepaald worden en je telkens [oplossingen](#navigeren-naar-een-oplossing) [indient]() binnen een bepaalde cursus.
 
 Dezelfde [oefening]() kan ook voorkomen in meerdere [oefeningenreeksen]() van een [cursus](). Ook dan zijn de [statistieken]() en je [indienstatus]() voor de oefening niet noodzakelijk hetzelfde omdat de indienstatus afhangt van de [deadlines]() van de oefeningenreeksen. Als er geen deadline werd ingesteld of als dezelfde deadline werd ingesteld voor de oefeningenreeksen, dan zijn de statistieken en je indienstatus voor de oefening per definitie wel hetzelfde.
 :::
 
-::: {#oefeningenreeks statistieken}
-De **statistieken** van een [oefening]() uit een [oefeningenreeks]() bestaan uit twee getallen $c/i$. Daarbij staat $i$ voor het aantal gebruikers (studenten en cursusbeheerders) dat in de [cursus]() al minstens één [oplossing]() heeft [ingediend]() voor de oefening en $c$ voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één *correcte* oplossing heeft ingediend voor de oefening.
-:::
+De **statistieken** van een [oefening]() uit een [oefeningenreeks]() bestaan uit twee getallen *c/i*. Daarbij staat *i* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de [cursus]() al minstens één [oplossing]() heeft [ingediend]() voor de oefening en *c* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één *correcte* oplossing heeft ingediend voor de oefening.
 
-::: {#oefeningenreeks oefening indienstatus}
-::: {#oefeningenreeks oefening indienstatus icoontje}
 Je **indienstatus** voor een [oefening]() uit een [oefeningenreeks]() wordt bepaald op basis van de [oplossing]() die je als laatste in de [cursus]() hebt [ingediend]() voor de oefening. Als er een [deadline]() werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat correspondeert met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de [oplossing]() die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
-:::
-:::
 
 Mogelijke weergaven van je [indienstatus]() vóór het verstrijken van de [deadline]() of als er geen deadline is ingesteld:
 
@@ -85,9 +71,9 @@ Mogelijke weergaven van je [indienstatus]() nadat de [deadline]() verstreken is:
 
 ::: tip Belangrijk
 
-Als je **vóór het verstrijken van de deadline** van een [oefeningenreeks]() een [oplossing]() [indient]() voor een [oefening]() uit de oefeningenreeks, dan kan je [indienstatus]() voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de [deadline](). Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en [opnieuw]().
+Als je **vóór het verstrijken van de deadline** van een [oefeningenreeks]() een [oplossing]() [indient]() voor een [oefening]() uit de oefeningenreeks, dan kan je [indienstatus]() voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de [deadline](). Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en [opnieuw indienen]().
 
-Dodona toont een **waarschuwingssymbool** naast je [indienstatus]() van een [oefening]() in een [oefeningenreeks]() en in de lijst met [recente]() op je [startpagina]() als je laatst [ingediende]() [oplossing]() voor de oefening vóór de [deadline]() van de oefeningenreeks een [status]() heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en [opnieuw]().
+Dodona toont een **waarschuwingssymbool** naast je [indienstatus]() van een [oefening]() in een [oefeningenreeks]() en in de lijst met [recente]() op je [startpagina]() als je laatst [ingediende]() [oplossing]() voor de oefening vóór de [deadline]() van de oefeningenreeks een [status]() heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en [opnieuw indienen]().
 
 ![image](./student.deadline_series_warning.nl.png)
 
@@ -137,7 +123,7 @@ Als je [navigeert]() naar een [cursus]() waarvoor je nog niet [geregistreerd]() 
 Op een [cursuspagina]() kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd]() bent of als de cursus werkt met [open]().
 :::
 
-Zodra je voor een [cursus]() [geregistreerd]() bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina]() en wordt de cursus opgelijst op je [profielpagina](). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder <span class="guilabel">Mijn vakken</span> in het [gebruikersmenu]() aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal).
+Zodra je voor een [cursus]() [geregistreerd]() bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina]() en wordt de cursus opgelijst op je [profielpagina](). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal).
 
 ![image](./student.my_courses.nl.png)
 
@@ -149,4 +135,4 @@ Als je navigeert naar een [cursus]() waarvoor je [geregistreerd]() bent of waarv
 
 ![image](./student.unregister.nl.png)
 
-Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina]() en wordt de cursus niet langer opgelijst op je [profielpagina](). Als de cursus werd opgelijst onder <span class="guilabel">Mijn vakken</span> in het [gebruikersmenu]() aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](), dan verdwijnt de cursus ook uit die lijst.
+Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina]() en wordt de cursus niet langer opgelijst op je [profielpagina](). Als de cursus werd opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linker kant van de [navigatiebalk](#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](), dan verdwijnt de cursus ook uit die lijst.
