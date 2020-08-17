@@ -27,13 +27,15 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](#navigeren-naar-
 
     ![image](./student.courses.nl.png)
 
+<h1 id="cursuspagina"></h1>
+
 Na [selectie]() van een [cursus]() navigeer je naar de **cursuspagina** met bovenaan een beschrijving van de cursus. Daaronder staan de [oefeningenreeksen]() met de [oefeningen](#navigeren-naar-een-oefening) van de cursus.
 
 ![image](./student.deadline_series.nl.png)
 
 ::: tip
 
-Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina]().
+Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina](#cursuspagina).
 
 ![image](./student.breadcrumb_course.nl.png)
 :::
@@ -49,6 +51,8 @@ Dezelfde [oefening]() kan ook voorkomen in meerdere [oefeningenreeksen]() van ee
 :::
 
 De **statistieken** van een [oefening]() uit een [oefeningenreeks]() bestaan uit twee getallen *c/i*. Daarbij staat *i* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de [cursus]() al minstens één [oplossing]() heeft [ingediend]() voor de oefening en *c* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één *correcte* oplossing heeft ingediend voor de oefening.
+
+<h1 id="indienstatus"></h1>
 
 Je **indienstatus** voor een [oefening]() uit een [oefeningenreeks]() wordt bepaald op basis van de [oplossing]() die je als laatste in de [cursus]() hebt [ingediend]() voor de oefening. Als er een [deadline]() werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat correspondeert met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de [oplossing]() die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
@@ -100,7 +104,7 @@ Downloadt een ZIP-bestand dat voor elke [oefening]() uit de [oefeningenreeks]() 
 
 Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](#navigeren-naar-een-oplossing) kan [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus.
 
-Als je [navigeert]() naar een [cursus]() waarvoor je nog niet [geregistreerd]() bent, dan zie je bovenaan de [cursuspagina]() een paneel dat aangeeft of en hoe je je voor de cursus kan [registreren](#registreren-voor-een-cursus). Hierbij zijn er drie mogelijkheden:
+Als je [navigeert]() naar een [cursus]() waarvoor je nog niet [geregistreerd]() bent, dan zie je bovenaan de [cursuspagina](#cursuspagina) een paneel dat aangeeft of en hoe je je voor de cursus kan [registreren](#registreren-voor-een-cursus). Hierbij zijn er drie mogelijkheden:
 
 -   De [cursus]() werkt met een [open]() [registratieprocedure](), wat betekent dat iedereen voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Druk op de knop <span class="guilabel">REGISTREREN</span> om je voor de cursus te registreren.
 
@@ -110,7 +114,7 @@ Als je [navigeert]() naar een [cursus]() waarvoor je nog niet [geregistreerd]() 
 
     ![image](./moderated_register.nl.png)
 
-    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina]() de boodschap <span class="guilabel">Je staat al op de wachtlijst.</span> en wordt de cursus opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina]().
+    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina](#cursuspagina) de boodschap <span class="guilabel">Je staat al op de wachtlijst.</span> en wordt de cursus opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina]().
 
     ![image](./moderated_waiting.nl.png)
 
@@ -120,18 +124,18 @@ Als je [navigeert]() naar een [cursus]() waarvoor je nog niet [geregistreerd]() 
 
 ::: details Notitie
 
-Op een [cursuspagina]() kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd]() bent of als de cursus werkt met [open]().
+Op een [cursuspagina](#cursuspagina) kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd]() bent of als de cursus werkt met [open]().
 :::
 
 Zodra je voor een [cursus]() [geregistreerd]() bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina]() en wordt de cursus opgelijst op je [profielpagina](). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal).
 
 ![image](./student.my_courses.nl.png)
 
-Naast de mogelijkheid om zelf naar een [cursus]() te navigeren en op de [cursuspagina]() de [registratieprocedure]() te doorlopen, bestaat ook de mogelijkheid dat je een [registratielink]() ontvangt van een [cursusbeheerder]() (bijvoorbeeld per email van een lesgever). Door op de registratielink te drukken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren. De registratieprocedure blijft net zoals bij [manuele]() wel afhankelijk van het feit of de cursus werkt met een [open](), een [gemodereerde]() of een [gesloten]() registratieprocedure.
+Naast de mogelijkheid om zelf naar een [cursus]() te navigeren en op de [cursuspagina](#cursuspagina) de [registratieprocedure]() te doorlopen, bestaat ook de mogelijkheid dat je een [registratielink]() ontvangt van een [cursusbeheerder]() (bijvoorbeeld per email van een lesgever). Door op de registratielink te drukken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren. De registratieprocedure blijft net zoals bij [manuele]() wel afhankelijk van het feit of de cursus werkt met een [open](), een [gemodereerde]() of een [gesloten]() registratieprocedure.
 
 ## Uitschrijven uit een cursus
 
-Als je navigeert naar een [cursus]() waarvoor je [geregistreerd]() bent of waarvoor je nog een [registratieverzoek]() hebt openstaan, dan zie je onder de beschrijving van de cursus op de [cursuspagina]() een knop <span class="guilabel">UITSCHRIJVEN</span> waarmee je je kunt uitschrijven uit de cursus.
+Als je navigeert naar een [cursus]() waarvoor je [geregistreerd]() bent of waarvoor je nog een [registratieverzoek]() hebt openstaan, dan zie je onder de beschrijving van de cursus op de [cursuspagina](#cursuspagina) een knop <span class="guilabel">UITSCHRIJVEN</span> waarmee je je kunt uitschrijven uit de cursus.
 
 ![image](./student.unregister.nl.png)
 
