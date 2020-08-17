@@ -107,7 +107,7 @@ Aan de bovenkant van de [feedbackpagina]() staan de volgende gegevens over de [o
 
 <span class="guilabel">Opgave</span>
 
-> De naam van de [oefening]() waarvoor de [oplossing]() werd [ingediend](). Druk op de naam om naar de [oefeningpagina]() te navigeren.
+De naam van de [oefening]() waarvoor de [oplossing]() werd [ingediend](). Druk op de naam om naar de [oefeningpagina]() te navigeren.
 
 <span class="guilabel">Cursus</span>
 
@@ -142,7 +142,7 @@ Hoe lager de [status]() in bovenstaande tabel wordt opgelijst, hoe zwaarder het 
 
 <span class="guilabel">Samenvatting</span>
 
-> Korte motivering van de [judge](#interpreteren-van-feedback) bij de [status]() die hij aan de [oplossing]() heeft toegekend.
+Korte motivering van de [judge](#interpreteren-van-feedback) bij de [status]() die hij aan de [oplossing]() heeft toegekend.
 
 Daaronder staat meer gedetailleerde [feedback](#interpreteren-van-feedback) die de [judge](#interpreteren-van-feedback) kan uitgesplitst hebben over meerdere **tabs**. Naast de naam van een tab kan aan de rechterkant een **badge** staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab. Het staat de judge vrij om te beslissen of en op welke manier deze fouten geteld worden. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de waarde voor de badge te bepalen.
 
