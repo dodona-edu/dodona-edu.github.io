@@ -3,7 +3,6 @@ title: Cursusbeheer
 description: "Tutorial: cursusbeheer"
 ---
 
-
 Een **cursus** wordt
 [opgebouwd](#leerpad-uitstippelen) als een
 [leerpad](#leerpad) met
@@ -154,250 +153,199 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
 <span class="guilabel">Registratielink</span>
 
-> Bij het `aanmaken <cursus aanmaken>`{.interpreted-text role="ref"} van
-> een `cursus <cursus>`{.interpreted-text role="ref"} wordt automatisch
+> Bij het [aanmaken](#cursus-aanmaken) van
+> een [cursus](#cursus) wordt automatisch
 > een **token** gegenereerd als afschermingsmechanisme van
-> `verborgen <cursus verborgen>`{.interpreted-text role="ref"}
-> cursussen. Zonder dit token kunnen
-> `niet-geregistreerde <cursus registreren>`{.interpreted-text
-> role="ref"} gebruikers de
-> `cursuspagina <cursuspagina>`{.interpreted-text role="ref"} van een
-> `verborgen <cursus verborgen>`{.interpreted-text role="ref"} cursus
+> [verborgen](#cursus-verbergen)
+> cursussen. Zonder dit token kunnen [niet-geregistreerde](/nl/for-students#cursus-registreren) gebruikers de
+> [cursuspagina](#cursuspagina) van een
+> verborgen cursus
 > niet zien en zich daar dus ook niet registreren. Als ze toch naar de
 > cursus proberen te navigeren, dan zien ze enkel een melding dat ze
 > niet de geen toegangsrechten hebben voor de cursus.
 >
 > ![image](images/student.hidden_course_unregistered_denied_message.nl.png)
 >
-> ::: {#cursus registratielink gebruiken}
+> ## Registratielink
 > Gebruikers kunnen zich enkel
-> `registreren <cursus registreren>`{.interpreted-text role="ref"} voor
-> een `verborgen <cursus verborgen>`{.interpreted-text role="ref"}
-> `cursus <cursus>`{.interpreted-text role="ref"} als ze gebruikmaken
+> [registreren](/nl/for-students#cursus-registreren) voor
+> een [verborgen](#cursus-verbergen)
+> [cursus](#cursus) als ze gebruikmaken
 > van de **registratielink** voor de cursus. De registratielink bevat
-> het `token <cursus token>`{.interpreted-text role="ref"} dat hen
-> toegang geeft tot de cursus. Bovendien navigeren
-> `niet-geregistreerde <cursus registreren>`{.interpreted-text
-> role="ref"} gebruikers niet rechtstreeks naar de
-> `cursuspagina <cursuspagina>`{.interpreted-text role="ref"}, maar
+> het [token](#cursus-token) dat hen
+> toegang geeft tot de cursus. Bovendien navigeren [niet-geregistreerde](/nl/for-students#cursus-registreren)
+> gebruikers niet rechtstreeks naar de
+> [cursuspagina](#cursuspagina), maar
 > worden ze verzocht om zich voor de cursus te registreren als de
-> `registratieprocedure <cursus registratieprocedure>`{.interpreted-text
-> role="ref"} dat toelaat.
-> :::
+> [registratieprocedure](#cursus-registratieprocedure) dat toelaat.
 >
 > ![image](images/student.hidden_course_unregistered_link_message.nl.png)
 >
-> ::: {#cursus registratielink kopiëren}
-> De `registratielink <cursus registratielink>`{.interpreted-text
-> role="ref"} heeft dus als voordeel dat gebruikers de
-> `cursus <cursus>`{.interpreted-text role="ref"} niet zelf moeten
-> `zoeken <cursus navigeren>`{.interpreted-text role="ref"} in het
-> `cursusoverzicht <cursusoverzicht>`{.interpreted-text role="ref"} en
+<span id="cursus-registratielink-kopiëren"></span>
+
+> De [registratielink](#registratielink) heeft dus als voordeel dat gebruikers de
+> [cursus](#cursus) niet zelf moeten
+> [zoeken](/nl/for-students#cursus-navigeren) in het
+> [cursusoverzicht](/nl/for-students#cursusoverzicht) en
 > dat ze meteen een verzoek krijgen om zich voor de cursus te
-> `registreren <registreren>`{.interpreted-text role="ref"} als ze dat
+> [registreren](/nl/for-students#cursus-registreren) als ze dat
 > nog niet gedaan hadden. Als
-> `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
+> [cursusbeheerder](#cursusbeheerder)
 > krijg je de verantwoordelijkheid om de registratielink enkel te delen
 > met niet-geregistreerde gebruikers die zich voor een
-> `verborgen <cursus verborgen>`{.interpreted-text role="ref"} cursus
+> [verborgen](#cursus-verborgen) cursus
 > mogen registreren. Druk op de kopieerknop naast de registratielink om
-> de registratielink naar het klembord te kopiëren.
-> :::
+> de registratielink naar het klembord te kopiëren. 
 >
 > ![image](images/staff.hidden_course_registration_link.nl.png)
 >
-> ::: {#cursus token vernieuwen}
-> ::: {#cursus registratielink vernieuwen}
-> Druk op de vernieuwknop naast de
-> `registratielink <cursus registratielink>`{.interpreted-text
-> role="ref"} om de `cursus <cursus>`{.interpreted-text role="ref"}
-> opnieuw te `verbergen <cursus verborgen>`{.interpreted-text
-> role="ref"} nadat de registratielink gedeeld werd. Daardoor wordt een
-> nieuw `token <cursus token>`{.interpreted-text role="ref"} gegenereerd
+> <span id="cursus-token-vernieuwen"></span>
+> <span id="cursus-registratielink-vernieuwen"></span> 
+> Druk op de vernieuwknop naast de [registratielink](#registratielink) om de [cursus](#cursus)
+> opnieuw te [verbergen](#cursus-verborgen) nadat de registratielink gedeeld werd. Daardoor wordt een
+> nieuw [token](#cursus-token) gegenereerd
 > en wordt het oude token onbruikbaar gemaakt. De registratielink wordt
 > meteen ook aangepast aan het nieuwe token.
-> :::
-> :::
 >
 > ![image](images/staff.registration_link_renew.nl.png)
 >
-> De `registratielink <cursus registratielink>`{.interpreted-text
-> role="ref"} wordt ook weergegeven op de
-> `cursuspagina <cursuspagina>`{.interpreted-text role="ref"}.
+> De [registratielink](#cursus-registratielink) wordt ook weergegeven op de
+> [cursuspagina](#cursuspagina).
 >
 > ![image](images/staff.registration_link.nl.png)
->
-> ::: {#registratielink kopiëren}
-> Druk op de kopieerknop naast de
-> `registratielink <cursus registratielink>`{.interpreted-text
-> role="ref"} om de registratielink naar het klembord te kopiëren.
-> :::
->
-> ![image](images/staff.registration_link_copy.nl.png)
 
-Druk op de afwerkknop in de rechterbovenhoek van het paneel
-`Nieuwe cursus`{.interpreted-text role="guilabel"} om het
-`aanmaken <cursus aanmaken>`{.interpreted-text role="ref"} van een
-`cursus <cursus>`{.interpreted-text role="ref"} met de opgegeven
-`eigenschappen <cursuseigenschappen>`{.interpreted-text role="ref"}
+Druk op de afwerkknop in de rechteronderhoek van de pagina
+<span class="guilabel">CURSUS AANMAKENs</span> om het
+[aanmaken](#cursus-aanmaken) van een
+[cursus](#cursus) met de opgegeven
+[eigenschappen](#cursus-eigenschappen)
 effectief door te voeren.
 
 ![image](images/staff.new_course_submit.nl.png)
 
 Na het aanmaken van de nieuwe cursus navigeer je naar de
-`cursuspagina <cursuspagina>`{.interpreted-text role="ref"}, waar je
+[cursuspagina](#cursuspagina), waar je
 kunt vaststellen dat je automatisch
-`geregistreerd <cursus registreren>`{.interpreted-text role="ref"} bent
-als `cursusgebruiker <cursusgebruiker>`{.interpreted-text role="ref"} en
-dat je `aangeduid <cursusbeheerders aanduiden>`{.interpreted-text
-role="ref"} bent als
-`cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}.
+[geregistreerd](/nl/for-students#cursus-registreren) bent
+als [cursusgebruiker](#cursusgebruiker) en
+dat je [aangeduid](#cursusbeheerders-aanduiden) bent als
+[cursusbeheerder](#cursusbeheerder).
 
 ![image](images/staff.created_course.nl.png)
 
 # Cursus bewerken
------------------------
 
-::: {#cursuseigenschappen aanpassen}
-Als `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
-kan je de `eigenschappen <cursuseigenschappen>`{.interpreted-text
-role="ref"} van een `cursus <cursus>`{.interpreted-text role="ref"}
-aanpassen door op de bewerkknop te drukken in de rechterbovenhoek van de
-`cursuspagina <cursuspagina>`{.interpreted-text role="ref"}.
-:::
+<span id="cursuseigenschappen-aanpassen"></span>
+Als [cursusbeheerder](#cursusbeheerder)
+kan je de [eigenschappen](#cursuseigenschappen) van een [cursus](#cursus)
+aanpassen door op het bewerken-icoontje te drukken bovenaan de
+[cursuspagina](#cursuspagina).
 
 ![image](images/staff.course_edit_button.nl.png)
 
-::: {#cursuseigenschappen aanpassen annuleren}
-Druk op de `cursus <cursus>`{.interpreted-text role="ref"} in de
-`navigatiebalk <navigatiebalk>`{.interpreted-text role="ref"} om het
+Druk op de [cursus](#cursus) in de
+[navigatiebalk](/nl/for-students#navigatiebalk) om het
 aanpassen te annuleren.
-:::
 
 ![image](images/staff.course_edit_cancel.nl.png)
 
-::: {#cursuseigenschappen aanpassen afwerken}
 Druk na het aanpassen op de afwerkknop in de rechterbovenhoek van het
 paneel om de nieuwe
-`cursuseigenschappen <cursuseigenschappen>`{.interpreted-text
-role="ref"} effectief in te stellen.
-:::
+[cursuseigenschappen](#cursuseigenschappen) effectief in te stellen. 
+Alternatief kan je ook op de <span class="guilabel">AANPASSEN</span> drukken onderaan het paneel.
 
 ![image](images/staff.course_edit_submit_link.nl.png)
 
 Na het afwerken navigeer je terug naar de
-`cursuspagina <cursuspagina>`{.interpreted-text role="ref"} waar de
-nieuwe `cursuseigenschappen <cursuseigenschappen>`{.interpreted-text
-role="ref"} onmiddellijk van toepassing zijn.
+[cursuspagina](#cursuspagina) waar de
+nieuwe [cursuseigenschappen](#cursuseigenschappen) onmiddellijk van toepassing zijn.
 
 ![image](images/staff.course_after_edit.nl.png)
 
 # Leerpad uitstippelen
 -------------------------------------------------------------
 
-Als `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
-kan je voor de `cursus <cursus>`{.interpreted-text role="ref"} een
+Als [cursusbeheerder](#cursusbeheerder)
+kan je voor de [cursus](#cursus) een
 **leerpad** uitstippelen. Het leerpad wordt op de
-`cursuspagina <cursuspagina>`{.interpreted-text role="ref"} weergegeven
-onder de hoofding `Oefeningenreeksen`{.interpreted-text
-role="guilabel"}. Aan het leerpad kan je
-`oefeningenreeksen <oefeningenreeks>`{.interpreted-text role="ref"}
-`toevoegen <oefeningenreeks toevoegen>`{.interpreted-text role="ref"}
-waaraan je `oefeningen <oefening>`{.interpreted-text role="ref"} kunt
-`koppelen <oefeningenreeks oefeningen koppelen>`{.interpreted-text
-role="ref"}.
+[cursuspagina](#cursuspagina) weergegeven
+onder de hoofding <span class="guilabel">Oefeningenreeksen</span>.
+ Aan het leerpad kan je
+[oefeningenreeksen](#oefeningenreeks)
+[toevoegen](#oefeningenreeks-toevoegen)
+waaraan je [oefeningen](#oefening) kunt
+[koppelen](#oefeningenreeks oefeningen koppelen).
 
 # Oefeningenreeks toevoegen
 
-Druk in het `leerpad <leerpad>`{.interpreted-text role="ref"} op de knop
-`REEKS AANMAKEN`{.interpreted-text role="guilabel"} om een nieuwe
+Druk in het [leerpad](#leerpad) op de knop
+<span class="guilabel">REEKS AANMAKEN</span> om een nieuwe
 oefeningenreeks aan het leerpad toe te voegen.
 
 ![image](images/staff.course_series_new_link.nl.png)
 
-::: {#oefeningenreeks eigenschappen instellen}
-In het paneel `Nieuwe oefeningenreeks`{.interpreted-text
-role="guilabel"} kan je de
-`eigenschappen <oefeningenreeks eigenschappen>`{.interpreted-text
-role="ref"} van de nieuwe
-`oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+<span id="oefeningenreeks-eigenschappen-instellen"></span>
+In het paneel <span class="guilabel">Nieuwe oefeningenreeks</span> kan je de
+[eigenschappen](#oefeningenreeks-eigenschappen) van de nieuwe
+[oefeningenreeks](#oefeningenreeks)
 instellen.
-:::
 
 ![image](images/staff.course_series_new.nl.png)
 
-::: {#oefeningenreeks eigenschappen instellen annuleren}
-Druk op de `cursus <cursus>`{.interpreted-text role="ref"} in de
-`navigatiebalk <navigatiebalk>`{.interpreted-text role="ref"} om het
-`toevoegen <oefeningenreeks toevoegen>`{.interpreted-text role="ref"}
+Druk op de [cursus](#cursus) in de
+[navigatiebalk](/nl/for-students#navigatiebalk) om het
+[toevoegen](#oefeningenreeks-toevoegen)
 van de oefeningenreeks te annuleren.
-:::
 
 ![image](images/staff.course_series_new_cancel.nl.png)
 
-::: {#oefeningenreeks eigenschappen}
-Voor een `oefeningenreeks <oefeningenreeks>`{.interpreted-text
-role="ref"} kunnen de volgende eigenschappen ingesteld worden:
-:::
+<span id="oefeningenreeks-eigenschappen"></span>
+Voor een [oefeningenreeks](#oefeningenreeks) kunnen de volgende eigenschappen ingesteld worden:
 
-::: {#oefeningenreeks naam}
-`Naam`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Naam</span>
 
-> Een naam voor de `oefeningenreeks <oefeningenreeks>`{.interpreted-text
-> role="ref"}. Binnen een `leerpad <leerpad>`{.interpreted-text
-> role="ref"} kunnen verschillende oefeningenreeksen dezelfde naam
+> Een naam voor de [oefeningenreeks](#oefeningenreeks).
+> Binnen een [leerpad](#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam
 > hebben. Het is echter aangeraden om alle oefeningenreeksen van het
 > leerpad een unieke naam te geven.
 
-::: {#oefeningenreeks deadline}
-`Deadline`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Deadline</span>
 
 > Een optionele deadline die aangeeft tot wanneer er rekening gehouden
-> wordt met `oplossingen <oplossing>`{.interpreted-text role="ref"} die
-> `ingediend <oplossing indienen>`{.interpreted-text role="ref"} worden
-> voor `oefeningen <oefening>`{.interpreted-text role="ref"} uit de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}.
-> `Cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
+> wordt met [oplossingen](/nl/for-students#oplossing) die
+> [ingediend](/nl/for-students#oplossing-indienen) worden
+> voor [oefeningen](/nl/for-students#oefening) uit de
+> [oefeningenreeks](#oefeningenreeks).
+> [Cursusgebruikers](#cursusgebruiker)
 > kunnen na de deadline onbeperkt oplossingen blijven indienen voor
 > oefeningen uit de oefeningenreeks en blijven daar nog steeds een
 > beoordeling en feedback voor ontvangen. Er wordt met deze oplossingen
 > echter geen rekening meer gehouden bij het bepalen van hun
-> `indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-> role="ref"} voor oefeningen uit de oefeningenreeks.
+> [indienstatus](/nl/for-students#oefeningenreeks-oefening-indienstatus) voor oefeningen uit de oefeningenreeks.
 >
 > Zonder deadline wordt er bij het bepalen van de
-> `indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-> role="ref"} van `cursusgebruikers <cursusgebruiker>`{.interpreted-text
-> role="ref"} blijvend rekening gehouden met
-> `oplossingen <oplossing>`{.interpreted-text role="ref"} die ze
-> `indienen <oplossing indienen>`{.interpreted-text role="ref"} voor
-> `oefeningen <oefening>`{.interpreted-text role="ref"} uit de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+> [indienstatus](/nl/for-students#oefeningenreeks-oefening-indienstatus)
+> van [cursusgebruikers](#cursusgebruiker) blijvend rekening gehouden met
+> [oplossingen](/nl/for-students#oplossing) die ze
+> [indienen](/nl/for-students#oplossing-indienen) voor
+> [oefeningen](/nl/for-students#oefening) uit de
+> [oefeningenreeks](#oefeningenreeks)
 >
-> ::: {.important}
-> ::: {.admonition-title}
-> Important
-> :::
+> ::: tip Belangrijk
 >
-> Als de `deadline <oefeningenreeks deadline>`{.interpreted-text
-> role="ref"} aangepast wordt dan krijgen
-> `cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
+> Als de [deadline](/nl/for-students#oefeningenreeks-deadline) aangepast wordt dan krijgen
+> [cursusgebruikers](#cursusgebruiker)
 > meteen ook een
-> `indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-> role="ref"} voor `oefeningen <oefening>`{.interpreted-text role="ref"}
-> uit de `oefeningenreeks <oefeningenreeks>`{.interpreted-text
-> role="ref"} die aangepast is aan de nieuwe deadline.
+> [indienstatus](/nl/for-students#oefeningenreeks-oefening-indienstatus) voor [oefeningen](#oefening)
+> uit de [oefeningenreeks](#oefeningenreeks) die aangepast is aan de nieuwe deadline.
 > :::
 >
 > Klik op het invulveld of druk op de kalenderknop om de datum en het
 > tijdstip van de deadline in te stellen. Selecteer de deadline in de
-> `tijdzone <gebruikersprofiel tijdzone>`{.interpreted-text role="ref"}
+> [tijdzone](/nl/for-students#gebruikersprofiel-tijdzone)
 > die je hebt
-> `ingesteld <persoonlijke voorkeuren instellen>`{.interpreted-text
-> role="ref"} in je
-> `gebruikersprofiel <gebruikersprofiel>`{.interpreted-text role="ref"}.
+> [ingesteld](/nl/for-students#persoonlijke-voorkeuren-instellen) in je
+> [gebruikersprofiel](/nl/for-students#gebruikersprofiel).
 > Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in
 > hun gebruikersprofiel hebben ingesteld.
 >
@@ -407,351 +355,272 @@ role="ref"} kunnen de volgende eigenschappen ingesteld worden:
 >
 > ![image](images/staff.course_series_calendar_clear.nl.png)
 
-::: {#oefeningenreeks zichtbaarheid}
-`Zichtbaarheid`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Zichtbaarheid</span>
+
 
 > De zichtbaarheid bepaalt of gebruikers de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+> [oefeningenreeks](#oefeningenreeks)
 > kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld
 > worden:
 >
-> ::: {#oefeningenreeks open}
-> `Open`{.interpreted-text role="guilabel"}
-> :::
+><span class="guilabel" id="oefeningenreeks-open">Open</span>
 >
 > > Alle gebruikers zien de oefeningenreeks in het
-> > `leerpad <leerpad>`{.interpreted-text role="ref"}.
+> > [leerpad](#leerpad).
 >
-> ::: {#oefeningenreeks verborgen}
-> `Verborgen`{.interpreted-text role="guilabel"}
-> :::
+><span class="guilabel" id="oefeningenreeks-verborgen">Verborgen</span>
 >
-> > ::: {#oefeningenreeks verborgen weergave}
-> > Alleen `cursusbeheerders <cursusbeheerder>`{.interpreted-text
-> > role="ref"} zien de
-> > `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} in
-> > het `leerpad <leerpad>`{.interpreted-text role="ref"}. Er staat een
+> > Alleen [cursusbeheerders](#cursusbeheerder) zien de
+> > [oefeningenreeks](#oefeningenreeks) in
+> > het [leerpad](#leerpad). Er staat een
 > > duidelijke mededeling bij om hen er op te wijzen dat andere
 > > gebruikers de oefeningenreeks enkel kunnen zien als ze de
-> > `geheime link <oefeningenreeks geheime link>`{.interpreted-text
-> > role="ref"} gebruiken.
-> > :::
+> > [geheime link](#oefeningenreeks-geheime-link) gebruiken.
 > >
 > > ![image](images/staff.course_series_hidden_info.nl.png)
 >
-> ::: {#oefeningenreeks gesloten}
-> `Gesloten`{.interpreted-text role="guilabel"}
-> :::
+><span class="guilabel" id="oefeningenreeks-gesloten">Gesloten</span>
 >
-> > ::: {#oefeningenreeks gesloten weergave}
-> > Alleen `cursusbeheerders <cursusbeheerder>`{.interpreted-text
-> > role="ref"} zien de
-> > `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} in
-> > het `leerpad <leerpad>`{.interpreted-text role="ref"}. Er staat een
+> > Alleen [cursusbeheerders](#cursusbeheerder) zien de
+> > [oefeningenreeks](#oefeningenreeks) in
+> > het [leerpad](#leerpad). Er staat een
 > > duidelijke mededeling bij om hen er op te wijzen dat andere
 > > gebruikers de oefeningenreeks daar niet kunnen zien.
-> > :::
 > >
 > > ![image](images/staff.course_series_closed_info.nl.png)
 
-::: {#oefeningenreeks token}
-::: {#oefeningenreeks geheime link}
-`Geheime link`{.interpreted-text role="guilabel"}
-:::
-:::
+<span class="guilabel" id="oefeningenreeks-geheime-link">Geheime link</span>
 
-> Bij het `toevoegen <oefeningenreeks toevoegen>`{.interpreted-text
-> role="ref"} van een
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+
+> Bij het [toevoegen](#oefeningenreeks-toevoegen) van een
+> [oefeningenreeks](#oefeningenreeks)
 > wordt automatisch een **token** gegenereerd als afschermingsmechanisme
-> van `verborgen <oefeningenreeks verborgen>`{.interpreted-text
-> role="ref"} oefeningenreeksen. Zonder dit token kunnen gebruikers een
-> `verborgen <oefeningenreeks verborgen>`{.interpreted-text role="ref"}
+> van [verborgen](#oefeningenreeks-verborgen) oefeningenreeksen. Zonder dit token kunnen gebruikers een
+> [verborgen](#oefeningenreeks verborgen)
 > oefeningenreeks niet zien in het leerpad. Als ze rechtstreeks naar de
 > oefeningenreeks proberen te navigeren, dan zien ze enkel een melding
 > dat ze geen toegangsrechten hebben voor de oefeningenreeks.
 >
 > ![image](images/student.hidden_series_denied_message.nl.png)
 >
-> ::: {#oefeningenreeks geheime link gebruiken}
 > Gebruikers kunnen een
-> `verborgen <oefeningenreeks verborgen>`{.interpreted-text role="ref"}
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+> [verborgen](#oefeningenreeks verborgen)
+> [oefeningenreeks](#oefeningenreeks)
 > enkel zien als ze gebruikmaken van de **geheime link** voor de cursus.
 > De geheime link bevat het
-> `token <oefeningenreeks token>`{.interpreted-text role="ref"} waarmee
+> [token](#oefeningenreeks-geheime-link) waarmee
 > ze de oefeningenreeks ook te zien krijgen als die verborgen werd.
-> :::
 >
 > ![image](images/staff.series_hidden_link.nl.png)
 >
-> ::: {#oefeningenreeks geheime link kopiëren}
-> Als `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
+> Als [cursusbeheerder](#cursusbeheerder)
 > krijg je de verantwoordelijkheid om de
-> `geheime link <oefeningenreeks geheime link>`{.interpreted-text
-> role="ref"} enkel te delen met andere gebruikers die de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+> [geheime link](#oefeningenreeks-geheime-link) enkel te delen met andere gebruikers die de
+> [oefeningenreeks](#oefeningenreeks)
 > mogen zien. Druk op de kopieerknop naast de geheime link om de geheime
 > link naar het klembord te kopiëren.
-> :::
 >
 > ![image](images/staff.series_hidden_link_copy.nl.png)
 >
-> ::: {#oefeningenreeks token vernieuwen}
-> ::: {#oefeningenreeks geheime link vernieuwen}
+> <span id="oefeningenreeks-geheime-link-vernieuwen"></span>
 > Druk op de vernieuwknop naast de
-> `geheime link <oefeningenreeks geheime link>`{.interpreted-text
-> role="ref"} om de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
-> opnieuw te `verbergen <oefeningenreeks verborgen>`{.interpreted-text
-> role="ref"} nadat de geheime link gedeeld werd. Daardoor wordt een
-> nieuw `token <oefeningenreeks token>`{.interpreted-text role="ref"}
+> [geheime link](#oefeningenreeks geheime link) om de
+> [oefeningenreeks](#oefeningenreeks)
+> opnieuw te [verbergen](#oefeningenreeks-verborgen) nadat de geheime link gedeeld werd. Daardoor wordt een
+> nieuw [token](#oefeningenreeks-geheime-link)
 > gegenereerd en wordt het oude token onbruikbaar gemaakt. De geheime
 > link wordt meteen ook aangepast aan het nieuwe token.
-> :::
-> :::
 >
 > ![image](images/staff.series_hidden_link_reset.nl.png)
 
-::: {#oefeningenreeks beschrijving}
-`Beschrijving`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel">Beschrijving</span>
+
 
 > Een optionele beschrijving die gebruikers te zien krijgen bij de
 > weergave van de oefeningenreeks in het
-> `leerpad <leerpad>`{.interpreted-text role="ref"}. Voor het opmaken
+> [leerpad](#leerpad). Voor het opmaken
 > van de beschrijving kan je gebruikmaken van
-> `Markdown <beschrijving markdown>`{.interpreted-text role="ref"}.
+> [Markdown](#beschrijving markdown).
 
 Druk op de afwerkknop in de rechterbovenhoek van het paneel
-`Nieuwe oefeningenreeks`{.interpreted-text role="guilabel"} om de nieuwe
-`oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
-effectief aan het `leerpad <leerpad>`{.interpreted-text role="ref"}
-`toe te voegen <oefeningenreeks toevoegen>`{.interpreted-text
-role="ref"}.
+<span class="guilabel">Nieuwe oefeningenreeks</span> om de nieuwe
+[oefeningenreeks](#oefeningenreeks)
+effectief aan het [leerpad](#leerpad)
+[toe te voegen](#oefeningenreeks-toevoegen).
 
 ![image](images/staff.course_series_new_submit.nl.png)
 
 Na het afwerken navigeer je naar de
-`weergave <oefeningenreeks weergeven>`{.interpreted-text role="ref"} van
-de `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} in
-het `leerpad <leerpad>`{.interpreted-text role="ref"}. Daarbij zie je
+[weergave](#oefeningenreeks-weergeven) van
+de [oefeningenreeks](#oefeningenreeks) in
+het [leerpad](#leerpad). Daarbij zie je
 dat de nieuwe oefeningenreeks aan de bovenkant van het leerpad
 toegevoegd werd. Op die manier worden de oefeningenreeksen van het
 leerpad in omgekeerde chronologische volgorde (eerste oefeningenreeks
 onderaan) weergegeven op de
-`cursuspagina <cursuspagina>`{.interpreted-text role="ref"}.
+[cursuspagina](#cursuspagina).
 
 ### Oefening aan reeks toevoegen
-
+<span id="oefeningenreeks-toevoegen"></span>
 Je ziet nu een uitgebreide versie van het paneel waarin je naast het
-`instellen <oefeningenreeks eigenschappen instellen>`{.interpreted-text
-role="ref"} van
-`eigenschappen <oefeningenreeks eigenschappen>`{.interpreted-text
-role="ref"} ook oefeningen kunt koppelen aan de
-`oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}. Onder
-de hoofding `Oefeningen toevoegen`{.interpreted-text role="guilabel"}
+[instellen](#oefeningenreeks-eigenschappen-instellen) van
+[eigenschappen](#oefeningenreeks-eigenschappen) ook oefeningen kunt koppelen aan de
+[oefeningenreeks](#oefeningenreeks). Onder
+de hoofding <span class="guilabel">Oefeningen toevoegen</span>
 staat een overzicht van alle beschikbare oefeningen en onder de hoofding
-`Oefeningen in deze reeks`{.interpreted-text role="guilabel"} staat een
+<span class="guilabel">Oefeningen in deze reeks</span> staat een
 overzicht van alle oefeningen die aan de oefeningenreeks gekoppeld
 werden.
 
-::: {.important}
-::: {.admonition-title}
-Important
-:::
+::: tip Belangrijk
 
-We veronderstellen hier dat de `oefeningen <oefening>`{.interpreted-text
-role="ref"} die aan de
-`oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} moeten
+We veronderstellen hier dat de [oefeningen](#oefening) die aan de
+[oefeningenreeks](#oefeningenreeks) moeten
 gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen,
-publiceren en delen van `oefeningen <oefening>`{.interpreted-text
-role="ref"} wordt besproken in `oefeningen beheren`{.interpreted-text
-role="ref"}.
+publiceren en delen van [oefeningen](#oefening) wordt besproken in [oefeningen beheren](/nl/exercise-management).
 :::
 
-::: {#oefeningenoverzicht}
-::: {#oefeningenreeks oefeningen zoeken}
-Onder de hoofding `Oefeningen toevoegen`{.interpreted-text
-role="guilabel"} kan je de zoekbalk gebruiken om te zoeken naar
-specifieke `oefeningen <oefening>`{.interpreted-text role="ref"} op
-basis van een naam of een padnaam. Hierbij wordt gezocht in alle
-beschikbare vertalingen voor de naam van de oefeningen.
-:::
+# Oefeningenoverzicht
+<span id="oefeningenreeks-oefeningen-zoeken"></span>
+Onder de hoofding <span class="guilabel">Oefeningen toevoegen</span>
+ kan je de zoekbalk gebruiken om te zoeken naar
+specifieke [oefeningen](/nl/for-students#oefening) op
+basis van een naam, een padnaam, programmeertaal, labels of vertalingen.
 :::
 
 ![image](images/staff.series_search_exercises.nl.png)
 
-::: {#oefeningenreeks oefening toevoegen}
+<span id="oefeningenreeks-oefening-toevoegen"></span>
 Druk op de toevoegknop aan de rechterkant van een
-`oefening <oefening>`{.interpreted-text role="ref"} om de oefening aan
-de `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} toe
+[oefening](#oefening) om de oefening aan
+de [oefeningenreeks](#oefeningenreeks) toe
 te voegen.
-:::
 
 ![image](images/staff.series_add_exercise.nl.png)
 
-::: {#oefeningenreeks oefening verwijderen}
-Onder de hoofding `Oefeningen in deze reeks`{.interpreted-text
-role="guilabel"} kan je aan de rechterkant van een
-`oefening <oefening>`{.interpreted-text role="ref"} op de verwijderknop
+<span id="oefeningenreeks-oefening-verwijderen"></span>
+Onder de hoofding <span clas="guilabel">Oefeningen in deze reeks</span> kan je aan de rechterkant van een
+[oefening](/nl/for-students#oefening) op de verwijderknop
 drukken om de oefening uit de
-`oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} te
+[oefeningenreeks](#oefeningenreeks) te
 verwijderen.
-:::
 
 ![image](images/staff.series_remove_exercise.nl.png)
 
-::: {#oefeningenreeks oefeningen herschikken}
+<span id="oefeningenreeks-oefeningen-herschikken"></span>
 Versleep de verplaatsknop aan de linkerkant van de
-`oefeningen <oefening>`{.interpreted-text role="ref"} om de volgorde van
+[oefeningen](#oefening) om de volgorde van
 de oefeningen aan te passen. De volgorde waarin de oefeningen onder de
-hoofding `Oefeningen in deze reeks`{.interpreted-text role="guilabel"}
+hoofding <span class="guilabel">Oefeningen in deze reeks</span>
 gerangschikt worden, is immers ook de volgorde waarin de oefeningen
-`weergegeven <oefeningenreeks weergeven>`{.interpreted-text role="ref"}
+[weergegeven](#oefeningenreeks-weergeven)
 worden in de oefeningenreeks.
-:::
 
 ![image](images/staff.series_move_exercise.nl.png)
 
-::: {#oefeningenreeks oefeningen afwerken}
+<span id="oefeningenreeks-oefeningen-afwerken"></span>
 Druk op de afwerkknop in de rechterbovenhoek van het paneel om de
-koppeling van `oefeningen <oefening>`{.interpreted-text role="ref"} aan
-de `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} af
+koppeling van [oefeningen](/nl/for-students#oefening) aan
+de [oefeningenreeks](#oefeningenreeks) af
 te werken.
-:::
 
 ![image](images/staff.series_edit_submit.nl.png)
 
 Na het afwerken navigeer je terug naar de
-`oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} in het
-`leerpad <leerpad>`{.interpreted-text role="ref"}, waar je kunt
+[oefeningenreeks](#oefeningenreeks) in het
+[leerpad](#leerpad), waar je kunt
 vaststellen dat de nieuwe koppeling van de
-`oefeningen <oefening>`{.interpreted-text role="ref"} meteen van
+[oefeningen](/nl/for-students#oefening) meteen van
 toepassing is.
 
 ### Oefeningenreeks beheren
 
-::: {#oefeningenreeks menu cursusbeheerder}
-In het `menu <oefeningenreeks menu>`{.interpreted-text role="ref"} van
-een `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}
+<span id="oefeningenreeks-menu-cursusbeheerder"></span>
+In het [menu](/nl/for-students#oefeningenreeks-menu) van
+een [oefeningenreeks](#oefeningenreeks)
 staan enkele bijkomende opties die corresponderen met acties die
 voorbehouden zijn voor
-`cursusbeheerders <cursusbeheerder>`{.interpreted-text role="ref"}.
-:::
+[cursusbeheerders](#cursusbeheerder).
 
-::: {#oefeningenreeks bewerken}
-::: {#oefeningenreeks eigenschappen aanpassen}
-`Reeks bewerken`{.interpreted-text role="guilabel"}
-:::
-:::
+#### Oefeningenreeks bewerken
+<span class="guilabel" id="oefeningenreeks-eigenschappen-aanpassen">Reeks bewerken</span>
 
 > Toont een pagina waarop de
-> `eigenschappen <oefeningenreeks eigenschappen>`{.interpreted-text
-> role="ref"} en de
-> `koppeling <oefeningenreeks oefeningen koppelen>`{.interpreted-text
-> role="ref"} van `oefeningen <oefening>`{.interpreted-text role="ref"}
+> [eigenschappen](#oefeningenreeks-eigenschappen) en de
+> [koppeling](#oefeningenreeks-oefeningen-koppelen) van [oefeningen](/nl/for-students#oefening)
 > kunnen aangepast worden.
 >
 > ![image](images/staff.series_edit.nl.png)
 >
-> ::: {#oefeningenreeks eigenschappen aanpassen annuleren}
-> Druk op de `oefeningenreeks <oefeningenreeks>`{.interpreted-text
-> role="ref"} in de `navigatiebalk <navigatiebalk>`{.interpreted-text
-> role="ref"} om het aanpassen te annuleren.
-> :::
+> Druk op de [oefeningenreeks](#oefeningenreeks) in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanpassen te annuleren.
 >
 > ![image](images/staff.series_edit_cancel.nl.png)
 >
-> ::: {#oefeningenreeks eigenschappen aanpassen afwerken}
 > Druk na het aanpassen op de afwerkknop in de rechterbovenhoek van het
 > paneel om de nieuwe
-> `eigenschappen <oefeningenreeks eigenschappen>`{.interpreted-text
-> role="ref"} effectief in te stellen.
-> :::
+> [eigenschappen](#oefeningenreeks-eigenschappen) effectief in te stellen.
 >
 > ![image](images/staff.series_edit_submit.nl.png)
 >
 > Na het
-> `aanpassen <oefeningenreeks eigenschappen aanpassen>`{.interpreted-text
-> role="ref"} navigeer je terug naar de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} in
-> het `leerpad <leerpad>`{.interpreted-text role="ref"}, waar de nieuwe
-> `eigenschappen <oefeningenreeks eigenschappen>`{.interpreted-text
-> role="ref"} onmiddellijk van toepassing zijn.
+> [aanpassen](#oefeningenreeks-eigenschappen-aanpassen) navigeer je terug naar de
+> [oefeningenreeks](#oefeningenreeks) in
+> het [leerpad](#leerpad), waar de nieuwe
+> [eigenschappen](#oefeningenreeks-eigenschappen) onmiddellijk van toepassing zijn.
 
-::: {#oefeningenreeks verwijderen}
-`Reeks verwijderen`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel" id="oefeningenreeks-verwijderen">Reeks verwijderen</span>
 
-> Verwijdert de `oefeningenreeks <oefeningenreeks>`{.interpreted-text
-> role="ref"} uit het `leerpad <leerpad>`{.interpreted-text role="ref"}.
+> Verwijdert de [oefeningenreeks](#oefeningenreeks) uit het [leerpad](#leerpad).
 
-::: {#oefeningenreeks geheime link gebruiken cursusbeheerder}
-`Geheime link`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel" id="oefeningenreeks-geheime-link-gebruiken-cursusbeheerder">Geheime link</span>
 
 > Gebruikt de
-> `geheime link <oefeningenreeks geheime link>`{.interpreted-text
-> role="ref"} om naar de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"} te
-> `navigeren <oefeningenreeks geheime link gebruiken>`{.interpreted-text
-> role="ref"}.
+> [geheime link](#oefeningenreeks geheime link) om naar de
+> [oefeningenreeks](#oefeningenreeks) te
+> [navigeren](#oefeningenreeks geheime link gebruiken).
 
-::: {#oefeningenreeks statusoverzicht}
-::: {#oefeningenreeks statusoverzicht weergeven}
-`Statusoverzicht`{.interpreted-text role="guilabel"}
-:::
-:::
+<span class="guilabel" id="oefeningenreeks-statusoverzicht">Statusoverzicht</span>
 
 > Toont een overzicht met de
-> `indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-> role="ref"} van alle
-> `cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
-> voor alle `oefeningen <oefening>`{.interpreted-text role="ref"} uit de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}. De
+> [indienstatus](#oefeningenreeks-oefening-indienstatus) van alle
+> [cursusgebruikers](#cursusgebruiker)
+> voor alle [oefeningen](/nl/for-students#oefening) uit de
+> [oefeningenreeks](#oefeningenreeks). De
 > indienstatus wordt in het overzicht weergegeven met de gebruikelijke
-> `icoontjes <oefeningenreeks oefening indienstatus icoontje>`{.interpreted-text
-> role="ref"}.
+> [icoontjes](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje).
 >
 > ![image](images/staff.scoresheet.nl.png)
 >
 > Druk op de naam van een
-> `cursusgebruiker <cursusgebruiker>`{.interpreted-text role="ref"} om
-> naar de `profielpagina <profielpagina>`{.interpreted-text role="ref"}
+> [cursusgebruiker](#cursusgebruiker) om
+> naar de [profielpagina](/nl/for-students#profielpagina)
 > van de gebruiker te navigeren.
 >
 > ![image](images/staff.scoresheet_user_link.nl.png)
 >
 > Druk op het
-> `icoontje <oefeningenreeks oefening indienstatus icoontje>`{.interpreted-text
-> role="ref"} van een
-> `indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-> role="ref"} om naar de `oplossing <oplossing>`{.interpreted-text
-> role="ref"} te navigeren die gebruikt werd om de
-> `indienstatus <oefeningenreeks oefening indienstatus>`{.interpreted-text
-> role="ref"} te bepalen (als de cursusgebruiker effectief een oplossing
-> heeft `ingediend <oplossing indienen>`{.interpreted-text role="ref"}
+> [icoontje](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje) van een
+> [indienstatus](#/nl/for-studentsoefeningenreeks-oefening-indienstatus) om naar de [oplossing](/nl/for-students#oplossing) te navigeren die gebruikt werd om de
+> [indienstatus](#/nl/for-studentsoefeningenreeks oefening indienstatus) te bepalen (als de cursusgebruiker effectief een oplossing
+> heeft [ingediend](/nl/for-students#oplossing indienen)
 > op basis waarvan de indienstatus kon bepaald worden).
 >
 > ![image](images/staff.scoresheet_status_icon.nl.png)
 
-::: {#oefeningenreeks oplossingen herevalueren}
-`Oplossingen herevalueren`{.interpreted-text role="guilabel"}
-:::
+<span class="guilabel" id="oefeningenreeks-oplossingen-herevalueren">
+Oplossingen herevalueren
+</span>
 
-> `Herevalueert <oplossing herevalueren>`{.interpreted-text role="ref"}
-> alle `oplossingen <oplossing>`{.interpreted-text role="ref"} die
-> `cursusgebruikers <cursusgebruiker>`{.interpreted-text role="ref"}
-> `ingediend <oplossing indienen>`{.interpreted-text role="ref"} hebben
-> voor `oefeningen <oefening>`{.interpreted-text role="ref"} van de
-> `oefeningenreeks <oefeningenreeks>`{.interpreted-text role="ref"}.
+> [Herevalueert](#oplossing-herevalueren)
+> alle [oplossingen](/nl/for-students#oplossing) die
+> [cursusgebruikers](#cursusgebruiker)
+> [ingediend](/nl/for-students#oplossing indienen) hebben
+> voor [oefeningen](/nl/for-students#oefening) van de
+> [oefeningenreeks](#oefeningenreeks).
 
 # Cursusgebruikers beheren}
-------------------------------------------------
 
-Als `cursusbeheerder <cursusbeheerder>`{.interpreted-text role="ref"}
+Als [cursusbeheerder](#cursusbeheerder)
 krijg je toegang tot alle **cursusgebruikers**. Dit zijn de gebruikers
 die ooit voor de cursus
 `geregistreerd <cursus registreren>`{.interpreted-text role="ref"}
