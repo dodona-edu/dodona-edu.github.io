@@ -40,7 +40,7 @@ Eenmaal je de oefening hebt opgelost kan je eenvoudig indienen. Rechtsboven je e
 
 ![submit to dodona](./check_mark.png)
 
-Na enkele seconden zou het resultaat rechtsonder je editor moeten verschijnen. Als je op `More details` klikt, dan opent het resultaat in een nieuw browservenster. Als je opnieuw wil indienen, dan klik je gewoon opnieuw op het blauwe vinkje.
+Na enkele seconden zou het resultaat rechtsonder je editor moeten verschijnen. Als je op `More details` klikt, dan opent het resultaat in een nieuw browservenster. Als je opnieuw wil indienen, dan klik je gewoon opnieuw op het blauwe vinkje. Je kunt zo vaak indienen als je wenst.
 
 ![correct solution](./correct_solution.png)
 ![incorrect solution](./incorrect_solution.png)
