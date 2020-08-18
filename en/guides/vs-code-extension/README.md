@@ -52,3 +52,4 @@ After a few seconds, you should see a popup in the bottom right corner containin
 
 ![correct solution](./vs_code_correct_view_results.png)
 ![incorrect solution](./vs_code_incorrect_view_results.png)
+
