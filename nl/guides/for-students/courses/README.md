@@ -1,6 +1,7 @@
 ---
 title: Cursus handleiding voor studenten
 description: "Tutorial: cursus handleding voor studenten"
+next: ../../getting-started/
 ---
 
 ## Navigeren naar een cursus

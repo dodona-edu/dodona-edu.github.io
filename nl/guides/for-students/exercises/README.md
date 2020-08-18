@@ -1,6 +1,7 @@
 ---
 title: Oefeningen handleiding voor studenten
 description: "Tutorial: oefeningen handleiding voor studenten"
+next: ../courses/
 ---
 
 ## Navigeren naar een oefening

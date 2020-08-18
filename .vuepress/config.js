@@ -30,7 +30,7 @@ module.exports = {
     editLinkText: '',
     lastUpdated: false,
     smoothScroll: true,
-    nextLinks: false,
+    nextLinks: true,
     prevLinks: false,
     algolia: {
       apiKey: '6479590fc338465f3439cfe6ef357683',

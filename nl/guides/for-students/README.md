@@ -1,6 +1,7 @@
 ---
 title: Van start met Dodona voor studenten
 description: "Tutorial: van start met Dodona voor studenten"
+next: ./login-and-settings/
 ---
 
 # Dodona voor studenten

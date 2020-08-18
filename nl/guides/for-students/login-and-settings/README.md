@@ -1,6 +1,7 @@
 ---
 title: Aanmelden & gebruikersinstellingen
 description: "Tutorial: aanmelden en gebruikersinstellingen voor studenten"
+next: ../exercises/
 ---
 
 ## Selecteren van de taal
