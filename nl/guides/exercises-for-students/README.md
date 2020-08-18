@@ -1,5 +1,5 @@
 ---
-title: Oefeningen handleding voor studenten
+title: Oefeningen handleiding voor studenten
 description: "Tutorial: oefeningen handleding voor studenten"
 ---
 
