@@ -17,14 +17,14 @@ De taal waarin vaste componenten van Dodona (menubalken, cursusstructuur, medede
 
 De naam en beschrijving van een [cursus]() liggen vast, net zoals namen en beschrijvingen van [oefeningenreeksen]() binnen een cursus. Deze componenten zijn niet afhankelijk van de selectie van de [taal](#selecteren-van-de-taal). De taal van deze componenten valt volledig onder de controle van de cursusbeheerders die de cursus hebben opgesteld.
 
-De naam en beschrijving van een [oefening](/nl/guides/exercises-for-students/#navigeren-naar-een-oefening) zijn afhankelijk van de selectie van de [taal](#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
+De naam en beschrijving van een [oefening](/nl/guides/for-students/exercises/#navigeren-naar-een-oefening) zijn afhankelijk van de selectie van de [taal](#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
-De [taal](#selecteren-van-de-taal) van de [feedback](/nl/guides/exercises-for-students/#interpreteren-van-feedback) over een [oplossing](/nl/guides/exercises-for-students/#navigeren-naar-een-oplossing) die je [indient](/nl/guides/exercises-for-students/#indienen-van-een-oplossing) voor een [oefening](/nl/guides/exercises-for-students/#navigeren-naar-een-oefening) valt volledig onder de controle van de [judge](/nl/guides/exercises-for-students/#interpreteren-van-feedback) waaraan de oefening gekoppeld is. De judge kan de taal van deze feedback laten afhangen van de taal die geselecteerd is op het ogenblik waarop de oplossing wordt ingediend.
+De [taal](#selecteren-van-de-taal) van de [feedback](/nl/guides/for-students/exercises/#interpreteren-van-feedback) over een [oplossing](/nl/guides/for-students/exercises/#navigeren-naar-een-oplossing) die je [indient](/nl/guides/for-students/exercises/#indienen-van-een-oplossing) voor een [oefening](/nl/guides/for-students/exercises/#navigeren-naar-een-oefening) valt volledig onder de controle van de [judge](/nl/guides/for-students/exercises/#interpreteren-van-feedback) waaraan de oefening gekoppeld is. De judge kan de taal van deze feedback laten afhangen van de taal die geselecteerd is op het ogenblik waarop de oplossing wordt ingediend.
 :::
 
 ## Aanmelden
 
-Om te kunnen [aanmelden](#aanmelden), moet je over een **gebruikersaccount** beschikken op Dodona. In het daaraan gekoppelde [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) kan je persoonlijke voorkeuren instellen om je gebruikerservaring op het platform te personaliseren. Daarnaast worden alle acties die je op het platform uitvoert &mdash; zoals het [registreren](/nl/guides/courses-for-students/#registreren-voor-een-cursus) voor [cursussen]() of het [indienen](/nl/guides/exercises-for-students/#indienen-van-een-oplossing) van [oplossingen](/nl/guides/exercises-for-students/#navigeren-naar-een-oplossing) &mdash; aan je gebruikersaccount gekoppeld.
+Om te kunnen [aanmelden](#aanmelden), moet je over een **gebruikersaccount** beschikken op Dodona. In het daaraan gekoppelde [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) kan je persoonlijke voorkeuren instellen om je gebruikerservaring op het platform te personaliseren. Daarnaast worden alle acties die je op het platform uitvoert &mdash; zoals het [registreren](/nl/guides/for-students/courses/#registreren-voor-een-cursus) voor [cursussen]() of het [indienen](/nl/guides/for-students/exercises/#indienen-van-een-oplossing) van [oplossingen](/nl/guides/for-students/exercises/#navigeren-naar-een-oplossing) &mdash; aan je gebruikersaccount gekoppeld.
 
 ::: tip Belangrijk
 
@@ -76,7 +76,7 @@ Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#sele
 
 <h1 id="startpagina"></h1>
 
-Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in een gepersonaliseerde **startpagina** met een overzicht van alle [cursussen]() waarvoor je [geregistreerd](/nl/guides/courses-for-students/#registreren-voor-een-cursus) bent, hun [oefeningenreeksen]() met nakende [deadlines]() en je voortgang bij het [indienen](/nl/guides/exercises-for-students/#indienen-van-een-oplossing) van [oplossingen](/nl/guides/exercises-for-students/#navigeren-naar-een-oplossing) voor [oefeningen](/nl/guides/exercises-for-students/#navigeren-naar-een-oefening). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent.
+Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in een gepersonaliseerde **startpagina** met een overzicht van alle [cursussen]() waarvoor je [geregistreerd](/nl/guides/for-students/courses/#registreren-voor-een-cursus) bent, hun [oefeningenreeksen]() met nakende [deadlines]() en je voortgang bij het [indienen](/nl/guides/for-students/exercises/#indienen-van-een-oplossing) van [oplossingen](/nl/guides/for-students/exercises/#navigeren-naar-een-oplossing) voor [oefeningen](/nl/guides/for-students/exercises/#navigeren-naar-een-oefening). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent.
 
 ::: tip
 
@@ -85,13 +85,13 @@ Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar j
 ![image](./student.navigate_to_homepage.nl.png)
 :::
 
-Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voor geen enkele [cursus]() [geregistreerd](/nl/guides/courses-for-students/#registreren-voor-een-cursus) en heb je nog geen enkele [oplossing](/nl/guides/exercises-for-students/#navigeren-naar-een-oplossing) [ingediend](/nl/guides/exercises-for-students/#indienen-van-een-oplossing). Daardoor ziet je [startpagina]() er op dit moment nog vrij kaal uit.
+Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voor geen enkele [cursus]() [geregistreerd](/nl/guides/for-students/courses/#registreren-voor-een-cursus) en heb je nog geen enkele [oplossing](/nl/guides/for-students/exercises/#navigeren-naar-een-oplossing) [ingediend](/nl/guides/for-students/exercises/#indienen-van-een-oplossing). Daardoor ziet je [startpagina]() er op dit moment nog vrij kaal uit.
 
 ![image](./student.homepage.nl.png)
 
 ## Instellen van persoonlijke voorkeuren
 
-Kies voor <span class="guilabel">Mijn profiel</span> in het [gebruikersmenu](/nl/guides/login-and-settings-for-students/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je **profielpagina** te navigeren.
+Kies voor <span class="guilabel">Mijn profiel</span> in het [gebruikersmenu](/nl/guides/for-students/login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je **profielpagina** te navigeren.
 
 Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je **persoonsgegevens** (voornaam, familienaam, gebruikersnaam en emailadres) en enkele **persoonlijke voorkeuren** ([taal](#selecteren-van-de-taal) en tijdzone) die samen je **gebruikersprofiel** vormen. Dodona gebruikt het gebruikersprofiel om je gebruikerservaring te personaliseren.
 

@@ -143,9 +143,6 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
       children: [
         ['', FirstItem],
         'for-students/',
-        'login-and-settings-for-students/',
-        'courses-for-students/',
-        'exercises-for-students/',
         'getting-started/',
         'pycharm-plugin/',
         'new-exercise-repo/',

@@ -5,7 +5,13 @@ description: "Tutorial: van start met Dodona voor studenten"
 
 # Dodona voor studenten
 
-Als student kan je [registreren](/nl/guides/courses-for-students/#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](/nl/guides/exercises-for-students/#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](/nl/guides/exercises-for-students/#navigeren-naar-een-oplossing) [indienen](/nl/guides/exercises-for-students/#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](/nl/guides/exercises-for-students/#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](/nl/guides/login-and-settings-for-students/#aanmelden) beschikt en dat je [aangemeld](/nl/guides/login-and-settings-for-students/#aanmelden) bent op Dodona.
+Als student kan je [registreren](/nl/guides/for-students/courses/#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](/nl/guides/for-students/exercises/#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](/nl/guides/for-students/exercises/#navigeren-naar-een-oplossing) [indienen](/nl/guides/for-students/exercises/#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](/nl/guides/for-students/exercises/#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](/nl/guides/for-students/login-and-settings/#aanmelden) beschikt en dat je [aangemeld](/nl/guides/for-students/login-and-settings/#aanmelden) bent op Dodona.
+
+## Nederlandse handleidingen voor studenten
+
+* [Aanmelden & gebruikersinstellingen](/nl/guides/for-students/login-and-settings/)
+* [Oefeningen handleiding](/nl/guides/for-students/exercises/)
+* [Cursus handleiding](/nl/guides/for-students/courses/)
 
 ## Contact opnemen
 

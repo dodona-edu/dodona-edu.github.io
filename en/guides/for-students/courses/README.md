@@ -1,5 +1,5 @@
 ---
-title: Course guide for students
+title: 'Course guide for students'
 description: "Tutorial: course guide for students"
 ---
 
