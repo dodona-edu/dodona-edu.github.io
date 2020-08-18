@@ -144,6 +144,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
         ['', FirstItem],
         'getting-started/',
         'pycharm-plugin/',
+        'vs-code-extension/',
         'new-exercise-repo/',
         'the-coders-apprentice/',
         'creating-an-api-token/',
