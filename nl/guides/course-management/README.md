@@ -3,7 +3,7 @@ title: Cursusbeheer
 description: "Tutorial: cursusbeheer"
 ---
 Een **cursus** wordt
-[opgebouwd](#leerpad-uitstippelen) als een
+opgebouwd als een
 [leerpad](#leerpad) met
 [oefeningen](/nl/for-students#oefening) die gebundeld
 worden in **oefeningenreeksen**. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen
@@ -21,7 +21,7 @@ die cursussen. Als cursusbeheerder kan hij andere
 om samen met hem de cursus te beheren. Hij kan echter geen cursussen
 beheren waarvoor hij geen cursusbeheerder is.
 
-Een [cursusbeheerder](#cursusbeheerder) [stippelt](#leerpad-uitstippelen) voor de [cursus](#cursus) een [leerpad](#leerpad) uit met [oefeningenreeksen](#oefeningenreeks) waaraan [oefeningen](/nl/for-students#oefening) [gekoppeld](#oefeningen-koppelen) worden. Voor elke oefeningenreeks kan hij een [deadline](#oefeningenreeks-deadline) [instellen](#oefeningenreeks-eigenschappen-instellen) die aangeeft tot wanneer er rekening gehouden wordt met [oplossingen](/nl/for-students#oplossing) die
+Een [cursusbeheerder](#cursusbeheerder) stippelt voor de [cursus](#cursus) een [leerpad](#leerpad) uit met [oefeningenreeksen](#oefeningenreeks) waaraan [oefeningen](/nl/for-students#oefening) [gekoppeld](#oefeningen-koppelen) worden. Voor elke oefeningenreeks kan hij een [deadline](#oefeningenreeks-deadline) [instellen](#oefeningenreeks-eigenschappen-instellen) die aangeeft tot wanneer er rekening gehouden wordt met [oplossingen](/nl/for-students#oplossing) die
 [ingediend](/nl/for-students#oplossing-indienen) worden
 voor de oefeningen uit de oefeningenreeks.
 [Cursusgebruikers](#cursusgebruikers)
@@ -261,9 +261,8 @@ nieuwe [cursuseigenschappen](#cursuseigenschappen) onmiddellijk van toepassing z
 
 ![image](images/staff.course_after_edit.nl.png)
 
-# Leerpad uitstippelen
--------------------------------------------------------------
 
+# Leerpad
 Als [cursusbeheerder](#cursusbeheerder)
 kan je voor de [cursus](#cursus) een
 **leerpad** uitstippelen. Het leerpad wordt op de
@@ -273,7 +272,7 @@ onder de hoofding <span class="guilabel">Oefeningenreeksen</span>.
 [oefeningenreeksen](#oefeningenreeks)
 [toevoegen](#oefeningenreeks-toevoegen)
 waaraan je [oefeningen](#oefening) kunt
-[koppelen](#oefeningenreeks oefeningen koppelen).
+[koppelen](#oefeningenreeks-oefeningen-koppelen).
 
 # Oefeningenreeks toevoegen
 
@@ -480,7 +479,7 @@ publiceren en delen van [oefeningen](#oefening) wordt besproken in [oefeningen b
 :::
 
 # Oefeningenoverzicht
-<span id="oefeningenreeks-oefeningen-zoeken"></span>
+<h1 id="oefeningenreeks-oefeningen-zoeken"></h1>
 Onder de hoofding <span class="guilabel">Oefeningen toevoegen</span>
  kan je de zoekbalk gebruiken om te zoeken naar
 specifieke [oefeningen](/nl/for-students#oefening) op
@@ -616,7 +615,7 @@ Oplossingen herevalueren
 > voor [oefeningen](/nl/for-students#oefening) van de
 > [oefeningenreeks](#oefeningenreeks).
 
-# Cursusgebruikers beheren}
+# Cursusgebruikers beheren
 
 Als [cursusbeheerder](#cursusbeheerder)
 krijg je toegang tot alle **cursusgebruikers**. Dit zijn de gebruikers
@@ -687,7 +686,7 @@ cursusgebruikers waarmee je hun
 
 ### Cursusbeheerders aanduiden
 
-<h1 id="cursusbeheerder"></span>
+<h1 id="cursusbeheerder"></h1>
 Een **cursusbeheerder** is een
 [geregistreerde](/nl/for-students#cursus-registreren)
 [cursusgebruiker](#cursusgebruiker) met
