@@ -9,10 +9,10 @@ Alle **gebruikers** kunnen zich
 [aanmelden](/nl/for-students#aanmelden) en hun
 [gebruikersprofiel](/nl/for-students#gebgruikersprofiel) beheren. Voor sommige acties heb je echter bijkomende
 [beheersrechten](#beheersrechten) nodig.
-Onder gebruikers onderscheiden we daarom [studenten](#student),
-[lesgevers](#lesgever) en [beheerders](#beheerder) afhankelijk van
+Onder gebruikers binnenin een cursus onderscheiden we daarom [studenten](#student),
+[lesgevers](#lesgever) afhankelijk van
 de beheersrechten die aan hen [toegewezen](#beheersrechten)
-werden. Een uitzondering is de cursusbeheerder, deze heeft lesgeverrechten binnen de cursus waarin hij aangewezen is. Beheerders en lesgevers kunnen deze rechten toekennen.
+werden. Een uitzondering is de cursusbeheerder, deze heeft lesgeverrechten binnen de cursus waarin hij aangewezen is. Lesgevers en reeds benoemde cursusbeheerders kunnen deze rechten toekennen.
 
 ::: tip
 
@@ -23,12 +23,7 @@ linkerkant van de pagina het hamburgermenu openklikt.
 :::
 
 ::: tip Belangrijk
-
-Onder de [geregistreerde](/nl/for-students#cursus-registreren) gebruikers van een [cursus](/nl/course-management#cursus) onderscheiden we studenten en
-[cursusbeheerders](/nl/course-management#cursusbeheerder
-afhankelijk van de [beheersrechten](#beheersrechten) die ze gekregen hebben voor de cursus. Enkel
-cursusbeheerders kunnen een cursus beheren. Het
-[beheren](/nl/course-management#cursusgebruikers-beheren) van
+ Het [beheren](/nl/course-management#cursusgebruikers-beheren) van
 [cursusgebruikers](/nl/course-management#cursusgebruiker) en
 het [aanduiden](/nl/course-management#cursusbeheerders-aanduiden) van cursusbeheerders wordt behandeld in
 [cursus beheren](/nl/course-management).
@@ -37,7 +32,7 @@ het [aanduiden](/nl/course-management#cursusbeheerders-aanduiden) van cursusbehe
 ## Navigeren naar een gebruiker
 
 Als [lesgever](#lesgever) navigeer je naar
-het [gebruikersoverzicht](#gebruikersoverzicht) van je cursus door naar je cursus te navigeren en vervolgens op <span class="guilabal">Geregistreerde gebruikers</span> te klikken in de cursusbeschrijving.
+het [gebruikersoverzicht](#gebruikersoverzicht) van je cursus door naar je cursus te navigeren en vervolgens op <span class="guilabal">Geregistreerde gebruikers</span> te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
 
 ![admin menu users](./staff.admin_menu_users.png)
 
@@ -56,13 +51,13 @@ de gebruiker [toegewezen](#beheersrechten-instellen) werden.
 ## Gebruiker zoeken
 Gebruik de zoekbalk bovenaan het
 [gebruikersoverzicht](#gebruikersoverzicht) om te zoeken naar specifieke gebruikers op basis van een
-gebruikersnaam, een naam of een emailadres.
+gebruikersnaam, een naam, een emailadres of gebruikerslabel. Verschillende filters kunnen tegelijkertijd actief zijn.
 
 ![image](./staff.users_filtered.png)
 
 ## Gebruiker selecteren
 Druk op de naam om naar de
-[profielpagina](/nl/for-students#profielpagina) van de
+[cursusoverzichtspagina](#cursusoverzichtspagina) van de
 gebruiker te [navigeren](#gebruiker-navigeren).
 
 ![image](./staff.user_profile_link.png)
@@ -71,7 +66,12 @@ gebruiker te [navigeren](#gebruiker-navigeren).
 De **voortgangsstatistieken** van een gebruiker worden weergegeven middels een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel [oefeningen](/nl/for-students#oefening) in de cursus waarvoor de gebruiker een *correcte* [oplossing](/nl/for-students#oplossing) voor heeft [ingediend](/nl/for-students#oplossing-indienen). Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog niet correct heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog niet aan begonnen is.
 
 ![statistics](./user_progress_statistics.png)
-## Beheersrechten
+
+## Cursusoverzichtspagina
+
+Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de [cursus](/nl/course-management#cursus). Je krijgt de [voortgangsstatistieken](#gebruiker-voortgangsstatistieken) te zien, alsook grafieken over de activiteiten van deze gebruiker en een overzicht per reeks van de status van elke [oefening](/nl/for-students#oefening).
+
+![cursusoverzicht](./user_course_overview.png)
 
 Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
 **beheersrechten** nodig. Als [lesgever](#lesgever) kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande [icoontjes](#icoontjes-voor-beheersrechten). Je kan dan ook de acties aan de rechterkant gebruiken om de [beheersrechten](#beheersrechten) van een gebruiker in te stellen.
@@ -100,7 +100,6 @@ toegekend worden:
  | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#student) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
  |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgever) krijgen alle permissies van [studenten](#student) en kunnen bovendien ook lesgevers aanduiden, [cursussen](/nl/course-management#cursus) [aanmaken](/nl/course-management#cursus-aanmaken), [oefeningen](/nl/for-students#oefening) [toevoegen](/nl/course-management#oefening-toevoegen) en [judges](/nl/for-students#judge) [toevoegen](/nl/creating-a-judge)|
  |<span class="guilabel">Cursusbeheerder</span>| ![cursusbeheerder](../../../images/role_icons/staff.png)|[cursusbeheerders](#cursusbeheerders) hebben dezelfde rechten als lesgevers, maar enkel binnen de cursus waarin ze beheerder zijn. Ze kunnen dus geen cursus of judges toevoegen, maar wel oefeningen en studenten bewerken binnen een cursus| 
- |<span class="guilabel">Zeus</span>|      *no icon*|    [beheerders](#beheerder) krijgen alle permissies van [lesgevers](#lesgever) en cursusbeheerders en kunnen bovendien ook alle [beheersrechten](#beheersrechten) (inclusief cursusbeheerders) toewijzen, het [gebruikersprofiel](/nl/for-students#gebruikersprofiel) van alle gebruikers [bewerken](/nl/for-students#gebruikersprofiel-bewerken), alle [cursussen](/nl/course-management#cursus) [bewerken](/nl/course-management#cursus-bewerken), alle [oefeningen](/nl/for-students#oefening) [bewerken](/nl/course-management#oefening-bewerken) en alle [judges](/nl/for-students#judge) [bewerken](/nl/judges#judge-bewerken)
 
 ### Student
 Een gebruiker waarvoor de
@@ -113,7 +112,3 @@ op <span class="guilabel">Staff</span> noemen we een
 **lesgever**.
 ### Cursusbeheerder
 Een gebruiker met de lesgeverrol binnenin een cursus noemen we een cursusbeheerder.
-### Beheerder
-Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
-op <span class="guilabel">Zeus</span> noemen we een
-**beheerder**.
