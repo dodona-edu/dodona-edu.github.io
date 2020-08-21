@@ -147,7 +147,8 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
         'new-exercise-repo/',
         'the-coders-apprentice/',
         'creating-an-api-token/',
-        'creating-a-judge/'
+        'creating-a-judge/',
+        'judge-specification/'
       ]
     },
     `/${lang}/references/`
