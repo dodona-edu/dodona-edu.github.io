@@ -148,7 +148,6 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
         'the-coders-apprentice/',
         'creating-an-api-token/',
         'creating-a-judge/',
-        'judge-specification/'
       ]
     },
     `/${lang}/references/`
