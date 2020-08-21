@@ -5,7 +5,7 @@ description: "Tutorial: oplossingen automatisch beoordelen"
 
 # Oplossingen automatisch beoordelen
 
-Voor elke judge in Dodona is er een git repository. Deze git repository moet aan een [voorgeschreven structuur ](#structuur-van-de-judge-repository) voldoen en de judge moet een [interface ](#judge-interface) aanbieden om in Dodona te passen. Een lijst van werkende judges kan [hier ](#list_of_judges) gevonden worden. Wanneer je judge geschreven is moet deze [toegevoegd ](#adding_a_judge) worden aan Dodona voor deze gebruikt kan worden voor oefeningen.
+Voor elke judge in Dodona is er een git repository. Deze git repository moet aan een [voorgeschreven structuur ](#structuur-van-de-judge-repository) voldoen en de judge moet een [interface ](#judge-interface) aanbieden om in Dodona te passen. Een lijst van werkende judges kan [hier ]() gevonden worden. Wanneer je judge geschreven is moet deze [toegevoegd ](#een-judge-toevoegen) worden aan Dodona voor deze gebruikt kan worden voor oefeningen.
 
 ## Structuur van de judge repository
 
@@ -97,7 +97,7 @@ tijdens de evaluatie die de voortgang beschrijven.
 #### *Full* output
 
 Het *full* output format wordt gespecifieerd door een
-[JSON schema ](#judge_output_format_schema_full). Een meer beknopte beschrijving kan
+[JSON schema ](). Een meer beknopte beschrijving kan
 hieronder gevonden worden. Merk op dat alle items gerenderd worden in de
 volgorde zoals hieronder beschreven. Alle *keys* die een lijst voorstellen zijn
 optioneel en hebben standaard de lege lijst als waarde.
@@ -486,7 +486,7 @@ Er is iets misgelopen.
 #### *Partial* output
 
 De *partial* output bestaat uit meerdere kleinere JSON objecten, gevalideerd
-door [dit JSON schema ](#judge_output_format_schema_partial). Elk JSON
+door [dit JSON schema ](). Elk JSON
 object beschrijft een deel van het testen. Een voorbeeld kan hieronder gevonden
 worden.
 :
