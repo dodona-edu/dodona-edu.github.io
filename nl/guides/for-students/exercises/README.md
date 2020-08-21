@@ -18,13 +18,13 @@ Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-n
 
 <h1 id="oefeningpagina"></h1>
 
-Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
+Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
 ![De [ISBN](https://dodona.ugent.be/en/exercises/910319224/) oefening op Dodona.](./student.exercise_start.nl.png)
 
 ::: tip
 
-Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de [cursuspagina](../courses/#cursuspagina). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
+Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de [cursuspagina](../courses/#cursuspagina). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
 
 ![image](./student.exercise_crumbs.nl.png)
 :::
@@ -76,7 +76,7 @@ Er zit geen beperking op het aantal keer dat je een [oplossing](#navigeren-naar-
 
 Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
 
--   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
+-   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
     ![image](./student.all_submissions_link.nl.png)
 

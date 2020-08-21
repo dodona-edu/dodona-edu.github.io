@@ -12,7 +12,7 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#na
 
 -   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](../login-and-settings/#startpagina). Je kunt één van deze cursussen selecteren door op de naam van de cursus te drukken.
 
--   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal) bevat onder de hoofding <span class="guilabel">Mijn vakken</span> een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina](../login-and-settings/#startpagina) moet navigeren.
+-   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) bevat onder de hoofding <span class="guilabel">Mijn vakken</span> een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina](../login-and-settings/#startpagina) moet navigeren.
 
     ![image](./student.my_courses.nl.png)
 
@@ -38,14 +38,14 @@ Na [selectie](#navigeren-naar-een-cursus) van een [cursus]() navigeer je naar de
 
 ::: tip
 
-Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina](#cursuspagina).
+Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina](#cursuspagina).
 
 ![image](./student.breadcrumb_course.nl.png)
 :::
 
 <h1 id="deadline"></h1>
 
-Voor elke [oefeningenreeks]() kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
+Voor elke [oefeningenreeks]() kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
 
 Onder de naam van een [oefeningenreeks]() staat optioneel een beschrijving, met daaronder een oplijsting van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de reeks. De lijst toont voor elke oefening [statistieken](#statistieken) en je [indienstatus](#indienstatus). Vóór elke oefening in de lijst staat ook een [icoontje](#indienstatus) dat correspondeert met je indienstatus voor de oefening.
 
@@ -138,7 +138,7 @@ Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je n
 Op een [cursuspagina](#cursuspagina) kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent of als de cursus werkt met [open]().
 :::
 
-Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal).
+Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
 
 ![image](./student.my_courses.nl.png)
 
@@ -150,7 +150,7 @@ Als je navigeert naar een [cursus]() waarvoor je [geregistreerd](#registreren-vo
 
 ![image](./student.unregister.nl.png)
 
-Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linker kant van de [navigatiebalk](#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](../login-and-settings/#startpagina), dan verdwijnt de cursus ook uit die lijst.
+Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linker kant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](../login-and-settings/#startpagina), dan verdwijnt de cursus ook uit die lijst.
 <!--
     ---
     title: 'Course guide for students'
