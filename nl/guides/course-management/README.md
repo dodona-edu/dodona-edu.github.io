@@ -137,11 +137,13 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
 > Een optionele beschrijving die bovenaan de
 > [cursuspagina](#<cursuspagina>) wordt
-> weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken
-> van [Markdown](#Markdown).
+> weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](#Markdown).
+
+[//] # (todo public map van repository)
+
 >
 > ::: tip
->
+> <h1 id="beschrijving-markdown"></h1>
 > De beschrijving van eigenschappen die aangeduid worden met het
 > Markdown-logo kan geschreven worden met behulp van
 > [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor
@@ -232,6 +234,12 @@ dat je [aangeduid](#cursusbeheerders-aanduiden) bent als
 
 ![image](images/staff.created_course.nl.png)
 
+# Cursus navigeren
+
+Je kan de [cursuspagina](#cursuspagina) van een [cursus](#cursus) bereiken op verschillende manieren. Vanaf de landingspagina kan je cursussen zoeken door te klikken op <span class="guilabel">Meer cursussen</span>. Vanop eender welke pagina kan je via het hamburgermenu in de linkerbovenhoek snelkoppelingen vinden naar jouw cursusssen onder het tabblad <span class="guilabel">Cursussen</span> en de cursus-zoekenpagina via het gelijknamige knopje on het tabblad <span class="guilabel">Admin</span>. Op de zoeken-pagina kan je filteren op naam van de cursus en op het instituut waartoe de cursus behoort. Ten slotte dien je enkel nog de gewenste cursus aan te klikken om op de cursuspagina terecht te komen.
+
+[todo](todo)
+
 # Cursus bewerken
 
 <span id="cursuseigenschappen-aanpassen"></span>
@@ -300,163 +308,7 @@ van de oefeningenreeks te annuleren.
 <span id="oefeningenreeks-eigenschappen"></span>
 Voor een [oefeningenreeks](#oefeningenreeks) kunnen de volgende eigenschappen ingesteld worden:
 
-<span class="guilabel">Naam</span>
 
-> Een naam voor de [oefeningenreeks](#oefeningenreeks).
-> Binnen een [leerpad](#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam
-> hebben. Het is echter aangeraden om alle oefeningenreeksen van het
-> leerpad een unieke naam te geven.
-
-<span class="guilabel">Deadline</span>
-
-> Een optionele deadline die aangeeft tot wanneer er rekening gehouden
-> wordt met [oplossingen](/nl/for-students#oplossing) die
-> [ingediend](/nl/for-students#oplossing-indienen) worden
-> voor [oefeningen](/nl/for-students#oefening) uit de
-> [oefeningenreeks](#oefeningenreeks).
-> [Cursusgebruikers](#cursusgebruiker)
-> kunnen na de deadline onbeperkt oplossingen blijven indienen voor
-> oefeningen uit de oefeningenreeks en blijven daar nog steeds een
-> beoordeling en feedback voor ontvangen. Er wordt met deze oplossingen
-> echter geen rekening meer gehouden bij het bepalen van hun
-> [indienstatus](/nl/for-students#oefeningenreeks-oefening-indienstatus) voor oefeningen uit de oefeningenreeks.
->
-> Zonder deadline wordt er bij het bepalen van de
-> [indienstatus](/nl/for-students#oefeningenreeks-oefening-indienstatus)
-> van [cursusgebruikers](#cursusgebruiker) blijvend rekening gehouden met
-> [oplossingen](/nl/for-students#oplossing) die ze
-> [indienen](/nl/for-students#oplossing-indienen) voor
-> [oefeningen](/nl/for-students#oefening) uit de
-> [oefeningenreeks](#oefeningenreeks)
->
-> ::: tip Belangrijk
->
-> Als de [deadline](/nl/for-students#oefeningenreeks-deadline) aangepast wordt dan krijgen
-> [cursusgebruikers](#cursusgebruiker)
-> meteen ook een
-> [indienstatus](/nl/for-students#oefeningenreeks-oefening-indienstatus) voor [oefeningen](#oefening)
-> uit de [oefeningenreeks](#oefeningenreeks) die aangepast is aan de nieuwe deadline.
-> :::
->
-> Klik op het invulveld of druk op de kalenderknop om de datum en het
-> tijdstip van de deadline in te stellen. Selecteer de deadline in de
-> [tijdzone](/nl/for-students#gebruikersprofiel-tijdzone)
-> die je hebt
-> [ingesteld](/nl/for-students#persoonlijke-voorkeuren-instellen) in je
-> [gebruikersprofiel](/nl/for-students#gebruikersprofiel).
-> Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in
-> hun gebruikersprofiel hebben ingesteld.
->
-> ![image](images/staff.course_series_calendar_open.nl.png)
->
-> Druk op de verwijderknop om een ingestelde deadline te wissen.
->
-> ![image](images/staff.course_series_calendar_clear.nl.png)
-
-<span class="guilabel">Zichtbaarheid</span>
-
-
-> De zichtbaarheid bepaalt of gebruikers de
-> [oefeningenreeks](#oefeningenreeks)
-> kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld
-> worden:
->
-><span class="guilabel" id="oefeningenreeks-open">Open</span>
->
-> > Alle gebruikers zien de oefeningenreeks in het
-> > [leerpad](#leerpad).
->
-><span class="guilabel" id="oefeningenreeks-verborgen">Verborgen</span>
->
-> > Alleen [cursusbeheerders](#cursusbeheerder) zien de
-> > [oefeningenreeks](#oefeningenreeks) in
-> > het [leerpad](#leerpad). Er staat een
-> > duidelijke mededeling bij om hen er op te wijzen dat andere
-> > gebruikers de oefeningenreeks enkel kunnen zien als ze de
-> > [geheime link](#oefeningenreeks-geheime-link) gebruiken.
-> >
-> > ![image](images/staff.course_series_hidden_info.nl.png)
->
-><span class="guilabel" id="oefeningenreeks-gesloten">Gesloten</span>
->
-> > Alleen [cursusbeheerders](#cursusbeheerder) zien de
-> > [oefeningenreeks](#oefeningenreeks) in
-> > het [leerpad](#leerpad). Er staat een
-> > duidelijke mededeling bij om hen er op te wijzen dat andere
-> > gebruikers de oefeningenreeks daar niet kunnen zien.
-> >
-> > ![image](images/staff.course_series_closed_info.nl.png)
-
-<span class="guilabel" id="oefeningenreeks-geheime-link">Geheime link</span>
-
-
-> Bij het [toevoegen](#oefeningenreeks-toevoegen) van een
-> [oefeningenreeks](#oefeningenreeks)
-> wordt automatisch een **token** gegenereerd als afschermingsmechanisme
-> van [verborgen](#oefeningenreeks-verborgen) oefeningenreeksen. Zonder dit token kunnen gebruikers een
-> [verborgen](#oefeningenreeks verborgen)
-> oefeningenreeks niet zien in het leerpad. Als ze rechtstreeks naar de
-> oefeningenreeks proberen te navigeren, dan zien ze enkel een melding
-> dat ze geen toegangsrechten hebben voor de oefeningenreeks.
->
-> ![image](images/student.hidden_series_denied_message.nl.png)
->
-> Gebruikers kunnen een
-> [verborgen](#oefeningenreeks verborgen)
-> [oefeningenreeks](#oefeningenreeks)
-> enkel zien als ze gebruikmaken van de **geheime link** voor de cursus.
-> De geheime link bevat het
-> [token](#oefeningenreeks-geheime-link) waarmee
-> ze de oefeningenreeks ook te zien krijgen als die verborgen werd.
->
-> ![image](images/staff.series_hidden_link.nl.png)
->
-> Als [cursusbeheerder](#cursusbeheerder)
-> krijg je de verantwoordelijkheid om de
-> [geheime link](#oefeningenreeks-geheime-link) enkel te delen met andere gebruikers die de
-> [oefeningenreeks](#oefeningenreeks)
-> mogen zien. Druk op de kopieerknop naast de geheime link om de geheime
-> link naar het klembord te kopiëren.
->
-> ![image](images/staff.series_hidden_link_copy.nl.png)
->
-> <span id="oefeningenreeks-geheime-link-vernieuwen"></span>
-> Druk op de vernieuwknop naast de
-> [geheime link](#oefeningenreeks geheime link) om de
-> [oefeningenreeks](#oefeningenreeks)
-> opnieuw te [verbergen](#oefeningenreeks-verborgen) nadat de geheime link gedeeld werd. Daardoor wordt een
-> nieuw [token](#oefeningenreeks-geheime-link)
-> gegenereerd en wordt het oude token onbruikbaar gemaakt. De geheime
-> link wordt meteen ook aangepast aan het nieuwe token.
->
-> ![image](images/staff.series_hidden_link_reset.nl.png)
-
-<span class="guilabel">Beschrijving</span>
-
-
-> Een optionele beschrijving die gebruikers te zien krijgen bij de
-> weergave van de oefeningenreeks in het
-> [leerpad](#leerpad). Voor het opmaken
-> van de beschrijving kan je gebruikmaken van
-> [Markdown](#beschrijving markdown).
-
-Druk op de afwerkknop in de rechterbovenhoek van het paneel
-<span class="guilabel">Nieuwe oefeningenreeks</span> om de nieuwe
-[oefeningenreeks](#oefeningenreeks)
-effectief aan het [leerpad](#leerpad)
-[toe te voegen](#oefeningenreeks-toevoegen).
-
-![image](images/staff.course_series_new_submit.nl.png)
-
-Na het afwerken navigeer je naar de
-[weergave](#oefeningenreeks-weergeven) van
-de [oefeningenreeks](#oefeningenreeks) in
-het [leerpad](#leerpad). Daarbij zie je
-dat de nieuwe oefeningenreeks aan de bovenkant van het leerpad
-toegevoegd werd. Op die manier worden de oefeningenreeksen van het
-leerpad in omgekeerde chronologische volgorde (eerste oefeningenreeks
-onderaan) weergegeven op de
-[cursuspagina](#cursuspagina).
 
 ### Oefening aan reeks toevoegen
 <h1 id="oefeningenreeks-toevoegen"></h1>
