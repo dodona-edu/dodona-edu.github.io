@@ -276,11 +276,9 @@ kan je voor de [cursus](#cursus) een
 **leerpad** uitstippelen. Het leerpad wordt op de
 [cursuspagina](#cursuspagina) weergegeven
 onder de hoofding <span class="guilabel">Oefeningenreeksen</span>.
- Aan het leerpad kan je
-[oefeningenreeksen](#oefeningenreeks)
-[toevoegen](#oefeningenreeks-toevoegen)
-waaraan je [oefeningen](#oefening) kunt
-[koppelen](#oefeningenreeks-oefeningen-koppelen).
+ Aan het leerpad kan je [oefeningenreeksen](/nl/exercise-series-management#oefeningenreeks)
+[toevoegen](/nl/exercise-series-mangement#oefeningenreeks-toevoegen)
+waaraan je [oefeningen](#oefening) kunt koppelen.
 
 # Oefeningenreeks toevoegen
 
@@ -296,176 +294,7 @@ In het paneel <span class="guilabel">Nieuwe oefeningenreeks</span> kan je de
 [oefeningenreeks](#oefeningenreeks)
 instellen.
 
-![image](images/staff.course_series_new.nl.png)
 
-Druk op de [cursus](#cursus) in de
-[navigatiebalk](/nl/for-students#navigatiebalk) om het
-[toevoegen](#oefeningenreeks-toevoegen)
-van de oefeningenreeks te annuleren.
-
-![image](images/staff.course_series_new_cancel.nl.png)
-
-<span id="oefeningenreeks-eigenschappen"></span>
-Voor een [oefeningenreeks](#oefeningenreeks) kunnen de volgende eigenschappen ingesteld worden:
-
-
-
-### Oefening aan reeks toevoegen
-<h1 id="oefeningenreeks-toevoegen"></h1>
-Je ziet nu een uitgebreide versie van het paneel waarin je naast het
-[instellen](#oefeningenreeks-eigenschappen-instellen) van
-[eigenschappen](#oefeningenreeks-eigenschappen) ook oefeningen kunt koppelen aan de
-[oefeningenreeks](#oefeningenreeks). Onder
-de hoofding <span class="guilabel">Oefeningen toevoegen</span>
-staat een overzicht van alle beschikbare oefeningen en onder de hoofding
-<span class="guilabel">Oefeningen in deze reeks</span> staat een
-overzicht van alle oefeningen die aan de oefeningenreeks gekoppeld
-werden.
-
-::: tip Belangrijk
-
-We veronderstellen hier dat de [oefeningen](#oefening) die aan de
-[oefeningenreeks](#oefeningenreeks) moeten
-gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen,
-publiceren en delen van [oefeningen](#oefening) wordt besproken in [oefeningen beheren](/nl/exercise-management).
-:::
-
-# Oefeningenoverzicht
-<h1 id="oefeningenreeks-oefeningen-zoeken"></h1>
-Onder de hoofding <span class="guilabel">Oefeningen toevoegen</span>
- kan je de zoekbalk gebruiken om te zoeken naar
-specifieke [oefeningen](/nl/for-students#oefening) op
-basis van een naam, een padnaam, programmeertaal, labels of vertalingen.
-
-![image](images/staff.series_search_exercises.nl.png)
-
-<h1 id="oefeningenreeks-oefening-toevoegen"></h1>
-Druk op de toevoegknop aan de rechterkant van een
-[oefening](#oefening) om de oefening aan
-de [oefeningenreeks](#oefeningenreeks) toe
-te voegen.
-
-![image](images/staff.series_add_exercise.nl.png)
-
-<h1 id="oefeningenreeks-oefening-verwijderen"></h1>
-Onder de hoofding <span clas="guilabel">Oefeningen in deze reeks</span> kan je aan de rechterkant van een
-[oefening](/nl/for-students#oefening) op de verwijderknop
-drukken om de oefening uit de
-[oefeningenreeks](#oefeningenreeks) te
-verwijderen.
-
-![image](images/staff.series_remove_exercise.nl.png)
-
-<h1 id="oefeningenreeks-oefeningen-herschikken"></h1>
-Versleep de verplaatsknop aan de linkerkant van de
-[oefeningen](#oefening) om de volgorde van
-de oefeningen aan te passen. De volgorde waarin de oefeningen onder de
-hoofding <span class="guilabel">Oefeningen in deze reeks</span>
-gerangschikt worden, is immers ook de volgorde waarin de oefeningen
-[weergegeven](#oefeningenreeks-weergeven)
-worden in de oefeningenreeks.
-
-![image](images/staff.series_move_exercise.nl.png)
-
-<h1 id="oefeningenreeks-oefeningen-afwerken"></h1>
-Druk op de afwerkknop in de rechterbovenhoek van het paneel om de
-koppeling van [oefeningen](/nl/for-students#oefening) aan
-de [oefeningenreeks](#oefeningenreeks) af
-te werken.
-
-![image](images/staff.series_edit_submit.nl.png)
-
-Na het afwerken navigeer je terug naar de
-[oefeningenreeks](#oefeningenreeks) in het
-[leerpad](#leerpad), waar je kunt
-vaststellen dat de nieuwe koppeling van de
-[oefeningen](/nl/for-students#oefening) meteen van
-toepassing is.
-
-### Oefeningenreeks beheren
-
-<h1 id="oefeningenreeks-menu-cursusbeheerder"></h1>
-In het [menu](/nl/for-students#oefeningenreeks-menu) van
-een [oefeningenreeks](#oefeningenreeks)
-staan enkele bijkomende opties die corresponderen met acties die
-voorbehouden zijn voor
-[cursusbeheerders](#cursusbeheerder).
-
-#### Oefeningenreeks bewerken
-<span class="guilabel" id="oefeningenreeks-eigenschappen-aanpassen">Reeks bewerken</span>
-
-> Toont een pagina waarop de
-> [eigenschappen](#oefeningenreeks-eigenschappen) en de
-> [koppeling](#oefeningenreeks-oefeningen-koppelen) van [oefeningen](/nl/for-students#oefening)
-> kunnen aangepast worden.
->
-> ![image](images/staff.series_edit.nl.png)
->
-> Druk op de [oefeningenreeks](#oefeningenreeks) in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanpassen te annuleren.
->
-> ![image](images/staff.series_edit_cancel.nl.png)
->
-> Druk na het aanpassen op de afwerkknop in de rechterbovenhoek van het
-> paneel om de nieuwe
-> [eigenschappen](#oefeningenreeks-eigenschappen) effectief in te stellen.
->
-> ![image](images/staff.series_edit_submit.nl.png)
->
-> Na het
-> [aanpassen](#oefeningenreeks-eigenschappen-aanpassen) navigeer je terug naar de
-> [oefeningenreeks](#oefeningenreeks) in
-> het [leerpad](#leerpad), waar de nieuwe
-> [eigenschappen](#oefeningenreeks-eigenschappen) onmiddellijk van toepassing zijn.
-
-<span class="guilabel" id="oefeningenreeks-verwijderen">Reeks verwijderen</span>
-
-> Verwijdert de [oefeningenreeks](#oefeningenreeks) uit het [leerpad](#leerpad).
-
-<span class="guilabel" id="oefeningenreeks-geheime-link-gebruiken-cursusbeheerder">Geheime link</span>
-
-> Gebruikt de
-> [geheime link](#oefeningenreeks geheime link) om naar de
-> [oefeningenreeks](#oefeningenreeks) te
-> [navigeren](#oefeningenreeks geheime link gebruiken).
-
-<span class="guilabel" id="oefeningenreeks-statusoverzicht">Statusoverzicht</span>
-
-> Toont een overzicht met de
-> [indienstatus](#oefeningenreeks-oefening-indienstatus) van alle
-> [cursusgebruikers](#cursusgebruiker)
-> voor alle [oefeningen](/nl/for-students#oefening) uit de
-> [oefeningenreeks](#oefeningenreeks). De
-> indienstatus wordt in het overzicht weergegeven met de gebruikelijke
-> [icoontjes](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje).
->
-> ![image](images/staff.scoresheet.nl.png)
->
-> Druk op de naam van een
-> [cursusgebruiker](#cursusgebruiker) om
-> naar de [profielpagina](/nl/for-students#profielpagina)
-> van de gebruiker te navigeren.
->
-> ![image](images/staff.scoresheet_user_link.nl.png)
->
-> Druk op het
-> [icoontje](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje) van een
-> [indienstatus](#/nl/for-studentsoefeningenreeks-oefening-indienstatus) om naar de [oplossing](/nl/for-students#oplossing) te navigeren die gebruikt werd om de
-> [indienstatus](#/nl/for-studentsoefeningenreeks oefening indienstatus) te bepalen (als de cursusgebruiker effectief een oplossing
-> heeft [ingediend](/nl/for-students#oplossing indienen)
-> op basis waarvan de indienstatus kon bepaald worden).
->
-> ![image](images/staff.scoresheet_status_icon.nl.png)
-
-<span class="guilabel" id="oefeningenreeks-oplossingen-herevalueren">
-Oplossingen herevalueren
-</span>
-
-> [Herevalueert](#oplossing-herevalueren)
-> alle [oplossingen](/nl/for-students#oplossing) die
-> [cursusgebruikers](#cursusgebruiker)
-> [ingediend](/nl/for-students#oplossing indienen) hebben
-> voor [oefeningen](/nl/for-students#oefening) van de
-> [oefeningenreeks](#oefeningenreeks).
 
 # Cursusgebruikers beheren
 
@@ -582,75 +411,13 @@ cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder
 beheersrechten voor de cursus.
 :::
 
-# Oplossingen beheren
-
-Als [cursusbeheerder](#cursusbeheerder)
-krijg je toegang tot alle [oplossingen](/nl/for-students#oplossing) die de
-[cursusgebruikers](#cursusgebruiker)
-[ingediend](/nl/for-students#oplossing-indienen) hebben in
-de [cursus](#cursus). Je kunt de
-oplossingen [herevalueren](#oplossing-herevalueren) en er zijn verschillende plaatsen op de
-[cursuspagina](#cursuspagina) waar je een
-overzicht kunt krijgen van (een deel van) de oplossingen.
-
-### Oplossing herevalueren
-
-Bij het herevalueren van een oplossing wordt het
-[beoordelingsproces](/nl/for-students#oplossing-beoordelingsproces) opnieuw uitgevoerd zonder dat de oplossing opnieuw moet
-[ingediend](/nl/for-students#oplossing-indienen) worden.
-Op die manier blijft het originele
-[tijdstip](/nl/for-students#oplossing-tijdstip) van
-indienen behouden. Als de configuratie van de
-[oefening](/nl/for-students#oefening) aangepast werd sinds
-de vorige beoordeling van de oplossing, dan kan de
-[status](/nl/for-students#oplossing-status) van de
-oplossing wijzigen door het herevalueren.
-
-::: tip Belangrijk
-
-Bij het [herevalueren](#oplossing-herevalueren) krijgen [oplossingen](/nl/for-students#oplossing) een lagere prioriteit in de
-[wachtrij](/nl/for-students#oplossing wachtrij) dan
-oplossingen die nieuw [ingediend](/nl/for-students#oplossing-indienen) worden. Op die manier ondervindt het beoordelen van
-oplossingen die gebruikers indienen minimale vertaging, maar kan het
-herevalueren wel langer duren.
-:::
-
-::: tip Belangrijk
-
-Gebruikers krijgen geen melding van het platform als hun
-[oplossingen](/nl/for-students#oplossing)
-[geherevalueerd](#oplossing herevalueren)
-worden. Als je beslist om oplossingen te herevalueren, is het belangrijk
-om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de
-[status](/nl/for-students#oplossing-status) van
-[oplossingen](/nl/for-students#oplossing) die ze vroeger
-[ingediend](/nl/for-students#oplossing-indienen) hebben
-als van hun
-[indienstatus](#oefeningenreeks-oefening-indienstatus) voor [oefeningen](/nl/for-students#oefening)
-in de [oefeningenreeksen](#oefeningenreeks) van de cursus.
-:::
-
-Druk op de herhaalknop in de rechterbovenhoek van de
-[feedbackpagina](/nl/for-students#feedbackpagina) om een
-[oplossing](/nl/for-students#oplossing) te
-[herevalueren](#oplossing herevalueren).
-
-![image](images/staff.feedback_evaluate.nl.png)
-
 ### Navigeren naar oplossingen
 
-Elk overzicht met [oplossingen](/nl/for-students#oplossing) die in de [cursus](#cursus)
-ingediend werden, bevat voor
-[cursusbeheerders](#cursusbeheerder) de
-oplossingen van alle
-[cursusgebruikers](#cursusgebruiker).
-Daarom heeft het overzicht een extra kolom met de naam van de gebruiker
-die de [oplossing](/nl/for-students#oplossing) heeft
-[ingediend](/nl/for-students#oplossing-indienen). Druk op
-de naam van de gebruiker om naar het
-[gebruikersprofiel](/nl/for-students#gebruikersprofiel) te
-navigeren.
-
+Als cursusbeheerder kan je een overzicht met [oplossingen](/nl/for-students#oplossing) die in de [cursus](#cursus)
+ingediend werden, verkrijgen door te drukken op <span class="guilabel">Ingediende oplossingen</span> in de navigatiebalk.
+[picture submissions bovenaan](todo).
+Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
+[todo picture pijl naar filter](todo)
 ![image](images/staff.exercise_submissions_user_link.nl.png)
 
 Als je zoekt naar specifieke [oplossingen](/nl/for-students#oplossing) met de zoekbalk aan de bovenkant van het
@@ -672,8 +439,8 @@ Meest recente correcte oplossing per gebruiker
 > Beperkt het overzicht tot de meest recente correcte oplossing per
 > gebruiker.
 
-<span class="guilabel" id="cursusbeheerder-oplossingen-herevalueren">
+<span class="guilabel">
 Oplossingen herevalueren</span>
 (actie)
 
-> Herevalueert alle [oplossingen](/nl/for-students#oplossing) uit het overzicht.
+> [Herevalueert](/nl/exercise-series-management#oplossing-herevalueren) alle [oplossingen](/nl/for-students#oplossing) uit het overzicht.

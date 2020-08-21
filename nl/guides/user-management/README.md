@@ -41,8 +41,7 @@ In het **gebruikersoverzicht** worden de gebruikersnaam, de naam, het
 emailadres en [voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het
 [gebruikersprofiel](/nl/for-students#gebruikersprofiel)
 van alle gebruikers van jouw cursus. Voor de naam van elke [lesgever](#lesgever) en [beheerder](#beheerder)
-staat een
-[icoontje](#gebruikers-beheersrechten-icoontje) dat correspondeert met de
+staat een [icoontje](#gebruikers-beheersrechten-icoontje) dat correspondeert met de
 [beheersrechten](#beheersrechten) die aan
 de gebruiker [toegewezen](#beheersrechten-instellen) werden.
 

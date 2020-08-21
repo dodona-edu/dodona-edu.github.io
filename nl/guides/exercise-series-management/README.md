@@ -19,6 +19,15 @@ Een cursusbeheerder kan onbeperkt oefeningenreeksen aanmaken. Als cursusbeheerde
 Op deze pagina vind je rechtsboven de knop <span class="guilabel">Reeks aanmaken</span>.
 [todo nieuwe reeks knop]()
 
+![image](images/staff.course_series_new.nl.png)
+
+Druk op de naam van de [cursus](/nl/course-management#cursus) in de
+[navigatiebalk](/nl/for-students#navigatiebalk) om het
+[aanmaken](#oefeningenreeks-aanmaken)
+van de oefeningenreeks te annuleren.
+
+![image](images/staff.course_series_new_cancel.nl.png)
+
 Je komt op een formulier terecht waarin je de volgende eigenschappen van de reeks kan instellen:
 
 <h1 id="oefeningenreeks-eigenschappen"></h1>
@@ -157,12 +166,180 @@ toegevoegd werd. In het [leerpad](/nl/course-management#leerpad) wordt deze reek
 
 # Oefeningenreeks bewerken
 
-Op deze pagina kan je de [eigenschappen](#oefeningenreeks-eigenschappen) van een reeks bewerken en leeractiviteiten toevoegen. Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te drukken van de reeks in het Reeksen beheren-paneel of door <span class="guilabel">Reeks bewerken</span> te kiezen in het reeks-actiesmenu.
+Op de bewerkenpagina van een [oefeningenreeks](#oefeningenreeks) zie je een uitgebreide versie van het [reeks-aanmakenpaneel](#oefeningenreeks-aanmaken) waarin je naast het
+instellen van [eigenschappen](#oefeningenreeks-eigenschappen) ook oefeningen kunt koppelen aan de oefeningenreeks. Onder
+de hoofding <span class="guilabel">Oefeningen toevoegen</span>
+staat een overzicht van alle beschikbare oefeningen en onder de hoofding <span class="guilabel">Oefeningen in deze reeks</span> staat een overzicht van alle oefeningen die aan de oefeningenreeks gekoppeld werden.
+Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te drukken van de reeks in het Reeksen beheren-paneel of door <span class="guilabel">Reeks bewerken</span> te kiezen in het reeks-actiesmenu.
+[picture](todo)
 
-<h1 id="leeractiviteiten toevoegen"></h1>
+Druk op de [oefeningenreeks](#oefeningenreeks) in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanpassen te annuleren.
 
-Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Dit doe je door te klikken op het toevoegen- of verwijderen-icoontje aan de rechterkant van een oefening. Via de zoekbalk kan je bestaande oefeningen filteren op naam, beschikbare vertalingen, programmeertaal, labels, [repository](#todo-repository) of type.
+![image](images/staff.series_edit_cancel.nl.png)
+
+<h1 id="oefeningenreeks-oefeningen-toevoegen"></h1>
+
+Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Druk op de toevoegknop aan de rechterkant van een
+[oefening](#oefening) om de oefening aan
+de [oefeningenreeks](#oefeningenreeks) toe
+te voegen.
+
+![image](images/staff.series_add_exercise.nl.png)
+
+
+<h1 id="oefeningenreeks-oefeningen-verwijderen"></h1>
+Onder de hoofding <span clas="guilabel">Oefeningen in deze reeks</span> kan je aan de rechterkant van een
+[oefening](/nl/for-students#oefening) op de verwijderknop
+drukken om de oefening uit de
+[oefeningenreeks](#oefeningenreeks) te
+verwijderen.
+
+![image](images/staff.series_remove_exercise.nl.png)
+
+<h1 id="oefeningenreeks-oefeningen-herschikken"></h1>
+
+Versleep de verplaatsknop aan de linkerkant van de
+[oefeningen](#oefening) om de volgorde van
+de oefeningen aan te passen. De volgorde waarin de oefeningen onder de
+hoofding <span class="guilabel">Oefeningen in deze reeks</span>
+gerangschikt worden, is immers ook de volgorde waarin de oefeningen
+[weergegeven](#oefeningenreeks-weergeven)
+worden in de oefeningenreeks.
+
+![image](images/staff.series_move_exercise.nl.png)
+
+<h1 id="oefeningenreeks-oefeningen-zoeken"></h1>
+
+Via de zoekbalk kan je bestaande oefeningen filteren op naam, beschikbare vertalingen, programmeertaal, labels, [repository](#todo-repository) of type.
+
+![image](images/staff.series_search_exercises.nl.png)
+[//] # (todo uitleg en links)
+
+::: tip Belangrijk
+
+We veronderstellen hier dat de [oefeningen](/nl/for-students#oefening) die aan de
+[oefeningenreeks](#oefeningenreeks) moeten
+gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen,
+publiceren en delen van [oefeningen](#oefening) wordt besproken in [oefeningen beheren](/nl/exercise-management).
+
+[//] # (todo exercise management apart of iets met oefeningcollecties?)
+:::
+
+
+<h1 id="oefeningenreeks-oefeningen-afwerken"></h1>
+Druk op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de [reeks-eigenschappen](#oefeningenreeks-eigenschappen). Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
+
+![image](images/staff.series_edit_submit.nl.png)
+
+Na het afwerken navigeer je terug naar de
+[oefeningenreeks](#oefeningenreeks) in het
+[leerpad](#leerpad), waar je kunt
+vaststellen dat de nieuwe eigenschappen van de reeks meteen van
+toepassing zijn.
+
 
 # Oefeningenreeks verwijderen
 
+Uiteraard is het mogelijk om een reeks te verwijderen uit een cursus. De actie vind je analoog aan het [bewerken](#oefeningenreeks-bewerken) in het reeksen-beheren menu of in het reeks-actiesmenu.
+
+[picture](todo)
+
 # Oefeningenreeks herordenen
+
+Het kan handig zijn om reeksen in een cursus een bepaalde volgorde te geven, om ze bijvoorbeeld te sorteren volgens moeilijkheidsgraad. Standaard zullen ze gesorteerd worden in omgekeerd chronologische volgorde op basis van wanneer je ze toevoegt. Zo moeten studenten minder scrollen als ze een reeks willen maken. In het [reeksen-beheren](#oefeningenreeksen-beheren)-paneel kan je in de tabel van de reeds toegevoegde reeksen ze verslepen via het icoontje aan de linkerkant.
+
+# Oefeningenreeks beheren
+<h1 id="reeks-actiesmenu"></h1>
+
+[reeks acties](todo)
+
+Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-management#cursusbeheerder) kunnen uitvoeren op een reeks. Naast [bewerken](#oefeningenreeks-bewerken) en [verwijderen](#oefeningenreeks-verwijderen) zijn er nog enkele mogelijkheden:
+
+<span class="guilabel" id="oefeningenreeks-evalueren">Reeks evalueren</span>
+
+> Deze actie stelt je in staat om op een gestructureerde manier de oplossingen van studenten voor de reeks te evalueren. Je kan dan studenten selecteren om hun laatste inzending voor de deadline van feedback te voorzien. Dodona ondersteunt je door bij te houden welke studenten je reeds geëvalueeerd hebt en laat je ook toe om de feedback te publiceren wanneer je dit wenst. Je kan filteren op gebruikers die ingediend hebben en je kan eenvoudig de studenten overlopen via de <span class="guilabel">Volgende</span> knop.
+
+[todo evaluaties](todo pics)
+
+<span class="guilabel" id="oefeningenreeks-statusoverzicht">Statusoverzicht</span>
+
+> Toont een overzicht met de
+> [indienstatus](#oefeningenreeks-oefening-indienstatus) van alle
+> [cursusgebruikers](#cursusgebruiker)
+> voor alle [oefeningen](/nl/for-students#oefening) uit de
+> [oefeningenreeks](#oefeningenreeks). De
+> indienstatus wordt in het overzicht weergegeven met de gebruikelijke
+> [icoontjes](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje).
+>
+> ![image](images/staff.scoresheet.nl.png)
+>
+> Druk op de naam van een
+> [cursusgebruiker](#cursusgebruiker) om
+> naar de [cursusoverzichtspagina](/nl/user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
+>
+> ![image](images/staff.scoresheet_user_link.nl.png)
+>
+> Druk op het
+> [icoontje](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje) van een
+> [indienstatus](#/nl/for-studentsoefeningenreeks-oefening-indienstatus) om naar de [oplossing](/nl/for-students#oplossing) te navigeren die gebruikt werd om de
+> [indienstatus](#/nl/for-studentsoefeningenreeks oefening indienstatus) te bepalen (als de cursusgebruiker effectief een oplossing  heeft [ingediend](/nl/for-students#oplossing indienen) op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
+>
+> ![image](images/staff.scoresheet_status_icon.nl.png)
+
+<span class="guilabel" id="oefeningenreeks-oplossingen-exporteren">Oplossingen van studenten exporteren</span>
+
+> Deze acties stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te downloaden. Je kan kiezen welke oefeningen in rekening gebracht moeten worden. 
+[choose exercises](todo)
+
+Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden. Door te klikken op <span class="guilabel">Start export</span> kom je de exportpagina die je zal verwittigen als je export klaar is, want dit kan even duren.
+
+[todo export pagina](todo)
+
+<span class="guilabel" id="oefeningenreeks-oplossingen-herevalueren">
+Oplossingen hertesten
+</span>
+
+> [Herevalueert](#oplossing-herevalueren)
+> alle [oplossingen](/nl/for-students#oplossing) die
+> [cursusgebruikers](#cursusgebruiker)
+> [ingediend](/nl/for-students#oplossing indienen) hebben
+> voor [oefeningen](/nl/for-students#oefening) van de
+> [oefeningenreeks](#oefeningenreeks). Dit kan nuttig zijn als een fout opgemerkt wordt in de automatische tests en de oplossingen opnieuw gecontroleerd moeten worden.
+
+# Oplossing herevalueren
+Bij het herevalueren van een oplossing wordt het
+[beoordelingsproces](/nl/for-students#oplossing-beoordelingsproces) opnieuw uitgevoerd zonder dat de oplossing opnieuw moet
+[ingediend](/nl/for-students#oplossing-indienen) worden.
+Op die manier blijft het originele
+[tijdstip](/nl/for-students#oplossing-tijdstip) van
+indienen behouden. Als de configuratie van de
+[oefening](/nl/for-students#oefening) aangepast werd sinds
+de vorige beoordeling van de oplossing, dan kan de
+[status](/nl/for-students#oplossing-status) van de
+oplossing wijzigen door het herevalueren.
+
+::: tip Belangrijk
+
+Bij het [herevalueren](#oplossing-herevalueren) krijgen [oplossingen](/nl/for-students#oplossing) een lagere prioriteit in de
+[wachtrij](/nl/for-students#oplossing wachtrij) dan
+oplossingen die nieuw [ingediend](/nl/for-students#oplossing-indienen) worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertaging, maar kan het herevalueren wel langer duren.
+:::
+
+::: tip Belangrijk
+
+Gebruikers krijgen geen melding van het platform als hun
+[oplossingen](/nl/for-students#oplossing)
+[geherevalueerd](#oplossing herevalueren)
+worden. Als je beslist om oplossingen te herevalueren, is het belangrijk om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de [status](/nl/for-students#oplossing-status) van
+[oplossingen](/nl/for-students#oplossing) die ze vroeger
+[ingediend](/nl/for-students#oplossing-indienen) hebben
+als van hun [indienstatus](#oefeningenreeks-oefening-indienstatus) voor [oefeningen](/nl/for-students#oefening)
+in de [oefeningenreeksen](#oefeningenreeks) van de cursus.
+:::
+
+Druk op de herhaalknop in de rechterbovenhoek van de
+[feedbackpagina](/nl/for-students#feedbackpagina) om een
+[oplossing](/nl/for-students#oplossing) te
+[herevalueren](#oplossing herevalueren).
+
+![image](images/staff.feedback_evaluate.nl.png)
