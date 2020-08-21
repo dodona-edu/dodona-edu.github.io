@@ -6,7 +6,7 @@ next: ../../getting-started/
 
 ## Navigeren naar een cursus
 
-Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#navigeren-naar-een-oefening) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent dan kan je binnen de cursus ook [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indienen](#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
+Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#navigeren-naar-een-oefening) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent dan kan je binnen de cursus ook [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indienen](../exercises/#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
 
 -   Aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop <span class="guilabel">GA NAAR DEZE CURSUS</span> te drukken.
 
@@ -45,7 +45,7 @@ Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de c
 
 <h1 id="deadline"></h1>
 
-Voor elke [oefeningenreeks]() kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
+Voor elke [oefeningenreeks]() kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
 
 Onder de naam van een [oefeningenreeks]() staat optioneel een beschrijving, met daaronder een oplijsting van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de reeks. De lijst toont voor elke oefening [statistieken](#statistieken) en je [indienstatus](#indienstatus). Vóór elke oefening in de lijst staat ook een [icoontje](#indienstatus) dat correspondeert met je indienstatus voor de oefening.
 
@@ -109,7 +109,7 @@ Downloadt een ZIP-bestand dat voor elke [oefening](../exercises/#navigeren-naar-
 
 ## Registreren voor een cursus
 
-Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](../exercises/#navigeren-naar-een-oplossing) kan [indienen](#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de cursus.
+Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](../exercises/#navigeren-naar-een-oplossing) kan [indienen](../exercises/#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de cursus.
 
 <h1 id="manuele-registratie"/>
 

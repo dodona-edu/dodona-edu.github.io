@@ -57,6 +57,8 @@ Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldi
 Voor authenticatie met gebruikersaccounts van externe onderwijs- of onderzoeksinstellingen ondersteunt Dodona zowel [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) als [OAuth](https://nl.wikipedia.org/wiki/OAuth). Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
 :::
 
+<h1 id="persoonsgegevens-doorsturen"/>
+
 Als dit de eerste keer is dat je [aanmeldt](#aanmelden) op Dodona dan wordt er automatisch een nieuwe [gebruikersaccount](#aanmelden) aangemaakt op basis van de [persoonsgegevens](#instellen-van-persoonlijke-voorkeuren) die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling. In het [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) van deze gebruikersaccount kan je [persoonlijke voorkeuren](#instellen-van-persoonlijke-voorkeuren) instellen voor de [taal](#selecteren-van-de-taal) en de tijdzone die door Dodona gebruikt worden.
 
 ::: tip Belangrijk
