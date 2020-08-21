@@ -6,13 +6,13 @@ next: ./login-and-settings/
 
 # Dodona voor studenten
 
-Als student kan je [registreren](/nl/guides/for-students/courses/#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](/nl/guides/for-students/exercises/#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](/nl/guides/for-students/exercises/#navigeren-naar-een-oplossing) [indienen](/nl/guides/for-students/exercises/#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](/nl/guides/for-students/exercises/#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](/nl/guides/for-students/login-and-settings/#aanmelden) beschikt en dat je [aangemeld](/nl/guides/for-students/login-and-settings/#aanmelden) bent op Dodona.
+Als student kan je [registreren](./courses/#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](./exercises/#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](./exercises/#navigeren-naar-een-oplossing) [indienen](./exercises/#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](./exercises/#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](./login-and-settings/#aanmelden) beschikt en dat je [aangemeld](./login-and-settings/#aanmelden) bent op Dodona.
 
 ## Nederlandse handleidingen voor studenten
 
-* [Aanmelden & gebruikersinstellingen](/nl/guides/for-students/login-and-settings/)
-* [Oefeningen handleiding](/nl/guides/for-students/exercises/)
-* [Cursus handleiding](/nl/guides/for-students/courses/)
+* [Aanmelden & gebruikersinstellingen](./login-and-settings/)
+* [Oefeningen handleiding](./exercises/)
+* [Cursus handleiding](./courses/)
 
 ## Contact opnemen
 

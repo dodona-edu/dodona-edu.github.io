@@ -7,11 +7,11 @@ description: "Tutorial: oefeningen handleiding voor studenten"
 
 Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-naar-een-oplossing) kunt [indienen](#indienen-van-een-oplossing). Cursusbeheerders kunnen deze oefeningen aan hun [cursussen]() toevoegen. Daardoor zijn er verschillende plaatsen waar je een oefening kunt selecteren:
 
--   Op een [cursuspagina](/nl/guides/for-students/courses/#cursuspagina) kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te drukken.
+-   Op een [cursuspagina](../courses/#cursuspagina) kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te drukken.
 
     ![image](./student.course_exercise_selection.nl.png)
 
--   Het bovenste paneel in de rechterkolom van je [startpagina](/nl/guides/for-students/login-and-settings/#startpagina) bevat een lijst <span class="guilabel">RECENTE OEFENINGEN</span> met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](/nl/guides/for-students/courses/#indienstatus) dat correspondeert met je [indienstatus](/nl/guides/for-students/courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
+-   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst <span class="guilabel">RECENTE OEFENINGEN</span> met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
 
     ![image](./student.exercise_all_submissions_page.nl.png)
 
@@ -23,7 +23,7 @@ Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-e
 
 ::: tip
 
-Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de [cursuspagina](/nl/guides/for-students/courses/#cursuspagina). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
+Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de [cursuspagina](../courses/#cursuspagina). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
 
 ![image](./student.exercise_crumbs.nl.png)
 :::
@@ -50,7 +50,7 @@ Om een aantal belangrijke redenen **raden we ten stelligste af om rechtstreeks b
 Dien je broncode pas in op Dodona als je ervan overtuigd bent dat ze geen fouten meer bevat en als je ze wilt uittesten op een groter aantal testgevallen. Selecteer hiervoor de broncode in de code editor van je IDE, kopiëren ze naar het klembord en plak ze daarna in de code editor van Dodona. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere programmeeropdrachten aan te pakken dan enkel de oefeningen uit Dodona.
 :::
 
-Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab <span class="guilabel">Oplossingen</span> geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus]() hebt ingediend voor de [oefening](#navigeren-naar-een-oefening). Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het [tijdstip](#tijdstip) van indienen, de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](/nl/guides/for-students/courses/#indienstatus) dat correspondeert met de status van de oplossing.
+Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab <span class="guilabel">Oplossingen</span> geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus]() hebt ingediend voor de [oefening](#navigeren-naar-een-oefening). Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het [tijdstip](#tijdstip) van indienen, de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
 
 <h1 id="wachtrij"/>
 
@@ -75,11 +75,11 @@ Er zit geen beperking op het aantal keer dat je een [oplossing](#navigeren-naar-
 
 Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
 
--   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu](/nl/guides/for-students/login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina](/nl/guides/for-students/login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
+-   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
     ![image](./student.all_submissions_link.nl.png)
 
--   Druk op de statistiek <span class="guilabel">Inzendingen</span> in het kaartje van een cursus op je [startpagina](/nl/guides/for-students/login-and-settings/#startpagina) of op de [cursuspagina](/nl/guides/for-students/courses/#cursuspagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
+-   Druk op de statistiek <span class="guilabel">Inzendingen</span> in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de [cursuspagina](../courses/#cursuspagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
 
     ![image](./student.course_submissions.nl.png)
 
@@ -91,7 +91,7 @@ Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oploss
 
     ![image](./student.exercise_course_submissions_page.nl.png)
 
-Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossing) het [tijdstip](#tijdstip) van [indienen](#indienen-van-een-oplossing), de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](/nl/guides/for-students/courses/#indienstatus) dat correspondeert met de [status](#status) van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
+Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossing) het [tijdstip](#tijdstip) van [indienen](#indienen-van-een-oplossing), de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat correspondeert met de [status](#status) van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
 ![image](./student.all_submissions.nl.png)
 
@@ -116,7 +116,7 @@ De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](
 
 <span class="guilabel">Cursus</span>
 
-De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de [cursuspagina](/nl/guides/for-students/courses/#cursuspagina) te navigeren.
+De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de [cursuspagina](../courses/#cursuspagina) te navigeren.
 
 ::: details Notitie
 Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) niet binnen de context van een [cursus]() werd [ingediend](#indienen-van-een-oplossing).
