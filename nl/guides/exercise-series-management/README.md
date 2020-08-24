@@ -286,14 +286,9 @@ Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-manag
 >
 > ![image](images/staff.scoresheet_status_icon.nl.png)
 
-<span class="guilabel" id="oefeningenreeks-oplossingen-exporteren">Oplossingen van studenten exporteren</span>
+<span class="guilabel">Oplossingen van studenten exporteren</span>
 
-> Deze acties stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te downloaden. Je kan kiezen welke oefeningen in rekening gebracht moeten worden. 
-[choose exercises](todo)
-
-Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden. Door te klikken op <span class="guilabel">Start export</span> kom je de exportpagina die je zal verwittigen als je export klaar is, want dit kan even duren.
-
-[todo export pagina](todo)
+> Deze acties stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te [exporteren](#oefeningenreeks-oplossingen-exporteren).
 
 <span class="guilabel" id="oefeningenreeks-oplossingen-herevalueren">
 Oplossingen hertesten
@@ -384,5 +379,29 @@ Via de navigatiebalk bovenaan kan je makkelijk terugkeren naar de evaluatiepagin
 Je kan een reeks slechts één keer evalueren. Dit hoef je echter niet in één stuk te doen, je kan later terugkeren naar de evaluatie via het reeks-actiesmenu, waar nu <span class="guilabel">Evaluatie bekijken</span> staat.
 
 ![evaluatie bekijken](./staff.series_actions_check_evaluation.png)
+
+
+# Oefeningenreeks oplossingen exporteren
+
+In het actiesmenu van een reeks kan je als lesgever ook kiezen om de ingezonden code van je studenten te exporteren. Dit is handig als je liever op papier verbetert.
+![reeks exporteren](./staff.series_export_action.png)
+
+Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst. 
+![oefeningen kiezen](./staff.series_export_exercise_choice.png)
+
+Als je ze allemaal wenst te downloaden, dan kies je het bovenste selectievakje. Daarna klik je op <span class="guilabel">Volgende stap</span> om verder te gaan.
+![volgende stap](./staff.series_export_exercises_chosen.png)
+
+
+Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden. 
+
+![export opties](./staff.series_export_options.png)
+
+Klik op <span class="guilabel">Start export</span> om de download te starten.
+![start export](./staff.series_export_start.png)
+
+Je komt op de exportpagina die je zal verwittigen als je export klaar is, want dit kan even duren.
+![export gestart](./staff.series_export_started.png)
+
 
 
