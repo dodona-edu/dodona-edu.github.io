@@ -68,17 +68,17 @@ Mogelijke weergaven van je [indienstatus](#indienstatus) vóór het verstrijken 
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
   | <span class="guilabel">niet opgelost</span> | | geen [oplossing](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) (vóór de [deadline](#deadline)) | 
-  | <span class="guilabel">verkeerd</span> | ![image](./course_exercise_status_icons/red_cross.png) | laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) verkeerd was |
-  | <span class="guilabel">correct</span> | ![image](./course_exercise_status_icons/green_check.png) |laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) correct was (vóór de [deadline](#deadline)) |
+  | <span class="guilabel">verkeerd</span> | ![image](./course_exercise_status_icons/wrong.png) | laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) verkeerd was |
+  | <span class="guilabel">correct</span> | ![image](./course_exercise_status_icons/before_deadline.png) |laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) correct was (vóór de [deadline](#deadline)) |
 
 Mogelijke weergaven van je [indienstatus](#indienstatus) nadat de [deadline](#deadline) verstreken is:
 
   |indienstatus | icoontje | weergegeven als je |
   |-------------|----------|--------------------|
-  | <span class="guilabel">correct</span> (groen) | ![image](./course_exercise_status_icons/green_check.png) | laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) vóór de [deadline](#deadline) correct is
-  | <span class="guilabel">deadline gemist</span> (rood) | | geen [oplossingen](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing)|
-  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/red_cross.png) | als je laatst ingediende oplossing niet correct is |
-  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/red_check.png) | als je na de [deadline](#deadline) een correcte oplossing hebt ingediend |
+  | <span class="guilabel">correct</span> (groen) | ![image](./course_exercise_status_icons/before_deadline.png) | laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) vóór de [deadline](#deadline) correct is
+  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | geen [oplossingen](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing)|
+  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
+  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je na de [deadline](#deadline) een correcte oplossing hebt ingediend |
 
 ::: tip Belangrijk
 
