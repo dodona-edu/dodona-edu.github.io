@@ -12,7 +12,7 @@ For each judge in Dodona, there is one git repository. This git repository requi
 
 ## 1. Adding a Judge
 
-As a Dodona staff member, you can go to the "Judges" page through the administrator dropdown. To add a new judge, hit the `+` action button. Supply a human-readable name, the name of the Docker image the judge should run in, the git clone url, the pathname (where to store the repository on the server relative to the directory containing all judges, usually the name of the repository, however, this needs to be unique) and the [feedback renderer](#_4-feedback-renderers).
+As a Dodona staff member, you can go to the "Judges" page through the administrator header in the hamburger menu. To add a new judge, hit the `+` action button. Supply a human-readable name, the name of the Docker image the judge should run in, the git clone url, the pathname (where to store the repository on the server relative to the directory containing all judges, usually the name of the repository, however, this needs to be unique) and the [feedback renderer](#_4-feedback-renderers).
 
 ## 2. Repository Structure
 
