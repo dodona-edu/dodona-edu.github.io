@@ -35,11 +35,11 @@ de knop <span class="guilabel">CURSUS AANMAKEN</span> te drukken
 in de rechterbovenhoek van het
 [cursusoverzicht](#cursusoverzicht).
 
-![create course](./create-course.png)
+![create course](./staff.courses_new_link.png)
 
 Om een nieuwe [cursus](#cursus) aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus, ofwel maak je een volledige nieuwe cursus aan.
 
-![new course menu](./new-course-menu.png)
+![new course menu](./staff.course_new_options.png)
 
 Druk op <span class="guilabel">Dodona</span> in de
 [navigatiebalk](/nl/for-students#navigatiebalk) om het
@@ -48,7 +48,7 @@ annuleren.
 
 Als je vertrekt vanaf een bestaande [cursus](#cursus), dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
-![choose existing course](./choose-existing-course.png)
+![choose existing course](./staff.course_new_copy.png)
 
 Vervolgens moet je aangeven welke elementen van de [cursus](#cursus) je wil overnemen. De reeksstructuur wordt altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de begeleiders wil overnemen. Ten slotte kan je ook andere instellingen kiezen.
 
@@ -57,7 +57,7 @@ Vervolgens moet je aangeven welke elementen van de [cursus](#cursus) je wil over
 ## Cursuseigenschappen instellen
 Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden vooraf ingevuld met de waarden van de gekopieerde [cursus](#cursus) indien deze optie gekozen werd. Volgende [eigenschappen](#cursuseigenschappen) kunnen ingesteld worden.
 
-![image](./course-properties.png)
+![image](./staff.course_new_empty.png)
 
 <span class="guilabel">Naam</span>
 
@@ -96,7 +96,7 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 >
 > > Alleen [cursusbeheerders](#cursusbeheerder) zien de [cursus](#cursus) in het [cursusoverzicht](#cursusoverzicht) en op hun [startpagina](/nl/for-students#startpagina). Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de [cursuspagina](/nl/for-students#cursuspagina) zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de [registratielink](#registratielink) gebruiken.
 > >
-> > ![image](./hidden-course.png)
+> > ![image](./staff.courses_hidden_course.png)
 
 <span class="guilabel">Registratieprocedure</span>
 
@@ -165,7 +165,7 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 > cursus proberen te navigeren, dan zien ze enkel een melding dat ze
 > niet de geen toegangsrechten hebben voor de cursus.
 >
-> ![image](images/student.hidden_course_unregistered_denied_message.nl.png)
+> ![image](./student.hidden_course_unregistered_denied_message.png)
 >
 > ## Registratielink
 > Gebruikers kunnen zich enkel
@@ -180,7 +180,7 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 > worden ze verzocht om zich voor de cursus te registreren als de
 > [registratieprocedure](#cursus-registratieprocedure) dat toelaat.
 >
-> ![image](images/student.hidden_course_unregistered_link_message.nl.png)
+> ![image](./student.hidden_course_unregistered_link_message.png)
 >
 <span id="cursus-registratielink-kopiëren"></span>
 
@@ -198,7 +198,7 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 > mogen registreren. Druk op de kopieerknop naast de registratielink om
 > de registratielink naar het klembord te kopiëren. 
 >
-> ![image](images/staff.hidden_course_registration_link.nl.png)
+> ![image](./staff.hidden_course_registration_link.png)
 >
 > <span id="cursus-token-vernieuwen"></span>
 > <span id="cursus-registratielink-vernieuwen"></span> 
@@ -208,12 +208,12 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 > en wordt het oude token onbruikbaar gemaakt. De registratielink wordt
 > meteen ook aangepast aan het nieuwe token.
 >
-> ![image](images/staff.registration_link_renew.nl.png)
+> ![image](./staff.hidden_course_registration_link_renew.png)
 >
 > De [registratielink](#cursus-registratielink) wordt ook weergegeven op de
 > [cursuspagina](#cursuspagina).
 >
-> ![image](images/staff.registration_link.nl.png)
+> ![image](./staff.hidden_course_registration_link.png)
 
 Druk op de afwerkknop in de rechteronderhoek van de pagina
 <span class="guilabel">CURSUS AANMAKENs</span> om het
@@ -222,7 +222,7 @@ Druk op de afwerkknop in de rechteronderhoek van de pagina
 [eigenschappen](#cursus-eigenschappen)
 effectief door te voeren.
 
-![image](images/staff.new_course_submit.nl.png)
+![image](./staff.course_new_submit.png)
 
 Na het aanmaken van de nieuwe cursus navigeer je naar de
 [cursuspagina](#cursuspagina), waar je
@@ -232,13 +232,13 @@ als [cursusgebruiker](#cursusgebruiker) en
 dat je [aangeduid](#cursusbeheerders-aanduiden) bent als
 [cursusbeheerder](#cursusbeheerder).
 
-![image](images/staff.created_course.nl.png)
+![image](./staff.course_created.png)
 
 # Cursus navigeren
 
 Je kan de [cursuspagina](#cursuspagina) van een [cursus](#cursus) bereiken op verschillende manieren. Vanaf de landingspagina kan je cursussen zoeken door te klikken op <span class="guilabel">Meer cursussen</span>. Vanop eender welke pagina kan je via het hamburgermenu in de linkerbovenhoek snelkoppelingen vinden naar jouw cursusssen onder het tabblad <span class="guilabel">Cursussen</span> en de cursus-zoekenpagina via het gelijknamige knopje on het tabblad <span class="guilabel">Admin</span>. Op de zoeken-pagina kan je filteren op naam van de cursus en op het instituut waartoe de cursus behoort. Ten slotte dien je enkel nog de gewenste cursus aan te klikken om op de cursuspagina terecht te komen.
 
-[todo](todo)
+[gefilterde cursussen](./staff.courses_filtered.png)
 
 # Cursus bewerken
 
@@ -248,26 +248,24 @@ kan je de [eigenschappen](#cursuseigenschappen) van een [cursus](#cursus)
 aanpassen door op het bewerken-icoontje te drukken bovenaan de
 [cursuspagina](#cursuspagina).
 
-![image](images/staff.course_edit_button.nl.png)
+![image](./staff.course_edit_button.png)
 
 Druk op de [cursus](#cursus) in de
 [navigatiebalk](/nl/for-students#navigatiebalk) om het
 aanpassen te annuleren.
 
-![image](images/staff.course_edit_cancel.nl.png)
+![image](./staff.course_edit_cancel.png)
 
 Druk na het aanpassen op de afwerkknop in de rechterbovenhoek van het
 paneel om de nieuwe
 [cursuseigenschappen](#cursuseigenschappen) effectief in te stellen. 
 Alternatief kan je ook op de <span class="guilabel">AANPASSEN</span> drukken onderaan het paneel.
 
-![image](images/staff.course_edit_submit_link.nl.png)
-
 Na het afwerken navigeer je terug naar de
 [cursuspagina](#cursuspagina) waar de
 nieuwe [cursuseigenschappen](#cursuseigenschappen) onmiddellijk van toepassing zijn.
 
-![image](images/staff.course_after_edit.nl.png)
+![image](./staff.course_after_edit.png)
 
 
 # Leerpad
@@ -283,17 +281,7 @@ waaraan je [oefeningen](#oefening) kunt koppelen.
 # Oefeningenreeks toevoegen
 
 Druk in het [leerpad](#leerpad) op de knop
-<span class="guilabel">REEKS AANMAKEN</span> om een nieuwe
-oefeningenreeks aan het leerpad toe te voegen.
-
-![image](images/staff.course_series_new_link.nl.png)
-
-<span id="oefeningenreeks-eigenschappen-instellen"></span>
-In het paneel <span class="guilabel">Nieuwe oefeningenreeks</span> kan je de
-[eigenschappen](#oefeningenreeks-eigenschappen) van de nieuwe
-[oefeningenreeks](#oefeningenreeks)
-instellen.
-
+<span class="guilabel">Reeksen beheren</span> om een nieuwe oefeningenreeks aan het leerpad toe te voegen. Voor meer details, zie [oefeningenreeksen beheren](/nl/exercise-series-management).
 
 
 # Cursusgebruikers beheren
@@ -317,7 +305,7 @@ Aan de onderkant van de [cursuspagina](#cursuspagina) zie je onder de hoofding <
 opgelijst worden met hun gebruikersnaam, naam, emailadres en
 [voortgangsstatistieken](/nl/user-management#voortgangsstatistieken).
 
-![image](images/staff.course_users.nl.png)
+![image](./staff.course_users.png)
 
 Het [zoeken](/nl/user-management#gebruiker-zoeken) en
 [selecteren](/nl/user-management#gebruiker-selecteren)
@@ -360,10 +348,10 @@ cursusgebruikers waarmee je hun
 
 |tab                                                 |knop                    |actie |
 -----------------------------------------------------|------------------------|------| 
-<span class="guilabel">Geregistreerd</span>|          ![image](images/staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
-<span class="guilabel">Uitgeschreven</span>|          ![image](images/staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
-<span class="guilabel">Registratieverzoeken</span>|   ![image](images/staff_registration_icons/approve.png)|     goedkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [geregistreerd](/nl/for-students#cursus-registreren) wordt voor de cursus|
-<span class="guilabel">Registratieverzoeken</span>|   ![image](images/staff_registration_icons/decline.png)|      afkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [uitgeschreven](/nl/for-students#cursus-uitschrijven) wordt uit de cursus|
+<span class="guilabel">Geregistreerd</span>|          ![image](./staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
+<span class="guilabel">Uitgeschreven</span>|          ![image](./staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
+<span class="guilabel">Registratieverzoeken</span>|   ![image](./staff_registration_icons/approve.png)|     goedkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [geregistreerd](/nl/for-students#cursus-registreren) wordt voor de cursus|
+<span class="guilabel">Registratieverzoeken</span>|   ![image](./staff_registration_icons/decline.png)|      afkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [uitgeschreven](/nl/for-students#cursus-uitschrijven) wordt uit de cursus|
 
 ### Cursusbeheerders aanduiden
 
@@ -379,20 +367,19 @@ beheren van cursussen echter geen bijkomende rechten ten opzichte van
 andere cursusbeheerders en kunnen ook
 geen cursussen beheren waarvoor ze geen cursusbeheerder zijn.
 
-In de tab <span class="guilabel">Geregistreerd</span> van het
-[overzicht](#cursusgebruikersoverzicht)
+In de tab <span class="guilabel">Geregistreerd</span> van het [overzicht](#cursusgebruikersoverzicht)
 met alle [cursusgebruikers](#cursusgebruiker) kan je de cursusbeheerders herkennen aan het icoontje in de
 linkermarge.
 
-![image](images/staff.course_users_admin.nl.png)
+![image](./staff.course_users_admin.png)
 
 In de tab kan je de volgende actieknoppen gebruiken om cursusbeheerders
 aan te duiden:
 
 |knop                                                              |actie                                                                                |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-![image](images/staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
-![image](images/staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
+![image](./staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
+![image](./staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
 
 ::: tip Belangrijk
 
@@ -415,16 +402,12 @@ beheersrechten voor de cursus.
 
 Als cursusbeheerder kan je een overzicht met [oplossingen](/nl/for-students#oplossing) die in de [cursus](#cursus)
 ingediend werden, verkrijgen door te drukken op <span class="guilabel">Ingediende oplossingen</span> in de navigatiebalk.
-[picture submissions bovenaan](todo).
+![cursus oplossingen link](./staff.course_submissions_link.png).
 Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
-[todo picture pijl naar filter](todo)
-![image](images/staff.exercise_submissions_user_link.nl.png)
+[filter submissions](./staff.course_submissions_filter.png)
 
-Als je zoekt naar specifieke [oplossingen](/nl/for-students#oplossing) met de zoekbalk aan de bovenkant van het
-[overzicht](#cursusbeheerder-oplossingen-overzicht), dan wordt ook gezocht op de
-[naam](/nl/for-students#persoonsgegevens) van gebruikers.
+![filtered submissions](./staff.course_submissions_filtered.png)
 
-![image](images/staff.exercise_submissions_search.nl.png)
 
 <h1 id="cursusbeheerder-oplossingen-overzicht-menu"></h1>
 Het overzicht heeft voor
