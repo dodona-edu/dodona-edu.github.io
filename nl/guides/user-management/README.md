@@ -70,7 +70,7 @@ De **voortgangsstatistieken** van een gebruiker worden weergegeven middels een v
 
 Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de [cursus](/nl/course-management#cursus). Je krijgt de [voortgangsstatistieken](#gebruiker-voortgangsstatistieken) te zien, alsook grafieken over de activiteiten van deze gebruiker en een overzicht per reeks van de status van elke [oefening](/nl/for-students#oefening).
 
-![cursusoverzicht](./user_course_overview.png)
+![cursusoverzicht](./staff.user_course_overview.png)
 
 Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
 **beheersrechten** nodig. Als [lesgever](#lesgever) kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande [icoontjes](#icoontjes-voor-beheersrechten). Je kan dan ook de acties aan de rechterkant gebruiken om de [beheersrechten](#beheersrechten) van een gebruiker in te stellen.
