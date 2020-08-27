@@ -19,6 +19,7 @@ werden. Een uitzondering is de cursusbeheerder, deze heeft lesgeverrechten binne
 Je herkent dat je [lesgever](#lesgever) bent als je het **beheersmenu** (menu <span class="guilabel">Admin</span>) ziet wanneer je de aan de
 linkerkant van de pagina het hamburgermenu openklikt.
 
+![location](./staff.admin_menu_location.png)
 ![image](./staff.admin_menu.png)
 :::
 
@@ -34,7 +35,7 @@ het [aanduiden](/nl/course-management#cursusbeheerders-aanduiden) van cursusbehe
 Als [lesgever](#lesgever) navigeer je naar
 het [gebruikersoverzicht](#gebruikersoverzicht) van je cursus door naar je cursus te navigeren en vervolgens op <span class="guilabal">Geregistreerde gebruikers</span> te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
 
-![admin menu users](./staff.admin_menu_users.png)
+![admin menu users](./staff.course_users.png)
 
 ## Gebruikersoverzicht
 In het **gebruikersoverzicht** worden de gebruikersnaam, de naam, het
@@ -59,7 +60,7 @@ Druk op de naam om naar de
 [cursusoverzichtspagina](#cursusoverzichtspagina) van de
 gebruiker te [navigeren](#gebruiker-navigeren).
 
-![image](./staff.user_profile_link.png)
+![image](./staff.users_filtered_link.png)
 
 ## Gebruiker voortgangsstatistieken
 De **voortgangsstatistieken** van een gebruiker worden weergegeven middels een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel [oefeningen](/nl/for-students#oefening) in de cursus waarvoor de gebruiker een *correcte* [oplossing](/nl/for-students#oplossing) voor heeft [ingediend](/nl/for-students#oplossing-indienen). Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog niet correct heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog niet aan begonnen is.
