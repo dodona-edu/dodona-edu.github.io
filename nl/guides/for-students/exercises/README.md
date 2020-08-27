@@ -10,23 +10,23 @@ Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-n
 
 -   Op een [cursuspagina](../courses/#cursuspagina) kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te drukken.
 
-    ![image](./student.course_exercise_selection.nl.png)
+    ![image](./student.course_exercise_selection.png)
 
 -   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst <span class="guilabel">RECENTE OEFENINGEN</span> met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
 
-    ![image](./student.exercise_all_submissions_page.nl.png)
+    ![image](./student.exercise_all_submissions_page.png)
 
 <h1 id="oefeningpagina"></h1>
 
 Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
-![De [ISBN](https://dodona.ugent.be/en/exercises/910319224/) oefening op Dodona.](./student.exercise_start.nl.png)
+![De [ISBN](https://dodona.ugent.be/en/exercises/910319224/) oefening op Dodona.](./student.exercise_start.png)
 
 ::: tip
 
 Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de [cursuspagina](../courses/#cursuspagina). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
 
-![image](./student.exercise_crumbs.nl.png)
+![image](./student.exercise_crumbs.png)
 :::
 
 ::: tip
@@ -40,7 +40,7 @@ Bovendien is het mogelijk dat bij het opstellen van de [oefening](#navigeren-naa
 
 Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Druk hiervoor op de tab <span class="guilabel">Indienen</span> als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Druk daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
 
-![image](./student.exercise_before_submit.nl.png)
+![image](./student.exercise_before_submit.png)
 
 ::: tip
 
@@ -65,7 +65,7 @@ Je kunt het beoordelingsproces van een [oplossing](#navigeren-naar-een-oplossing
 
 Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je [oplossing](#navigeren-naar-een-oplossing) krijgt ze haar finale [status](#status) en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab <span class="guilabel">Feedback</span>.
 
-![image](./student.exercise_feedback_correct_tab.nl.png)
+![image](./student.exercise_feedback_correct_tab.png)
 
 ::: tip
 
@@ -78,35 +78,35 @@ Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oploss
 
 -   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
-    ![image](./student.all_submissions_link.nl.png)
+    ![image](./student.all_submissions_link.png)
 
 -   Druk op de statistiek <span class="guilabel">Inzendingen</span> in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de [cursuspagina](../courses/#cursuspagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
 
-    ![image](./student.course_submissions.nl.png)
+    ![image](./student.course_submissions.png)
 
 -   Selecteer de tab <span class="guilabel">Oplossingen</span> op een [oefeningpagina](#oefeningpagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je hebt [ingediend](#indienen-van-een-oplossing) voor de [oefening](#navigeren-naar-een-oefening). Als je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt binnen een [cursus](), dan is het overzicht bijkomend beperkt tot alle oplossingen die je binnen de cursus hebt ingediend.
 
-    ![image](./student.exercise_submissions_tab.nl.png)
+    ![image](./student.exercise_submissions_tab.png)
 
 -   Druk in een [oefeningenreeks]() op het groter dan symbool aan de rechterkant van een [oefening](#navigeren-naar-een-oefening) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing) voor de oefening.
 
-    ![image](./student.exercise_course_submissions_page.nl.png)
+    ![image](./student.exercise_course_submissions_page.png)
 
 Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossing) het [tijdstip](#tijdstip) van [indienen](#indienen-van-een-oplossing), de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat correspondeert met de [status](#status) van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
-![image](./student.all_submissions.nl.png)
+![image](./student.all_submissions.png)
 
 <h1 id="feedbackpagina"/>
 
 Je kunt een [oplossing](#navigeren-naar-een-oplossing) selecteren door in een oplossingenoverzicht op het groter dan symbool te drukken aan rechterkant van de oplossing. Hierdoor navigeer je naar de **feedbackpagina** met de gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing.
 
-![image](./student.submissions_to_exercise_feedback.nl.png)
+![image](./student.submissions_to_exercise_feedback.png)
 
 ## Interpreteren van feedback
 
 Op de [feedbackpagina](#feedbackpagina) staat gedetailleerde **feedback** over een [oplossing](#navigeren-naar-een-oplossing) die je [ingediend](#indienen-van-een-oplossing) hebt voor een [oefening](#navigeren-naar-een-oefening). Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een **judge** die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
 
-![image](./student.exercise_feedback_correct_page.nl.png)
+![image](./student.exercise_feedback_correct_page.png)
 
 Aan de bovenkant van de [feedbackpagina](#feedbackpagina) staan de volgende gegevens over de [oplossing](#navigeren-naar-een-oplossing):
 
@@ -159,11 +159,11 @@ Korte motivering van de [judge](#interpreteren-van-feedback) bij de [status](#st
 
 Daaronder staat meer gedetailleerde [feedback](#interpreteren-van-feedback) die de [judge](#interpreteren-van-feedback) kan uitgesplitst hebben over meerdere **tabs**. Naast de naam van een tab kan aan de rechterkant een **badge** staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab. Het staat de judge vrij om te beslissen of en op welke manier deze fouten geteld worden. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de waarde voor de badge te bepalen.
 
-![image](./student.exercise_feedback_incorrect_tab.nl.png)
+![image](./student.exercise_feedback_incorrect_tab.png)
 
 De laatste [tab](#tabs) heeft altijd de naam <span class="guilabel">Code</span> en bevat de broncode van de [oplossing](#navigeren-naar-een-oplossing). Op bepaalde plaatsen in de broncode kan de [judge](#interpreteren-van-feedback) opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde [status](#status) aan de oplossing toegekend heeft.
 
-![image](./student.exercise_lint_error.nl.png)
+![image](./student.exercise_lint_error.png)
 
 ::: tip
 
@@ -178,7 +178,7 @@ Als alternatief kan je ook op de bewerkknop drukken in de rechterbovenhoek van d
 Onder een [tab](#tabs) rapporteert de [judge](#interpreteren-van-feedback) over individuele **testen** waaraan hij de broncode onderworpen heeft. Daarbij worden gerelateerde testen gegroepeerd in een **testgeval** en worden testgevallen die van elkaar afhankelijk zijn gegroepeerd in een **context**.
 
 
-![image](./student.exercise_feedback_correct_tab.nl.png)
+![image](./student.exercise_feedback_correct_tab.png)
 
 Visueel worden alle [testgevallen](#testgeval) van een [context](#context) met elkaar verbonden via een dunne vertikale lijn aan de linkerkant. De kleur van die lijn geeft aan of de [judge](#interpreteren-van-feedback) de volledige context beoordeelt als geslaagd (groene lijn) of als niet geslaagd (rode lijn).
 
@@ -191,7 +191,7 @@ Als de [judge](#interpreteren-van-feedback) binnen een [testgeval](#testgeval) r
 -   Een tekstuele vergelijking tussen een verwachte waarde en een waarde die gegenereerd werd aan de hand van de oplossing. Als minstens één van beide waarden uit meerdere regels bestaat, dan worden de overeenkomstige regels tegenover elkaar uitgelijnd. Identieke overeenkomstige regels worden weergegeven met een transparante achtergrondkleur. Als overeenkomstige regels van elkaar verschillen dan worden ze weergegeven met een lichtgekleurde achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde). Individuele karakters die verschillen binnen overeenkomstige regels worden weergegeven met een donkerder achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde).
 
 - Algemene feedback over de uitgevoerde [test](#testgeval). Voor deze feedback heeft de [judge](#interpreteren-van-feedback) alle vrijheid wat betreft de vormgeving, waardoor hij zowel tekstuele als grafische feedback kan aanleveren.
-![image](./student.exercise_feedback_incorrect_tab.nl.png)
+![image](./student.exercise_feedback_incorrect_tab.png)
 
 ![image](./student.exercise_feedback_visual.nl.png)
 

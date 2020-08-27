@@ -8,7 +8,7 @@ next: ../exercises/
 
 Als **taal** voor Dodona kan je kiezen tussen Nederlands of Engels. Gebruik hiervoor het **taalmenu** aan de rechterkant van de **navigatiebalk** (bovenaan elke pagina).
 
-![image](./choose_language.nl.png)
+![image](./choose_language.png)
 
 Als je een [taal](#selecteren-van-de-taal) selecteert terwijl je [aangemeld](#aanmelden) bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
 
@@ -35,7 +35,7 @@ Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aa
 
 Druk op <span class="guilabel">Aanmelden</span> aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en druk op de knop <span class="guilabel">Aanmelden</span> centraal op de landingspagina.
 
-![image](./login.nl.png)
+![image](./login.png)
 
 
 ::: tip
@@ -75,7 +75,7 @@ Als je wilt schakelen naar een andere [gebruikersaccount](#aanmelden) dan deze d
 
 Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het **gebruikersmenu** met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen <span class="guilabel">Aanmelden</span> stond toen je nog niet aangemeld was.
 
-![image](./student.user_menu.nl.png)
+![image](./student.user_menu.png)
 
 <h1 id="startpagina"></h1>
 
@@ -85,12 +85,12 @@ Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in 
 
 Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op <span class="guilabel">Dodona</span> te drukken.
 
-![image](./student.navigate_to_homepage.nl.png)
+![image](./student.navigate_to_homepage.png)
 :::
 
 Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voor geen enkele [cursus]() [geregistreerd](../courses/#registreren-voor-een-cursus) en heb je nog geen enkele [oplossing](../exercises/#navigeren-naar-een-oplossing) [ingediend](../exercises/#indienen-van-een-oplossing). Daardoor ziet je [startpagina]() er op dit moment nog vrij kaal uit.
 
-![image](./student.homepage.nl.png)
+![image](./student.homepage.png)
 
 ## Instellen van persoonlijke voorkeuren
 
@@ -98,23 +98,23 @@ Kies voor <span class="guilabel">Mijn profiel</span> in het [gebruikersmenu](../
 
 Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je **persoonsgegevens** (voornaam, familienaam, gebruikersnaam en emailadres) en enkele **persoonlijke voorkeuren** ([taal](#selecteren-van-de-taal) en tijdzone) die samen je **gebruikersprofiel** vormen. Dodona gebruikt het gebruikersprofiel om je gebruikerservaring te personaliseren.
 
-![image](./student.user_menu_my_profile.nl.png)
+![image](./student.user_menu_my_profile.png)
 
 Druk op de bewerkknop in de rechterbovenhoek van je [profielpagina](#instellen-van-persoonlijke-voorkeuren) om je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) te bewerken. Je [persoonsgegevens]() kan je niet zelf aanpassen. Deze worden automatisch aangepast op basis van de persoonsgegevens die tijdens het [aanmelden](#aanmelden) door je externe onderwijs- of onderzoeksinstelling [doorgestuurd](#persoonsgegevens-doorsturen) worden naar Dodona.
 
-![image](./student.edit_profile.nl.png)
+![image](./student.edit_profile.png)
 
 <h1 id="tijdzone"/>
 
 In je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) kan je de **tijdzone** instellen die gebruikt wordt voor het weergeven van alle tijdsaanduidingen op het platform (bijvoorbeeld het [tijdstip]() waarop je een [oplossing]() hebt [ingediend]() of de [deadline]() voor een [oefeningenreeks]()).
 
-![image](./student.edit_timezone.nl.png)
+![image](./student.edit_timezone.png)
 
 ::: tip
 
 Als de [tijdzone](#tijdzone) uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
 
-![image](./student.wrong_timezone.nl.png)
+![image](./student.wrong_timezone.png)
 
 Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) de [tijdzone](#tijdzone) in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je [profielpagina]() kunt navigeren.
 :::
