@@ -9,7 +9,6 @@ Here you'll find a number of guides, primarily focused on teachers.
 ## In English
 * [Creating a new exercise repository](new-exercise-repo)
 * [User management](user-management)
-* [Course management](course-management)
 * [Dodona PyCharm plugin](pycharm-plugin)
 * [Dodona VS Code extension](vs-code-extension)
 * [The Coder's Apprentice](the-coders-apprentice)
@@ -17,5 +16,11 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [Creating a judge](creating-a-judge)
 
 ## Only in Dutch
+<<<<<<< HEAD
 * [Van start met Dodona als student](for-students)
 * [Van start met Dodona als leerkracht](getting-started)
+=======
+* [Van start met Dodona](getting-started)
+* [Cursusbeheer](/nl/guides/course-management)
+
+>>>>>>> Resolved sidebar issue
