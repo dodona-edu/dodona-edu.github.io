@@ -177,7 +177,7 @@ Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een n
 
 Druk op de [oefeningenreeks](#oefeningenreeks) in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanpassen te annuleren.
 
-todo image ./staff.series_edit_cancel.png
+![reeks bewerken stoppen](./staff.series_edit_cancel.png)
 
 <h1 id="oefeningenreeks-oefeningen-toevoegen"></h1>
 
@@ -228,8 +228,7 @@ publiceren en delen van [oefeningen](#oefening) wordt besproken in [oefeningen b
 
 <h1 id="oefeningenreeks-oefeningen-afwerken"></h1>
 Druk op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de [reeks-eigenschappen](#oefeningenreeks-eigenschappen). Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
-
-todo image ./staff.series_edit_submit.png
+![reeks bewerken opslaan](./staff.series_edit_submit.png)
 
 Na het afwerken navigeer je terug naar de
 [oefeningenreeks](#oefeningenreeks) in het
@@ -282,7 +281,7 @@ Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-manag
 > [indienstatus](#/nl/for-studentsoefeningenreeks-oefening-indienstatus) om naar de [oplossing](/nl/for-students#oplossing) te navigeren die gebruikt werd om de
 > [indienstatus](#/nl/for-studentsoefeningenreeks oefening indienstatus) te bepalen (als de cursusgebruiker effectief een oplossing  heeft [ingediend](/nl/for-students#oplossing indienen) op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
 >
-> todo image ./staff.scoresheet_status_icon.png
+> ![scoresheet status](./staff.scoresheet_status_icon.png)
 
 <span class="guilabel">Oplossingen van studenten exporteren</span>
 
@@ -335,7 +334,7 @@ Druk op de herhaalknop in de rechterbovenhoek van de
 [oplossing](/nl/for-students#oplossing) te
 [herevalueren](#oplossing herevalueren).
 
-todo image ./staff.feedback_evaluate.png
+![feedback evalueren](./staff.feedback_evaluate.png)
 
 
 # Oefeningenreeks evalueren

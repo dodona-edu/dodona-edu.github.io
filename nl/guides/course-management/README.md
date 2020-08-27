@@ -348,10 +348,10 @@ cursusgebruikers waarmee je hun
 
 |tab                                                 |knop                    |actie |
 -----------------------------------------------------|------------------------|------| 
-<span class="guilabel">Geregistreerd</span>|          ![image](./staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
-<span class="guilabel">Uitgeschreven</span>|          ![image](./staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
-<span class="guilabel">Registratieverzoeken</span>|   ![image](./staff_registration_icons/approve.png)|     goedkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [geregistreerd](/nl/for-students#cursus-registreren) wordt voor de cursus|
-<span class="guilabel">Registratieverzoeken</span>|   ![image](./staff_registration_icons/decline.png)|      afkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [uitgeschreven](/nl/for-students#cursus-uitschrijven) wordt uit de cursus|
+<span class="guilabel">Geregistreerd</span>|          ![image](../../../images/staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
+<span class="guilabel">Uitgeschreven</span>|          ![image](../../../images/staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
+<span class="guilabel">Registratieverzoeken</span>|   ![image](../../../images/staff_registration_icons/approve.png)|     goedkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [geregistreerd](/nl/for-students#cursus-registreren) wordt voor de cursus|
+<span class="guilabel">Registratieverzoeken</span>|   ![image](../../../images/staff_registration_icons/decline.png)|      afkeuren van het [registratieverzoek](#registratieverzoek) dat door de gebruiker werd [ingediend](/nl/for-students#registratieverzoek-indienen), waardoor de gebruiker [uitgeschreven](/nl/for-students#cursus-uitschrijven) wordt uit de cursus|
 
 ### Cursusbeheerders aanduiden
 
@@ -378,8 +378,8 @@ aan te duiden:
 
 |knop                                                              |actie                                                                                |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-![image](./staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
-![image](./staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
+![image](../../../images/staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
+![image](../../../images/staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
 
 ::: tip Belangrijk
 
@@ -404,12 +404,13 @@ Als cursusbeheerder kan je een overzicht met [oplossingen](/nl/for-students#oplo
 ingediend werden, verkrijgen door te drukken op <span class="guilabel">Ingediende oplossingen</span> in de navigatiebalk.
 ![cursus oplossingen link](./staff.course_submissions_link.png).
 Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
-[filter submissions](./staff.course_submissions_filter.png)
+![filter submissions](./staff.course_submissions_filter.png)
 
 ![filtered submissions](./staff.course_submissions_filtered.png)
 
 
 <h1 id="cursusbeheerder-oplossingen-overzicht-menu"></h1>
+
 Het overzicht heeft voor
 [cursusbeheerders](#cursusbeheerder) ook
 een [menu](/nl/for-students#oefeningenreeks-menu) met
