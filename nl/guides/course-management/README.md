@@ -356,6 +356,7 @@ cursusgebruikers waarmee je hun
 ### Cursusbeheerders aanduiden
 
 <h1 id="cursusbeheerder"></h1>
+
 Een **cursusbeheerder** is een
 [geregistreerde](/nl/for-students#cursus-registreren)
 [cursusgebruiker](#cursusgebruiker) met

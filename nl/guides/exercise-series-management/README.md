@@ -4,6 +4,7 @@ description: "Tutorial: oefeningenreeksenbeheer"
 ---
 
 <h1 id="oefeningenreeks"></h1>
+
 Het [leerpad](/nl/course-manangement#leerpad) van een [cursus](/nl/course-management#cursus) bestaat uit verschillende [oefeningenreeksen](#oefeningenreeks) die elk opnieuw bestaan uit verschillenden [oefeningen](/nl/for-students#oefening). [Cursusbeheerders](/nl/course-management#cursusbeheerder) kunnen deze reeksen [aanmaken](#reeks-aanmaken), [bewerken](#reeks-bewerken), [verwijderen](#reeks-verwijderen) en [herordenen](#reeks-herordenen). 
 
 ::: tip 
@@ -98,7 +99,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 > > gebruikers de oefeningenreeks enkel kunnen zien als ze de
 > > [geheime link](#oefeningenreeks-geheime-link) gebruiken. Er is ook een link aanwezig om deze instelling snel te veranderen.
 > >
-> > ![image](./staff.course_series_hidden_info.png)
+> 
 >
 ><span class="guilabel" id="oefeningenreeks-gesloten">Gesloten</span>
 >
@@ -108,7 +109,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 > > duidelijke mededeling bij om hen er op te wijzen dat andere
 > > gebruikers de oefeningenreeks daar niet kunnen zien. Er is ook een link aanwezig om deze instelling snel te veranderen.
 > >
-> > ![image](./staff.course_series_closed_info.png)
+> ![series info message](./staff.course_series_info_message.png)
 
 <span class="guilabel" id="oefeningenreeks-geheime-link">Geheime link</span>
 
@@ -132,7 +133,8 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 >
 > ![image](./staff.series_hidden_link_copy.png)
 >
-> <span id="oefeningenreeks-geheime-link-vernieuwen"></span>
+> <h1 id="oefeningenreeks-geheime-link-vernieuwen"></h1>
+
 > Druk op de vernieuwknop naast de
 > [geheime link](#oefeningenreeks geheime link) om de
 > [oefeningenreeks](#oefeningenreeks)
@@ -190,6 +192,7 @@ te voegen.
 
 
 <h1 id="oefeningenreeks-oefeningen-verwijderen"></h1>
+
 Onder de hoofding <span clas="guilabel">Oefeningen in deze reeks</span> kan je aan de rechterkant van een
 [oefening](/nl/for-students#oefening) op de verwijderknop
 drukken om de oefening uit de
@@ -227,6 +230,7 @@ publiceren en delen van [oefeningen](#oefening) wordt besproken in [oefeningen b
 
 
 <h1 id="oefeningenreeks-oefeningen-afwerken"></h1>
+
 Druk op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de [reeks-eigenschappen](#oefeningenreeks-eigenschappen). Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
 ![reeks bewerken opslaan](./staff.series_edit_submit.png)
 
@@ -241,7 +245,7 @@ toepassing zijn.
 
 Uiteraard is het mogelijk om een reeks te verwijderen uit een cursus. De actie vind je analoog aan het [bewerken](#oefeningenreeks-bewerken) in het reeksen-beheren menu of in het reeks-actiesmenu.
 
-[reeks verwijderen](./staff.series_delete.png)
+![reeks verwijderen](./staff.series_delete.png)
 
 # Oefeningenreeks herordenen
 
@@ -250,7 +254,7 @@ Het kan handig zijn om reeksen in een cursus een bepaalde volgorde te geven, om 
 # Oefeningenreeks beheren
 <h1 id="reeks-actiesmenu"></h1>
 
-[reeks acties](./staff.series_actions_menu.png)
+![reeks acties](./staff.series_actions_menu.png)
 
 Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-management#cursusbeheerder) kunnen uitvoeren op een reeks. Naast [bewerken](#oefeningenreeks-bewerken) en [verwijderen](#oefeningenreeks-verwijderen) zijn er nog enkele mogelijkheden:
 
@@ -279,7 +283,7 @@ Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-manag
 > Druk op het
 > [icoontje](/nl/for-students#oefeningenreeks-oefening-indienstatus-icoontje) van een
 > [indienstatus](#/nl/for-studentsoefeningenreeks-oefening-indienstatus) om naar de [oplossing](/nl/for-students#oplossing) te navigeren die gebruikt werd om de
-> [indienstatus](#/nl/for-studentsoefeningenreeks oefening indienstatus) te bepalen (als de cursusgebruiker effectief een oplossing  heeft [ingediend](/nl/for-students#oplossing indienen) op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
+> [indienstatus](#/nl/for-studentsoefeningenreeks#oefening-indienstatus) te bepalen (als de cursusgebruiker effectief een oplossing  heeft [ingediend](/nl/for-students#oplossing-indienen) op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
 >
 > ![scoresheet status](./staff.scoresheet_status_icon.png)
 
@@ -294,7 +298,7 @@ Oplossingen hertesten
 > [Herevalueert](#oplossing-herevalueren)
 > alle [oplossingen](/nl/for-students#oplossing) die
 > [cursusgebruikers](#cursusgebruiker)
-> [ingediend](/nl/for-students#oplossing indienen) hebben
+> [ingediend](/nl/for-students#oplossing-indienen) hebben
 > voor [oefeningen](/nl/for-students#oefening) van de
 > [oefeningenreeks](#oefeningenreeks). Dit kan nuttig zijn als een fout opgemerkt wordt in de automatische tests en de oplossingen opnieuw gecontroleerd moeten worden.
 
@@ -313,7 +317,7 @@ oplossing wijzigen door het herevalueren.
 ::: tip Belangrijk
 
 Bij het [herevalueren](#oplossing-herevalueren) krijgen [oplossingen](/nl/for-students#oplossing) een lagere prioriteit in de
-[wachtrij](/nl/for-students#oplossing wachtrij) dan
+[wachtrij](/nl/for-students#oplossing-wachtrij) dan
 oplossingen die nieuw [ingediend](/nl/for-students#oplossing-indienen) worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertaging, maar kan het herevalueren wel langer duren.
 :::
 
@@ -321,7 +325,7 @@ oplossingen die nieuw [ingediend](/nl/for-students#oplossing-indienen) worden. O
 
 Gebruikers krijgen geen melding van het platform als hun
 [oplossingen](/nl/for-students#oplossing)
-[geherevalueerd](#oplossing herevalueren)
+[geherevalueerd](#oplossing-herevalueren)
 worden. Als je beslist om oplossingen te herevalueren, is het belangrijk om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de [status](/nl/for-students#oplossing-status) van
 [oplossingen](/nl/for-students#oplossing) die ze vroeger
 [ingediend](/nl/for-students#oplossing-indienen) hebben
@@ -375,6 +379,7 @@ Via de navigatiebalk bovenaan kan je makkelijk terugkeren naar de evaluatiepagin
 
 Je kan een reeks slechts één keer evalueren. Dit hoef je echter niet in één stuk te doen, je kan later terugkeren naar de evaluatie via het reeks-actiesmenu, waar nu <span class="guilabel">Evaluatie bekijken</span> staat.
 
+TODO opnieuw inladen
 ![evaluatie bekijken](./staff.series_actions_check_evaluation.png)
 
 Je kan een bestaande evaluatie ook verwijderen. De gegeven feedback zal ook verdwijnen.
