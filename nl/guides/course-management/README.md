@@ -27,7 +27,7 @@ voor de oefeningen uit de oefeningenreeks.
 [Cursusgebruikers](#cursusgebruikers)
 kunnen na de deadline echter onbeperkt oplossingen blijven indienen voor de oefeningen uit de oefeningenreeks en blijven daar nog steeds feedback voor ontvangen.
 
-# Cursus aanmaken
+## Cursus aanmaken
 
 Als [lesgever](/nl/user-management#lesgever) kan je een
 nieuwe [cursus](#cursus) aanmaken door op
@@ -137,13 +137,12 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
 > Een optionele beschrijving die bovenaan de
 > [cursuspagina](#<cursuspagina>) wordt
-> weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](#Markdown).
-
-[//] # (todo public map van repository)
+> weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van Markdown.
 
 >
 > ::: tip
 > <h1 id="beschrijving-markdown"></h1>
+
 > De beschrijving van eigenschappen die aangeduid worden met het
 > Markdown-logo kan geschreven worden met behulp van
 > [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor
@@ -159,30 +158,19 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 > een **token** gegenereerd als afschermingsmechanisme van
 > [verborgen](#cursus-verbergen)
 > cursussen. Zonder dit token kunnen [niet-geregistreerde](/nl/for-students#cursus-registreren) gebruikers de
-> [cursuspagina](#cursuspagina) van een
-> verborgen cursus
+> [cursuspagina](#cursuspagina) van een verborgen cursus
 > niet zien en zich daar dus ook niet registreren. Als ze toch naar de
 > cursus proberen te navigeren, dan zien ze enkel een melding dat ze
 > niet de geen toegangsrechten hebben voor de cursus.
 >
 > ![image](./student.hidden_course_unregistered_denied_message.png)
 >
-> ## Registratielink
-> Gebruikers kunnen zich enkel
-> [registreren](/nl/for-students#cursus-registreren) voor
-> een [verborgen](#cursus-verbergen)
-> [cursus](#cursus) als ze gebruikmaken
-> van de **registratielink** voor de cursus. De registratielink bevat
-> het [token](#cursus-token) dat hen
-> toegang geeft tot de cursus. Bovendien navigeren [niet-geregistreerde](/nl/for-students#cursus-registreren)
-> gebruikers niet rechtstreeks naar de
-> [cursuspagina](#cursuspagina), maar
-> worden ze verzocht om zich voor de cursus te registreren als de
-> [registratieprocedure](#cursus-registratieprocedure) dat toelaat.
+> Als lesgever ben je verantwoordelijk om de registratielink te delen met je studenten. Zij kunnen zich dan registreren op de cursuspagina waar ze terecht komen via de link. Deze link bevat immers het geheime token dat hen toegang verleent.
 >
 > ![image](./student.hidden_course_unregistered_link_message.png)
 >
-<span id="cursus-registratielink-kopiëren"></span>
+
+<h1 id="cursus-registratielink-kopiëren"></h1>
 
 > De [registratielink](#registratielink) heeft dus als voordeel dat gebruikers de
 > [cursus](#cursus) niet zelf moeten
@@ -200,18 +188,15 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 >
 > ![image](./staff.hidden_course_registration_link.png)
 >
-> <span id="cursus-token-vernieuwen"></span>
-> <span id="cursus-registratielink-vernieuwen"></span> 
 > Druk op de vernieuwknop naast de [registratielink](#registratielink) om de [cursus](#cursus)
 > opnieuw te [verbergen](#cursus-verborgen) nadat de registratielink gedeeld werd. Daardoor wordt een
-> nieuw [token](#cursus-token) gegenereerd
-> en wordt het oude token onbruikbaar gemaakt. De registratielink wordt
+> nieuw [token](#cursus-token) gegenereerd en wordt het oude token onbruikbaar gemaakt. De registratielink wordt
 > meteen ook aangepast aan het nieuwe token.
 >
 > ![image](./staff.hidden_course_registration_link_renew.png)
 >
 > De [registratielink](#cursus-registratielink) wordt ook weergegeven op de
-> [cursuspagina](#cursuspagina).
+> cursus-bewerkenpagina.
 >
 > ![image](./staff.hidden_course_registration_link.png)
 
@@ -232,13 +217,13 @@ als [cursusgebruiker](#cursusgebruiker) en
 dat je [aangeduid](#cursusbeheerders-aanduiden) bent als
 [cursusbeheerder](#cursusbeheerder).
 
-![image](./staff.course_created.png)
+![cursus aangemaakt](./staff.course_created.png)
 
 # Cursus navigeren
 
 Je kan de [cursuspagina](#cursuspagina) van een [cursus](#cursus) bereiken op verschillende manieren. Vanaf de landingspagina kan je cursussen zoeken door te klikken op <span class="guilabel">Meer cursussen</span>. Vanop eender welke pagina kan je via het hamburgermenu in de linkerbovenhoek snelkoppelingen vinden naar jouw cursusssen onder het tabblad <span class="guilabel">Cursussen</span> en de cursus-zoekenpagina via het gelijknamige knopje on het tabblad <span class="guilabel">Admin</span>. Op de zoeken-pagina kan je filteren op naam van de cursus en op het instituut waartoe de cursus behoort. Ten slotte dien je enkel nog de gewenste cursus aan te klikken om op de cursuspagina terecht te komen.
 
-[gefilterde cursussen](./staff.courses_filtered.png)
+![gefilterde cursussen](./staff.courses_filtered.png)
 
 # Cursus bewerken
 
@@ -284,7 +269,7 @@ Druk in het [leerpad](#leerpad) op de knop
 <span class="guilabel">Reeksen beheren</span> om een nieuwe oefeningenreeks aan het leerpad toe te voegen. Voor meer details, zie [oefeningenreeksen beheren](/nl/exercise-series-management).
 
 
-# Cursusgebruikers beheren
+## Cursusgebruikers beheren
 
 Als [cursusbeheerder](#cursusbeheerder)
 krijg je toegang tot alle **cursusgebruikers**. Dit zijn de gebruikers
@@ -340,7 +325,8 @@ worden de cursusgebruikers in tabs gegroepeerd volgens hun
 > [cursusbeheerder](#cursusbeheerder).
 
 
-<h1 id="registratieverzoeken afhandelen"></h1>
+### Registratieverzoeken afhandelen
+
 Elke tab heeft eigen actieknoppen aan de rechterkant van de
 cursusgebruikers waarmee je hun
 [registratiestatus](#cursusgebruiker-registratiestatus) kunt aanpassen.
@@ -399,7 +385,7 @@ cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder
 beheersrechten voor de cursus.
 :::
 
-### Navigeren naar oplossingen
+## Navigeren naar oplossingen
 
 Als cursusbeheerder kan je een overzicht met [oplossingen](/nl/for-students#oplossing) die in de [cursus](#cursus)
 ingediend werden, verkrijgen door te drukken op <span class="guilabel">Ingediende oplossingen</span> in de navigatiebalk.
