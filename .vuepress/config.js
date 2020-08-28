@@ -140,9 +140,20 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
       title: groupTitle,
       collapsable: false,
       sidebarDepth: 2,
+      initialOpenGroupIndex: -1,
       children: [
         ['', FirstItem],
-        'for-students/',
+        {
+          title: 'Van start met Dodona als student',
+          collapsable: false,
+          path: `/${lang}/guides/for-students`,
+          sidebarDepth: 2,
+          children: [
+            'for-students/login-and-settings/',
+            'for-students/exercises/',
+            'for-students/courses/'
+          ]
+        },
         'getting-started/',
         'pycharm-plugin/',
         'new-exercise-repo/',
