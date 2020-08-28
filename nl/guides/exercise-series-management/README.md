@@ -379,7 +379,6 @@ Via de navigatiebalk bovenaan kan je makkelijk terugkeren naar de evaluatiepagin
 
 Je kan een reeks slechts één keer evalueren. Dit hoef je echter niet in één stuk te doen, je kan later terugkeren naar de evaluatie via het reeks-actiesmenu, waar nu <span class="guilabel">Evaluatie bekijken</span> staat.
 
-TODO opnieuw inladen
 ![evaluatie bekijken](./staff.series_actions_check_evaluation.png)
 
 Je kan een bestaande evaluatie ook verwijderen. De gegeven feedback zal ook verdwijnen.
