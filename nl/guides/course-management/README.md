@@ -2,6 +2,9 @@
 title: Cursusbeheer
 description: "Tutorial: cursusbeheer"
 ---
+
+# Cursusbeheer
+
 Een **cursus** wordt
 opgebouwd als een
 [leerpad](#leerpad) met

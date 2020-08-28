@@ -3,7 +3,7 @@ title: Oefeningenreeksenbeheer
 description: "Tutorial: oefeningenreeksenbeheer"
 ---
 
-<h1 id="oefeningenreeks"></h1>
+# Oefeningenreeksenbeheer
 
 Het [leerpad](/nl/course-manangement#leerpad) van een [cursus](/nl/course-management#cursus) bestaat uit verschillende [oefeningenreeksen](#oefeningenreeks) die elk opnieuw bestaan uit verschillenden [oefeningen](/nl/for-students#oefening). [Cursusbeheerders](/nl/course-management#cursusbeheerder) kunnen deze reeksen [aanmaken](#reeks-aanmaken), [bewerken](#reeks-bewerken), [verwijderen](#reeks-verwijderen) en [herordenen](#reeks-herordenen). 
 
