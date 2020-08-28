@@ -6,6 +6,9 @@ description: "Tutorial: aanmelden en gebruikersinstellingen"
 # Aanmelden & gebruikersinstellingen
 > Alle informatie zodat je als student een een gebruikersaccount door Dodona kan laten aanmaken en die kan personaliseren.
 
+## Inhoudstafel
+[[toc]]
+
 ## Selecteren van de taal
 
 Als **taal** voor Dodona kan je kiezen tussen Nederlands of Engels. Gebruik hiervoor het **taalmenu** aan de rechterkant van de **navigatiebalk** (bovenaan elke pagina).
