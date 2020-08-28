@@ -9,7 +9,7 @@ All **users** can [sign in](/en/for-students#sign-in) and manage their [user pro
 
 ::: tip
 
-You can see that you are a [teacher](#teacher) when you can see the **management menu** (menu <span class="guilabel">Admin</span>) at the left side of the page when clicking on the hamburger menu.
+You can see that you are a [teacher](#teacher) when you can see the **management menu** (menu `Admin`) at the left side of the page when clicking on the hamburger menu.
 
 ![image](./staff.admin_menu.png)
 :::
@@ -24,7 +24,7 @@ We categorize [enrolled](/en/for-students#course-register) members of a [course]
 
 ## Navigating to a user
 
-As a [teacher](#teacher), you navigate to the [user overview](#user-overview) of your course by navigating to your course and clicking <span class="guilabel">Registered users</span> in the course description panel.
+As a [teacher](#teacher), you navigate to the [user overview](#user-overview) of your course by navigating to your course and clicking `Registered users` in the course description panel.
 
 ![admin menu users](./staff.admin_menu_users.png)
 
@@ -49,7 +49,7 @@ The **progress statistics** of a user are displayed via a progress bar. The gree
 ![statistics](./user_progress_statistics.png)
 ## Management permissions
 
-In order to perform certain action on Dodona, you require additional **management permissions**. As a [teacher](#teacher), you can find this information in the [user overview](#user-overview) using the icons below. You can the use the icons on the right to modify the permissions of a user. A teacher can only assign the <span class="guilabel">Student</span> and <span class="guilabel">Course admin</span> permissions to other users (including themselves). In this fashion you can promote a user to a course admin or demote them to a [student](#student).
+In order to perform certain action on Dodona, you require additional **management permissions**. As a [teacher](#teacher), you can find this information in the [user overview](#user-overview) using the icons below. You can the use the icons on the right to modify the permissions of a user. A teacher can only assign the `Student` and `Course admin` permissions to other users (including themselves). In this fashion you can promote a user to a course admin or demote them to a [student](#student).
 
 ![image](./staff.user_edit_permission.png)
 
@@ -63,16 +63,16 @@ Users can be assigned the following [management permissions](#management-permiss
 
  | name                                          | icon                                |permissions|
  | ----------------------------------------------|-----------------------------------------|----------|
- | <span class="guilabel">Student</span>|   *no icon*|                                  [students](#student) can [edit](/en/for-students#user-profile-edit) their [user profile](/en/for-students#user-profile),[register](/en/for-students#course-register) for [courses](/en/course-management#course) and [submit](/en/for-students#submit-solution) [solutions](/en/for-students#solution) for [exercises](/en/for-students#exercise)|
- |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [teachers](#teacher) have all the permissions [students](#student) have and can additionally appoint teachers, [create](/en/course-management#create-a-course) [courses](/en/course-management#course) , [add](/en/course-management#add-exercise) [exercises](/en/for-students#exercise) and [add](/en/creating-a-judge) [judges](/en/for-students#judge) |
-  |<span class="guilabel">Course admin</span>| ![course admin](../../../images/role_icons/staff.png)|[course admins](#course-admin) have the same permissions as teacher, but limited to the scope of the course they were appointed in. They cannot create judges or courses, but they can edit exercises or students within a course in the same way a teacher can.| 
- |<span class="guilabel">Zeus</span>|      *no icon*|    [admins](#admin) have all the permissions [teachers](#teacher) and course administrators have and can additionally assign all [management permissions](#management-permissions) (including course managers), [edit](/en/for-students#edit-user-profile) the [profile](/en/for-students#user-profile) of all users, [edit](/en/course-management#edit-course) all [courses](/en/course-management#course), [edit](/en/course-management#edit-exercise) all [exercises](/en/for-students#exercise) and [edit]((/en/judges#edit-judge)) all [judges](/en/for-students#judge).
+ | `Student`|   *no icon*|                                  [students](#student) can [edit](/en/for-students#user-profile-edit) their [user profile](/en/for-students#user-profile),[register](/en/for-students#course-register) for [courses](/en/course-management#course) and [submit](/en/for-students#submit-solution) [solutions](/en/for-students#solution) for [exercises](/en/for-students#exercise)|
+ |`Staff`|     ![image](../../../images/role_icons/staff.png)|   [teachers](#teacher) have all the permissions [students](#student) have and can additionally appoint teachers, [create](/en/course-management#create-a-course) [courses](/en/course-management#course) , [add](/en/course-management#add-exercise) [exercises](/en/for-students#exercise) and [add](/en/creating-a-judge) [judges](/en/for-students#judge) |
+  |`Course admin`| ![course admin](../../../images/role_icons/staff.png)|[course admins](#course-admin) have the same permissions as teacher, but limited to the scope of the course they were appointed in. They cannot create judges or courses, but they can edit exercises or students within a course in the same way a teacher can.| 
+ |`Zeus`|      *no icon*|    [admins](#admin) have all the permissions [teachers](#teacher) and course administrators have and can additionally assign all [management permissions](#management-permissions) (including course managers), [edit](/en/for-students#edit-user-profile) the [profile](/en/for-students#user-profile) of all users, [edit](/en/course-management#edit-course) all [courses](/en/course-management#course), [edit](/en/course-management#edit-exercise) all [exercises](/en/for-students#exercise) and [edit]((/en/judges#edit-judge)) all [judges](/en/for-students#judge).
 
 ### Student
-A user with <span class="guilabel">Student</span> [management permissions](#management-permissions)permissions is called a **student**.
+A user with `Student` [management permissions](#management-permissions)permissions is called a **student**.
 ### Teacher
-A user with <span class="guilabel">Staff</span> [management permissions](#management-permissions)permissions is called a **teacher**.
+A user with `Staff` [management permissions](#management-permissions)permissions is called a **teacher**.
 ### Course admin
 A user with the teacher role within a course is called a course admin.
 ### Admin
-A user with <span class="guilabel">Zeus</span> [management permissions](#management-permissions)permissions is called an **admin**.
+A user with `Zeus` [management permissions](#management-permissions)permissions is called an **admin**.

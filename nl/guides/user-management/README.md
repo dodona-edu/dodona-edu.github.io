@@ -16,7 +16,7 @@ werden. Een uitzondering is de cursusbeheerder, deze heeft lesgeverrechten binne
 
 ::: tip
 
-Je herkent dat je [lesgever](#lesgever) bent als je het **beheersmenu** (menu <span class="guilabel">Admin</span>) ziet wanneer je de aan de
+Je herkent dat je [lesgever](#lesgever) bent als je het **beheersmenu** (menu `Admin`) ziet wanneer je de aan de
 linkerkant van de pagina het hamburgermenu openklikt.
 
 ![location](./staff.admin_menu_location.png)
@@ -33,7 +33,7 @@ het [aanduiden](/nl/course-management#cursusbeheerders-aanduiden) van cursusbehe
 ## Navigeren naar een gebruiker
 
 Als [lesgever](#lesgever) navigeer je naar
-het [gebruikersoverzicht](#gebruikersoverzicht) van je cursus door naar je cursus te navigeren en vervolgens op <span class="guilabal">Geregistreerde gebruikers</span> te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
+het [gebruikersoverzicht](#gebruikersoverzicht) van je cursus door naar je cursus te navigeren en vervolgens op `Geregistreerde gebruikers` te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
 
 ![admin menu users](./staff.course_users.png)
 
@@ -76,8 +76,8 @@ Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binne
 Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
 **beheersrechten** nodig. Als [lesgever](#lesgever) kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande [icoontjes](#icoontjes-voor-beheersrechten). Je kan dan ook de acties aan de rechterkant gebruiken om de [beheersrechten](#beheersrechten) van een gebruiker in te stellen.
 Als [lesgever](#lesgever) kan je enkel de
-beheersrechten <span class="guilabel">Student</span> en
-<span class="guilabel">Cursusbeheerder</span> toekennen aan gebruikers
+beheersrechten `Student` en
+`Cursusbeheerder` toekennen aan gebruikers
 (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot
 cursusbegeleider of degraderen tot [student](#student).
 
@@ -97,18 +97,18 @@ toegekend worden:
 
  | naam                                          | icoontje                                |permissies|
  | ----------------------------------------------|-----------------------------------------|----------|
- | <span class="guilabel">Student</span>|   *geen*|                                  [studenten](#student) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
- |<span class="guilabel">Staff</span>|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgever) krijgen alle permissies van [studenten](#student) en kunnen bovendien ook lesgevers aanduiden, [cursussen](/nl/course-management#cursus) [aanmaken](/nl/course-management#cursus-aanmaken), [oefeningen](/nl/for-students#oefening) [toevoegen](/nl/course-management#oefening-toevoegen) en [judges](/nl/for-students#judge) [toevoegen](/nl/creating-a-judge)|
- |<span class="guilabel">Cursusbeheerder</span>| ![cursusbeheerder](../../../images/role_icons/staff.png)|[cursusbeheerders](#cursusbeheerders) hebben dezelfde rechten als lesgevers, maar enkel binnen de cursus waarin ze beheerder zijn. Ze kunnen dus geen cursus of judges toevoegen, maar wel oefeningen en studenten bewerken binnen een cursus| 
+ | `Student`|   *geen*|                                  [studenten](#student) kunnen hun [gebruikersprofiel](/nl/for-students#gebruikersprofiel) [bewerken](/nl/for-students#gebruikersprofiel-bewerken), kunnen zich [registreren](/nl/for-students#cursus-registreren) voor [cursussen](/nl/course-management#cursus) en kunnen [oplossingen](/nl/for-students#oplossing) [indienen](/nl/for-students#oplossing-indienen) voor [oefeningen](/nl/for-students#oefening)|
+ |`Staff`|     ![image](../../../images/role_icons/staff.png)|   [lesgevers](#lesgever) krijgen alle permissies van [studenten](#student) en kunnen bovendien ook lesgevers aanduiden, [cursussen](/nl/course-management#cursus) [aanmaken](/nl/course-management#cursus-aanmaken), [oefeningen](/nl/for-students#oefening) [toevoegen](/nl/course-management#oefening-toevoegen) en [judges](/nl/for-students#judge) [toevoegen](/nl/creating-a-judge)|
+ |`Cursusbeheerder`| ![cursusbeheerder](../../../images/role_icons/staff.png)|[cursusbeheerders](#cursusbeheerders) hebben dezelfde rechten als lesgevers, maar enkel binnen de cursus waarin ze beheerder zijn. Ze kunnen dus geen cursus of judges toevoegen, maar wel oefeningen en studenten bewerken binnen een cursus| 
 
 ### Student
 Een gebruiker waarvoor de
 [beheersrechten](#beheersrechten)
-ingesteld zijn op <span class="guilabel">Student</span> noemen we
+ingesteld zijn op `Student` noemen we
 een **student**. 
 ### Lesgever
 Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
-op <span class="guilabel">Staff</span> noemen we een
+op `Staff` noemen we een
 **lesgever**.
 ### Cursusbeheerder
 Een gebruiker met de lesgeverrol binnenin een cursus noemen we een cursusbeheerder.

@@ -14,11 +14,11 @@ Al deze acties kunnen ook uitgevoerd worden op de oefeningen in een reeks. Deze 
 
 ## Oefeningenreeks aanmaken
 
-Een cursusbeheerder kan onbeperkt oefeningenreeksen aanmaken. Als cursusbeheerder kan je doen door naar de cursuspagina van de [cursus](/nl/course-management#cursus) te [navigeren](/nl/course-management#cursus-navigeren). Op deze pagina dien je <span class="guilabel">Reeksen beheren</span> aan te klikken.
+Een cursusbeheerder kan onbeperkt oefeningenreeksen aanmaken. Als cursusbeheerder kan je doen door naar de cursuspagina van de [cursus](/nl/course-management#cursus) te [navigeren](/nl/course-management#cursus-navigeren). Op deze pagina dien je `Reeksen beheren` aan te klikken.
 
 ![reeksen beheren](./staff.course_manage_series_button.png)
 
-Op deze pagina vind je rechtsboven de knop <span class="guilabel">Reeks aanmaken</span>.
+Op deze pagina vind je rechtsboven de knop `Reeks aanmaken`.
 
 ![image](./staff.course_new_series_button.png)
 
@@ -35,14 +35,14 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
 <h1 id="oefeningenreeks-eigenschappen"></h1>
 
-<span class="guilabel">Naam</span>
+`Naam`
 
 > Een naam om naar de reeks te verwijzen.
 > Binnen een [leerpad](/nl/course-management#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam
 > hebben. Het is echter aangeraden om alle oefeningenreeksen van het
 > leerpad een unieke naam te geven.
 
-<span class="guilabel">Deadline</span>
+`Deadline`
 
 > Een optionele deadline die aangeeft tot wanneer er rekening gehouden
 > wordt met [oplossingen](/nl/for-students#oplossing) die
@@ -79,18 +79,18 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 >
 > ![image](./staff.series_calendar_clear.png)
 
-<span class="guilabel">Zichtbaarheid</span>
+`Zichtbaarheid`
 
 > De zichtbaarheid bepaalt of gebruikers de
 > [oefeningenreeks](#oefeningenreeks)
 > kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 >
-><span class="guilabel" id="oefeningenreeks-open">Open</span>
+>`Open`
 >
 > > Alle gebruikers zien de oefeningenreeks in het
 > > [leerpad](/nl/course-management#leerpad).
 >
-><span class="guilabel" id="oefeningenreeks-verborgen">Verborgen</span>
+>`Verborgen`
 >
 > > Alleen [cursusbeheerders](/nl/course-management#cursusbeheerder) zien de
 > > [oefeningenreeks](#oefeningenreeks) in
@@ -101,7 +101,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 > >
 > 
 >
-><span class="guilabel" id="oefeningenreeks-gesloten">Gesloten</span>
+>`Gesloten`
 >
 > > Alleen [cursusbeheerders](#cursusbeheerder) zien de
 > > [oefeningenreeks](#oefeningenreeks) in
@@ -111,7 +111,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 > >
 > ![series info message](./staff.course_series_info_message.png)
 
-<span class="guilabel" id="oefeningenreeks-geheime-link">Geheime link</span>
+`Geheime link`
 
 
 > Bij het [aanmaken](#oefeningenreeks-aanmaken) van een
@@ -145,7 +145,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 >
 > ![image](./staff.series_hidden_link_reset.png)
 
-<span class="guilabel">Beschrijving</span>
+`Beschrijving`
 
 
 > Een optionele beschrijving die gebruikers te zien krijgen bij de
@@ -155,7 +155,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 > [Markdown](/nl/course-management#beschrijving-markdown).
 
 Druk op de afwerkknop in de rechterbovenhoek van het paneel
-<span class="guilabel">Nieuwe oefeningenreeks</span> om de nieuwe
+`Nieuwe oefeningenreeks` om de nieuwe
 [oefeningenreeks](#oefeningenreeks)
 effectief aan het [leerpad](/nl/course-management#leerpad)
 [toe te voegen](#oefeningenreeks-toevoegen).
@@ -172,9 +172,9 @@ toegevoegd werd. In het [leerpad](/nl/course-management#leerpad) wordt deze reek
 
 Op de bewerkenpagina van een [oefeningenreeks](#oefeningenreeks) zie je een uitgebreide versie van het [reeks-aanmakenpaneel](#oefeningenreeks-aanmaken) waarin je naast het
 instellen van [eigenschappen](#oefeningenreeks-eigenschappen) ook oefeningen kunt koppelen aan de oefeningenreeks. Onder
-de hoofding <span class="guilabel">Oefeningen toevoegen</span>
-staat een overzicht van alle beschikbare oefeningen en onder de hoofding <span class="guilabel">Oefeningen in deze reeks</span> staat een overzicht van alle oefeningen die aan de oefeningenreeks gekoppeld werden.
-Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te drukken van de reeks in het Reeksen beheren-paneel of door <span class="guilabel">Reeks bewerken</span> te kiezen in het reeks-actiesmenu.
+de hoofding `Oefeningen toevoegen`
+staat een overzicht van alle beschikbare oefeningen en onder de hoofding `Oefeningen in deze reeks` staat een overzicht van alle oefeningen die aan de oefeningenreeks gekoppeld werden.
+Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te drukken van de reeks in het Reeksen beheren-paneel of door `Reeks bewerken` te kiezen in het reeks-actiesmenu.
 ![edit series](./staff.series_edit.png)
 
 Druk op de [oefeningenreeks](#oefeningenreeks) in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanpassen te annuleren.
@@ -206,7 +206,7 @@ verwijderen.
 Versleep de verplaatsknop aan de linkerkant van de
 [oefeningen](#oefening) om de volgorde van
 de oefeningen aan te passen. De volgorde waarin de oefeningen onder de
-hoofding <span class="guilabel">Oefeningen in deze reeks</span>
+hoofding `Oefeningen in deze reeks`
 gerangschikt worden, is immers ook de volgorde waarin de oefeningen
 [weergegeven](#oefeningenreeks-weergeven)
 worden in de oefeningenreeks.
@@ -258,11 +258,11 @@ Het kan handig zijn om reeksen in een cursus een bepaalde volgorde te geven, om 
 
 Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-management#cursusbeheerder) kunnen uitvoeren op een reeks. Naast [bewerken](#oefeningenreeks-bewerken) en [verwijderen](#oefeningenreeks-verwijderen) zijn er nog enkele mogelijkheden:
 
-<span class="guilabel" id="oefeningenreeks-evalueren">Reeks evalueren</span>
+`Reeks evalueren`
 
 > Deze actie stelt je in staat om op een gestructureerde manier de oplossingen van studenten voor de reeks te [evalueren](#oefeningenreeks-evalueren).
 
-<span class="guilabel" id="oefeningenreeks-statusoverzicht">Statusoverzicht</span>
+`Statusoverzicht`
 
 > Toont een overzicht met de
 > [indienstatus](#oefeningenreeks-oefening-indienstatus) van alle
@@ -287,13 +287,11 @@ Dit menu bevat een aantal handige acties die [cursusbeheerders](/nl/course-manag
 >
 > ![scoresheet status](./staff.scoresheet_status_icon.png)
 
-<span class="guilabel">Oplossingen van studenten exporteren</span>
+`Oplossingen van studenten exporteren`
 
 > Deze acties stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te [exporteren](#oefeningenreeks-oplossingen-exporteren).
 
-<span class="guilabel" id="oefeningenreeks-oplossingen-herevalueren">
-Oplossingen hertesten
-</span>
+`Oplossingen hertesten`
 
 > [Herevalueert](#oplossing-herevalueren)
 > alle [oplossingen](/nl/for-students#oplossing) die
@@ -347,7 +345,7 @@ Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona 
 
 ![reeks-acties](./staff.series_actions_menu.png)
 
-Vervolgens selecteer je <span class="guilabel">Reeks evalueren</span>.
+Vervolgens selecteer je `Reeks evalueren`.
 ![reeks evalueren](./staff.series_evaluate.png)
 
 Je wordt gebracht naar de volgende pagina waar je gebruikers kan selecteren om te evalueren.  Er zijn ook handige knoppen om snel een bepaalde categorie gebruikers te selecteren. Uiteraard kan je ook via de zoekbalk filteren op gebruikers via hun naam, labels, ... .
@@ -356,7 +354,7 @@ Je wordt gebracht naar de volgende pagina waar je gebruikers kan selecteren om t
 Na de nodige gebruikers gekozen te hebben, kan je de evaluate starten. 
 ![start evaluation](./staff.series_evaluate_start.png)
 
-Je wordt nu automatisch door de evaluatie geleid, waarbij Dodona bijhoudt welke gebruikers je reeds geëvalueerd hebt. Je kan de ingediende code van annotaties voorzien: opmerkingen over de code, wat goed is en wat beter kan. Deze feedback wordt niet automatisch vrijgegeven, dit kan je op het einde van de evaluatie voor alle gebruikers tegelijkertijd doen via de knop <span class="guilabel">Feedback vrijgeven</span>. Je kan deze feedback ook weer verbergen via dezelfde knop.
+Je wordt nu automatisch door de evaluatie geleid, waarbij Dodona bijhoudt welke gebruikers je reeds geëvalueerd hebt. Je kan de ingediende code van annotaties voorzien: opmerkingen over de code, wat goed is en wat beter kan. Deze feedback wordt niet automatisch vrijgegeven, dit kan je op het einde van de evaluatie voor alle gebruikers tegelijkertijd doen via de knop `Feedback vrijgeven`. Je kan deze feedback ook weer verbergen via dezelfde knop.
 
 ![feedback vrijgen](./staff.series_evaluate_release_feedback.png)
 
@@ -369,7 +367,7 @@ Je kan klikken op deze icoontjes om de bijhorende indiening te evalueren.
 Je komt op een evalueerpagina terecht van de gebruiker waar je dus de code zelf van feedback kan voorzien. Dit kan op een lijn-per-lijnbasis. De gebruiker zal na het vrijgeven een melding krijgen, waarna hij de feedback kan bekijken.
 ![annotaties geven](./staff.series_evaluate_give_feedback.png)
 
-In de rechterbovenhoek vind je navigatie-opties om efficiënt de indieningen te overlopen. De knop <span class="guilabel">Volgende</span> brengt je naar een volgende niet-afgewerkte indiening. Daar staan ook opties om het evalueerproces te versnellen en vereenvoudigen. Zo kan je reeds afgewerkte oplossingen overslaan en de huidige oefening automatisch als afgewerkt markeren als je op <span class="guilabel">Volgende</span> drukt. 
+In de rechterbovenhoek vind je navigatie-opties om efficiënt de indieningen te overlopen. De knop `Volgende` brengt je naar een volgende niet-afgewerkte indiening. Daar staan ook opties om het evalueerproces te versnellen en vereenvoudigen. Zo kan je reeds afgewerkte oplossingen overslaan en de huidige oefening automatisch als afgewerkt markeren als je op `Volgende` drukt. 
 
 Eronder vind je je voortgang voor de huidige oefening en kan je ook navigeren naar de oplossingen van de huidige gebruiker voor andere oefeningen die in de reeks zitten.
 ![andere oefeningen gebruiker](./staff.series_evaluate_feedback_row.png)
@@ -377,7 +375,7 @@ Eronder vind je je voortgang voor de huidige oefening en kan je ook navigeren na
 Via de navigatiebalk bovenaan kan je makkelijk terugkeren naar de evaluatiepagina.
 ![terugkeren](./staff.series_evaluate_return.png)
 
-Je kan een reeks slechts één keer evalueren. Dit hoef je echter niet in één stuk te doen, je kan later terugkeren naar de evaluatie via het reeks-actiesmenu, waar nu <span class="guilabel">Evaluatie bekijken</span> staat.
+Je kan een reeks slechts één keer evalueren. Dit hoef je echter niet in één stuk te doen, je kan later terugkeren naar de evaluatie via het reeks-actiesmenu, waar nu `Evaluatie bekijken` staat.
 
 ![evaluatie bekijken](./staff.series_actions_check_evaluation.png)
 
@@ -393,7 +391,7 @@ In het actiesmenu van een reeks kan je als lesgever ook kiezen om de ingezonden 
 Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst. 
 ![oefeningen kiezen](./staff.series_export_exercise_choice.png)
 
-Als je ze allemaal wenst te downloaden, dan kies je het bovenste selectievakje. Daarna klik je op <span class="guilabel">Volgende stap</span> om verder te gaan.
+Als je ze allemaal wenst te downloaden, dan kies je het bovenste selectievakje. Daarna klik je op `Volgende stap` om verder te gaan.
 ![volgende stap](./staff.series_export_exercises_chosen.png)
 
 
@@ -401,7 +399,7 @@ Vervolgens kan je verschillende opties aanvinken die de inhoud van de export be�
 
 ![export opties](./staff.series_export_options.png)
 
-Klik op <span class="guilabel">Start export</span> om de download te starten.
+Klik op `Start export` om de download te starten.
 ![start export](./staff.series_export_start.png)
 
 Je komt op de exportpagina die je zal verwittigen als je export klaar is, want dit kan even duren.

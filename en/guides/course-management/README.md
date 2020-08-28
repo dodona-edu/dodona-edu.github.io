@@ -11,7 +11,7 @@ A [course admin](#course-admin) [lays out](#lay-out-learning-trail) a [learning 
 
 # Create course
 
-As a [teacher](/en/user-management#teacher) you can create a new [course](#course) by clicking the button <span class="guilabel">CREATE COURSE</span> in the upper right corner of the [course overview](#course-overview).
+As a [teacher](/en/user-management#teacher) you can create a new [course](#course) by clicking the button `CREATE COURSE` in the upper right corner of the [course overview](#course-overview).
 
 ![create course](./create-course.png)
 
@@ -19,7 +19,7 @@ There are two options to choose from when creating a new course. Either you star
 
 ![new course menu](./new-course-menu.png)
 
-Press <span class="guilabel">Dodona</span> in the [navigation bar](/en/for-students#navigation-bar) to cancel the creation of the [course](#course).
+Press `Dodona` in the [navigation bar](/en/for-students#navigation-bar) to cancel the creation of the [course](#course).
 
 If you start from an existing course, you must first select it in the table. Use the search bar to filter the displayed courses and find the course of your liking. Click the radio button in the left column to proceed.
 
@@ -27,7 +27,7 @@ If you start from an existing course, you must first select it in the table. Use
 
 Now you must choose which elements from the existing [course](#course) you wish to copy. The series structure is always copied. You can then choose whether you also want to copy the exercises, deadlines and course admins from the original course. Finally, some other options are possible.
 
-<span class="guilabel">Make the copied series hidden</span>: this is very useful when you want to make a series visible every week without having to manually make them invisible first.
+`Make the copied series hidden`: this is very useful when you want to make a series visible every week without having to manually make them invisible first.
 
 
 ## Setting course properties
@@ -37,50 +37,50 @@ With either choice of course creation, you must choose some course specific prop
 ![image](./course-properties.png)
 
 
-<span class="guilabel">Name</span>
+`Name`
 
 
 > A name for the [course](#course).
 > Different courses can have the same name. However, it is advised to make names as unique as possible.
 
-<span class="guilabel">Teachers</span>
+`Teachers`
 
 > The names of the [teachers](/en/user-management#teacher) of the [course](#course). If there are multiple teachers, use commas to separate their names.
 
-<span class="guilabel">Academic year</span>
+`Academic year`
 
 > The academic year in which this [course](#course) is offered. Use the format `yyyy-yyyy` to ensure that the course is sorted correctly on the [starting page](/en/for-students#startingpage) and in the [course overview](#course-overview).
 
-<span class="guilabel">Visibility</span>
+`Visibility`
 
 > The visibility determines whether [unregistered](/en/for-students#course-register) users can see the course. This property has the following possible values:
 
 >
 > 
-> <span class="guilabel">Visible</span>
+> `Visible`
 >
 >
 > > All users see the [course](#course) in the [course overview](#course-overview). They can also navigate to the [course page](/en/for-students#course-page) and [register](/en/for-students#course-register) if they want to.
 >
-> <span class="guilabel">Hidden</span>
+> `Hidden`
 >
 > > Only [course admins](#course-admins) see the [course](#course) in the [course overview](#course-overview) and on their [starting page](/en/for-students#starting-page). An icon is displayed to point out the fact that other users cannot see this course there. This icon can also be found on the [course page](/en/for-students#course-page) itself. Only [registered](/en/for-students#course-register) users can navigate to that page. Other users can only register if they use the [registration link](#registration-link).
 > >
 > > ![image](./hidden-course.png)
 
-<span class="guilabel">Registration procedure</span>
+`Registration procedure`
 
 > The registration procedure deterimines whether and how users can [register](/en/for-students#course-register] for the [course](#course). This property can have the following values:
 >
-> <span class="guilabel">Open</span>
+> `Open`
 >
 > > Any user can [register](/en/for-students#course-register) for this [course](#course) without explicit approval of a [course admin](#course-admin).
 >
-> <span class="guilabel">Moderated</span>
+> `Moderated`
 >
 > > Users can [submit](/en/for-students#submit-registration-request) a [registration request](/en/for-students#registration-request) for the [course](#course) but are only [registered](/en/for-students#course-register) when a [course admin](#course-admin) [approves](#approve-registration-request) their registration request.
 >
-> <span class="guilabel">Closed</span>
+> `Closed`
 >
 > > Users can no longer [register](/en/for-students#course-register) for this [course](#course).
 >
