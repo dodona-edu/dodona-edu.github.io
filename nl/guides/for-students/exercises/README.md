@@ -1,8 +1,11 @@
 ---
-title: Oefeningen handleiding voor studenten
-description: "Tutorial: oefeningen handleiding voor studenten"
+title: Oefeningen handleiding
+description: "Tutorial: oefeningen handleiding"
 next: ../courses/
 ---
+
+# Oefeningen handleiding
+> Alle informatie zodat je als student kan navigeren naar oefeningen of oplossingen, oplossingen kan indienen en feedback kan interpreteren.
 
 ## Navigeren naar een oefening
 
