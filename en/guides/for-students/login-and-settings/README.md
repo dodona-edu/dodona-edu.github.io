@@ -33,14 +33,14 @@ Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aa
 
 :::
 
-Druk op <span class="guilabel">Aanmelden</span> aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en druk op de knop <span class="guilabel">Aanmelden</span> centraal op de landingspagina.
+Druk op `Aanmelden` aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en druk op de knop `Aanmelden` centraal op de landingspagina.
 
 ![image](./login.png)
 
 
 ::: tip
 
-Je kunt enkel aanmelden als je momenteel afgemeld bent. Je herkent dat je afgemeld bent als je <span class="guilabel">Aanmelden</span> ziet staan aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal). Als je aangemeld bent dan staat op dezelfde plaats het gebruikersmenu met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren).
+Je kunt enkel aanmelden als je momenteel afgemeld bent. Je herkent dat je afgemeld bent als je `Aanmelden` ziet staan aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal). Als je aangemeld bent dan staat op dezelfde plaats het gebruikersmenu met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren).
 :::
 
 Selecteer de onderwijs- of onderzoeksinstelling die de gebruikersaccount beheert waarmee je wilt aanmelden. Daarna volg je de instellingsspecifieke aanmeldingsprocedure.
@@ -73,7 +73,7 @@ Als je wilt schakelen naar een andere [gebruikersaccount](#aanmelden) dan deze d
 
 ### Gebruikersmenu
 
-Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het **gebruikersmenu** met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen <span class="guilabel">Aanmelden</span> stond toen je nog niet aangemeld was.
+Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het **gebruikersmenu** met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen `Aanmelden` stond toen je nog niet aangemeld was.
 
 ![image](./student.user_menu.png)
 
@@ -83,7 +83,7 @@ Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in 
 
 ::: tip
 
-Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op <span class="guilabel">Dodona</span> te drukken.
+Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op `Dodona` te drukken.
 
 ![image](./student.navigate_to_homepage.png)
 :::
@@ -94,7 +94,7 @@ Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voo
 
 ## Instellen van persoonlijke voorkeuren
 
-Kies voor <span class="guilabel">Mijn profiel</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je **profielpagina** te navigeren.
+Kies voor `Mijn profiel` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je **profielpagina** te navigeren.
 
 Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je **persoonsgegevens** (voornaam, familienaam, gebruikersnaam en emailadres) en enkele **persoonlijke voorkeuren** ([taal](#selecteren-van-de-taal) en tijdzone) die samen je **gebruikersprofiel** vormen. Dodona gebruikt het gebruikersprofiel om je gebruikerservaring te personaliseren.
 
@@ -154,14 +154,14 @@ Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen
 
     :::
 
-    Press on <span class="guilabel">Sign in</span>  on the right side of the navigation bar or navigate to the homepage and press on <span class="guilabel">Sign in</span> that can be found in the center of the homepage.
+    Press on `Sign in`  on the right side of the navigation bar or navigate to the homepage and press on `Sign in` that can be found in the center of the homepage.
 
     ![image](./login.en.png)
 
 
     ::: tip
 
-    You can only log in if you aren't already logged in. You can see that you are logged out if you can see the <span class="guilabel">Sign in</span> button on the right side of the [navigation bar](). If you are logged in, the name of your account can be seen at the same place. This is the [user menu]().
+    You can only log in if you aren't already logged in. You can see that you are logged out if you can see the `Sign in` button on the right side of the [navigation bar](). If you are logged in, the name of your account can be seen at the same place. This is the [user menu]().
     :::
 
     Select your educational or research institution on the login page. If you are a High School student you can select the Smartschool, Office 365, or G Suite options. After selecting your preferred login, follow the specified log in procedure.
@@ -190,7 +190,7 @@ Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen
     If you want to change to another user account than the one you are currently logged in with, then you need to log out and log in with the other user account.
     :::
 
-    If you are logged in the **user menu** with your user name will be visible on the right side of the navigation bar. The user menu is at the place where the <span class="guilabel">Sign in</span> button was before you logged in.
+    If you are logged in the **user menu** with your user name will be visible on the right side of the navigation bar. The user menu is at the place where the `Sign in` button was before you logged in.
 
     ![image](./student.user_menu.en.png)
 
@@ -198,7 +198,7 @@ Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen
 
     ::: tip
 
-    You can navigate to your homepage or to the neutral homepage (if you aren't logged in) from any page by clicking on the <span class="guilabel">Dodona</span> button on the left side of the navigation bar.
+    You can navigate to your homepage or to the neutral homepage (if you aren't logged in) from any page by clicking on the `Dodona` button on the left side of the navigation bar.
     ![image](./student.navigate_to_homepage.en.png)
     :::
 
@@ -208,7 +208,7 @@ Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen
 
     ## Setting your personal preferences
 
-    Choose <span class="guilabel">My profile</span> in the [user menu]() on the right side of the [navigation bar](#selecteren-van-de-taal) to navigate to your **profilepage**.
+    Choose `My profile` in the [user menu]() on the right side of the [navigation bar](#selecteren-van-de-taal) to navigate to your **profilepage**.
 
     On your profile page, you can see your **personal data** (first name, family name, user name, and e-mail address) and a few **personal preferences** that together form your profile page. Dodona uses the user profile to personalize your user experience.
 

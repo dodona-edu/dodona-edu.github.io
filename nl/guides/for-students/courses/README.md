@@ -11,11 +11,11 @@ next: ../../getting-started/
 
 Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#navigeren-naar-een-oefening) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent dan kan je binnen de cursus ook [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indienen](../exercises/#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
 
--   Aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop <span class="guilabel">GA NAAR DEZE CURSUS</span> te drukken.
+-   Aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te drukken.
 
--   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](../login-and-settings/#startpagina). Je kunt één van deze cursussen selecteren door op de naam van de cursus te drukken.
+-   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina). Je kunt één van deze cursussen selecteren door op de naam van de cursus te drukken.
 
--   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) bevat onder de hoofding <span class="guilabel">Mijn vakken</span> een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina](../login-and-settings/#startpagina) moet navigeren.
+-   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) bevat onder de hoofding `Mijn vakken` een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina](../login-and-settings/#startpagina) moet navigeren.
 
     ![image](./student.my_courses.png)
 
@@ -25,11 +25,11 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#na
 
 <h1 id="cursusoverzicht"></h1>
 
--   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te drukken op de knop <span class="guilabel">MEER CURSUSSEN ...</span> onderaan in de rechterkolom op je [startpagina](../login-and-settings/#startpagina). Als je nog voor geen enkele cursus [geregistreerd](#registreren-voor-een-cursus) bent, dan kan je als alternatief ook drukken op de knop <span class="guilabel">VERKEN</span> naast de afbeelding op je startpagina.
+-   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te drukken op de knop `MEER CURSUSSEN ...` onderaan in de rechterkolom op je [startpagina](../login-and-settings/#startpagina). Als je nog voor geen enkele cursus [geregistreerd](#registreren-voor-een-cursus) bent, dan kan je als alternatief ook drukken op de knop `VERKEN` naast de afbeelding op je startpagina.
 
     ![image](./student.explore_courses.png)
 
-    Gebruik de zoekbalk bovenaan het [cursusoverzicht](#cursusoverzicht) om te zoeken naar specifieke [cursussen]() op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop <span class="guilabel">GA NAAR DEZE CURSUS</span> te drukken.
+    Gebruik de zoekbalk bovenaan het [cursusoverzicht](#cursusoverzicht) om te zoeken naar specifieke [cursussen]() op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te drukken.
 
     ![image](./student.courses.png)
 
@@ -41,7 +41,7 @@ Na [selectie](#navigeren-naar-een-cursus) van een [cursus]() navigeer je naar de
 
 ::: tip
 
-Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina](#cursuspagina).
+Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina](#cursuspagina).
 
 ![image](./student.breadcrumb_course.png)
 :::
@@ -70,18 +70,18 @@ Mogelijke weergaven van je [indienstatus](#indienstatus) vóór het verstrijken 
 
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
-  | <span class="guilabel">niet opgelost</span> | | geen [oplossing](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) (vóór de [deadline](#deadline)) | 
-  | <span class="guilabel">verkeerd</span> | ![image](./course_exercise_status_icons/wrong.png) | laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) verkeerd was |
-  | <span class="guilabel">correct</span> | ![image](./course_exercise_status_icons/before_deadline.png) |laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) correct was (vóór de [deadline](#deadline)) |
+  | `niet opgelost` | | geen [oplossing](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) (vóór de [deadline](#deadline)) | 
+  | `verkeerd` | ![image](./course_exercise_status_icons/wrong.png) | laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) verkeerd was |
+  | `correct` | ![image](./course_exercise_status_icons/before_deadline.png) |laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) correct was (vóór de [deadline](#deadline)) |
 
 Mogelijke weergaven van je [indienstatus](#indienstatus) nadat de [deadline](#deadline) verstreken is:
 
   |indienstatus | icoontje | weergegeven als je |
   |-------------|----------|--------------------|
-  | <span class="guilabel">correct</span> (groen) | ![image](./course_exercise_status_icons/before_deadline.png) | laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) vóór de [deadline](#deadline) correct is
-  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | geen [oplossingen](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing)|
-  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
-  | <span class="guilabel">deadline gemist</span> (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je na de [deadline](#deadline) een correcte oplossing hebt ingediend |
+  | `correct` (groen) | ![image](./course_exercise_status_icons/before_deadline.png) | laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) vóór de [deadline](#deadline) correct is
+  | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | geen [oplossingen](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing)|
+  | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
+  | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je na de [deadline](#deadline) een correcte oplossing hebt ingediend |
 
 ::: tip Belangrijk
 
@@ -97,7 +97,7 @@ Als je **na het verstrijken van de deadline** van een [oefeningenreeks]() een [o
 
 In het menu van een [oefeningenreeks]() vind je de volgende opties:
 
-<span class="guilabel">Toon overzicht</span>
+`Toon overzicht`
 
 Toont een overzicht waarin de namen en beschrijvingen van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de [oefeningenreeks]() netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de [oplossing](../exercises/#navigeren-naar-een-oplossing) die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
 
@@ -106,7 +106,7 @@ Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](.
 :::
 
 
-<span class="guilabel">Oplossing downloaden</span>
+`Oplossing downloaden`
 
 Downloadt een ZIP-bestand dat voor elke [oefening](../exercises/#navigeren-naar-een-oefening) uit de [oefeningenreeks]() de [oplossing](../exercises/#navigeren-naar-een-oplossing) bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
 
@@ -118,17 +118,17 @@ Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](../exerc
 
 Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je nog niet [geregistreerd](#registreren-voor-een-cursus) bent, dan zie je bovenaan de [cursuspagina](#cursuspagina) een paneel dat aangeeft of en hoe je je voor de cursus kan [registreren](#registreren-voor-een-cursus). Hierbij zijn er drie mogelijkheden:
 
--   De [cursus]() werkt met een [open]() [registratieprocedure](), wat betekent dat iedereen voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Druk op de knop <span class="guilabel">REGISTREREN</span> om je voor de cursus te registreren.
+-   De [cursus]() werkt met een [open]() [registratieprocedure](), wat betekent dat iedereen voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Druk op de knop `REGISTREREN` om je voor de cursus te registreren.
 
     ![image](./register.png)
 
 <h1 id="registratieverzoek"/>
 
--   De [cursus]() werkt met een [gemodereerde]() [registratieprocedure](), wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Druk op de knop <span class="guilabel">REGISTRATIEVERZOEK</span> om een registratieverzoek voor de cursus in te dienen.
+-   De [cursus]() werkt met een [gemodereerde]() [registratieprocedure](), wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Druk op de knop `REGISTRATIEVERZOEK` om een registratieverzoek voor de cursus in te dienen.
 
     ![image](./moderated_register.png)
 
-    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina](#cursuspagina) de boodschap <span class="guilabel">Je staat al op de wachtlijst.</span> en wordt de cursus opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](../login-and-settings/#startpagina).
+    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina](#cursuspagina) de boodschap `Je staat al op de wachtlijst.` en wordt de cursus opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina).
 
     ![image](./moderated_waiting.png)
 
@@ -141,7 +141,7 @@ Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je n
 Op een [cursuspagina](#cursuspagina) kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent of als de cursus werkt met [open]().
 :::
 
-Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
+Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
 
 ![image](./student.my_courses.png)
 
@@ -149,8 +149,8 @@ Naast de mogelijkheid om zelf naar een [cursus]() te navigeren en op de [cursusp
 
 ## Uitschrijven uit een cursus
 
-Als je navigeert naar een [cursus]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een [registratieverzoek](#registratieverzoek) hebt openstaan, dan zie je onder de beschrijving van de cursus op de [cursuspagina](#cursuspagina) een knop <span class="guilabel">UITSCHRIJVEN</span> waarmee je je kunt uitschrijven uit de cursus.
+Als je navigeert naar een [cursus]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een [registratieverzoek](#registratieverzoek) hebt openstaan, dan zie je onder de beschrijving van de cursus op de [cursuspagina](#cursuspagina) een knop `UITSCHRIJVEN` waarmee je je kunt uitschrijven uit de cursus.
 
 ![image](./student.unregister.png)
 
-Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder <span class="guilabel">Mijn vakken</span> in het [hamburger menu]() aan de linker kant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel <span class="guilabel">Wachten op goedkeuring</span> in de rechterkolom van je [startpagina](../login-and-settings/#startpagina), dan verdwijnt de cursus ook uit die lijst.
+Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linker kant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina), dan verdwijnt de cursus ook uit die lijst.

@@ -36,14 +36,14 @@ Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aa
 
 :::
 
-Druk op <span class="guilabel">Aanmelden</span> aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en druk op de knop <span class="guilabel">Aanmelden</span> centraal op de landingspagina.
+Druk op `Aanmelden` aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en druk op de knop `Aanmelden` centraal op de landingspagina.
 
 ![image](./login.png)
 
 
 ::: tip
 
-Je kunt enkel aanmelden als je momenteel afgemeld bent. Je herkent dat je afgemeld bent als je <span class="guilabel">Aanmelden</span> ziet staan aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal). Als je aangemeld bent dan staat op dezelfde plaats het gebruikersmenu met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren).
+Je kunt enkel aanmelden als je momenteel afgemeld bent. Je herkent dat je afgemeld bent als je `Aanmelden` ziet staan aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal). Als je aangemeld bent dan staat op dezelfde plaats het gebruikersmenu met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren).
 :::
 
 Selecteer de onderwijs- of onderzoeksinstelling die de gebruikersaccount beheert waarmee je wilt aanmelden. Daarna volg je de instellingsspecifieke aanmeldingsprocedure.
@@ -76,7 +76,7 @@ Als je wilt schakelen naar een andere [gebruikersaccount](#aanmelden) dan deze d
 
 ### Gebruikersmenu
 
-Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het **gebruikersmenu** met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen <span class="guilabel">Aanmelden</span> stond toen je nog niet aangemeld was.
+Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het **gebruikersmenu** met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen `Aanmelden` stond toen je nog niet aangemeld was.
 
 ![image](./student.user_menu.png)
 
@@ -86,7 +86,7 @@ Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in 
 
 ::: tip
 
-Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op <span class="guilabel">Dodona</span> te drukken.
+Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op `Dodona` te drukken.
 
 ![image](./student.navigate_to_homepage.png)
 :::
@@ -97,7 +97,7 @@ Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voo
 
 ## Instellen van persoonlijke voorkeuren
 
-Kies voor <span class="guilabel">Mijn profiel</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je **profielpagina** te navigeren.
+Kies voor `Mijn profiel` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je **profielpagina** te navigeren.
 
 Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je **persoonsgegevens** (voornaam, familienaam, gebruikersnaam en emailadres) en enkele **persoonlijke voorkeuren** ([taal](#selecteren-van-de-taal) en tijdzone) die samen je **gebruikersprofiel** vormen. Dodona gebruikt het gebruikersprofiel om je gebruikerservaring te personaliseren.
 

@@ -15,7 +15,7 @@ Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-n
 
     ![image](./student.course_exercise_selection.png)
 
--   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst <span class="guilabel">RECENTE OEFENINGEN</span> met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
+-   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst `RECENTE OEFENINGEN` met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
 
     ![image](./student.exercise_all_submissions_page.png)
 
@@ -27,7 +27,7 @@ Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-e
 
 ::: tip
 
-Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
+Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
 
 ![image](./student.exercise_crumbs.png)
 :::
@@ -41,7 +41,7 @@ Bovendien is het mogelijk dat bij het opstellen van de [oefening](#navigeren-naa
 
 ## Indienen van een oplossing
 
-Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Druk hiervoor op de tab <span class="guilabel">Indienen</span> als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Druk daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
+Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Druk hiervoor op de tab `Indienen` als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Druk daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
 
 ![image](./student.exercise_before_submit.png)
 
@@ -54,11 +54,11 @@ Om een aantal belangrijke redenen **raden we ten stelligste af om rechtstreeks b
 Dien je broncode pas in op Dodona als je ervan overtuigd bent dat ze geen fouten meer bevat en als je ze wilt uittesten op een groter aantal testgevallen. Selecteer hiervoor de broncode in de code editor van je IDE, kopiëren ze naar het klembord en plak ze daarna in de code editor van Dodona. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere programmeeropdrachten aan te pakken dan enkel de oefeningen uit Dodona.
 :::
 
-Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab <span class="guilabel">Oplossingen</span> geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus]() hebt ingediend voor de [oefening](#navigeren-naar-een-oefening). Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het [tijdstip](#tijdstip) van indienen, de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
+Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus]() hebt ingediend voor de [oefening](#navigeren-naar-een-oefening). Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het [tijdstip](#tijdstip) van indienen, de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
 
 <h1 id="wachtrij"/>
 
-Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren-naar-een-oplossing) niet onmiddellijk beoordeeld na het [indienen](#indienen-van-een-oplossing) maar worden ze eerst in een **wachtrij** geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de [status](#status) <span class="guilabel">In de wachtrij...</span>. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij (*first-in-first-out*) geselecteerd en [beoordeeld](#interpreteren-van-feedback) door een [judge](#interpreteren-van-feedback). Tijdens het beoordelen heeft een oplossing de status <span class="guilabel">Aan het uitvoeren...</span>.
+Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren-naar-een-oplossing) niet onmiddellijk beoordeeld na het [indienen](#indienen-van-een-oplossing) maar worden ze eerst in een **wachtrij** geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de [status](#status) `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij (*first-in-first-out*) geselecteerd en [beoordeeld](#interpreteren-van-feedback) door een [judge](#interpreteren-van-feedback). Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`.
 
 
 ::: details Notitie
@@ -66,7 +66,7 @@ Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren
 Je kunt het beoordelingsproces van een [oplossing](#navigeren-naar-een-oplossing) niet annuleren. Terwijl een oplossing in de [wachtrij](#wachtrij) staat en terwijl de [judge](#interpreteren-van-feedback) bezig is om de oplossing te beoordelen, wordt de indienknop op de [oefeningpagina](#oefeningpagina) buiten werking gesteld en kan je geen nieuwe oplossing [indienen](#indienen-van-een-oplossing). Ook dit is een maatregel om overbelasting van het platform tegen te gaan. Nog een reden dus om te wachten met indienen tot je jezelf ervan vergewist hebt dat je oplossing geen fouten meer bevat.
 :::
 
-Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je [oplossing](#navigeren-naar-een-oplossing) krijgt ze haar finale [status](#status) en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab <span class="guilabel">Feedback</span>.
+Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je [oplossing](#navigeren-naar-een-oplossing) krijgt ze haar finale [status](#status) en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
 
 ![image](./student.exercise_feedback_correct_tab.png)
 
@@ -79,15 +79,15 @@ Er zit geen beperking op het aantal keer dat je een [oplossing](#navigeren-naar-
 
 Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
 
--   Kies <span class="guilabel">Mijn oplossingen</span> in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of druk op de statistiek <span class="guilabel">Inzendingen</span> in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
+-   Kies `Mijn oplossingen` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of druk op de statistiek `Inzendingen` in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
     ![image](./student.all_submissions_link.png)
 
--   Druk op de statistiek <span class="guilabel">Inzendingen</span> in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
+-   Druk op de statistiek `Inzendingen` in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
 
     ![image](./student.course_submissions.png)
 
--   Selecteer de tab <span class="guilabel">Oplossingen</span> op een [oefeningpagina](#oefeningpagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je hebt [ingediend](#indienen-van-een-oplossing) voor de [oefening](#navigeren-naar-een-oefening). Als je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt binnen een [cursus](), dan is het overzicht bijkomend beperkt tot alle oplossingen die je binnen de cursus hebt ingediend.
+-   Selecteer de tab `Oplossingen` op een [oefeningpagina](#oefeningpagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je hebt [ingediend](#indienen-van-een-oplossing) voor de [oefening](#navigeren-naar-een-oefening). Als je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt binnen een [cursus](), dan is het overzicht bijkomend beperkt tot alle oplossingen die je binnen de cursus hebt ingediend.
 
     ![image](./student.exercise_submissions_tab.png)
 
@@ -114,11 +114,11 @@ Op de [feedbackpagina](#feedbackpagina) staat gedetailleerde **feedback** over e
 Aan de bovenkant van de [feedbackpagina](#feedbackpagina) staan de volgende gegevens over de [oplossing](#navigeren-naar-een-oplossing):
 
 
-<span class="guilabel">Opgave</span>
+`Opgave`
 
 De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de [oefeningpagina](#oefeningpagina) te navigeren.
 
-<span class="guilabel">Cursus</span>
+`Cursus`
 
 De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de cursuspagina te navigeren.
 
@@ -128,32 +128,32 @@ Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) n
 
 <h1 id="tijdstip"/>
 
-<span class="guilabel">Ingediend</span>
+`Ingediend`
 
-Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld <span class="guilabel">ongeveer 2 uur geleden</span>. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
+Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld `ongeveer 2 uur geleden`. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
 
 <h1 id="status"/>
-<span class="guilabel">Status</span>
+`Status`
 
 De **status** die Dodona of de [judge](#interpreteren-van-feedback) aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de [oplossing](#navigeren-naar-een-oplossing) wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
 
 | status               | icoontje             | betekenis            |
 |----------------------|----------------------|----------------------|
-| <span class="guilabel">In de wachtrij…</span> | ![image](./submission_icons/queued.png) | [oplossing](#navigeren-naar-een-oplossing) staat in  de [wachtrij](#wachtrij) |
-| <span class="guilabel">Aan het uitvoeren...</span> | ![image](./submission_icons/running.png) | [oplossing](#navigeren-naar-een-oplossing) wordt momenteel beoordeeld door de [judge](#interpreteren-van-feedback) |
-| <span class="guilabel">Correct</span> | ![image](./submission_icons/correct.png) | [oplossing](#navigeren-naar-een-oplossing) wordt momenteel beoordeeld door de [judge](#interpreteren-van-feedback) |
-| <span class="guilabel">Fout</span> | ![image](./submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
-| <span class="guilabel">Uitvoeringsfout</span> | ![image](./submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
-| <span class="guilabel">Timeout</span> | ![image](./submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
-| <span class="guilabel">Geheugenfout</span> | ![image](./submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de [oefening](#navigeren-naar-een-oefening) werd overschreden tijdens het uitvoeren van minstens één test |
-| <span class="guilabel">Compilatiefout</span> | ![image](./submission_icons/compilation_error.png) | [oplossing](#navigeren-naar-een-oplossing) bevat grammaticale fouten |
-| <span class="guilabel">Interne fout</span> | ![image](./submission_icons/internal_error.png) | [judge](#interpreteren-van-feedback) is gecrashed tijdens het beoordelen van de [oplossing](#navigeren-naar-een-oplossing); oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
+| `In de wachtrij…` | ![image](./submission_icons/queued.png) | [oplossing](#navigeren-naar-een-oplossing) staat in  de [wachtrij](#wachtrij) |
+| `Aan het uitvoeren...` | ![image](./submission_icons/running.png) | [oplossing](#navigeren-naar-een-oplossing) wordt momenteel beoordeeld door de [judge](#interpreteren-van-feedback) |
+| `Correct` | ![image](./submission_icons/correct.png) | [oplossing](#navigeren-naar-een-oplossing) wordt momenteel beoordeeld door de [judge](#interpreteren-van-feedback) |
+| `Fout` | ![image](./submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
+| `Uitvoeringsfout` | ![image](./submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
+| `Timeout` | ![image](./submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
+| `Geheugenfout` | ![image](./submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de [oefening](#navigeren-naar-een-oefening) werd overschreden tijdens het uitvoeren van minstens één test |
+| `Compilatiefout` | ![image](./submission_icons/compilation_error.png) | [oplossing](#navigeren-naar-een-oplossing) bevat grammaticale fouten |
+| `Interne fout` | ![image](./submission_icons/internal_error.png) | [judge](#interpreteren-van-feedback) is gecrashed tijdens het beoordelen van de [oplossing](#navigeren-naar-een-oplossing); oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 
 Hoe lager de [status](#status) in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert. Als de [judge](#interpreteren-van-feedback) bij het beoordelen van de [oplossing](#navigeren-naar-een-oplossing) verschillende soorten fouten tegenkomt, dan staat het hem vrij te beslissen welke status hij aan de oplossing toekent. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de status van de oplossing te bepalen.
 
 <h1 id="samenvatting"/>
-<span class="guilabel">Samenvatting</span>
+`Samenvatting`
 
 Korte motivering van de [judge](#interpreteren-van-feedback) bij de [status](#status) die hij aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend.
 
@@ -163,13 +163,13 @@ Daaronder staat meer gedetailleerde [feedback](#interpreteren-van-feedback) die 
 
 ![image](./student.exercise_feedback_incorrect_tab.png)
 
-De laatste [tab](#tabs) heeft altijd de naam <span class="guilabel">Code</span> en bevat de broncode van de [oplossing](#navigeren-naar-een-oplossing). Op bepaalde plaatsen in de broncode kan de [judge](#interpreteren-van-feedback) opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde [status](#status) aan de oplossing toegekend heeft.
+De laatste [tab](#tabs) heeft altijd de naam `Code` en bevat de broncode van de [oplossing](#navigeren-naar-een-oplossing). Op bepaalde plaatsen in de broncode kan de [judge](#interpreteren-van-feedback) opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde [status](#status) aan de oplossing toegekend heeft.
 
 ![image](./student.exercise_lint_error.png)
 
 ::: tip
 
-In de tab <span class="guilabel">Code</span> op de [feedbackpagina](#feedbackpagina) kan je de broncode van de [oplossing](#navigeren-naar-een-oplossing) niet wijzigen. Als je op de broncode drukt dan wordt die volledig geselecteerd. Kopieer de broncode naar het klembord en plak die in je IDE. Als alternatief kan je op de downloadknop drukken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina). Daarmee download je een bestand met de broncode dat je dan kan openen in je IDE. In je IDE kan je de broncode bewerken en daarna eventueel opnieuw [indienen](#indienen-van-een-oplossing).
+In de tab `Code` op de [feedbackpagina](#feedbackpagina) kan je de broncode van de [oplossing](#navigeren-naar-een-oplossing) niet wijzigen. Als je op de broncode drukt dan wordt die volledig geselecteerd. Kopieer de broncode naar het klembord en plak die in je IDE. Als alternatief kan je op de downloadknop drukken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina). Daarmee download je een bestand met de broncode dat je dan kan openen in je IDE. In je IDE kan je de broncode bewerken en daarna eventueel opnieuw [indienen](#indienen-van-een-oplossing).
 
 Als alternatief kan je ook op de bewerkknop drukken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina) om te navigeren naar de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). De broncode van de oplossing werd daarbij ingevoegd in de [code editor](#indienen-van-een-oplossing) aan de onderkant van de [oefeningpagina](#oefeningpagina). Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
 :::

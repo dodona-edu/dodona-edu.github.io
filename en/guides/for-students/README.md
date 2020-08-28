@@ -21,11 +21,13 @@ De handleding is verdeeld in drie onderdelen.
 
 ## Contact opnemen
 
-Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de [contactpagina](https://dodona.ugent.be/en/contact/) door in de voettekst (onderaan elke pagina) op <span class="guilabel">Contact</span> te drukken.
+Vul de gegevens in het paneel <span class="guilabel">Contacteer ons</span> aan en druk daarna op de verzendknop in de rechterbovenhoek van het paneel.
+Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de [contactpagina](https://dodona.ugent.be/nl/contact/) door in de voettekst (onderaan elke pagina) op `Contact` te drukken.
 
 ![image](./contact.nl.png)
 
-Vul de gegevens in het paneel <span class="guilabel">Contacteer ons</span> aan en druk daarna op de verzendknop in de rechterbovenhoek van het paneel.
+Vul de gegevens in het paneel `Contacteer ons` aan en druk daarna op de verzendknop in de rechterbovenhoek van het paneel.
+
 
 
 
@@ -40,9 +42,9 @@ Vul de gegevens in het paneel <span class="guilabel">Contacteer ons</span> aan e
 
     ## Get in touch
 
-    If you have any questions about the way Dodona works or any interesting ideas that you want to share about the extension or enhancement of the platform, don't hesitate to contact us. Any comments and/or suggestions are more than welcome. Contacting us can be done by navigating to the **contact page** by clicking on the <span class="guilabel">Contact</span> button in the **footer** (at the bottom of every page).
+    If you have any questions about the way Dodona works or any interesting ideas that you want to share about the extension or enhancement of the platform, don't hesitate to contact us. Any comments and/or suggestions are more than welcome. Contacting us can be done by navigating to the **contact page** by clicking on the `Contact` button in the **footer** (at the bottom of every page).
 
     ![image](./contact.en.png)
 
-    Fill the information in the panel <span class="guilabel">Get in touch</span> and when you are ready press on the send button in the upper right corner of the panel.
+    Fill the information in the panel `Get in touch` and when you are ready press on the send button in the upper right corner of the panel.
 -->

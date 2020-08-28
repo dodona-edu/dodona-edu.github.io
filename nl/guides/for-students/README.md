@@ -21,8 +21,9 @@ De handleding is verdeeld in drie onderdelen.
 
 ## Contact opnemen
 
-Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de [contactpagina](https://dodona.ugent.be/nl/contact/) door in de voettekst (onderaan elke pagina) op <span class="guilabel">Contact</span> te drukken.
+Vul de gegevens in het paneel <span class="guilabel">Contacteer ons</span> aan en druk daarna op de verzendknop in de rechterbovenhoek van het paneel.
+Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de [contactpagina](https://dodona.ugent.be/nl/contact/) door in de voettekst (onderaan elke pagina) op `Contact` te drukken.
 
 ![image](./contact.nl.png)
 
-Vul de gegevens in het paneel <span class="guilabel">Contacteer ons</span> aan en druk daarna op de verzendknop in de rechterbovenhoek van het paneel.
+Vul de gegevens in het paneel `Contacteer ons` aan en druk daarna op de verzendknop in de rechterbovenhoek van het paneel.
