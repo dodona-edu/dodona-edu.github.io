@@ -7,7 +7,7 @@ description: "Tutorial: oefeningen handleiding voor studenten"
 
 Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-naar-een-oplossing) kunt [indienen](#indienen-van-een-oplossing). Cursusbeheerders kunnen deze oefeningen aan hun [cursussen]() toevoegen. Daardoor zijn er verschillende plaatsen waar je een oefening kunt selecteren:
 
--   Op een [cursuspagina](../courses/#cursuspagina) kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te drukken.
+-   Op een cursuspagina kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te drukken.
 
     ![image](./student.course_exercise_selection.png)
 
@@ -17,13 +17,13 @@ Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-n
 
 <h1 id="oefeningpagina"></h1>
 
-Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
+Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
 ![De [ISBN](https://dodona.ugent.be/en/exercises/910319224/) oefening op Dodona.](./student.exercise_start.png)
 
 ::: tip
 
-Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de [cursuspagina](../courses/#cursuspagina). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
+Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast <span class="guilabel">Dodona</span> aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
 
 ![image](./student.exercise_crumbs.png)
 :::
@@ -79,7 +79,7 @@ Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oploss
 
     ![image](./student.all_submissions_link.png)
 
--   Druk op de statistiek <span class="guilabel">Inzendingen</span> in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de [cursuspagina](../courses/#cursuspagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
+-   Druk op de statistiek <span class="guilabel">Inzendingen</span> in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
 
     ![image](./student.course_submissions.png)
 
@@ -116,7 +116,7 @@ De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](
 
 <span class="guilabel">Cursus</span>
 
-De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de [cursuspagina](../courses/#cursuspagina) te navigeren.
+De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de cursuspagina te navigeren.
 
 ::: details Notitie
 Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) niet binnen de context van een [cursus]() werd [ingediend](#indienen-van-een-oplossing).
@@ -129,7 +129,6 @@ Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) n
 Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld <span class="guilabel">ongeveer 2 uur geleden</span>. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
 
 <h1 id="status"/>
-<h1 id="icoontjes"/>
 <span class="guilabel">Status</span>
 
 De **status** die Dodona of de [judge](#interpreteren-van-feedback) aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de [oplossing](#navigeren-naar-een-oplossing) wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:

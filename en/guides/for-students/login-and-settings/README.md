@@ -71,13 +71,13 @@ Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of 
 Als je wilt schakelen naar een andere [gebruikersaccount](#aanmelden) dan deze die momenteel [aangemeld](#aanmelden) is, dan moet je eerst afmelden en daarna terug aanmelden met de andere gebruikersaccount.
 :::
 
-<h1 id="gebruikersmenu"/>
+### Gebruikersmenu
 
 Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het **gebruikersmenu** met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen <span class="guilabel">Aanmelden</span> stond toen je nog niet aangemeld was.
 
 ![image](./student.user_menu.png)
 
-<h1 id="startpagina"></h1>
+### Startpagina
 
 Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in een gepersonaliseerde **startpagina** met een overzicht van alle [cursussen]() waarvoor je [geregistreerd](../courses/#registreren-voor-een-cursus) bent, hun [oefeningenreeksen]() met nakende [deadlines]() en je voortgang bij het [indienen](../exercises/#indienen-van-een-oplossing) van [oplossingen](../exercises/#navigeren-naar-een-oplossing) voor [oefeningen](../exercises/#navigeren-naar-een-oefening). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent.
 
