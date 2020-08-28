@@ -7,17 +7,21 @@ next: ./login-and-settings/
 # Van start met Dodona als student
 > Alle informatie om vlot van start te gaan met Dodona als student.
 
-Als student kan je [registreren](./courses/#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](./exercises/#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](./exercises/#navigeren-naar-een-oplossing) [indienen](./exercises/#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](./exercises/#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](./login-and-settings/#aanmelden) beschikt en dat je [aangemeld](./login-and-settings/#aanmelden) bent op Dodona.
+## What is Dodona?
 
-## Nederlandse handleidingen voor studenten
+Dodona is een online oefenplatform om te leren programmeren. De webapplicatie werd ontwikkeld aan de Universiteit Gent om practica aan grote groepen studenten te ondersteunen. Dodona focust daarom in de eerste plaats op het automatisch testen en geven van feedback op ingediende oplossingen van programmeeroefeningen. Op dit moment ondersteunt Dodona de programmeertalen Python, JavaScript, Java, C#, bash, Prolog, Haskell en R.
 
-* [Aanmelden & gebruikersinstellingen](./login-and-settings/)
-* [Oefeningen handleiding](./exercises/)
-* [Cursus handleiding](./courses/)
+## Opdeling van de handleiding
+
+De handleding is verdeeld in drie onderdelen.
+
+* Het eerste deel [Aanmelden & gebruikersinstellingen](./login-and-settings/) legt uit hoe je een gebruikersaccount door Dodona kan laten aanmaken en hoe je die kan personaliseren.
+* Het tweede onderdeel [Oefeningen handleiding](./exercises/) bevat alle informatie dat te maken heeft met het navigeren naar oefeningen of oplossingen, het indienen van oplossingen en het interpreteren van feedback.
+* In het laatste deel [Cursus handleiding](./courses/) wordt besproken hoe je je kan registreren en uitschrijven voor een cursus, hoe je kan navigeren naar cursus en hoe je de indienstatus moet interpreteren.
 
 ## Contact opnemen
 
-Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de **contactpagina** door in de **voettekst** (onderaan elke pagina) op <span class="guilabel">Contact</span> te drukken.
+Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de [contactpagina](https://dodona.ugent.be/en/contact/) door in de voettekst (onderaan elke pagina) op <span class="guilabel">Contact</span> te drukken.
 
 ![image](./contact.nl.png)
 
