@@ -5,7 +5,7 @@ description: "Tutorial: gebruikersbeheer"
 
 # Gebruikersbeheer
 
-Alle **gebruikers** kunnen zich
+Alle gebruikers kunnen zich
 [aanmelden](/nl/for-students#aanmelden) en hun
 [gebruikersprofiel](/nl/for-students#gebgruikersprofiel) beheren. Voor sommige acties heb je echter bijkomende
 [beheersrechten](#beheersrechten) nodig.
@@ -16,7 +16,7 @@ werden. Een uitzondering is de cursusbeheerder, deze heeft lesgeverrechten binne
 
 ::: tip
 
-Je herkent dat je [lesgever](#lesgever) bent als je het **beheersmenu** (menu `Admin`) ziet wanneer je de aan de
+Je herkent dat je [lesgever](#lesgever) bent als je het beheersmenu (menu `Admin`) ziet wanneer je de aan de
 linkerkant van de pagina het hamburgermenu openklikt.
 
 ![location](./staff.admin_menu_location.png)
@@ -38,7 +38,7 @@ het [gebruikersoverzicht](#gebruikersoverzicht) van je cursus door naar je cursu
 ![admin menu users](./staff.course_users.png)
 
 ## Gebruikersoverzicht
-In het **gebruikersoverzicht** worden de gebruikersnaam, de naam, het
+In het gebruikersoverzicht worden de gebruikersnaam, de naam, het
 emailadres en [voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het
 [gebruikersprofiel](/nl/for-students#gebruikersprofiel)
 van alle gebruikers van jouw cursus. Voor de naam van elke [lesgever](#lesgever) en [beheerder](#beheerder)
@@ -63,7 +63,7 @@ gebruiker te [navigeren](#gebruiker-navigeren).
 ![image](./staff.users_filtered_link.png)
 
 ## Gebruiker voortgangsstatistieken
-De **voortgangsstatistieken** van een gebruiker worden weergegeven middels een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel [oefeningen](/nl/for-students#oefening) in de cursus waarvoor de gebruiker een *correcte* [oplossing](/nl/for-students#oplossing) voor heeft [ingediend](/nl/for-students#oplossing-indienen). Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog niet correct heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog niet aan begonnen is.
+De voortgangsstatistieken van een gebruiker worden weergegeven middels een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel [oefeningen](/nl/for-students#oefening) in de cursus waarvoor de gebruiker een *correcte* [oplossing](/nl/for-students#oplossing) voor heeft [ingediend](/nl/for-students#oplossing-indienen). Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog niet correct heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog niet aan begonnen is.
 
 ![statistics](./user_progress_statistics.png)
 
@@ -74,7 +74,7 @@ Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binne
 ![cursusoverzicht](./staff.user_course_overview.png)
 
 Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende
-**beheersrechten** nodig. Als [lesgever](#lesgever) kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande [icoontjes](#icoontjes-voor-beheersrechten). Je kan dan ook de acties aan de rechterkant gebruiken om de [beheersrechten](#beheersrechten) van een gebruiker in te stellen.
+beheersrechten nodig. Als [lesgever](#lesgever) kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande [icoontjes](#icoontjes-voor-beheersrechten). Je kan dan ook de acties aan de rechterkant gebruiken om de [beheersrechten](#beheersrechten) van een gebruiker in te stellen.
 Als [lesgever](#lesgever) kan je enkel de
 beheersrechten `Student` en
 `Cursusbeheerder` toekennen aan gebruikers
@@ -105,10 +105,10 @@ toegekend worden:
 Een gebruiker waarvoor de
 [beheersrechten](#beheersrechten)
 ingesteld zijn op `Student` noemen we
-een **student**. 
+een student. 
 ### Lesgever
 Een gebruiker waarvoor de [beheersrechten](#beheersrechten) ingesteld zijn
 op `Staff` noemen we een
-**lesgever**.
+lesgever.
 ### Cursusbeheerder
 Een gebruiker met de lesgeverrol binnenin een cursus noemen we een cursusbeheerder.

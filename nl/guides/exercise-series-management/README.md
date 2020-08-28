@@ -116,7 +116,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
 > Bij het [aanmaken](#oefeningenreeks-aanmaken) van een
 > [oefeningenreeks](#oefeningenreeks)
-> wordt automatisch een **token** gegenereerd als afschermingsmechanisme van [verborgen](#oefeningenreeks-verborgen) oefeningenreeksen. Zonder dit token kunnen gebruikers een
+> wordt automatisch een token gegenereerd als afschermingsmechanisme van [verborgen](#oefeningenreeks-verborgen) oefeningenreeksen. Zonder dit token kunnen gebruikers een
 > verborgen oefeningenreeks niet zien in het leerpad. Als ze rechtstreeks naar de oefeningenreeks proberen te navigeren, dan zien ze enkel een melding dat ze geen toegangsrechten hebben voor de oefeningenreeks.
 >
 > ![image](./student.hidden_series_denied_message.png)
@@ -124,7 +124,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 > Gebruikers kunnen een
 > [verborgen](#oefeningenreeks-verborgen)
 > [oefeningenreeks](#oefeningenreeks)
-> enkel zien als ze gebruikmaken van de **geheime link** voor de cursus.
+> enkel zien als ze gebruikmaken van de geheime link voor de cursus.
 > De geheime link bevat het [token](#oefeningenreeks-geheime-link) waarmee ze de oefeningenreeks ook te zien krijgen als die verborgen werd.
 >
 > ![image](./staff.series_hidden_link.png)

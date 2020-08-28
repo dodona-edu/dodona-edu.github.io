@@ -5,11 +5,11 @@ description: "Tutorial: cursusbeheer"
 
 # Cursusbeheer
 
-Een **cursus** wordt
+Een cursus wordt
 opgebouwd als een
 [leerpad](#leerpad) met
 [oefeningen](/nl/for-students#oefening) die gebundeld
-worden in **oefeningenreeksen**. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen
+worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen
 [opgelost](/nl/for-students#solution) worden.
 
 
@@ -158,7 +158,7 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
 > Bij het [aanmaken](#cursus-aanmaken) van
 > een [cursus](#cursus) wordt automatisch
-> een **token** gegenereerd als afschermingsmechanisme van
+> een token gegenereerd als afschermingsmechanisme van
 > [verborgen](#cursus-verbergen)
 > cursussen. Zonder dit token kunnen [niet-geregistreerde](/nl/for-students#cursus-registreren) gebruikers de
 > [cursuspagina](#cursuspagina) van een verborgen cursus
@@ -259,7 +259,7 @@ nieuwe [cursuseigenschappen](#cursuseigenschappen) onmiddellijk van toepassing z
 # Leerpad
 Als [cursusbeheerder](#cursusbeheerder)
 kan je voor de [cursus](#cursus) een
-**leerpad** uitstippelen. Het leerpad wordt op de
+leerpad uitstippelen. Het leerpad wordt op de
 [cursuspagina](#cursuspagina) weergegeven
 onder de hoofding `Oefeningenreeksen`.
  Aan het leerpad kan je [oefeningenreeksen](/nl/exercise-series-management#oefeningenreeks)
@@ -275,7 +275,7 @@ Druk in het [leerpad](#leerpad) op de knop
 ## Cursusgebruikers beheren
 
 Als [cursusbeheerder](#cursusbeheerder)
-krijg je toegang tot alle **cursusgebruikers**. Dit zijn de gebruikers
+krijg je toegang tot alle cursusgebruikers. Dit zijn de gebruikers
 die ooit voor de cursus
 [geregistreerd](/nl/for-students#cursus-registreren)
 geweest zijn of die ooit een
@@ -306,7 +306,7 @@ verloopt op dezelfde manier als in het
 In het [overzicht](#cursusgebruikersoverzicht) van alle
 [cursusgebruikers](#cursusgebruiker)
 worden de cursusgebruikers in tabs gegroepeerd volgens hun
-**registratiestatus** voor de [cursus](#cursus).
+registratiestatus voor de [cursus](#cursus).
 
 `Geregistreerd`
 
@@ -346,7 +346,7 @@ cursusgebruikers waarmee je hun
 
 <h1 id="cursusbeheerder"></h1>
 
-Een **cursusbeheerder** is een
+Een cursusbeheerder is een
 [geregistreerde](/nl/for-students#cursus-registreren)
 [cursusgebruiker](#cursusgebruiker) met
 beheersrechten voor de [cursus](#cursus).
