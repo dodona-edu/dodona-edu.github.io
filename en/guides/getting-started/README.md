@@ -1,10 +1,10 @@
 ---
-title: '[nl] Van start met Dodona'
-description: "Tutorial: van start met Dodona"
+title: '[nl] Van start met Dodona als leerkracht'
+description: "Tutorial: van start met Dodona als leerkracht"
 ---
-# Van start met Dodona
+# Van start met Dodona als leerkracht
 
-> Alle informatie om vlot van start te gaan met Dodona.
+> Alle informatie om vlot van start te gaan met Dodona als leerkracht.
 
 ## Wat is Dodona?
 

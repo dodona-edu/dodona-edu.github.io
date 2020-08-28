@@ -1,10 +1,11 @@
 ---
-title: "[nl] Van start met Dodona als studenten"
-description: "Tutorial: van start met Dodona als studenten"
+title: "[nl] Van start met Dodona als student"
+description: "Tutorial: van start met Dodona als student"
 next: ./login-and-settings/
 ---
 
-# Van start met Dodona als studenten
+# Van start met Dodona als student
+> Alle informatie om vlot van start te gaan met Dodona als student.
 
 Als student kan je [registreren](./courses/#registreren-voor-een-cursus) voor één of meer [cursussen](). Elke cursus bevat een reeks [oefeningen](./exercises/#navigeren-naar-een-oefening) die gegroepeerd zijn in [oefeningenreeksen](). Voor elke oefening kan je herhaald [oplossingen](./exercises/#navigeren-naar-een-oplossing) [indienen](./exercises/#indienen-van-een-oplossing) die automatisch worden beoordeeld en van [feedback](./exercises/#interpreteren-van-feedback) voorzien. Deze acties vereisen echter dat je over een [gebruikersaccount](./login-and-settings/#aanmelden) beschikt en dat je [aangemeld](./login-and-settings/#aanmelden) bent op Dodona.
 
