@@ -81,7 +81,7 @@ beheersrechten `Student` en
 (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot
 cursusbegeleider of degraderen tot [student](#student).
 
-![image](./staff.user_edit_permission.png)
+![image](./staff.users_edit_permissions.png)
 
 ::: tip Belangrijk
 
