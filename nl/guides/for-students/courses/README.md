@@ -1,7 +1,6 @@
 ---
 title: Cursus handleiding
 description: "Tutorial: cursus handleding"
-next: ../../getting-started/
 ---
 
 # Cursus handleiding

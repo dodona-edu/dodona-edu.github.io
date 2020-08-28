@@ -1,8 +1,10 @@
 ---
 title: "[nl] Aanmelden & gebruikersinstellingen"
-description: "Tutorial: aanmelden en gebruikersinstellingen voor studenten"
-next: ../exercises/
+description: "Tutorial: aanmelden en gebruikersinstellingen"
 ---
+
+# Aanmelden & gebruikersinstellingen
+> Alle informatie zodat je als student een een gebruikersaccount door Dodona kan laten aanmaken en die kan personaliseren.
 
 ## Selecteren van de taal
 

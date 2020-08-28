@@ -1,7 +1,6 @@
 ---
 title: "[nl] Van start met Dodona als student"
 description: "Tutorial: van start met Dodona als student"
-next: ./login-and-settings/
 ---
 
 # Van start met Dodona als student

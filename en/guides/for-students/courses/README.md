@@ -1,8 +1,11 @@
 ---
-title: "[nl] Cursus handleiding voor studenten"
-description: "Tutorial: cursus handleding voor studenten"
-next: ../../getting-started/
+title: "[nl] Cursus handleiding"
+description: "Tutorial: cursus handleding"
 ---
+
+
+# Cursus handleiding
+> Alle informatie zodat je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
 
 ## Navigeren naar een cursus
 

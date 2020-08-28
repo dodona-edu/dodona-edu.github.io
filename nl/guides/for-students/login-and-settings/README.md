@@ -1,7 +1,6 @@
 ---
 title: Aanmelden & gebruikersinstellingen
 description: "Tutorial: aanmelden en gebruikersinstellingen"
-next: ../exercises/
 ---
 
 # Aanmelden & gebruikersinstellingen

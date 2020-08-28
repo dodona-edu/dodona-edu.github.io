@@ -1,7 +1,6 @@
 ---
 title: Oefeningen handleiding
 description: "Tutorial: oefeningen handleiding"
-next: ../courses/
 ---
 
 # Oefeningen handleiding
