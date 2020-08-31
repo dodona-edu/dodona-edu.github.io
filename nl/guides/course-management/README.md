@@ -5,55 +5,37 @@ description: "Tutorial: cursusbeheer"
 
 # Cursusbeheer
 
-Een cursus wordt
-opgebouwd als een
-[leerpad](#leerpad) met
-[oefeningen](/nl/for-students#oefening) die gebundeld
-worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen
-[opgelost](/nl/for-students#solution) worden.
+[[toc]]
+
+Een cursus wordt opgebouwd als een [leerpad](#leerpad) met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden.
 
 
-Een [lesgever](/nl/user-management#teacher) kan onbeperkt
-[cursussen](#cursus)
-[aanmaken](#cursus-aanmaken) en wordt
-automatisch ook de eerste
-[cursusbeheerder](#cursusbeheerder) van
-die cursussen. Als cursusbeheerder kan hij andere
-[cursusgebruikers](#cursusgebruikers)
-[aanduiden](#cursusbeheerders-aanduiden)
-om samen met hem de cursus te beheren. Hij kan echter geen cursussen
-beheren waarvoor hij geen cursusbeheerder is.
+Een lesgever kan onbeperkt [cursussen](#cursus) [aanmaken](#cursus-aanmaken) en wordt automatisch ook de eerste [cursusbeheerder](#cursusbeheerder) van
+die cursussen. Als cursusbeheerder kan hij andere [cursusgebruikers](#cursusgebruikers) [aanduiden](#cursusbeheerders-aanduiden) om samen met hem de cursus te beheren. Hij kan echter geen cursussenjbeheren waarvoor hij geen cursusbeheerder is.
 
-Een [cursusbeheerder](#cursusbeheerder) stippelt voor de [cursus](#cursus) een [leerpad](#leerpad) uit met [oefeningenreeksen](#oefeningenreeks) waaraan [oefeningen](/nl/for-students#oefening) [gekoppeld](#oefeningen-koppelen) worden. Voor elke oefeningenreeks kan hij een [deadline](#oefeningenreeks-deadline) [instellen](#oefeningenreeks-eigenschappen-instellen) die aangeeft tot wanneer er rekening gehouden wordt met [oplossingen](/nl/for-students#oplossing) die
-[ingediend](/nl/for-students#oplossing-indienen) worden
-voor de oefeningen uit de oefeningenreeks.
-[Cursusgebruikers](#cursusgebruikers)
-kunnen na de deadline echter onbeperkt oplossingen blijven indienen voor de oefeningen uit de oefeningenreeks en blijven daar nog steeds feedback voor ontvangen.
+Een cursusbeheerdercursusbeheerder stippelt voor de cursus een leerpad uit met oefeningenreeksen waaraan oefeningen gekoppeld worden. Voor elke oefeningenreeks kan hij een deadline instellen die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden
+voor de oefeningen uit de oefeningenreeks. Cursusgebruikers kunnen na de deadline echter onbeperkt oplossingen blijven indienen voor de oefeningen uit de oefeningenreeks en blijven daar nog steeds feedback voor ontvangen.
 
 ## Cursus aanmaken
 
-Als [lesgever](/nl/user-management#lesgever) kan je een
-nieuwe [cursus](#cursus) aanmaken door op
-de knop `CURSUS AANMAKEN` te drukken
-in de rechterbovenhoek van het
-[cursusoverzicht](#cursusoverzicht).
+Als lesgever kan je een nieuwe cursus aanmaken door op de knop `CURSUS AANMAKEN` te drukken in de rechterbovenhoek van het cursusoverzicht.
 
 ![create course](./staff.courses_new_link.png)
 
-Om een nieuwe [cursus](#cursus) aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus, ofwel maak je een volledige nieuwe cursus aan.
+Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus, ofwel maak je een volledige nieuwe cursus aan.
 
 ![new course menu](./staff.course_new_options.png)
 
-Druk op `Dodona` in de
-[navigatiebalk](/nl/for-students#navigatiebalk) om het
-aanmaken van de [cursus](#cursus) te
-annuleren.
+Druk op `Dodona` in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
 
-Als je vertrekt vanaf een bestaande [cursus](#cursus), dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
+Als je vertrekt vanaf een bestaande cursus, dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
-![choose existing course](./staff.course_new_copy.png)
+![choose existing course](./staff.course_new_copy_course_options.png)
 
 Vervolgens moet je aangeven welke elementen van de [cursus](#cursus) je wil overnemen. De reeksstructuur wordt altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de begeleiders wil overnemen. Ten slotte kan je ook andere instellingen kiezen.
+
+![choose existing course extra](./staff.course_new_copy.png)
+
 
 `Zet de gekopieerde reeksen op verborgen`:  dit is zeer handig als je elke week een nieuwe reeks zichtbaar wil maken zonder ze eerst onzichtbaar te moeten maken.
 
