@@ -17,7 +17,7 @@ Je kan Dodona gebruiken in het Nederlands of het Engels. Gebruik hiervoor het ta
 
 Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
 
-::: tip Notitie
+::: tip Tip
 
 De taal waarin vaste componenten van Dodona (menubalken, cursusstructuur, mededelingen, ...) worden weergegeven, valt volledig onder de controle van het platform. Deze componenten worden altijd weergegeven in de geselecteerde taal.
 
