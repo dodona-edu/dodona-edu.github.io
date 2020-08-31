@@ -4,7 +4,7 @@ description: "Tutorial: aanmelden en gebruikersinstellingen"
 ---
 
 # Aanmelden & gebruikersinstellingen
-> Alle informatie zodat je als student een een gebruikersaccount door Dodona kan laten aanmaken en die kan personaliseren.
+> Alle informatie zodat je als student een gebruikersaccount door Dodona kan laten aanmaken en die kan personaliseren.
 
 ## Inhoudstafel
 [[toc]]
