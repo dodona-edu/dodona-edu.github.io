@@ -11,7 +11,7 @@ description: "Tutorial: aanmelden en gebruikersinstellingen"
 
 ## Selecteren van de taal
 
-Als taal voor Dodona kan je kiezen tussen Nederlands of Engels. Gebruik hiervoor het taalmenu aan de rechterkant van de navigatiebalk (bovenaan elke pagina).
+Je kan Dodona gebruiken in het Nederlands of het Engels. Gebruik hiervoor het taalmenu aan de rechterkant van de navigatiebalk (bovenaan elke pagina).
 
 ![image](./choose_language.png)
 
