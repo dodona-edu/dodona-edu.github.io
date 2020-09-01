@@ -19,6 +19,6 @@
     "@vuepress/plugin-medium-zoom": "^1.5.4",
     "markdown-it-imsize": "^2.0.1",
     "vuepress": "^1.5.4",
-    "vuepress-plugin-redirect": "^1.2.4"
+    "vuepress-plugin-redirect": "^1.2.5"
   }
 }
