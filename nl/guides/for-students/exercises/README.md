@@ -56,23 +56,19 @@ Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je
 
 ## Navigeren naar een oplossing
 
-Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
+Je kan op Dodona naar je ingediende oplossingen op verschilldende manieren navigeren. Voor elke manier zullen de oplossingen door Dodona op een andere manier groepeerd worden. Hieronder volgen de drie belangrijkste manieren:
 
--   Kies `Mijn oplossingen` in het gebruikersmenu aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of klik op de statistiek `Inzendingen` in het paneel in de rechterkolom van je startpagina voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
+- Je kan all jouw oplossingen van één oefening bekijken door op de `Oplossingen` tab op de relevante oefeningenpagina te klikken.
 
-    ![image](./student.all_submissions_link.png)
+![image](./student.exercise_submissions_tab.png)
 
--   Klik op de statistiek `Inzendingen` in het kaartje van een cursus op je startpagina of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
+- Je kan all jouw oplossingen zien door in het gebruikersmenu in de navigatie balk op `Mijn oplossingen` te klikken.
 
-    ![image](./student.course_submissions.png)
+![image](./student.all_submissions_link.png)
 
--   Selecteer de tab `Oplossingen` op een [oefeningpagina](#oefeningpagina) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je hebt [ingediend](#indienen-van-een-oplossing) voor de [oefening](#navigeren-naar-een-oefening). Als je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt binnen een [cursus](), dan is het overzicht bijkomend beperkt tot alle oplossingen die je binnen de cursus hebt ingediend.
+- Je kan all jouw oplossingen binnen een cursus bekijken door op de `Ingediende oplossingen` van de relevante cursus kaart te klikken.
 
-    ![image](./student.exercise_submissions_tab.png)
-
--   Klik in een [oefeningenreeks]() op het groter dan symbool aan de rechterkant van een [oefening](#navigeren-naar-een-oefening) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing) voor de oefening.
-
-    ![image](./student.exercise_course_submissions_page.png)
+![image](./student.course_submissions.png)
 
 Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossing) het tijdstip van [indienen](#indienen-van-een-oplossing), de status en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
