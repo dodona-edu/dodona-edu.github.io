@@ -34,13 +34,6 @@ Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oe
 ![image](./student.exercise_crumbs.png)
 :::
 
-::: tip
-
-Dodona voorziet een verzorgde opmaak bij het afdrukken van een [oefeningpagina](#oefeningpagina). Daarbij worden sommige componenten die je in een browser te zien krijgt automatisch verborgen bij het afdrukken. Enkel de naam en de beschrijving van de [oefening](#navigeren-naar-een-oefening) worden afgedrukt.
-
-Bovendien is het mogelijk dat bij het opstellen van de [oefening](#navigeren-naar-een-oefening) bepaalde componenten uit de beschrijving expliciet werden verboren in de afdrukbare versie (bijvoorbeeld interactieve componenten zoals afspeelbare videofragmenten) of dat er extra componenten aan de beschrijving werden toegevoegd die enkel zichtbaar zijn in de afdrukbare versie (bijvoorbeeld een statische afbeelding als alternatief voor een videofragment).
-:::
-
 ## Indienen van een oplossing
 
 Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen` als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
