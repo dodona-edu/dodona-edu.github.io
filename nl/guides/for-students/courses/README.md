@@ -13,11 +13,11 @@ description: "Tutorial: cursushandleding"
 
 Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#navigeren-naar-een-oefening) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent dan kan je binnen de cursus ook [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indienen](../exercises/#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
 
--   Aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te klikken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te klikken.
+-   Aan de linkerkant van je startpagina staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te klikken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te klikken.
 
--   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina). Je kunt één van deze cursussen selecteren door op de naam van de cursus te klikken.
+-   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina. Je kunt één van deze cursussen selecteren door op de naam van de cursus te klikken.
 
--   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) bevat onder de hoofding `Mijn vakken` een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina](../login-and-settings/#startpagina) moet navigeren.
+-   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) bevat onder de hoofding `Mijn vakken` een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je startpagina moet navigeren.
 
     ![image](./student.my_courses.png)
 
@@ -27,7 +27,7 @@ Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#na
 
 <h1 id="cursusoverzicht"></h1>
 
--   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te klikken op de knop `MEER CURSUSSEN ...` onderaan in de rechterkolom op je [startpagina](../login-and-settings/#startpagina). Als je nog voor geen enkele cursus [geregistreerd](#registreren-voor-een-cursus) bent, dan kan je als alternatief ook klikken op de knop `VERKEN` naast de afbeelding op je startpagina.
+-   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te klikken op de knop `MEER CURSUSSEN ...` onderaan in de rechterkolom op je startpagina. Als je nog voor geen enkele cursus [geregistreerd](#registreren-voor-een-cursus) bent, dan kan je als alternatief ook klikken op de knop `VERKEN` naast de afbeelding op je startpagina.
 
     ![image](./student.explore_courses.png)
 
@@ -89,7 +89,7 @@ Mogelijke weergaven van je [indienstatus](#indienstatus) nadat de [deadline](#de
 
 Als je **vóór het verstrijken van de deadline** van een [oefeningenreeks]() een [oplossing](../exercises/#navigeren-naar-een-oplossing) [indient](../exercises/#navigeren-naar-een-oefening) voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks, dan kan je [indienstatus](#indienstatus) voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de [deadline](#deadline). Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en [opnieuw indienen]().
 
-Dodona toont een **waarschuwingssymbool** naast je [indienstatus](#indienstatus) van een [oefening](../exercises/#navigeren-naar-een-oefening) in een [oefeningenreeks]() en in de lijst met [recente]() op je [startpagina](../login-and-settings/#startpagina) als je laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) voor de oefening vóór de [deadline](#deadline) van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
+Dodona toont een **waarschuwingssymbool** naast je [indienstatus](#indienstatus) van een [oefening](../exercises/#navigeren-naar-een-oefening) in een [oefeningenreeks]() en in de lijst met [recente]() op je startpagina als je laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) voor de oefening vóór de [deadline](#deadline) van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
 ![image](./student.deadline_series_warning.png)
 
@@ -130,7 +130,7 @@ Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je n
 
     ![image](./moderated_register.png)
 
-    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina](#cursuspagina) de boodschap `Je staat al op de wachtlijst.` en wordt de cursus opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina).
+    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina](#cursuspagina) de boodschap `Je staat al op de wachtlijst.` en wordt de cursus opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina.
 
     ![image](./moderated_waiting.png)
 
@@ -143,7 +143,7 @@ Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je n
 Op een [cursuspagina](#cursuspagina) kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent of als de cursus werkt met [open]().
 :::
 
-Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
+Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
 
 ![image](./student.my_courses.png)
 
@@ -155,4 +155,4 @@ Als je navigeert naar een [cursus]() waarvoor je [geregistreerd](#registreren-vo
 
 ![image](./student.unregister.png)
 
-Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linker kant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina), dan verdwijnt de cursus ook uit die lijst.
+Hierdoor verdwijnt het kaartje van de [cursus]() aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linker kant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.

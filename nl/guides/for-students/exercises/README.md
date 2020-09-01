@@ -58,11 +58,11 @@ Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je
 
 Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
 
--   Kies `Mijn oplossingen` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of klik op de statistiek `Inzendingen` in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
+-   Kies `Mijn oplossingen` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of klik op de statistiek `Inzendingen` in het paneel in de rechterkolom van je startpagina voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
     ![image](./student.all_submissions_link.png)
 
--   Klik op de statistiek `Inzendingen` in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
+-   Klik op de statistiek `Inzendingen` in het kaartje van een cursus op je startpagina of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
 
     ![image](./student.course_submissions.png)
 
