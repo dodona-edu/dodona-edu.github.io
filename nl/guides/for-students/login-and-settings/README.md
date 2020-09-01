@@ -60,7 +60,7 @@ Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voo
 
 ## Instellen van persoonlijke voorkeuren
 
-Kies voor `Mijn profiel` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je profielpagina te navigeren.
+Kies voor `Mijn profiel` in het gebruikersmenu aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) om naar je profielpagina te navigeren.
 
 Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je persoonsgegevens (voornaam, familienaam, gebruikersnaam en emailadres) en enkele persoonlijke voorkeuren ([taal](#selecteren-van-de-taal) en tijdzone) die samen je gebruikersprofiel vormen. Dodona gebruikt het gebruikersprofiel om je gebruikerservaring te personaliseren.
 
