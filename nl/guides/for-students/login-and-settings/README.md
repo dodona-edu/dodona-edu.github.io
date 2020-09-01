@@ -21,7 +21,7 @@ Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voork
 
 De taal waarin vaste componenten van Dodona (menubalken, cursusstructuur, mededelingen, ...) worden weergegeven, valt volledig onder de controle van het platform. Deze componenten worden altijd weergegeven in de geselecteerde taal.
 
-De naam en beschrijving van een [cursus]() liggen vast, net zoals namen en beschrijvingen van [oefeningenreeksen]() binnen een cursus. Deze componenten zijn niet afhankelijk van de selectie van de taal. De taal van deze componenten valt volledig onder de controle van de cursusbeheerders die de cursus hebben opgesteld.
+De naam en beschrijving van een [cursus](../courses/) liggen vast, net zoals namen en beschrijvingen van oefeningenreeksen binnen een cursus. Deze componenten zijn niet afhankelijk van de selectie van de taal. De taal van deze componenten valt volledig onder de controle van de cursusbeheerders die de cursus hebben opgesteld.
 
 De naam en beschrijving van een [oefening](../exercises/#navigeren-naar-een-oefening) zijn afhankelijk van de selectie van de taal. Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
@@ -34,7 +34,7 @@ Om aan te melden op dodona klik op `Aanmelden` aan de rechterkant van de [naviga
 
 ![image](./login.png)
 
-Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling. In het gebruikersprofiel van deze gebruikersaccount kan je [persoonlijke voorkeuren](#instellen-van-persoonlijke-voorkeuren) instellen voor de [taal](#selecteren-van-de-taal) en de tijdzone die door Dodona gebruikt worden.  Daarnaast worden alle acties die je op het platform uitvoert &mdash; zoals het [registreren](../courses/#registreren-voor-een-cursus) voor [cursussen]() of het [indienen](../exercises/#indienen-van-een-oplossing) van [oplossingen](../exercises/#navigeren-naar-een-oplossing) &mdash; aan je gebruikersaccount gekoppeld.
+Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling. In het gebruikersprofiel van deze gebruikersaccount kan je [persoonlijke voorkeuren](#instellen-van-persoonlijke-voorkeuren) instellen voor de [taal](#selecteren-van-de-taal) en de tijdzone die door Dodona gebruikt worden.  Daarnaast worden alle acties die je op het platform uitvoert &mdash; zoals het [registreren](../courses/#registreren-voor-een-cursus) voor [cursussen](../courses/) of het [indienen](../exercises/#indienen-van-een-oplossing) van [oplossingen](../exercises/#navigeren-naar-een-oplossing) &mdash; aan je gebruikersaccount gekoppeld.
 
 ![image](./institution.nl.png)
 
@@ -56,7 +56,7 @@ Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of 
 Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent. Als je je op een andere pagina bevindt en naar de landingspagina wil navigeren kan je dit doen door te klikken op `Dodona` in de [navigatiebalk](#selecteren-van-de-taal)
 
 
-Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voor geen enkele [cursus]() [geregistreerd](../courses/#registreren-voor-een-cursus) en heb je nog geen enkele [oplossing](../exercises/#navigeren-naar-een-oplossing) [ingediend](../exercises/#indienen-van-een-oplossing). Daardoor ziet je [startpagina]() er op dit moment nog vrij kaal uit.
+Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voor geen enkele [cursus](../courses/) [geregistreerd](../courses/#registreren-voor-een-cursus) en heb je nog geen enkele [oplossing](../exercises/#navigeren-naar-een-oplossing) [ingediend](../exercises/#indienen-van-een-oplossing). Daardoor ziet je startpagina er op dit moment nog vrij kaal uit.
 
 ## Instellen van persoonlijke voorkeuren
 
@@ -66,13 +66,13 @@ Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je persoonsg
 
 ![image](./student.user_menu_my_profile.png)
 
-Klik op de bewerkknop in de rechterbovenhoek van je [profielpagina](#instellen-van-persoonlijke-voorkeuren) om je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) te bewerken. Je [persoonsgegevens]() kan je niet zelf aanpassen. Deze worden automatisch aangepast op basis van de persoonsgegevens die tijdens het [aanmelden](#aanmelden) door je externe onderwijs- of onderzoeksinstelling doorgestuurd worden naar Dodona.
+Klik op de bewerkknop in de rechterbovenhoek van je [profielpagina](#instellen-van-persoonlijke-voorkeuren) om je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) te bewerken. Je persoonsgegevens kan je niet zelf aanpassen. Deze worden automatisch aangepast op basis van de persoonsgegevens die tijdens het [aanmelden](#aanmelden) door je externe onderwijs- of onderzoeksinstelling doorgestuurd worden naar Dodona.
 
 ![image](./student.edit_profile.png)
 
 <h1 id="tijdzone"/>
 
-In je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) kan je de **tijdzone** instellen die gebruikt wordt voor het weergeven van alle tijdsaanduidingen op het platform (bijvoorbeeld het [tijdstip]() waarop je een [oplossing]() hebt [ingediend]() of de [deadline]() voor een [oefeningenreeks]()).
+In je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) kan je de **tijdzone** instellen die gebruikt wordt voor het weergeven van alle tijdsaanduidingen op het platform (bijvoorbeeld het tijdstip waarop je een [oplossing]() hebt ingediend of de deadline voor een oefeningenreeks).
 
 ![image](./student.edit_timezone.png)
 
@@ -82,5 +82,5 @@ Als de [tijdzone](#tijdzone) uit je [gebruikersprofiel](#instellen-van-persoonli
 
 ![image](./student.wrong_timezone.png)
 
-Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) de [tijdzone](#tijdzone) in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je [profielpagina]() kunt navigeren.
+Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) de [tijdzone](#tijdzone) in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
 :::
