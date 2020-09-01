@@ -1,9 +1,9 @@
 ---
-title: Cursushandleiding
-description: "Tutorial: cursushandleding"
+title: Cursussen op Dodona
+description: "Tutorial: cursussen op Dodona"
 ---
 
-# Cursushandleiding
+# Cursussen op Dodona
 > Alle informatie zodat je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
 
 **Inhoudsopgave**
@@ -137,11 +137,6 @@ Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je n
 -   De [cursus]() werkt met een [gesloten]() [registratieprocedure](), wat betekent dat je geen [registratieverzoek](#registratieverzoek) kunt indienen voor de cursus.
 
     ![image](./closed_registration.png)
-
-::: details Notitie
-
-Op een [cursuspagina](#cursuspagina) kan je enkel de beschrijving en de [oefeningenreeksen]() zien als je voor de [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent of als de cursus werkt met [open]().
-:::
 
 Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder `Mijn vakken` in het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
 
