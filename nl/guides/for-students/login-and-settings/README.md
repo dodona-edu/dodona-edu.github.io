@@ -30,7 +30,7 @@ De taal van de [feedback](../exercises/#interpreteren-van-feedback) over een [op
 
 ## Aanmelden
 
-Klik op `Aanmelden` aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en klik op de knop `Aanmelden` centraal op de landingspagina.
+Om aan te melden op dodona klik op `Aanmelden` aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en klik op de knop `Aanmelden` centraal op de landingspagina.
 
 ![image](./login.png)
 
