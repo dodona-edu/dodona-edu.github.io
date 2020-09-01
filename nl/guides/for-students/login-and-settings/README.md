@@ -38,7 +38,7 @@ Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aa
 
 ![image](./institution.nl.png)
 
-::: tip Belangrijk
+::: warning Belangrijk
 
 Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldingsprocedure expliciet jouw toestemming voor het doorsturen van enkele [persoonsgegevens](#instellen-van-persoonlijke-voorkeuren) naar Dodona. Vaak hoef je deze toestemming slechts één keer te geven op elke computer waarmee je aanmeldt. Dodona gebruikt deze persoonsgegevens enkel voor intern beheer van je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) en wisselt deze informatie nooit uit met externe partijen.
 :::
