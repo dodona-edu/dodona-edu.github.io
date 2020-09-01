@@ -56,17 +56,17 @@ Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je
 
 ## Navigeren naar een oplossing
 
-Je kan op Dodona naar je ingediende oplossingen op verschilldende manieren navigeren. Voor elke manier zullen de oplossingen door Dodona op een andere manier groepeerd worden. Hieronder volgen de drie belangrijkste manieren:
+Je kan op Dodona naar je ingediende oplossingen op verschillende manieren navigeren. Voor elke manier zullen de oplossingen door Dodona op een andere manier gegroepeerd worden. Hieronder volgen de drie belangrijkste manieren:
 
-- Je kan all jouw oplossingen van één oefening bekijken door op de `Oplossingen` tab op de relevante oefeningenpagina te klikken.
+- Je kan al jouw oplossingen van één oefening bekijken door op de `Oplossingen` tab op de relevante oefeningenpagina te klikken.
 
 ![image](./student.exercise_submissions_tab.png)
 
-- Je kan all jouw oplossingen zien door in het gebruikersmenu in de navigatie balk op `Mijn oplossingen` te klikken.
+- Je kan al jouw oplossingen zien door in het gebruikersmenu in de navigatiebalk op `Mijn oplossingen` te klikken.
 
 ![image](./student.all_submissions_link.png)
 
-- Je kan all jouw oplossingen binnen een cursus bekijken door op de `Ingediende oplossingen` van de relevante cursus kaart te klikken.
+- Je kan al jouw oplossingen binnen een cursus bekijken door op de `Ingediende oplossingen` van de relevante cursus kaart te klikken.
 
 ![image](./student.course_submissions.png)
 
