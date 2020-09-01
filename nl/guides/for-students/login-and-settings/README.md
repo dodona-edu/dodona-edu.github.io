@@ -53,11 +53,6 @@ Voor authenticatie met gebruikersaccounts van externe onderwijs- of onderzoeksin
 Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijke gebruikersaccount op Dodona.
 :::
 
-::: tip
-
-Als je wilt schakelen naar een andere [gebruikersaccount](#aanmelden) dan deze die momenteel [aangemeld](#aanmelden) is, dan moet je eerst afmelden en daarna terug aanmelden met de andere gebruikersaccount.
-:::
-
 ### Gebruikersmenu
 
 Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het gebruikersmenu met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen `Aanmelden` stond toen je nog niet aangemeld was.
