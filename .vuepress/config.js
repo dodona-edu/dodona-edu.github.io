@@ -159,6 +159,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem) {
         'getting-started/',
         'user-management/',
         'course-management/',
+        'new-course/',
         'exercise-series-management/',
         'pycharm-plugin/',
         'vs-code-extension/',
