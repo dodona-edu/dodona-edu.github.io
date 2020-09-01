@@ -11,16 +11,17 @@ description: "Tutorial: oefeningen oplossen"
 
 ## Navigeren naar een oefening
 
-Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-naar-een-oplossing) kunt [indienen](#indienen-van-een-oplossing). Cursusbeheerders kunnen deze oefeningen aan hun [cursussen]() toevoegen. Daardoor zijn er verschillende plaatsen waar je een oefening kunt selecteren:
-
--   Op een cursuspagina kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te klikken.
-
+Op dodona kan je naar twee soorten oefeningen navigeren:
+- Oefeningen dat tot een cursus behoren, kan je vinden door de pagina van een cursus te bezoeken.
     ![image](./student.course_exercise_selection.png)
+- Oefeningen dat niet tot een cursus behoren, kan je vinden door het [activities overzicht](https://dodona.ugent.be/nl/activities/) te bezoeken dat een lijst bevat van alle oefeningen.
 
--   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst `RECENTE OEFENINGEN` met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te klikken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
+::: tip
+Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je het laatst oplossingen voor ingediend hebt over alle cursussen heen. Zo kan je op een snelle manier een oefening waar je recent op hebt gewerkt selecteren door op de naam van de oefening te klikken.
 
-    ![image](./student.exercise_all_submissions_page.png)
+![image](./student.exercise_all_submissions_page.png)
 
+:::
 <h1 id="oefeningpagina"></h1>
 
 Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
