@@ -183,4 +183,4 @@ Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
 
 * `Oplossingen herevalueren` (actie)
 
-[Herevalueert](../exercise-series-management#oplossing-herevalueren) alle oplossingen uit het overzicht.
+[Herevalueert](../exercise-series-management/#oplossing-herevalueren) alle oplossingen uit het overzicht.
