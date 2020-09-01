@@ -5,6 +5,7 @@ description: "Tutorial: cursusbeheer"
 
 # Cursusbeheer
 
+**Inhoudsopgave**
 [[toc]]
 
 Een cursus wordt opgebouwd als een [leerpad](#leerpad) met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden.
@@ -23,7 +24,7 @@ Om de lesgever-rol te verkrijgen, dien je contact op te nemen met team Dodona.
 
 ::: tip
 
-Je herkent dat je lesgeve bent als je het beheersmenu (menu `Admin`) ziet wanneer je de aan de linkerkant van de pagina het hamburgermenu openklikt.
+Je herkent dat je lesgever bent als je het beheersmenu (menu `Admin`) ziet wanneer je de aan de linkerkant van de pagina het hamburgermenu openklikt.
 
 ![location](./staff.admin_menu_location.png)
 ![admin menu](./staff.admin_menu.png)

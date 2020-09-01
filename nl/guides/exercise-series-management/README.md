@@ -5,13 +5,14 @@ description: "Tutorial: oefeningenreeksenbeheer"
 
 # Oefeningenreeksenbeheer
 
+**Inhoudsopgave**
 [[toc]]
 
 Het [leerpad](/nl/course-manangement#leerpad) van een cursus bestaat uit verschillende [oefeningenreeksen](#oefeningenreeks) die elk opnieuw bestaan uit verschillenden oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen. 
 
 ::: tip 
 
-Al deze acties kunnen ook uitgevoerd worden op de oefeningen in een reeks. Deze kan je terugvinden in het [reeks-bewerken](#reeks-bewerken) menu.
+Al deze acties kunnen ook uitgevoerd worden op de oefeningen in een reeks. Deze kan je terugvinden in het [reeks-bewerken](#oefeningenreeks-bewerken) menu.
 
 :::
 

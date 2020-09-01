@@ -5,6 +5,7 @@ description: "Tutorial: gebruikersbeheer"
 
 # Gebruikersbeheer
 
+**Inhoudsopgave**
 [[toc]]
 
 Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit zijn de gebruikers die ooit voor de cursus [geregistreerd](../for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](../for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](../course-management#beheersrechten).
