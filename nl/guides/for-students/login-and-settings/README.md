@@ -4,20 +4,20 @@ description: "Tutorial: aanmelden en gebruikersinstellingen"
 ---
 
 # Aanmelden & gebruikersinstellingen
-> Alle informatie zodat je als student een een gebruikersaccount door Dodona kan laten aanmaken en die kan personaliseren.
+> Alle informatie zodat je als student een gebruikersaccount door Dodona kan laten aanmaken en die kan personaliseren.
 
-## Inhoudstafel
+**Inhoudsopgave**
 [[toc]]
 
 ## Selecteren van de taal
 
-Als taal voor Dodona kan je kiezen tussen Nederlands of Engels. Gebruik hiervoor het taalmenu aan de rechterkant van de navigatiebalk (bovenaan elke pagina).
+Je kan Dodona gebruiken in het Nederlands of het Engels. Gebruik hiervoor het taalmenu aan de rechterkant van de navigatiebalk (bovenaan elke pagina).
 
 ![image](./choose_language.png)
 
 Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](https://dodona.ugent.be/profile). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
 
-::: tip Notitie
+::: tip Tip
 
 De taal waarin vaste componenten van Dodona (menubalken, cursusstructuur, mededelingen, ...) worden weergegeven, valt volledig onder de controle van het platform. Deze componenten worden altijd weergegeven in de geselecteerde taal.
 
@@ -38,12 +38,12 @@ Je kunt je inloggen op Dodona door je onderwijsinstelling te selecteren op de aa
 
 ![image](./institution.nl.png)
 
-::: tip Belangrijk
+::: warning Belangrijk
 
 Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldingsprocedure expliciet jouw toestemming voor het doorsturen van enkele [persoonsgegevens](#instellen-van-persoonlijke-voorkeuren) naar Dodona. Vaak hoef je deze toestemming slechts één keer te geven op elke computer waarmee je aanmeldt. Dodona gebruikt deze persoonsgegevens enkel voor intern beheer van je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) en wisselt deze informatie nooit uit met externe partijen.
 :::
 
-::: details Notitie
+::: tip Technisch
 
 Voor authenticatie met gebruikersaccounts van externe onderwijs- of onderzoeksinstellingen ondersteunt Dodona zowel [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) als [OAuth](https://nl.wikipedia.org/wiki/OAuth). Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
 :::
