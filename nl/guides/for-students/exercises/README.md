@@ -10,11 +10,11 @@ description: "Tutorial: oefeningen handleiding"
 
 Lesgevers kunnen **oefeningen** opstellen waarvoor je [oplossingen](#navigeren-naar-een-oplossing) kunt [indienen](#indienen-van-een-oplossing). Cursusbeheerders kunnen deze oefeningen aan hun [cursussen]() toevoegen. Daardoor zijn er verschillende plaatsen waar je een oefening kunt selecteren:
 
--   Op een cursuspagina kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te drukken.
+-   Op een cursuspagina kan je een [oefening](#navigeren-naar-een-oefening) selecteren uit een [oefeningenreeks]() door op de naam van de oefening te klikken.
 
     ![image](./student.course_exercise_selection.png)
 
--   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst `RECENTE OEFENINGEN` met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te drukken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
+-   Het bovenste paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) bevat een lijst `RECENTE OEFENINGEN` met maximaal vijf [oefeningen](#navigeren-naar-een-oefening) waar je het laatst [oplossingen](#navigeren-naar-een-oplossing) voor [ingediend](#indienen-van-een-oplossing) hebt over alle cursussen heen. In de lijst zie je vóór elke oefening ook een [icoontje](../courses/#indienstatus) dat correspondeert met je [indienstatus](../courses/#indienstatus) voor de oefening. Selecteer een oefening uit de lijst door op de naam van de oefening te klikken. Op die manier kan je snel oefeningen selecteren waaraan je recent gewerkt hebt.
 
     ![image](./student.exercise_all_submissions_page.png)
 
@@ -26,7 +26,7 @@ Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-e
 
 ::: tip
 
-Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te drukken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te drukken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je naar de cursuspagina.
+Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oefening) dan verschijnt de naam van de oefening naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal), eventueel voorafgegaan door de naam van de [cursus]() en de naam van de [oefeningenreeks]() waaruit je de oefening [geselecteerd](#navigeren-naar-een-oefening) hebt. Door in de navigatiebalk op de naam van de oefening te klikken, navigeer je naar de [oefeningpagina](#oefeningpagina). Door in de navigatiebalk op de naam van de oefeningenreeks te klikken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je naar de cursuspagina.
 
 ![image](./student.exercise_crumbs.png)
 :::
@@ -40,7 +40,7 @@ Bovendien is het mogelijk dat bij het opstellen van de [oefening](#navigeren-naa
 
 ## Indienen van een oplossing
 
-Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Druk hiervoor op de tab `Indienen` als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Druk daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
+Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen` als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
 
 ![image](./student.exercise_before_submit.png)
 
@@ -78,11 +78,11 @@ Er zit geen beperking op het aantal keer dat je een [oplossing](#navigeren-naar-
 
 Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oplossing) voor de [oefeningen](#navigeren-naar-een-oefening) uit de cursus. Er zijn verschillende plaatsen waar je een **overzicht** kunt krijgen van je oplossingen:
 
--   Kies `Mijn oplossingen` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of druk op de statistiek `Inzendingen` in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
+-   Kies `Mijn oplossingen` in het [gebruikersmenu](../login-and-settings/#gebruikersmenu) aan de rechterkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) of klik op de statistiek `Inzendingen` in het paneel in de rechterkolom van je [startpagina](../login-and-settings/#startpagina) voor een overzicht van al je [oplossingen](#navigeren-naar-een-oplossing).
 
     ![image](./student.all_submissions_link.png)
 
--   Druk op de statistiek `Inzendingen` in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
+-   Klik op de statistiek `Inzendingen` in het kaartje van een cursus op je [startpagina](../login-and-settings/#startpagina) of op de cursuspagina voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing).
 
     ![image](./student.course_submissions.png)
 
@@ -90,7 +90,7 @@ Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oploss
 
     ![image](./student.exercise_submissions_tab.png)
 
--   Druk in een [oefeningenreeks]() op het groter dan symbool aan de rechterkant van een [oefening](#navigeren-naar-een-oefening) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing) voor de oefening.
+-   Klik in een [oefeningenreeks]() op het groter dan symbool aan de rechterkant van een [oefening](#navigeren-naar-een-oefening) voor een overzicht van alle [oplossingen](#navigeren-naar-een-oplossing) die je binnen de [cursus]() hebt [ingediend](#indienen-van-een-oplossing) voor de oefening.
 
     ![image](./student.exercise_course_submissions_page.png)
 
@@ -100,7 +100,7 @@ Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossi
 
 <h1 id="feedbackpagina"/>
 
-Je kunt een [oplossing](#navigeren-naar-een-oplossing) selecteren door in een oplossingenoverzicht op het groter dan symbool te drukken aan rechterkant van de oplossing. Hierdoor navigeer je naar de **feedbackpagina** met de gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing.
+Je kunt een [oplossing](#navigeren-naar-een-oplossing) selecteren door in een oplossingenoverzicht op het groter dan symbool te klikken aan rechterkant van de oplossing. Hierdoor navigeer je naar de **feedbackpagina** met de gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing.
 
 ![image](./student.submissions_to_exercise_feedback.png)
 
@@ -115,11 +115,11 @@ Aan de bovenkant van de [feedbackpagina](#feedbackpagina) staan de volgende gege
 
 `Opgave`
 
-De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de [oefeningpagina](#oefeningpagina) te navigeren.
+De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de [oefeningpagina](#oefeningpagina) te navigeren.
 
 `Cursus`
 
-De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Druk op de naam om naar de cursuspagina te navigeren.
+De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de cursuspagina te navigeren.
 
 ::: details Notitie
 Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) niet binnen de context van een [cursus]() werd [ingediend](#indienen-van-een-oplossing).
@@ -168,9 +168,9 @@ De laatste [tab](#tabs) heeft altijd de naam `Code` en bevat de broncode van de 
 
 ::: tip
 
-In de tab `Code` op de [feedbackpagina](#feedbackpagina) kan je de broncode van de [oplossing](#navigeren-naar-een-oplossing) niet wijzigen. Als je op de broncode drukt dan wordt die volledig geselecteerd. Kopieer de broncode naar het klembord en plak die in je IDE. Als alternatief kan je op de downloadknop drukken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina). Daarmee download je een bestand met de broncode dat je dan kan openen in je IDE. In je IDE kan je de broncode bewerken en daarna eventueel opnieuw [indienen](#indienen-van-een-oplossing).
+In de tab `Code` op de [feedbackpagina](#feedbackpagina) kan je de broncode van de [oplossing](#navigeren-naar-een-oplossing) niet wijzigen. Als je op de broncode drukt dan wordt die volledig geselecteerd. Kopieer de broncode naar het klembord en plak die in je IDE. Als alternatief kan je op de downloadknop klikken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina). Daarmee download je een bestand met de broncode dat je dan kan openen in je IDE. In je IDE kan je de broncode bewerken en daarna eventueel opnieuw [indienen](#indienen-van-een-oplossing).
 
-Als alternatief kan je ook op de bewerkknop drukken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina) om te navigeren naar de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). De broncode van de oplossing werd daarbij ingevoegd in de [code editor](#indienen-van-een-oplossing) aan de onderkant van de [oefeningpagina](#oefeningpagina). Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
+Als alternatief kan je ook op de bewerkknop klikken in de rechterbovenhoek van de [feedbackpagina](#feedbackpagina) om te navigeren naar de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). De broncode van de oplossing werd daarbij ingevoegd in de [code editor](#indienen-van-een-oplossing) aan de onderkant van de [oefeningpagina](#oefeningpagina). Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
 :::
 
 <h1 id="testgeval"/>

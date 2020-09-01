@@ -10,25 +10,25 @@ description: "Tutorial: cursus handleding"
 
 Cursusbeheerders kunnen [cursussen]() opbouwen uit [oefeningen](../exercises/#navigeren-naar-een-oefening) die gegroepeerd worden in [oefeningenreeksen](). Als je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent dan kan je binnen de cursus ook [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indienen](../exercises/#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening). Er zijn verschillende plaatsen waar je een cursus kunt selecteren:
 
--   Aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te drukken.
+-   Aan de linkerkant van je [startpagina](../login-and-settings/#startpagina) staan kaartjes van alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent, gegroepeerd per academiejaar. Gebruik de zoekbalk bovenaan de startpagina om te zoeken naar specifieke cursussen op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te klikken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te klikken.
 
--   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina). Je kunt één van deze cursussen selecteren door op de naam van de cursus te drukken.
+-   Als je nog [registratieverzoeken](#registratieverzoek) voor [cursussen]() hebt openstaan die wachten op goedkeuring van een cursusbeheerder, dan vind je deze cursussen in het paneel `Wachten op goedkeuring` in de rechterkolom van je [startpagina](../login-and-settings/#startpagina). Je kunt één van deze cursussen selecteren door op de naam van de cursus te klikken.
 
 -   Het [hamburger menu]() aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal) bevat onder de hoofding `Mijn vakken` een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent. Deze lijst is beperkt tot de cursussen van het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent. Omdat de navigatiebalk op elke pagina beschikbaar is, vormt dit een snelle manier om één van de cursussen uit deze lijst te selecteren zonder dat je eerst naar je [startpagina](../login-and-settings/#startpagina) moet navigeren.
 
     ![image](./student.my_courses.png)
 
--   Op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren) staat een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een [registratieverzoek](#registratieverzoek) hebt openstaan dat wacht op goedkeuring van een cursusbeheerder. Je kunt één van deze cursussen selecteren door op de naam van de cursus te drukken.
+-   Op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren) staat een lijst met alle [cursussen]() waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een [registratieverzoek](#registratieverzoek) hebt openstaan dat wacht op goedkeuring van een cursusbeheerder. Je kunt één van deze cursussen selecteren door op de naam van de cursus te klikken.
 
     ![image](./student.profile_courses.png)
 
 <h1 id="cursusoverzicht"></h1>
 
--   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te drukken op de knop `MEER CURSUSSEN ...` onderaan in de rechterkolom op je [startpagina](../login-and-settings/#startpagina). Als je nog voor geen enkele cursus [geregistreerd](#registreren-voor-een-cursus) bent, dan kan je als alternatief ook drukken op de knop `VERKEN` naast de afbeelding op je startpagina.
+-   Het **cursusoverzicht** toont alle beschikbare [cursussen](), gegroepeerd per academiejaar. Navigeer naar het cursusoverzicht door te klikken op de knop `MEER CURSUSSEN ...` onderaan in de rechterkolom op je [startpagina](../login-and-settings/#startpagina). Als je nog voor geen enkele cursus [geregistreerd](#registreren-voor-een-cursus) bent, dan kan je als alternatief ook klikken op de knop `VERKEN` naast de afbeelding op je startpagina.
 
     ![image](./student.explore_courses.png)
 
-    Gebruik de zoekbalk bovenaan het [cursusoverzicht](#cursusoverzicht) om te zoeken naar specifieke [cursussen]() op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te drukken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te drukken.
+    Gebruik de zoekbalk bovenaan het [cursusoverzicht](#cursusoverzicht) om te zoeken naar specifieke [cursussen]() op basis van een cursusnaam, een naam van een lesgever of een academiejaar. Selecteer een cursus door op de gekleurde titelbalk van het kaartje van de cursus te klikken of door onderaan het kaartje op de knop `GA NAAR DEZE CURSUS` te klikken.
 
     ![image](./student.courses.png)
 
@@ -40,7 +40,7 @@ Na [selectie](#navigeren-naar-een-cursus) van een [cursus]() navigeer je naar de
 
 ::: tip
 
-Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te drukken, navigeer je terug naar de [cursuspagina](#cursuspagina).
+Als je binnen een [cursus]() aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je terug naar de [cursuspagina](#cursuspagina).
 
 ![image](./student.breadcrumb_course.png)
 :::
@@ -117,13 +117,13 @@ Je moet geregistreerd zijn voor een [cursus]() voordat je [oplossingen](../exerc
 
 Als je [navigeert](#navigeren-naar-een-cursus) naar een [cursus]() waarvoor je nog niet [geregistreerd](#registreren-voor-een-cursus) bent, dan zie je bovenaan de [cursuspagina](#cursuspagina) een paneel dat aangeeft of en hoe je je voor de cursus kan [registreren](#registreren-voor-een-cursus). Hierbij zijn er drie mogelijkheden:
 
--   De [cursus]() werkt met een [open]() [registratieprocedure](), wat betekent dat iedereen voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Druk op de knop `REGISTREREN` om je voor de cursus te registreren.
+-   De [cursus]() werkt met een [open]() [registratieprocedure](), wat betekent dat iedereen voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `REGISTREREN` om je voor de cursus te registreren.
 
     ![image](./register.png)
 
 <h1 id="registratieverzoek"/>
 
--   De [cursus]() werkt met een [gemodereerde]() [registratieprocedure](), wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Druk op de knop `REGISTRATIEVERZOEK` om een registratieverzoek voor de cursus in te dienen.
+-   De [cursus]() werkt met een [gemodereerde]() [registratieprocedure](), wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `REGISTRATIEVERZOEK` om een registratieverzoek voor de cursus in te dienen.
 
     ![image](./moderated_register.png)
 
@@ -144,7 +144,7 @@ Zodra je voor een [cursus]() [geregistreerd](#registreren-voor-een-cursus) bent,
 
 ![image](./student.my_courses.png)
 
-Naast de mogelijkheid om zelf naar een [cursus]() te navigeren en op de [cursuspagina](#cursuspagina) de [registratieprocedure]() te doorlopen, bestaat ook de mogelijkheid dat je een [registratielink]() ontvangt van een [cursusbeheerder]() (bijvoorbeeld per email van een lesgever). Door op de registratielink te drukken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren. De registratieprocedure blijft net zoals bij [manuele registratie](#manuele-registratie) wel afhankelijk van het feit of de cursus werkt met een open, een gemodereerde of een gesloten registratieprocedure.
+Naast de mogelijkheid om zelf naar een [cursus]() te navigeren en op de [cursuspagina](#cursuspagina) de [registratieprocedure]() te doorlopen, bestaat ook de mogelijkheid dat je een [registratielink]() ontvangt van een [cursusbeheerder]() (bijvoorbeeld per email van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren. De registratieprocedure blijft net zoals bij [manuele registratie](#manuele-registratie) wel afhankelijk van het feit of de cursus werkt met een open, een gemodereerde of een gesloten registratieprocedure.
 
 ## Uitschrijven uit een cursus
 

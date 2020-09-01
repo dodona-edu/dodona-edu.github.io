@@ -15,7 +15,7 @@ Als taal voor Dodona kan je kiezen tussen Nederlands of Engels. Gebruik hiervoor
 
 ![image](./choose_language.png)
 
-Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
+Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](https://dodona.ugent.be/profile). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
 
 ::: tip Notitie
 
@@ -30,7 +30,7 @@ De taal van de [feedback](../exercises/#interpreteren-van-feedback) over een [op
 
 ## Aanmelden
 
-Druk op `Aanmelden` aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en druk op de knop `Aanmelden` centraal op de landingspagina.
+Klik op `Aanmelden` aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) of navigeer naar de landingspagina en klik op de knop `Aanmelden` centraal op de landingspagina.
 
 ![image](./login.png)
 
@@ -70,7 +70,7 @@ Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in 
 
 ::: tip
 
-Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op `Dodona` te drukken.
+Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op `Dodona` te klikken.
 
 ![image](./student.navigate_to_homepage.png)
 :::
@@ -85,7 +85,7 @@ Op de [profielpagina](#instellen-van-persoonlijke-voorkeuren) staan je persoonsg
 
 ![image](./student.user_menu_my_profile.png)
 
-Druk op de bewerkknop in de rechterbovenhoek van je [profielpagina](#instellen-van-persoonlijke-voorkeuren) om je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) te bewerken. Je [persoonsgegevens]() kan je niet zelf aanpassen. Deze worden automatisch aangepast op basis van de persoonsgegevens die tijdens het [aanmelden](#aanmelden) door je externe onderwijs- of onderzoeksinstelling doorgestuurd worden naar Dodona.
+Klik op de bewerkknop in de rechterbovenhoek van je [profielpagina](#instellen-van-persoonlijke-voorkeuren) om je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) te bewerken. Je [persoonsgegevens]() kan je niet zelf aanpassen. Deze worden automatisch aangepast op basis van de persoonsgegevens die tijdens het [aanmelden](#aanmelden) door je externe onderwijs- of onderzoeksinstelling doorgestuurd worden naar Dodona.
 
 ![image](./student.edit_profile.png)
 
