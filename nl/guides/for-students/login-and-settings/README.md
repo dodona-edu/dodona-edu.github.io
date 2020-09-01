@@ -53,22 +53,8 @@ Voor authenticatie met gebruikersaccounts van externe onderwijs- of onderzoeksin
 Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijke gebruikersaccount op Dodona.
 :::
 
-### Gebruikersmenu
+Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent. Als je je op een andere pagina bevindt en naar de landingspagina wil navigeren kan je dit doen door te klikken op `Dodona` in de [navigatiebalk](#selecteren-van-de-taal)
 
-Als je aangemeld bent dan zie je aan de rechterkant van de [navigatiebalk](#selecteren-van-de-taal) het gebruikersmenu met de naam uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren). Het gebruikersmenu staat op de plaats waar voorheen `Aanmelden` stond toen je nog niet aangemeld was.
-
-![image](./student.user_menu.png)
-
-### Startpagina
-
-Als je [aangemeld](#aanmelden) bent dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen]() waarvoor je [geregistreerd](../courses/#registreren-voor-een-cursus) bent, hun [oefeningenreeksen]() met nakende [deadlines]() en je voortgang bij het [indienen](../exercises/#indienen-van-een-oplossing) van [oplossingen](../exercises/#navigeren-naar-een-oplossing) voor [oefeningen](../exercises/#navigeren-naar-een-oefening). Je kunt dus ook makkelijk aan de landingspagina of aan je startpagina herkennen of je al dan niet aangemeld bent.
-
-::: tip
-
-Vanaf elke pagina kan je naar de landingspagina (als je afgemeld bent) of naar je startpagina (als je aangemeld bent) navigeren door uiterst links in de [navigatiebalk](#selecteren-van-de-taal) op `Dodona` te klikken.
-
-![image](./student.navigate_to_homepage.png)
-:::
 
 Als dit de eerste keer is dat je aanmeldt op Dodona dan ben je uiteraard nog voor geen enkele [cursus]() [geregistreerd](../courses/#registreren-voor-een-cursus) en heb je nog geen enkele [oplossing](../exercises/#navigeren-naar-een-oplossing) [ingediend](../exercises/#indienen-van-een-oplossing). Daardoor ziet je [startpagina]() er op dit moment nog vrij kaal uit.
 
