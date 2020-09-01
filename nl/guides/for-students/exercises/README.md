@@ -37,7 +37,7 @@ Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oe
 
 ## Indienen van een oplossing
 
-Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. Je mag zo veel indienen als je wil, enkel het resultaat van jou laatste oplossing wordt in rekening gebracht.
+Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. Je mag zoveel indienen als je wil, enkel het resultaat van jouw laatste oplossing wordt in rekening gebracht.
 
 ![image](./student.exercise_before_submit.png)
 
