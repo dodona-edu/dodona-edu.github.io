@@ -93,13 +93,9 @@ Op de [feedbackpagina](#feedbackpagina) staat gedetailleerde **feedback** over e
 Aan de bovenkant van de [feedbackpagina](#feedbackpagina) staan de volgende gegevens over de [oplossing](#navigeren-naar-een-oplossing):
 
 
-`Opgave`
+- `Opgave`: De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de [oefeningpagina](#oefeningpagina) te navigeren.
 
-De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de [oefeningpagina](#oefeningpagina) te navigeren.
-
-`Cursus`
-
-De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de cursuspagina te navigeren.
+-`Cursus`: De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de cursuspagina te navigeren.
 
 ::: details Notitie
 Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) niet binnen de context van een [cursus]() werd [ingediend](#indienen-van-een-oplossing).
@@ -107,14 +103,11 @@ Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) n
 
 <h1 id="tijdstip"/>
 
-`Ingediend`
-
-Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld `ongeveer 2 uur geleden`. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
+- `Ingediend`: Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld `ongeveer 2 uur geleden`. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
 
 <h1 id="status"/>
-`Status`
 
-De **status** die Dodona of de [judge](#interpreteren-van-feedback) aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de [oplossing](#navigeren-naar-een-oplossing) wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
+- `Status`: De **status** die Dodona of de [judge](#interpreteren-van-feedback) aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de [oplossing](#navigeren-naar-een-oplossing) wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
 
 | status               | icoontje             | betekenis            |
 |----------------------|----------------------|----------------------|
