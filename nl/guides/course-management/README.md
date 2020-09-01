@@ -26,7 +26,7 @@ Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf e
 
 ![new course menu](./staff.course_new_options.png)
 
-Druk op `Dodona` in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
+Druk op `Dodona` in de [navigatiebalk](/nl/guides/for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
 
 Als je vertrekt vanaf een bestaande cursus, dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
@@ -58,12 +58,12 @@ Het academiejaar waarin de cursus wordt aangeboden. Gebruik het formaat `jjjj-jj
 * `Zichtbaarheid`
 <h1 id="zichtbaarheid"></h1>
 
-De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/for-students#cursus-registreren) gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
+De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/guides/for-students#cursus-registreren) gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
   * `Zichtbaar`
-    Alle gebruikers zien de cursus in het [cursusoverzicht](#cursusoverzicht). Ze kunnen ook naar de [cursuspagina](/nl/for-students#cursuspagina) navigeren en zich daar eventueel voor de cursus registreren.
+    Alle gebruikers zien de cursus in het [cursusoverzicht](#cursusoverzicht). Ze kunnen ook naar de [cursuspagina](/nl/guides/for-students#cursuspagina) navigeren en zich daar eventueel voor de cursus registreren.
 
   * `Verborgen`
-    Alleen [cursusbeheerders](#cursusbeheerder) zien de [cursus](#cursus) in het [cursusoverzicht](#cursusoverzicht) en op hun [startpagina](/nl/for-students#startpagina). Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de [cursuspagina](/nl/for-students#cursuspagina) zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de [registratielink](#registratielink) gebruiken.
+    Alleen [cursusbeheerders](#cursusbeheerder) zien de [cursus](#cursus) in het [cursusoverzicht](#cursusoverzicht) en op hun [startpagina](/nl/guides/for-students#startpagina). Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de [cursuspagina](/nl/guides/for-students#cursuspagina) zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de [registratielink](#registratielink) gebruiken.
     ![image](./staff.courses_hidden_course.png)
 
 * `Registratieprocedure`
@@ -74,7 +74,7 @@ De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/for-students#cursus-regist
     Gebruikers kunnen zich voor de cursus registreren zonder expliciete goedkeuring van een [cursusbeheerder](#cursusbeheerder).
   
   * `Gemodereerd`
-  Gebruikers kunnen een [registratieverzoek](/nl/for-students#registratieverzoek) indienen voor de #cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft [goedgekeurd](#registratieverzoek-goedkeuren).
+  Gebruikers kunnen een [registratieverzoek](/nl/guides/for-students#registratieverzoek) indienen voor de #cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft [goedgekeurd](#registratieverzoek-goedkeuren).
 
   * `Gesloten`
   Gebruikers kunnen zich niet meer voor de cursus registreren.
@@ -92,7 +92,7 @@ Een optionele beschrijving die bovenaan de cursuspagina wordt weergegeven. Voor 
 
 `Registratielink`
 
-Bij het [aanmaken](#cursus-aanmaken) van een cursus wordt automatisch een token gegenereerd als afschermingsmechanisme van [verborgen](#zichtbaarheid) cursussen. Zonder dit token kunnen [niet-geregistreerde](/nl/for-students#cursus-registreren) gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Als ze toch naar de cursus proberen te navigeren, dan zien ze enkel een melding dat ze niet de geen toegangsrechten hebben voor de cursus.
+Bij het [aanmaken](#cursus-aanmaken) van een cursus wordt automatisch een token gegenereerd als afschermingsmechanisme van [verborgen](#zichtbaarheid) cursussen. Zonder dit token kunnen [niet-geregistreerde](/nl/guides/for-students#cursus-registreren) gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Als ze toch naar de cursus proberen te navigeren, dan zien ze enkel een melding dat ze niet de geen toegangsrechten hebben voor de cursus.
 
 ![verborgen cursus boodschap](./student.hidden_course_unregistered_denied_message.png)
 
@@ -100,7 +100,7 @@ Als lesgever ben je verantwoordelijk om de registratielink te delen met je stude
 
 ![image](./student.hidden_course_unregistered_link_message.png)
 
-De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](/nl/for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](/nl/for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een [verborgen](#zichtbaarheid) cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Druk op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
+De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](/nl/guides/for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](/nl/guides/for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een [verborgen](#zichtbaarheid) cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Druk op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
 
 ![image](./staff.hidden_course_registration_link.png)
 
@@ -128,7 +128,7 @@ Als cursusbeheerder kan je de [eigenschappen](#cursuseigenschappen-instellen) va
 
 ![image](./staff.course_edit_button.png)
 
-Druk op de cursus in de [navigatiebalk](/nl/for-students#navigatiebalk) om het aanpassen te annuleren.
+Druk op de cursus in de [navigatiebalk](/nl/guides/for-students#navigatiebalk) om het aanpassen te annuleren.
 
 ![image](./staff.course_edit_cancel.png)
 
