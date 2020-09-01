@@ -50,12 +50,6 @@ Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-na
 
 Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren-naar-een-oplossing) niet onmiddellijk beoordeeld na het [indienen](#indienen-van-een-oplossing) maar worden ze eerst in een **wachtrij** geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de [status](#status) `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij (*first-in-first-out*) geselecteerd en [beoordeeld](#interpreteren-van-feedback) door een [judge](#interpreteren-van-feedback). Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`.
 
-
-::: details Notitie
-
-Je kunt het beoordelingsproces van een [oplossing](#navigeren-naar-een-oplossing) niet annuleren. Terwijl een oplossing in de wachtrij staat en terwijl de [judge](#interpreteren-van-feedback) bezig is om de oplossing te beoordelen, wordt de indienknop op de [oefeningpagina](#oefeningpagina) buiten werking gesteld en kan je geen nieuwe oplossing [indienen](#indienen-van-een-oplossing). Ook dit is een maatregel om overbelasting van het platform tegen te gaan. Nog een reden dus om te wachten met indienen tot je jezelf ervan vergewist hebt dat je oplossing geen fouten meer bevat.
-:::
-
 Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je [oplossing](#navigeren-naar-een-oplossing) krijgt ze haar finale [status](#status) en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
 
 ![image](./student.exercise_feedback_correct_tab.png)
