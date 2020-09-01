@@ -18,39 +18,10 @@ Binnenin een cursus kunnen de volgende beheersrechten toegekend worden:
  | ----------------------------------------------|-----------------------------------------|----------|
  | `Student`|   *geen*|                                  studenten kunnen hun gebruikersprofiel bewerken, kunnen zich registreren voor cursussen en kunnen oplossingen indienen voor oefeningen|
 |`Cursusbeheerder`| ![cursusbeheerder](../../../images/role_icons/staff.png)|cursusbeheerders krijgen alle permissies van studenten en kunnen bovendien ook cursusbeheerders aanduiden, oplossingen van studenten bekijken en de cursus zelf bewerken| 
- |`Lesgever`|     ![image](../../../images/role_icons/staff.png)|   lesgevers hebben de permissies van cursusbeheerder als ze de cursus aanmaken en kunnen bovendien ook cursussen aanmaken en oefeningen of judges toevoegen aan Dodona.|
-
-Om de lesgever-rol te verkrijgen, dien je contact op te nemen met team Dodona. 
-
-::: tip
-
-Je herkent dat je lesgever bent als je het beheersmenu (menu `Admin`) ziet wanneer je de aan de linkerkant van de pagina het hamburgermenu openklikt.
-
-![location](./staff.admin_menu_location.png)
-![admin menu](./staff.admin_menu.png)
-:::
 
 ## Cursus aanmaken
 
-Als lesgever kan je een nieuwe cursus aanmaken door op de knop `CURSUS AANMAKEN` te drukken in de rechterbovenhoek van het cursusoverzicht.
-
-![create course](./staff.courses_new_link.png)
-
-Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus, ofwel maak je een volledige nieuwe cursus aan.
-
-![new course menu](./staff.course_new_options.png)
-
-Druk op `Dodona` in de [navigatiebalk](../for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
-
-Als je vertrekt vanaf een bestaande cursus, dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
-
-![choose existing course](./staff.course_new_copy_course_options.png)
-
-Vervolgens moet je aangeven welke elementen van de [cursus](#cursus) je wil overnemen. De reeksstructuur wordt altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de begeleiders wil overnemen. Ten slotte kan je ook andere instellingen kiezen.
-
-![choose existing course extra](./staff.course_new_copy.png)
-
-`Zet de gekopieerde reeksen op verborgen`:  dit is zeer handig als je elke week een nieuwe reeks zichtbaar wil maken zonder ze eerst onzichtbaar te moeten maken.
+Voor informatie over hoe je een nieuwe cursus aanmaakt, zie deze [pagina](../new-course).
 
 ## Cursuseigenschappen instellen
 Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
