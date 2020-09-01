@@ -35,7 +35,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
 * `Naam`
 
-  Een naam om naar de reeks te verwijzen. Binnen een [leerpad](/nl/course-management#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam hebben. Het is echter aangeraden om alle oefeningenreeksen van het leerpad een unieke naam te geven.
+  Een naam om naar de reeks te verwijzen. Binnen een [leerpad](/nl/guides/course-management#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam hebben. Het is echter aangeraden om alle oefeningenreeksen van het leerpad een unieke naam te geven.
 
 * `Deadline`
 
@@ -92,7 +92,7 @@ Als de deadline aangepast wordt dan krijgen cursusgebruikers meteen ook een indi
 
 * `Beschrijving`
 
-  Een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in het leerpad. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/course-management#Markdown).
+  Een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in het leerpad. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/guides/course-management#Markdown).
 
 Druk op de afwerkknop in de rechterbovenhoek van het paneel `Nieuwe oefeningenreeks` om de nieuwe oefeningenreeks
 effectief aan het leerpad toe te voegen.
@@ -168,7 +168,7 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
  ![scoresheet](./staff.scoresheet.png)
 
-  Druk op de naam van een cursusgebruiker om naar de [cursusoverzichtspagina](/nl/user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
+  Druk op de naam van een cursusgebruiker om naar de [cursusoverzichtspagina](/nl/guides/user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
 
   ![scoresheet gebruikerslink](./staff.scoresheet_user_link.png)
 
@@ -182,7 +182,7 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
 * `Oplossingen hertesten`
 
-  [Herevalueert](#oplossing-herevalueren) alle oplossingen die cursusgebruikers ingediend hebben voor oefeningen van de oefeningenreeks. Dit kan nuttig zijn als een fout opgemerkt wordt in de automatische tests en de oplossingen opnieuw gecontroleerd moeten worden.
+  Herevalueert alle oplossingen die cursusgebruikers ingediend hebben voor oefeningen van de oefeningenreeks. Dit kan nuttig zijn als een fout opgemerkt wordt in de automatische tests en de oplossingen opnieuw gecontroleerd moeten worden.
 
 ## Oplossing herevalueren
 

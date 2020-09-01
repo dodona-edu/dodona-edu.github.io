@@ -140,11 +140,11 @@ Na het afwerken navigeer je terug naar de cursuspagina waar de nieuwe cursuseige
 
 ## Leerpad
 
-Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`.Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](/nl/exercise-series-management).
+Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`.Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](/nl/guides/exercise-series-management).
 
 ## Cursusgebruikers beheren
 
-Deze informatie is verhuisd naar een aparte [pagina](/nl/user-management).
+Deze informatie is verhuisd naar een aparte [pagina](/nl/guides/user-management).
 
 ## Navigeren naar oplossingen
 
@@ -170,4 +170,4 @@ Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
 
 * `Oplossingen herevalueren` (actie)
 
-[Herevalueert](/nl/exercise-series-management#oplossing-herevalueren) alle oplossingen uit het overzicht.
+[Herevalueert](/nl/guides/exercise-series-management#oplossing-herevalueren) alle oplossingen uit het overzicht.
