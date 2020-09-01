@@ -9,6 +9,8 @@ description: "Tutorial: cursusbeheer"
 
 Een cursus wordt opgebouwd als een [leerpad](#leerpad) met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden.
 
+<h1 id="beheersrechten"></h1>
+
 Binnenin een cursus zijn er twee belangrijke rollen. Enerzijds is er de cursusbeheerder, deze kan het leerpad, de cursuseigenschappen en de gebruikers bewerken. Anderzijds is er de cursusgebruiker, die enkel zijn eigen informatie kan bekijken.
 De globale rol die hieraan gekoppeld is, is de lesgeverrol. Deze kan onbeperkt cursussen aanmaken en wordt automatisch ook de eerste cursusbeheerder van die cursussen. Als cursusbeheerder kan hij andere cursusgebruikers aanduiden om samen met hem de cursus te beheren. Hij kan echter geen cursussenjbeheren waarvoor hij geen cursusbeheerder is. Om deze rol te verkrijgen, dien je contact op te nemen met team Dodona.
 
@@ -142,67 +144,7 @@ Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad 
 
 ## Cursusgebruikers beheren
 
-Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit zijn de gebruikers die ooit voor de cursus [geregistreerd](/nl/for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](/nl/for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun [registratiestatus aanpassen](#cursusgebruiker-registratiestatus-aanpassen) en cursusbeheerders aanduiden.
-
-### Navigeren naar cursusgebruikers
-
-Aan de bovenkant van de cursuspagina zie je onder de hoofding `Gebruikers` een overzicht waarin alle cursusgebruikers opgelijst worden met hun gebruikersnaam, naam, emailadres en [voortgangsstatistieken](/nl/user-management#voortgangsstatistieken).
-
-![image](./staff.course_users.png)
-
-Het zoeken en selecteren van cursusgebruikers verloopt op dezelfde manier als in het [gebruikersoverzicht](/nl/user-management#gebruikersoverzicht).
-
-### Registratiestatus aanpassen
-
-In het overzicht van alle cursusgebruikers worden de cursusgebruikers in tabs gegroepeerd volgens hun registratiestatus voor de cursus. De volgende statussen zijn mogelijk:
-
-* `Geregistreerd`
-
-Alle cursusgebruikers die momenteel geregistreerd zijn.
-
-* `Uitgeschreven`
-
-Alle cursusgebruikers die ooit geregistreerd waren, maar die ondertussen uitgeschreven zijn.
-
-* `Op de wachtlijst`
-
-Alle cursusgebruikers waarvoor er nog een registratieverzoek openstaat dat wacht op afhandeling door een cursusbeheerder.
-
-
-### Registratieverzoeken afhandelen
-
-Elke tab heeft eigen actieknoppen aan de rechterkant van de cursusgebruikers waarmee je hun registratiestatus kunt aanpassen.
-
-
-|tab                                                 |knop                    |actie |
------------------------------------------------------|------------------------|------| 
-`Geregistreerd`|          ![image](../../../images/staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
-`Uitgeschreven`|          ![image](../../../images/staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
-`Registratieverzoeken`|   ![image](../../../images/staff_registration_icons/approve.png)|     goedkeuren van het registratieverzoek, waardoor de gebruiker geregistreerd wordt voor de cursus|
-`Registratieverzoeken`|   ![image](../../../images/staff_registration_icons/decline.png)|      afkeuren van het registratieverzoek, waardoor de gebruiker uitgeschreven wordt uit de cursus|
-
-### Cursusbeheerders aanduiden
-
-In de tab `Geregistreerd` van het [overzicht](#cursusgebruikersoverzicht) met alle cursusgebruikers kan je de cursusbeheerders herkennen aan het icoontje in de linkermarge.
-
-![image](./staff.course_users_admin.png)
-
-In de tab kan je de volgende actieknoppen gebruiken om cursusbeheerders
-aan te duiden:
-
-|knop                                                              |actie                                                                                |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-![image](../../../images/staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
-![image](../../../images/staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
-
-::: tip Belangrijk
-
-Een cursusbeheerder die zich uitschrijft uit een cursus verliest zijn status van cursusbeheerder.
-
-Om ervoor te zorgen dat een cursus altijd minstens één cursusbeheerder heeft, kan de laatste cursusbeheerder zich niet uitschrijven en kan hij zichzelf ook niet degraderen tot cursusgebruiker zonder beheersrechten voor de cursus.
-
-Na het aanmaken van een cursus kan een lesgever zich uitschrijven als hij andere cursusbeheerders aangeduid heeft. Hij kan door andere cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder beheersrechten voor de cursus.
-:::
+Deze informatie is verhuisd naar een aparte [pagina](/nl/user-management).
 
 ## Navigeren naar oplossingen
 
