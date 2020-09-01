@@ -1,10 +1,13 @@
 ---
-title: Cursus handleiding
-description: "Tutorial: cursus handleding"
+title: Cursushandleiding
+description: "Tutorial: cursushandleding"
 ---
 
-# Cursus handleiding
+# Cursushandleiding
 > Alle informatie zodat je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
+
+**Inhoudsopgave**
+[[toc]]
 
 ## Navigeren naar een cursus
 
