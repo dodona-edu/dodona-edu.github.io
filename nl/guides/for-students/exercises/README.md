@@ -26,7 +26,7 @@ Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je
 
 Na [selectie](#navigeren-naar-een-oefening) van een [oefening](#navigeren-naar-een-oefening) navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
-![De [ISBN](https://dodona.ugent.be/en/exercises/910319224/) oefening op Dodona.](./student.exercise_start.png)
+![image](./student.exercise_start.png)
 
 ::: tip
 
@@ -37,7 +37,7 @@ Als je een actie aan het uitvoeren bent op een [oefening](#navigeren-naar-een-oe
 
 ## Indienen van een oplossing
 
-Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen` als deze tab niet geselecteerd was en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen.
+Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. Je mag zo veel indienen als je wil, enkel het resultaat van jou laatste oplossing wordt in rekening gebracht.
 
 ![image](./student.exercise_before_submit.png)
 
