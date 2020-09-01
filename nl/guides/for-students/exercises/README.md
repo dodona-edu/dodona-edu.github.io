@@ -46,11 +46,11 @@ Op een [oefeningpagina](#oefeningpagina) staat onder het paneel met de beschrijv
 Om een aantal belangrijke redenen **raden we ten stelligste af om rechtstreeks broncode te schrijven in de code editor van Dodona**. In plaats daarvan adviseren we om een [Integrated Development Environment](https://nl.wikipedia.org/wiki/Integrated_development_environment) (IDE) te gebruiken voor het schrijven, uitvoeren, testen en debuggen van broncode. Voer je broncode eerst uit op een aantal testgevallen om na te gaan dat ze geen grammaticale en logische fouten meer bevat. Gebruik daarvoor bijvoorbeeld de testgevallen die in de beschrijving van de oefening gegeven werden. Als je ze wilt uittesten op een groter aantal testgevallen dien ze dan in op Dodona. Om logische fouten op te sporen kan je de debugger van je IDE gebruiken. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere programmeeropdrachten aan te pakken dan enkel de oefeningen uit Dodona.
 :::
 
-Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus](./courses/) hebt ingediend voor de [oefening](#navigeren-naar-een-oefening). Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het [tijdstip](#tijdstip) van indienen, de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
+Na het [indienen](#indienen-van-een-oplossing) van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus](./courses/) hebt ingediend voor de [oefening](#navigeren-naar-een-oefening). Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
 
-Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren-naar-een-oplossing) niet onmiddellijk beoordeeld na het [indienen](#indienen-van-een-oplossing) maar worden ze eerst in een **wachtrij** geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de [status](#status) `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij (*first-in-first-out*) geselecteerd en [beoordeeld](#interpreteren-van-feedback) door een [judge](#interpreteren-van-feedback). Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`.
+Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren-naar-een-oplossing) niet onmiddellijk beoordeeld na het [indienen](#indienen-van-een-oplossing) maar worden ze eerst in een **wachtrij** geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de status `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij (*first-in-first-out*) geselecteerd en [beoordeeld](#interpreteren-van-feedback) door een [judge](#interpreteren-van-feedback). Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`.
 
-Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je [oplossing](#navigeren-naar-een-oplossing) krijgt ze haar finale [status](#status) en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
+Zodra de [judge](#interpreteren-van-feedback) klaar is met het beoordelen van je [oplossing](#navigeren-naar-een-oplossing) krijgt ze haar finale status en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
 
 ![image](./student.exercise_feedback_correct_tab.png)
 
@@ -74,7 +74,7 @@ Binnen een [cursus]() kun je **oplossingen** [indienen](#indienen-van-een-oploss
 
     ![image](./student.exercise_course_submissions_page.png)
 
-Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossing) het [tijdstip](#tijdstip) van [indienen](#indienen-van-een-oplossing), de [status](#status) en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat correspondeert met de [status](#status) van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
+Een oplossingenoverzicht bevat voor elke [oplossing](#navigeren-naar-een-oplossing) het tijdstip van [indienen](#indienen-van-een-oplossing), de status en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
 ![image](./student.all_submissions.png)
 
@@ -95,17 +95,9 @@ Aan de bovenkant van de [feedbackpagina](#feedbackpagina) staan de volgende gege
 
 - `Opgave`: De naam van de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de [oefeningpagina](#oefeningpagina) te navigeren.
 
--`Cursus`: De naam van de [cursus]() waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de cursuspagina te navigeren.
-
-::: details Notitie
-Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) niet binnen de context van een [cursus]() werd [ingediend](#indienen-van-een-oplossing).
-:::
-
-<h1 id="tijdstip"/>
+- `Cursus`: De naam van de [cursus](./courses/) waarbinnen de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de cursuspagina te navigeren. Dit informatieveld ontbreekt als de oplossing niet binnen de context van een cursus werd ingediend.
 
 - `Ingediend`: Het **tijdstip** waarop de [oplossing](#navigeren-naar-een-oplossing) werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld `ongeveer 2 uur geleden`. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
-
-<h1 id="status"/>
 
 - `Status`: De **status** die Dodona of de [judge](#interpreteren-van-feedback) aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de [oplossing](#navigeren-naar-een-oplossing) wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
 
@@ -122,12 +114,12 @@ Dit informatieveld ontbreekt als de [oplossing](#navigeren-naar-een-oplossing) n
 | `Interne fout` | ![image](./submission_icons/internal_error.png) | [judge](#interpreteren-van-feedback) is gecrashed tijdens het beoordelen van de [oplossing](#navigeren-naar-een-oplossing); oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 
-Hoe lager de [status](#status) in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert. Als de [judge](#interpreteren-van-feedback) bij het beoordelen van de [oplossing](#navigeren-naar-een-oplossing) verschillende soorten fouten tegenkomt, dan staat het hem vrij te beslissen welke status hij aan de oplossing toekent. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de status van de oplossing te bepalen.
+Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert. Als de [judge](#interpreteren-van-feedback) bij het beoordelen van de [oplossing](#navigeren-naar-een-oplossing) verschillende soorten fouten tegenkomt, dan staat het hem vrij te beslissen welke status hij aan de oplossing toekent. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de status van de oplossing te bepalen.
 
 <h1 id="samenvatting"/>
 `Samenvatting`
 
-Korte motivering van de [judge](#interpreteren-van-feedback) bij de [status](#status) die hij aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend.
+Korte motivering van de [judge](#interpreteren-van-feedback) bij de status die hij aan de [oplossing](#navigeren-naar-een-oplossing) heeft toegekend.
 
 <h1 id="tabs"/>
 
@@ -135,7 +127,7 @@ Daaronder staat meer gedetailleerde [feedback](#interpreteren-van-feedback) die 
 
 ![image](./student.exercise_feedback_incorrect_tab.png)
 
-De laatste [tab](#tabs) heeft altijd de naam `Code` en bevat de broncode van de [oplossing](#navigeren-naar-een-oplossing). Op bepaalde plaatsen in de broncode kan de [judge](#interpreteren-van-feedback) opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde [status](#status) aan de oplossing toegekend heeft.
+De laatste [tab](#tabs) heeft altijd de naam `Code` en bevat de broncode van de [oplossing](#navigeren-naar-een-oplossing). Op bepaalde plaatsen in de broncode kan de [judge](#interpreteren-van-feedback) opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde status aan de oplossing toegekend heeft.
 
 ![image](./student.exercise_lint_error.png)
 
