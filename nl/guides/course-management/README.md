@@ -84,6 +84,8 @@ De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/for-students#cursus-regist
 
 * `Beschrijving`
 
+<h1 id="Markdown"></h1>
+
 Een optionele beschrijving die bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, zie deze [pagina](/nl/references/exercise-description/)
 
 `Registratielink`
