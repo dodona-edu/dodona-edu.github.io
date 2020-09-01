@@ -9,12 +9,25 @@ description: "Tutorial: cursusbeheer"
 
 Een cursus wordt opgebouwd als een [leerpad](#leerpad) met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden.
 
-<h1 id="beheersrechten"></h1>
+## Beheersrechten
 
-Binnenin een cursus zijn er twee belangrijke rollen. Enerzijds is er de cursusbeheerder, deze kan het leerpad, de cursuseigenschappen en de gebruikers bewerken. Anderzijds is er de cursusgebruiker, die enkel zijn eigen informatie kan bekijken.
-De globale rol die hieraan gekoppeld is, is de lesgeverrol. Deze kan onbeperkt cursussen aanmaken en wordt automatisch ook de eerste cursusbeheerder van die cursussen. Als cursusbeheerder kan hij andere cursusgebruikers aanduiden om samen met hem de cursus te beheren. Hij kan echter geen cursussenjbeheren waarvoor hij geen cursusbeheerder is. Om deze rol te verkrijgen, dien je contact op te nemen met team Dodona.
+Binnenin een cursus kunnen de volgende beheersrechten toegekend worden:
 
-Een cursusbeheerder stippelt voor de cursus een leerpad uit met oefeningenreeksen waaraan oefeningen gekoppeld worden. Voor elke oefeningenreeks kan hij een deadline instellen die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor de oefeningen uit de oefeningenreeks. Cursusgebruikers kunnen na de deadline echter onbeperkt oplossingen blijven indienen voor de oefeningen uit de oefeningenreeks en blijven daar nog steeds feedback voor ontvangen.
+ | naam                                          | icoontje                                |permissies|
+ | ----------------------------------------------|-----------------------------------------|----------|
+ | `Student`|   *geen*|                                  studenten kunnen hun gebruikersprofiel bewerken, kunnen zich registreren voor cursussen en kunnen oplossingen indienen voor oefeningen|
+|`Cursusbeheerder`| ![cursusbeheerder](../../../images/role_icons/staff.png)|cursusbeheerders krijgen alle permissies van studenten en kunnen bovendien ook cursusbeheerders aanduiden, oplossingen van studenten bekijken en de cursus zelf bewerken| 
+ |`Lesgever`|     ![image](../../../images/role_icons/staff.png)|   lesgevers hebben de permissies van cursusbeheerder als ze de cursus aanmaken en kunnen bovendien ook cursussen aanmaken en oefeningen of judges toevoegen aan Dodona.|
+
+Om de lesgever-rol te verkrijgen, dien je contact op te nemen met team Dodona. 
+
+::: tip
+
+Je herkent dat je lesgeve bent als je het beheersmenu (menu `Admin`) ziet wanneer je de aan de linkerkant van de pagina het hamburgermenu openklikt.
+
+![location](./staff.admin_menu_location.png)
+![admin menu](./staff.admin_menu.png)
+:::
 
 ## Cursus aanmaken
 
@@ -26,7 +39,7 @@ Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf e
 
 ![new course menu](./staff.course_new_options.png)
 
-Druk op `Dodona` in de [navigatiebalk](/nl/guides/for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
+Druk op `Dodona` in de [navigatiebalk](../for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
 
 Als je vertrekt vanaf een bestaande cursus, dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
@@ -58,12 +71,12 @@ Het academiejaar waarin de cursus wordt aangeboden. Gebruik het formaat `jjjj-jj
 * `Zichtbaarheid`
 <h1 id="zichtbaarheid"></h1>
 
-De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/guides/for-students#cursus-registreren) gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
+De zichtbaarheid bepaalt of [niet-geregistreerde](../for-students#cursus-registreren) gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
   * `Zichtbaar`
-    Alle gebruikers zien de cursus in het [cursusoverzicht](#cursusoverzicht). Ze kunnen ook naar de [cursuspagina](/nl/guides/for-students#cursuspagina) navigeren en zich daar eventueel voor de cursus registreren.
+    Alle gebruikers zien de cursus in het [cursusoverzicht](#cursusoverzicht). Ze kunnen ook naar de [cursuspagina](../for-students#cursuspagina) navigeren en zich daar eventueel voor de cursus registreren.
 
   * `Verborgen`
-    Alleen [cursusbeheerders](#cursusbeheerder) zien de [cursus](#cursus) in het [cursusoverzicht](#cursusoverzicht) en op hun [startpagina](/nl/guides/for-students#startpagina). Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de [cursuspagina](/nl/guides/for-students#cursuspagina) zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de [registratielink](#registratielink) gebruiken.
+    Alleen [cursusbeheerders](#cursusbeheerder) zien de [cursus](#cursus) in het [cursusoverzicht](#cursusoverzicht) en op hun [startpagina](../for-students#startpagina). Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de [cursuspagina](../for-students#cursuspagina) zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de [registratielink](#registratielink) gebruiken.
     ![image](./staff.courses_hidden_course.png)
 
 * `Registratieprocedure`
@@ -74,7 +87,7 @@ De zichtbaarheid bepaalt of [niet-geregistreerde](/nl/guides/for-students#cursus
     Gebruikers kunnen zich voor de cursus registreren zonder expliciete goedkeuring van een [cursusbeheerder](#cursusbeheerder).
   
   * `Gemodereerd`
-  Gebruikers kunnen een [registratieverzoek](/nl/guides/for-students#registratieverzoek) indienen voor de #cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft [goedgekeurd](#registratieverzoek-goedkeuren).
+  Gebruikers kunnen een [registratieverzoek](../for-students#registratieverzoek) indienen voor de #cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft [goedgekeurd](#registratieverzoek-goedkeuren).
 
   * `Gesloten`
   Gebruikers kunnen zich niet meer voor de cursus registreren.
@@ -92,7 +105,7 @@ Een optionele beschrijving die bovenaan de cursuspagina wordt weergegeven. Voor 
 
 `Registratielink`
 
-Bij het [aanmaken](#cursus-aanmaken) van een cursus wordt automatisch een token gegenereerd als afschermingsmechanisme van [verborgen](#zichtbaarheid) cursussen. Zonder dit token kunnen [niet-geregistreerde](/nl/guides/for-students#cursus-registreren) gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Als ze toch naar de cursus proberen te navigeren, dan zien ze enkel een melding dat ze niet de geen toegangsrechten hebben voor de cursus.
+Bij het [aanmaken](#cursus-aanmaken) van een cursus wordt automatisch een token gegenereerd als afschermingsmechanisme van [verborgen](#zichtbaarheid) cursussen. Zonder dit token kunnen [niet-geregistreerde](../for-students#cursus-registreren) gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Als ze toch naar de cursus proberen te navigeren, dan zien ze enkel een melding dat ze niet de geen toegangsrechten hebben voor de cursus.
 
 ![verborgen cursus boodschap](./student.hidden_course_unregistered_denied_message.png)
 
@@ -100,7 +113,7 @@ Als lesgever ben je verantwoordelijk om de registratielink te delen met je stude
 
 ![image](./student.hidden_course_unregistered_link_message.png)
 
-De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](/nl/guides/for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](/nl/guides/for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een [verborgen](#zichtbaarheid) cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Druk op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
+De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](../for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](../for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een [verborgen](#zichtbaarheid) cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Druk op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
 
 ![image](./staff.hidden_course_registration_link.png)
 
@@ -128,7 +141,7 @@ Als cursusbeheerder kan je de [eigenschappen](#cursuseigenschappen-instellen) va
 
 ![image](./staff.course_edit_button.png)
 
-Druk op de cursus in de [navigatiebalk](/nl/guides/for-students#navigatiebalk) om het aanpassen te annuleren.
+Druk op de cursus in de [navigatiebalk](../for-students#navigatiebalk) om het aanpassen te annuleren.
 
 ![image](./staff.course_edit_cancel.png)
 
@@ -140,11 +153,11 @@ Na het afwerken navigeer je terug naar de cursuspagina waar de nieuwe cursuseige
 
 ## Leerpad
 
-Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`.Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](/nl/guides/exercise-series-management).
+Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`.Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management).
 
 ## Cursusgebruikers beheren
 
-Deze informatie is verhuisd naar een aparte [pagina](/nl/guides/user-management).
+Deze informatie is verhuisd naar een aparte [pagina](../user-management).
 
 ## Navigeren naar oplossingen
 
@@ -170,4 +183,4 @@ Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
 
 * `Oplossingen herevalueren` (actie)
 
-[Herevalueert](/nl/guides/exercise-series-management#oplossing-herevalueren) alle oplossingen uit het overzicht.
+[Herevalueert](../exercise-series-management#oplossing-herevalueren) alle oplossingen uit het overzicht.

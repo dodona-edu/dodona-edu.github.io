@@ -3,15 +3,15 @@ title: Gebruikersbeheer
 description: "Tutorial: gebruikersbeheer"
 ---
 
-[[toc]]
-
 # Gebruikersbeheer
 
-Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit zijn de gebruikers die ooit voor de cursus [geregistreerd](/nl/guides/for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](/nl/guides/for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](/nl/guides/course-management#beheersrechten).
+[[toc]]
+
+Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit zijn de gebruikers die ooit voor de cursus [geregistreerd](../for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](../for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](../course-management#beheersrechten).
 
 ## Beheersrechten
 
-Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende beheersrechten nodig. Als lesgever kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande icoontjes. Je kan dan ook de acties aan de rechterkant gebruiken om de beheersrechten van een gebruiker in te stellen. Als lesgever kan je enkel de beheersrechten `Student` en `Cursusbeheerder` toekennen aan gebruikers (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot cursusbegeleider of degraderen tot student. Voor meer informatie rond deze rollen, zie [deze pagina](/nl/guides/course-management#beheersrechten)
+Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende beheersrechten nodig. Als lesgever kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande icoontjes. Je kan dan ook de acties aan de rechterkant gebruiken om de beheersrechten van een gebruiker in te stellen. Als lesgever kan je enkel de beheersrechten `Student` en `Cursusbeheerder` toekennen aan gebruikers (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot cursusbegeleider of degraderen tot student. Voor meer informatie rond deze rollen, zie [deze pagina](../course-management#beheersrechten)
 
 ![image](./staff.users_edit_permissions.png)
 
@@ -22,32 +22,13 @@ degradeert tot [student](#student), dan
 kan je jezelf daarna niet terug promoveren tot lesgever.
 :::
 
-Aan gebruikers kunnen de volgende
-[beheersrechten](#beheersrechten)
-toegekend worden:
-
- | naam                                          | icoontje                                |permissies|
- | ----------------------------------------------|-----------------------------------------|----------|
- | `Student`|   *geen*|                                  studenten kunnen hun gebruikersprofiel bewerken, kunnen zich registreren voor cursussen en kunnen oplossingen indienen voor oefeningen|
-|`Cursusbeheerder`| ![cursusbeheerder](../../../images/role_icons/staff.png)|cursusbeheerders krijgen alle permissies van studenten en kunnen bovendien ook cursusbeheerders aanduiden, oplossingen van studenten bekijken en de cursus zelf bewerken| 
- |`Staff`|     ![image](../../../images/role_icons/staff.png)|   lesgevers hebben de permissies van cursusbeheerder als ze de cursus aanmaken en kunnen bovendien ook cursussen aanmaken en oefeningen of judges toevoegen aan Dodona|
-
- 
-::: tip
-
-Je herkent dat je [lesgever](#lesgever) bent als je het beheersmenu (menu `Admin`) ziet wanneer je de aan de linkerkant van de pagina het hamburgermenu openklikt.
-
-![location](./staff.admin_menu_location.png)
-![admin menu](./staff.admin_menu.png)
-:::
-
 ## Gebruikersoverzicht
 
 Als lesgever navigeer je naar het gebruikersoverzicht van je cursus door naar je cursus te navigeren en vervolgens op `Geregistreerde gebruikers` te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
 
 ![admin menu users](./staff.course_users.png)
 
-In het gebruikersoverzicht worden de gebruikersnaam, de naam, het emailadres en [voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het [gebruikersprofiel](/nl/guides/for-students#gebruikersprofiel) van alle gebruikers van jouw cursus. Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker [toegewezen](#cursusbeheerders-aanduiden) werden.
+In het gebruikersoverzicht worden de gebruikersnaam, de naam, het emailadres en [voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het [gebruikersprofiel](../for-students#gebruikersprofiel) van alle gebruikers van jouw cursus. Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker [toegewezen](#cursusbeheerders-aanduiden) werden.
 
 ![gebruikers](./staff.users.png)
 

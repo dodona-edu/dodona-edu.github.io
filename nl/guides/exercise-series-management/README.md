@@ -25,7 +25,7 @@ Op deze pagina vind je rechtsboven de knop `Reeks aanmaken`.
 
 ![reeks aanmaken](./staff.course_new_series_button.png)
 
-Druk op de naam van de cursus in de [navigatiebalk](/nl/guides/for-students#navigatiebalk) om het aanmaken van de oefeningenreeks te annuleren.
+Druk op de naam van de cursus in de [navigatiebalk](../for-students#navigatiebalk) om het aanmaken van de oefeningenreeks te annuleren.
 
 ![reeks aanmaken onderbreken](./staff.series_new_cancel.png)
 
@@ -35,11 +35,11 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
 * `Naam`
 
-  Een naam om naar de reeks te verwijzen. Binnen een [leerpad](/nl/guides/course-management#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam hebben. Het is echter aangeraden om alle oefeningenreeksen van het leerpad een unieke naam te geven.
+  Een naam om naar de reeks te verwijzen. Binnen een [leerpad](../course-management#leerpad) kunnen verschillende oefeningenreeksen dezelfde naam hebben. Het is echter aangeraden om alle oefeningenreeksen van het leerpad een unieke naam te geven.
 
 * `Deadline`
 
-  Een optionele [deadline](/nl/guides/for-students#oefeningenreeks-deadline) die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor oefeningen uit de oefeningenreeks.Cursusgebruikers kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks en blijven daar nog steeds een beoordeling en feedback voor ontvangen. Er wordt met deze oplossingen echter geen rekening meer gehouden bij het bepalen van hun [indienstatus](/nl/guides/for-students#oefeningenreeks-oefening-indienstatus) voor oefeningen uit de oefeningenreeks. Anders gebeurt dit wel.
+  Een optionele [deadline](../for-students#oefeningenreeks-deadline) die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor oefeningen uit de oefeningenreeks.Cursusgebruikers kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks en blijven daar nog steeds een beoordeling en feedback voor ontvangen. Er wordt met deze oplossingen echter geen rekening meer gehouden bij het bepalen van hun [indienstatus](../for-students#oefeningenreeks-oefening-indienstatus) voor oefeningen uit de oefeningenreeks. Anders gebeurt dit wel.
 
 
 ::: tip Belangrijk
@@ -47,7 +47,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 Als de deadline aangepast wordt dan krijgen cursusgebruikers meteen ook een indienstatus voor oefeningen uit de oefeningenreeks die aangepast is aan de nieuwe deadline.
 :::
 
-  Klik op het invulveld of druk op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de [tijdzone](/nl/guides/for-students#gebruikersprofiel-tijdzone) die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
+  Klik op het invulveld of druk op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de [tijdzone](../for-students#gebruikersprofiel-tijdzone) die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
 
   ![image](./staff.series_calendar_open.png)
 
@@ -92,7 +92,7 @@ Als de deadline aangepast wordt dan krijgen cursusgebruikers meteen ook een indi
 
 * `Beschrijving`
 
-  Een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in het leerpad. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/guides/course-management#Markdown).
+  Een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in het leerpad. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](../course-management#Markdown).
 
 Druk op de afwerkknop in de rechterbovenhoek van het paneel `Nieuwe oefeningenreeks` om de nieuwe oefeningenreeks
 effectief aan het leerpad toe te voegen.
@@ -109,7 +109,7 @@ instellen van eigenschappen ook oefeningen kunt koppelen aan de oefeningenreeks.
 
 ![reeks bewerken](./staff.series_edit.png)
 
-Druk op de oefeningenreeks in de [navigatiebalk](/nl/guides/for-students#navigatiebalk) om het aanpassen te annuleren.
+Druk op de oefeningenreeks in de [navigatiebalk](../for-students#navigatiebalk) om het aanpassen te annuleren.
 
 ![reeks bewerken stoppen](./staff.series_edit_cancel.png)
 
@@ -164,11 +164,11 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
 * `Statusoverzicht`
 
-  Toont een overzicht met de indienstatus van alle cursusgebruikers voor alle oefeningen uit de oefeningenreeks. De indienstatus wordt in het overzicht weergegeven met de gebruikelijke [icoontjes](/nl/guides/for-students#oefeningenreeks-oefening-indienstatus-icoontje).
+  Toont een overzicht met de indienstatus van alle cursusgebruikers voor alle oefeningen uit de oefeningenreeks. De indienstatus wordt in het overzicht weergegeven met de gebruikelijke [icoontjes](../for-students#oefeningenreeks-oefening-indienstatus-icoontje).
 
  ![scoresheet](./staff.scoresheet.png)
 
-  Druk op de naam van een cursusgebruiker om naar de [cursusoverzichtspagina](/nl/guides/user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
+  Druk op de naam van een cursusgebruiker om naar de [cursusoverzichtspagina](../user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
 
   ![scoresheet gebruikerslink](./staff.scoresheet_user_link.png)
 
@@ -186,24 +186,24 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
 ## Oplossing herevalueren
 
-Bij het herevalueren van een oplossing wordt het [beoordelingsproces](/nl/guides/for-students#oplossing-beoordelingsproces) opnieuw uitgevoerd zonder dat de oplossing opnieuw moet ingediend worden. Op die manier blijft het originele tijdstip van indienen behouden. Als de configuratie van de oefening aangepast werd sinds de vorige beoordeling van de oplossing, dan kan de status van de oplossing wijzigen door het herevalueren.
+Bij het herevalueren van een oplossing wordt het [beoordelingsproces](../for-students#oplossing-beoordelingsproces) opnieuw uitgevoerd zonder dat de oplossing opnieuw moet ingediend worden. Op die manier blijft het originele tijdstip van indienen behouden. Als de configuratie van de oefening aangepast werd sinds de vorige beoordeling van de oplossing, dan kan de status van de oplossing wijzigen door het herevalueren.
 
 ::: tip Belangrijk
 
-Bij het herevalueren krijgen oplossingen een lagere prioriteit in de [wachtrij](/nl/guides/for-students#oplossing-wachtrij) dan oplossingen die nieuw ingediend worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertaging, maar kan het herevalueren wel langer duren.
+Bij het herevalueren krijgen oplossingen een lagere prioriteit in de [wachtrij](../for-students#oplossing-wachtrij) dan oplossingen die nieuw ingediend worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertaging, maar kan het herevalueren wel langer duren.
 
 Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalueerd worden. Als je beslist om oplossingen te herevalueren, is het belangrijk om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de status van oplossingen die ze vroeger ingediend hebben als van hun indienstatus voor oefeningen in de oefeningenreeksen van de cursus.
 
 :::
 
-Druk op de herhaalknop in de rechterbovenhoek van de  [feedbackpagina](/nl/guides/for-students#feedbackpagina) om een oplossing te herevalueren.
+Druk op de herhaalknop in de rechterbovenhoek van de  [feedbackpagina](../for-students#feedbackpagina) om een oplossing te herevalueren.
 
 ![feedback evalueren](./staff.feedback_evaluate.png)
 
 
 ## Oefeningenreeks evalueren
 
-Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de [oplossingen](/nl/guides/for-students#oplossing) te evalueren en hen van feedback te voorzien. Om een evaluatie te starten, open je als lesgever het oefeningenreeks-actiesmenu.
+Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de [oplossingen](../for-students#oplossing) te evalueren en hen van feedback te voorzien. Om een evaluatie te starten, open je als lesgever het oefeningenreeks-actiesmenu.
 
 ![reeks-acties](./staff.series_actions_menu.png)
 
