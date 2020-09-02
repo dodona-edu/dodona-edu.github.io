@@ -75,12 +75,12 @@ Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursu
 
 Voor elke oefeningenreeks kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
 
-Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daaronder een oplijsting van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de reeks. De lijst toont voor elke oefening [statistieken](#statistieken) en je [indienstatus](#indienstatus). Vóór elke oefening in de lijst staat ook een [icoontje](#indienstatus) dat correspondeert met je indienstatus voor de oefening.
+Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daaronder een oplijsting van alle oefeningen uit de reeks. De lijst toont voor elke oefening je indienstatus en eventueel de voortgang van de groep. Vóór elke oefening in de lijst staat ook een icoontje dat correspondeert met je [indienstatus](#indienstatus)voor de oefening.
 
 ::: tip Belangrijk
-Dezelfde [oefening](../exercises/#navigeren-naar-een-oefening) kan voorkomen in meerdere cursussen. De [statistieken](#statistieken) en je [indienstatus](#indienstatus) voor de oefening zijn dan doorgaans niet hetzelfde omdat ze voor elke cursus afzonderlijk bepaald worden en je telkens [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indient](../exercises/#navigeren-naar-een-oplossing) binnen een bepaalde cursus.
+Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de oefening wordt hierbij niet overgenomen. Je moet dus de oefening binnen elke cursus afzonderlijk indienen.
 
-Dezelfde [oefening](../exercises/#navigeren-naar-een-oefening) kan ook voorkomen in meerdere oefeningenreeksen van een cursus. Ook dan zijn de [statistieken](#statistieken) en je [indienstatus](#indienstatus) voor de oefening niet noodzakelijk hetzelfde omdat de indienstatus afhangt van de [deadlines](#deadlines) van de oefeningenreeksen. Als er geen deadline werd ingesteld of als dezelfde deadline werd ingesteld voor de oefeningenreeksen, dan zijn de statistieken en je indienstatus voor de oefening per definitie wel hetzelfde.
+Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
 :::
 
 #### Menu
@@ -100,7 +100,7 @@ Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](.
 
 Downloadt een ZIP-bestand dat voor elke [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks de [oplossing](../exercises/#navigeren-naar-een-oplossing) bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
 
-### Oefeningen
+### Indienstatus
 #### Statistieken
 
 De **statistieken** van een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks bestaan uit twee getallen *c/i*. Daarbij staat *i* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één [oplossing](../exercises/#navigeren-naar-een-oplossing) heeft [ingediend](../exercises/#navigeren-naar-een-oplossing) voor de oefening en *c* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één *correcte* oplossing heeft ingediend voor de oefening.
