@@ -42,7 +42,7 @@ Om een overzicht te krijgen van de gebruikers in een cursus, klik je op het gebr
 
 ## Navigeren naar oplossingen
 
-Als cursusbeheerder kan je een overzicht met oplossingen die in de cursus ingediend werden, verkrijgen door te klikken op `Ingediende oplossingen` in de navigatiebalk.
+Als cursusbeheerder kan je een overzicht met oplossingen die in de cursus ingediend werden, verkrijgen door te klikken op `Ingediende oplossingen` op de cursuspagina of op het icoontje in de navigatiebalk.
 ![cursus oplossingen link](./staff.course_submissions_link.png)
 
 Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
@@ -54,7 +54,7 @@ Het klikken op een filter zorgt ervoor dat je enkel inzendingen ziet van een spe
 
 Deze pagina's kan je ook op andere manieren bereiken. 
 * De oplossingen voor een specifieke oefening kan je vinden via het pijltje in de rij van die oefening.
-* De oplossingen van een specifieke gebruiker vind je door te klikken op `OPLOSSINGEN` op de cursuspagina van die gebruiker.
+* De oplossingen van een specifieke gebruiker vind je door te klikken op `OPLOSSINGEN` op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
 Het overzicht heeft voor cursusbeheerders ook een menu met filters en acties die voor hen voorbehouden zijn:
 

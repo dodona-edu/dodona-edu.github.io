@@ -10,16 +10,6 @@ description: "Tutorial: gebruikersbeheer"
 
 Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit overzicht bereik je door te klikken op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Hierin zie je alle gebruikers die ooit voor de cursus [geregistreerd](../for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](../for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](../course-management#beheersrechten).
 
-## Beheersrechten
-
-Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende beheersrechten nodig. Als lesgever kan je zien in het [gebruikersoverzicht](#gebruikersoverzicht) door te kijken naar onderstaande icoontjes. Je kan dan ook de acties aan de rechterkant gebruiken om de beheersrechten van een gebruiker in te stellen. Als lesgever kan je enkel de beheersrechten `Student` en `Cursusbeheerder` toekennen aan gebruikers (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot cursusbegeleider of degraderen tot student. Voor meer informatie rond deze rollen, zie [deze pagina](../course-management#beheersrechten)
-
-![image](./staff.users_edit_permissions.png)
-
-::: tip Belangrijk
-
-Als je jezelf als lesgever degradeert tot student, dan kan je jezelf daarna niet terug promoveren tot lesgever.
-:::
 
 ## Gebruikersoverzicht
 
@@ -43,18 +33,22 @@ De voortgangsstatistieken van een gebruiker worden weergegeven middels een vooru
 
 ### Cursusbeheerders aanduiden
 
+Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende beheersrechten nodig. Als lesgever kan je zien in het gebruikersoverzicht door te kijken naar onderstaande icoontjes. Je kan dan ook de acties aan de rechterkant gebruiken om de beheersrechten van een gebruiker in te stellen. Als lesgever kan je enkel de beheersrechten `Student` en `Cursusbeheerder` toekennen aan gebruikers (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot cursusbegeleider of degraderen tot student. Voor meer informatie rond deze rollen, zie [deze pagina](../course-management#beheersrechten)
+
 Je kan de cursusbeheerders herkennen aan het icoontje in de linkermarge.
 
-![image](./staff.course_users_admin.png)
+![beheerder in gebruikersoverzicht](./staff.course_users_admin.png)
 
 Via de knoppen aan de rechterkant kan je de beheersrechten van gebruikers aanpassen.
 
 * ![promoveren](../../../images/staff_registration_icons/make_course_admin.png): cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder
 * ![degraderen](../../../images/staff_registration_icons/make_student.png): cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus
 
+![beheersrechten bewerken](./staff.users_edit_permissions.png)
+
 ::: tip Belangrijk
 
-Een cursusbeheerder die zich uitschrijft uit een cursus verliest zijn status van cursusbeheerder.
+Een cursusbeheerder die zich uitschrijft uit een cursus verliest zijn status van cursusbeheerder. Dit geldt dus ook als je jezelf degradeert tot student.
 
 Om ervoor te zorgen dat een cursus altijd minstens één cursusbeheerder heeft, kan de laatste cursusbeheerder zich niet uitschrijven en kan hij zichzelf ook niet degraderen tot cursusgebruiker zonder beheersrechten voor de cursus.
 
