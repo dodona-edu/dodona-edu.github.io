@@ -8,7 +8,7 @@ description: "Tutorial: gebruikersbeheer"
 **Inhoudsopgave**
 [[toc]]
 
-Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit zijn de gebruikers die ooit voor de cursus [geregistreerd](../for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](../for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](../course-management#beheersrechten).
+Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit overzicht bereik je door te klikken op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Hierin zie je alle gebruikers die ooit voor de cursus [geregistreerd](../for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](../for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](../course-management#beheersrechten).
 
 ## Beheersrechten
 
@@ -18,9 +18,7 @@ Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende beheersrechten
 
 ::: tip Belangrijk
 
-Als je jezelf als [lesgever](#lesgever)
-degradeert tot [student](#student), dan
-kan je jezelf daarna niet terug promoveren tot lesgever.
+Als je jezelf als lesgever degradeert tot student, dan kan je jezelf daarna niet terug promoveren tot lesgever.
 :::
 
 ## Gebruikersoverzicht
@@ -38,11 +36,6 @@ Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifiek
 
 ![gefilterde lijst](./staff.users_filtered.png)
 
-### Gebruiker selecteren
-Druk op de naam om naar de [cursusoverzichtspagina](#cursusoverzichtspagina) van de gebruiker te navigeren.
-
-![image](./staff.users_filtered_link.png)
-
 ### Gebruiker voortgangsstatistieken
 De voortgangsstatistieken van een gebruiker worden weergegeven middels een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel oefeningen in de cursus waarvoor de gebruiker een *correcte* oplossing voor heeft ingediend. Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog niet correct heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog niet aan begonnen is.
 
@@ -54,12 +47,10 @@ Je kan de cursusbeheerders herkennen aan het icoontje in de linkermarge.
 
 ![image](./staff.course_users_admin.png)
 
-Je kan de volgende actieknoppen aan de rechterkant gebruiken om cursusbeheerders aan te duiden:
+Via de knoppen aan de rechterkant kan je de beheersrechten van gebruikers aanpassen.
 
-|knop                                                              |actie                                                                                |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-![image](../../../images/staff_registration_icons/make_course_admin.png)    |cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder  |
-![image](../../../images/staff_registration_icons/make_student.png)         |cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus  |
+* ![promoveren](../../../images/staff_registration_icons/make_course_admin.png): cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder
+* ![degraderen](../../../images/staff_registration_icons/make_student.png): cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus
 
 ::: tip Belangrijk
 
@@ -70,38 +61,21 @@ Om ervoor te zorgen dat een cursus altijd minstens één cursusbeheerder heeft, 
 Na het aanmaken van een cursus kan een lesgever zich uitschrijven als hij andere cursusbeheerders aangeduid heeft. Hij kan door andere cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder beheersrechten voor de cursus.
 :::
 
-### Registratiestatus aanpassen
-
-De cursusgebruikers worden in tabs gegroepeerd volgens hun registratiestatus voor de cursus. De volgende statussen zijn mogelijk:
-
-* `Geregistreerd`
-
-  Alle cursusgebruikers die momenteel geregistreerd zijn.
-
-* `Uitgeschreven`
-
-  Alle cursusgebruikers die ooit geregistreerd waren, maar die ondertussen uitgeschreven zijn.
-
-* `Op de wachtlijst`
-
-  Alle cursusgebruikers waarvoor er nog een registratieverzoek openstaat dat wacht op afhandeling door een cursusbeheerder.
-
-
 ### Registratieverzoeken afhandelen
 
-Elke tab heeft eigen actieknoppen aan de rechterkant van de cursusgebruikers waarmee je hun registratiestatus kunt aanpassen.
+De cursusgebruikers worden in tabs gegroepeerd volgens hun registratiestatus voor de cursus. Elke tab biedt andere acties aan om de registratiestatus van de bijhorende gebruiker aan te passen.
 
+* `Geregistreerd`: alle cursusgebruikers die momenteel geregistreerd zijn.
+  Door te klikken op ![unregister](../../../images/staff_registration_icons/unregister.png) schrijf je de gebruiker uit de cursus.
 
-|tab                                                 |knop                    |actie |
------------------------------------------------------|------------------------|------| 
-`Geregistreerd`|          ![image](../../../images/staff_registration_icons/unregister.png) |  cursusgebruiker uitschrijven uit de cursus|
-`Uitgeschreven`|          ![image](../../../images/staff_registration_icons/register.png)|     cursusgebruiker terug registreren voor de cursus|
-`Registratieverzoeken`|   ![image](../../../images/staff_registration_icons/approve.png)|     goedkeuren van het registratieverzoek, waardoor de gebruiker geregistreerd wordt voor de cursus|
-`Registratieverzoeken`|   ![image](../../../images/staff_registration_icons/decline.png)|      afkeuren van het registratieverzoek, waardoor de gebruiker uitgeschreven wordt uit de cursus|
+* `Op de wachtlijst`: alle cursusgebruikers waarvoor er nog een registratieverzoek openstaat dat wacht op afhandeling door een cursusbeheerder.
+  Door te klikken op ![approve](../../../images/staff_registration_icons/approve.png) keur je het registratieverzoek goed. Afkeuren doe je door te klikken op ![decline](../../../images/staff_registration_icons/decline.png).
 
-## Cursusoverzichtspagina
+* `Uitgeschreven`: alle cursusgebruikers die ooit geregistreerd waren, maar die ondertussen uitgeschreven zijn.
+  Deze gebruiker kan je terug inschrijven voor de cursus door te klikken op ![register](../../../images/staff_registration_icons/register.png)
 
-Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Je krijgt de voortgangsstatistieken te zien, alsook grafieken over de activiteiten van deze gebruiker en een overzicht per reeks van de status van elke oefening.
+## Studenten opvolgen
+Om de voortgang van een individuele student op te volgen is er een overzichtpagina per student voorzien. Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op de naam van een student te klikken. Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.
 
 ![cursusoverzicht](./staff.user_course_overview.png)
 
