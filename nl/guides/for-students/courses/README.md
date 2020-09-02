@@ -4,18 +4,18 @@ description: "Tutorial: cursussen op Dodona"
 ---
 
 # Cursussen op Dodona
-> Alle informatie zodat je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
+> Op deze pagina vind je alle informatie zodat je je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
 
 **Inhoudsopgave**
 [[toc]]
 
 ## Wat is een cursus?
 
-Een cursus op Dodona is een leerpad met [oefeningen](../exercises/#navigeren-naar-een-oefening) die gebundeld worden in oefeningenreeksen. Als je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent dan kan je binnen de cursus ook [oplossingen](../exercises/#navigeren-naar-een-oplossing) [indienen](../exercises/#indienen-van-een-oplossing) voor de [oefeningen](../exercises/#navigeren-naar-een-oefening).
+Een cursus op Dodona is een leerpad met [oefeningen](../exercises/#navigeren-naar-een-oefening) die gebundeld worden in oefeningenreeksen. Als je voor een cursus geregistreerd bent dan kan je binnen de cursus [oplossingen indienen](../exercises/#indienen-van-een-oplossing) voor de oefeningen.
 
 ## Registreren voor een cursus
 
-Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die cursus geregistreerd zijn. Daarom zullen wij nu uitleggen hoe je een cursus makkelijk kan vinden en je hiervoor kan registreren. 
+Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die cursus geregistreerd zijn.
 
 ### Hoe vind je een cursus?
 
@@ -23,15 +23,15 @@ Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door
 
 ![image](./student.explore_courses.png)
 
-Dit zal je naar een overzicht van alle cursussen brengen waar je de zoekbalk kan gebruiken om op basis van een cursusnaam, een naam van een lesgever of een academiejaar de juiste cursus kan vinden.
+Dit zal je naar een [overzicht van alle cursussen](https://dodona.ugent.be/nl/courses/) brengen. Hier kan je de zoekbalk gebruiken om op basis van een cursusnaam, een naam van een lesgever, de naam van je onderwijsinstelling of een academiejaar de juiste cursus kan vinden.
 
 ![image](./student.courses.png)
 
 ### Hoe registreer je?
 
-Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet [geregistreerd](#registreren-voor-een-cursus) bent, dan zie je bovenaan de [cursuspagina](#cursuspagina) een paneel dat aangeeft of en hoe je je voor de cursus kan [registreren](#registreren-voor-een-cursus). Hierbij zijn er drie mogelijkheden:
+Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd bent, dan zie je bovenaan de cursuspagina een paneel dat aangeeft of en hoe je je voor de cursus kan registreren. Hierbij zijn er drie mogelijkheden afhankelijk van hoe de cursus geconfigureerd werd:
 
--   De cursus werkt met een open registratieprocedure, wat betekent dat iedereen voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `REGISTREREN` om je voor de cursus te registreren.
+-   De cursus werkt met een open registratieprocedure, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `REGISTREREN` om je voor de cursus te registreren.
 
     ![image](./register.png)
 
@@ -45,27 +45,27 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet [geregistreer
 
     ![image](./moderated_waiting.png)
 
--   De cursus werkt met een gesloten registratieprocedure, wat betekent dat je geen [registratieverzoek](#registratieverzoek) kunt indienen voor de cursus.
+-   De cursus werkt met een gesloten registratieprocedure, wat betekent dat je geen [registratieverzoek](#registratieverzoek) kunt indienen voor de cursus. De lesgever laat dus niet toe dat je jezelf kan registreren.
 
     ![image](./closed_registration.png)
 
-Zodra je voor een cursus [geregistreerd](#registreren-voor-een-cursus) bent, verschijnt er een kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus wordt aangeboden in het meest recente academiejaar waarvoor je voor een cursus geregistreerd bent, dan wordt de cursus ook opgelijst onder `Mijn vakken` in het hamburger menu aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal).
+Nadat je geregistreerd bent, wordt de cursus getoond op je gepersonaliseerde startpagina.
 
 ![image](./student.my_courses.png)
 
-Naast de mogelijkheid om zelf naar een cursus te navigeren en op de [cursuspagina](#cursuspagina) de registratieprocedure te doorlopen, bestaat ook de mogelijkheid dat je een registratielink ontvangt van een cursusbeheerder (bijvoorbeeld per email van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren. De registratieprocedure blijft net zoals bij manuele registratie wel afhankelijk van het feit of de cursus werkt met een open, een gemodereerde of een gesloten registratieprocedure.
+Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina de registratieprocedure te doorlopen, is het ook mogelijk dat je een registratielink ontvangt van een cursusbeheerder (bijvoorbeeld per email van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren.
 
-## Cursus componenten
+## Cursuscomponenten
 
 ### Cursuspagina
 
-Na selectie van een cursus navigeer je naar de **cursuspagina** met bovenaan een beschrijving van de cursus. Daaronder staan de oefeningenreeksen met de [oefeningen](../exercises/#navigeren-naar-een-oefening) van de cursus.
+Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder kan je verschillende oefeningenreeksen zien die elk bestaan uit een of meerdere oefeningen.
 
 ![image](./student.deadline_series.png)
 
-::: tip
+::: tip Tip
 
-Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de [navigatiebalk](../login-and-settings/#selecteren-van-de-taal). Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je terug naar de [cursuspagina](#cursuspagina).
+Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de navigatiebalk. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je terug naar de cursuspagina.
 
 ![image](./student.breadcrumb_course.png)
 :::
