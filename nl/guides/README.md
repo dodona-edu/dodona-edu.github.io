@@ -10,6 +10,7 @@ Hier vind je enkele handleidingen, vooral gericht op lesgevers.
 * [Van start met Dodona als student](for-students)
 * [Van start met Dodona als leerkracht](getting-started)
 * [Gebruikersbeheer](user-management)
+* [Een nieuwe cursus maken](new-course)
 * [Cursusbeheer](course-management)
 * [Oefeningenreeksenbeheer](exercise-series-management)
 * [Dodona PyCharm plugin](pycharm-plugin)
