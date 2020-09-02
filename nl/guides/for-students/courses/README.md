@@ -67,7 +67,6 @@ Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursu
 :::
 
 ### Oefeningenreeksen
-#### Deadlines
 
 Voor elke oefeningenreeks kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
 
