@@ -80,22 +80,16 @@ Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de o
 Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
 :::
 
-#### Menu
-
 In het menu van een oefeningenreeks vind je de volgende opties:
 
-`Toon overzicht`
-
-Toont een overzicht waarin de namen en beschrijvingen van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de [oplossing](../exercises/#navigeren-naar-een-oplossing) die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
+- `Toon overzicht`: Toont een overzicht waarin de namen en beschrijvingen van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de [oplossing](../exercises/#navigeren-naar-een-oplossing) die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
 
 ::: tip
 Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks. Dodona voorziet dezelfde verzorgde opmaak als bij het afdrukken van een individuele oefening.
 :::
 
 
-`Oplossing downloaden`
-
-Downloadt een ZIP-bestand dat voor elke [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks de [oplossing](../exercises/#navigeren-naar-een-oplossing) bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
+- `Oplossing downloaden`: Downloadt een ZIP-bestand dat voor elke [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks de [oplossing](../exercises/#navigeren-naar-een-oplossing) bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
 
 ### Indienstatus
 #### Statistieken
