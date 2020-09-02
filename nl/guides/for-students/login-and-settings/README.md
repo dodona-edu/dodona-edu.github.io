@@ -73,11 +73,8 @@ Wat je wel kan aanpassen is de **tijdzone** die gebruikt wordt voor het weergeve
 
 ![image](./student.edit_timezone.png)
 
-::: tip
-
-Als de [tijdzone](#tijdzone) uit je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
+Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
 
 ![image](./student.wrong_timezone.png)
 
-Je kunt deze mededeling enkel weghalen door in je [gebruikersprofiel](#instellen-van-persoonlijke-voorkeuren) de [tijdzone](#tijdzone) in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
-:::
+Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
