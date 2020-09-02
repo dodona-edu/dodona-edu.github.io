@@ -51,17 +51,13 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
 Nadat je geregistreerd bent, wordt de cursus getoond op je gepersonaliseerde startpagina.
 
-![image](./student.my_courses.png)
-
 Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina de registratieprocedure te doorlopen, is het ook mogelijk dat je een registratielink ontvangt van een cursusbeheerder (bijvoorbeeld per email van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren.
 
 ## Cursuscomponenten
 
-### Cursuspagina
-
 Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder kan je verschillende oefeningenreeksen zien die elk bestaan uit een of meerdere oefeningen.
 
-![image](./student.deadline_series.png)
+![image](./student.deadline_series_warning.png)
 
 ::: tip Tip
 
