@@ -16,19 +16,19 @@ Binnenin een cursus kunnen gebruikers bepaalde beheersrechten hebben. We ondersc
 
 ## Cursus bewerken
 
-Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cursuspagina en druk je op het bewerken-icoontje bovenaan.
+Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cursuspagina en klik je op het bewerken-icoontje bovenaan.
 
 ![image](./staff.course_edit_button.png)
 
-Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../new-course/#cursuseigenschappen). Je kan hier ook de geheime link naar je cursus vernieuwen. Daarvoor druk je op de vernieuwknop naast de [registratielink](#registratielink) om de cursus opnieuw te verbergen nadat de registratielink gedeeld werd. Daardoor wordt een nieuw token gegenereerd en wordt het oude token onbruikbaar gemaakt. De registratielink wordt meteen ook aangepast aan het nieuwe token.
+Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../new-course/#cursuseigenschappen). Je kan hier ook de geheime link naar je cursus vernieuwen. Daarvoor klik je op de vernieuwknop naast de [registratielink](#registratielink) om de cursus opnieuw te verbergen nadat de registratielink gedeeld werd. Daardoor wordt een nieuw token gegenereerd en wordt het oude token onbruikbaar gemaakt. De registratielink wordt meteen ook aangepast aan het nieuwe token.
 
 ![image](./staff.hidden_course_registration_link_renew.png)
 
-Druk na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen effectief in te stellen.  Alternatief kan je ook op de `AANPASSEN` drukken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
+Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen effectief in te stellen.  Alternatief kan je ook op de `AANPASSEN` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
 
 ![image](./staff.course_after_edit.png)
 
-Als je het bewerken wil onderbreken zonder je wijzigingen op te slaan, druk dan op de cursus in de [navigatiebalk](../for-students#navigatiebalk).
+Als je het bewerken wil onderbreken zonder je wijzigingen op te slaan, klik dan op de cursus in de [navigatiebalk](../for-students#navigatiebalk).
 
 ![image](./staff.course_edit_cancel.png)
 
@@ -38,11 +38,11 @@ Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad 
 
 ## Cursusgebruikers beheren
 
-Om een overzicht te krijgen van de gebruikers in een cursus, druk je op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Voor meer informatie over welke acties je daar kan uitvoeren, kan je de tutorial over [gebruikersbeheer](../user-management) raadplegen.
+Om een overzicht te krijgen van de gebruikers in een cursus, klik je op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Voor meer informatie over welke acties je daar kan uitvoeren, kan je de tutorial over [gebruikersbeheer](../user-management) raadplegen.
 
 ## Navigeren naar oplossingen
 
-Als cursusbeheerder kan je een overzicht met oplossingen die in de cursus ingediend werden, verkrijgen door te drukken op `Ingediende oplossingen` in de navigatiebalk.
+Als cursusbeheerder kan je een overzicht met oplossingen die in de cursus ingediend werden, verkrijgen door te klikken op `Ingediende oplossingen` in de navigatiebalk.
 ![cursus oplossingen link](./staff.course_submissions_link.png).
 
 Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.

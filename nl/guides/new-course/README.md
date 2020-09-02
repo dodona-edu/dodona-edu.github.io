@@ -1,19 +1,17 @@
 ---
-title: Cursus aanmaken
+title: Een nieuwe cursus aanmaken
 description: "Tutorial: cursus aanmaken"
 ---
 
 # Cursus aanmaken
 
-Als lesgever kan je een nieuwe cursus aanmaken waar je studenten zich voor kunnen registreren. Dit doe je door op de knop `CURSUS AANMAKEN` te drukken in de rechterbovenhoek van het cursusoverzicht.
+Als lesgever kan je een nieuwe cursus aanmaken waar je studenten zich voor kunnen registreren. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.ugent.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen`. Vanop eender welke pagina kan je via het hamburgermenu in de linkerbovenhoek snelkoppelingen vinden naar jouw cursusssen onder het tabblad `Cursussen` en de cursus-zoekenpagina via het gelijknamige knopje on het tabblad `Admin` als je een lesgever bent.
 
 ![create course](./staff.courses_new_link.png)
 
 Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus, ofwel maak je een volledige nieuwe cursus aan.
 
 ![new course menu](./staff.course_new_options.png)
-
-Druk op `Dodona` in de [navigatiebalk](../for-students#navigatiebalk) om het aanmaken van de cursus te annuleren.
 
 Als je vertrekt vanaf een bestaande cursus, dan moet je deze selecteren in de tabel. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
@@ -84,11 +82,11 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
   ![image](./student.hidden_course_unregistered_link_message.png)
 
-  De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](../for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](../for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Druk op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
+  De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](../for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](../for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
 
   ![image](./staff.hidden_course_registration_link.png)
 
-Druk op de afwerkknop in de rechteronderhoek van de pagina `CURSUS AANMAKEN` om het aanmaken van een cursus met de opgegeven eigenschappen effectief door te voeren.
+Klik op de afwerkknop in de rechteronderhoek van de pagina `CURSUS AANMAKEN` om het aanmaken van een cursus met de opgegeven eigenschappen effectief door te voeren.
 
 ![image](./staff.course_new_submit.png)
 

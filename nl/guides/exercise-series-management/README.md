@@ -26,7 +26,7 @@ Op deze pagina vind je rechtsboven de knop `Reeks aanmaken`.
 
 ![reeks aanmaken](./staff.course_new_series_button.png)
 
-Druk op de naam van de cursus in de [navigatiebalk](../for-students#navigatiebalk) om het aanmaken van de oefeningenreeks te annuleren.
+Klik op de naam van de cursus in de [navigatiebalk](../for-students#navigatiebalk) om het aanmaken van de oefeningenreeks te annuleren.
 
 ![reeks aanmaken onderbreken](./staff.series_new_cancel.png)
 
@@ -48,11 +48,11 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 Als de deadline aangepast wordt dan krijgen cursusgebruikers meteen ook een indienstatus voor oefeningen uit de oefeningenreeks die aangepast is aan de nieuwe deadline.
 :::
 
-  Klik op het invulveld of druk op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de [tijdzone](../for-students#gebruikersprofiel-tijdzone) die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
+  Klik op het invulveld of klik op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de [tijdzone](../for-students#gebruikersprofiel-tijdzone) die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
 
   ![image](./staff.series_calendar_open.png)
 
-  Druk op de verwijderknop om een ingestelde deadline te wissen.
+  Klik op de verwijderknop om een ingestelde deadline te wissen.
 
   ![image](./staff.series_calendar_clear.png)
 
@@ -83,11 +83,11 @@ Als de deadline aangepast wordt dan krijgen cursusgebruikers meteen ook een indi
 
   ![verborgen reeks link](./staff.series_hidden_link.png)
 
-   Als cursusbeheerder krijg je de verantwoordelijkheid om de geheime link enkel te delen met andere gebruikers die de oefeningenreeks mogen zien. Druk op de kopieerknop naast de geheime link om de geheime link naar het klembord te kopiëren.
+   Als cursusbeheerder krijg je de verantwoordelijkheid om de geheime link enkel te delen met andere gebruikers die de oefeningenreeks mogen zien. Klik op de kopieerknop naast de geheime link om de geheime link naar het klembord te kopiëren.
 
   ![reekslink kopiëren](./staff.series_hidden_link_copy.png)
 
-  Druk op de vernieuwknop naast de geheime link om de oefeningenreeks opnieuw te verbergen nadat de geheime link gedeeld werd. Daardoor wordt een nieuw token gegenereerd en wordt het oude token onbruikbaar gemaakt. De geheime link wordt meteen ook aangepast aan het nieuwe token.
+  Klik op de vernieuwknop naast de geheime link om de oefeningenreeks opnieuw te verbergen nadat de geheime link gedeeld werd. Daardoor wordt een nieuw token gegenereerd en wordt het oude token onbruikbaar gemaakt. De geheime link wordt meteen ook aangepast aan het nieuwe token.
 
   ![reekslink vernieuwen](./staff.series_hidden_link_reset.png)
 
@@ -95,7 +95,7 @@ Als de deadline aangepast wordt dan krijgen cursusgebruikers meteen ook een indi
 
   Een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in het leerpad. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](../course-management#Markdown).
 
-Druk op de afwerkknop in de rechterbovenhoek van het paneel `Nieuwe oefeningenreeks` om de nieuwe oefeningenreeks
+Klik op de afwerkknop in de rechterbovenhoek van het paneel `Nieuwe oefeningenreeks` om de nieuwe oefeningenreeks
 effectief aan het leerpad toe te voegen.
 
 ![image](./staff.series_new_submit.png)
@@ -106,19 +106,19 @@ toegevoegd werd. In het leerpad wordt deze reeks bovenaan toegevoegd. Op die man
 ## Oefeningenreeks bewerken
 
 Op de bewerkingspagina van een oefeningenreeks zie je een uitgebreide versie van het reeks-aanmakenpaneel waarin je naast het
-instellen van eigenschappen ook oefeningen kunt koppelen aan de oefeningenreeks. Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te drukken van de reeks in het Reeksen beheren-paneel of door `Reeks bewerken` te kiezen in het reeks-actiesmenu.
+instellen van eigenschappen ook oefeningen kunt koppelen aan de oefeningenreeks. Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te klikken van de reeks in het Reeksen beheren-paneel of door `Reeks bewerken` te kiezen in het reeks-actiesmenu.
 
 ![reeks bewerken](./staff.series_edit.png)
 
-Druk op de oefeningenreeks in de [navigatiebalk](../for-students#navigatiebalk) om het aanpassen te annuleren.
+Klik op de oefeningenreeks in de [navigatiebalk](../for-students#navigatiebalk) om het aanpassen te annuleren.
 
 ![reeks bewerken stoppen](./staff.series_edit_cancel.png)
 
-Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Druk op de toevoegknop aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
+Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Klik op de toevoegknop aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
 
 ![reeks oefening toevoegen](./staff.series_add_exercise.png)
 
-Onder de hoofding `Oefeningen in deze reeks` kan je aan de rechterkant van een oefening op de verwijderknop drukken om de oefening uit de oefeningenreeks te verwijderen.
+Onder de hoofding `Oefeningen in deze reeks` kan je aan de rechterkant van een oefening op de verwijderknop klikken om de oefening uit de oefeningenreeks te verwijderen.
 
 ![reeks oefening verwijderen](./staff.series_remove_exercise.png)
 
@@ -136,7 +136,7 @@ We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten geko
 
 :::
 
-Druk op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de reeks-eigenschappen. Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
+Klik op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de reeks-eigenschappen. Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
 
 ![reeks bewerken opslaan](./staff.series_edit_submit.png)
 
@@ -169,11 +169,11 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
  ![scoresheet](./staff.scoresheet.png)
 
-  Druk op de naam van een cursusgebruiker om naar de [cursusoverzichtspagina](../user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
+  Klik op de naam van een cursusgebruiker om naar de [cursusoverzichtspagina](../user-management#cursusoverzichtspagina) van de gebruiker te navigeren.
 
   ![scoresheet gebruikerslink](./staff.scoresheet_user_link.png)
 
-  Druk op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing  heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
+  Klik op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing  heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
 
   ![scoresheet status](./staff.scoresheet_status_icon.png)
 
@@ -197,7 +197,7 @@ Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalue
 
 :::
 
-Druk op de herhaalknop in de rechterbovenhoek van de  [feedbackpagina](../for-students#feedbackpagina) om een oplossing te herevalueren.
+Klik op de herhaalknop in de rechterbovenhoek van de  [feedbackpagina](../for-students#feedbackpagina) om een oplossing te herevalueren.
 
 ![feedback evalueren](./staff.feedback_evaluate.png)
 
@@ -230,7 +230,7 @@ Je kan klikken op deze icoontjes om de bijhorende indiening te evalueren.
 Je komt op een evalueerpagina terecht van de gebruiker waar je dus de code zelf van feedback kan voorzien. Dit kan op een lijn-per-lijnbasis. De gebruiker zal na het vrijgeven een melding krijgen, waarna hij de feedback kan bekijken.
 ![annotaties geven](./staff.series_evaluate_give_feedback.png)
 
-In de rechterbovenhoek vind je navigatie-opties om efficiënt de indieningen te overlopen. De knop `Volgende` brengt je naar een volgende niet-afgewerkte indiening. Daar staan ook opties om het evalueerproces te versnellen en vereenvoudigen. Zo kan je reeds afgewerkte oplossingen overslaan en de huidige oefening automatisch als afgewerkt markeren als je op `Volgende` drukt. 
+In de rechterbovenhoek vind je navigatie-opties om efficiënt de indieningen te overlopen. De knop `Volgende` brengt je naar een volgende niet-afgewerkte indiening. Daar staan ook opties om het evalueerproces te versnellen en vereenvoudigen. Zo kan je reeds afgewerkte oplossingen overslaan en de huidige oefening automatisch als afgewerkt markeren als je op `Volgende` klikt. 
 
 Eronder vind je je voortgang voor de huidige oefening en kan je ook navigeren naar de oplossingen van de huidige gebruiker voor andere oefeningen die in de reeks zitten.
 ![andere oefeningen gebruiker](./staff.series_evaluate_feedback_row.png)
