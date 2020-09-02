@@ -68,7 +68,9 @@ Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursu
 
 ### Oefeningenreeksen
 
-Voor elke oefeningenreeks kan er door een cursusbeheerder optioneel een **deadline** ingesteld zijn die dan naast de naam van de oefening wordt weergegeven. Bij weergave van de deadline wordt rekening gehouden met de [tijdzone](../login-and-settings/#tijdzone) uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
+Een oefeningenreeks bestaat uit een beschrijving, een aantal oefeningen en eventueel een **deadline** die ingesteld werd door de cursusbeheerder. Indien er een eadline is ingesteld, dan wordt die weergegeven onder de naam van de oefeningenreeks. Bij weergave van de deadline wordt rekening gehouden met de tijdzone uit je gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
+
+Als een reeks een deadline heeft, dan worden enkel ingediende oplossingen van voor dat tijdstip in rekening gebracht. Na de deadline kan je dus nog steeds indienen, maar ze tellen mogelijks niet mee voor een eventuele evaluatie. Meer details hierover kan je vinden bij de sectie [indienstatus](#indienstatus).
 
 Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daaronder een oplijsting van alle oefeningen uit de reeks. De lijst toont voor elke oefening je indienstatus en eventueel de voortgang van de groep. Vóór elke oefening in de lijst staat ook een icoontje dat correspondeert met je [indienstatus](#indienstatus)voor de oefening.
 
