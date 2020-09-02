@@ -146,9 +146,11 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
         {
           title: 'Van start met Dodona als student',
           collapsable: false,
-          path: `/${lang}/guides/for-students`,
+          path: `/${lang}/guides/for-students/`,
           sidebarDepth: 2,
+          initialOpenGroupIndex: -1,
           children: [
+            ['for-students/', 'Overzicht'],
             'for-students/login-and-settings/',
             'for-students/courses/',
             'for-students/exercises/',
