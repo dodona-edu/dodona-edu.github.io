@@ -150,8 +150,8 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
           sidebarDepth: 2,
           children: [
             'for-students/login-and-settings/',
+            'for-students/courses/',
             'for-students/exercises/',
-            'for-students/courses/'
           ]
         },
         'getting-started/',
