@@ -92,11 +92,6 @@ Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](.
 - `Oplossing downloaden`: Downloadt een ZIP-bestand dat voor elke [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks de [oplossing](../exercises/#navigeren-naar-een-oplossing) bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) op basis waarvan de indienstatus kon bepaald worden).
 
 ### Indienstatus
-#### Statistieken
-
-De **statistieken** van een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks bestaan uit twee getallen *c/i*. Daarbij staat *i* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één [oplossing](../exercises/#navigeren-naar-een-oplossing) heeft [ingediend](../exercises/#navigeren-naar-een-oplossing) voor de oefening en *c* voor het aantal gebruikers (studenten en cursusbeheerders) dat in de cursus al minstens één *correcte* oplossing heeft ingediend voor de oefening.
-
-#### Indienstatus
 
 Je **indienstatus** voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks wordt bepaald op basis van de [oplossing](../exercises/#navigeren-naar-een-oplossing) die je als laatste in de cursus hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) voor de oefening. Als er een [deadline](#deadlines) werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat correspondeert met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de [oplossing](../exercises/#navigeren-naar-een-oplossing) die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
