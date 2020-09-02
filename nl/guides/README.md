@@ -7,11 +7,16 @@ sidebarDepth: 0
 Hier vind je enkele handleidingen, vooral gericht op lesgevers.
 
 ## In het Nederlands
+<<<<<<< HEAD
 * [Van start met Dodona als student](for-students)
 * [Van start met Dodona als leerkracht](getting-started)
 * [Gebruikersbeheer](user-management)
+=======
+* [Van start met Dodona](getting-started)
+>>>>>>> Minor fixes
 * [Een nieuwe cursus aanmaken](new-course)
 * [Cursusbeheer](course-management)
+* [Gebruikersbeheer](user-management)
 * [Oefeningenreeksenbeheer](exercise-series-management)
 * [Dodona PyCharm plugin](pycharm-plugin)
 * [Dodona VS Code extension](vs-code-extension)

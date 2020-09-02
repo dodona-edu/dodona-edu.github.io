@@ -8,17 +8,17 @@ description: "Tutorial: cursusbeheer"
 **Inhoudsopgave**
 [[toc]]
 
-Een cursus wordt opgebouwd als een leerpad met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden. Gebruikers kunnen zich registreren voor de cursus via de gekozen registratieprocedure. Er is altijd minstens één gebruiker die cursusbeheerder is, bijvoorbeeld de gebruiker die de cursus aanmaakte. Voor informatie over hoe je een nieuwe cursus aanmaakt, zie deze [pagina](../new-course).
+Een cursus wordt opgebouwd als een leerpad met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden. Gebruikers kunnen zich registreren voor de cursus via de gekozen registratieprocedure. Er is altijd minstens één gebruiker die cursusbeheerder is, bijvoorbeeld de gebruiker die de cursus aanmaakte. Voor informatie over hoe je een nieuwe cursus aanmaakt, kan je [hier](../new-course) terecht.
 
 ## Beheersrechten
 
-Binnenin een cursus kunnen gebruikers bepaalde beheersrechten hebben. We onderscheiden twee rollen: student en cursusbeheerder. Een normale gebruiker is een student en kan het volgende doen: hun gebruikersprofiel bewerken, zich registreren voor cursussen en oplossingen indienen voor oefeningen. Anderzijds is er minstens één cursusbeheerder. De persoon die de cursus aanmaakt wordt automatisch aangesteld als eerste cursusbeheerder. Deze persoon krijget alle permissies van studenten en kan bovendien ook cursusbeheerders aanduiden, oplossingen van studenten bekijken en de cursus zelf bewerken. Deze acties worden verderop uitgelegd.
+Binnenin een cursus kunnen gebruikers bepaalde beheersrechten hebben. We onderscheiden twee rollen: student en cursusbeheerder. Een normale gebruiker is een student en kan zijn/haar gebruikersprofiel bewerken, zich registreren voor cursussen en oplossingen indienen voor oefeningen. Anderzijds is er minstens één cursusbeheerder. De persoon die de cursus aanmaakt wordt automatisch aangesteld als eerste cursusbeheerder. Deze persoon krijget alle permissies van studenten en kan bovendien ook cursusbeheerders aanduiden, oplossingen van studenten bekijken en de cursus zelf bewerken. Deze acties worden verderop uitgelegd.
 
 ## Cursus bewerken
 
 Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cursuspagina en klik je op het bewerken-icoontje bovenaan.
 
-![image](./staff.course_edit_button.png)
+![cursus bewerken knop](./staff.course_edit_button.png)
 
 Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../new-course/#cursuseigenschappen). Je kan hier ook de geheime link naar je cursus vernieuwen. Daarvoor klik je op de vernieuwknop naast de [registratielink](#registratielink) om de cursus opnieuw te verbergen nadat de registratielink gedeeld werd. Daardoor wordt een nieuw token gegenereerd en wordt het oude token onbruikbaar gemaakt. De registratielink wordt meteen ook aangepast aan het nieuwe token.
 
@@ -28,13 +28,13 @@ Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om 
 
 ![image](./staff.course_after_edit.png)
 
-Als je het bewerken wil onderbreken zonder je wijzigingen op te slaan, klik dan op de cursus in de [navigatiebalk](../for-students#navigatiebalk).
+Als je het bewerken wil onderbreken zonder je wijzigingen op te slaan, klik dan op de cursus in de navigatiebalk.
 
 ![image](./staff.course_edit_cancel.png)
 
 ## Een cursus opbouwen
 
-Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`.Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management).
+Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`. Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management).
 
 ## Cursusgebruikers beheren
 
@@ -43,7 +43,7 @@ Om een overzicht te krijgen van de gebruikers in een cursus, klik je op het gebr
 ## Navigeren naar oplossingen
 
 Als cursusbeheerder kan je een overzicht met oplossingen die in de cursus ingediend werden, verkrijgen door te klikken op `Ingediende oplossingen` in de navigatiebalk.
-![cursus oplossingen link](./staff.course_submissions_link.png).
+![cursus oplossingen link](./staff.course_submissions_link.png)
 
 Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
 ![filter submissions](./staff.course_submissions_filter.png)

@@ -11,7 +11,7 @@ Je hebt extra rechten nodig om een cursus aan te kunnen maken. Contacteer ons op
 
 :::
 
-Als lesgever kan je een nieuwe cursus aanmaken waar je studenten zich voor kunnen registreren. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.ugent.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen`. Vanop eender welke pagina kan je via het hamburgermenu in de linkerbovenhoek snelkoppelingen vinden naar jouw cursusssen onder het tabblad `Cursussen` en de cursus-zoekenpagina via het gelijknamige knopje on het tabblad `Admin` als je een lesgever bent.
+Als lesgever kan je een nieuwe cursus aanmaken waar je studenten zich voor kunnen registreren. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.ugent.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen`. Als lesgever kan je ook vanop eender welke pagina via het hamburgermenu in de linkerbovenhoek een snelkoppeling vinden naar het cursusoverzicht. Deze is getiteld `Cursussen` en is te vinden onder het tabblad `Admin`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -25,7 +25,7 @@ Als je vertrekt vanaf een bestaande cursus, dan moet je deze selecteren in de ta
 
 ![choose existing course](./staff.course_new_copy_course_options.png)
 
-Vervolgens moet je aangeven welke elementen van de [cursus](#cursus) je wil overnemen. De reeksstructuur wordt altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de begeleiders wil overnemen. Ten slotte kan je ook andere instellingen kiezen.
+Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De reeksstructuur wordt altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de begeleiders wil overnemen. Ten slotte kan je ook andere instellingen kiezen.
 
 ![choose existing course extra](./staff.course_new_copy.png)
 
@@ -33,7 +33,7 @@ Vervolgens moet je aangeven welke elementen van de [cursus](#cursus) je wil over
 
 ## Cursuseigenschappen
 
-Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
+Of je nu kopieert of een nieuwe cursus aanmaakt, in beide gevallen moet je kiezen welke eigenschappen je cursus heeft. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
 
 ![image](./staff.course_new_empty.png)
 
@@ -61,10 +61,10 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
   ::: tip Belangrijk
 
-  Als je de registratieprocedure aanpast dan blijven bestaande registraties voor de cursus gelden en blijven registratieverzoeken voor de cursus openstaan. Je moet zelf de bestaande registratiestatus van cursusgebruikers aanpassen.
+  Als je de registratieprocedure aanpast, dan blijven bestaande registraties voor de cursus gelden en blijven registratieverzoeken voor de cursus openstaan. Je moet zelf de bestaande registratiestatus van cursusgebruikers aanpassen.
   :::
 
-* `Beschrijving`: optionel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, zie deze [pagina](/nl/references/exercise-description/)
+* `Beschrijving`: optionel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
 
 * `Registratielink`: bij het aanmaken van een cursus wordt automatisch een token gegenereerd als afschermingsmechanisme van verborgen cursussen. Zonder dit token kunnen niet-geregistreerde gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Als ze toch naar de cursus proberen te navigeren, dan zien ze enkel een melding dat ze niet de geen toegangsrechten hebben voor de cursus.
 
@@ -72,15 +72,15 @@ Bij beide keuzes moet je kiezen welke eigenschappen je cursus heeft. Deze worden
 
   Als lesgever ben je verantwoordelijk om de registratielink te delen met je studenten. Zij kunnen zich dan registreren op de cursuspagina waar ze terecht komen via de link. Deze link bevat immers het geheime token dat hen toegang verleent.
 
-  ![image](./student.hidden_course_unregistered_link_message.png)
+  ![registreer voor cursus](./student.hidden_course_unregistered_link_message.png)
 
-  De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het [cursusoverzicht](../for-students#cursusoverzicht) en dat ze meteen een verzoek krijgen om zich voor de cursus te [registreren](../for-students#cursus-registreren) als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
+  De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
 
-  ![image](./staff.hidden_course_registration_link.png)
+  ![registratielink](./staff.hidden_course_registration_link.png)
 
 Klik op de afwerkknop in de rechteronderhoek van de pagina `CURSUS AANMAKEN` om het aanmaken van een cursus met de opgegeven eigenschappen effectief door te voeren.
 
-![image](./staff.course_new_submit.png)
+![opslaan](./staff.course_new_submit.png)
 
 Na het aanmaken van de nieuwe cursus navigeer je naar de cursuspagina, waar je kunt vaststellen dat je automatisch geregistreerd bent als cursusgebruiker en dat je aangeduid bent als cursusbeheerder.
 
