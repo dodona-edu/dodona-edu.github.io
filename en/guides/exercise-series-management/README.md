@@ -1,9 +1,12 @@
 ---
-title: "Oefeningenreeksenbeheer"
+title: "[nl] Oefeningenreeksenbeheer"
 description: "Tutorial: oefeningenreeksenbeheer"
 ---
 
 # Oefeningenreeksenbeheer
+
+This guide is currently only available in Dutch.
+
 
 **Inhoudsopgave**
 [[toc]]

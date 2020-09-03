@@ -1,78 +1,77 @@
 ---
-title: User management
-description: "Tutorial: user management"
+title: "[nl] Gebruikersbeheer"
+description: "Tutorial: gebruikersbeheer"
 ---
 
-# User management
+# Gebruikersbeheer
 
-All users can [sign in](/en/guides/for-students#sign-in) and manage their [user profile](/en/guides/for-students#user-profile). Some actions on Dodona require more [permissions](#permissions). For this reason, we use three roles: [students](#student), [teachers](#teacher) and [admins](#admin). A course administrator is an exception, such a user has teacher permissions within a course only. These roles can be [assigned](#assign-roles) to users by admins and teachers.
+This guide is currently only available in Dutch.
 
-::: tip
+**Inhoudsopgave**
+[[toc]]
 
-You can see that you are a [teacher](#teacher) when you can see the management menu (menu `Admin`) at the left side of the page when clicking on the hamburger menu.
+Als cursusbeheerder krijg je toegang tot alle cursusgebruikers. Dit overzicht bereik je door te klikken op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Hierin zie je alle gebruikers die ooit voor de cursus [geregistreerd](../for-students#cursus-registreren) geweest zijn of die ooit een [registratieverzoek](../for-students#registratieverzoek) voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie deze [pagina](../course-management#beheersrechten).
 
-![image](./staff.admin_menu.png)
-:::
 
-::: tip Important
+## Gebruikersoverzicht
 
-We categorize [enrolled](/en/guides/for-students#course-register) members of a [course](/en/course-management#course) in [students](#student) and
-[course managers](/en/course-management#course-manager) depending on the [management permissions](#management-permissions) they have been granted for the course. Only course managers can manage a course.
-[Managing](/en/course-management#managing-course-users)
-[course users](/en/course-management#course-user) and [appointing](/en/course-management#appointing-course-managers) course managers is discussed in [course management](/en/course-management).
-:::
+Als lesgever navigeer je naar het gebruikersoverzicht van je cursus door naar je cursus te navigeren en vervolgens op `Geregistreerde gebruikers` te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
 
-## Navigating to a user
+![admin menu users](./staff.course_users.png)
 
-As a [teacher](#teacher), you navigate to the [user overview](#user-overview) of your course by navigating to your course and clicking `Registered users` in the course description panel.
+In het gebruikersoverzicht worden de gebruikersnaam, de naam, het emailadres en [voortgangsstatistieken](#voortgangsstatistieken) opgelijst uit het [gebruikersprofiel](../for-students#gebruikersprofiel) van alle gebruikers van jouw cursus. Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker [toegewezen](#cursusbeheerders-aanduiden) werden.
 
-![admin menu users](./staff.admin_menu_users.png)
+![gebruikers](./staff.users.png)
 
-## User overview
-In the user overview, the user's username, real name, email and [progress statistics](#user-progress-statistics) are listed from the [user profile](/en/guides/for-students#user-profile) from all users. In the first column, you can find an [icon](#user-permissions-icon) that corresponds to the [management permissions](#management-permissions) that have been [assigned](#assign-permissions) to that user.
+### Gebruiker zoeken
+Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifieke gebruikers op basis van een gebruikersnaam, een naam, een emailadres of gebruikerslabel. Verschillende filters kunnen tegelijkertijd actief zijn.
 
-![image](./staff.users.png)
+![gefilterde lijst](./staff.users_filtered.png)
 
-## Searching a user
-Use the search bar at the top of the [user overview](#user-overview) to search for specific users based on their usernames, names or email addresses.
-
-![image](./staff.users_filtered.png)
-
-## Selecting a user
-Click on the name to [navigate](#navigating-to-a-user) to the [profile page](/en/guides/for-students#profile-page) of the user.
-
-![image](./staff.user_profile_link.png)
-
-## User progress statistics
-The progress statistics of a user are displayed via a progress bar. The green section denotes the fraction of [exercises](/en/guides/for-students#exercise) within the course for which this user has [submitted](/en/guides/for-students#submit-solution) a *correct* [solution](/en/guides/for-students#solution). The red part is the amount of exercises that the user started, but did not complete. The grey part depicts the remaining exercises in the course that the user did not start yet.
+### Gebruiker voortgangsstatistieken
+De voortgangsstatistieken van een gebruiker worden weergegeven middels een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel oefeningen in de cursus waarvoor de gebruiker een *correcte* oplossing voor heeft ingediend. Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog niet correct heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog niet aan begonnen is.
 
 ![statistics](./user_progress_statistics.png)
-## Management permissions
 
-In order to perform certain action on Dodona, you require additional management permissions. As a [teacher](#teacher), you can find this information in the [user overview](#user-overview) using the icons below. You can the use the icons on the right to modify the permissions of a user. A teacher can only assign the `Student` and `Course admin` permissions to other users (including themselves). In this fashion you can promote a user to a course admin or demote them to a [student](#student).
+### Cursusbeheerders aanduiden
 
-![image](./staff.user_edit_permission.png)
+Om sommige acties te kunnen uitvoeren op Dodona heb je bijkomende beheersrechten nodig. Als lesgever kan je zien in het gebruikersoverzicht door te kijken naar onderstaande icoontjes. Je kan dan ook de acties aan de rechterkant gebruiken om de beheersrechten van een gebruiker in te stellen. Als lesgever kan je enkel de beheersrechten `Student` en `Cursusbeheerder` toekennen aan gebruikers (inclusief jezelf). Op die manier kan je een gebruiker promoveren tot cursusbegeleider of degraderen tot student. Voor meer informatie rond deze rollen, zie [deze pagina](../course-management#beheersrechten)
 
-::: tip Important
+Je kan de cursusbeheerders herkennen aan het icoontje in de linkermarge.
 
-If you are a [teacher](#teacher) and you demote yourself to [student](#student), you cannot promote yourself back to teacher.
+![beheerder in gebruikersoverzicht](./staff.course_users_admin.png)
+
+Via de knoppen aan de rechterkant kan je de beheersrechten van gebruikers aanpassen.
+
+* ![promoveren](../../../images/staff_registration_icons/make_course_admin.png): cursusgebruiker zonder beheersrechten voor de cursus promoveren tot cursusbeheerder
+* ![degraderen](../../../images/staff_registration_icons/make_student.png): cursusbeheerder degraderen tot cursusgebruiker zonder beheersrechten voor de cursus
+
+![beheersrechten bewerken](./staff.users_edit_permissions.png)
+
+::: tip Belangrijk
+
+Een cursusbeheerder die zich uitschrijft uit een cursus verliest zijn status van cursusbeheerder. Dit geldt dus ook als je jezelf degradeert tot student.
+
+Om ervoor te zorgen dat een cursus altijd minstens één cursusbeheerder heeft, kan de laatste cursusbeheerder zich niet uitschrijven en kan hij zichzelf ook niet degraderen tot cursusgebruiker zonder beheersrechten voor de cursus.
+
+Na het aanmaken van een cursus kan een lesgever zich uitschrijven als hij andere cursusbeheerders aangeduid heeft. Hij kan door andere cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder beheersrechten voor de cursus.
 :::
 
-## User permissions icon
-Users can be assigned the following [management permissions](#management-permissions):
+### Registratieverzoeken afhandelen
 
- | name                                          | icon                                |permissions|
- | ----------------------------------------------|-----------------------------------------|----------|
- | `Student`|   *no icon*|                                  [students](#student) can [edit](/en/guides/for-students#user-profile-edit) their [user profile](/en/guides/for-students#user-profile),[register](/en/guides/for-students#course-register) for [courses](/en/course-management#course) and [submit](/en/guides/for-students#submit-solution) [solutions](/en/guides/for-students#solution) for [exercises](/en/guides/for-students#exercise)|
- |`Staff`|     ![image](../../../images/role_icons/staff.png)|   [teachers](#teacher) have all the permissions [students](#student) have and can additionally appoint teachers, [create](/en/course-management#create-a-course) [courses](/en/course-management#course) , [add](/en/course-management#add-exercise) [exercises](/en/guides/for-students#exercise) and [add](/en/creating-a-judge) [judges](/en/guides/for-students#judge) |
-  |`Course admin`| ![course admin](../../../images/role_icons/staff.png)|[course admins](#course-admin) have the same permissions as teacher, but limited to the scope of the course they were appointed in. They cannot create judges or courses, but they can edit exercises or students within a course in the same way a teacher can.| 
- |`Zeus`|      *no icon*|    [admins](#admin) have all the permissions [teachers](#teacher) and course administrators have and can additionally assign all [management permissions](#management-permissions) (including course managers), [edit](/en/guides/for-students#edit-user-profile) the [profile](/en/guides/for-students#user-profile) of all users, [edit](/en/course-management#edit-course) all [courses](/en/course-management#course), [edit](/en/course-management#edit-exercise) all [exercises](/en/guides/for-students#exercise) and [edit]((/en/judges#edit-judge)) all [judges](/en/guides/for-students#judge).
+De cursusgebruikers worden in tabs gegroepeerd volgens hun registratiestatus voor de cursus. Elke tab biedt andere acties aan om de registratiestatus van de bijhorende gebruiker aan te passen.
 
-### Student
-A user with `Student` [management permissions](#management-permissions)permissions is called a student.
-### Teacher
-A user with `Staff` [management permissions](#management-permissions)permissions is called a teacher.
-### Course admin
-A user with the teacher role within a course is called a course admin.
-### Admin
-A user with `Zeus` [management permissions](#management-permissions)permissions is called an admin.
+* `Geregistreerd`: alle cursusgebruikers die momenteel geregistreerd zijn.
+  Door te klikken op ![unregister](../../../images/staff_registration_icons/unregister.png) schrijf je de gebruiker uit de cursus.
+
+* `Op de wachtlijst`: alle cursusgebruikers waarvoor er nog een registratieverzoek openstaat dat wacht op afhandeling door een cursusbeheerder.
+  Door te klikken op ![approve](../../../images/staff_registration_icons/approve.png) keur je het registratieverzoek goed. Afkeuren doe je door te klikken op ![decline](../../../images/staff_registration_icons/decline.png).
+
+* `Uitgeschreven`: alle cursusgebruikers die ooit geregistreerd waren, maar die ondertussen uitgeschreven zijn.
+  Deze gebruiker kan je terug inschrijven voor de cursus door te klikken op ![register](../../../images/staff_registration_icons/register.png)
+
+## Studenten opvolgen
+Om de voortgang van een individuele student op te volgen is er een overzichtpagina per student voorzien. Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op de naam van een student te klikken. Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.
+
+![cursusoverzicht](./staff.user_course_overview.png)
+

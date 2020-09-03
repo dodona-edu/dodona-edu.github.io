@@ -1,90 +1,69 @@
 ---
-title: Course management
-description: "Tutorial: course management"
+title: "[nl] Cursusbeheer"
+description: "Tutorial: cursusbeheer"
 ---
 
-A course is [set up](#setup-learning-trail) as a [learning trail](#learning-trail) with [exercises](/en/guides/for-students#exercise) bundled in **exercise series**. The sequence of series implies a possible order in which the exercises can be [solved](/en/guides/for-students#solution).
+# Cursusbeheer
 
-A [teacher](/en/user-management#teacher) can [create](#create-course) [courses](#course) without restrictions and will automatically be assigned the role of [course admin](#course-admin) for the created courses. As a course admin, he can [appoint](#appoint-course-admin) other [course users](#course-users) to become course admins aswell to help manage the course. However, he cannot manage courses for which he isn't a course admin.
+This guide is currently only available in Dutch.
 
-A [course admin](#course-admin) [lays out](#lay-out-learning-trail) a [learning trail](#learning-trail) for a [course](#course) with [exercise series](#exercise-series). Each series can be [given](#exercise-series-deadline) a [deadline](#deadline) that denotes up to which moment [submitted](/en/guides/for-students#submit-solution) [solutions](/en/guides/for-students#solution) are considered when grading the exercises. [Course users](#course-users) can however keep submitting solutions to exercises after the deadline and receive automated feedback.
+**Inhoudsopgave**
+[[toc]]
 
-# Create course
+Een cursus wordt opgebouwd als een leerpad met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden. Gebruikers kunnen zich registreren voor de cursus via de gekozen registratieprocedure. Er is altijd minstens één gebruiker die cursusbeheerder is, bijvoorbeeld de gebruiker die de cursus aanmaakte. Voor informatie over hoe je een nieuwe cursus aanmaakt, kan je [hier](../new-course) terecht.
 
-As a [teacher](/en/user-management#teacher) you can create a new [course](#course) by clicking the button `CREATE COURSE` in the upper right corner of the [course overview](#course-overview).
+## Beheersrechten
 
-![create course](./create-course.png)
+Binnenin een cursus kunnen gebruikers bepaalde beheersrechten hebben. We onderscheiden twee rollen: student en cursusbeheerder. Een normale gebruiker is een student en kan zijn/haar gebruikersprofiel bewerken, zich registreren voor cursussen en oplossingen indienen voor oefeningen. Anderzijds is er minstens één cursusbeheerder. De persoon die de cursus aanmaakt wordt automatisch aangesteld als eerste cursusbeheerder. Deze persoon krijget alle permissies van studenten en kan bovendien ook cursusbeheerders aanduiden, oplossingen van studenten bekijken en de cursus zelf bewerken. Deze acties worden verderop uitgelegd.
 
-There are two options to choose from when creating a new course. Either you start from a pre-existing course, or you create an entirely new one.
+## Cursus bewerken
 
-![new course menu](./new-course-menu.png)
+Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cursuspagina en klik je op het bewerken-icoontje bovenaan.
 
-Press `Dodona` in the [navigation bar](/en/guides/for-students#navigation-bar) to cancel the creation of the [course](#course).
+![cursus bewerken knop](./staff.course_edit_button.png)
 
-If you start from an existing course, you must first select it in the table. Use the search bar to filter the displayed courses and find the course of your liking. Click the radio button in the left column to proceed.
+Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../new-course/#cursuseigenschappen). Je kan hier ook de geheime link naar je cursus vernieuwen. Daarvoor klik je op de vernieuwknop naast de [registratielink](#registratielink) om de cursus opnieuw te verbergen nadat de registratielink gedeeld werd. Daardoor wordt een nieuw token gegenereerd en wordt het oude token onbruikbaar gemaakt. De registratielink wordt meteen ook aangepast aan het nieuwe token.
 
-![choose existing course](./choose-existing-course.png)
+![image](./staff.hidden_course_registration_link_renew.png)
 
-Now you must choose which elements from the existing [course](#course) you wish to copy. The series structure is always copied. You can then choose whether you also want to copy the exercises, deadlines and course admins from the original course. Finally, some other options are possible.
+Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen effectief in te stellen.  Alternatief kan je ook op de `AANPASSEN` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
 
-`Make the copied series hidden`: this is very useful when you want to make a series visible every week without having to manually make them invisible first.
+![image](./staff.course_after_edit.png)
 
+Als je het bewerken wil onderbreken zonder je wijzigingen op te slaan, klik dan op de cursus in de navigatiebalk.
 
-## Setting course properties
+![image](./staff.course_edit_cancel.png)
 
-With either choice of course creation, you must choose some course specific properties. When copying, these are pre-filled in with the original values. The following properties can be set.
+## Een cursus opbouwen
 
-![image](./course-properties.png)
+Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`. Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management).
 
+## Cursusgebruikers beheren
 
-`Name`
+Om een overzicht te krijgen van de gebruikers in een cursus, klik je op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Voor meer informatie over welke acties je daar kan uitvoeren, kan je de tutorial over [gebruikersbeheer](../user-management) raadplegen.
 
+## Navigeren naar oplossingen
 
-> A name for the [course](#course).
-> Different courses can have the same name. However, it is advised to make names as unique as possible.
+Als cursusbeheerder kan je een overzicht met oplossingen die in de cursus ingediend werden, verkrijgen door te klikken op `Ingediende oplossingen` op de cursuspagina of op het icoontje in de navigatiebalk.
+![cursus oplossingen link](./staff.course_submissions_link.png)
 
-`Teachers`
+Het overzicht bevat alle benodige informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
+![filter submissions](./staff.course_submissions_filter.png)
 
-> The names of the [teachers](/en/user-management#teacher) of the [course](#course). If there are multiple teachers, use commas to separate their names.
+Het klikken op een filter zorgt ervoor dat je enkel inzendingen ziet van een specifieke gebruiker of een specifieke oefening. Bovendien kan je ze combineren.
 
-`Academic year`
+![filtered submissions](./staff.course_submissions_filtered.png)
 
-> The academic year in which this [course](#course) is offered. Use the format `yyyy-yyyy` to ensure that the course is sorted correctly on the [starting page](/en/guides/for-students#startingpage) and in the [course overview](#course-overview).
+Deze pagina's kan je ook op andere manieren bereiken. 
+* De oplossingen voor een specifieke oefening kan je vinden via het pijltje in de rij van die oefening.
+* De oplossingen van een specifieke gebruiker vind je door te klikken op `OPLOSSINGEN` op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
-`Visibility`
+Het overzicht heeft voor cursusbeheerders ook een menu met filters en acties die voor hen voorbehouden zijn:
 
-> The visibility determines whether [unregistered](/en/guides/for-students#course-register) users can see the course. This property has the following possible values:
+* `Meest recente correcte oplossing per gebruiker` (filter)
 
->
-> 
-> `Visible`
->
->
-> > All users see the [course](#course) in the [course overview](#course-overview). They can also navigate to the [course page](/en/guides/for-students#course-page) and [register](/en/guides/for-students#course-register) if they want to.
->
-> `Hidden`
->
-> > Only [course admins](#course-admins) see the [course](#course) in the [course overview](#course-overview) and on their [starting page](/en/guides/for-students#starting-page). An icon is displayed to point out the fact that other users cannot see this course there. This icon can also be found on the [course page](/en/guides/for-students#course-page) itself. Only [registered](/en/guides/for-students#course-register) users can navigate to that page. Other users can only register if they use the [registration link](#registration-link).
-> >
-> > ![image](./hidden-course.png)
+Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
 
-`Registration procedure`
+* `Oplossingen herevalueren` (actie)
 
-> The registration procedure deterimines whether and how users can [register](/en/guides/for-students#course-register] for the [course](#course). This property can have the following values:
->
-> `Open`
->
-> > Any user can [register](/en/guides/for-students#course-register) for this [course](#course) without explicit approval of a [course admin](#course-admin).
->
-> `Moderated`
->
-> > Users can [submit](/en/guides/for-students#submit-registration-request) a [registration request](/en/guides/for-students#registration-request) for the [course](#course) but are only [registered](/en/guides/for-students#course-register) when a [course admin](#course-admin) [approves](#approve-registration-request) their registration request.
->
-> `Closed`
->
-> > Users can no longer [register](/en/guides/for-students#course-register) for this [course](#course).
->
-> ::: tip Important
->
-> When you change the registration procedure, existing [registrations](/en/guides/for-students#course-registeren) and [registration-requests](/en/guides/for-students#registration-request) for the [course](#course) remain valid. You will have to manually edit the [registration status](#registration-status) of [course users](#course-users).
-> :::
+[Herevalueert](../exercise-series-management/#oplossing-herevalueren) alle oplossingen uit het overzicht.
