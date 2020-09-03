@@ -5,7 +5,8 @@ const fs = require('fs');
 const readline = require('readline');
 
 const BASE_URL = 'http://dodona.localhost:3000/';
-const IMAGE_FOLDER_PATH = '../images/';
+const IMAGE_FOLDER_PATH = '../';
+const IMAGE_FILE_EXTENSION = 'png';
 const SEEDED_COURSE_URL = language => `${BASE_URL}${language}/courses/5/`;
 const LANGUAGES = ['nl', 'en'];
 const TRANSLATIONS = {
@@ -153,13 +154,14 @@ class Image {
 }
 
 class Wizard {
-  constructor(baseUrl, imageFolder) {
+  constructor(baseUrl, imageFolder, fileExtension) {
     this.page = null;
     this.browser = null;
     this.elementsToBlock = [];
     this.baseUrl = baseUrl;
     this.imageFolder = imageFolder;
     this.language = '';
+    this.fileExtension = fileExtension;
   }
 
   setLanguage(language){
@@ -290,7 +292,8 @@ class Wizard {
       }
     }
     const languageFolder = this.language ? `${this.language}/` : '';
-    const imagePath = `${this.imageFolder}${languageFolder}${savePath}`;
+    const fileEnd = savePath.endsWith(this.fileExtension) ? '' : `.${this.fileExtension}`
+    const imagePath = `${this.imageFolder}${languageFolder}${savePath}${fileEnd}`;
     await this.page.screenshot({
       path: imagePath,
       clip
@@ -384,15 +387,14 @@ async function read_submissions(){
   });
 };
 
-
-(async () => {
+async function main(){
   console.log(`Make sure Dodona is running locally on ${BASE_URL} with a clean database
   and the production stylesheet and that the user is logged in by default (as admin).\n`); 
   
   let submissions = await read_submissions();
   console.log(`Number of submissions: ${submissions}`);
 
-  const wizard = await new Wizard(BASE_URL, IMAGE_FOLDER_PATH).launch();
+  const wizard = await new Wizard(BASE_URL, IMAGE_FOLDER_PATH, IMAGE_FILE_EXTENSION).launch();
   await wizard.navigate('?pp=disable'); // disable Rack::MiniProfiler as not relevant for screenshots
   wizard.blockElement('footer.footer'); // footer is always the same and not relevant either
   wizard.blockElement('div.profiler-results'); // to remove the profiler from the exercise descriptions
@@ -432,6 +434,7 @@ async function read_submissions(){
     wizard.setLanguage(language);
     await wizard.navigate(`${language}/repositories/new`);
     await wizard.screenshot('staff.repository_create.png');
+    // unique constraint on name of repository, so randomize a bit
     await wizard.typeIn('#repository_name', `Example exercises ${Math.floor(Math.random() * 100).toString()}`);
     await wizard.typeIn('#repository_remote', 'git@github.com:dodona-edu/example-exercises.git');
     await wizard.click('button[form="new_repository"]');
@@ -455,9 +458,6 @@ async function read_submissions(){
     await wizard.screenshot(`staff.courses_new_link.png`, {
       pointToSelectors: [`a[href$="/${language}/courses/new/"]`],
     });
-
-    await wizard.typeIn('#filter-query-tokenfield', 'course');
-    await wizard.screenshot('staff.courses_filtered.png');
 
     await wizard.navigate(`${language}/courses/new/`);
     await wizard.screenshot('staff.course_new_options.png');
@@ -1276,4 +1276,11 @@ async function read_submissions(){
 
   // We manually exit because the navigation after cloning leaves behind an unresolved promise.
   process.exit(0);
-})();
+}
+
+main()
+  .then(() => console.log('Screenshot bot script finished.'))
+  .catch(err => {
+    console.error('Something went wrong during the execution of the screenshot bot.');
+    console.error(err);
+  });
