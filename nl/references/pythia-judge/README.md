@@ -1,17 +1,17 @@
 ---
-title: Pythia judge
-description: "Pythia judge"
+title: Python judge
+description: "Python judge"
 ---
 
 
-# Pythia
+# Python judge
 
-Alle Pythia judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
+Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
 
 -   The `OutputJudge` klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen.
 -   De `DoctestJudge` klasse implementeeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module.
 
-De hiërarchie van de judge klassen die binnen het Pythia project ontwikkeld
+De hiërarchie van de judge klassen die binnen het Python project ontwikkeld
 werden is als volgt:
 
     Judge -> MasterJudge
