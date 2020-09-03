@@ -22,6 +22,7 @@ In het gebruikersoverzicht worden de gebruikersnaam, de naam, het emailadres en 
 ![gebruikers](./staff.users.png)
 
 ### Gebruiker zoeken
+
 Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifieke gebruikers op basis van een gebruikersnaam, een naam, een emailadres of gebruikerslabel. Verschillende filters kunnen tegelijkertijd actief zijn.
 
 ![gefilterde lijst](./staff.users_filtered.png)

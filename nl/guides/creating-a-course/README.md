@@ -49,7 +49,7 @@ Of je nu kopieert of een nieuwe cursus aanmaakt, in beide gevallen moet je kieze
 
   * `Verborgen`: alleen cursusbeheerders zien de cursus in het cursusoverzicht en op hun startpagina. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze de registratielink gebruiken.
   
-  ![verborgen cursus](./staff.courses_hidden_course.png)
+  ![verborgen cursus](./staff.course_hidden.png)
 
 * `Registratieprocedure`: deze eigenschap bepaalt of en hoe gebruikers zich voor de cursus kunnen registreren. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 
@@ -76,7 +76,7 @@ Of je nu kopieert of een nieuwe cursus aanmaakt, in beide gevallen moet je kieze
 
   De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
 
-  ![registratielink](./staff.hidden_course_registration_link.png)
+  ![registratielink](./staff.course_hidden_registration_link.png)
 
 Klik op de afwerkknop in de rechteronderhoek van de pagina `CURSUS AANMAKEN` om het aanmaken van een cursus met de opgegeven eigenschappen effectief door te voeren.
 

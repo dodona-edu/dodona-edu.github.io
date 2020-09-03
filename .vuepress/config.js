@@ -157,7 +157,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem) {
           ]
         },
         'getting-started/',
-        'new-course/',
+        'creating-a-course/',
         'course-management/',
         'user-management/',
         'exercise-series-management/',
