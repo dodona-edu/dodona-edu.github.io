@@ -10,6 +10,4 @@ Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en ma
 * [Oefeningenbeschrijvingen](exercise-description)
 * [Repository bestandenstructuur](repository-directory-structure)
 * [Oefeningconfiguratie](exercise-config)
-
-## In het Engels
-* [Exercise directory structure](exercise-directory-structure)
+* [Oefeningfolderstructuur](exercise-directory-structure)
