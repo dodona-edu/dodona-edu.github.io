@@ -23,7 +23,7 @@ werden is als volgt:
 
 ## Algemene instellingen
 
-De volgende instellingen kunnen zowel voor de output judge als voor de doctest judge gebruikt worden. Instellingen die specifiek zijn aan een judge zullen hierna apart behandeld worden in [Output judge](#output-judge) en [Doctest judge](doctest-judge).
+De volgende instellingen kunnen zowel voor de output judge als voor de doctest judge gebruikt worden. Instellingen die specifiek zijn aan een judge zullen hierna apart behandeld worden in [Output judge](#output-judge) en [Doctest judge](#doctest-judge).
 
 - `time limit`:   Deze instelling geeft de tijdslimiet aan als een natuurlijk getal in seconden.
 
