@@ -41,7 +41,7 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
     ![image](./moderated_register.png)
 
-    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de [cursuspagina](#cursuspagina) de boodschap `Je staat al op de wachtlijst.` en wordt de cursus opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina.
+    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de cursuspagina de boodschap `Je staat al op de wachtlijst.` en wordt de cursus opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina.
 
     ![image](./moderated_waiting.png)
 
@@ -93,40 +93,40 @@ Dit overzicht is handig als je een afgedrukte versie wil van alle [oefeningen](.
 
 ### Indienstatus
 
-Je **indienstatus** voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks wordt bepaald op basis van de [oplossing](../exercises/#navigeren-naar-een-oplossing) die je als laatste in de cursus hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) voor de oefening. Als er een [deadline](#deadlines) werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat correspondeert met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de [oplossing](../exercises/#navigeren-naar-een-oplossing) die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+Je **indienstatus** voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks wordt bepaald op basis van de [oplossing](../exercises/#navigeren-naar-een-oplossing) die je als laatste in de cursus hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) voor de oefening. Als er een [deadline](#oefeningenreeksen) werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat correspondeert met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de [oplossing](../exercises/#navigeren-naar-een-oplossing) die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
-Mogelijke weergaven van je [indienstatus](#indienstatus) vóór het verstrijken van de [deadline](#deadlines) of als er geen deadline is ingesteld:
+Mogelijke weergaven van je [indienstatus](#indienstatus) vóór het verstrijken van de [deadline](#oefeningenreeksen) of als er geen deadline is ingesteld:
 
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
-  | `niet opgelost` | | geen [oplossing](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) (vóór de [deadline](#deadlines)) | 
+  | `niet opgelost` | | geen [oplossing](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing) (vóór de [deadline](#oefeningenreeksen)) | 
   | `verkeerd` | ![image](./course_exercise_status_icons/wrong.png) | laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) verkeerd was |
-  | `correct` | ![image](./course_exercise_status_icons/before_deadline.png) |laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) correct was (vóór de [deadline](#deadlines)) |
+  | `correct` | ![image](./course_exercise_status_icons/before_deadline.png) |laatste [oplossing](../exercises/#navigeren-naar-een-oplossing) die je [indiende](../exercises/#navigeren-naar-een-oplossing) correct was (vóór de [deadline](#oefeningenreeksen)) |
 
-Mogelijke weergaven van je [indienstatus](#indienstatus) nadat de [deadline](#deadlines) verstreken is:
+Mogelijke weergaven van je [indienstatus](#indienstatus) nadat de [deadline](#oefeningenreeksen) verstreken is:
 
   |indienstatus | icoontje | weergegeven als je |
   |-------------|----------|--------------------|
-  | `correct` (groen) | ![image](./course_exercise_status_icons/before_deadline.png) | laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) vóór de [deadline](#deadlines) correct is
+  | `correct` (groen) | ![image](./course_exercise_status_icons/before_deadline.png) | laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) vóór de [deadline](#oefeningenreeksen) correct is
   | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | geen [oplossingen](../exercises/#navigeren-naar-een-oplossing) hebt [ingediend](../exercises/#navigeren-naar-een-oplossing)|
   | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
-  | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je na de [deadline](#deadlines) een correcte oplossing hebt ingediend |
+  | `deadline gemist` (rood) | ![image](./course_exercise_status_icons/after_deadline.png) | als je na de [deadline](#oefeningenreeksen) een correcte oplossing hebt ingediend |
 
 ::: tip Belangrijk
 
-Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een [oplossing](../exercises/#navigeren-naar-een-oplossing) [indient](../exercises/#navigeren-naar-een-oefening) voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks, dan kan je [indienstatus](#indienstatus) voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de [deadline](#deadlines). Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
+Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een [oplossing](../exercises/#navigeren-naar-een-oplossing) [indient](../exercises/#navigeren-naar-een-oefening) voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit de oefeningenreeks, dan kan je [indienstatus](#indienstatus) voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de [deadline](#oefeningenreeksen). Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
-Dodona toont een **waarschuwingssymbool** naast je [indienstatus](#indienstatus) van een [oefening](../exercises/#navigeren-naar-een-oefening) in een oefeningenreeks en in de lijst met recente op je startpagina als je laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) voor de oefening vóór de [deadline](#deadlines) van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
+Dodona toont een **waarschuwingssymbool** naast je [indienstatus](#indienstatus) van een [oefening](../exercises/#navigeren-naar-een-oefening) in een oefeningenreeks en in de lijst met recente op je startpagina als je laatst [ingediende](../exercises/#navigeren-naar-een-oplossing) [oplossing](../exercises/#navigeren-naar-een-oplossing) voor de oefening vóór de [deadline](#oefeningenreeksen) van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
 ![image](./student.deadline_series_warning.png)
 
-Als je **na het verstrijken van de deadline** van een oefeningenreeks een [oplossing](../exercises/#navigeren-naar-een-oplossing) [indient](../exercises/#navigeren-naar-een-oefening) voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks, dan zal je [indienstatus](#indienstatus) voor de oefening in de oefeningenreeks daardoor nooit wijzigen. Je indienstatus voor een oefening in een oefeningenreeks wordt immers bepaald op basis van je laatst ingediende oplossing vóór de [deadline](#deadlines).
+Als je **na het verstrijken van de deadline** van een oefeningenreeks een [oplossing](../exercises/#navigeren-naar-een-oplossing) [indient](../exercises/#navigeren-naar-een-oefening) voor een [oefening](../exercises/#navigeren-naar-een-oefening) uit een oefeningenreeks, dan zal je [indienstatus](#indienstatus) voor de oefening in de oefeningenreeks daardoor nooit wijzigen. Je indienstatus voor een oefening in een oefeningenreeks wordt immers bepaald op basis van je laatst ingediende oplossing vóór de [deadline](#oefeningenreeksen).
 :::
 
 
 ## Uitschrijven uit een cursus
 
-Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een [registratieverzoek](#registratieverzoek) hebt openstaan, dan zie je onder de beschrijving van de cursus op de [cursuspagina](#cursuspagina) een knop `UITSCHRIJVEN` waarmee je je kunt uitschrijven uit de cursus.
+Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een [registratieverzoek](#registratieverzoek) hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `UITSCHRIJVEN` waarmee je je kunt uitschrijven uit de cursus.
 
 ![image](./student.unregister.png)
 
