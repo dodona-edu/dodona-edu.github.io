@@ -48,7 +48,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
   * `Verborgen`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks niet kunnen zien. Je kan gebruikers toegang geven tot deze reeks door hun de specifieke [geheime link](#oefeningenreeks-geheime-link) van deze reeks door te sturen.
 
-  * `Gesloten`: alleen cursusbeheerders zien de oefeningenreeks in het leerpad. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks daar niet kunnen zien. Er is ook een link aanwezig om deze instelling snel te veranderen.
+  * `Gesloten`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks daar niet kunnen zien.
 
   ![reeks verborgen informatie](./staff.course_series_info_message.png)
 
