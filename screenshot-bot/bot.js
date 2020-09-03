@@ -6,6 +6,7 @@ const readline = require('readline');
 
 const BASE_URL = 'http://dodona.localhost:3000/';
 const IMAGE_FOLDER_PATH = '../';
+const STUDENT_GUIDES_PATH = 'guides/for-students/';
 const SEEDED_COURSE_URL = language => `${BASE_URL}${language}/courses/5/`;
 const LANGUAGES = ['nl', 'en'];
 const TRANSLATIONS = {
@@ -408,21 +409,21 @@ async function read_submissions(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(language);
-    await wizard.screenshot('landingpage.png');
-    await wizard.screenshot('login.png', {
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/login.png`, {
       pointToSelectors: [`a[href$="/${language}/sign_in/"]`]
     });
 
     await wizard.click('a[data-toggle="dropdown"]');
     await wait(500);
-    await wizard.screenshot(`choose_language.png`, {
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/choose_language.png`, {
       pointToSelectors: ['ul.dropdown-menu']
     });
-
-    for (const page of ['sign_in', 'data', 'privacy', 'contact', 'about']) {
-      await wizard.navigate(`${language}/${page}`);
-      await wizard.screenshot(`${page}.png`);
-    }
+    
+    await wizard.navigate(`${language}/sign_in.png`);
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/sign_in.png`);
+    
+    await wizard.navigate(`${language}/contact`);
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}contact.png`);
   }
 
   // =========================================================
@@ -909,30 +910,26 @@ async function read_submissions(){
     wizard.setLanguage(language);
     await wizard.navigate(`http://dodona.localhost:3000/?locale=${language}`, false);
 
-    await wizard.screenshot(`student.explore_courses.png`, {
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}courses/student.explore_courses.png`, {
       pointToSelectors: [`a[href$="/${language}/courses/"]`],
     });
 
     await wizard.click('li.dropdown', elem => !!elem.querySelector('a[href*="/sign_out/"]'));
 
-    await wizard.screenshot(`student.user_menu_my_profile.png`, {
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/student.user_menu_my_profile.png`, {
       pointToSelectors: [`li.dropdown ul.dropdown-menu a[href$="/${language}/users/3/"]`],
-    });
-
-    await wizard.screenshot(`student.sign_out.png`, {
-      pointToSelectors: ['a[href*="/sign_out/"]'],
     });
   }
 
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`${language}/users/3/`);
-    await wizard.screenshot(`student.edit_profile.png`, {
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/student.edit_profile.png`, {
       pointToSelectors: [`a[href$="/${language}/users/3/edit/"]`],
     });
 
     await wizard.navigate(`${language}/users/3/edit/`);
-    await wizard.screenshot(`student.edit_timezone.png`, {
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/student.edit_timezone.png`, {
       pointToSelectors: ['select#user_time_zone']
     });
   }
@@ -949,7 +946,7 @@ async function read_submissions(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`?locale=${language}`);
-    await wizard.screenshot(`student.wrong_timezone.png`);
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}login-and-settings/student.wrong_timezone.png`);
   }
 
   // Set the right timezone to get rid of the warning without accidentally hiding other warnings.
@@ -966,10 +963,9 @@ async function read_submissions(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`${language}/courses/`);
-    await wizard.screenshot(`student.courses.png`);
+    await wizard.screenshot(`${STUDENT_GUIDES_PATH}student.courses.png`);
 
     await wizard.navigate(`${course_urls.OPEN[language]}`, false);
-    await wizard.screenshot(`student.course.png`);
 
     await wizard.screenshot(`student.breadcrumb_course.png`, {
       pointToSelectors: ['div.crumb a[href="#"]'],
