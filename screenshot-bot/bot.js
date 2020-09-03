@@ -5,7 +5,7 @@ const fs = require('fs');
 const readline = require('readline');
 
 const BASE_URL = 'http://dodona.localhost:3000/';
-const IMAGE_FOLDER_PATH = '../images/';
+const IMAGE_FOLDER_PATH = '../';
 const SEEDED_COURSE_URL = language => `${BASE_URL}${language}/courses/5/`;
 const LANGUAGES = ['nl', 'en'];
 const TRANSLATIONS = {
@@ -289,18 +289,21 @@ class Wizard {
         console.warn(`CROP SELECTOR OCCURED ${found} TIMES: ${options.cropSelector}`);
       }
     }
-    const languageFolder = this.language ? `${this.language}/` : '';
-    const imagePath = `${this.imageFolder}${languageFolder}${savePath}`;
-    await this.page.screenshot({
-      path: imagePath,
-      clip
-    });
-    await wait(1000);
-    const image = await new Image(imagePath).load();
-    for (const location of locations) {
-      await image.drawArrow(location[3].x, location[3].y, options.mirror);
+    const languageFolders = this.language ? [`${this.language}/`] : LANGUAGES;
+    // If no language is given save for both languages
+    for (languageFolder of languageFolders) {
+      const imagePath = `${this.imageFolder}${languageFolder}${savePath}`;
+      await this.page.screenshot({
+        path: imagePath,
+        clip
+      });
+      await wait(1000);
+      const image = await new Image(imagePath).load();
+      for (const location of locations) {
+        await image.drawArrow(location[3].x, location[3].y, options.mirror);
+      }
+      await image.close();
     }
-    await image.close();
   }
 
   async getNested(selectors){
