@@ -154,9 +154,7 @@ Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalue
 
 ## Oefeningenreeks evalueren
 
-Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen te evalueren en hen van feedback te voorzien. Om een evaluatie te starten, open je als lesgever het oefeningenreeks-actiesmenu.
-
-![reeks-acties](./staff.series_actions_menu.png)
+Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen te evalueren en hen van feedback te voorzien. Om een evaluatie te starten, open je als lesgever het [oefeningenreeks-actiesmenu](#het-reeks-menu) door te klikken op de drie bolletjes in de rechterbovenhoek van de reeks.
 
 Vervolgens selecteer je `Reeks evalueren`.
 ![reeks evalueren](./staff.series_evaluate.png)
