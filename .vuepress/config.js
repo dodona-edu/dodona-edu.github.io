@@ -196,7 +196,8 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'exercise-description/',
         'exercise-config/',
         'repository-directory-structure/',
-        'exercise-directory-structure/'
+        'exercise-directory-structure/',
+        'pythia-judge/',
       ]
     }
   ]
