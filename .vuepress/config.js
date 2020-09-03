@@ -55,7 +55,7 @@ module.exports = {
         ],
         sidebar: {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
-          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht'),
+          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Overzicht'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
@@ -71,7 +71,7 @@ module.exports = {
         ],
         sidebar: {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
-          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview'),
+          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', '[nl] Overzicht'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
           '/en/': getGeneralSidebar()
         }
@@ -133,7 +133,7 @@ function getNewsSidebar(lang, groupTitle, FirstItem) {
   ]
 }
 
-function getGuidesSidebar(lang, groupTitle, FirstItem) {
+function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem) {
   return [
     `/${lang}/news/`,
     {
@@ -150,7 +150,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem) {
           sidebarDepth: 2,
           initialOpenGroupIndex: -1,
           children: [
-            ['for-students/', 'Overzicht'],
+            ['for-students/', studentGuideItem],
             'for-students/login-and-settings/',
             'for-students/courses/',
             'for-students/exercises/',
