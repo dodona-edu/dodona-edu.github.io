@@ -44,6 +44,8 @@ The structure for a reading activity is identical to that of an exercise. There 
 
 ## Example config file
 
+### Exercise
+
 ```json
 {
   "type": "exercise",
@@ -64,5 +66,21 @@ The structure for a reading activity is identical to that of an exercise. There 
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
   "contact": "Dodona <dodona@ugent.be>"
+}
+```
+
+### Reading activity
+
+```json
+{
+  "description": {
+    "names": {
+      "en": "Aeneid",
+      "nl": "Aeneis"
+    }
+  },
+  "type": "content",
+  "visibility": "public",
+  "labels": ["test", "intro"]
 }
 ```
