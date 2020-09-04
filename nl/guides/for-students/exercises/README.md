@@ -98,15 +98,15 @@ Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de [oplos
 
 | status               | icoontje             | betekenis            |
 |----------------------|----------------------|----------------------|
-| `In de wachtrij…` | ![image](./submission_icons/queued.png) | oplossing staat in  de wachtrij |
-| `Aan het uitvoeren...` | ![image](./submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
-| `Correct` | ![image](./submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
-| `Fout` | ![image](./submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
-| `Uitvoeringsfout` | ![image](./submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
-| `Timeout` | ![image](./submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
-| `Geheugenfout` | ![image](./submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
-| `Compilatiefout` | ![image](./submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
-| `Interne fout` | ![image](./submission_icons/internal_error.png) | judge is gecrashed tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
+| `In de wachtrij…` | ![image](../../../../images/submission_icons/queued.png) | oplossing staat in  de wachtrij |
+| `Aan het uitvoeren...` | ![image](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
+| `Correct` | ![image](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
+| `Fout` | ![image](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
+| `Uitvoeringsfout` | ![image](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
+| `Timeout` | ![image](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
+| `Geheugenfout` | ![image](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
+| `Compilatiefout` | ![image](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
+| `Interne fout` | ![image](../../../../images/submission_icons/internal_error.png) | judge is gecrashed tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 
 Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert. Als de judge bij het beoordelen van de [oplossing](#navigeren-naar-een-oplossing) verschillende soorten fouten tegenkomt, dan staat het hem vrij te beslissen welke status hij aan de oplossing toekent. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de status van de oplossing te bepalen.
