@@ -1,0 +1,46 @@
+name: Run screenshot bot to images in docs
+
+on: [ workflow_dispatch ]
+
+jobs:
+  run-screenshot-bot:
+    env:
+      RAILS_ENV: "test"
+      TEST_DATABASE_URL: "mysql2://root:dodona@127.0.0.1:3306/dodona_test"
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mariadb
+        env:
+          MYSQL_DATABASE: "dodona_test"
+          MYSQL_ROOT_PASSWORD: "dodona"
+          MYSQL_HOST: "localhost"
+        ports:
+        - 3300:3300
+        options: --health-cmd "mysqladmin ping -h localhost" --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.6
+      - name: Check Ruby version
+        run: ruby -v
+
+      - name: Clone devolop branch of Dodona
+        uses: actions/checkout@master
+        with:
+          name: dodona-edu/dodona
+          ref: "develop"
+
+      - name: Run bundle
+        run: |
+          bundle install
+          submissions=$(bundle exec rake db:seed | tail -n 1)
+          ./bin/server &
+
+      - name: Install and Build 🔧
+        run: |
+          cd ./screenshot-bot
+          yarn install
+          echo submissions | yarn run run
