@@ -432,21 +432,21 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(language);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}login.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'login'), {
       pointToSelectors: [`a[href$="/${language}/sign_in/"]`]
     });
 
     await wizard.click('a[data-toggle="dropdown"]');
     await wait(500);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}choose_language.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'choose_language'), {
       pointToSelectors: ['ul.dropdown-menu']
     });
     
     await wizard.navigate(`${language}/sign_in.png`);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}sign_in.png`);
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'sign_in'));
     
     await wizard.navigate(`${language}/contact`);
-    await wizard.screenshot(`${STUDENT_GUIDES_PATH}contact.png`);
+    await wizard.screenshot(path.join(STUDENT_GUIDES_PATH, 'contact'));
   }
 
   // =========================================================
@@ -481,15 +481,15 @@ async function main(){
 
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
-    await wizard.navigate(`${language}/courses?page=1`);
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.courses_new_link.png`, {
+    await wizard.navigate(path.join(language, '/courses?page=1'));
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.courses_new_link', {
       pointToSelectors: [`a[href$="/${language}/courses/new/"]`],
     });
 
-    await wizard.navigate(`${language}/courses/new/`);
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_new_options.png`);
+    await wizard.navigate(path.join(language, 'courses/new/'));
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_new_options'));
     await wizard.click('#new-course');
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_new_empty.png`);
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_new_empty'));
     await wizard.typeIn('input#course_name', TRANSLATIONS[language]['HIDDEN_COURSE_NAME_INPUT']);
     await wizard.typeIn('input#course_teacher', TRANSLATIONS[language]['COURSE_TEACHER']);
     await wizard.typeIn('textarea#course_description', TRANSLATIONS[language]['HIDDEN_COURSE_DESCRIPTION_INPUT']);
@@ -499,25 +499,25 @@ async function main(){
     await wait(3000);
 
     course_urls.HIDDEN[language] = wizard.page.target().url();
-    await wizard.navigate(course_urls.HIDDEN[language] + '/edit', false);
+    await wizard.navigate(path.join(course_urls.HIDDEN[language], '/edit'), false);
     course_urls.HIDDEN_REGISTRATION[language] = await wizard.page.evaluate(() => document.querySelector('#hidden_show_link').value);
     await wizard.click('button[data-clipboard-target="#hidden_show_link"]'); // scroll it into view by clicking it
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_hidden_registration_link.png`, {
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH ,'staff.course_hidden_registration_link', {
        pointToSelectors: ['button[data-clipboard-target="#hidden_show_link"]'],
     });
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_hidden_registration_link_renew.png`, {
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_hidden_registration_link_renew', {
       pointToSelectors: [`a[href$="/reset_token/"]`],
     });
 
-    await wizard.navigate(`${language}/courses/new/`);
+    await wizard.navigate(path.join(language, '/courses/new/'));
     await wizard.click('#copy-course');
     await wait(1000);
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_new_copy_course_options.png`, {
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_new_copy_course_options'), {
       pointToSelectors: ['tr.copy-course-row'],
       pointMulti: false,
     })
     await wizard.click('tr.copy-course-row');
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_new_copy.png`);
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_new_copy'));
     await wizard.typeIn('input#course_name', TRANSLATIONS[language]['MODERATED_COURSE_NAME_INPUT']);
     await wizard.typeIn('input#course_teacher', TRANSLATIONS[language]['COURSE_TEACHER']);
     await wizard.typeIn('textarea#course_description', TRANSLATIONS[language]['MODERATED_COURSE_DESCRIPTION_INPUT']);
@@ -527,59 +527,59 @@ async function main(){
     await wizard.clickAndNavigate(`button[form="new_course"]`);
     course_urls.MODERATED[language] = wizard.page.target().url();
   
-    await wizard.navigate(`${language}/courses/new`);
+    await wizard.navigate(path.join(language ,'/courses/new'));
     await wizard.click('#new-course');
     await wizard.typeIn('input#course_name', TRANSLATIONS[language]['OPEN_COURSE_NAME_INPUT']);
     await wizard.typeIn('input#course_teacher', TRANSLATIONS[language]['COURSE_TEACHER']);
     await wizard.typeIn('textarea#course_description', TRANSLATIONS[language]['OPEN_COURSE_DESCRIPTION_INPUT']);
 
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_new_submit.png`, {
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_new_submit'), {
        pointToSelectors: [`button[form="new_course"]`]
     });
 
     await wizard.clickAndNavigate(`button[form="new_course"]`);
     course_urls.OPEN[language] = wizard.page.target().url();
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_created.png`);
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_created'));
 
     await wizard.navigate(course_urls.HIDDEN[language], useBase = false);
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_edit_button.png`, {
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_edit_button'), {
        pointToSelectors: ['a[href$="/edit/"]'],
     });
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_submissions_link.png`, {
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_submissions_link'), {
       // duplicate invisible element so had to be really specifici
       pointToSelectors: ['div.center > div > ul > li > a > i.submissions'],
     })
-    await wizard.navigate(course_urls.OPEN[language] + 'edit/', useBase = false);
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_edit_cancel.png`, {
+    await wizard.navigate(path.join(course_urls.OPEN[language], 'edit/'), useBase = false);
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_edit_cancel'), {
        pointToSelectors: [`a[href$="${course_urls.OPEN[language].replace(language + '/', '').replace(wizard.baseUrl, '')}"]`],
     });
     await wizard.scrollToBottom();
     await wizard.clickAndNavigate(`button[form*="edit_course"]`);
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_after_edit.png`);
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_after_edit'));
 
     // course members page
-    await wizard.navigate(SEEDED_COURSE_URL(language) + '/members', useBase = false);
-    await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.course_users_admin.png`, {
+    await wizard.navigate(path.join(SEEDED_COURSE_URL(language), 'members'), useBase = false);
+    await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.course_users_admin', {
        pointToSelectors: ['i.mdi-school'],
        pointMulti: false,
     });
     await wizard.page.$$(`a.ellipsis-overflow[href^="/${language}/courses"]`).then(elements => elements[2].click());
     await wait(10000); // Wait for graphs
-    await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.user_course_overview.png`);
+    await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.user_course_overview'));
 
     // course submissions page
-    await wizard.navigate(SEEDED_COURSE_URL(language) + 'submissions', useBase = false);
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_submissions_filter.png`, {
+    await wizard.navigate(path.join(SEEDED_COURSE_URL(language), 'submissions'), useBase = false);
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_submissions_filter'), {
       pointToSelectors: ['i.mdi-filter-outline'],
       pointMulti: false,
     })
     await wizard.click('i.mdi-filter-outline');
     await wait(500);
-    await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_submissions_filtered.png`);
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_submissions_filtered'));
 
 
     await wizard.navigate(`${language}/courses/`);
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_hidden.png`, {
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_hidden'), {
       pointToSelectors: ['i.mdi-eye-off-outline'],
       pointMulti: false,
     });
@@ -619,28 +619,27 @@ async function main(){
   });
 
   console.log(`staff user management`);
-  const SEEDED_MODERATED_COURSE_URL = "/courses/3/"
-  const STAFF_USERNAME = "Stijn Taff"
+  const SEEDED_MODERATED_COURSE_URL = "/courses/3/";
   // await wizard.navigate('users/2/token/staff');
 
    for (const language of LANGUAGES) {
      wizard.setLanguage(language);
      await wizard.navigate(language + SEEDED_MODERATED_COURSE_URL);
-     await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.course_users.png`,
+     await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.course_users'),
      {
        pointToSelectors: ['i.mdi.mdi-24.mdi-account-multiple']
      })
 
      await wizard.navigate(language + SEEDED_MODERATED_COURSE_URL + 'members/');
-     await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.users.png`);
-     await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.users_edit_permissions.png`, {
+     await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.users'));
+     await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.users_edit_permissions'), {
       pointMulti: false,
       pointToSelectors: ['i.mdi-school.mdi-icons-strikethrough'],
      })
      await wizard.typeIn(`input#filter-query-tokenfield`, 'Stijn');
 
      await wait(2000);
-     await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.users_filtered.png`);
+     await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.users_filtered'));
   }
 
   console.log('staff series');
@@ -679,46 +678,46 @@ async function main(){
     wizard.setLanguage(language);
     // manage series
     await wizard.navigate(SEEDED_COURSE_URL(language), useBase = false);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.course_manage_series_button.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.course_manage_series_button'), {
       pointToSelectors: [`a[href$="/manage_series/"]`],
     });
     // open manage series menu
     await wizard.getNested(['div.card-subtitle-actions', 'a']).then(elem => elem.click());
     await wait(1000);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_actions_menu.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_actions_menu'));
     // start evaluation
     await wizard.clickAndNavigate(`a[href^="/${language}/evaluations/new"]`);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate'));
     await wizard.clickAndNavigate('button[form="new_evaluation"]');
     // select users and go to real evaluation
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_select_users.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_select_users'), {
       pointToSelectors: ['a[href$="type=submitted"] > div.button.btn-text'],
     });
     await wizard.clickAndNavigate('a[href$="type=submitted"]');
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_start.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_start'), {
       pointToSelectors: ['a.btn-primary']
     });
     await wizard.clickAndNavigate('a.btn-primary');
     const evaluation_url = wizard.page.target().url();
     //release feedback button performs a patch
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_release_feedback.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_release_feedback'), {
       pointToSelectors: ['a[data-method="patch"]']
     })
 
     await wizard.scrollTo('i.mdi-comment-outline');
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_detail_overview.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_detail_overview'));
     // give feedback to a user
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_goto_give_feedback.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_goto_give_feedback'), {
       pointToSelectors: ['i.mdi-comment-outline'],
       pointMulti: false,
     });
     await wizard.clickAndNavigate('a', el => !!el.querySelector('i.mdi-comment-outline'));
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_give_feedback.png`);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_feedback_row.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_give_feedback'));
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_feedback_row'), {
       pointToSelectors: ['div.user-feedback-row'],
       pointPredicate: elem => !!elem.querySelector('i[class^="mdi mdi-comment"]'),
     });
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_return.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_return'), {
       pointToSelectors: [`a[href$="${evaluation_url.replace(wizard.baseUrl, '')}"]`]
     });
 
@@ -727,7 +726,7 @@ async function main(){
     await wizard.getNested(['div.card-subtitle-actions', 'a']).then(elem => elem.click());
     await wait(500);
     // menu action should have changed
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_actions_check_evaluation.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_actions_check_evaluation'), {
       pointMulti: false,
       pointToSelectors: ['i.mdi-message-draw'],
     });
@@ -736,7 +735,7 @@ async function main(){
     await wizard.navigate(evaluation_url, useBase = false);
     await wait(2000);
     await wizard.click('a', elem => !!elem.querySelector('i.mdi-dots-vertical'));
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_delete.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_evaluate_delete'), {
       pointToSelectors: [`a[data-method="delete"][href^="/${language}/evaluations/"]`],
     });
 
@@ -755,20 +754,20 @@ async function main(){
     await wizard.navigate(course_urls.OPEN[language], useBase = false);
     await wizard.scrollToBottom();
     await wait(1000);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.course_series_info_message.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.course_series_info_message'), {
        pointToSelectors: [`div.alert.alert-info.hidden-print`]
     });
 
     await wizard.navigate(course_urls.OPEN[language] + 'manage_series/', useBase = false);
     await wizard.screenshot('staff.course_manage_series_page.png');
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.course_new_series_button.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.course_new_series_button'), {
       pointToSelectors: ['a[href$="/series/new/"]'],
     })
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_delete.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_delete'), {
       pointToSelectors: ['i.mdi-delete'],
       pointMulti: false,
     });
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_edit.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_edit'), {
       pointToSelectors: ['a[href*="series"] > i.mdi-pencil'],
       pointMulti: false,
     })
@@ -776,10 +775,10 @@ async function main(){
     await wizard.navigate(series_urls[language]['hidden'] + 'edit/', useBase = false);
     await wizard.scrollTo(`#access_token`);
 
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_hidden_link.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_hidden_link'), {
        pointToSelectors: ['#access_token'],
     });
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_hidden_link_reset.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_hidden_link_reset'), {
       pointToSelectors: ['a[href$="/reset_token/?type=access_token"]'],
     });
 
@@ -788,16 +787,16 @@ async function main(){
     await wait(1000);
     await wizard.typeIn('input#filter-query-tokenfield', 'Echo Java');
     await wait(500);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_add_exercise.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_add_exercise'), {
       pointToSelectors: [`a.add-activity`],
       pointMulti: false,
     });
     await wait(300);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_remove_exercise.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_remove_exercise'), {
     pointToSelectors: [`a.remove-activity`],
       pointMulti: false,
     });
-   await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_move_exercise.png`, {
+   await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_move_exercise'), {
       pointToSelectors: ['div.drag-handle'],
       mirror: true,
       pointMulti: false,
@@ -805,44 +804,44 @@ async function main(){
 
     await wizard.navigate(course_urls.OPEN[language] + 'series/new/', useBase = false);
 
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_new.png`);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_new_submit.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_new'));
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_new_submit'), {
         pointToSelectors: [`button[form="new_series"]`],
     });
 
     await wizard.click('button.btn-default[data-toggle]');
     await wait(200);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_calendar_open.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_calendar_open'), {
       pointToSelectors: ['button.btn-default[data-toggle]'],
     });
 
     await wizard.click('span.flatpickr-day.today');
     await wait(200);
 
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_calendar_clear.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_calendar_clear'), {
         pointToSelectors: [`i.mdi-close`],
     });
 
     await wizard.navigate(`${series_urls[language]['open']}/edit`, useBase = false);
 
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_edit_submit.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_edit_submit'), {
         pointToSelectors: [`button[form^="edit_series_"]`]
     });
     // series export
     await wizard.navigate(SEEDED_COURSE_URL(language), useBase = false);
     await wizard.getNested(['div.card-subtitle-actions', 'a']).then(elem => elem.click());
     await wait(1000);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_action.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_export_action'), {
       pointToSelectors: [`a[href^="/${language}/exports/series"]`],
     });
     await wizard.clickAndNavigate(`a[href^="/${language}/exports/series"]`);
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_exercise_choice.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_export_exercise_choice'));
     await wizard.click('#check-all');
     await wizard.click('#next_step');
     await wizard.scrollToBottom();
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_options.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_export_options'));
     await wizard.clickAndNavigate('button[form="download_submissions"]');
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_started.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_export_started'));
   }
   console.log(series_urls);
 
