@@ -214,6 +214,12 @@ class Wizard {
     console.warn(`UNUSED CLICK SELECTOR: ${selector}`);
   }
 
+  async clickAndNavigate(selector, predicate, predicateArg){
+    await this.click(selector, predicate, predicateArg);
+    await wait(1000);
+    await this.removeBlockedElements();
+  }
+
   async removeBlockedElements() {
     for (const toBlock of this.elementsToBlock) {
       for (const element of await this.page.$$(toBlock.selector)) {
@@ -488,9 +494,7 @@ async function main(){
     await wizard.typeIn('textarea#course_description', TRANSLATIONS[language]['HIDDEN_COURSE_DESCRIPTION_INPUT']);
     await wizard.click('#course_visibility_hidden');
 
-    await wizard.click(`button[form="new_course"]`);
-    await wait(1000);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate(`button[form="new_course"]`);
     await wait(3000);
 
     course_urls.HIDDEN[language] = wizard.page.target().url();
@@ -519,9 +523,7 @@ async function main(){
     await wizard.click('#course_visibility_visible_for_all');
     await wizard.click('#course_moderated_true');
 
-    await wizard.click(`button[form="new_course"]`);
-    await wait(2000);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate(`button[form="new_course"]`);
     course_urls.MODERATED[language] = wizard.page.target().url();
   
     await wizard.navigate(`${language}/courses/new`);
@@ -534,10 +536,7 @@ async function main(){
        pointToSelectors: [`button[form="new_course"]`]
     });
 
-    await wizard.click(`button[form="new_course"]`);
-    await wait(1000);
-    await wizard.removeBlockedElements();
-    await wait(1000);
+    await wizard.clickAndNavigate(`button[form="new_course"]`);
     course_urls.OPEN[language] = wizard.page.target().url();
     await wizard.screenshot(`${CREATING_A_COURSE_PATH}staff.course_created.png`);
 
@@ -554,8 +553,7 @@ async function main(){
        pointToSelectors: [`a[href$="${course_urls.OPEN[language].replace(language + '/', '').replace(wizard.baseUrl, '')}"]`],
     });
     await wizard.scrollToBottom();
-    await wizard.click(`button[form*="edit_course"]`);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate(`button[form*="edit_course"]`);
     await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_after_edit.png`);
 
     // course members page
@@ -688,27 +686,18 @@ async function main(){
     await wait(1000);
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_actions_menu.png`);
     // start evaluation
-    await wizard.click(`a[href^="/${language}/evaluations/new"]`);
-    await wait(1000);
-    await wizard.removeBlockedElements();
-    await wait(1000);
+    await wizard.clickAndNavigate(`a[href^="/${language}/evaluations/new"]`);
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate.png`);
-    await wizard.click('button[form="new_evaluation"]');
-    await wait(2000);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate('button[form="new_evaluation"]');
     // select users and go to real evaluation
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_select_users.png`, {
       pointToSelectors: ['a[href$="type=submitted"] > div.button.btn-text'],
     });
-    await wizard.click('a[href$="type=submitted"]');
-    await wait(1000);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate('a[href$="type=submitted"]');
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_start.png`, {
       pointToSelectors: ['a.btn-primary']
     });
-    await wizard.click('a.btn-primary');
-    await wait(1500);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate('a.btn-primary');
     const evaluation_url = wizard.page.target().url();
     //release feedback button performs a patch
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_release_feedback.png`, {
@@ -722,9 +711,7 @@ async function main(){
       pointToSelectors: ['i.mdi-comment-outline'],
       pointMulti: false,
     });
-    await wizard.click('a', el => !!el.querySelector('i.mdi-comment-outline'));
-    await wait(2000);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate('a', el => !!el.querySelector('i.mdi-comment-outline'));
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_give_feedback.png`);
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_feedback_row.png`, {
       pointToSelectors: ['div.user-feedback-row'],
@@ -847,17 +834,13 @@ async function main(){
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_action.png`, {
       pointToSelectors: [`a[href^="/${language}/exports/series"]`],
     });
-    await wizard.click(`a[href^="/${language}/exports/series"]`);
-    await wait(1000);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate(`a[href^="/${language}/exports/series"]`);
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_exercise_choice.png`);
     await wizard.click('#check-all');
     await wizard.click('#next_step');
     await wizard.scrollToBottom();
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_options.png`);
-    await wizard.click('button[form="download_submissions"]');
-    await wait(1500);
-    await wizard.removeBlockedElements();
+    await wizard.clickAndNavigate('button[form="download_submissions"]');
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_export_started.png`);
   }
   console.log(series_urls);
@@ -1011,9 +994,7 @@ async function main(){
       pointToSelectors: [`a[href*="/activities/${exerciseNamesToIDs[language]['Echo']}/"]`],
     });
 
-    await wizard.click(`a[href*="/activities/${exerciseNamesToIDs[language]['Echo']}/"]`);
-    await wait(500); // MathJax takes a while to initialize
-    await wizard.removeBlockedElements()
+    await wizard.clickAndNavigate(`a[href*="/activities/${exerciseNamesToIDs[language]['Echo']}/"]`);
     await wizard.screenshot(`${EXERCISES_PATH}student.exercise_start.png`);
 
     await wizard.screenshot(`${EXERCISES_PATH}student.exercise_crumbs.png`, {
