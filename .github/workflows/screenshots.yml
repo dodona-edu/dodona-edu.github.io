@@ -30,7 +30,7 @@ jobs:
       - name: Clone devolop branch of Dodona
         uses: actions/checkout@master
         with:
-          name: dodona-edu/dodona
+          repository: dodona-edu/dodona
           ref: "develop"
 
       - name: Run bundle
