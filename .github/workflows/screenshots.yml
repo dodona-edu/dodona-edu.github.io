@@ -37,11 +37,12 @@ jobs:
         run: |
           gem install bundler:2.1.4
           bundle install
+          bundle exec rails webpacker:install
 
       - name: Seed database
         run: |
           submissions=$(bundle exec rake db:seed | tail -n 1)
-          ./bin/server
+          rails server
 
       - shell: bash
         run: |
