@@ -19,6 +19,11 @@ jobs:
         - 3000:3000
         options: --health-cmd "mysqladmin ping --silent" --health-interval 10s --health-timeout 10s --health-retries 6
     steps:
+      - shell: bash
+        run: |
+          echo "$PATH"
+          ls -a
+
       - uses: actions/checkout@v2
       - name: Use Ruby
         uses: actions/setup-ruby@v1
@@ -32,11 +37,10 @@ jobs:
         with:
           repository: dodona-edu/dodona
           ref: "bot-branch"
-
       - shell: bash
         run: |
           echo "$PATH"
-          ls -a
+          ls -a ..
 
       - name: Run bundle
         run: |
@@ -46,8 +50,8 @@ jobs:
 
       - name: Seed database
         run: |
-          bundle exec rake db:seed
-          rails server
+          bundle exec rails db:setup
+          bundle exec rails server
 
       - shell: bash
         run: |
