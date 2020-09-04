@@ -26,6 +26,6 @@ Scroll to the bottom of the page and generate a new token by clicking the `+`-bu
 
 ## 4. Copy the token
 
-Copy the newly generated token and paste it in the authentication dialog of the plugin. On Dodona, you can see a list of all your active tokens. Be aware that you can't see the tokens themselves out of security considerations. You can delete a token at any time. Removing a token will cause it to stop functioning immediately.
+Copy the newly generated token and paste it in the authentication dialog of the [PyCharm plugin](../pycharm-plugin/README.md) or the [VS Code extension](../vs-code-extension/README.md). On Dodona, you can see a list of all your active tokens. Be aware that you can't see the tokens themselves out of security considerations. You can delete a token at any time. Removing a token will cause it to stop functioning immediately.
 
 ![Token generated](./token-generated.png)

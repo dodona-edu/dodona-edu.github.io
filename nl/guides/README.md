@@ -4,15 +4,28 @@ sidebarDepth: 0
 ---
 # Handleidingen
 
-Hier vind je enkele handleidingen, vooral gericht op lesgevers.
+Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 
-## In het Nederlands
-* [Van start met Dodona](getting-started)
-* [Dodona PyCharm plugin](pycharm-plugin)
-* [Dodona VS Code extension](vs-code-extension)
-* [Een nieuwe repository met oefeningen maken](new-exercise-repo)
+## Voor iedereen
 * [De Programmeursleerling](the-coders-apprentice)
 * [Een API token aanmaken](creating-an-api-token)
+* [Dodona PyCharm plugin](pycharm-plugin)
+* [Dodona VS Code extension](vs-code-extension)
+
+## Voor lesgevers
+* [Van start met Dodona als leerkracht](teachers/getting-started)
+* [Een nieuwe cursus aanmaken](teachers/creating-a-course)
+* [Cursusbeheer](teachers/course-management)
+* [Gebruikersbeheer](teachers/user-management)
+* [Oefeningenreeksenbeheer](teachers/exercise-series-management)
+* [Een reeks evalueren](teachers/evaluate-series)
+* [Een nieuwe repository met oefeningen maken](teachers/new-exercise-repo)
+
+## Voor studenten
+* [Van start met Dodona als student](students/getting-started)
+* [Aanmelden en gebruikersinstallingen](students/login-and-settings/)
+* [Cursussen op Dodona](students/courses/)
+* [Oefeningen oplossen](students/exercises/)
 
 ## Enkel in het Engels
 * [Creating a judge](creating-a-judge)

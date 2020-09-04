@@ -10,5 +10,8 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
-  // ...apply enhancements for the site.
+  router.addRoutes([
+    { path: '/nl/guides/getting-started/', redirect: '/nl/guides/teachers/getting-started/' },
+    { path: '/en/guides/getting-started/', redirect: '/en/guides/teachers/getting-started/' }
+  ])
 }
