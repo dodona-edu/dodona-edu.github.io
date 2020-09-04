@@ -6,7 +6,7 @@ on:
 jobs:
   run-screenshot-bot:
     env:
-      RAILS_ENV: "develop"
+      RAILS_ENV: "development"
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -32,6 +32,11 @@ jobs:
         with:
           repository: dodona-edu/dodona
           ref: "bot-branch"
+
+      - shell: bash
+        run: |
+          echo "$PATH"
+          ls -a
 
       - name: Run bundle
         run: |
