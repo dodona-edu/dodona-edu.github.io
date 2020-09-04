@@ -432,21 +432,21 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(language);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}login.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'login.png'), {
       pointToSelectors: [`a[href$="/${language}/sign_in/"]`]
     });
 
     await wizard.click('a[data-toggle="dropdown"]');
     await wait(500);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}choose_language.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'choose_language.png'), {
       pointToSelectors: ['ul.dropdown-menu']
     });
     
     await wizard.navigate(`${language}/sign_in.png`);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}sign_in.png`);
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'sign_in.png'));
     
     await wizard.navigate(`${language}/contact`);
-    await wizard.screenshot(`${STUDENT_GUIDES_PATH}contact.png`);
+    await wizard.screenshot(path.join(STUDENT_GUIDES_PATH, 'contact.png'));
   }
 
   // =========================================================
