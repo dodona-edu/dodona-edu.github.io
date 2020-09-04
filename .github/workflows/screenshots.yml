@@ -6,19 +6,18 @@ on:
 jobs:
   run-screenshot-bot:
     env:
-      RAILS_ENV: "test"
-      TEST_DATABASE_URL: "mysql2://root:dodona@127.0.0.1:3306/dodona_test"
+      RAILS_ENV: "develop"
     runs-on: ubuntu-latest
     services:
       mysql:
         image: mariadb
         env:
-          MYSQL_DATABASE: "dodona_test"
+          MYSQL_DATABASE: "dodona"
           MYSQL_ROOT_PASSWORD: "dodona"
           MYSQL_HOST: "localhost"
         ports:
-        - 3300:3300
-        options: --health-cmd "mysqladmin ping -h localhost" --health-interval 10s --health-timeout 5s --health-retries 5
+        - 3000:3000
+        options: --health-cmd "mysqladmin ping --silent" --health-interval 10s --health-timeout 10s --health-retries 6
     steps:
       - uses: actions/checkout@v2
       - name: Use Ruby
@@ -32,17 +31,23 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: dodona-edu/dodona
-          ref: "develop"
+          ref: "bot-branch"
 
       - name: Run bundle
         run: |
-          gem install bundler:2.0.2
+          gem install bundler:2.1.4
           bundle install
+      - name: Seed database
           submissions=$(bundle exec rake db:seed | tail -n 1)
-          ./bin/server &
+          ./bin/server
 
-      - name: Install and Build 🔧
-        working-directory: ./screenshot-bot
+      - shell: bash
         run: |
+          echo "$PATH"
+          ls -a
+        
+      - name: Install and take screenshots
+        run: |
+          cd screenshot-bot
           yarn install
           echo submissions | yarn run run
