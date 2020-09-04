@@ -593,30 +593,15 @@ async function main(){
         .join('');
   });
 
-
-  await wizard.screenshot('staff_registration_icons/make_course_admin.png', {
-     cropSelector: 'i.mdi-school:not(.mdi-icons-strikethrough)'
-  });
-
-  await wizard.screenshot('staff_registration_icons/make_student.png', {
-     cropSelector: 'i.mdi-school.mdi-icons-strikethrough'
-  });
-
-  await wizard.screenshot('staff_registration_icons/register.png', {
-     cropSelector: 'i.mdi-account-plus'
-  });
-
-  await wizard.screenshot('staff_registration_icons/unregister.png', {
-     cropSelector: 'i.mdi-delete'
-  });
-
-  await wizard.screenshot('staff_registration_icons/approve.png', {
-     cropSelector: 'i.mdi-check'
-  });
-
-  await wizard.screenshot('staff_registration_icons/decline.png', {
-     cropSelector: 'i.mdi-delete'
-  });
+  const REGISTRATION_ICONS = [
+    ['make_course_admin', 'i.mdi-school:not(.mdi-icons-strikethrough)'], ['make_student', 'i.mdi-school.mdi-icons-strikethrough'],
+    ['register', 'i.mdi-account-plus'], ['unregister', 'i.mdi-delete'], ['approve', 'i.mdi-check'], ['decline', 'i.mdi-delete']
+  ];
+  for (const [image_name, cropSelector] of REGISTRATION_ICONS){
+    await wizard.screenshot(path.join('images', 'staff_registration_icons', image_name), {
+      cropSelector: cropSelector,
+    })
+  }
 
   console.log(`staff user management`);
   const SEEDED_MODERATED_COURSE_URL = "/courses/3/";
@@ -1070,6 +1055,7 @@ async function main(){
     await wizard.screenshot(path.join(EXERCISES_PATH, 'student.deadline_series_warning'));
   }
 
+  // icons are language independent
   wizard.setLanguage('');
   await wizard.page.evaluate(() => {
     document.querySelector('body').innerHTML = 
@@ -1098,7 +1084,7 @@ async function main(){
    ['memory_limit_exceeded', '.mdi-memory'], ['output_limit_exceeded', '.mdi-script-text'], ['internal_error', '.mdi-alert']
   ];
   for (const [image_name, cropSelector] of SUBMISSION_ICONS) {
-    await wizard.screenshot(path.join(EXERCISES_PATH, 'submission_icons', image_name), {
+    await wizard.screenshot(path.join('images', 'submission_icons', image_name), {
       cropSelector: cropSelector,
     });
   }
@@ -1120,7 +1106,7 @@ async function main(){
     ['wrong', '.mdi-close'], ['after_deadline', '.mdi-alarm-off'], ['before_deadline', '.mdi-alarm-check'], ['correct', '.mdi-check']
   ];
   for (const [image_name, cropSelector] of COURSE_EXERCISE_STATUS_ICONS){
-    await wizard.screenshot(path.join(COURSES_PATH, 'course_exercise_status_icons', image_name), {
+    await wizard.screenshot(path.join('images', 'course_exercise_status_icons', image_name), {
       cropSelector: cropSelector,
     })
   }
