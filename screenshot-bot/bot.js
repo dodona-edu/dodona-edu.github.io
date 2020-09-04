@@ -446,6 +446,7 @@ async function main(){
   // STAFF
   // =========================================================
 
+  /* currently unused, but maybe we want these pictures in the creating-exercise repo guide?
   console.log('staff repositories');
   await wizard.navigate('users/2/token/staff');
   for (const language of LANGUAGES) {
@@ -458,6 +459,7 @@ async function main(){
     await wizard.click('button[form="new_repository"]');
     await wizard.screenshot('staff.repository_created.png');
   }
+  */
 
   console.log('staff course management');
 
@@ -490,7 +492,6 @@ async function main(){
     await wait(1000);
     await wizard.removeBlockedElements();
     await wait(3000);
-    await wizard.screenshot(`staff.course_hidden_message.png`);
 
     course_urls.HIDDEN[language] = wizard.page.target().url();
     await wizard.navigate(course_urls.HIDDEN[language] + '/edit', false);
@@ -521,15 +522,8 @@ async function main(){
     await wizard.click(`button[form="new_course"]`);
     await wait(2000);
     await wizard.removeBlockedElements();
-    await wizard.screenshot(`staff.course_moderated.png`);
     course_urls.MODERATED[language] = wizard.page.target().url();
-
-
-    await wizard.navigate(`${language}/courses/new/`);
-    await wizard.screenshot('staff.course_new_cancel.png', {
-       pointToSelectors: [`a[href$="?locale=${language}"]`],
-    });
-    
+  
     await wizard.navigate(`${language}/courses/new`);
     await wizard.click('#new-course');
     await wizard.typeIn('input#course_name', TRANSLATIONS[language]['OPEN_COURSE_NAME_INPUT']);
@@ -556,7 +550,6 @@ async function main(){
       pointToSelectors: ['div.center > div > ul > li > a > i.submissions'],
     })
     await wizard.navigate(course_urls.OPEN[language] + 'edit/', useBase = false);
-    await wizard.screenshot(`staff.course_edit.png`);
     await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_edit_cancel.png`, {
        pointToSelectors: [`a[href$="${course_urls.OPEN[language].replace(language + '/', '').replace(wizard.baseUrl, '')}"]`],
     });
@@ -577,7 +570,6 @@ async function main(){
 
     // course submissions page
     await wizard.navigate(SEEDED_COURSE_URL(language) + 'submissions', useBase = false);
-    await wizard.screenshot('staff.course_submissions.png');
     await wizard.screenshot(`${COURSE_MANAGEMENT_PATH}staff.course_submissions_filter.png`, {
       pointToSelectors: ['i.mdi-filter-outline'],
       pointMulti: false,
@@ -634,18 +626,6 @@ async function main(){
 
    for (const language of LANGUAGES) {
      wizard.setLanguage(language);
-     await wizard.navigate(`${language}/`);
-     await wait(1000);
-     await wizard.screenshot('staff.admin_menu_location.png',
-     {
-       pointToSelectors: ['button[aria-controls="drawer"]'],
-       mirror: true
-     });
-     await wait(1000);
-     await wizard.click('button[aria-controls="drawer"]');
-     await wait(1000);
-     await wizard.screenshot('staff.admin_menu.png');
-
      await wizard.navigate(language + SEEDED_MODERATED_COURSE_URL);
      await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.course_users.png`,
      {
@@ -662,11 +642,6 @@ async function main(){
 
      await wait(2000);
      await wizard.screenshot(`${USER_MANAGEMENT_PATH}staff.users_filtered.png`);
-     await wizard.screenshot(`staff.users_filtered_link.png`, 
-     {
-       pointToSelectors: [`a[title="${STAFF_USERNAME}"]`]
-     });
-
   }
 
   console.log('staff series');
@@ -751,9 +726,6 @@ async function main(){
     await wait(2000);
     await wizard.removeBlockedElements();
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_give_feedback.png`);
-    await wizard.screenshot('staff.series_evaluate_next.png', {
-      pointToSelectors: ['#next-feedback-button'],
-    })
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_evaluate_feedback_row.png`, {
       pointToSelectors: ['div.user-feedback-row'],
       pointPredicate: elem => !!elem.querySelector('i[class^="mdi mdi-comment"]'),
@@ -828,7 +800,6 @@ async function main(){
     await wait(1000);
     await wizard.typeIn('input#filter-query-tokenfield', 'Echo Java');
     await wait(500);
-    await wizard.screenshot(`staff.series_search_exercises.png`);
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_add_exercise.png`, {
       pointToSelectors: [`a.add-activity`],
       pointMulti: false,
@@ -868,11 +839,6 @@ async function main(){
 
     await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.series_edit_submit.png`, {
         pointToSelectors: [`button[form^="edit_series_"]`]
-    });
-
-    await wizard.screenshot('staff.series_edit.png');
-    await wizard.screenshot('staff.series_edit_cancel.png', {
-        pointToSelectors: ['div.crumb a[href*="/#series"]'],
     });
     // series export
     await wizard.navigate(SEEDED_COURSE_URL(language), useBase = false);
