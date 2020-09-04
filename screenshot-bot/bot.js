@@ -314,21 +314,19 @@ class Wizard {
     }
 
     // If no language is given save for both languages
-    const languageFolders = this.language ? [`${this.language}/`] : LANGUAGES;
+    const languageFolder = this.language ? `${this.language}/` : '';
     const fileEnd = savePath.endsWith(this.fileExtension) ? '' : `.${this.fileExtension}`
-    for (languageFolder of languageFolders) {
-      const imagePath = `${this.imageFolder}${languageFolder}${savePath}${fileEnd}`;
-      await this.page.screenshot({
-        path: imagePath,
-        clip
-      });
-      await wait(1000);
-      const image = await new Image(imagePath).load();
-      for (const location of locations) {
-        await image.drawArrow(location[3].x, location[3].y, options.mirror);
-      }
-      await image.close();
+    const imagePath = `${this.imageFolder}${languageFolder}${savePath}${fileEnd}`;
+    await this.page.screenshot({
+      path: imagePath,
+      clip
+    });
+    await wait(1000);
+    const image = await new Image(imagePath).load();
+    for (const location of locations) {
+      await image.drawArrow(location[3].x, location[3].y, options.mirror);
     }
+    await image.close();
   }
 
   async getNested(selectors){
