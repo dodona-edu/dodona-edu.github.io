@@ -37,7 +37,9 @@ jobs:
         run: |
           gem install bundler:2.1.4
           bundle install
+
       - name: Seed database
+        run: |
           submissions=$(bundle exec rake db:seed | tail -n 1)
           ./bin/server
 
