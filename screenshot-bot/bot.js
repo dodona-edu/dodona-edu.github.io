@@ -740,7 +740,6 @@ async function main(){
     });
 
     await wizard.navigate(path.join(course_urls.OPEN[language], 'manage_series'), useBase = false);
-    await wizard.screenshot('staff.course_manage_series_page.png');
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.course_new_series_button'), {
       pointToSelectors: ['a[href$="/series/new/"]'],
     })
