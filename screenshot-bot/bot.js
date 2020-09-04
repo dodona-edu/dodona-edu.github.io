@@ -578,7 +578,7 @@ async function main(){
     await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_submissions_filtered'));
 
 
-    await wizard.navigate(path.join(language ,'courses');
+    await wizard.navigate(path.join(language ,'courses'));
     await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_hidden'), {
       pointToSelectors: ['i.mdi-eye-off-outline'],
       pointMulti: false,
@@ -741,7 +741,7 @@ async function main(){
        pointToSelectors: [`div.alert.alert-info.hidden-print`]
     });
 
-    await wizard.navigate(path.join(course_urls.OPEN[language], 'manage_series', useBase = false);
+    await wizard.navigate(path.join(course_urls.OPEN[language], 'manage_series'), useBase = false);
     await wizard.screenshot('staff.course_manage_series_page.png');
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.course_new_series_button'), {
       pointToSelectors: ['a[href$="/series/new/"]'],
