@@ -482,7 +482,7 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(path.join(language, '/courses?page=1'));
-    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.courses_new_link', {
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.courses_new_link'), {
       pointToSelectors: [`a[href$="/${language}/courses/new/"]`],
     });
 
@@ -502,10 +502,10 @@ async function main(){
     await wizard.navigate(path.join(course_urls.HIDDEN[language], '/edit'), false);
     course_urls.HIDDEN_REGISTRATION[language] = await wizard.page.evaluate(() => document.querySelector('#hidden_show_link').value);
     await wizard.click('button[data-clipboard-target="#hidden_show_link"]'); // scroll it into view by clicking it
-    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH ,'staff.course_hidden_registration_link', {
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH ,'staff.course_hidden_registration_link'), {
        pointToSelectors: ['button[data-clipboard-target="#hidden_show_link"]'],
     });
-    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_hidden_registration_link_renew', {
+    await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_hidden_registration_link_renew'), {
       pointToSelectors: [`a[href$="/reset_token/"]`],
     });
 
@@ -559,7 +559,7 @@ async function main(){
 
     // course members page
     await wizard.navigate(path.join(SEEDED_COURSE_URL(language), 'members'), useBase = false);
-    await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.course_users_admin', {
+    await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.course_users_admin'), {
        pointToSelectors: ['i.mdi-school'],
        pointMulti: false,
     });
