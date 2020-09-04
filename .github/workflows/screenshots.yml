@@ -29,6 +29,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.6
+
       - name: Check Ruby version
         run: ruby -v
 
@@ -37,10 +38,6 @@ jobs:
         with:
           repository: dodona-edu/dodona
           ref: "bot-branch"
-      - shell: bash
-        run: |
-          echo "$PATH"
-          ls -a ..
 
       - name: Run bundle
         run: |
@@ -53,13 +50,8 @@ jobs:
           bundle exec rails db:setup
           bundle exec rails server
 
-      - shell: bash
-        run: |
-          echo "$PATH"
-          ls -a
-        
       - name: Install and take screenshots
         run: |
-          cd screenshot-bot
+          cd ../dodona-edu.github.io/screenshot-bot
           yarn install
           echo submissions | yarn run run
