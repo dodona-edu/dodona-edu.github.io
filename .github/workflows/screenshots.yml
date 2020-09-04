@@ -42,7 +42,7 @@ jobs:
           ./bin/server &
 
       - name: Install and Build 🔧
+        working-directory: ./screenshot-bot
         run: |
-          cd ./screenshot-bot
           yarn install
           echo submissions | yarn run run
