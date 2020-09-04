@@ -442,10 +442,10 @@ async function main(){
       pointToSelectors: ['ul.dropdown-menu']
     });
     
-    await wizard.navigate(`${language}/sign_in.png`);
+    await wizard.navigate(path.join(language, 'sign_in'));
     await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'sign_in'));
     
-    await wizard.navigate(`${language}/contact`);
+    await wizard.navigate(path.join(language, 'contact'));
     await wizard.screenshot(path.join(STUDENT_GUIDES_PATH, 'contact'));
   }
 
@@ -458,13 +458,13 @@ async function main(){
   await wizard.navigate('users/2/token/staff');
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
-    await wizard.navigate(`${language}/repositories/new`);
-    await wizard.screenshot('staff.repository_create.png');
+    await wizard.navigate(path.join(language, 'repositories/new'));
+    await wizard.screenshot('staff.repository_create');
     // unique constraint on name of repository, so randomize a bit
     await wizard.typeIn('#repository_name', `Example exercises ${Math.floor(Math.random() * 100).toString()}`);
     await wizard.typeIn('#repository_remote', 'git@github.com:dodona-edu/example-exercises.git');
     await wizard.click('button[form="new_repository"]');
-    await wizard.screenshot('staff.repository_created.png');
+    await wizard.screenshot('staff.repository_created');
   }
   */
 
@@ -578,7 +578,7 @@ async function main(){
     await wizard.screenshot(path.join(COURSE_MANAGEMENT_PATH, 'staff.course_submissions_filtered'));
 
 
-    await wizard.navigate(`${language}/courses/`);
+    await wizard.navigate(path.join(language ,'courses');
     await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'staff.course_hidden'), {
       pointToSelectors: ['i.mdi-eye-off-outline'],
       pointMulti: false,
@@ -620,17 +620,15 @@ async function main(){
 
   console.log(`staff user management`);
   const SEEDED_MODERATED_COURSE_URL = "/courses/3/";
-  // await wizard.navigate('users/2/token/staff');
-
-   for (const language of LANGUAGES) {
+  for (const language of LANGUAGES) {
      wizard.setLanguage(language);
-     await wizard.navigate(language + SEEDED_MODERATED_COURSE_URL);
+     await wizard.navigate(path.join(language, SEEDED_MODERATED_COURSE_URL));
      await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.course_users'),
      {
        pointToSelectors: ['i.mdi.mdi-24.mdi-account-multiple']
      })
 
-     await wizard.navigate(language + SEEDED_MODERATED_COURSE_URL + 'members/');
+     await wizard.navigate(path.join(language, SEEDED_MODERATED_COURSE_URL,'members'));
      await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.users'));
      await wizard.screenshot(path.join(USER_MANAGEMENT_PATH, 'staff.users_edit_permissions'), {
       pointMulti: false,
@@ -651,7 +649,7 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     for (const series of SERIES[language]) {
-       await wizard.navigate(course_urls.OPEN[language] + 'series/new/', useBase = false);
+       await wizard.navigate(path.join(course_urls.OPEN[language], 'series', 'new'), useBase = false);
        await wizard.typeIn(`input#series_name`, series.title);
        await wizard.select(`select#series_visibility`, series.visibility);
        await wizard.page.evaluate((deadline) => {
@@ -758,7 +756,7 @@ async function main(){
        pointToSelectors: [`div.alert.alert-info.hidden-print`]
     });
 
-    await wizard.navigate(course_urls.OPEN[language] + 'manage_series/', useBase = false);
+    await wizard.navigate(path.join(course_urls.OPEN[language], 'manage_series', useBase = false);
     await wizard.screenshot('staff.course_manage_series_page.png');
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.course_new_series_button'), {
       pointToSelectors: ['a[href$="/series/new/"]'],
@@ -772,7 +770,7 @@ async function main(){
       pointMulti: false,
     })
 
-    await wizard.navigate(series_urls[language]['hidden'] + 'edit/', useBase = false);
+    await wizard.navigate(path.join(series_urls[language]['hidden'],'edit'), useBase = false);
     await wizard.scrollTo(`#access_token`);
 
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_hidden_link'), {
@@ -782,7 +780,7 @@ async function main(){
       pointToSelectors: ['a[href$="/reset_token/?type=access_token"]'],
     });
 
-    await wizard.navigate(series_urls[language]['open'] + 'edit/', useBase = false);
+    await wizard.navigate(path.join(series_urls[language]['open'], 'edit'), useBase = false);
     await wizard.scrollTo('input#filter-query-tokenfield');
     await wait(1000);
     await wizard.typeIn('input#filter-query-tokenfield', 'Echo Java');
@@ -802,7 +800,7 @@ async function main(){
       pointMulti: false,
     });
 
-    await wizard.navigate(course_urls.OPEN[language] + 'series/new/', useBase = false);
+    await wizard.navigate(path.join(course_urls.OPEN[language], 'series', 'new'), useBase = false);
 
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_new'));
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_new_submit'), {
@@ -822,7 +820,7 @@ async function main(){
         pointToSelectors: [`i.mdi-close`],
     });
 
-    await wizard.navigate(`${series_urls[language]['open']}/edit`, useBase = false);
+    await wizard.navigate(path.join(series_urls[language]['open'], 'edit'), useBase = false);
 
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.series_edit_submit'), {
         pointToSelectors: [`button[form^="edit_series_"]`]
