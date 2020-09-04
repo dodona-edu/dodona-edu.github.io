@@ -1,6 +1,7 @@
 name: Run screenshot bot to images in docs
 
-on: [ workflow_dispatch ]
+on:
+  push:
 
 jobs:
   run-screenshot-bot:
