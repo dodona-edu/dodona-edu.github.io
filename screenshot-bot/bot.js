@@ -857,13 +857,13 @@ async function main(){
     wizard.setLanguage(language);
     await wizard.navigate(`http://dodona.localhost:3000/?locale=${language}`, false);
 
-    await wizard.screenshot(`${COURSES_PATH}student.explore_courses.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'student.explore_courses.png'), {
       pointToSelectors: [`a[href$="/${language}/courses/"]`],
     });
 
     await wizard.click('li.dropdown', elem => !!elem.querySelector('a[href*="/sign_out/"]'));
 
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}student.user_menu_my_profile.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'student.user_menu_my_profile'), {
       pointToSelectors: [`li.dropdown ul.dropdown-menu a[href$="/${language}/users/3/"]`],
     });
   }
@@ -871,12 +871,12 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`${language}/users/3/`);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}student.edit_profile.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'student.edit_profile'), {
       pointToSelectors: [`a[href$="/${language}/users/3/edit/"]`],
     });
 
     await wizard.navigate(`${language}/users/3/edit/`);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}student.edit_timezone.png`, {
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'student.edit_timezone'), {
       pointToSelectors: ['select#user_time_zone']
     });
   }
@@ -893,7 +893,7 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`?locale=${language}`);
-    await wizard.screenshot(`${LOGIN_AND_SETTINGS_PATH}student.wrong_timezone.png`);
+    await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'student.wrong_timezone'));
   }
 
   // Set the right timezone to get rid of the warning without accidentally hiding other warnings.
@@ -910,24 +910,24 @@ async function main(){
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`${language}/courses/`);
-    await wizard.screenshot(`${STUDENT_GUIDES_PATH}student.courses.png`);
+    await wizard.screenshot(path.join(STUDENT_GUIDES_PATH, 'student.courses'));
 
     await wizard.navigate(`${course_urls.OPEN[language]}`, false);
 
-    await wizard.screenshot(`${COURSES_PATH}student.breadcrumb_course.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'student.breadcrumb_course'), {
       pointToSelectors: ['div.crumb a[href="#"]'],
     });
 
-    await wizard.screenshot(`${COURSES_PATH}register.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'register'), {
       cropSelector: ['div.col-sm-6.col-xs-12'],
       cropPredicate: (elem) => !!elem.querySelector('div.callout'),
     });
 
     await wizard.navigate(course_urls.HIDDEN[language], false);
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}student.hidden_course_unregistered_denied_message.png`);
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'student.hidden_course_unregistered_denied_message'));
 
     await wizard.navigate(course_urls.HIDDEN_REGISTRATION[language], false);
-    await wizard.screenshot(`${CREATING_A_COURSE_PATH}student.hidden_course_unregistered_link_message.png`);
+    await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'student.hidden_course_unregistered_link_message'));
   }
 
   for (const language of LANGUAGES) {
@@ -935,12 +935,12 @@ async function main(){
     await wizard.navigate(`${course_urls.OPEN[language]}subscribe`, false);
 
     await wizard.navigate(course_urls.OPEN[language], false);
-    await wizard.screenshot(`${COURSES_PATH}student.unregister.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'student.unregister'), {
       pointToSelectors: ['form[action$="/unsubscribe/"] input[type="submit"]'],
     });
 
     await wizard.navigate(course_urls.MODERATED[language], false);
-    await wizard.screenshot(`${COURSES_PATH}moderated_register.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'moderated_register'), {
       cropSelector: ['div.col-sm-6.col-xs-12'],
       cropPredicate: elem => !!elem.querySelector('div.callout'),
     });
@@ -951,13 +951,13 @@ async function main(){
     await wizard.navigate(`${course_urls.MODERATED[language]}subscribe/`, false);
 
     await wizard.navigate(course_urls.MODERATED[language], false);
-    await wizard.screenshot(`${COURSES_PATH}moderated_waiting.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'moderated_waiting'), {
       cropSelector: ['div.col-sm-6.col-xs-12'],
       cropPredicate: elem => !!elem.querySelector('div.callout'),
     });
 
     await wizard.navigate(`${language}/courses/5/`);
-    await wizard.screenshot(`${COURSES_PATH}closed_registration.png`, {
+    await wizard.screenshot(path.join(COURSES_PATH, 'closed_registration'), {
       cropSelector: ['div.col-sm-6.col-xs-12'],
       cropPredicate: elem => !!elem.querySelector('div.callout'),
     });
@@ -991,21 +991,21 @@ async function main(){
     wizard.setLanguage(language);
     await wizard.navigate(course_urls.OPEN[language]);
     await wizard.scrollTo(`a[href*="/activities/${exerciseNamesToIDs[language]['Echo']}/"]`)
-    await wizard.screenshot(`${EXERCISES_PATH}student.course_exercise_selection.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.course_exercise_selection'), {
       pointToSelectors: [`a[href*="/activities/${exerciseNamesToIDs[language]['Echo']}/"]`],
     });
 
     await wizard.clickAndNavigate(`a[href*="/activities/${exerciseNamesToIDs[language]['Echo']}/"]`);
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_start.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_start'));
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_crumbs.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_crumbs'), {
       pointToSelectors: ['.crumb a']
     });
 
     await wizard.scrollToBottom();
     await enterPythonFile(wizard, `./solutions/Echo.correct.py`);
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_before_submit.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_before_submit'), {
       pointToSelectors: ['#editor-process-btn'],
     });
 
@@ -1013,17 +1013,17 @@ async function main(){
     await wait(20000);
     submissions++;
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_feedback_correct_tab.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_feedback_correct_tab'));
 
     await wizard.click('a#activity-submission-link');
     await wait(1000);
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_submissions_tab.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_submissions_tab'), {
       pointToSelectors: ['a#activity-submission-link'],
     });
 
     await wizard.navigate(`http://dodona.localhost:3000/${language}/submissions/${submissions}/`, false);
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_feedback_correct_page.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_feedback_correct_page'));
 
     // TODO: Add curling exercise to repo for fancy feedback screenshot. 
     // await wizard.navigate(`${course_urls.OPEN[language]}/exercises/${exerciseNamesToIDs[language]['Curling']}/`);
@@ -1035,30 +1035,30 @@ async function main(){
     await wait(20000);
     submissions++;
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_feedback_incorrect_tab.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_feedback_incorrect_tab'));
 
     // await wizard.click('a[href="#score-1"]');
     // await wait(500);
     // await wizard.screenshot(`student.exercise_feedback_visual.png`);
 
     await wizard.navigate(`?locale=${language}`);
-    await wizard.screenshot(`${EXERCISES_PATH}student.course_submissions.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.course_submissions'), {
       pointToSelectors: [`div.course a.card-title-link[href*="/submissions/"]`],
     });
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_all_submissions_page.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_all_submissions_page'), {
       pointToSelectors: [`a[href$="/activities/${exerciseNamesToIDs[language]['Echo']}/submissions/"]`],
     });
 
     await wizard.click('li.dropdown', elem => !!elem.querySelector('a[href*="/sign_out/"]'));
-    await wizard.screenshot(`${EXERCISES_PATH}student.all_submissions_link.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.all_submissions_link'), {
       pointToSelectors: [`a[href^="/${language}/submissions/"]`],
     });
 
     await wizard.navigate(`/${language}/submissions/`);
-    await wizard.screenshot(`${EXERCISES_PATH}student.all_submissions.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.all_submissions'));
 
-    await wizard.screenshot(`${EXERCISES_PATH}student.submissions_to_exercise_feedback.png`, {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.submissions_to_exercise_feedback'), {
       pointToSelectors: [`a[href$="/submissions/${first_submission}/"]`],
     });
   }
@@ -1077,10 +1077,10 @@ async function main(){
     await wizard.click('a[href="#code-1"]');
     await wait(500);
     await wizard.scrollToBottom();
-    await wizard.screenshot(`${EXERCISES_PATH}student.exercise_lint_error.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_lint_error'));
 
     await wizard.navigate(course_urls.OPEN[language], false);
-    await wizard.screenshot(`${EXERCISES_PATH}student.deadline_series_warning.png`);
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'student.deadline_series_warning'));
   }
 
   wizard.setLanguage('');
@@ -1178,7 +1178,7 @@ async function main(){
     wizard.setLanguage(language);
     await wizard.navigate(`${series_urls[language]['open']}scoresheet/`, false);
 
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.scoresheet.png`);
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.scoresheet'));
 
 
     // This does the same as clicking on the icon representing the
@@ -1188,7 +1188,7 @@ async function main(){
     await wizard.navigate(href, false);
     await wait(1000);
 
-    await wizard.screenshot(`${EXERCISE_SERIES_MANAGEMENT_PATH}staff.feedback_evaluate.png`, {
+    await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.feedback_evaluate'), {
       pointToSelectors: [`a[href$="/evaluate/"]`],
     });
   }
