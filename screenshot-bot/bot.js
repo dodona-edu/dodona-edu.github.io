@@ -847,26 +847,21 @@ async function main(){
   // STUDENT
   // =========================================================
 
-  await wizard.navigate('/nl/users/3/token/student');
+  await wizard.navigate('users/3/token/student');
   console.log('homepage');
 
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
     await wizard.navigate(`?locale=${language}`);
-
-    await wizard.screenshot(path.join(COURSES_PATH, 'student.explore_courses.png'), {
+    await wizard.screenshot(path.join(COURSES_PATH, 'student.explore_courses'), {
       pointToSelectors: [`a[href$="/${language}/courses/"]`],
     });
 
     await wizard.click('li.dropdown', elem => !!elem.querySelector('a[href*="/sign_out/"]'));
-
     await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'student.user_menu_my_profile'), {
       pointToSelectors: [`li.dropdown ul.dropdown-menu a[href$="/${language}/users/3/"]`],
     });
-  }
 
-  for (const language of LANGUAGES) {
-    wizard.setLanguage(language);
     await wizard.navigate(`${language}/users/3/`);
     await wizard.screenshot(path.join(LOGIN_AND_SETTINGS_PATH, 'student.edit_profile'), {
       pointToSelectors: [`a[href$="/${language}/users/3/edit/"]`],
@@ -906,10 +901,10 @@ async function main(){
 
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
-    await wizard.navigate(`${language}/courses/`);
+    await wizard.navigate(path.join(language, 'courses'));
     await wizard.screenshot(path.join(STUDENT_GUIDES_PATH, 'student.courses'));
 
-    await wizard.navigate(`${course_urls.OPEN[language]}`, false);
+    await wizard.navigate(course_urls.OPEN[language], false);
 
     await wizard.screenshot(path.join(COURSES_PATH, 'student.breadcrumb_course'), {
       pointToSelectors: ['div.crumb a[href="#"]'],
@@ -925,10 +920,7 @@ async function main(){
 
     await wizard.navigate(course_urls.HIDDEN_REGISTRATION[language], false);
     await wizard.screenshot(path.join(CREATING_A_COURSE_PATH, 'student.hidden_course_unregistered_link_message'));
-  }
 
-  for (const language of LANGUAGES) {
-    wizard.setLanguage(language);
     await wizard.navigate(`${course_urls.OPEN[language]}subscribe`, false);
 
     await wizard.navigate(course_urls.OPEN[language], false);
@@ -941,11 +933,9 @@ async function main(){
       cropSelector: ['div.col-sm-6.col-xs-12'],
       cropPredicate: elem => !!elem.querySelector('div.callout'),
     });
-  }
 
-  for (const language of LANGUAGES) {
-    wizard.setLanguage(language);
-    await wizard.navigate(`${course_urls.MODERATED[language]}subscribe/`, false);
+    // register for moderated course
+    await wizard.navigate(path.join(course_urls.MODERATED[language], 'subscribe'), useBase = false);
 
     await wizard.navigate(course_urls.MODERATED[language], false);
     await wizard.screenshot(path.join(COURSES_PATH, 'moderated_waiting'), {
@@ -953,7 +943,7 @@ async function main(){
       cropPredicate: elem => !!elem.querySelector('div.callout'),
     });
 
-    await wizard.navigate(`${language}/courses/5/`);
+    await wizard.navigate(path.join(language, 'courses/5/'));
     await wizard.screenshot(path.join(COURSES_PATH, 'closed_registration'), {
       cropSelector: ['div.col-sm-6.col-xs-12'],
       cropPredicate: elem => !!elem.querySelector('div.callout'),
@@ -967,7 +957,7 @@ async function main(){
   };
 
   for (const language of LANGUAGES) {
-    await wizard.navigate(course_urls.OPEN[language], false);
+    await wizard.navigate(course_urls.OPEN[language], useBase = false);
     exerciseNamesToIDs[language] = await wizard.page.evaluate((url) => {
       const table = document.querySelector('div#series-listing');
       const exercise_links = table.querySelectorAll('a[href*="/activities/"]');
@@ -979,7 +969,7 @@ async function main(){
         }
       }
       return result;
-    }, course_urls.OPEN[language].replace('http://dodona.localhost:3000', ''));
+    }, course_urls.OPEN[language].replace(wizard.baseUrl, ''));
   }
 
   // Number of submissions on a freshly seeded database.
@@ -1019,13 +1009,13 @@ async function main(){
       pointToSelectors: ['a#activity-submission-link'],
     });
 
-    await wizard.navigate(`http://dodona.localhost:3000/${language}/submissions/${submissions}/`, false);
+    await wizard.navigate(path.join(language, 'submissions', submissions.toString()));
     await wizard.screenshot(path.join(EXERCISES_PATH, 'student.exercise_feedback_correct_page'));
 
     // TODO: Add curling exercise to repo for fancy feedback screenshot. 
     // await wizard.navigate(`${course_urls.OPEN[language]}/exercises/${exerciseNamesToIDs[language]['Curling']}/`);
     // await enterPythonFile(wizard, `./solutions/Curling.incorrect.${language}.py`);
-    await wizard.navigate(`${course_urls.OPEN[language]}/exercises/${exerciseNamesToIDs[language]['Echo']}/`);
+    await wizard.navigate(path.join(course_urls.OPEN[language], 'exercises', exerciseNamesToIDs[language]['Echo']));
     await enterPythonFile(wizard, `./solutions/Echo.incorrect.py`);
 
     await wizard.click('#editor-process-btn');
@@ -1052,7 +1042,7 @@ async function main(){
       pointToSelectors: [`a[href^="/${language}/submissions/"]`],
     });
 
-    await wizard.navigate(`/${language}/submissions/`);
+    await wizard.navigate(path.join(language, 'submissions'));
     await wizard.screenshot(path.join(EXERCISES_PATH, 'student.all_submissions'));
 
     await wizard.screenshot(path.join(EXERCISES_PATH, 'student.submissions_to_exercise_feedback'), {
@@ -1081,7 +1071,6 @@ async function main(){
   }
 
   wizard.setLanguage('');
-  await wizard.navigate('/nl/submissions');
   await wizard.page.evaluate(() => {
     document.querySelector('body').innerHTML = 
         [
@@ -1103,37 +1092,16 @@ async function main(){
   // await wizard.screenshot('submission_icons/default.png', { 
   //   cropSelector: '.glyphicon-minus'
   // });
-
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/correct.png`, {
-    cropSelector: '.mdi-check'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/wrong.png`, {
-    cropSelector: '.mdi-close'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/time_limit_exceeded.png`, {
-    cropSelector: '.mdi-alarm'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/running.png`, {
-    cropSelector: '.mdi-timer-sand-empty'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/queued.png`, {
-    cropSelector: '.mdi-timer-sand-empty'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/runtime_error.png`, {
-    cropSelector: '.mdi-flash'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/compilation_error.png`, {
-    cropSelector: '.mdi-flash-circle'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/memory_limit_exceeded.png`, {
-    cropSelector: '.mdi-memory'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/output_limit_exceeded.png`, {
-    cropSelector: '.mdi-script-text'
-  });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/internal_error.png`, {
-    cropSelector: '.mdi-alert'
-  });
+  const SUBMISSION_ICONS = [
+   ['correct', '.mdi-check'], ['wrong', '.mdi-close'], ['time_limit_exceeded', '.mdi-alarm'], ['running', '.mdi-timer-sand-empty'],
+   ['queued', '.mdi-timer-sand-empty'], ['runtime_error', '.mdi-flash'], ['compilation_error', '.mdi-flash-circle'],
+   ['memory_limit_exceeded', '.mdi-memory'], ['output_limit_exceeded', '.mdi-script-text'], ['internal_error', '.mdi-alert']
+  ];
+  for (const [image_name, cropSelector] of SUBMISSION_ICONS) {
+    await wizard.screenshot(path.join(EXERCISES_PATH, 'submission_icons', image_name), {
+      cropSelector: cropSelector,
+    });
+  }
 
   await wizard.page.evaluate(() => {
     document.querySelector('body').innerHTML = 
@@ -1148,40 +1116,31 @@ async function main(){
           .join('');
     });
 
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/wrong.png`, {
-    cropSelector: '.mdi-close'
-  });
+  const COURSE_EXERCISE_STATUS_ICONS = [
+    ['wrong', '.mdi-close'], ['after_deadline', '.mdi-alarm-off'], ['before_deadline', '.mdi-alarm-check'], ['correct', '.mdi-check']
+  ];
+  for (const [image_name, cropSelector] of COURSE_EXERCISE_STATUS_ICONS){
+    await wizard.screenshot(path.join(COURSES_PATH, 'course_exercise_status_icons', image_name), {
+      cropSelector: cropSelector,
+    })
+  }
 
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/after_deadline.png`, {
-    cropSelector: '.mdi-alarm-off'
-  });
-
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/before_deadline.png`, {
-    cropSelector: '.mdi-alarm-check'
-  });
-
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/correct.png`, {
-    cropSelector: '.mdi-check'
-  });
-
-  await wizard.navigate('users/2/token/staff')
   
   const titles = {
     en: "Wrong",
     nl: "Fout"
   }
 
+  await wizard.navigate('users/2/token/staff')
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
-    await wizard.navigate(`${series_urls[language]['open']}scoresheet/`, false);
-
+    await wizard.navigate(path.join(series_urls[language]['open'], 'scoresheet'), false);
     await wizard.screenshot(path.join(EXERCISE_SERIES_MANAGEMENT_PATH, 'staff.scoresheet'));
-
 
     // This does the same as clicking on the icon representing the
     // submission status in the scoresheet of a series.
-    let elem = await wizard.page.$(`a[title="${titles[language]}"]`);
-    let href = (await (await elem.getProperty("href")).jsonValue());
+    const elem = await wizard.page.$(`a[title="${titles[language]}"]`);
+    const href = await elem.getProperty("href").then(hrefProperty => hrefProperty.jsonValue());
     await wizard.navigate(href, false);
     await wait(1000);
 
@@ -1190,7 +1149,6 @@ async function main(){
     });
   }
   
-
   await wizard.close();
 
   // We manually exit because the navigation after cloning leaves behind an unresolved promise.
