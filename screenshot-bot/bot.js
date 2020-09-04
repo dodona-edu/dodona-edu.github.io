@@ -1106,34 +1106,34 @@ async function main(){
   //   cropSelector: '.glyphicon-minus'
   // });
 
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/correct.png`, {
+  await wizard.screenshot(`images/submission_icons/correct.png`, {
     cropSelector: '.mdi-check'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/wrong.png`, {
+  await wizard.screenshot(`images/submission_icons/wrong.png`, {
     cropSelector: '.mdi-close'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/time_limit_exceeded.png`, {
+  await wizard.screenshot(`images/submission_icons/time_limit_exceeded.png`, {
     cropSelector: '.mdi-alarm'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/running.png`, {
+  await wizard.screenshot(`images/submission_icons/running.png`, {
     cropSelector: '.mdi-timer-sand-empty'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/queued.png`, {
+  await wizard.screenshot(`images/submission_icons/queued.png`, {
     cropSelector: '.mdi-timer-sand-empty'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/runtime_error.png`, {
+  await wizard.screenshot(`images/submission_icons/runtime_error.png`, {
     cropSelector: '.mdi-flash'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/compilation_error.png`, {
+  await wizard.screenshot(`images/submission_icons/compilation_error.png`, {
     cropSelector: '.mdi-flash-circle'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/memory_limit_exceeded.png`, {
+  await wizard.screenshot(`images/submission_icons/memory_limit_exceeded.png`, {
     cropSelector: '.mdi-memory'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/output_limit_exceeded.png`, {
+  await wizard.screenshot(`images/submission_icons/output_limit_exceeded.png`, {
     cropSelector: '.mdi-script-text'
   });
-  await wizard.screenshot(`${EXERCISES_PATH}submission_icons/internal_error.png`, {
+  await wizard.screenshot(`images/submission_icons/internal_error.png`, {
     cropSelector: '.mdi-alert'
   });
 
@@ -1150,19 +1150,19 @@ async function main(){
           .join('');
     });
 
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/wrong.png`, {
+  await wizard.screenshot(`images/course_exercise_status_icons/wrong.png`, {
     cropSelector: '.mdi-close'
   });
 
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/after_deadline.png`, {
+  await wizard.screenshot(`images/course_exercise_status_icons/after_deadline.png`, {
     cropSelector: '.mdi-alarm-off'
   });
 
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/before_deadline.png`, {
+  await wizard.screenshot(`images/course_exercise_status_icons/before_deadline.png`, {
     cropSelector: '.mdi-alarm-check'
   });
 
-  await wizard.screenshot(`${COURSES_PATH}course_exercise_status_icons/correct.png`, {
+  await wizard.screenshot(`images/course_exercise_status_icons/correct.png`, {
     cropSelector: '.mdi-check'
   });
 
