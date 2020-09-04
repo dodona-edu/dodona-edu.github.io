@@ -3,6 +3,7 @@ const Jimp = require('jimp');
 const process = require('process');
 const fs = require('fs');
 const readline = require('readline');
+const path = require('path');
 
 const BASE_URL = 'http://dodona.localhost:3000/';
 
@@ -10,9 +11,9 @@ const IMAGE_FOLDER_PATH = '../';
 
 // Student paths
 const STUDENT_GUIDES_PATH = 'guides/for-students/';
-const LOGIN_AND_SETTINGS_PATH = `${STUDENT_GUIDES_PATH}login-and-settings/`;
-const COURSES_PATH = `${STUDENT_GUIDES_PATH}courses/`;
-const EXERCISES_PATH = `${STUDENT_GUIDES_PATH}exercises/`;
+const LOGIN_AND_SETTINGS_PATH = path.join(STUDENT_GUIDES_PATH, 'login-and-settings/');
+const COURSES_PATH = path.join(STUDENT_GUIDES_PATH, 'courses/');
+const EXERCISES_PATH = path.join(STUDENT_GUIDES_PATH, 'exercises/');
 
 // Teacher/Staff paths
 const COURSE_MANAGEMENT_PATH = 'guides/course-management/';
@@ -21,7 +22,7 @@ const EXERCISE_SERIES_MANAGEMENT_PATH = `guides/exercise-series-management/`;
 const USER_MANAGEMENT_PATH = 'guides/user-management/'
 
 const IMAGE_FILE_EXTENSION = 'png';
-const SEEDED_COURSE_URL = language => `${BASE_URL}${language}/courses/5/`;
+const SEEDED_COURSE_URL = language => path.join(BASE_URL, language, '/courses/5/');
 const LANGUAGES = ['nl', 'en'];
 const TRANSLATIONS = {
   nl: {
