@@ -41,7 +41,7 @@ jobs:
 
       - name: Seed database
         run: |
-          submissions=$(bundle exec rake db:seed | tail -n 1)
+          bundle exec rake db:seed
           rails server
 
       - shell: bash
