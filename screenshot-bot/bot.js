@@ -852,7 +852,7 @@ async function main(){
 
   for (const language of LANGUAGES) {
     wizard.setLanguage(language);
-    await wizard.navigate(`http://dodona.localhost:3000/?locale=${language}`, false);
+    await wizard.navigate(`?locale=${language}`);
 
     await wizard.screenshot(`${COURSES_PATH}student.explore_courses.png`, {
       pointToSelectors: [`a[href$="/${language}/courses/"]`],
