@@ -17,3 +17,7 @@ Here you'll find a number of guides, primarily focused on teachers.
 ## Only in Dutch
 * [Van start met Dodona als student](for-students)
 * [Van start met Dodona als leerkracht](getting-started)
+* [Een nieuwe cursus aanmaken](creating-a-course)
+* [Cursusbeheer](course-management)
+* [Gebruikersbeheer](user-management)
+* [Oefeningenreeksenbeheer](exercise-series-management)
