@@ -10,9 +10,11 @@ description: "Tutorial: van start met Dodona als student"
 
 Dodona is een online oefenplatform om te leren programmeren. De webapplicatie werd ontwikkeld aan de Universiteit Gent om practica aan grote groepen studenten te ondersteunen. Dodona focust daarom in de eerste plaats op het automatisch testen en geven van feedback op ingediende oplossingen van programmeeroefeningen. Op dit moment ondersteunt Dodona de programmeertalen Python, JavaScript, Java, C#, bash, Prolog, Haskell en R.
 
+Dodona wordt gratis aangeboden voor educatieve doeleinden.
+
 ## Opdeling van de handleiding
 
-De handleding is verdeeld in drie onderdelen.
+De handleding is onderverdeeld in drie onderdelen.
 
 * Het eerste deel [Aanmelden & gebruikersinstellingen](./login-and-settings/) legt uit hoe je een gebruikersaccount op Dodona kan aanmaken en hoe je die kan personaliseren.
 * Het tweede onderdeel [Cursussen op Dodona](./courses/) wordt besproken hoe je je kan registreren en uitschrijven voor een cursus, hoe je kan navigeren naar cursus en hoe je de indienstatus moet interpreteren.
