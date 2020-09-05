@@ -3,8 +3,8 @@ title: "[nl] Oefeningen oplossen"
 description: "Tutorial: oefeningen oplossen"
 ---
 
-::: warning Warning
-This page has not been translated into English yet. 
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
 :::
 
 # Oefeningen oplossen
