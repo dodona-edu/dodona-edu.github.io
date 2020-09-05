@@ -3,6 +3,10 @@ title: "[nl] Oefeningenreeksenbeheer"
 description: "Tutorial: oefeningenreeksenbeheer"
 ---
 
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
+
 # Oefeningenreeksenbeheer
 
 This guide is currently only available in Dutch.

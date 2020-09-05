@@ -3,6 +3,10 @@ title: "[nl] Een nieuwe cursus aanmaken"
 description: "Tutorial: cursus aanmaken"
 ---
 
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
+
 # Cursus aanmaken
 
 This guide is currently only available in Dutch.
