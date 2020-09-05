@@ -15,131 +15,124 @@ For now, this page is only available in Dutch. Sorry!
 
 ## Navigeren naar een oefening
 
-Op dodona kan je naar twee soorten oefeningen navigeren:
-- Oefeningen dat tot een cursus behoren, kan je vinden door de pagina van een cursus te bezoeken.
-    ![image](./student.course_exercise_selection.png)
-- Oefeningen dat niet tot een cursus behoren, kan je vinden door het [activities overzicht](https://dodona.ugent.be/nl/activities/) te bezoeken dat een lijst bevat van alle oefeningen.
+Oefeningen op Dodona kunnen ofwel voorkomen in een cursus, ofwel daarbuiten.
 
-::: tip
+- Oefeningen die tot een cursus behoren, kan je vinden door de pagina van een cursus te bezoeken.
+    ![image](./student.course_exercise_selection.png)
+- Oefeningen die niet tot een cursus behoren, kan je vinden door het [activiteitenoverzicht](https://dodona.ugent.be/nl/activities/) te bezoeken dat een lijst bevat van alle oefeningen.
+
+::: tip Tip
 Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je het laatst oplossingen voor ingediend hebt over alle cursussen heen. Zo kan je op een snelle manier een oefening waar je recent op hebt gewerkt selecteren door op de naam van de oefening te klikken.
 
 ![image](./student.exercise_all_submissions_page.png)
 
 :::
 
-Na selectie van een oefening navigeer je naar de **oefeningpagina**. Bovenaan staat een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde [taal](../login-and-settings/../login-and-settings/#selecteren-van-de-taal). Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
+Op elke oefeningenpagina staat bovenaan een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde taal. Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
 ![image](./student.exercise_start.png)
 
 ::: tip
 
-Als je een actie aan het uitvoeren bent op een oefening dan verschijnt de naam van de oefening naast `Dodona` aan de linkerkant van de navigatiebalk, eventueel voorafgegaan door de naam van de [cursus](../courses/) en de naam van de oefeningenreeks waaruit je de oefening geselecteerd hebt. Door in de navigatiebalk op de naam van de oefening te klikken, navigeer je naar de oefeningpagina. Door in de navigatiebalk op de naam van de oefeningenreeks te klikken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je naar de cursuspagina.
+Als je een actie aan het uitvoeren bent op een oefening dan verschijnt de naam van de oefening naast `Dodona` aan de linkerkant van de navigatiebalk, eventueel voorafgegaan door de naam van de cursus en de naam van de oefeningenreeks waaruit je de oefening geselecteerd hebt. Door in de navigatiebalk op de naam van de oefening te klikken, navigeer je naar de oefeningpagina. Door in de navigatiebalk op de naam van de oefeningenreeks te klikken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je naar de cursuspagina.
 
 ![image](./student.exercise_crumbs.png)
 :::
 
 ## Indienen van een oplossing
 
-Op een oefeningpagina staat onder het paneel met de beschrijving van de [oefening](#navigeren-naar-een-oefening) een tweede paneel waarmee je een [oplossing](#navigeren-naar-een-oplossing) kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de **code editor**. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. Je mag zoveel indienen als je wil, enkel het resultaat van jouw laatste oplossing wordt in rekening gebracht. Bij elke oplossing wordt [feedback](#interpreteren-van-feedback) door de [judge](#interpreteren-van-feedback) gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
+Op een oefeningpagina staat onder het paneel met de beschrijving van de oefening een tweede paneel waarmee je een oplossing kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de *code editor*. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. Je mag zoveel indienen als je wil, enkel het resultaat van jouw laatste oplossing wordt in rekening gebracht. Bij elke oplossing wordt [feedback](#interpreteren-van-feedback) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
 
 ![image](./student.exercise_before_submit.png)
 
-::: tip
+::: tip Tip
 
-Om een aantal belangrijke redenen **raden we ten stelligste af om rechtstreeks broncode te schrijven in de code editor van Dodona**. In plaats daarvan adviseren we om een [Integrated Development Environment](https://nl.wikipedia.org/wiki/Integrated_development_environment) (IDE) te gebruiken voor het schrijven, uitvoeren, testen en debuggen van broncode. Voer je broncode eerst uit op een aantal testgevallen om na te gaan dat ze geen grammaticale en logische fouten meer bevat. Gebruik daarvoor bijvoorbeeld de testgevallen die in de beschrijving van de oefening gegeven werden. Als je ze wilt uittesten op een groter aantal testgevallen dien ze dan in op Dodona. Om logische fouten op te sporen kan je de debugger van je IDE gebruiken. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere programmeeropdrachten aan te pakken dan enkel de oefeningen uit Dodona.
+Alhoewel je perfect kan programmeren in de editor op Dodona zelf, raden we niet aan om alle oefeningen hierin op te lossen. In plaats daarvan adviseren we om een [Integrated Development Environment](https://nl.wikipedia.org/wiki/Integrated_development_environment) (IDE) te gebruiken voor het schrijven, uitvoeren, testen en debuggen van broncode. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere problemen aan te pakken dan enkel de oefeningen uit Dodona.
 :::
 
-Na het indienen van een [oplossing](#navigeren-naar-een-oplossing) wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de [cursus](../courses/) hebt ingediend voor de oefening. Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
+Na het indienen van een oplossing wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de cursus hebt ingediend voor de oefening. Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing.
 
-Om overbelasting van het platform tegen te gaan, worden [oplossingen](#navigeren-naar-een-oplossing) niet onmiddellijk beoordeeld na het indienen maar worden ze eerst in een **wachtrij** geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de status `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij (*first-in-first-out*) geselecteerd en beoordeeld door een [judge](#interpreteren-van-feedback). Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`.
+Na het indienen wordt je oplossing in een wachtrij geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de status `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij uitgevoerd en beoordeeld door het systeem. Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`. Meestal duurt dit maar enkele seconden.
 
-Zodra de judge klaar is met het beoordelen van je oplossing krijgt ze haar finale status en wordt de [feedbackpagina](#feedbackpagina) met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
+Zodra de judge klaar is met het beoordelen van je oplossing krijgt ze haar finale status en wordt de feedbackpagina met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
 
 ![image](./student.exercise_feedback_correct_tab.png)
 
 ## Navigeren naar een oplossing
 
-Je kan op Dodona naar je ingediende oplossingen op verschillende manieren navigeren. Voor elke manier zullen de oplossingen door Dodona op een andere manier gegroepeerd worden. Hieronder volgen de drie belangrijkste manieren:
+Je kan op Dodona op verschillende manieren naar je ingediende oplossingen navigeren. Voor elke manier zullen de oplossingen door Dodona op een andere manier gegroepeerd worden. Hieronder volgen de drie belangrijkste manieren:
 
 - Je kan al jouw oplossingen van één oefening bekijken door op de `Oplossingen` tab op de relevante oefeningenpagina te klikken.
 
 ![image](./student.exercise_submissions_tab.png)
 
-- Je kan al jouw oplossingen zien door in het gebruikersmenu in de navigatiebalk op `Mijn oplossingen` te klikken.
-
-![image](./student.all_submissions_link.png)
-
 - Je kan al jouw oplossingen binnen een cursus bekijken door op de `Ingediende oplossingen` van de relevante cursus kaart te klikken.
 
 ![image](./student.course_submissions.png)
 
-Een oplossingenoverzicht bevat voor elke oplossing het tijdstip van [indienen](#indienen-van-een-oplossing), de status en een korte [samenvatting](#samenvatting) van de [feedback](#interpreteren-van-feedback). Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat correspondeert met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
+- Je kan alle oplossingen die je ooit hebt ingediend zien door in het gebruikersmenu in de navigatiebalk op `Mijn oplossingen` te klikken.
+
+![image](./student.all_submissions_link.png)
+
+Een oplossingenoverzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de feedback. Vóór elke oplossing staat ook nog een icoontje dat correspondeert met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
 ![image](./student.all_submissions.png)
 
-<h1 id="feedbackpagina"/>
-
-Je kunt een oplossing selecteren door in een oplossingenoverzicht op het groter dan symbool te klikken aan rechterkant van de oplossing. Hierdoor navigeer je naar de **feedbackpagina** met de gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing.
+Je kunt een oplossing selecteren door in een oplossingenoverzicht op het pijltje te klikken aan rechterkant van de oplossing. Hierdoor navigeer je naar de feedbackpagina met de gedetailleerde feedback over de oplossing.
 
 ![image](./student.submissions_to_exercise_feedback.png)
 
 ## Interpreteren van feedback
 
-Op de feedbackpagina staat gedetailleerde **feedback** over een [oplossing](#navigeren-naar-een-oplossing) die je [ingediend](#indienen-van-een-oplossing) hebt voor een [oefening](#navigeren-naar-een-oefening). Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een **judge** die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
+Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
 
 ![image](./student.exercise_feedback_correct_page.png)
 
-Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de [oplossing](#navigeren-naar-een-oplossing):
+Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oplossing:
+
+- `Opgave`: De **naam** van de oefening waarvoor de oplossing werd ingediend. Klik op de naam om naar de oefeningpagina te navigeren.
+
+- `Cursus`: De **naam van de cursus** waarbinnen de oplossing werd ingediend. Klik op de naam om naar de cursuspagina te navigeren. Dit informatieveld ontbreekt als de oplossing niet binnen de context van een cursus werd ingediend.
+
+- `Ingediend`: Het **tijdstip** waarop de oplossing werd ingediend. Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld *ongeveer 2 uur geleden*. Als je de cursor boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
+
+- `Status`: De **status** die Dodona of de judge aan de oplossing heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de oplossing wordt weergegeven. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
+
+    | status               | icoontje             | betekenis            |
+    |----------------------|----------------------|----------------------|
+    | `In de wachtrij…` | ![image](../../../../images/submission_icons/queued.png) | oplossing staat in  de wachtrij |
+    | `Aan het uitvoeren...` | ![image](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
+    | `Correct` | ![image](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
+    | `Fout` | ![image](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
+    | `Uitvoeringsfout` | ![image](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
+    | `Timeout` | ![image](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
+    | `Geheugenfout` | ![image](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
+    | `Compilatiefout` | ![image](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
+    | `Interne fout` | ![image](../../../../images/submission_icons/internal_error.png) | judge is gecrashed tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 
-- `Opgave`: De naam van de oefening waarvoor de oplossing werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de oefeningpagina te navigeren.
+    Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert.
 
-- `Cursus`: De naam van de [cursus](../courses/) waarbinnen de oplossing werd [ingediend](#indienen-van-een-oplossing). Klik op de naam om naar de cursuspagina te navigeren. Dit informatieveld ontbreekt als de oplossing niet binnen de context van een cursus werd ingediend.
+* `Samenvatting`: Korte samenvatting van het resultaat die de judge aan de oplossing heeft toegekend.
 
-- `Ingediend`: Het **tijdstip** waarop de oplossing werd [ingediend](#indienen-van-een-oplossing). Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld `ongeveer 2 uur geleden`. Als je de muiswijzer boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
-
-- `Status`: De **status** die Dodona of de judge aan de oplossing heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de oplossing wordt weergegeven. Statussen met zwarte of gele icoontjes worden door Dodona toegekend. Statussen met groene of rode icoontjes worden door de judge toegekend. Betekenis van de mogelijke statussen die aan de oplossing kunnen toegekend worden:
-
-| status               | icoontje             | betekenis            |
-|----------------------|----------------------|----------------------|
-| `In de wachtrij…` | ![image](../../../../images/submission_icons/queued.png) | oplossing staat in  de wachtrij |
-| `Aan het uitvoeren...` | ![image](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
-| `Correct` | ![image](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
-| `Fout` | ![image](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
-| `Uitvoeringsfout` | ![image](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
-| `Timeout` | ![image](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
-| `Geheugenfout` | ![image](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
-| `Compilatiefout` | ![image](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
-| `Interne fout` | ![image](../../../../images/submission_icons/internal_error.png) | judge is gecrashed tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
-
-Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert. Als de judge bij het beoordelen van de [oplossing](#navigeren-naar-een-oplossing) verschillende soorten fouten tegenkomt, dan staat het hem vrij te beslissen welke status hij aan de oplossing toekent. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de status van de oplossing te bepalen.
-
-<h1 id="samenvatting"/>
-`Samenvatting`
-
-Korte motivering van de judge bij de status die hij aan de oplossing heeft toegekend.
-
-Daaronder staat meer gedetailleerde feedback die de judge kan uitgesplitst hebben over meerdere **tabs**. Naast de naam van een tab kan aan de rechterkant een **badge** staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab. Het staat de judge vrij om te beslissen of en op welke manier deze fouten geteld worden. Raadpleeg de documentatie van de judge voor meer details over de specifieke procedure die hij gebruikt om de waarde voor de badge te bepalen.
+Onder de korte samenvatting staat meer gedetailleerde feedback die de judge kan uitgesplitst hebben over meerdere *tabs*. Naast de naam van een tab kan aan de rechterkant een *badge* staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab. 
 
 ![image](./student.exercise_feedback_incorrect_tab.png)
 
-De laatste tab heeft altijd de naam `Code` en bevat de broncode van de [oplossing](#navigeren-naar-een-oplossing). Op bepaalde plaatsen in de broncode kan de judge opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde status aan de oplossing toegekend heeft.
+De laatste tab heeft altijd de naam `Code` en bevat de broncode van de oplossing. Op bepaalde plaatsen in de broncode kan de judge opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde status aan de oplossing toegekend heeft.
 
 ![image](./student.exercise_lint_error.png)
 
-::: tip
+::: tip Tip
 
-In de tab `Code` op de feedbackpagina kan je de broncode van de [oplossing](#navigeren-naar-een-oplossing) niet wijzigen. Als je op de broncode drukt dan wordt die volledig geselecteerd. Kopieer de broncode naar het klembord en plak die in je IDE. Als alternatief kan je op de downloadknop klikken in de rechterbovenhoek van de feedbackpagina. Daarmee download je een bestand met de broncode dat je dan kan openen in je IDE. In je IDE kan je de broncode bewerken en daarna eventueel opnieuw [indienen](#indienen-van-een-oplossing).
-
-Als alternatief kan je ook op de bewerkknop klikken in de rechterbovenhoek van de feedbackpagina om te navigeren naar de [oefening](#navigeren-naar-een-oefening) waarvoor de [oplossing](#navigeren-naar-een-oplossing) werd ingediend. De broncode van de oplossing werd daarbij ingevoegd in de code editor aan de onderkant van de oefeningpagina. Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
+In de tab `Code` op de feedbackpagina kan je de broncode van de oplossing niet wijzigen. Je moet hiervoor op de bewerkknop klikken in de rechterbovenhoek van de feedbackpagina. De broncode van de oplossing waar je op dat moment naar kijkt wordt dan ingeladen in de in de editor. Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
 :::
 
-Onder een tab rapporteert de judge over individuele **testen** waaraan hij de broncode onderworpen heeft. Daarbij worden gerelateerde testen gegroepeerd in een **testgeval** en worden testgevallen die van elkaar afhankelijk zijn gegroepeerd in een **context**.
-
+Per tab rapporteert de judge over individuele **testen** waaraan hij de broncode onderworpen heeft. Daarbij worden gerelateerde testen gegroepeerd in een **testgeval** en worden testgevallen die van elkaar afhankelijk zijn gegroepeerd in een **context**.
 
 ![image](./student.exercise_feedback_correct_tab.png)
 
-Visueel worden alle testgevallen van een context met elkaar verbonden via een dunne vertikale lijn aan de linkerkant. De kleur van die lijn geeft aan of de judge de volledige context beoordeelt als geslaagd (groene lijn) of als niet geslaagd (rode lijn).
+Visueel worden alle testgevallen van een context met elkaar verbonden via een dunne verticale lijn aan de linkerkant. De kleur van die lijn geeft aan of de judge de volledige context beoordeelt als geslaagd (groene lijn) of als niet geslaagd (rode lijn).
 
 Aan de rechterkant van de dunne vertikale lijn worden de testgevallen van de context onder elkaar weergegeven. De beschrijving van een testgeval wordt weergegeven binnen een rechthoek met lichtgrijze achtergrondkleur die over de volledige breedte loopt. In de rechterbovenhoek van die rechthoek staat een gekleurd symbool dat aangeeft of de judge het volledige testgeval beoordeelt als geslaagd (groen vinkje) of als niet geslaagd (rood kruisje).
 
@@ -149,9 +142,8 @@ Als de judge binnen een testgeval rapporteert over individuele testen, dan worde
 
 -   Een tekstuele vergelijking tussen een verwachte waarde en een waarde die gegenereerd werd aan de hand van de oplossing. Als minstens één van beide waarden uit meerdere regels bestaat, dan worden de overeenkomstige regels tegenover elkaar uitgelijnd. Identieke overeenkomstige regels worden weergegeven met een transparante achtergrondkleur. Als overeenkomstige regels van elkaar verschillen dan worden ze weergegeven met een lichtgekleurde achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde). Individuele karakters die verschillen binnen overeenkomstige regels worden weergegeven met een donkerder achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde).
 
-- Algemene feedback over de uitgevoerde test. Voor deze feedback heeft de judge alle vrijheid wat betreft de vormgeving, waardoor hij zowel tekstuele als grafische feedback kan aanleveren.
-![image](./student.exercise_feedback_incorrect_tab.png)
+-   Algemene feedback over de uitgevoerde test. Voor deze feedback heeft de judge alle vrijheid wat betreft de vormgeving, waardoor hij zowel tekstuele als grafische feedback kan aanleveren.
+    ![image](./student.exercise_feedback_incorrect_tab.png)
 
-![image](./student.exercise_feedback_visual.nl.png)
+    ![image](./student.exercise_feedback_visual.nl.png)
 
-De judge kan niet enkel algemene feedback geven over individuele testen, maar ook over individuele testgevallen, individuele contexten en de volledige [oplossing](#navigeren-naar-een-oplossing). De algemene feedback over de volledige oplossing staat aan de bovenkant van de feedbackpagina, tussen de gegevens van de oplossing en de tabs. De algemene feedback over een tab staat boven de weergave van de contexten onder de tab. De algemene feedback over een context staat onder de weergave van de testgevallen van de context. De algemene feedback over een testgeval staat onder de weergave van de testen van het testgeval.
