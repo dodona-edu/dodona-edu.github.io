@@ -13,18 +13,18 @@ Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 * [Dodona VS Code extension](vs-code-extension)
 
 ## Voor lesgevers
-* [Van start met Dodona als leerkracht](getting-started)
-* [Een nieuwe cursus aanmaken](creating-a-course)
-* [Cursusbeheer](course-management)
-* [Gebruikersbeheer](user-management)
-* [Oefeningenreeksenbeheer](exercise-series-management)
-* [Een nieuwe repository met oefeningen maken](new-exercise-repo)
+* [Van start met Dodona als leerkracht](teachers/getting-started)
+* [Een nieuwe cursus aanmaken](teachers/creating-a-course)
+* [Cursusbeheer](teachers/course-management)
+* [Gebruikersbeheer](teachers/user-management)
+* [Oefeningenreeksenbeheer](teachers/exercise-series-management)
+* [Een nieuwe repository met oefeningen maken](teachers/new-exercise-repo)
 
 ## Voor studenten
-* [Van start met Dodona als student](for-students)
-* [Aanmelden en gebruikersinstallingen](for-students/login-and-settings/)
-* [Cursussen op Dodona](for-students/courses/)
-* [Oefeningen oplossen](for-students/exercises/)
+* [Van start met Dodona als student](students/getting-started)
+* [Aanmelden en gebruikersinstallingen](students/login-and-settings/)
+* [Cursussen op Dodona](students/courses/)
+* [Oefeningen oplossen](students/exercises/)
 
 ## Enkel in het Engels
 * [Creating a judge](creating-a-judge)
