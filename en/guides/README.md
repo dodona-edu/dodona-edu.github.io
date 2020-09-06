@@ -7,7 +7,7 @@ sidebarDepth: 0
 Here you'll find a number of guides, primarily focused on teachers.
 
 ## In English
-* [Creating a new exercise repository](new-exercise-repo)
+* [Creating a new exercise repository](teachers/new-exercise-repo)
 * [Dodona PyCharm plugin](pycharm-plugin)
 * [Dodona VS Code extension](vs-code-extension)
 * [The Coder's Apprentice](the-coders-apprentice)
@@ -15,9 +15,9 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [Creating a judge](creating-a-judge)
 
 ## Only in Dutch
-* [Van start met Dodona als student](for-students)
-* [Van start met Dodona als leerkracht](getting-started)
-* [Een nieuwe cursus aanmaken](creating-a-course)
-* [Cursusbeheer](course-management)
-* [Gebruikersbeheer](user-management)
-* [Oefeningenreeksenbeheer](exercise-series-management)
+* [Van start met Dodona als student](students/getting-started)
+* [Van start met Dodona als leerkracht](teachers/getting-started)
+* [Een nieuwe cursus aanmaken](teachers/creating-a-course)
+* [Cursusbeheer](teachers/course-management)
+* [Gebruikersbeheer](teachers/user-management)
+* [Oefeningenreeksenbeheer](teachers/exercise-series-management)

@@ -1,11 +1,7 @@
 ---
-title: "[nl] Gebruikersbeheer"
+title: "Gebruikersbeheer"
 description: "Tutorial: gebruikersbeheer"
 ---
-
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
 
 # Gebruikersbeheer
 > Op deze pagina vind je alle informatie over gebruikersbeheer op Dodona.
@@ -61,13 +57,13 @@ Na het aanmaken van een cursus kan een lesgever zich uitschrijven als hij minste
 Afhankelijk van de ingestelde [registratieprocedure](../creating-a-course/#cursuseigenschappen) van een cursus zal je bij de gebruikerslijst meerdere tabbladen zien. Elke tab biedt andere acties aan om de registratiestatus van de bijhorende gebruiker aan te passen.
 
 * `Geregistreerd`: alle cursusgebruikers die momenteel geregistreerd zijn.
-  Door te klikken op ![unregister](../../../images/staff_registration_icons/unregister.png) schrijf je de gebruiker uit de cursus.
+  Door te klikken op ![unregister](../../../../images/staff_registration_icons/unregister.png) schrijf je de gebruiker uit de cursus.
 
 * `Op de wachtlijst`: alle cursusgebruikers waarvoor er nog een registratieverzoek openstaat dat wacht op afhandeling door een cursusbeheerder.
-  Door te klikken op ![approve](../../../images/staff_registration_icons/approve.png) keur je het registratieverzoek goed. Afkeuren doe je door te klikken op ![decline](../../../images/staff_registration_icons/decline.png). Deze tab is enkel zichtbaar als de cursus werkt met gemodereerde inschrijving.
+  Door te klikken op ![approve](../../../../images/staff_registration_icons/approve.png) keur je het registratieverzoek goed. Afkeuren doe je door te klikken op ![decline](../../../../images/staff_registration_icons/decline.png). Deze tab is enkel zichtbaar als de cursus werkt met gemodereerde inschrijving.
 
 * `Uitgeschreven`: alle cursusgebruikers die ooit geregistreerd waren, maar die ondertussen uitgeschreven zijn.
-  Deze gebruiker kan je terug inschrijven voor de cursus door te klikken op ![register](../../../images/staff_registration_icons/register.png)
+  Deze gebruiker kan je terug inschrijven voor de cursus door te klikken op ![register](../../../../images/staff_registration_icons/register.png)
 
 ## Studenten opvolgen
 Om de voortgang van een individuele student op te volgen is er een overzichtpagina per student voorzien. Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op de naam van een student te klikken. Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.

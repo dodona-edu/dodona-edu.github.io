@@ -55,7 +55,7 @@ module.exports = {
         ],
         sidebar: {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
-          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Overzicht'),
+          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
@@ -71,7 +71,7 @@ module.exports = {
         ],
         sidebar: {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
-          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', '[nl] Overzicht'),
+          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
           '/en/': getGeneralSidebar()
         }
@@ -133,37 +133,46 @@ function getNewsSidebar(lang, groupTitle, FirstItem) {
   ]
 }
 
-function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem) {
+function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacherGuideItem) {
   return [
     `/${lang}/news/`,
     {
       title: groupTitle,
       collapsable: false,
-      sidebarDepth: 2,
+      sidebarDepth: 1,
       initialOpenGroupIndex: -1,
       children: [
         ['', FirstItem],
         {
-          title: 'Van start met Dodona als student',
+          title: studentGuideItem,
           collapsable: false,
-          path: `/${lang}/guides/for-students/`,
-          sidebarDepth: 2,
+          path: `/${lang}/guides/students/getting-started/`,
+          sidebarDepth: 1,
           initialOpenGroupIndex: -1,
           children: [
-            ['for-students/', studentGuideItem],
-            'for-students/login-and-settings/',
-            'for-students/courses/',
-            'for-students/exercises/',
+            'students/getting-started/',
+            'students/login-and-settings/',
+            'students/courses/',
+            'students/exercises/',
           ]
         },
-        'getting-started/',
-        'creating-a-course/',
-        'course-management/',
-        'user-management/',
-        'exercise-series-management/',
+        {
+          title: teacherGuideItem,
+          collapsable: false,
+          path: `/${lang}/guides/teachers/getting-started/`,
+          sidebarDepth: 1,
+          initialOpenGroupIndex: -1,
+          children: [
+            'teachers/getting-started/',
+            'teachers/creating-a-course/',
+            'teachers/course-management/',
+            'teachers/user-management/',
+            'teachers/exercise-series-management/',
+            'teachers/new-exercise-repo/',
+          ]
+        },
         'pycharm-plugin/',
         'vs-code-extension/',
-        'new-exercise-repo/',
         'the-coders-apprentice/',
         'creating-an-api-token/',
         'creating-a-judge/'
