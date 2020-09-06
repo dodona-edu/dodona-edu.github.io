@@ -18,6 +18,7 @@ Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 * [Cursusbeheer](teachers/course-management)
 * [Gebruikersbeheer](teachers/user-management)
 * [Oefeningenreeksenbeheer](teachers/exercise-series-management)
+* [Een reeks evalueren](teachers/evaluate-series)
 * [Een nieuwe repository met oefeningen maken](teachers/new-exercise-repo)
 
 ## Voor studenten

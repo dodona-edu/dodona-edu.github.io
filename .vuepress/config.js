@@ -168,6 +168,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
             'teachers/course-management/',
             'teachers/user-management/',
             'teachers/exercise-series-management/',
+            'teachers/evaluate-series/',
             'teachers/new-exercise-repo/',
           ]
         },
