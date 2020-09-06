@@ -100,7 +100,7 @@ Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oploss
 
     | status               | icoontje             | betekenis            |
     |----------------------|----------------------|----------------------|
-    | `In de wachtrij…` | ![image](../../../../images/submission_icons/queued.png) | oplossing staat in  de wachtrij |
+    | `In de wachtrij…` | ![image](../../../../images/submission_icons/queued.png) | oplossing staat in de wachtrij |
     | `Aan het uitvoeren...` | ![image](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
     | `Correct` | ![image](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
     | `Fout` | ![image](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |

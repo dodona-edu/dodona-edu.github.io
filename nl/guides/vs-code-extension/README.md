@@ -19,7 +19,7 @@ Je kan de extensie direct installeren vanuit VS Code. Je opent hiervoor eerst op
 
 Vervolgens kies je `Install` .
 
-Je kan de extensie ook direct vanaf de VS Code Marketplace installeren. Surf hiervoor naar [https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode](https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode), klik vervolgens op de groene  knop `Install`.
+Je kan de extensie ook direct vanaf de VS Code Marketplace installeren. Surf hiervoor naar [https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode](https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode), klik vervolgens op de groene knop `Install`.
 
 ## API token ingeven
 
@@ -48,7 +48,7 @@ VS Code gebruikt deze eerste regel om voor de juiste oefening in te dienen, verw
 
 ## Een oplossing indienen
 
-Eenmaal je de oefening hebt opgelost kan je eenvoudig indienen. Voer hiervoor het commando  `Submit to Dodona` uit door het commando pallet te openen met `Ctrl-Shift-P` en (delen van) `Submit to Dodona` te typen en op `Enter` te drukken.  Je kan hiervoor ook een [sneltoets](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-editor) maken. Dat commando zal je code uploaden naar Dodona en de automatische testen starten.
+Eenmaal je de oefening hebt opgelost kan je eenvoudig indienen. Voer hiervoor het commando `Submit to Dodona` uit door het commando pallet te openen met `Ctrl-Shift-P` en (delen van) `Submit to Dodona` te typen en op `Enter` te drukken. Je kan hiervoor ook een [sneltoets](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-editor) maken. Dat commando zal je code uploaden naar Dodona en de automatische testen starten.
 
 ![Submit](./submit.png)
 

@@ -48,7 +48,7 @@ Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldi
 
 ::: tip Foutmelding?
 
-Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat niet alles loopt zoals verwacht. Om aan te melden gebruiken we namelijk de bestaande accounts van je onderwijsinstelling en koppelen we die via technieken als  [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) en [OAuth](https://nl.wikipedia.org/wiki/OAuth). Soms loopt het hier mis omdat jouw school geen toestemming geeft voor deze koppeling. Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../getting-started/#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
+Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat niet alles loopt zoals verwacht. Om aan te melden gebruiken we namelijk de bestaande accounts van je onderwijsinstelling en koppelen we die via technieken als [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) en [OAuth](https://nl.wikipedia.org/wiki/OAuth). Soms loopt het hier mis omdat jouw school geen toestemming geeft voor deze koppeling. Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../getting-started/#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
 :::
 
 ::: tip Meerdere accounts?
@@ -56,7 +56,7 @@ Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat
 Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijke gebruikersaccount op Dodona. Gebruik dus steeds dezelfde account om aan te melden.
 :::
 
-Eenmaal je bent aangemeld, dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/).  Je kunt steeds terugkeren naar de landingspagina door op `Dodona` te klikken linksboven elke pagina.
+Eenmaal je bent aangemeld, dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/). Je kunt steeds terugkeren naar de landingspagina door op `Dodona` te klikken linksboven elke pagina.
 
 
 Als dit de eerste keer is dat je aanmeldt op Dodona, dan ben je uiteraard nog voor geen enkele cursus geregistreerd en heb je nog geen enkele oplossing ingediend. Daardoor ziet je startpagina er op dit moment nog vrij kaal uit. Hoe je je kan registreren voor een cursus vind je op [deze pagina](../courses/#registreren-voor-een-cursus).
@@ -77,11 +77,13 @@ Wat je wel kan aanpassen is de **tijdzone** die gebruikt wordt voor het weergeve
 
 ![image](./student.edit_timezone.png)
 
+::: tip Tijdzone verkeerd ingesteld?
 Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
 
 ![image](./student.wrong_timezone.png)
 
 Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
+:::
 
 <!--
     ---
@@ -101,7 +103,7 @@ Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone 
 
     The language used for fixed components of Dodona (menubar, course structure, notifications, ...) are shown is fully controlled by the platform. These components are always shown in the selected [language]().
 
-    The name and description of a [course]() are fixed, as are names and descriptions of  [exercise series]() within a course. These components do not depend on the selected  [language](). The language of these components falls entirely under the control of the course administrators that created the course.
+    The name and description of a [course]() are fixed, as are names and descriptions of [exercise series]() within a course. These components do not depend on the selected [language](). The language of these components falls entirely under the control of the course administrators that created the course.
 
     The name and description of an [exercise]() depend on the selected [language](). If a translation of the name and description was provided in the selected language when creating the exercise, theses components of the exercise will also be displayed in that language.
 
@@ -118,7 +120,7 @@ Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone 
 
     :::
 
-    Press on `Sign in`  on the right side of the navigation bar or navigate to the homepage and press on `Sign in` that can be found in the center of the homepage.
+    Press on `Sign in` on the right side of the navigation bar or navigate to the homepage and press on `Sign in` that can be found in the center of the homepage.
 
     ![image](./login.en.png)
 

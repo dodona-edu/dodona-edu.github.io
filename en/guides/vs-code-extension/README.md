@@ -16,7 +16,7 @@ You can install the extension directly from VS Code. In the `Extensions` menu (<
 
 ![settings](./vs_code_dodona_marketplace.png)
 
-You can also install the extension directly from the  VS Code Marketplace. Surf to [https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode](https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode), click on the green `Install` button.
+You can also install the extension directly from the VS Code Marketplace. Surf to [https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode](https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode), click on the green `Install` button.
 
 ## Insert API token
 

@@ -10,7 +10,7 @@ Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona 
 Vervolgens selecteer je `Reeks evalueren`.
 ![reeks evalueren](./staff.series_evaluate.png)
 
-Je wordt naar de volgende pagina gebracht waar je gebruikers kan selecteren om te evalueren.  Er zijn ook handige knoppen om snel een bepaalde categorie gebruikers te selecteren. Uiteraard kan je ook via de zoekbalk filteren op gebruikers via hun naam, labels, ... .
+Je wordt naar de volgende pagina gebracht waar je gebruikers kan selecteren om te evalueren. Er zijn ook handige knoppen om snel een bepaalde categorie gebruikers te selecteren. Uiteraard kan je ook via de zoekbalk filteren op gebruikers via hun naam, labels, ... .
 ![select users](./staff.series_evaluate_select_users.png)
 
 Na de nodige gebruikers gekozen te hebben, kan je de evaluate starten. 
