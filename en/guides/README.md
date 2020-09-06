@@ -15,7 +15,7 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [Creating a judge](creating-a-judge)
 
 ## Only in Dutch
-* [Van start met Dodona als student](students)
+* [Van start met Dodona als student](students/getting-started)
 * [Van start met Dodona als leerkracht](teachers/getting-started)
 * [Een nieuwe cursus aanmaken](teachers/creating-a-course)
 * [Cursusbeheer](teachers/course-management)
