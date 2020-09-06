@@ -10,3 +10,4 @@ Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en ma
 * [Repository-structuur](repository-directory-structure)
 * [Oefeningconfiguratie](exercise-config)
 * [Oefeningmap-structuur](exercise-directory-structure)
+* [Python judge](python-judge)
