@@ -13,7 +13,7 @@ A first step is thus to create a git repository. You can easily do this on [gith
 
 ## 2. Add the repository to Dodona
 
-All staff on Dodona has a "Repositories" link in the sidebar of the Dodona website, which takes you to an overview of the repositories. To add a new repository, hit the big plus button on the top.
+All staff on Dodona has a `Repositories` link in the sidebar of the Dodona website, which takes you to an [overview of the repositories](https://dodona.ugent.be/en/repositories/). To add a new repository, hit the big plus button on the top.
 
 ![add repository](./add-repository.png)
 
@@ -33,7 +33,7 @@ To keep your exercises up to date, Dodona must know when you made changes. We do
 
 ![webhook url](./webhook-url.png)
 
-The only thing left to do is adding this URL to GitHub. To do this, open your repository on GitHub, go to the repository settings and click "Webhooks" in the sidebar. Next, click the "Add webhook" button and enter the URL you received from Dodona. You can use the default settings and click "Add webhook".
+The only thing left to do is adding this URL to GitHub. To do this, open your repository on GitHub, go to the repository settings and click `Webhooks` in the sidebar. Next, click the `Add webhook` button and enter the URL you received from Dodona. You can use the default settings and click `Add webhook`.
 
 ![github webhook](./github-webhook.png)
 

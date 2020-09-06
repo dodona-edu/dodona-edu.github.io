@@ -13,7 +13,7 @@ Een eerste stap is om een git repository aan te maken. Je kan dit eenvoudig doen
 
 ## 2. Je repository aan Dodona toevoegen
 
-Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link "Repositories" die je naar een overzicht van alle repositories op Dodona brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
+Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link `Repositories` die je naar een [overzicht van alle repositories op Dodona](https://dodona.ugent.be/nl/repositories/) brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
 
 ![repository toevoegen](./add-repository.png)
 
@@ -35,7 +35,7 @@ Om je oefeningen up-to-date te houden, moet Dodona weten wanneer je wijzigingen 
 
 ![webhook url](./webhook-url.png)
 
-Deze URL moet je vervolgens toevoegen aan GitHub. Dit doe je door op GitHub naar de instellingen van je repository te gaan en vervolgens op "Webhooks" te klikken in de navigatiebalk. Klik vervolgens op de "Add webhook"-knop en geef de URL in die je van Dodona gekregen hebt. Gebruik voor de rest de standaardinstellingen en klik op "Add webhook".
+Deze URL moet je vervolgens toevoegen aan GitHub. Dit doe je door op GitHub naar de instellingen van je repository te gaan en vervolgens op `Webhooks` te klikken in de navigatiebalk. Klik vervolgens op de `Add webhook`-knop en geef de URL in die je van Dodona gekregen hebt. Gebruik voor de rest de standaardinstellingen en klik op `Add webhook`.
 
 ![github webhook](./github-webhook.png)
 

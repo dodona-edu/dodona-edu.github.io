@@ -29,7 +29,7 @@ Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifiek
 ![gefilterde lijst](./staff.users_filtered.png)
 
 ### Voortgangsstatus
-De Voortgangsstatus van een gebruiker wordt weergegeven door een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel oefeningen in de cursus voor waarvoor de gebruiker een **correcte** oplossing voor heeft ingediend. Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog **niet correct** heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog **niet aan begonnen** is.
+De voortgangsstatus van een gebruiker wordt weergegeven door een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel oefeningen in de cursus voor waarvoor de gebruiker een **correcte** oplossing voor heeft ingediend. Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog **niet correct** heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog **niet aan begonnen** is.
 
 ![statistics](./user_progress_statistics.png)
 
