@@ -65,7 +65,7 @@ Op de profielpagina staan je persoonsgegevens (voornaam, familienaam, gebruikers
 
 ![image](./student.user_menu_my_profile.png)
 
-Klik op de bewerkknop in de rechterbovenhoek van je profielpagina om je gebruikersprofiel te bewerken. Je persoonsgegevens zoals naam en emailadres kan je zelf niet aanpassen. Deze worden namelijk automatisch aangepast op basis van de gegevens die tijdens het aanmelden door je externe onderwijs- of onderzoeksinstelling naar Dodona worden doorgestuurd.
+Klik op de bewerkknop in de rechterbenedenhoek van je profielpagina om je gebruikersprofiel te bewerken. Je persoonsgegevens zoals naam en emailadres kan je zelf niet aanpassen. Deze worden namelijk automatisch aangepast op basis van de gegevens die tijdens het aanmelden door je externe onderwijs- of onderzoeksinstelling naar Dodona worden doorgestuurd.
 
 ![image](./student.edit_profile.png)
 

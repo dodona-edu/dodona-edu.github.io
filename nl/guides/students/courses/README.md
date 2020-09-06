@@ -82,9 +82,9 @@ Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde 
 
 In het menu van een oefeningenreeks vind je de volgende opties:
 
-- `Toon overzicht`: Toont een overzicht waarin de namen en beschrijvingen van alle oefeningen uit de oefeningenreeks netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+- `Alle opgaven en leesactiviteiten bekijken`: Toont een overzicht waarin de namen en beschrijvingen van alle oefeningen uit de oefeningenreeks netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
-- `Oplossing downloaden`: Downloadt een ZIP-bestand dat voor elke oefening uit de oefeningenreeks de oplossing bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+- `Mijn oplossingen exporteren`: Downloadt een ZIP-bestand dat voor elke oefening uit de oefeningenreeks de oplossing bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
 ### Indienstatus
 
@@ -125,4 +125,4 @@ Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-e
 
 ![image](./student.unregister.png)
 
-Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Mijn vakken` in het hamburger menu aan de linkerkant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.
+Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Cursussen` in het hamburger menu aan de linkerkant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.

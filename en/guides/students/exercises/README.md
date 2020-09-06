@@ -78,7 +78,7 @@ Je kan op Dodona op verschillende manieren naar je ingediende oplossingen navige
 
 ![image](./student.all_submissions_link.png)
 
-Een oplossingenoverzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de feedback. Vóór elke oplossing staat ook nog een icoontje dat overeenkomt met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
+Een oplossingenoverzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de feedback. Vóór elke oplossing staat ook nog een [icoontje](../courses/#indienstatus) dat overeenkomt met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
 ![image](./student.all_submissions.png)
 
@@ -88,7 +88,7 @@ Je kunt een oplossing selecteren door in een oplossingenoverzicht op het pijltje
 
 ## Interpreteren van feedback
 
-Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
+Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing. De automatische feedback wordt opgesteld door de verwachte uitvoer en de uitvoer die gegenereerd werd aan de hand van de ingediende oplossing te vergelijken.
 
 ![image](./student.exercise_feedback_correct_page.png)
 
@@ -112,7 +112,7 @@ Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oploss
     | `Timeout` | ![image](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
     | `Geheugenfout` | ![image](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
     | `Compilatiefout` | ![image](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
-    | `Interne fout` | ![image](../../../../images/submission_icons/internal_error.png) | judge is gecrashed tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
+    | `Interne fout` | ![image](../../../../images/submission_icons/internal_error.png) | judge is gecrasht tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 
     Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert.
