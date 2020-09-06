@@ -37,11 +37,11 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
 <h1 id="registratieverzoek"/>
 
--   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `REGISTRATIEVERZOEK` om een registratieverzoek voor de cursus in te dienen.
+-   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `REGISTRATIEVERZOEK INDIENEN` om een registratieverzoek voor de cursus in te dienen.
 
     ![image](./moderated_register.png)
 
-    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de cursuspagina de boodschap `Je staat al op de wachtlijst.` en wordt de cursus opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina.
+    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de cursuspagina de boodschap `Je staat op de wachtlijst.` en wordt de cursus opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina.
 
     ![image](./moderated_waiting.png)
 
@@ -72,12 +72,12 @@ Een oefeningenreeks bestaat uit een beschrijving, een aantal oefeningen en event
 
 Als een reeks een deadline heeft, dan worden enkel ingediende oplossingen van voor dat tijdstip in rekening gebracht. Na de deadline kan je dus nog steeds indienen, maar ze tellen mogelijks niet mee voor een eventuele evaluatie. Meer details hierover kan je vinden bij de sectie [indienstatus](#indienstatus).
 
-Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daaronder een oplijsting van alle oefeningen uit de reeks. De lijst toont voor elke oefening je indienstatus en eventueel de voortgang van de groep. Vóór elke oefening in de lijst staat ook een icoontje dat correspondeert met je indienstatus voor de oefening.
+Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daaronder een oplijsting van alle oefeningen uit de reeks. De lijst toont voor elke oefening je indienstatus en eventueel de voortgang van de groep. Vóór elke oefening in de lijst staat ook een icoontje dat overeenkomt met je indienstatus voor de oefening.
 
-::: tip Belangrijk
+::: tip Dezelfde oefening in meerdere cursussen/oefeningenreeksen
 Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de oefening wordt hierbij niet overgenomen. Je moet dus de oefening binnen elke cursus afzonderlijk indienen.
 
-Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
+Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
 :::
 
 In het menu van een oefeningenreeks vind je de volgende opties:
@@ -88,15 +88,15 @@ In het menu van een oefeningenreeks vind je de volgende opties:
 
 ### Indienstatus
 
-Je **indienstatus** voor een oefening uit een oefeningenreeks wordt bepaald op basis van de oplossing die je als laatste in de cursus hebt ingediend voor de oefening. Als er een deadline werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat correspondeert met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+Je indienstatus voor een oefening uit een oefeningenreeks wordt bepaald **op basis van de oplossing die je als laatste in de cursus hebt ingediend voor de oefening**. Als er een deadline werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat overeenkomt met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
-Mogelijke weergaven van je indienstatus vóór het verstrijken van de deadline of als er geen deadline is ingesteld:
+Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vóór het verstrijken van de deadline:
 
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
   | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) | 
   | `verkeerd` | ![image](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
-  | `correct` | ![image](../../../../images/course_exercise_status_icons/before_deadline.png) |laatste oplossing die je indiende correct was (vóór de deadline) |
+  | `correct` | ![image](../../../../images/course_exercise_status_icons/correct.png) (![image](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
 
 Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
 
@@ -107,7 +107,7 @@ Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
   | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
   | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
 
-::: tip Belangrijk
+::: tip Belangrijk: laatst ingediende oplossing vóór deadline telt
 
 Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit de oefeningenreeks, dan kan je indienstatus voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de deadline. Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
@@ -121,8 +121,8 @@ Als je **na het verstrijken van de deadline** van een oefeningenreeks een oploss
 
 ## Uitschrijven uit een cursus
 
-Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `UITSCHRIJVEN` waarmee je je kunt uitschrijven uit de cursus.
+Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `UITSCHRIJVEN` (of `REGISTRATIEVERZOEK ANNULEREN`) waarmee je je kunt uitschrijven uit de cursus.
 
 ![image](./student.unregister.png)
 
-Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Mijn vakken` in het hamburger menu aan de linker kant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `Wachten op goedkeuring` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.
+Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Mijn vakken` in het hamburger menu aan de linkerkant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.
