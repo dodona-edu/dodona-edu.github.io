@@ -28,20 +28,20 @@ Dodona ignores every other file and directory. You can thus freely create additi
 ## Example of a valid exercise directory structure
 
 ```
-+-- intsum                     # short name for the exercise
-|   +-- config.json            # configuration of the exercise
++-- intsum                     # Short name for the exercise
+|   +-- config.json            # Configuration of the exercise
 |   +-- evaluation             #
 |   |   +-- intsum_test.hs     # A Haskell test file
 |   +-- description            #
-|   |   +-- description.nl.md  # The description in dutch
-|   |   +-- description.en.md  # The description in english
+|   |   +-- description.nl.md  # The description in Dutch
+|   |   +-- description.en.md  # The description in English
 |   |   +-- media              #
 |   |   |   +-- some_image.png # An image used in the description
 |   |   +-- boilerplate        #
-|   |       +-- boilerplate    # Default (here dutch?) boilerplate code
+|   |       +-- boilerplate    # Default boilerplate code
 |   |       +-- boilerplate.en # English boilerplate code
-|   +-- workdir                # current working dir for student code
-|       +-- intlines.txt       # a file available to the student
+|   +-- workdir                # Current working dir for student code
+|       +-- intlines.txt       # A file available to the student
 :
 ```
 

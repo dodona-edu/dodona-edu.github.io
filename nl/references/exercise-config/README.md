@@ -1,48 +1,50 @@
 ---
-title: "[en] Exercise config"
-description: "Exercise config reference Dodona"
+title: "Oefeningconfiguratie"
+description: "Oefeningconfiguratie op Dodona"
 ---
 
-# Exercise configuration
+# Oefeningconfiguratie
 
-Dodona allows setting the configuration of an exercise or a reading activity using config files. These files are in the JSON format and must be named `config.json` in exercise directories and `dirconfig.json` for other directories. To determine the final config values for a learning activity, Dodona merges the default config file with the dirconfigs in the parent directories of the exercise and with the exercise config. Merging happens in such a way that you can always override values set in a parent directory.
+Dodona laat toe om de configuratie van een oefening of een leesactiviteit in te stellen door middel van configuratiebestanden. Deze bestanden moeten het JSON-formaat hebben en `config.json` genoemd worden in oefeningenfolders en `dirconfig.json` in andere folders. Om de finale configuratiewaarden te bekomen voor een leeractiviteit, voegt Dodona het standaardconfiguratiebestand samen met de dirconfigs in de bovenliggende folders van de oefening en met het oefeningconfiguratiebestand. Dit proces laat je toe om waarden in een bovenliggende folder te overschrijven.
 
-## Config file structure for exercises
+## Configuratiebestandsstructuur voor oefeningen
 
-- `type`: Must be set to `exercise` for exercises. Defaults to `exercise` if not present
-- `programming_language` (string): the programming language of the exercise, used for syntax highlighting and correct file extensions
-- `access` (`public` or `private`): determines who can use this exercise
-  - public: any other teacher on Dodona can use this exercise
-  - private: only teachers with explicit permission can use this exercise
-- `description` (object): the specification of the description of the exercise
-  - `names` (object): the name of the exercise
-    - `nl`: the name of the exercise in Dutch
-    - `en`: the name of the exercise in English
-- `evaluation`: the specification of the evaluation procedure
-  - `handler` (string, optional): the name of the judge that is used for evaluation. By default, Dodona uses the judge specified for the repository.
-  - `image` (string, optional): the name of the docker image that is used for evaluation. By default, Dodona uses the image specified by the judge.
-  - `time_limit` (integer, optional): the time in seconds before the evaluations times out. By default, the limit is 42 seconds.
-  - `memory_limit` (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 100MB.
-  - `network_enabled` (boolean, optional): set to `true` if internet access should be enabled. This optional setting is false by default.
-- `labels` (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
-- `contact` (string, optional): info about the author of this exercise, formatted like an email To header.
+- **`type`**: Moet ingesteld worden op `exercise` voor oefeningen. De standaardwaarde indien afwezig is `exercise`
+- **`programming_language`** (string): de programmeertaal van de oefening, wordt gebruikt voor *syntax highlighting* en om de juiste bestandsextensie te bepalen
+- **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
+  - public: elke lesgever op Dodona kan deze oefening gebruiker
+  - private: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
+- **`description`** (object): de specificatie van de beschrijving van deze oefening
+  - **`names`** (object): de naam van de oefening
+    - **`nl`**: de naam van de oefening in het Nederlands
+    - `en`: de naam van de oefening in het Engels
+- **`evaluation`**: de specificatie van de evaluatieprocedure
+  - **`handler`** (string, optioneel): de naam van de judge die gebruikt wordt voor de evaluatie. Standaard gebruik Dodona de judge die ingesteld is voor de repository.
+  - **`image`** (string, optioneel): de naam van de docker image die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de image die ingesteld is voor de judge.
+  - **`time_limit`** (integer, optioneel): de tijd in seconden waarna de evaluatie van een oefening stopgezet wordt. Standaard is dit 42 seconden
+  - **`memory_limit`** (integer, optioneel): de hoeveelheid geheugen in bytes die gebruikt kan worden bij het uitvoeren van de eevaluatie. Standaard is dit ingesteld op 100M.
+  - **`network_enabled`** (boolean, optioneel): ingesteld op `true` als toegang tot het internet toegelaten is. Standaard staat deze waarde op `false`.
+- **`labels`** (lijst van strings, optioneel): een lijst van labels die gebruikt kunnen worden om deze oefening te vinden via de Dodona web interface. Standaard een lege lijst.
+- **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een email-ontvanger hoofding.
 
-## Config file structure for reading activities
+## Configuratiebestandsstructuur voor leesactiviteiten
 
-The structure for a reading activity is identical to that of an exercise. There are 2 big differences: the value of `type` must be set to `content` and keys that are not relevant for exercises can be omitted. The format of the description is also identical.
+De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er zijn echter 2 grote verschillen: de waarde van `type` moet ingesteld worden op `content` en bepaalde verplichte velden zoals `programming_language` mogen achterwege gelaten worden.
 
-- `type`: Must be set to `content` for reading activities
-- `access` (`public` or `private`): determines who can use this exercise
-  - public: any other teacher on Dodona can use this exercise
-  - private: only teachers with explicit permission can use this exercise
-- `description` (object): the specification of the description of the exercise
-  - `names` (object): the name of the exercise
-    - `nl`: the name of the exercise in Dutch
-    - `en`: the name of the exercise in English
-- `labels` (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
-- `contact` (string, optional): info about the author of this reading activity, formatted like an email To header.
+- **`type`**: Moet ingesteld worden op `content` voor leesctiviteiten.
+- **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
+  - public: elke lesgever op Dodona kan deze oefening gebruiker
+  - private: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
+- **`description`** (object): de specificatie van de beschrijving van deze oefening
+  - **`names`** (object): de naam van de oefening
+    - **`nl`**: de naam van de oefening in het Nederlands
+    - **`en`**: de naam van de oefening in het Engels
+- **`labels`** (lijst van strings, optioneel): een lijst van labels die gebruikt kunnen worden om deze oefening te vinden via de Dodona web interface. Standaard een lege lijst.
+- **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een email-ontvanger hoofding.
 
-## Example config file
+## Voorbeeld configuratiebestand
+
+### Oefening
 
 ```json
 {
@@ -64,5 +66,21 @@ The structure for a reading activity is identical to that of an exercise. There 
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
   "contact": "Dodona <dodona@ugent.be>"
+}
+```
+
+### Leesactiviteit
+
+```json
+{
+  "description": {
+    "names": {
+      "en": "Aeneid",
+      "nl": "Aeneis"
+    }
+  },
+  "type": "content",
+  "visibility": "public",
+  "labels": ["test", "intro"]
 }
 ```
