@@ -60,7 +60,7 @@ Bij het selecteren van oefeningen kun je meer info over een oefening bekijken do
 
 ![oefening-infopagina](./oefening-infopagina.png)
 
-De handleiding om zelf oefeningen op te stellen volgt binnenkort. Een eerste aanzet vind je op [deze pagina](/en/guides/new-exercise-repo/).
+De handleiding om zelf oefeningen op te stellen volgt binnenkort. Een eerste aanzet vind je op [deze pagina](../../../guides/new-exercise-repo/).
 
 ## Je cursus gebruiken
 
