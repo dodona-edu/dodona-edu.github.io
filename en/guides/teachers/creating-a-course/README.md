@@ -1,11 +1,7 @@
 ---
-title: "[nl] Een nieuwe cursus aanmaken"
+title: "Een nieuwe cursus aanmaken"
 description: "Tutorial: cursus aanmaken"
 ---
-
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
 
 # Een cursus aanmaken
 
@@ -15,7 +11,7 @@ Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Contacteer ons op 
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.ugent.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen`.
+Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.ugent.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `MEER CURSUSSEN...`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -41,15 +37,25 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Naam`: een naam voor de cursus. Verschillende curssen kunnen dezelfde naam hebben, maar het is echter aangeraden om cursussen zoveel mogelijk een unieke naam te geven.
 
-* `Lesgevers`: de name of namen van de lesgevers van de cursus.
+* `Lesgevers`: de naam of namen van de lesgevers van de cursus.
 
 * `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden. Gebruik het formaat `jjjj-jjjj` om ervoor te zorgen dat de cursus correct gesorteerd wordt op de startpagina en in het cursusoverzicht.
 
+* `Onderwijsinstelling`: een onderwijsinstelling selecteren kan gebruikers helpen om je cursus te vinden en kan ook gebruikt worden om de zichtbaarheid van en registraties voor deze cursus te beperken.
+
+* `Beschrijving`: optioneel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
+
+
+### Toegangsrechten
+
+
 * `Zichtbaarheid`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
 
-  * `Zichtbaar`: alle gebruikers zien de cursus in het cursusoverzicht. Ze kunnen ook naar de cursuspagina navigeren en zich daar eventueel voor de cursus registreren.
+  * `Iedereen`: het cursusoverzicht is voor alle gebruikers **zichtbaar**. Ze kunnen ook naar de cursuspagina navigeren, alle zichtbare inhoud bekijken en zich daar eventueel voor de cursus registreren.
 
-  * `Verborgen`: alleen cursusbeheerders zien de cursus in het cursusoverzicht en op hun startpagina. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken.
+  * `Enkel gebruikers van de ingestelde onderwijsinstelling`: de cursus is enkel toegankelijk voor gebruikers van de ingestelde onderwijsinstelling (zie `Onderwijsinstelling` hierboven) en een directe link (zie volgend item).
+
+  * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het cursusoverzicht en op hun startpagina. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken. Voor alle andere gebruikers is de cursus **verborgen**.
   
     ![verborgen cursus](./staff.course_hidden.png)
 
@@ -66,7 +72,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
   Als je de registratieprocedure aanpast, dan blijven bestaande registraties voor de cursus gelden en blijven registratieverzoeken voor de cursus openstaan. Je moet zelf de bestaande registratiestatus van cursusgebruikers aanpassen.
   :::
 
-* `Beschrijving`: optioneel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
+
 
 * `Registratielink`: bij het aanmaken van een cursus wordt automatisch een registratielink gegenereerd als afschermingsmechanisme van verborgen cursussen. Zonder deze link kunnen niet-geregistreerde gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
 
