@@ -4,10 +4,9 @@ sidebarDepth: 0
 ---
 # Referenties
 
-Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en mappenstructuren.
+Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en mappenstructuren:
 
-## In het Nederlands
 * [Oefeningenbeschrijvingen](exercise-description)
-* [Repository bestandenstructuur](repository-directory-structure)
+* [Repository-structuur](repository-directory-structure)
 * [Oefeningconfiguratie](exercise-config)
-* [Oefeningfolderstructuur](exercise-directory-structure)
+* [Oefeningmap-structuur](exercise-directory-structure)

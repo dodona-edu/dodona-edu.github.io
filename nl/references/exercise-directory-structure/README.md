@@ -1,11 +1,11 @@
 ---
-title: "Oefeningfolderstructuur"
-description: "Oefeningfolderstructuur Dodona"
+title: "Oefeningmap-structuur"
+description: "Oefeningmap-structuur Dodona"
 ---
 
-# Oefeningfolderstructuur
+# Oefeningmap-structuur
 
-Binnenin een oefeningenfolder behandelt Dodona elke folder met een `config.json`-bestand als een aparte leeractiviteit: dit kan een programmeeroefening zijn of een leesactiviteit. We verwachten dat deze folder de volgende structuur heeft: 
+Binnenin een oefeningmap behandelt Dodona elke map met een `config.json`-bestand als een aparte leeractiviteit: dit kan een programmeeroefening zijn of een leesactiviteit. We verwachten dat deze folder de volgende structuur heeft: 
 
 - **Een `config.json`-bestand**: dit bestand bevat de[oefening-specifieke configuratie](../exercise-config). Deze configuratie zal samengevoegd worden met alle `dirconfig.json`-bestanden in de bovenliggende folder van de oefeningfolder. Je kan altijd configuratiewaarden die ingesteld werden door een bovenliggende folder overschrijven. 
 - **Een optioneel `readme.md`-, `readme.en.md`- en/of `readme.nl.md`-bestand:** De inhoud van deze bestanden zal getoond worden op de oefening-infopagina.Deze bestanden hebben als doel extra informatie geven aan leerkrachten die deze oefening misschien willen gebruiken in een cursus. Als er een bestand beschikbaar is in de taal van de gebruiker (`readme.<taal>.md`), dan zal deze getoond worden in plaats van het generieke `readme.md`-bestand. Dit is nuttig omdat `readme.md` getoond wordt door GitHub in de oefeningfolder. We suggereren om een `readme.md`-bestand te maken in de taal van je doelpubliek en dit optioneeel te vertalen door `readme.nl.md` of `readme.en.md` te voorzien. Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) om een voorbeeld te vinden van hoe je deze bestanden gebruikt.
