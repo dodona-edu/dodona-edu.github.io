@@ -12,8 +12,8 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 - **`type`**: Moet ingesteld worden op `exercise` voor oefeningen. De standaardwaarde indien afwezig is `exercise`.
 - **`programming_language`** (string): de programmeertaal van de oefening, wordt gebruikt voor *syntax highlighting* en om de juiste bestandsextensie te bepalen
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
-  - `public`: elke lesgever op Dodona kan deze oefening gebruiker
-  - `private`: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
+  - **`public`**: elke lesgever op Dodona kan deze oefening gebruiker
+  - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
   - **`names`** (object): de naam van de oefening
     - **`nl`**: de naam van de oefening in het Nederlands
