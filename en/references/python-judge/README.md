@@ -11,8 +11,12 @@ For now, this page is only available in Dutch. Sorry!
 
 Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
 
--   The **`OutputJudge`** klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen.
--   De **`DoctestJudge`** klasse implementeeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module.
+-   The **`OutputJudge`** klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen. Deze judge is dus geschikt voor oefeningen die input vragen via `input()` en de resultaten uitprinten via `print()`.
+-   De **`DoctestJudge`** klasse implementeeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
+
+::: tip Voorbeeldcursus en voorbeeldoefeningen
+Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.ugent.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze judges gebruikt.
+:::
 
 De hiërarchie van de judge klassen die binnen het Python project ontwikkeld
 werden is als volgt:

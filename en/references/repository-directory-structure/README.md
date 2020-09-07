@@ -17,6 +17,10 @@ Dodona ignores other files and directories. You can thus freely create additiona
 
 ## Example of a valid repository structure
 
+::: tip Example course and example exercises
+Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.ugent.be/en/courses/358/) to see some examples of a valid repository structure.
+:::
+
 ```
 +-- README.md                      # Describes the repository
 +-- public                         # Contains files that belong to the course or series
