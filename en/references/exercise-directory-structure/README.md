@@ -44,6 +44,9 @@ Dodona ignores every other file and directory. You can thus freely create additi
 |   |   +-- boilerplate        #
 |   |       +-- boilerplate    # Default boilerplate code
 |   |       +-- boilerplate.en # English boilerplate code
+|   +-- solution               # Files in this directory will be shown on the exercise info page
+|   |   +-- solution.nl.hs     #
+|   |   +-- solution.en.hs     #
 |   +-- workdir                # Current working dir for student code
 |       +-- intlines.txt       # A file available to the student
 :

@@ -45,7 +45,10 @@ Dodona negeert elk ander bestand of elke andere map. Je kan dus vrijuit andere b
 |   |   +-- boilerplate        #
 |   |       +-- boilerplate    # Standaard boilerplate code
 |   |       +-- boilerplate.en # Engelse boilerplate code
-|   +-- workdir                # Huidige werkmap voor de code van de student
+|   +-- solution               # Bestanden in deze map zullen getoond worden op de oefening-informatiepagina
+|   |   +-- solution.nl.hs     #
+|   |   +-- solution.en.hs     #
+|   +-- workdir                # Huidige werkfolder voor de code van de student
 |       +-- intlines.txt       # Een bestand beschikbaar voor de student
 :
 ```
