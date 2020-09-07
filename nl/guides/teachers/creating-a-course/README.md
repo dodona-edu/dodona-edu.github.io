@@ -55,7 +55,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
   * `Enkel gebruikers van de ingestelde onderwijsinstelling`: de cursus is enkel toegankelijk voor gebruikers van de ingestelde onderwijsinstelling (zie `Onderwijsinstelling` hierboven) en een directe link (zie volgend item).
 
-  * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het cursusoverzicht en op hun startpagina. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken. Voor alle andere gebruikers is de cursus **verborgen**.
+  * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het publieke cursusoverzicht. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken.
   
     ![verborgen cursus](./staff.course_hidden.png)
 
