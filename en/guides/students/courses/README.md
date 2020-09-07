@@ -81,7 +81,7 @@ Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daar
 ::: tip Dezelfde oefening in meerdere cursussen/oefeningenreeksen
 Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de oefening wordt hierbij niet overgenomen. Je moet dus de oefening binnen elke cursus afzonderlijk indienen.
 
-Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
+Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen bij alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
 :::
 
 In het menu van een oefeningenreeks vind je de volgende opties:
@@ -100,7 +100,7 @@ Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vó
   | --- | --- | --- |
   | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) | 
   | `verkeerd` | ![image](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
-  | `correct` | ![image](../../../../images/course_exercise_status_icons/before_deadline.png) |laatste oplossing die je indiende correct was (vóór de deadline) |
+  | `correct` | ![image](../../../../images/course_exercise_status_icons/correct.png) (![image](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
 
 Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
 
@@ -111,7 +111,7 @@ Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
   | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
   | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
 
-::: tip Belangrijk
+::: tip Laatst ingediende oplossing vóór deadline telt
 
 Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit de oefeningenreeks, dan kan je indienstatus voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de deadline. Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
@@ -125,7 +125,7 @@ Als je **na het verstrijken van de deadline** van een oefeningenreeks een oploss
 
 ## Uitschrijven uit een cursus
 
-Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `UITSCHRIJVEN` waarmee je je kunt uitschrijven uit de cursus.
+Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `UITSCHRIJVEN` (of `REGISTRATIEVERZOEK ANNULEREN`) waarmee je je kunt uitschrijven uit de cursus.
 
 ![image](./student.unregister.png)
 
