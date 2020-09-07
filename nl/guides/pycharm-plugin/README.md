@@ -28,7 +28,7 @@ PyCharm moet natuurlijk weten bij welke oefening hij je oplossing moet indienen.
 
 ![new exercise](./new_exercise.png)
 
-Bij het aanmaken van je eerste oefening zal **PyCharm** je om je **API token vragen**. Plak hier de API token die je daarnet aangemaakt hebt in de eerste stap.
+Bij het aanmaken van je eerste oefening zal PyCharm je om je API token vragen. Plak hier de API token die je daarnet aangemaakt hebt in de eerste stap.
 
 Vervolgens krijg je normaal een lijstje van al je Dodona cursussen te zien. Kies hier achtereenvolgens voor de juiste cursus, oefeningenreeks en oefening. Er zal nu automatisch een bestand aangemaakt worden waarin je je oplossing kan plaatsen.
 
