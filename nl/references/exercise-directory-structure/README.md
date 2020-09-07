@@ -12,7 +12,7 @@ Binnenin een oefeningmap behandelt Dodona elke map met een `config.json`-bestand
 - **Een `description`-map**: deze map bevat de volgende bestanden die de oefening beschrijven:
   - **Een `description.en.md`- en/of `description.nl.md`-bestand**: deze bestanden bevatten de Engelse en/of Nederlandse beschrijving van de oefening.
 
-::: tip Voorbeeldcursus en voorbeeldoefeningen
+::: tip Voorbeelden
 Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.ugent.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze bestanden gebruikt.
 :::
 
