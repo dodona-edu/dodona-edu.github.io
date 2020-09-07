@@ -73,7 +73,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
   * `Niemand`: gebruikers kunnen zich niet zelf voor de cursus registreren. De registraties zijn dus **gesloten**.
 
-  Standaard verloopt de goedkeuring van de registratie **automatisch**. Er is ook een optie om het registratieproces **gemodereerd** te laten verlopen. Gebruikers kunnen dan een registratieverzoek indienen voor de cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft goedgekeurd.
+* Standaard verloopt de goedkeuring van de registratie **automatisch**. Er is ook een optie om het registratieproces **gemodereerd** te laten verlopen. Gebruikers kunnen dan een registratieverzoek indienen voor de cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft goedgekeurd.
 
   ::: tip Belangrijk
 
