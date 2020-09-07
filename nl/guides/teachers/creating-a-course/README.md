@@ -49,7 +49,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 ### Toegangsrechten
 
 
-* `Zichtbaarheid`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
+* `Voor wie is deze cursus zichtbaar`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
 
   * `Iedereen`: de cursus is voor alle gebruikers **zichtbaar** in de lijst van beschikbare cursussen. Ze kunnen ook naar de cursuspagina navigeren, alle zichtbare inhoud bekijken en zich daar eventueel voor de cursus registreren.
 
