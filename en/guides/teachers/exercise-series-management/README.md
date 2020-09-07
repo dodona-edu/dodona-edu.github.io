@@ -16,11 +16,11 @@ Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk o
 
 ## Oefeningenreeks aanmaken
 
-Een cursusbeheerder kan onbeperkt oefeningenreeksen binnen je cursus aanmaken. Je doet dit door eerst naar de cursuspagina van de cursus te navigeren en vervolgens `Reeksen beheren` aan te klikken.
+Een cursusbeheerder kan onbeperkt oefeningenreeksen binnen je cursus aanmaken. Je doet dit door eerst naar de cursuspagina van de cursus te navigeren en vervolgens `REEKSEN BEHEREN` aan te klikken.
 
 ![reeksen beheren](./staff.course_manage_series_button.png)
 
-Op deze pagina vind je rechtsboven de knop `Reeks aanmaken`.
+Op deze pagina vind je rechtsboven de knop `REEKS AANMAKEN`.
 
 ![reeks aanmaken](./staff.course_new_series_button.png)
 
@@ -72,7 +72,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
   * `Verberg leeractiviteiten`: Als de leeractiviteiten verborgen zijn, dan zal enkel de beschrijving van deze reeks getoond worden. Je kan deze instelling gebruiken om bijvoorbeeld de leerstof van de reeks vooraf beschikbaar te stellen, zonder de oefeningen en leesactiviteiten al vrij te geven.
 
-Om de reeks aan te maken klik je op de afwerkknop in de rechterbovenhoek van het paneel `Nieuwe oefeningenreeks`. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
+Om de reeks aan te maken klik je op de afwerkknop in de rechterbovenhoek van het paneel `Reeks aanmaken`. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
 
 ![reeks aanmaken](./staff.series_new_submit.png)
 
@@ -84,17 +84,17 @@ Op de bewerking-pagina van een oefeningenreeks zie je een uitgebreide versie van
 
 ![reeks bewerken](./staff.series_edit.png)
 
-Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Klik op de toevoegknop aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
+Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Klik op de toevoegknop (`+`) aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
 
 ![reeks oefening toevoegen](./staff.series_add_exercise.png)
 
 Via de zoekbalk kan je bestaande oefeningen filteren op naam, beschikbare vertalingen, programmeertaal, labels, repository of type.
 
-Onder de hoofding `Oefeningen in deze reeks` kan je aan de rechterkant van een oefening op de verwijderknop klikken om de oefening uit de oefeningenreeks te verwijderen.
+Onder de hoofding `Oefeningen en leesactiviteiten in deze reeks` kan je aan de rechterkant van een oefening op de verwijderknop klikken om de oefening uit de oefeningenreeks te verwijderen.
 
 ![reeks oefening verwijderen](./staff.series_remove_exercise.png)
 
-Versleep de verplaatsknop aan de linkerkant van de oefeningen om de volgorde van de oefeningen aan te passen. De volgorde waarin de oefeningen onder de hoofding `Oefeningen in deze reeks` gerangschikt worden, is immers ook de volgorde waarin de oefeningen weergegeven worden in de oefeningenreeks.
+Versleep de verplaatsknop aan de linkerkant van de oefeningen om de volgorde van de oefeningen aan te passen. De volgorde waarin de oefeningen onder de hoofding `Oefeningen en leesactiviteiten in deze reeks` gerangschikt worden, is immers ook de volgorde waarin de oefeningen weergegeven worden in de oefeningenreeks.
 
 ![oefening verplaatsen](./staff.series_move_exercise.png)
 
@@ -124,13 +124,13 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
 * `Reeks evalueren`: deze actie stelt je in staat om op een gestructureerde manier door de ingediende oplossingen van deze reeks te bladeren, bijvoorbeeld om ze te [evalueren](#oefeningenreeks-evalueren) of verbeteren.
 
-* `Statusoverzicht`: toont een overzicht met de indienstatus van alle cursusgebruikers voor alle oefeningen uit de oefeningenreeks. De indienstatus wordt in het overzicht weergegeven met de gebruikelijke icoontjes.
+* `Statusoverzicht`: toont een handig overzicht met de indienstatus van alle cursusgebruikers voor alle oefeningen uit de oefeningenreeks. De indienstatus wordt in het overzicht weergegeven met de gebruikelijke icoontjes.
 
  ![scoresheet](./staff.scoresheet.png)
 
   Klik op de naam van een cursusgebruiker om naar de overzichtpagina van de gebruiker te navigeren.
 
-  Klik op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing  heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
+  Klik op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
 
 * `Oplossingen van studenten exporteren`: deze actie stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te [exporteren](#oefeningenreeks-oplossingen-exporteren) als zip-bestand.
 
@@ -162,11 +162,11 @@ In het actiemenu van een reeks kan je als lesgever ook kiezen om de ingezonden c
 Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst. 
 ![oefeningen kiezen](./staff.series_export_exercise_choice.png)
 
-Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `Volgende stap` om verder te gaan.
+Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `VOLGENDE STAP` om verder te gaan.
 
 Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden. 
 
 ![export opties](./staff.series_export_options.png)
 
-Klik op `Start export` om de download te starten. Je komt op de exportpagina die je zal verwittigen als je export klaar is. Meestal is dit binnen enkele seconden al het geval.
+Klik op `START EXPORT` om de download te starten. Je komt op de exportpagina die je zal verwittigen als je export klaar is. Meestal is dit binnen enkele seconden al het geval.
 ![export gestart](./staff.series_export_started.png)

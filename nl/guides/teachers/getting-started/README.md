@@ -2,6 +2,7 @@
 title: Van start met Dodona als leerkracht
 description: "Tutorial: van start met Dodona als leerkracht"
 ---
+
 # Van start met Dodona als leerkracht
 
 > Alle informatie om vlot van start te gaan met Dodona als leerkracht.
@@ -18,7 +19,7 @@ Dodona wordt gratis aangeboden voor educatieve doeleinden.
 
 Aanmelden op Dodona kan via de Smartschool, Office 365 of G Suite account van je school. Dodona krijgt vervolgens je naam, emailadres, en naam van je school doorgestuurd van het gekozen loginsysteem. Op basis hiervan kunnen we je identificeren en maken we automatisch een Dodona-account aan de eerste keer dat je aanmeldt. Je wachtwoord wordt op geen enkel moment naar ons doorgestuurd.
 
-::: tip
+::: tip Meerdere inlogsystemen?
 Sommige scholen bieden zowel inloggen via Smartschool als via Office 365 of G Suite aan. Omdat je Dodona-account gekoppeld is aan het gebruikte inlogsysteem, zal je twee verschillende Dodona-accounts hebben als je bijvoorbeeld eerst via Smartschool aanmeldt en vervolgens via Office 365.
 
 Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:dodona@ugent.be"> dodona@ugent.be</a>.
@@ -28,7 +29,7 @@ Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeper
 
 ## Een cursus aanmaken
 
-Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop "cursus aanmaken" te klikken in het [cursusoverzicht](https://dodona.ugent.be/nl/courses/).
+Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop `CURSUS AANMAKEN` te klikken in het [cursusoverzicht](https://dodona.ugent.be/nl/courses/).
 
 ![cursus aanmaken](./cursus-aanmaken.png)
 
@@ -41,7 +42,7 @@ Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud va
 
 ## Een cursus opstellen
 
-Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebruiken om oefeningen te groeperen. Om een nieuwe oefeningenreeks aan te maken, klik je op de "reeksen beheren" knop op je cursuspagina en vervolgens op "reeks aanmaken". Je krijgt dan onderstaand formulier te zien.
+Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebruiken om oefeningen te groeperen. Om een nieuwe oefeningenreeks aan te maken, klik je op de `REEKSEN BEHEREN` knop op je cursuspagina en vervolgens op `REEKS AANMAKEN`. Je krijgt dan onderstaand formulier te zien.
 
 ![reeks-aanmaken](./reeks-aanmaken.png)
 

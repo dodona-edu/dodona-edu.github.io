@@ -7,7 +7,7 @@ description: "Exercise description reference Dodona"
 
 > Dodona supports exercise descriptions and reading activities in HTML and Markdown with several additional features such as support for mathematical formulas.
 
-These features are available for both exercises and reading activities. They are rendered in exactly the same way. The only difference is that exercises have a text editor at the bottom of the exercise description, where a reading activity has a "mark as read" button.
+These features are available for both exercises and reading activities. They are rendered in exactly the same way. The only difference is that exercises have a text editor at the bottom of the exercise description, where a reading activity has a `MARK AS READ` button.
 
 ## Markdown
 
