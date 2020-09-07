@@ -1,7 +1,11 @@
 ---
-title: "Oefeningenreeksenbeheer"
+title: "[nl] Oefeningenreeksenbeheer"
 description: "Tutorial: oefeningenreeksenbeheer"
 ---
+
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
 
 # Oefeningenreeksenbeheer
 

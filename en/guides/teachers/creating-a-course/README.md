@@ -1,7 +1,11 @@
 ---
-title: "Een nieuwe cursus aanmaken"
+title: "[nl] Een nieuwe cursus aanmaken"
 description: "Tutorial: cursus aanmaken"
 ---
+
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
 
 # Een cursus aanmaken
 

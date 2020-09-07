@@ -1,5 +1,5 @@
 ---
-title: "Een reeks evalueren"
+title: "Reeks evalueren"
 description: "Tutorial: een reeks evalueren"
 ---
 

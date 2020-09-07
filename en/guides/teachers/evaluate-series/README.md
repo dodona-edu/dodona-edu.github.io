@@ -1,7 +1,10 @@
 ---
-title: "Een reeks evalueren"
+title: "[nl] Reeks evalueren"
 description: "Tutorial: een reeks evalueren"
 ---
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
 
 # Een reeks evalueren
 
