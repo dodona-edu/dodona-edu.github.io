@@ -1,7 +1,11 @@
 ---
-title: "Oefeningen oplossen"
+title: "[nl] Oefeningen oplossen"
 description: "Tutorial: oefeningen oplossen"
 ---
+
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
 
 # Oefeningen oplossen
 > Alle informatie zodat je als student kan navigeren naar oefeningen of oplossingen, oplossingen kan indienen en feedback kan interpreteren.
@@ -45,9 +49,7 @@ Op een oefeningpagina staat onder het paneel met de beschrijving van de oefening
 
 Alhoewel je perfect kan programmeren in de editor op Dodona zelf, raden we niet aan om alle oefeningen hierin op te lossen. In plaats daarvan adviseren we om een [Integrated Development Environment](https://nl.wikipedia.org/wiki/Integrated_development_environment) (IDE) te gebruiken. IDE's geven namelijk meer ondersteuning tijdens het schrijven, uitvoeren, testen en debuggen van broncode. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere problemen aan te pakken dan enkel de oefeningen uit Dodona.
 
-Bovendien zijn is er een plugin voorzien voor de [**JetBrains IDE**](jetbrains.com) ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/), [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html), …) en een extensie voor [**Visual Studio Code**](https://code.visualstudio.com/). Programmeurs die met die IDE's werken kunnen hun oplossingen rechtstreeks in Dodona indienen met behulp van die tool. Zonder die tool moet je code kopiëren en plakken in het indieningstekstvak op Dodona en op de oranje cirkel te klikken. Hier vind je instructies om de plugin te installeren en te gebruiken:
-* [PyCharm plugin](../../pycharm-plugin/)  
-* [VS Code extensie](../../vs-code-extension/) 
+Bovendien zijn is er een plugin voorzien voor de JetBrains IDE's zoals [IntelliJ](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/), en [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html). Ook voor [**Visual Studio Code**](https://code.visualstudio.com/) is een extensie voorzien. Programmeurs die met die IDE's werken kunnen hun oplossingen rechtstreeks in Dodona indienen met behulp van die tool. Zonder die tool moet je code kopiëren en plakken in het indieningstekstvak op Dodona en op de oranje cirkel te klikken. Instructies vind je [hier voor PyCharm](../../pycharm-plugin/) en [hier voor VS Code](../../vs-code-extension/).
 :::
 
 Na het indienen van een oplossing wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de cursus hebt ingediend voor de oefening. Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de [feedback](#interpreteren-van-feedback). In het overzicht zie je vóór elke oplossing ook een [icoontje](../courses/#indienstatus) dat overeenkomt met de status van de oplossing.
@@ -84,7 +86,7 @@ Je kunt een oplossing selecteren door in een oplossingenoverzicht op het pijltje
 
 ## Interpreteren van feedback
 
-Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing. De automatische feedback wordt opgesteld door de verwachte uitvoer en de uitvoer die gegenereerd werd aan de hand van de ingediende oplossing te vergelijken.
+Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
 
 ![image](./student.exercise_feedback_correct_page.png)
 
@@ -146,4 +148,3 @@ Als de judge binnen een testgeval rapporteert over individuele testen, dan worde
     ![image](./student.exercise_feedback_incorrect_tab.png)
 
     ![image](./student.exercise_feedback_visual.nl.png)
-

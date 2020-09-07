@@ -1,11 +1,7 @@
 ---
-title: "[nl] Oefeningen oplossen"
+title: "Oefeningen oplossen"
 description: "Tutorial: oefeningen oplossen"
 ---
-
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
 
 # Oefeningen oplossen
 > Alle informatie zodat je als student kan navigeren naar oefeningen of oplossingen, oplossingen kan indienen en feedback kan interpreteren.
