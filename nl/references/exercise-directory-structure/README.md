@@ -19,7 +19,7 @@ Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-
 
 ## Oefening-specifieke configuratie
 
-> Deze mappen zijn enkel relevant voor programmeeroefeningen.
+> Deze mappen zijn enkel relevant voor programmeeroefeningen en niet voor leesactiviteiten.
 
 Binnenin de `description`-map kan je volgende mappen specifiëren:
 - **Een optionele `media`-map**: deze map bevat statische bestanden zoals afbeeldingen die gebruikt worden in de oefeningbeschrijving.

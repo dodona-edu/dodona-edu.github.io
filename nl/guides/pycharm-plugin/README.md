@@ -12,7 +12,7 @@ Voor je de plugin kan installeren moet je eerst een API token aanmaken op de Dod
 
 ## 2. De plugin installeren
 
-Je kan de plugin direct installeren vanuit PyCharm. Je opent hiervoor eerst het `File`-menu en klik vervolgens op `Settings...`.
+Je kan de plugin direct installeren vanuit PyCharm. Je opent hiervoor eerst het `File`-menu en klikt vervolgens op `Settings...`.
 
 ![settings](./settings.png =250x)
 
@@ -28,7 +28,7 @@ PyCharm moet natuurlijk weten bij welke oefening hij je oplossing moet indienen.
 
 ![new exercise](./new_exercise.png)
 
-Bij het aanmaken van je eerste oefening zal **PyCharm** je om je **API token vragen**. Plak hier de API token die je daarnet aangemaakt hebt in de eerste stap.
+Bij het aanmaken van je eerste oefening zal PyCharm je om je API token vragen. Plak hier de API token die je daarnet aangemaakt hebt in de eerste stap.
 
 Vervolgens krijg je normaal een lijstje van al je Dodona cursussen te zien. Kies hier achtereenvolgens voor de juiste cursus, oefeningenreeks en oefening. Er zal nu automatisch een bestand aangemaakt worden waarin je je oplossing kan plaatsen.
 
