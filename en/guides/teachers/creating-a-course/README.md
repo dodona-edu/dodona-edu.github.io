@@ -63,11 +63,11 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
   
     ![verborgen cursus](./staff.course_hidden.png)
 
-* `Registratielink`: bij het aanmaken van een cursus wordt automatisch een registratielink gegenereerd als afschermingsmechanisme van verborgen cursussen. Zonder deze link kunnen niet-geregistreerde gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Je vindt deze registratielink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de registratielink om de registratielink naar het klembord te kopiëren. 
+* `Toegangslink`: bij het aanmaken van een cursus wordt automatisch een toegangslink gegenereerd als afschermingsmechanisme van verborgen cursussen. Zonder deze link kunnen niet-geregistreerde gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Je vindt deze toegangslink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de toegangslink om de toegangslink naar het klembord te kopiëren.
 
-  ![registratielink](./staff.course_hidden_registration_link.png)
-
-  De registratielink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.  
+  ![toegangslink](./staff.course_hidden_registration_link.png)
+  
+  De toegangslink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.  
 
 * `Registratieprocedure`: deze eigenschap bepaalt of en hoe gebruikers zich voor de cursus kunnen registreren. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 
