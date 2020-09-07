@@ -18,7 +18,7 @@ Take a look at the [example exercises repository](https://github.com/dodona-edu/
 
 ## Exercise-only configuration
 
-> These directories are only relevant for programming exercises.
+> These directories are only relevant for programming exercises, not reading activities.
 
 Inside the `description` directory, you can specify the following directories:
 - **An optional `media` directory**: this directory contains static files such as images used in the exercise description.
