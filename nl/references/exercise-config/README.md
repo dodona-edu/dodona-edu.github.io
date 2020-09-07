@@ -33,8 +33,8 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
 
 - **`type`**: Moet ingesteld worden op `content` voor leesctiviteiten.
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
-  - `public`: elke lesgever op Dodona kan deze oefening gebruiker
-  - `private`: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
+  - **`public`**: elke lesgever op Dodona kan deze oefening gebruiker
+  - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
   - **`names`** (object): de naam van de oefening
     - **`nl`**: de naam van de oefening in het Nederlands
