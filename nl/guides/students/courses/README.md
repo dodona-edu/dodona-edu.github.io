@@ -77,7 +77,7 @@ Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daar
 ::: tip Dezelfde oefening in meerdere cursussen/oefeningenreeksen
 Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de oefening wordt hierbij niet overgenomen. Je moet dus de oefening binnen elke cursus afzonderlijk indienen.
 
-Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
+Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomenbij alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
 :::
 
 In het menu van een oefeningenreeks vind je de volgende opties:
