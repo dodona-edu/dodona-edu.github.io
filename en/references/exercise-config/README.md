@@ -33,8 +33,8 @@ The structure for a reading activity is identical to that of an exercise. There 
 
 - **`type`**: Must be set to `content` for reading activities
 - **`access`** (`public` or `private`): determines who can use this exercise
-  - `public`: any other teacher on Dodona can use this exercise
-  - `private`: only teachers with explicit permission can use this exercise
+  - **`public`**: any other teacher on Dodona can use this exercise
+  - **`private`**: only teachers with explicit permission can use this exercise
 - **`description`** (object): the specification of the description of the exercise
   - **`names`** (object): the name of the exercise
     - **`nl`**: the name of the exercise in Dutch
