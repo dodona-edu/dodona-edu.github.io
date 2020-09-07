@@ -107,7 +107,7 @@ Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
   | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
   | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
 
-::: tip Belangrijk: laatst ingediende oplossing vóór deadline telt
+::: tip Laatst ingediende oplossing vóór deadline telt
 
 Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit de oefeningenreeks, dan kan je indienstatus voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de deadline. Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 

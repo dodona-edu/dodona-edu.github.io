@@ -41,7 +41,7 @@ Op een oefeningpagina staat onder het paneel met de beschrijving van de oefening
 
 ![image](./student.exercise_before_submit.png)
 
-::: tip Tip: gebruik een IDE (met plugin/extensie)
+::: tip Gebruik een IDE
 
 Alhoewel je perfect kan programmeren in de editor op Dodona zelf, raden we niet aan om alle oefeningen hierin op te lossen. In plaats daarvan adviseren we om een [Integrated Development Environment](https://nl.wikipedia.org/wiki/Integrated_development_environment) (IDE) te gebruiken. IDE's geven namelijk meer ondersteuning tijdens het schrijven, uitvoeren, testen en debuggen van broncode. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere problemen aan te pakken dan enkel de oefeningen uit Dodona.
 

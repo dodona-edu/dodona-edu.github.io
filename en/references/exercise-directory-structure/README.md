@@ -12,7 +12,7 @@ Inside an exercise repository, Dodona handles every directory containing a `conf
 - **A `description` directory**: this directory contains the files describing the exercise containing:
   - **A `description.en.md` and/or `description.nl.md` file**: these files contain the English and/or Dutch description of the exercise.
 
-::: tip Example course and example exercises
+::: tip Examples
 Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.ugent.be/en/courses/358/) to see some examples on how to use these files.
 :::
 
