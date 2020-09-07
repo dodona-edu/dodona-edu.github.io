@@ -86,7 +86,7 @@ Je kunt een oplossing selecteren door in een oplossingenoverzicht op het pijltje
 
 ## Interpreteren van feedback
 
-Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing. De automatische feedback wordt opgesteld door de verwachte uitvoer en de uitvoer die gegenereerd werd aan de hand van de ingediende oplossing te vergelijken.
+Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
 
 ![image](./student.exercise_feedback_correct_page.png)
 
