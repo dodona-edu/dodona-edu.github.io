@@ -19,7 +19,6 @@ Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-
 
 ## Oefening-specifieke configuratie
 
-<<<<<<< HEAD
 > Deze mappen zijn enkel relevant voor programmeeroefeningen en niet voor leesactiviteiten.
 
 Binnenin de `description`-map kan je volgende mappen specifiëren:
@@ -28,15 +27,6 @@ Binnenin de `description`-map kan je volgende mappen specifiëren:
 - **Een `evaluation`-map**: de inhoud van deze map wordt beschikbaar gesteld voor de judge en kan bijvoorbeeld bestanden met de testcode bevatten.
 - **Een optionele `workdir`-map**: de inhoud van deze map worddt beschikbaar gesteld tijdens het uitvoeren van de judge en kan bijvoorbeeld databestanden bevatten die nodig zijn tijdens het uitvoeren van de tests.
 - **Een optionele `solution`-map**: bestanden in deze map zullen getoond worden op de oefening-informatiepagina als voorbeeldoplossing. Meerdere voorbeeldoplossingen zijn mogelijk, maar bestanden met een naam beginnend met *solution* zullen vooraan staan.
-=======
-Deze folders zijn enkel relevant voor programmeeroefeningen
-Binnenin de `description`-folder kan je volgende folders specifiëren:
-- **Een optionele `media`-folder**: deze folder bevat statische bestanden zoals afbeeldingen die gebruikt worden in de oefeningbeschrijving.
-- **Een optionele `boilerplate`-folder**: deze folder bevat de bestanden `boilerplate.en`, `boilerplate.nl`, en/of `boilerplate`. De inhoud van deze bestanden worden automatisch ingeladen in het inzendingstekstveld van de gebruikers. Je kan deze bestanden gebruiken om startcode of structuur te voorzien voor de studenten.
-- **Een `evaluation`-folder**: de inhoud van deze folder wordt beschikbaar gesteld voor de judge en kan bijvoorbeeld bestanden met de testcode bevatten.
-- **Een optionele `workdir`-folder**: de inhoud van deze folder worddt beschikbaar gesteld tijdens het uitvoeren van de judge en kan bijvoorbeeld databestanden bevatten die nodig zijn tijdens het uitvoeren van de tests.
-- **Een optionele `solution`-folder**: bestanden in deze folder zullen getoond worden op de oefening-informatiepagina als voorbeeldoplossing. Meerdere voorbeeldoplossingen zijn mogelijk, maar bestanden met een naam beginnend met 'solution' zullen vooraan staan.
->>>>>>> solutions -> solution
 
 Dodona negeert elk ander bestand of elke andere map. Je kan dus vrijuit andere bestanden (bijvoorbeeld met oplossingen voor je oefeningen) aanmaken of een persoonelijke oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen in andere oefeningenmappen plaatsen.
 
