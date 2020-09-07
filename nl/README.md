@@ -9,8 +9,6 @@ footer: Made by Team Dodona with ❤️
 
 Op deze website kunt u een aantal verschillende handleidingen en referenties terugvinden. Het uiteindelijke doel van deze website is om alle inhoud in zowel het Engels als Nederlands aan te bieden. Voorlopig bestaat ze uit een mix van beide.
 
-Nog niet alle handleidingen van onze vorige documentatiewebsite zijn gemigreerd. De oude website kunt u voorlopig raadplegen op [https://dodona.readthedocs.io/nl/latest/](https://dodona.readthedocs.io/nl/latest/).
-
 Voor de Dodona webapplicatie kunt u terecht op [https://dodona.ugent.be](https://dodona.ugent.be).
 
 <div class="features">
