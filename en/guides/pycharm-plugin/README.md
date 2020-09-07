@@ -28,7 +28,7 @@ Of course, PyCharm must know for which exercise it has to submit your solution. 
 
 ![new exercise](./new_exercise.png)
 
-When creating your first exercise, **PyCharm will ask for you API token**. Paste the API token you just made in the first step.
+When creating your first exercise, **PyCharm will ask for your API token**. Paste the API token you just made in the first step.
 
 Next, you should see a list of your Dodona courses. Pick the right course, exercise series and exercise. PyCharm will now automatically create a new file in which you can write your solution.
 

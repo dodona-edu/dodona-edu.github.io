@@ -23,7 +23,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
   - **`image`** (string, optional): the name of the docker image that is used for evaluation. By default, Dodona uses the image specified by the judge.
   - **`time_limit`** (integer, optional): the time in seconds before the evaluations times out. By default, the limit is 42 seconds.
   - **`memory_limit`** (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 100MB.
-  - **`network_enabled`** (**`false`** or `true`) (boolean, optional): set to `true` if internet access should be enabled. This optional setting is false by default.
+  - **`network_enabled`** (**`false`** or `true`) (boolean, optional): set to `true` if internet access should be enabled. This optional setting is `false` by default.
 - **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
 - **`contact`** (string, optional): info about the author of this exercise, formatted like an email To header.
 
