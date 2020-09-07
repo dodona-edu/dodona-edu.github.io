@@ -42,7 +42,7 @@ The structure for a reading activity is identical to that of an exercise. There 
 - **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
 - **`contact`** (string, optional): info about the author of this reading activity, formatted like an email To header.
 
-## Example config file
+## Example config file `config.json`
 
 ### Exercise
 
@@ -82,5 +82,21 @@ The structure for a reading activity is identical to that of an exercise. There 
   "type": "content",
   "visibility": "public",
   "labels": ["test", "intro"]
+}
+```
+
+## Example folder config file `dirconfig.json`
+
+```json
+{
+  "visibility": "private",
+  "evaluation": {
+    "handler": "python",
+    "time_limit": 15,
+    "memory_limit": 100000000
+  },
+  "programming_language": "python",
+  "author": "Firstname Lastname <firstname_lastname@ugent.be>",
+  "contact": "firstname_lastname@ugent.be"
 }
 ```

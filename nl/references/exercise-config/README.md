@@ -84,3 +84,19 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
   "labels": ["test", "intro"]
 }
 ```
+
+## Voorbeeld mappenconfiguratiebestand `dirconfig.json`
+
+```json
+{
+  "visibility": "private",
+  "evaluation": {
+    "handler": "python",
+    "time_limit": 15,
+    "memory_limit": 100000000
+  },
+  "programming_language": "python",
+  "author": "Firstname Lastname <firstname_lastname@ugent.be>",
+  "contact": "firstname_lastname@ugent.be"
+}
+```
