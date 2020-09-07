@@ -12,7 +12,7 @@ Voor je de plugin kan installeren moet je eerst een API token aanmaken op de Dod
 
 ## 2. De plugin installeren
 
-Je kan de plugin direct installeren vanuit PyCharm. Je opent hiervoor eerst het `File`-menu en klik vervolgens op `Settings...`.
+Je kan de plugin direct installeren vanuit PyCharm. Je opent hiervoor eerst het `File`-menu en klikt vervolgens op `Settings...`.
 
 ![settings](./settings.png =250x)
 
