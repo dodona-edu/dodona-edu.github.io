@@ -2,6 +2,7 @@
 title: '[nl] Van start met Dodona als leerkracht'
 description: "Tutorial: van start met Dodona als leerkracht"
 ---
+
 # Van start met Dodona als leerkracht
 
 > Alle informatie om vlot van start te gaan met Dodona als leerkracht.
@@ -19,7 +20,7 @@ Dodona wordt gratis aangeboden voor educatieve doeleinden.
 Aanmelden op Dodona kan via de Smartschool, Office 365 of G Suite account van je school. Dodona krijgt vervolgens je naam, emailadres, en naam van je school doorgestuurd van het gekozen loginsysteem. Op basis hiervan kunnen we je identificeren en maken we automatisch een Dodona-account aan de eerste keer dat je aanmeldt. Je wachtwoord wordt op geen enkel moment naar ons doorgestuurd.
 
 ::: tip Meerdere inlogsystemen?
-Sommige scholen bieden zowel inloggen via Smartschool als via Office 365 of G Suite aan. Omdat je Dodona-account gekoppeld is aan het gebruikte inlogsysteem, zal twee verschillende Dodona-accounts hebben als je bijvoorbeeld eerst via Smartschool aanmeldt en vervolgens via Office 365.
+Sommige scholen bieden zowel inloggen via Smartschool als via Office 365 of G Suite aan. Omdat je Dodona-account gekoppeld is aan het gebruikte inlogsysteem, zal je twee verschillende Dodona-accounts hebben als je bijvoorbeeld eerst via Smartschool aanmeldt en vervolgens via Office 365.
 
 Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:dodona@ugent.be"> dodona@ugent.be</a>.
 :::

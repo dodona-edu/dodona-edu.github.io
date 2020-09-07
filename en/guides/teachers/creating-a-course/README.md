@@ -9,7 +9,7 @@ For now, this page is only available in Dutch. Sorry!
 
 # Een cursus aanmaken
 
-:::tip Belangrijk 
+:::tip Belangrijk
 
 Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Contacteer ons op [dodona@ugent.be](mailto:dodona@ugent.be) of via het [contactformulier](https://dodona.ugent.be/nl/contact) en we geven je account zo snel mogelijk de nodige toegangsrechten.
 
@@ -53,13 +53,13 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 ### Toegangsrechten
 
 
-* `Zichtbaarheid`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
+* `Voor wie is deze cursus zichtbaar`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden: 
 
-  * `Iedereen`: het cursusoverzicht is voor alle gebruikers **zichtbaar**. Ze kunnen ook naar de cursuspagina navigeren, alle zichtbare inhoud bekijken en zich daar eventueel voor de cursus registreren.
+  * `Iedereen`: de cursus is voor alle gebruikers **zichtbaar** in de lijst van beschikbare cursussen. Ze kunnen ook naar de cursuspagina navigeren, alle zichtbare inhoud bekijken en zich daar eventueel voor de cursus registreren.
 
   * `Enkel gebruikers van de ingestelde onderwijsinstelling`: de cursus is enkel toegankelijk voor gebruikers van de ingestelde onderwijsinstelling (zie `Onderwijsinstelling` hierboven) en een directe link (zie volgend item).
 
-  * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het cursusoverzicht en op hun startpagina. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken. Voor alle andere gebruikers is de cursus **verborgen**.
+  * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het publieke cursusoverzicht. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken.
   
     ![verborgen cursus](./staff.course_hidden.png)
 
@@ -69,7 +69,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
   
   De toegangslink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.  
 
-* `Registratieprocedure`: deze eigenschap bepaalt of en hoe gebruikers zich voor de cursus kunnen registreren. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
+* `Wie kan zich registreren voor deze cursus`: deze eigenschap bepaalt of en hoe gebruikers zich voor de cursus kunnen registreren. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 
   * `Iedereen`: gebruikers kunnen zich vrij voor de cursus registreren zonder expliciete goedkeuring van een cursusbeheerder. De cursus staat dus **open** voor iedereen.
   
@@ -77,7 +77,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
   * `Niemand`: gebruikers kunnen zich niet zelf voor de cursus registreren. De registraties zijn dus **gesloten**.
 
-  Standaard verloopt de goedkeuring van de registratie **automatisch**. Er is ook een optie om het registratieproces **gemodereerd** te laten verlopen. Gebruikers kunnen dan een registratieverzoek indienen voor de cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft goedgekeurd.
+* Standaard verloopt de goedkeuring van de registratie **automatisch**. Er is ook een optie om het registratieproces **gemodereerd** te laten verlopen. Gebruikers kunnen dan een registratieverzoek indienen voor de cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft goedgekeurd.
 
   ::: tip Belangrijk
 

@@ -5,7 +5,7 @@ description: "Tutorial: cursus aanmaken"
 
 # Een cursus aanmaken
 
-:::tip Belangrijk 
+:::tip Belangrijk
 
 Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Contacteer ons op [dodona@ugent.be](mailto:dodona@ugent.be) of via het [contactformulier](https://dodona.ugent.be/nl/contact) en we geven je account zo snel mogelijk de nodige toegangsrechten.
 
