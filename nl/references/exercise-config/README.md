@@ -80,7 +80,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     }
   },
   "type": "content",
-  "visibility": "public",
+  "access": "public",
   "labels": ["test", "intro"]
 }
 ```
@@ -89,7 +89,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
 
 ```json
 {
-  "visibility": "private",
+  "access": "private",
   "evaluation": {
     "handler": "python",
     "time_limit": 15,
