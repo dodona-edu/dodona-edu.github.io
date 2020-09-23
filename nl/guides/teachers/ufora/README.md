@@ -33,11 +33,11 @@ In het dialoogvenster verschijnt een overzicht van alle cursussen waar je toegan
 
 ![select activity](./select-activity.png)
 
-Met behulp van de ctrl-knop (of command op een mac) op je toetsenbord kan je een of meer oefeningen selecteren. Klik vervolgens op de `Bevestigen` knop om die oefeningen aan Ufora toe te voegen. Als je geen oefeningen of geen reeks selecteert dan zal je respectievelijk een link naar de reeks of de cursus in Dodona aan Ufora toevoegen.
+Met behulp van de ctrl-knop (of command op een mac) op je toetsenbord kan je een of meer oefeningen selecteren. Klik vervolgens op de knop `Bevestigen` om die oefeningen aan Ufora toe te voegen. Als je geen oefeningen of geen reeks selecteert dan zal je respectievelijk een link naar de reeks of de cursus in Dodona aan Ufora toevoegen.
 
 ## 4. Selecteer 'Als externe bron openen' 
 
-Na het klikken op de knop `bevestigen` zou het dialoogvenster moeten verdwijnen en zou je de gekozen oefeningen moeten zien verschijnen op Ufora. **Pas op!** Je bent nog niet klaar. Standaard zal Ufora de Dodona oefeningen openen in een klein venster. Je kan dit echter eenvoudig aanpassen:
+Na het klikken op de knop `Bevestigen` zou het dialoogvenster moeten verdwijnen en zou je de gekozen oefeningen moeten zien verschijnen op Ufora. **Pas op!** Je bent nog niet klaar. Standaard zal Ufora de Dodona-oefening openen in een klein venster. Je kan dit echter eenvoudig aanpassen:
  - Klik op het pijlje naast de naam van de oefening
  - Kies 'Eigenschappen op één plek bewerken'
  - Vink 'Als externe bron openen' aan

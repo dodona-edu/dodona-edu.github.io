@@ -6,7 +6,7 @@ description: "Tutorial: Dodona and Ufora"
 # Dodona and Ufora
 
 ::: warning UGent-only
-This page is specifically about the combination of Dodona with Ufora, the online learning environment of Ghent University.
+This page is specifically about integrating Dodona with Ufora, the online learning environment of Ghent University.
 :::
 
 Since the academic year of 2020-2021, it is possible to add Dodona exercises and exercise series to the content tool of Ufora. Students who open such link are automatically signed in with their UGent account. In a later phase, we will integrate with the score module of Ufora. This will allow sending the result of a submitted solution to Ufora.
@@ -26,7 +26,7 @@ The Dodona module is not enabled in all faculties by default. If you don't see a
 
 ![add content](./add-content.png)
 
-The first time you use Dodona from Ufora, we need to link you Ufora profile with your UGent account. Therefore, we'll ask you to sign in with your UGent account. To do so, click on the big orange button to open a new window and go through the sign in procedure. Next, close the dialog on Ufora and start again from the beginning of step 2.
+The first time you use Dodona from Ufora, we need to link your Ufora profile with your UGent account. Therefore, we'll ask you to sign in with your UGent account. To do so, click on the big orange button to open a new window and go through the sign in procedure. Next, close the dialog on Ufora and start again from the beginning of step 2.
 
 ## 3. Select exercises
 
