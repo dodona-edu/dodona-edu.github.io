@@ -12,6 +12,9 @@ export default ({
 }) => {
   router.addRoutes([
     { path: '/nl/guides/getting-started/', redirect: '/nl/guides/teachers/getting-started/' },
-    { path: '/en/guides/getting-started/', redirect: '/en/guides/teachers/getting-started/' }
+    { path: '/en/guides/getting-started/', redirect: '/en/guides/teachers/getting-started/' },
+    { path: '/ufora/', redirect: '/nl/guides/teachers/ufora/' },
+    { path: '/nl/ufora/', redirect: '/nl/guides/teachers/ufora/' },
+    { path: '/en/ufora/', redirect: '/en/guides/teachers/ufora/' }
   ])
 }
