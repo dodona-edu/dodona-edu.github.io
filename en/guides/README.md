@@ -8,6 +8,7 @@ Here you'll find a number of guides, primarily focused on teachers.
 
 ## In English
 * [Creating a new exercise repository](teachers/new-exercise-repo)
+* [Dodona and Ufora](teachers/ufora)
 * [Dodona PyCharm plugin](pycharm-plugin)
 * [Dodona VS Code extension](vs-code-extension)
 * [The Coder's Apprentice](the-coders-apprentice)
