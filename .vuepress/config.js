@@ -25,7 +25,6 @@ module.exports = {
 
   themeConfig: {
     repo: '',
-    logo: '/Dodona_icon.png',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
