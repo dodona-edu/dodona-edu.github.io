@@ -8,23 +8,17 @@ By creating an API token, you can authorize external applications, such as the [
 
 ## 1. Go to your profile page
 
-First, go to your profile page by clicking the link in the dropdown menu.
+First, go to your profile page by clicking the link in the dropdown menu. Alternatively, you can browse to [dodona.ugent.be/profile](https://dodona.ugent.be/profile).
 
 ![My Profile](./my-profile.png)
 
-## 2. Edit your profile
+## 2. Create a token
 
-At your profile page, click the yellow `EDIT`-button at the bottom.
-
-![Edit your profile](./edit.png)
-
-## 3. Create a token
-
-Scroll to the bottom of the page and generate a new token by clicking the `+`-button. You can choose the description yourself.
+Scroll to the middle of the page and generate a new token by clicking the `+`-button. Fill in a description of your choice (ex. _pycharm_). This allows you to identify the token later on, as it tells you which program uses that specific token.
 
 ![Create a token](./create-new-token.png)
 
-## 4. Copy the token
+## 3. Copy the token
 
 Copy the newly generated token and paste it in the authentication dialog of the [PyCharm plugin](../pycharm-plugin/README.md) or the [VS Code extension](../vs-code-extension/README.md). On Dodona, you can see a list of all your active tokens. Be aware that you can't see the tokens themselves out of security considerations. You can delete a token at any time. Removing a token will cause it to stop functioning immediately.
 

@@ -7,7 +7,7 @@ description: "The Coder's Apprentice"
 
 > Learn to code with Python 3
 
-In [Dodona](https://dodona-edu.github.io/nl/guides/getting-started/) you'll find an **interactive edition** of the book [The Coder's Apprentice](http://www.spronck.net/pythonbook/dutchindex.xhtml) by Pieter Spronck (Tilburg University). The book aims to teach **secondary school** students how to code with **Python 3**. The course is available in both the [English](https://dodona.ugent.be/nl/courses/293/) and [Dutch](https://dodona.ugent.be/nl/courses/293/) edition.
+In [Dodona](/en/guides/teachers/getting-started) you'll find an **interactive edition** of the book [The Coder's Apprentice](http://www.spronck.net/pythonbook/dutchindex.xhtml) by Pieter Spronck (Tilburg University). The book aims to teach **secondary school** students how to code with **Python 3**. The course is available in both the [English](https://dodona.ugent.be/nl/courses/293/) and [Dutch](https://dodona.ugent.be/nl/courses/293/) edition.
 
 ![The Coder's Apprentice](./codersapprentice.png)
 

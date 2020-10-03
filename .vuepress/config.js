@@ -170,6 +170,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
             'teachers/exercise-series-management/',
             'teachers/evaluate-series/',
             'teachers/new-exercise-repo/',
+            'teachers/ufora/',
           ]
         },
         'pycharm-plugin/',

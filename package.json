@@ -14,11 +14,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.5.4",
-    "@vuepress/plugin-google-analytics": "^1.5.4",
-    "@vuepress/plugin-medium-zoom": "^1.5.4",
+    "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-google-analytics": "^1.6.0",
+    "@vuepress/plugin-medium-zoom": "^1.6.0",
     "markdown-it-imsize": "^2.0.1",
-    "vuepress": "^1.5.4",
+    "vuepress": "^1.6.0",
     "vuepress-plugin-redirect": "^1.2.5"
   }
 }
