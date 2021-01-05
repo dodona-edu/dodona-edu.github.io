@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.6.0",
+    "@vuepress/plugin-back-to-top": "^1.8.0",
     "@vuepress/plugin-google-analytics": "^1.8.0",
     "@vuepress/plugin-medium-zoom": "^1.6.0",
     "markdown-it-imsize": "^2.0.1",
