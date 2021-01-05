@@ -17,7 +17,7 @@ In deze release hebben we heel veel aandacht geschonken aan het opsmukken van de
 
 ## Verwerking van persoonsgegevens en vertrouwelijke informatie in Dodona
 
-Voor de correcte werking van Dodona is het noodzakelijk dat we gegevens over onze gebruikers bijhouden. Op [deze pagina](https://dodona.ugent.be/data/) geven we volledige transparantie over de gegevens die we bijhouden, waarom we deze gegevens bijhouden, wie toegang heeft tot de gegevens en hoe we die gegevens gebruiken om het leerplatform nog beter te maken. Als leerplatform ontwikkeld aan de Universiteit Gent (België) is Dodona ook conform aan de [privacyverklaring van de Universiteit Gent](https://www.ugent.be/nl/univgent/privacy/privacyverklaring). Heb je toch nog vragen over de verwerking van persoonsgegevens en vertrouwelijke informatie in Dodona? Aarzel dan zeker niet om [ons te contacteren](https://dodona.ugent.be/contact/).  
+Voor de correcte werking van Dodona is het noodzakelijk dat we gegevens over onze gebruikers bijhouden. Op [deze pagina](https://dodona.ugent.be/data/) geven we volledige transparantie over de gegevens die we bijhouden, waarom we deze gegevens bijhouden, wie toegang heeft tot de gegevens en hoe we die gegevens gebruiken om het leerplatform nog beter te maken. Als leerplatform ontwikkeld aan de Universiteit Gent (België) is Dodona ook conform aan de [privacyverklaring van de Universiteit Gent](https://www.ugent.be/nl/univgent/privacy). Heb je toch nog vragen over de verwerking van persoonsgegevens en vertrouwelijke informatie in Dodona? Aarzel dan zeker niet om [ons te contacteren](https://dodona.ugent.be/contact/).  
 
 ## Volledige lijst van veranderingen  
 
