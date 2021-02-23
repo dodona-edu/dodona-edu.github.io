@@ -16,7 +16,7 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "@vuepress/plugin-google-analytics": "^1.8.2",
-    "@vuepress/plugin-medium-zoom": "^1.8.0",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
     "markdown-it-imsize": "^2.0.1",
     "vuepress": "^1.8.2",
     "vuepress-plugin-redirect": "^1.2.5"
