@@ -199,6 +199,16 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'repository-directory-structure/',
         'exercise-directory-structure/',
         'python-judge/',
+        {
+          title: "TESTed judge",
+          collapsable: true,
+          path: `/${lang}/references/tested-judge/`,
+          sidebarDepth: 3,
+          children: [
+            ['tested-judge/', FirstItem],
+            'tested-judge/dsl/',
+          ]
+        },
       ]
     }
   ]
