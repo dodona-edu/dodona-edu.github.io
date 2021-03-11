@@ -201,9 +201,9 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'python-judge/',
         {
           title: "TESTed judge",
-          collapsable: true,
+          collapsable: false,
           path: `/${lang}/references/tested-judge/`,
-          sidebarDepth: 3,
+          sidebarDepth: 1,
           children: [
             ['tested-judge/', FirstItem],
             'tested-judge/dsl/',

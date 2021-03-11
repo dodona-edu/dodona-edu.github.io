@@ -18,9 +18,9 @@ Here do you find all information for the use of the **TESTed** judge.
   <details>
     <summary>Available libraries Haskell</summary>
     
-    | Bibliotheek |  Versie  |
-    | ----------- | -------- |
-    | **aeson**   |  1.5.4.1 |
+    | Library     |  Version  |
+    | ----------- | --------- |
+    | **aeson**   |  1.5.4.1  |
 
   </details>
 
@@ -32,23 +32,23 @@ Here do you find all information for the use of the **TESTed** judge.
   <details>
     <summary>Available libraries Python</summary>
     
-    | Bibliotheek        |  Versie  |
-    | ------------------ | -------- |
-    | **jsonschema**     | 3.2.0    |
-    | **psutil**         | 5.7.0    |
-    | **mako**           | 1.1.2    |
-    | **pydantic**       | 1.7.3    |
-    | **toml**           | 0.10.1   |
-    | **typing_inspect** | 0.6.0    | 
-    | **pylint**         | 2.6.0    |
-    | **esprima**        | 4.0.1    |
-    | **lark**           | 0.10.1   |
-    | **pyyaml**         | 5.3.1    |
-    | **Pygments**       | 2.7.4    |
-    | **python-i18n**    | 0.3.9    |
+    | Library            |  Version  |
+    | ------------------ | --------- |
+    | **jsonschema**     | 3.2.0     |
+    | **psutil**         | 5.7.0     |
+    | **mako**           | 1.1.2     |
+    | **pydantic**       | 1.7.3     |
+    | **toml**           | 0.10.1    |
+    | **typing_inspect** | 0.6.0     | 
+    | **pylint**         | 2.6.0     |
+    | **esprima**        | 4.0.1     |
+    | **lark**           | 0.10.1    |
+    | **pyyaml**         | 5.3.1     |
+    | **Pygments**       | 2.7.4     |
+    | **python-i18n**    | 0.3.9     |
 
   </details>
 
 ## Documentation
 
-* [DSL-Testplannen](dsl)
+* [DSL-Testplans](dsl)
