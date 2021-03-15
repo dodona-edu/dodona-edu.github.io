@@ -4,9 +4,10 @@ description: "TESTed DSL testplannen"
 ---
 
 # Documentatie TESTed DSL
-Een dsl-testplan voor tested wordt beschreven met behulp van de yaml-syntaxis. Daarnaast volgt de dsl in grote mate de structuur waarmee Dodona de testen beschrijft.
-Het volgende code fragment stelt de structuur van DSL-testplannen weer.
-Hierbij stelt het begruik van vierkante haakjes lijsten van objecten voor.
+Een DSL-testplan voor TESTed wordt beschreven met behulp van de YAML-syntaxis.
+Daarnaast volgt de DSL in grote mate de structuur waarmee Dodona de testen beschrijft.
+Het volgende codefragment stelt de structuur van DSL-testplannen weer.
+Hierbij stelt het gebruik van vierkante haakjes lijsten van objecten voor.
 
 ```text
 . # Met top-level
@@ -52,10 +53,9 @@ Hierbij stelt het begruik van vierkante haakjes lijsten van objecten voor.
 └ ... # identiek aan de tabs hierboven
 ```
 
-In de volgende paragrafen zullen we met behulp van voorbeelden de dsl beschrijven.
+In de volgende paragrafen zullen we met behulp van voorbeelden de DSL beschrijven.
 
 ## Eenvoudige invoer-uitvoer
-
 De eerste soort oefeningen zijn invoer-uitvoeroefeningen.
 We zullen een voorbeeld testplan bekijken voor een oefening die één regel op standaardinvoer verwacht en deze terug wegschrijft naar standaarduitvoer.
 
@@ -107,8 +107,8 @@ Getallen en booleaanse waarden worden ook ondersteund, maar zullen worden vertaa
 We zullen naar deze datatypes refereren als tekstuele datatypes.
 
 ## Multi-tab en multi-line
-We zullen nu het testplan uitbreiden met multi-line strings en meerdere tabbladen. Hiervoor zullen
-we gebruikmaken van de oefening [Boeketje rozen](https://dodona.ugent.be/nl/courses/27/activities/1047652305/).
+We zullen nu het testplan uitbreiden met multi-line strings en meerdere tabbladen.
+Hiervoor zullen we gebruikmaken van de oefening [Boeketje rozen](https://dodona.ugent.be/nl/courses/27/activities/1047652305/).
 
 ```yaml
 - tab: "Kleiner dan"
@@ -127,7 +127,7 @@ we gebruikmaken van de oefening [Boeketje rozen](https://dodona.ugent.be/nl/cour
     stdout: "2\n2\n32\n"
 ```
 
-Door een weergave probleem op Dodona, zijn de newlines in de volgende figuren vervangen door spaties.
+Door een weergave probleem op Dodona, zijn de newlines in de beschrijvingen in de volgende figuren vervangen door spaties.
 <p float="left">
   ![Boeketje rozen Kleiner Dan](./boeketje_rozen_KleinerDan.png)
   ![Boeketje rozen Groter Dan](./boeketje_rozen_GroterDan.png)
@@ -136,7 +136,7 @@ Door een weergave probleem op Dodona, zijn de newlines in de volgende figuren ve
 ### Beschrijving
 
 #### Multi-line
-Zoals zichtbaar in het testplan uit het codefragment, heeft yaml verschillende manieren om multi-line strings te ondersteunen.
+Zoals zichtbaar in het testplan uit het codefragment, heeft YAML verschillende manieren om multi-line strings te ondersteunen.
 Ten eerste de klassieke escape-string en een tweede notatie met ‘|’.
 De klassieke escape-string biedt de meeste controle aan de gebruiker in verband met het gebruik van witruimte in de tekst.
 
@@ -184,10 +184,14 @@ Hierbij zullen we een testplan bekijken voor een fictieve oefening van een simpe
 
 #### arguments
 Dit is een lijst met de commandolijn-argumenten die meegegeven moet worden aan het programma voor het testgeval.
+
+:::tip Tip
 We raden aan om strings te gebruiken voor deze argumenten maar ook de tekstuele types worden ondersteund.
+:::
 
 #### stderr
-Hierbij wordt de verwachte standaardfout opgegeven voor een testgeval. Dit is analoog aan `stdout`.
+Hierbij wordt de verwachte standaardfout opgegeven voor een testgeval.
+Dit is analoog aan `stdout`.
 
 #### exit_code
 Hierbij wordt de verwachte exitcode van het programma opgegeven voor een testgeval.
@@ -270,14 +274,13 @@ Je kunt een configuratie opgeven globaal, per tabblad, per context en/of specifi
 Deze configuratieopties worden geaccumuleerd, waarbij telkens de optie op de meeste specifieke positie (globaal < tabblad < context < testcase) behouden wordt.
 
 - **Globaal**:
-  Globaal worden de opties per uitvoerstroom opgegeven in het object horende bij de
-optionele sleutel `config`.
-  Dit object heeft twee sleutels stdout (opties voor standaarduitvoer) en stderr (opties voor standaardfout), waarbij minstens één sleutel opgegeven moet worden.
+  Globaal worden de opties per uitvoerstroom opgegeven in het object horende bij de optionele sleutel `config`.
+  Dit object heeft twee sleutels `stdout` (opties voor standaarduitvoer) en `stderr` (opties voor standaardfout), waarbij minstens één sleutel opgegeven moet worden.
 - **Tabblad**:
   Identiek aan __globaal__.
 - **Context**:
   Identiek aan __globaal__.
-- **specifiek**:
+- **Specifiek**:
   Wanneer je voor één test een specifieke configuratie wil gebruiken, geef je in plaats van de waarde een object op.
   Testgeval 3 uit het codefragment is hier een voorbeeld van.
   Dit object heeft twee verplichte sleutels:
@@ -357,7 +360,7 @@ Waarbij contexten onafhankelijk van elkaar uitgevoerd kunnen worden, kunnen test
 Om meerdere testgevallen in context te kunnen plaatsen, moet er gebruik gemaakt worden van het sleutelwoord `testcases`.
 Deze lijst bevat de sequentieel afhankelijke testgevallen.
 
-Wanneer je naast de code zelf (of `main`-methode), ook en functieoproeptest(en) wenst te evalueren, moet er ook gebruik gemaakt worden van de lijst van testgevallen.
+Wanneer je naast de code zelf (of `main`-methode), ook een/meerdere functieoproeptest(en) wenst te evalueren, moet er ook gebruik gemaakt worden van de lijst van testgevallen.
 
 ## Foutboodschappen
 Een concept dat vaak gebruikt wordt in programmeertalen zijn fouten die opgegooid kunnen worden.
@@ -377,7 +380,7 @@ Hiervoor bekijken we een testplan voor de functie ‘division’.
 Hier wordt de verwachte foutboodschap opgegeven als tekstueel type.
 
 ## Linken bestanden
-Bij sommige programmeertalen moeten de studenten invoer lezen vanuit bestanden.
+Bij sommige programmeeroefeningen moeten de studenten invoer lezen vanuit bestanden.
 Bij de evaluatie feedback wil je de student vaak de mogelijkheid bieden om de inhoud van deze bestanden te kunnen bekijken.
 Hiervoor kun je op het niveau van een context en/of testgeval een lijst meegeven van alle bestanden die gelinkt moeten worden.
 
@@ -396,8 +399,7 @@ Hiervoor kun je op het niveau van een context en/of testgeval een lijst meegeven
 ### Beschrijving
 
 #### files
-Op het niveau van een context en/of testgeval kun je een lijst opgeven met de gelinkte be-
-standen.
+Op het niveau van een context en/of testgeval kun je een lijst opgeven met de gelinkte bestanden.
 
 #### name
 Naam van het bestand.
@@ -422,7 +424,6 @@ Hiervoor kun je de optie `hidden` meegeven aan een tabblad die een booleaanse wa
   - stdin: "one"
     stdout: "1\n"
 ```
-
 
 ![Fout in verborgen tabblad](./hidden.png)
 
@@ -488,7 +489,7 @@ Onze grammatica biedt ondersteuningen voor alle datatypes van tested, zie onders
 | nothing  | Datatype nullwaarden |
 | boolean  | Datatype booleaanse waarden |
 | text     | Standaard datatype voor tekst |
-| char     | Datype enkel karakter |
+| char     | Datatype enkel karakter |
 | integer  | Standaard datatype voor gehele getallen  |
 | uint8    | Datatype 8 bit natuurlijke getallen |
 | int8     | Datatype 8 bit gehele getallen |
@@ -590,13 +591,12 @@ Enkele voorbeelden:
 Niet elke programmeertaal ondersteunt elke datatype als verzamelingselement.
 :::
 
-##### Dictionairies
+##### Dictionaries
 Een veranderlijke ongeordende collectie van sleutel-waarde paren.
 Waarbij de sleutels onveranderlijk zijn, de waarden kunnen zowel veranderlijk als onveranderlijk zijn.
 Deze worden zoals verzamelingen genoteerd met behulp van accolades en kunnen leeg zijn.
 Zowel de sleutels als de waarden van deze afbeeldingen zijn kunnen van elk datatype zijn.
 Enkele voorbeelden:
-
 ```javascript
 {}
 {"first": 5}
@@ -612,7 +612,6 @@ Niet elke programmeertaal ondersteunt elke datatype als sleutelwaarde.
 Onze grammatica ondersteunt de mogelijkheid om de waarden (geen expressies) te ‘casten’ naar een specifiek datatype.
 Hiervoor gebruiken we de notatie `<Waarde> :: <Datatype>`.
 Een lege verzameling kunnen we bijvoorbeeld op de volgende manier noteren:
-
 ```haskell
 [] :: set
 () :: set
@@ -630,7 +629,7 @@ get_element(4, ["first", 2, 3.4])
 ```
 
 ### Constructor
-Constructors lijken sterk op functieoproepen maar worden voorafgegaan door het sleutelwoord `new`.
+Constructors lijken sterk op functieoproepen, maar worden voorafgegaan door het sleutelwoord `new`.
 Bijvoorbeeld:
 ```javascript
 new Counter()
@@ -655,7 +654,7 @@ number = 5 :: int8
 ## Bekende valkuilen
 
 ### Sleutels
-Vergeten van het dubbelepunt na een sleutelnaam in de \yaml{}-syntaxis.
+Vergeten van het dubbelepunt na een sleutelnaam in de YAML-syntaxis.
 Voorbeeld:
 
 Fout:
@@ -696,10 +695,11 @@ Gecorrigeerd:
 ### Tekst
 De verschillende manieren om strings te noteren in YAML.
 Dit komt doordat al deze notaties een andere manier hebben om te gaan met witruimte.
+::: tip Tip
 Om verwarring en problemen te vermijden raden we aan om de notatie van de dubbele aanhalingstekens te gebruiken wanneer je tekstuele waarden wilt opgegeven.
 Hierbij kun je speciale karakters escapen om bijvoorbeeld regeleindes aan te geven.
-Wanneer je statements en ruwe returnwaarden wilt opgegeven, raden we aan om enkele aanhalingstekens te gebruiken omdat deze geen escaping toepast.
-
+Wanneer je statements, expressies en ruwe returnwaarden wilt opgegeven, raden we aan om enkele aanhalingstekens te gebruiken omdat deze geen escaping toepast.
+:::
 Wanneer je toch een andere notatie wilt gebruiken, vind je hieronder een overzicht van de verschillende notaties en de vertaling in JSON.
 
 #### Enkele aanhalingstekens
@@ -857,7 +857,7 @@ Vertaling JSON:
 {"literal": "line1a\\nline1b\n  line2\n# not a comment\nend"}
 ```
 
-#### folded block
+#### Folded block
 YAML ondersteunt verschillende bloknotaties waarbij een regeleinde vervangen wordt door een spatie, wanneer de volgende lijn de uitlijning respecteert.
 Elke lege regel wordt wel geïnterpreteerd als een nieuwe regel.
 Hierbij wordt de insprong, die afwijkt van de uitlijning niet weg getrimd.
@@ -940,6 +940,16 @@ De stijlconventie voor functienamen in de DSL is `snake_case`.
 Wanneer er hiervan afgeweken wordt kan de stijlconventie van een specifieke programmeertaal niet gegarandeerd worden.
 
 ## Omzetten
-Om DSL-testplannen te vertalen naar de JSON-testplannen voor tested, kan er gebruikgemaakt worden van een Python script, dat deel uitmaakt van tested.
+Om DSL-testplannen te vertalen naar de JSON-testplannen voor TESTed, kan er gebruikgemaakt worden van een Python script, dat deel uitmaakt van TESTed.
 Dit script kan terug gevonden op [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed.
 Het script kan uitgevoerd worden met één van de 4 volgende commando’s (en combinaties) in de root directory van de GitHub repository:
+```bash
+# Standaardinvoer - standaarduitvoer
+$ python3 -m tested.translate_dsl < testplan.yaml > testplan.json
+# Korte opties
+$ python3 -m tested.translate_dsl -i testplan.yaml -o testplan.json
+# Lange optienamen
+$ python3 -m tested.translate_dsl --dsl testplan.yaml --json testplan.json
+# Positionele argumenten
+$ python3 -m tested.translate_dsl testplan.yaml testplan.json
+```
