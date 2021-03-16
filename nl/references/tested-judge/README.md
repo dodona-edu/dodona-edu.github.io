@@ -52,3 +52,4 @@ Hier vind je alle informatie voor het gebruik van de **TESTed** judge.
 ## Documentatie
 
 * [DSL-Testplannen](dsl)
+* [Configureren nieuwe programmeertaal](configure-new-programming-language)
