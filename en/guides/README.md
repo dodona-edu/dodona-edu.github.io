@@ -23,3 +23,4 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [Gebruikersbeheer](teachers/user-management)
 * [Oefeningenreeksenbeheer](teachers/exercise-series-management)
 * [Een reeks evalueren](teachers/evaluate-series)
+* [Configureren nieuwe programmeertaal TESTed](developers/tested-configure-new-programming-language)

@@ -28,5 +28,8 @@ Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 * [Cursussen op Dodona](students/courses/)
 * [Oefeningen oplossen](students/exercises/)
 
+## Voor ontwikkelaars
+* [Configureren nieuwe programmeertaal TESTed](developers/tested-configure-new-programming-language)
+
 ## Enkel in het Engels
 * [Creating a judge](creating-a-judge)

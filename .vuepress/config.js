@@ -55,7 +55,7 @@ module.exports = {
         ],
         sidebar: {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
-          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten'),
+          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten', 'Voor ontwikkelaars'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
@@ -71,7 +71,7 @@ module.exports = {
         ],
         sidebar: {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
-          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers'),
+          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers', 'For developers'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
           '/en/': getGeneralSidebar()
         }
@@ -133,7 +133,7 @@ function getNewsSidebar(lang, groupTitle, FirstItem) {
   ]
 }
 
-function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacherGuideItem) {
+function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacherGuideItem, developerGuideItem) {
   return [
     `/${lang}/news/`,
     {
@@ -173,6 +173,16 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
             'teachers/ufora/',
           ]
         },
+        {
+          title: developerGuideItem,
+          collapsable: false,
+          path: `/${lang}/guides/developers/tested-configure-new-programming-language`,
+          sidebarDepth: 1,
+          initialOpenGroupIndex: -1,
+          children: [
+            'developers/tested-configure-new-programming-language/',
+          ]
+        },
         'pycharm-plugin/',
         'vs-code-extension/',
         'the-coders-apprentice/',
@@ -207,7 +217,6 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
           children: [
             ['tested-judge/', FirstItem],
             'tested-judge/dsl/',
-            'tested-judge/configure-new-programming-language/',
           ]
         },
       ]
