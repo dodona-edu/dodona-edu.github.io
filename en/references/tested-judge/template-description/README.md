@@ -1,191 +1,188 @@
 ---
-title: "[nl] TESTed sjabloonbeschrijvingen"
-description: "TESTed sjabloonbeschrijvingen"
+title: "TESTed template descriptions"
+description: "TESTed template descriptions"
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
+# Documentation template descriptions
+Template descriptions are used to only write once a descriptions.
+That description can be instantiated foreach programming language that is necessary with the correct names and style
+conventions.
 
-# Documentatie sjabloonbeschrijvingen
-Sjabloonopgaven worden gebruikt om één keer een beschrijving op te stellen, waarvan per programmeertaal een instantie
-gegenereerd kan worden met de juiste benamingen van datatypes en stijlconventies.
+The template descritions are written in the Mako-template files.
+TESTed supported two markup languages for the exercises: Markdown and HTML.
+The descriptions could be both written in English and Dutch.
 
-De sjabloonopgave worden geschreven in de Mako-sjabloonbestanden.
-TESTed ondersteunde twee opmaaktalen voor de opgaven: Markdown en HTML.
-De opgaven kunnen zowel in het Nederlands, als in het Engels geschreven worden.
+Which parts of the description should be generated for a programming language?
 
-Wat moet er per programmeertaal gegenereerd worden?
-- **Functienamen**:
-  De stijlconventies voor functienamen zijn afhankelijk van de programmeertaal.
-  Bijvoorbeeld: Python gebruikt de `snake_case` conventie, Java gebruikt de `camelCase` conventie.
-- **Typenamen**:
-  Een van de grotere verschillen tussen programmeertalen is de benaming de gebruikt voor hetzelfde datatype.
-  Voorbeeld 8-bit gehele getallen: Java gebruikt hiervoor de naam `byte`,
-  Haskell gebruikt hiervoor de naam `Data.Int.Int8`.
-- **Natuurlijke typenamen**:
-  De natuurlijke typenamen, meer specifiek deze voor collecties van gegevens, kunnen ook variëren per programmeertaal.
-  Zo spreek je voor JavaScript over arrays, terwijl Python spreekt over lijsten,
-  hoewel je het voor beide talen over dezelfde soort datastructuur hebt.
-- **Codevoorbeelden**:
-  Het grootste verschil tussen de programmeertalen, is de syntaxis die gebruikt wordt om de code te schrijven.
-
-## Constanten
-We zullen eerst een overzicht zien van de constanten die gebruikt kunnen worden in de sjablonen.
+- **Function names**:
+  The style conventions for function names are programming language depended.
+  Example: Python uses the `snake_case` convention, Java uses the `camelCase` convention.
+- **Type names**:
+  One of the larger difference between programming languages are the names that are used for the same datatype.
+  Example 8-bit integers: Java uses the name `byte`, Haskell uses the name `Data.Int.Int8`.
+- **Natural type names**:
+  The natural types names, more specific these for collections of values, could also differ for a programming language.
+  In JavaScript, you speak about arrays, but in Python, you speak about lists.
+  However, the datastructures is the same for both languages.
+- **Code examples**:
+  The biggest difference between programming languages, is the syntax used to write code.
+  
+## Constants
+First we will look to the constants that could be used in the templates.
 - **prompt**:
-  Deze constante bevat de console-prompt-prefix.
-  Deze zal voor HTML geëscaped worden.
-  Bijvoorbeeld: `>>>` voor Python.
-- **language en language_html**:
-  Deze constanten bevat de naam van de programmeertaal waarvoor een instantie gegenereerd wordt. 
-  `language_html` is de HTML-veilige versie van `language`.
-- **namespace en namespace_html**:
-  Deze constanten bevat de van de code.
-  Deze kan meegegeven worden als parameter aan het conversieprogramma.
-  `namespace_html` is de HTML-veilige versie van `namespace`.
+  This constant contains the console-prompt-prefix.
+  In the HTML template will it be the escaped version.
+  Example: `>>>` for Python.
+- **language and language_html**:
+  These constants contains the name of the programming language, wherefore an instance is generated.
+  `language_html` is the HTML-safe version of `language`.
+- **namespace and namespace_html**:
+  These constants contains the `namespace` of the code.
+  The namespace could be passed as a parameter to the conversion program.
+  `namespace_html` is the HTML-safe version of `namespace`.
 
-De constanten en functieoproepen in Mako moeten tussen `${...}` genoteerd worden.
+The constants and function calls in Mako must be notated between `${...}`.
 
-### Voorbeelden
-Een eerste voorbeeld is in Markdown voor Java en Python, met namespace 'solution'.
-Een tweede voorbeeld is in HTML voor JavaScript, met namespace 'submission'.
+### Example
+The first example is in Markdown for Java and Python, with the namespace `solution`.
+The second example is in HTML for JavaScript, with the namespace `submission`.
 
 #### Markdown
-
-Sjabloon:
+Template:
 ```mako
-De prompt voor **${language}** is `${prompt}`.
-De namespace is '${namespace}'.
+The prompt for **${language}** is `${prompt}`.
+The namespace is '${namespace}'.
 ```
 
-Instantie Java:
+Instance Java:
 ```markdown
-De prompt voor **java** is `>`.
-De namespace is 'Solution'.
+The prompt for **java** is `>`.
+The namespace is 'Solution'.
 ```
 
-Instantie Python:
+Instance Python:
 ```markdown
-De prompt voor **python** is `>>>`.
-De namespace is 'solution'.
+The prompt for **python** is `>>>`.
+The namespace is 'solution'.
 ```
 
 #### HTML
-Sjabloon:
+Template:
 ```mako
 <p>
-    De prompt voor <span style="font-weight: bold">${language_html}</span> is <code>${prompt}</code>.
-    De namespace is '${namespace_html}'.
+    The prompt for <span style="font-weight: bold">${language_html}</span> is <code>${prompt}</code>.
+    The namespace is '${namespace_html}'.
 </p>
 ```
 
-Instantie JavaScript:
+Instance JavaScript:
 ```html
 <p>
-    De prompt voor <span style="font-weight: bold">javascript</span> is <code>&gt;</code>.
-    De namespace is 'submission'.
+    The prompt for <span style="font-weight: bold">javascript</span> is <code>&gt;</code>.
+    The namespace is 'submission'.
 </p>
 ```
 
-## Functies
-Zoals reeds aangegeven in de sectie [Constanten](#constanten) ondersteund ook functies.
+## Functions
+As already indicated in the section [Constants](#constants) Mako also supports functions.
 
-We zullen terug een overzicht geven van de beschikbare functies die gebruikt kunnen worden met enkele voorbeelden.
+We will again given an overview of all available functions that could be used in the templates with some examples.
 
 - **function_name**:
-  Deze functie dient om de correcte stijlconventie voor de functienamen te kunnen renderen per programmeertaal.
-  Deze functie verwacht een string als argument.
-
-  Wanneer een functienaam in het sjabloon opgegeven wordt, gebruikt men best de stijlconventie.
-  Dit zorgt ervoor dat de functienamen per taal correct gegenereerd kunnen worden.
+  This function is used the generated the correct style conventions for the function names.
+  The input of this function is one string.
+  ::: tip Hint
+  When you pass the function name in the template, it's best to use the `snake_case` style convention.
+  This makes it possible to generate the correct function names foreach language.
+  :::
 - **type_name**:
-  Deze functie dient gebruikt te worden om de datatypes van te vertalen in de datatypes die gebruikt worden in de
-  programmeertalen.
-  Deze functie verwacht ofwel een string ofwel een paar als typeargument.
-  Het eerste argument van het paar is een collectiedatatype string,
-  het tweede ofwel één typeargument ofwel een lijst met typeargumenten.
+  This function is used to translate the TESTed datatypes to the programming language datatypes.
+  The input of this function is either a string, or a pair as type argument.  
+  The first argument of the pair must be a collection datatype string,
+  the second either one type argument, or a list of type arguments.
 - **natural_type_name**:
-  Deze functie zoekt de natuurlijke naam voor een collectiedatatype en/of het -datatype van voor een gegeven
-  programmeertaal.
-  Deze functie verwacht een string als argument.
-- **statement en expression**:
-  Met deze functies zal de opsteller van de opgaven normaal gezien niet direct in contact komen.
-  Maar voor de volledigheid worden ze toch vermeld.
-  Deze functies dienen om codefragmenten geschreven in de mini-programmeertaal
-  (zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)) van te vertalen naar de
-  codefragmenten in de programmeertalen.
-  - **statement** moet gebruikt worden voor alle invoercodefragmenten.
-  - **expression** moet gebruikt worden voor alle returnwaarden.
-    Beide functies verwachten een string als argument.
+  This function searches the natural name for a collectiondatatype and/or the string-datatype of TESTed for a given
+  programming language.
+  The input of this function is one string.
+- **statement and expression**:
+  This functions are not meant to use by the redactor of the descriptions.
+  But for the sake of completeness, they are listed anyway.
+  This functions are used to convert code snippets in the mini-programming language of TESTed
+  (see [Statements, expressions and return-raw](../dsl/#statements-expressions-and-return-raw)) to code snippets in the
+  programming languages.
+  - **statement** must be used for all input code snippets.
+  - **expression** must be used for all return values.
+  
+  Both functions expect as string as input.
 
-### Voorbeeld
-We zullen een voorbeeld bekijken van een Markdown beschrijving voor Python en JavaScript.
+### Example
+Now we look at a Markdown example description for Python and JavaScript.
 
-Sjabloon:
+Template:
 ```mako
 The function ${function_name("characterize_string")} takes one
 ${type_name("text")} as argument and returns the ${natural_type_name("sequence")}
 of characters of type ${type_name(("sequence", "char"))}.
 ```
 
-Instantie JavaScript:
+Instance JavaScript:
 ```markdown
 The function `characterizeString` takes one
 `string` as argument and returns the array
 of characters of type `array<string>`.
 ```
 
-Instantie Python:
+Instance Python:
 ```markdown
 The function `characterize_string` takes one
 `str` as argument and returns the list
 of characters of type `List[str]`.
 ```
 
-## Codevoorbeelden
-Een belangrijke eis voor de sjabloonbestanden is het eenvoudig kunnen noteren van codevoorbeelden.
-Dit is de enige functionaliteit die licht verschilt tussen de Markdown en HTML versie.
-Het grootste verschil ligt aan de manier hoe de codeblokken voorgesteld worden.
-De inhoud van deze codeblokken zijn voor beide opmaaktalen wel hetzelfde.
+## Code examples
+An important possibility for the template descriptions, was the simplicity to notate the code examples.
+This is the only functionality that slightly differs between the Markdown and HTML version.
+The biggest difference is the way how the code blocks are represented.
+The content of these code blocks are the same for both markup languages.
 
-### Codefragmenten
-De codefragment worden genoteerd met behulp van de mini-programmeertaal van
-(zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)),
-op een Python doctest-stijl manier.
-De invoerstatements en -expressies moeten worden voorafgegaan door het groter dan teken (`>`), de returnwaarden niet.
+### Code snippets
+The code snippets must be notated in the mini-programming language of TESTed
+(see [Statements, expressies and return-raw](../dsl/#statements-expressions-and-return-raw)),
+in a Python doctest-style manner.
+The input statements and expressions must be prefixed with the larger than character (`>`), the return values not.
 
-Om meerdere regels te kunnen gebruiken wordt er gekeken naar het balanceren van de haakjes.
-Daarnaast kun je ook expliciet aanduiden dat een statement/expressie verder loopt op de volgende regel,
-wanneer het laatste symbool op de regel een backslash (`\`) is.
+To be able to use multiple lines, we look at the balancing of the brackets.
+In addition, you can also explicitly indicate that a statement/expression continues on the next line,
+when the last symbol on the line is a backslash (`\`).
 
-:::warning Belangrijk
-De codefragmenten worden verwerkt in de voorbereidende stap voor het renderen van de template.
-Bij deze verwerking worden de statements en expressies vertaalt naar de bijhorende functieoproepen.
-Bijgevolg kunnen er geen Mako directieven gebruikt worden in deze codefragmenten.
+:::warning Important
+The code snippets are processed before the render step of the template.
+In this process, the statements and expression are translate to the calls to the corresponding functions.
+As a result, Mako directives cannot be used in these code snippets.
 :::
 
-#### Voorbeeld
+#### Example
 ```javascript
 > heir(8, 10)
 [10, 4, 15, 11, 7, 5, 3,
  2, 16, 12, 1, 6, 13, 9, 14, 8]
 ```
 
-### Hoofding
-De codefragmenten die geanalyseerd moeten worden in Markdown starten met de hoofding ` ```tested` zonder witruimte voor.
-Deze sluit af met ` ``` ` zonder witruimte voor.
-De enige beperking in de Markdown codefragmenten is dat de regels niet mogen starten met ` ``` `.
+### Heading
+The code snippets that must be analysed in Markdown must start with the heading ` ```tested` without whitespace in
+front.
+This code snippets must terminate with ` ``` ` without whitespace in front.
+The only limitation for the Markdown code snippets is that the lines may not start with ` ``` `.
 
-De codefragmenten die geanalyseerd moeten worden in HTML bevinden zich in de tag `code` en
-moeten lid zijn van de klasse `tested`.
-De enige beperking in de codefragmenten is dat deze geen inwendige `code` tags mogen bevatten, ook niet in de strings.
+The code snippets that must be analysed in HTML are located in the tag `code` and must have the `tested` class.
+The only limitation for the HTML code snippets, is that they not may contain `code` tags inside, even in strings.
 
-### Voorbeelden
-Een eerste voorbeeld is in Markdown met een Kotlin instantie.
-Een tweede voorbeeld is in HTML met een Haskell instantie.
+### Examples
+A first example is a Markdown template with a Kotlin instance.
+A second example is a HTML template with a Haskell instance.
 
 #### Markdown
-Sjabloon:
+Template:
 ````mako
 ```tested
 > heir(8, 10)
@@ -194,7 +191,7 @@ Sjabloon:
 ```
 ````
 
-Instantie Kotlin:
+Instance Kotlin:
 ````markdown
 ```console?lang=kotlin&prompt=>
 > heir(8, 10)
@@ -203,7 +200,7 @@ listOf(10, 4, 15, 11, 7, 5, 3, 2, 16, 12, 1, 6, 13, 9, 14, 8)
 ````
 
 #### HTML
-Sjabloon:
+Template:
 ```mako
 <div class="highlighter-rouge language-${language}">
 <pre class="highlight"><code class="color tested code" id="code">\
@@ -214,7 +211,7 @@ Sjabloon:
 </div>
 ```
 
-Instantie Haskell:
+Instance Haskell:
 ```html
 <div class="highlighter-rouge language-haskell">
 <pre class="highlight"><code class="color tested code" id="code">&gt; <span class="nf">encode</span> <span class="p">(</span><span class="s">&quot;And now for something completely different.&quot;</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span> <span class="ow">::</span> <span class="kt">Int</span><span class="p">)</span>
@@ -222,57 +219,54 @@ Instantie Haskell:
 </div>
 ```
 
-## Taalspecifieke informatie
+## Language specific information
+The Mako-templates have also conditional constructs,
+this makes it possible to add information for only one specific programming language.
 
-De Mako-sjablonen hebben ook conditionele constructies,
-hierdoor kun je informatie toevoegen alleen voor een specifieke programmeertaal.
+### Example
+We will look to an example in Markdown for Java and C, but a similar structure could be used in HTML.
 
-### Voorbeeld
-We zullen een voorbeeld zien in Markdown voor Java en C, maar een gelijkaardige structuur kan worden gebruikt in HTML.
-
-Sjabloon:
+Template:
 ```mako
-Gemeenschappelijke tekst
+Common text
 
 % if language == 'java':
-De functies moeten statisch gedefinieerd worden in de klasse ${namespace}.
+The function must be static declared in the class ${namespace}.
 % endif
 ```
 
 Instantie Java:
 ```markdown
-Gemeenschappelijke tekst
+Common text
 
-De functies moeten statisch gedefinieerd worden in de klasse Solution.
+The function must be static declared in the class Solution.
 ```
 
 Instantie C:
 ```markdown
-Gemeenschappelijke tekst
+Common text
 ```
 
-## Eigen variabelen
-Voor vaak gebruikte benamingen kun je zelf variabelen definiëren in Mako,
-om niet telkens de functies te moeten oproepen.
+## Custom variables
+When you use a name frequent in the text, you can define a variable in Make,
+the advantages is avoiding multiple function calls that returns the same value.
 
-### Voorbeeld
-We zullen een voorbeeld in Markdown bekijken zonder instanties.
+### Example
+We will now look at an example in Markdown without instances.
 ```mako
-<% lijst = natural_type_name("list") %>\
-Schrijf een functie ${function_name("heir")}, waaraan de waarden $k$ en $n$,
-van het type ${type_name("integer")}, moeten doorgegeven worden,
-waarbij je er mag van uitgaan dat $k >= 2$
-De functie moet een ${lijst}, van het type ${type_name(("list", "integer"))}
-teruggeven die de volgorde aangeeft waarin de kinderen uit de cirkel
-verwijderd werden.
-Het eerst verwijderde kind staat daarbij als eerste in de ${lijst},
-en de uiteindelijke erfgenaam als laatste in de ${lijst}.
-Gebruik de volgnummers waarmee de kinderen in de ${lijst} genummerd
-werden als elementen in de ${lijst}.
+<% list = natural_type_name("list") %>\
+Write a function ${function_name("heir")}, with has two parameters $k$ en $n$,
+which have both the type ${type_name("integer")}, you may assume that $k >= 2$.
+The function must return a ${list} of the type ${type_name(("list", "integer"))}
+that contains the order of the removed children of the circle.
+The first removed child must be at the first position in the ${list},
+and the eventuual heir must last in the ${list}.
+Use the numbers which are used to order the children in the ${list},
+as elements in the ${list}.
 ```
 
-## Volledige opgave in HTML
-Hieronder volgt een volledige sjabloonopgave in HTML bekijken.
+## Complete HTML template
+Below follows a complete HTML template description.
 ```mako
 <p>
     In the <span style="font-style: italic;">rail fence cipher</span> (also called
@@ -372,28 +366,27 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
 </div>
 ```
 
-## Instantiëren van een sjabloon
-Om de sjablonen te instantiëren voor een programmeertaal, kan er gebruikgemaakt worden van een Python script, 
-dat deel uitmaakt van TESTed.
-Dit script kan terug gevonden op [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed.
-Het script kan uitgevoerd worden met één van de volgende commando's (en combinaties) in de root directory van de
+## Instances of the template
+To instantiate the templates for a programming language, you can use a Python script that is in TESTed repository.
+This script could be found at the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
+The script could be runned with one of the following commands (and combinations) in the root directory of the
 GitHub repository:
 ```bash
-# Standaard instantiëring engelstalige HTML voor python met namespace 'submission'
+# Default instantiate English HTML for python with namespace 'submission'
 $ python3 -m tested.description_instance < template.html.mako > description.html
-# Korte opties
+# Short options
 $ python3 -m tested.description_instance -d template.html.mako -o description.html
-# Lange optienamen
+# Long option names
 $ python3 -m tested.description_instance --description template.html.mako --output description.html
-# Positionele argumenten
+# Positional arguments
 $ python3 -m tested.description_instance template.html.mako description.html
 ```
 
-De extra opties zijn:
-| **Kort** | **Lang** | **Beschrijving** |
+The additional options are:
+| **Short** | **Long** | **Description** |
 | -------- | -------- | -----------------|
-| `-l` | `--language` | Programmeertaal, standaard 'python' |
-| `-i` | `--i18n` | Natuurlijke taal, standaard 'en' |
-| `-n` | `--namespace` | Namespace van de oefening, standaard 'submission' |
-| `-M` | `--markdown` | Markdown sjabloon |
-| `-H` | `--html` | HTML Sjabloon, standaard |
+| `-l` | `--language` | Programming language, default 'python' |
+| `-i` | `--i18n` | Natural language, default 'en' |
+| `-n` | `--namespace` | Namespace of the exercise, default 'submission' |
+| `-M` | `--markdown` | Markdown template |
+| `-H` | `--html` | HTML template, default |

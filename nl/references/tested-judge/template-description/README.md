@@ -36,7 +36,7 @@ We zullen eerst een overzicht zien van de constanten die gebruikt kunnen worden 
   Deze constanten bevat de naam van de programmeertaal waarvoor een instantie gegenereerd wordt. 
   `language_html` is de HTML-veilige versie van `language`.
 - **namespace en namespace_html**:
-  Deze constanten bevat de van de code.
+  Deze constanten bevat de `namespace` van de code.
   Deze kan meegegeven worden als parameter aan het conversieprogramma.
   `namespace_html` is de HTML-veilige versie van `namespace`.
 
@@ -84,16 +84,17 @@ Instantie JavaScript:
 ```
 
 ## Functies
-Zoals reeds aangegeven in de sectie [Constanten](#constanten) ondersteund ook functies.
+Zoals reeds aangegeven in de sectie [Constanten](#constanten) ondersteund Mako ook functies.
 
 We zullen terug een overzicht geven van de beschikbare functies die gebruikt kunnen worden met enkele voorbeelden.
 
 - **function_name**:
   Deze functie dient om de correcte stijlconventie voor de functienamen te kunnen renderen per programmeertaal.
   Deze functie verwacht een string als argument.
-
-  Wanneer een functienaam in het sjabloon opgegeven wordt, gebruikt men best de stijlconventie.
+  ::: tip Tip
+  Wanneer een functienaam in het sjabloon opgegeven wordt, gebruikt men best de `snake_case` stijlconventie.
   Dit zorgt ervoor dat de functienamen per taal correct gegenereerd kunnen worden.
+  :::
 - **type_name**:
   Deze functie dient gebruikt te worden om de datatypes van te vertalen in de datatypes die gebruikt worden in de
   programmeertalen.
@@ -101,18 +102,19 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Het eerste argument van het paar is een collectiedatatype string,
   het tweede ofwel één typeargument ofwel een lijst met typeargumenten.
 - **natural_type_name**:
-  Deze functie zoekt de natuurlijke naam voor een collectiedatatype en/of het -datatype van voor een gegeven
-  programmeertaal.
+  Deze functie zoekt de natuurlijke naam voor een collectiedatatype en/of het string-datatype van TESTed voor een
+  gegeven programmeertaal.
   Deze functie verwacht een string als argument.
 - **statement en expression**:
   Met deze functies zal de opsteller van de opgaven normaal gezien niet direct in contact komen.
   Maar voor de volledigheid worden ze toch vermeld.
   Deze functies dienen om codefragmenten geschreven in de mini-programmeertaal
-  (zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)) van te vertalen naar de
-  codefragmenten in de programmeertalen.
+  (zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)) van TESTed te vertalen naar
+  de codefragmenten in de programmeertalen.
   - **statement** moet gebruikt worden voor alle invoercodefragmenten.
   - **expression** moet gebruikt worden voor alle returnwaarden.
-    Beide functies verwachten een string als argument.
+  
+  Beide functies verwachten een string als argument.
 
 ### Voorbeeld
 We zullen een voorbeeld bekijken van een Markdown beschrijving voor Python en JavaScript.
@@ -145,7 +147,7 @@ Het grootste verschil ligt aan de manier hoe de codeblokken voorgesteld worden.
 De inhoud van deze codeblokken zijn voor beide opmaaktalen wel hetzelfde.
 
 ### Codefragmenten
-De codefragment worden genoteerd met behulp van de mini-programmeertaal van
+De codefragmenten worden genoteerd met behulp van de mini-programmeertaal van TESTed
 (zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)),
 op een Python doctest-stijl manier.
 De invoerstatements en -expressies moeten worden voorafgegaan door het groter dan teken (`>`), de returnwaarden niet.
@@ -219,7 +221,6 @@ Instantie Haskell:
 ```
 
 ## Taalspecifieke informatie
-
 De Mako-sjablonen hebben ook conditionele constructies,
 hierdoor kun je informatie toevoegen alleen voor een specifieke programmeertaal.
 
@@ -268,7 +269,7 @@ werden als elementen in de ${lijst}.
 ```
 
 ## Volledige opgave in HTML
-Hieronder volgt een volledige sjabloonopgave in HTML bekijken.
+Hieronder volgt een volledige sjabloonopgave in HTML.
 ```mako
 <p>
     In the <span style="font-style: italic;">rail fence cipher</span> (also called
