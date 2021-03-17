@@ -50,8 +50,8 @@ Here do you find all information for the use of the **TESTed** judge.
   </details>
 
 ## Documentation
-
 * [DSL-Testplans](dsl)
+* [Template description](template-description)
   
 ## Guides
 * [\[nl\] Configure new programming language](../../guides/developers/tested-configure-new-programming-language)

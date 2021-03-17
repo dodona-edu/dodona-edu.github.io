@@ -217,6 +217,7 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
           children: [
             ['tested-judge/', FirstItem],
             'tested-judge/dsl/',
+            'tested-judge/template-description/',
           ]
         },
       ]
