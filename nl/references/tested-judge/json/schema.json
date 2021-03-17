@@ -1,0 +1,1433 @@
+{
+  "title": "Testplan",
+  "$ref": "#/definitions/Plan",
+  "definitions": {
+    "TextChannelType": {
+      "title": "TextChannelType",
+      "description": "An enumeration.",
+      "enum": [
+        "text",
+        "file"
+      ],
+      "type": "string"
+    },
+    "TextData": {
+      "title": "TextData",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        },
+        "type": {
+          "default": "text",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextChannelType"
+            }
+          ]
+        }
+      },
+      "required": [
+        "data"
+      ]
+    },
+    "EmptyChannel": {
+      "title": "EmptyChannel",
+      "description": "There is nothing on this output channel.",
+      "enum": [
+        "none"
+      ],
+      "type": "string"
+    },
+    "RunInput": {
+      "title": "RunInput",
+      "type": "object",
+      "properties": {
+        "stdin": {
+          "title": "Stdin",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/TextData"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            }
+          ]
+        },
+        "arguments": {
+          "title": "Arguments",
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "main_call": {
+          "title": "Main Call",
+          "default": false,
+          "type": "boolean"
+        }
+      }
+    },
+    "TextBuiltin": {
+      "title": "TextBuiltin",
+      "description": "Textual built in evaluators.",
+      "enum": [
+        "text",
+        "file"
+      ],
+      "type": "string"
+    },
+    "GenericTextEvaluator": {
+      "title": "GenericTextEvaluator",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "default": "builtin",
+          "const": "builtin",
+          "type": "string"
+        },
+        "options": {
+          "title": "Options",
+          "default": {},
+          "type": "object"
+        },
+        "name": {
+          "default": "text",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextBuiltin"
+            }
+          ]
+        }
+      }
+    },
+    "EvaluationFunction": {
+      "title": "EvaluationFunction",
+      "type": "object",
+      "properties": {
+        "file": {
+          "title": "File",
+          "type": "string",
+          "format": "path"
+        },
+        "name": {
+          "title": "Name",
+          "default": "evaluate",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file"
+      ]
+    },
+    "BasicNumericTypes": {
+      "title": "BasicNumericTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "integer",
+        "rational"
+      ],
+      "type": "string"
+    },
+    "AdvancedNumericTypes": {
+      "title": "AdvancedNumericTypes",
+      "description": "The advanced numeric types. Programming configs should be implemented using\nthe C/C++ rules: the size of the types is a minimum. For example, Python's ints\nare arbitrary precision, which means Python supports all integer types.\nOn the other hand, C only supports up to 64 bits.",
+      "enum": [
+        "int8",
+        "uint8",
+        "int16",
+        "uint16",
+        "int32",
+        "uint32",
+        "int64",
+        "uint64",
+        "bigint",
+        "single_precision",
+        "double_precision",
+        "double_extended",
+        "fixed_precision"
+      ],
+      "type": "string"
+    },
+    "NumberType": {
+      "title": "NumberType",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/BasicNumericTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedNumericTypes"
+            }
+          ]
+        },
+        "data": {
+          "title": "Data",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "data"
+      ]
+    },
+    "BasicStringTypes": {
+      "title": "BasicStringTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "text",
+        "any"
+      ],
+      "type": "string"
+    },
+    "AdvancedStringTypes": {
+      "title": "AdvancedStringTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "char"
+      ],
+      "type": "string"
+    },
+    "StringType": {
+      "title": "StringType",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/BasicStringTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedStringTypes"
+            }
+          ]
+        },
+        "data": {
+          "title": "Data",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "data"
+      ]
+    },
+    "BasicBooleanTypes": {
+      "title": "BasicBooleanTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "boolean"
+      ],
+      "type": "string"
+    },
+    "BooleanType": {
+      "title": "BooleanType",
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BasicBooleanTypes"
+        },
+        "data": {
+          "title": "Data",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "data"
+      ]
+    },
+    "BasicSequenceTypes": {
+      "title": "BasicSequenceTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "sequence",
+        "set"
+      ],
+      "type": "string"
+    },
+    "AdvancedSequenceTypes": {
+      "title": "AdvancedSequenceTypes",
+      "description": "Advanced sequence types. The names of these types are kept as generic as\npossible, to accommodate as many types as possible.",
+      "enum": [
+        "array",
+        "list",
+        "tuple"
+      ],
+      "type": "string"
+    },
+    "FunctionType": {
+      "title": "FunctionType",
+      "description": "An enumeration.",
+      "enum": [
+        "function",
+        "constructor",
+        "property"
+      ],
+      "type": "string"
+    },
+    "BasicObjectTypes": {
+      "title": "BasicObjectTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "map"
+      ],
+      "type": "string"
+    },
+    "BasicNothingTypes": {
+      "title": "BasicNothingTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "nothing"
+      ],
+      "type": "string"
+    },
+    "NothingType": {
+      "title": "NothingType",
+      "type": "object",
+      "properties": {
+        "type": {
+          "default": "nothing",
+          "allOf": [
+            {
+              "$ref": "#/definitions/BasicNothingTypes"
+            }
+          ]
+        },
+        "data": {
+          "title": "Data",
+          "const": null
+        }
+      }
+    },
+    "ObjectKeyValuePair": {
+      "title": "ObjectKeyValuePair",
+      "type": "object",
+      "properties": {
+        "key": {
+          "title": "Key",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/FunctionCall"
+            },
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
+        },
+        "value": {
+          "title": "Value",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/FunctionCall"
+            },
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "value"
+      ]
+    },
+    "ObjectType": {
+      "title": "ObjectType",
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BasicObjectTypes"
+        },
+        "data": {
+          "title": "Data",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ObjectKeyValuePair"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "data"
+      ]
+    },
+    "NamedArgument": {
+      "title": "NamedArgument",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/FunctionCall"
+            },
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ]
+    },
+    "FunctionCall": {
+      "title": "FunctionCall",
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/FunctionType"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "namespace": {
+          "title": "Namespace",
+          "type": "string"
+        },
+        "arguments": {
+          "title": "Arguments",
+          "default": [],
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "$ref": "#/definitions/FunctionCall"
+                  },
+                  {
+                    "$ref": "#/definitions/NumberType"
+                  },
+                  {
+                    "$ref": "#/definitions/StringType"
+                  },
+                  {
+                    "$ref": "#/definitions/BooleanType"
+                  },
+                  {
+                    "$ref": "#/definitions/SequenceType"
+                  },
+                  {
+                    "$ref": "#/definitions/ObjectType"
+                  },
+                  {
+                    "$ref": "#/definitions/NothingType"
+                  }
+                ]
+              },
+              {
+                "$ref": "#/definitions/NamedArgument"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "type",
+        "name"
+      ]
+    },
+    "SequenceType": {
+      "title": "SequenceType",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/BasicSequenceTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedSequenceTypes"
+            }
+          ]
+        },
+        "data": {
+          "title": "Data",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/FunctionCall"
+              },
+              {
+                "$ref": "#/definitions/NumberType"
+              },
+              {
+                "$ref": "#/definitions/StringType"
+              },
+              {
+                "$ref": "#/definitions/BooleanType"
+              },
+              {
+                "$ref": "#/definitions/SequenceType"
+              },
+              {
+                "$ref": "#/definitions/ObjectType"
+              },
+              {
+                "$ref": "#/definitions/NothingType"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "type",
+        "data"
+      ]
+    },
+    "ProgrammedEvaluator": {
+      "title": "ProgrammedEvaluator",
+      "type": "object",
+      "properties": {
+        "language": {
+          "title": "Language",
+          "type": "string"
+        },
+        "function": {
+          "$ref": "#/definitions/EvaluationFunction"
+        },
+        "arguments": {
+          "title": "Arguments",
+          "default": [],
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/NumberType"
+              },
+              {
+                "$ref": "#/definitions/StringType"
+              },
+              {
+                "$ref": "#/definitions/BooleanType"
+              },
+              {
+                "$ref": "#/definitions/SequenceType"
+              },
+              {
+                "$ref": "#/definitions/ObjectType"
+              },
+              {
+                "$ref": "#/definitions/NothingType"
+              }
+            ]
+          }
+        },
+        "type": {
+          "title": "Type",
+          "default": "programmed",
+          "const": "programmed",
+          "type": "string"
+        }
+      },
+      "required": [
+        "language",
+        "function"
+      ]
+    },
+    "TextOutputChannel": {
+      "title": "TextOutputChannel",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        },
+        "type": {
+          "default": "text",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TextChannelType"
+            }
+          ]
+        },
+        "evaluator": {
+          "title": "Evaluator",
+          "default": {
+            "type": "builtin",
+            "options": {},
+            "name": "text"
+          },
+          "anyOf": [
+            {
+              "$ref": "#/definitions/GenericTextEvaluator"
+            },
+            {
+              "$ref": "#/definitions/ProgrammedEvaluator"
+            }
+          ]
+        },
+        "show_expected": {
+          "title": "Show Expected",
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "data"
+      ]
+    },
+    "IgnoredChannel": {
+      "title": "IgnoredChannel",
+      "description": "A file channel is ignored by default.",
+      "enum": [
+        "ignored"
+      ],
+      "type": "string"
+    },
+    "FileOutputChannel": {
+      "title": "FileOutputChannel",
+      "type": "object",
+      "properties": {
+        "expected_path": {
+          "title": "Expected Path",
+          "type": "string"
+        },
+        "actual_path": {
+          "title": "Actual Path",
+          "type": "string"
+        },
+        "evaluator": {
+          "title": "Evaluator",
+          "default": {
+            "type": "builtin",
+            "options": {},
+            "name": "file"
+          },
+          "anyOf": [
+            {
+              "$ref": "#/definitions/GenericTextEvaluator"
+            },
+            {
+              "$ref": "#/definitions/ProgrammedEvaluator"
+            }
+          ]
+        },
+        "show_expected": {
+          "title": "Show Expected",
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "expected_path",
+        "actual_path"
+      ]
+    },
+    "ExceptionValue": {
+      "title": "ExceptionValue",
+      "type": "object",
+      "properties": {
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "stacktrace": {
+          "title": "Stacktrace",
+          "default": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ]
+    },
+    "ExceptionBuiltin": {
+      "title": "ExceptionBuiltin",
+      "description": "Built in evaluators for exceptions.",
+      "enum": [
+        "exception"
+      ],
+      "type": "string"
+    },
+    "GenericExceptionEvaluator": {
+      "title": "GenericExceptionEvaluator",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "default": "builtin",
+          "const": "builtin",
+          "type": "string"
+        },
+        "options": {
+          "title": "Options",
+          "default": {},
+          "type": "object"
+        },
+        "name": {
+          "default": "exception",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ExceptionBuiltin"
+            }
+          ]
+        }
+      }
+    },
+    "SpecificEvaluator": {
+      "title": "SpecificEvaluator",
+      "type": "object",
+      "properties": {
+        "evaluators": {
+          "title": "Evaluators",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/EvaluationFunction"
+          }
+        },
+        "type": {
+          "title": "Type",
+          "default": "specific",
+          "const": "specific",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evaluators"
+      ]
+    },
+    "ExceptionOutputChannel": {
+      "title": "ExceptionOutputChannel",
+      "type": "object",
+      "properties": {
+        "exception": {
+          "$ref": "#/definitions/ExceptionValue"
+        },
+        "evaluator": {
+          "title": "Evaluator",
+          "default": {
+            "type": "builtin",
+            "options": {},
+            "name": "exception"
+          },
+          "anyOf": [
+            {
+              "$ref": "#/definitions/GenericExceptionEvaluator"
+            },
+            {
+              "$ref": "#/definitions/SpecificEvaluator"
+            }
+          ]
+        },
+        "show_expected": {
+          "title": "Show Expected",
+          "default": true,
+          "type": "boolean"
+        }
+      }
+    },
+    "ExitCodeOutputChannel": {
+      "title": "ExitCodeOutputChannel",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "Value",
+          "default": 0,
+          "type": "integer"
+        },
+        "show_expected": {
+          "title": "Show Expected",
+          "default": true,
+          "type": "boolean"
+        }
+      }
+    },
+    "RunOutput": {
+      "title": "RunOutput",
+      "type": "object",
+      "properties": {
+        "stdout": {
+          "title": "Stdout",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/TextOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "stderr": {
+          "title": "Stderr",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/TextOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "file": {
+          "title": "File",
+          "default": "ignored",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FileOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "exception": {
+          "title": "Exception",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ExceptionOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "exit_code": {
+          "title": "Exit Code",
+          "default": {
+            "value": 0,
+            "show_expected": true
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/ExitCodeOutputChannel"
+            }
+          ]
+        }
+      }
+    },
+    "FileUrl": {
+      "title": "FileUrl",
+      "type": "object",
+      "properties": {
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "location": {
+          "title": "Location",
+          "default": "href",
+          "type": "string"
+        },
+        "storage": {
+          "title": "Storage",
+          "default": "disk",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content",
+        "name"
+      ]
+    },
+    "RunTestcase": {
+      "title": "RunTestcase",
+      "type": "object",
+      "properties": {
+        "input": {
+          "title": "Input",
+          "default": {
+            "stdin": "none",
+            "arguments": [],
+            "main_call": false
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/RunInput"
+            }
+          ]
+        },
+        "output": {
+          "title": "Output",
+          "default": {
+            "stdout": "none",
+            "stderr": "none",
+            "file": "ignored",
+            "exception": "none",
+            "exit_code": {
+              "value": 0,
+              "show_expected": true
+            }
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/RunOutput"
+            }
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "link_files": {
+          "title": "Link Files",
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FileUrl"
+          }
+        }
+      }
+    },
+    "VariableType": {
+      "title": "VariableType",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Data",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "default": "custom",
+          "const": "custom",
+          "type": "string"
+        }
+      },
+      "required": [
+        "data"
+      ]
+    },
+    "Assignment": {
+      "title": "Assignment",
+      "type": "object",
+      "properties": {
+        "variable": {
+          "title": "Variable",
+          "type": "string"
+        },
+        "expression": {
+          "title": "Expression",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/FunctionCall"
+            },
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
+        },
+        "type": {
+          "title": "Type",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/BasicNumericTypes"
+            },
+            {
+              "$ref": "#/definitions/BasicStringTypes"
+            },
+            {
+              "$ref": "#/definitions/BasicBooleanTypes"
+            },
+            {
+              "$ref": "#/definitions/BasicObjectTypes"
+            },
+            {
+              "$ref": "#/definitions/BasicNothingTypes"
+            },
+            {
+              "$ref": "#/definitions/BasicSequenceTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedNumericTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedSequenceTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedStringTypes"
+            },
+            {
+              "$ref": "#/definitions/VariableType"
+            }
+          ]
+        }
+      },
+      "required": [
+        "variable",
+        "expression",
+        "type"
+      ]
+    },
+    "ValueBuiltin": {
+      "title": "ValueBuiltin",
+      "description": "Built in evaluators for values.",
+      "enum": [
+        "value"
+      ],
+      "type": "string"
+    },
+    "GenericValueEvaluator": {
+      "title": "GenericValueEvaluator",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "default": "builtin",
+          "const": "builtin",
+          "type": "string"
+        },
+        "options": {
+          "title": "Options",
+          "default": {},
+          "type": "object"
+        },
+        "name": {
+          "default": "value",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ValueBuiltin"
+            }
+          ]
+        }
+      }
+    },
+    "ValueOutputChannel": {
+      "title": "ValueOutputChannel",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "Value",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
+        },
+        "evaluator": {
+          "title": "Evaluator",
+          "default": {
+            "type": "builtin",
+            "options": {},
+            "name": "value"
+          },
+          "anyOf": [
+            {
+              "$ref": "#/definitions/GenericValueEvaluator"
+            },
+            {
+              "$ref": "#/definitions/ProgrammedEvaluator"
+            },
+            {
+              "$ref": "#/definitions/SpecificEvaluator"
+            }
+          ]
+        },
+        "show_expected": {
+          "title": "Show Expected",
+          "default": true,
+          "type": "boolean"
+        }
+      }
+    },
+    "Output": {
+      "title": "Output",
+      "type": "object",
+      "properties": {
+        "stdout": {
+          "title": "Stdout",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/TextOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "stderr": {
+          "title": "Stderr",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/TextOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "file": {
+          "title": "File",
+          "default": "ignored",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FileOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "exception": {
+          "title": "Exception",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ExceptionOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        },
+        "result": {
+          "title": "Result",
+          "default": "none",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ValueOutputChannel"
+            },
+            {
+              "$ref": "#/definitions/EmptyChannel"
+            },
+            {
+              "$ref": "#/definitions/IgnoredChannel"
+            }
+          ]
+        }
+      }
+    },
+    "Testcase": {
+      "title": "Testcase",
+      "type": "object",
+      "properties": {
+        "input": {
+          "title": "Input",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Assignment"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/FunctionCall"
+            },
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "essential": {
+          "title": "Essential",
+          "default": true,
+          "type": "boolean"
+        },
+        "output": {
+          "title": "Output",
+          "default": {
+            "stdout": "none",
+            "stderr": "none",
+            "file": "ignored",
+            "exception": "none",
+            "result": "none"
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/Output"
+            }
+          ]
+        }
+      },
+      "required": [
+        "input"
+      ]
+    },
+    "Context": {
+      "title": "Context",
+      "type": "object",
+      "properties": {
+        "testcases": {
+          "title": "Testcases",
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Testcase"
+          }
+        },
+        "before": {
+          "title": "Before",
+          "default": {},
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/TextData"
+          }
+        },
+        "after": {
+          "title": "After",
+          "default": {},
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/TextData"
+          }
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "link_files": {
+          "title": "Link Files",
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FileUrl"
+          }
+        }
+      }
+    },
+    "Run": {
+      "title": "Run",
+      "type": "object",
+      "properties": {
+        "run": {
+          "title": "Run",
+          "default": {
+            "input": {
+              "stdin": "none",
+              "arguments": [],
+              "main_call": false
+            },
+            "output": {
+              "stdout": "none",
+              "stderr": "none",
+              "file": "ignored",
+              "exception": "none",
+              "exit_code": {
+                "value": 0,
+                "show_expected": true
+              }
+            },
+            "description": null,
+            "link_files": []
+          },
+          "allOf": [
+            {
+              "$ref": "#/definitions/RunTestcase"
+            }
+          ]
+        },
+        "contexts": {
+          "title": "Contexts",
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Context"
+          }
+        }
+      }
+    },
+    "Tab": {
+      "title": "Tab",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "runs": {
+          "title": "Runs",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Run"
+          }
+        },
+        "hidden": {
+          "title": "Hidden",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "runs"
+      ]
+    },
+    "Plan": {
+      "title": "Plan",
+      "type": "object",
+      "properties": {
+        "tabs": {
+          "title": "Tabs",
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Tab"
+          }
+        },
+        "namespace": {
+          "title": "Namespace",
+          "default": "submission",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "tested/testplan"
+}

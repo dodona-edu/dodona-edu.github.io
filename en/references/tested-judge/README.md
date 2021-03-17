@@ -51,6 +51,7 @@ Here do you find all information for the use of the **TESTed** judge.
 
 ## Documentation
 * [DSL-Testplans](dsl)
+* [JSON-Testplans](json)
 * [Template description](template-description)
   
 ## Guides
