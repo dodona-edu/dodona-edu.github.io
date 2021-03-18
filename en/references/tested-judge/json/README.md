@@ -1262,3 +1262,217 @@ The *EvaluationFunction*-object has 2 attributes: `file` and `name`.
 ```
 
 ## Statements and expressions
+In this paragraph we will discuss the possible statements and expressions of TESTed.
+
+### Datatypes TESTed
+TESTed has multiple datatypes that could be used.
+We can distinguis 3 different types of datatypes: [basic datatypes](#basic-datatypes),
+[advanced datatypes](#advanced-datatypes) and [the variable type](#variabletype).
+
+#### Basic datatypes
+The basic datatypes are an abstract datatype for a concept, like integers and not 8-bit integers.
+These datatypes will be generated as the default datatype in a programming language for a concept.
+
+##### BasicNumericTypes
+There are two basic numeric datatypes in TESTed: `integer` and `rational`.
+- **integer**: integers.
+- **rational**: rational numbers.
+
+```json
+"BasicNumericTypes": {
+  "title": "BasicNumericTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "integer",
+    "rational"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicStringTypes
+There are two basic string datatypes in TESTed: `text` and `any`.
+- **text**: text.
+- **any**: The datatype that represent any datatype.
+  ::: warning Remark
+  This datatype is normally not used in the testplan.
+  :::
+
+```json
+"BasicStringTypes": {
+  "title": "BasicStringTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "text",
+    "any"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicBooleanTypes
+There exist one boolean datatype in TESTed: `boolean`.
+
+```json
+"BasicBooleanTypes": {
+  "title": "BasicBooleanTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "boolean"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicObjectTypes
+There exists one object datatype in TESTed: `map`.
+This datatype represent a collection of key-value pairs.
+
+```json
+"BasicObjectTypes": {
+  "title": "BasicObjectTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "map"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicNothingTypes
+There exists one 'nothing' datatype in TESTed: `nothing`.
+This datatype represent 'nothing'.
+
+```json
+"BasicNothingTypes": {
+  "title": "BasicNothingTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "nothing"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicSequenceTypes
+There exists two basic sequence datatypes in TESTed: `sequence` and `set`.
+- **sequence**: A ordered sequence of values.
+- **set**: An onordered collection of unique invariable values.
+
+```json
+"BasicSequenceTypes": {
+  "title": "BasicSequenceTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "sequence",
+    "set"
+  ],
+  "type": "string"
+},
+```
+
+#### Advanced datatypes
+The advanced datatypes are a specific datatype for a concept, like 8-bit integers and not integers.
+These datatypes are a specific datatype in a programming language.
+
+##### AdvancedNumericTypes
+There are 13 advanced numeric datatypes in TESTed: `int8`, `uint8`, `int16`, `uint16`, `int32`, `uint32`,
+`int64`, `uint64`, `bigint`, `single_precision`, `double_precision`, `double_extended` and `fixed_precision`.
+- **int8**: 8-bit integers.
+- **uint8**: 8-bit natural numbers.
+- **int16**: 16-bit integers.
+- **uint16**: 16-bit natural numbers.
+- **int32**: 32-bit integers.
+- **uint32**: 32-bit natural numbers.
+- **int64**: 64-bit integers.
+- **uint64**: 64-bit natural numbers.
+- **bigint**: Unlimited integers.
+- **single_precision**: 32-bit floating-point numbers.
+- **double_precision**: 64-bit floating-point numbers.
+- **double_extended**: Unlimited floating-point numbers.
+- **fixed_precision**: Fixed-point numbers.
+
+```json
+"AdvancedNumericTypes": {
+  "title": "AdvancedNumericTypes",
+  "description": "The advanced numeric types. Programming configs should be implemented using\nthe C/C++ rules: the size of the types is a minimum. For example, Python's ints\nare arbitrary precision, which means Python supports all integer types.\nOn the other hand, C only supports up to 64 bits.",
+  "enum": [
+    "int8",
+    "uint8",
+    "int16",
+    "uint16",
+    "int32",
+    "uint32",
+    "int64",
+    "uint64",
+    "bigint",
+    "single_precision",
+    "double_precision",
+    "double_extended",
+    "fixed_precision"
+  ],
+  "type": "string"
+},
+```
+
+##### AdvancedSequenceTypes
+There exists three advanced sequence datatypes in TESTed: `array`, `list` and `tuple`.
+- **array**: A dynamic sequence of a fixed size.
+- **list**: A dynamic sequence of a dynamic size.
+- **tuple**: A invariable sequence.
+
+```json
+"AdvancedSequenceTypes": {
+  "title": "AdvancedSequenceTypes",
+  "description": "Advanced sequence types. The names of these types are kept as generic as\npossible, to accommodate as many types as possible.",
+  "enum": [
+    "array",
+    "list",
+    "tuple"
+  ],
+  "type": "string"
+},
+```
+
+##### AdvancedStringTypes
+The exists one advanced string datatype in TESTed.
+This is the `char` datatype, which represents a single character.
+
+```json
+"AdvancedStringTypes": {
+  "title": "AdvancedStringTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "char"
+  ],
+  "type": "string"
+},
+```
+
+#### VariableType
+The variable type must be used when you want to represent a value, that can't be represent with a TESTed datatypes.
+
+This object has two attributes: `data` and `type`.
+- **data**: The name of the datatype.
+- **type**: A string with constant value `custom`.
+
+```json
+"VariableType": {
+  "title": "VariableType",
+  "type": "object",
+  "properties": {
+    "data": {
+      "title": "Data",
+      "type": "string"
+    },
+    "type": {
+      "title": "Type",
+      "const": "custom",
+      "type": "string"
+    }
+  },
+  "required": [
+    "data"
+  ]
+},
+```

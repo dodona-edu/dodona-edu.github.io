@@ -1282,7 +1282,6 @@ In deze paragraaf zullen de mogelijke statements en expressies in TESTed.
 
 ### Datatypes TESTed
 TESTed heeft verschillende datatypes die gebruikt kunnen worden.
-
 We kunnen 3 soorten datatypes onderscheiden: [basis datatypes](#basis-datatypes),
 [geavanceerde datatypes](#geavanceerde-datatypes) en [het variabele type](#variabletype).
 
@@ -1292,8 +1291,8 @@ Deze datatypes zullen gegenereerd worden als het standaard datatype in die progr
 
 ##### BasicNumericTypes
 Er bestaan twee basis numerieke datatypes in TESTed: `integer` en `rational`.
-- **integer**: gehele getallen
-- **rational**: rationale getallen
+- **integer**: gehele getallen.
+- **rational**: rationale getallen.
 
 ```json
 "BasicNumericTypes": {
@@ -1309,7 +1308,7 @@ Er bestaan twee basis numerieke datatypes in TESTed: `integer` en `rational`.
 
 ##### BasicStringTypes
 Er bestaan twee basis string datatypes in TESTed: `text` en `any`.
-- **text**: tekst
+- **text**: tekst.
 - **any**: Het datatype die elke waarde voorstelt.
   ::: warning Opmerking
   Dit datatype moet normaal niet gebruikt worden in het testplan. 
@@ -1328,7 +1327,8 @@ Er bestaan twee basis string datatypes in TESTed: `text` en `any`.
 ```
 
 ##### BasicBooleanTypes
-Er bestaat één boolean datatype in TESTed: `boolean`.
+Er bestaat één booleaans datatype in TESTed: `boolean`.
+
 ```json
 "BasicBooleanTypes": {
   "title": "BasicBooleanTypes",
@@ -1372,7 +1372,7 @@ Dit datatype stelt de waarde 'niets' voor.
 
 ##### BasicSequenceTypes
 Er bestaan twee basis sequentie datatypes in TESTed: `sequence` en `set`.
-- **sequence**: Een geordende sequentie van gegevens
+- **sequence**: Een geordende sequentie van gegevens.
 - **set**: Een ongeordende collectie van unieke invariabele gegevens.
 
 ```json
@@ -1395,19 +1395,20 @@ Deze datatypes zijn een specifiek datatype in de programmeertaal.
 ##### AdvancedNumericTypes
 Er bestaan dertien geavanceerde numerieke datatypes in TESTed: `int8`, `uint8`, `int16`, `uint16`, `int32`, `uint32`,
 `int64`, `uint64`, `bigint`, `single_precision`, `double_precision`, `double_extended` en `fixed_precision`.
-- **int8**: 8-bit gehele getallen
-- **uint8**: 8-bit natuurlijke getallen
-- **int16**: 16-bit gehele getallen
-- **uint16**: 16-bit natuurlijke getallen
-- **int32**: 32-bit gehele getallen
-- **uint32**: 32-bit natuurlijke getallen
-- **int64**: 64-bit gehele getallen
-- **uint64**: 64-bit natuurlijke getallen
-- **bigint**: Onbeperkte grote gehele getallen
-- **single_precision**: 32-bit vlottende komma getallen
-- **double_precision**: 64-bit vlottende komma getallen
-- **double_extended**: Onbeperkt grote vlottende komma getallen
-- **fixed_precision**: Vast komma getallen
+- **int8**: 8-bit gehele getallen.
+- **uint8**: 8-bit natuurlijke getallen.
+- **int16**: 16-bit gehele getallen.
+- **uint16**: 16-bit natuurlijke getallen.
+- **int32**: 32-bit gehele getallen.
+- **uint32**: 32-bit natuurlijke getallen.
+- **int64**: 64-bit gehele getallen.
+- **uint64**: 64-bit natuurlijke getallen.
+- **bigint**: Onbeperkte grote gehele getallen.
+- **single_precision**: 32-bit vlottende komma getallen.
+- **double_precision**: 64-bit vlottende komma getallen.
+- **double_extended**: Onbeperkt grote vlottende komma getallen.
+- **fixed_precision**: Vast komma getallen.
+
 ```json
 "AdvancedNumericTypes": {
   "title": "AdvancedNumericTypes",
@@ -1453,6 +1454,7 @@ Er bestaan drie geavanceerde sequentie datatypes in TESTed: `array`, `list` en `
 ##### AdvancedStringTypes
 Er bestaat één geavanceerd string datatype in TESTed.
 Dit is `char` welke een karakter voor stelt.
+
 ```json
 "AdvancedStringTypes": {
   "title": "AdvancedStringTypes",
