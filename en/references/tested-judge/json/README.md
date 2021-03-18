@@ -617,3 +617,68 @@ The *TextData*-object has 2 attributes: `data` and `type`.
 },
 ```
 
+## Enums
+The enums are used the define the type of objects.
+
+### ExceptionBuiltin
+The enum for the builtin exception evaluator.
+The only excepted value is `exception`.
+
+```json
+"ExceptionBuiltin": {
+  "title": "ExceptionBuiltin",
+  "description": "Built in evaluators for exceptions.",
+  "enum": [
+    "exception"
+  ],
+  "type": "string"
+},
+```
+
+### TextBuiltin
+The enum for the builtin text evaluator.
+The two possible values are `text` (for textual evaluation) and `file` (for file evaluation).
+
+```json
+"TextBuiltin": {
+  "title": "TextBuiltin",
+  "description": "Textual built in evaluators.",
+  "enum": [
+    "text",
+    "file"
+  ],
+  "type": "string"
+},
+```
+
+### TextChannelType
+This the enum for textual channels.
+TextChannelType has two types: `text` and `file`.
+
+```json
+"TextChannelType": {
+  "title": "TextChannelType",
+  "description": "An enumeration.",
+  "enum": [
+    "text",
+    "file"
+  ],
+  "type": "string"
+},
+```
+
+### ValueBuiltin
+The enum for the builtin value evaluator.
+The only excepted value is `value`.
+
+```json
+"ValueBuiltin": {
+  "title": "ValueBuiltin",
+  "description": "Built in evaluators for values.",
+  "enum": [
+    "value"
+  ],
+  "type": "string"
+},
+```
+
