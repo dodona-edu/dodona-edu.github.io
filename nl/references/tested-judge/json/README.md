@@ -54,7 +54,7 @@ Dit object heeft 2 attributen: `namespace` en `tabs`.
 
 ## Tabblad
 Tabbladen in het testplan komen overeen met de weergave op Dodona.
-Een tabblad bevat alle contexten en testgevallen die uitgevoerd moeten worden.
+Een tabblad bevat een lijst van runs die uitgevoerd moeten worden.
 
 Een tabblad heeft 3 attributen: `name`, `hidden` en `runs`.
 - **name**: Hieraan moet de naam meegegeven worden voor het tabblad, zoals deze moet weergegeven worden op Dodona.
@@ -93,7 +93,7 @@ Een tabblad heeft 3 attributen: `name`, `hidden` en `runs`.
 Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten bevat en ook een testgeval kan bevatten die
 het geschreven programma zelf uitvoert.
 
-De run heeft twee attributen `run` en `contexts`.
+De run heeft twee attributen: `run` en `contexts`.
 - **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [De Run](#de-run)).
 - **contexts**: Deze bevat een lijst van alle [contexten](#context) die uitgevoerd moeten worden.
 
@@ -122,10 +122,10 @@ De run heeft twee attributen `run` en `contexts`.
 ```
 
 ## De Run
-Het *Run*-object is het testgeval die het geschreven programma zelf uitvoert.
+De *Run* is het testgeval die het geschreven programma zelf uitvoert.
 Deze wordt weergegeven als een aparte context op Dodona.
 
-Het *Run*-object heeft 4 attributen: `input`, `output`, `description` en `link_files`.
+De *Run* heeft 4 attributen: `input`, `output`, `description` en `link_files`.
 - **input**: De [invoergegevens](#runinput) voor het programma.
 - **output**: De [verwachte uitvoer](#runoutput) van het programma en evaluators.
 - **description**: De beschrijving voor de weergave op Dodona,
@@ -211,7 +211,7 @@ Het *RunInput*-object heeft 3 attributen: `stdin`, `arguments` en `main_call`.
 ```
 
 ### RunOutput
-Het *RunOutput*-object bevat alle informatie die nodig is voor het evalueren van Het *programma*-object uitvoer.
+Het *RunOutput*-object bevat alle informatie die nodig is voor het evalueren van de *programma* uitvoer.
 
 Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `exit_code`.
 - **stdout** en **stderr**: Het uitvoerkanaal voor standaardfout en -error.
@@ -226,10 +226,10 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
   - [IgnoreChannel](#ignorechannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
     Dit is de standaard optie.
-  - [FileOutputChannel](#fileoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
+  - [FileOutputChannel](#fileoutputchannel): Een bestand is verwacht als uitvoer.
   
   ::: warning Opmerking
-  Het is momenteel niet mogelijk op in TESTed meer dan één bestand te verwachten per test.
+  Het is momenteel niet mogelijk op in TESTed meer dan één bestand te verwachten per programmatest.
   :::
   ::: warning Opmerking
   Het is momenteel ook niet mogelijk in TESTed om te controleren of er geen bestanden aangemaakt werden.
