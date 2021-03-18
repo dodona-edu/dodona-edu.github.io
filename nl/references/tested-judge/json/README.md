@@ -1,6 +1,7 @@
 ---
 title: TESTed JSON-testplannen
 description: "TESTed JSON-testplannen"
+sidebarDepth: 2
 ---
 
 ::: warning Waarschuwing
@@ -16,6 +17,9 @@ worden bekeken.
 Het doel van deze documentatie is een uitgebreid overzicht geven van alle parameters die in het JSON-testplan kunnen
 worden ingesteld.
 Hiervoor zullen we ook partieel het JSON-schema gebruiken.
+
+Er kunnen voorbeeld JSON-testplannen gevonden in de
+[GitHub repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) van TESTed.
 
 ## Het toplevel object
 Dit object heeft 2 attributen: `namespace` en `tabs`.
@@ -164,7 +168,7 @@ De *Run* heeft 4 attributen: `input`, `output`, `description` en `link_files`.
 },
 ```
 
-## RunInput
+### RunInput
 De *RunInput* bevat alle informatie voor het opstarten van de programmatest.
 
 De *RunInput* heeft 3 attributen: `stdin`, `arguments` en `main_call`.
@@ -206,7 +210,7 @@ De *RunInput* heeft 3 attributen: `stdin`, `arguments` en `main_call`.
 },
 ```
 
-## RunOutput
+### RunOutput
 De *RunOutput* bevat alle informatie die nodig is voor het evalueren van de *programma* uitvoer.
 
 De *RunOutput* heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `exit_code`.
@@ -428,7 +432,7 @@ Een testcase heeft 3 attributen: `input`, `description` en `output`.
 },
 ```
 
-## Output
+### Output
 De *Output* bevat alle informatie die nodig is voor het evalueren van het testgeval.
 
 De *Output* heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `value`.
@@ -548,7 +552,7 @@ De *Output* heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `value`
 De inhoud van dit object is gebaseerd op de invoer de verwacht wordt voor de *Python Tutor*.
 ::: warning Opmerking
 Hoewel dit object overeenkomt met de invoer voor de *Python Tutor*.
-Is TESTed momenteel beperkt tot gelinkte bestanden, die in een nieuw browsertabblad geopend worden.
+Is TESTed momenteel beperkt tot het openen van  gelinkte bestanden in een nieuw browsertabblad.
 :::
 
 *FileUrl* heeft 4 attributen: `content`, `name`, `location` en `storage`.
@@ -621,8 +625,8 @@ Is TESTed momenteel beperkt tot gelinkte bestanden, die in een nieuw browsertabb
 },
 ```
 
-## Types
-De types zijn een verzameling van tekstuele opsomtypes.
+## Opsomtypes
+De opsomtypes worden gebruikt om het type van objecten te definiëren.
 
 ### ExceptionBuiltin
 Opsomtype interne fout-evaluator.
@@ -719,6 +723,23 @@ maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 ```
 
 ### ExceptionOutputChannel
+De *ExceptionOutputChannel* is het uitvoerkanaal voor verwachte opgegooide fouten.
+Deze verwacht de boodschap van de opgegooide fout en de gebruikte evaluator.
+
+De *ExceptionOutputChannel* heeft 2 attributen: `exception` en `evaluator`.
+- **exception**: De verwachte foutboodschap in een [ExceptionValue](#exceptionvalue) object.
+- **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van de fout.
+  Er kunnen twee evaluators gebruikt worden:
+  - [GenericExceptionEvaluator](#genericexceptionevaluator): Dit is de interne evaluator van TESTed voor fouten.
+    Dit is de standaard evaluator.
+    ::: warning Opmerking
+    Alleen de foutboodschap (niet te verwarren met het fouttype) kan gecontroleerd worden in de interne evaluator.
+    :::
+  - [SpecificEvaluator](#specificevaluator): Dit is een evaluator geschreven in de programmeertaal zelf.
+    ::: tip Tip
+    Wanneer je fouttypes wilt kunnen evalueren, moet je deze evaluators gebruiken.
+    :::
+
 ```json
 "ExceptionOutputChannel": {
   "title": "ExceptionOutputChannel",
@@ -742,7 +763,48 @@ maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 },
 ```
 
+#### ExceptionValue
+De *ExceptionValue* bevat het bericht die verwacht wordt in een opgegooide fout.
+
+De *ExceptionValue* heeft 2 attributen: `message` en `stacktrace`.
+- **message**: Het tekstbericht van de opgegooide fout.
+- **stacktrace**: De stacktrace van de fout.
+  ::: danger Opmerking
+  De "verwachte" stacktrace moet niet worden opgegeven in het testplan.
+  
+  Dit attribuut wordt gebruikt in de interne werking van TESTed.
+  :::
+
+```json
+"ExceptionValue": {
+  "title": "ExceptionValue",
+  "type": "object",
+  "properties": {
+    "message": {
+      "title": "Message",
+      "type": "string"
+    },
+    "stacktrace": {
+      "title": "Stacktrace",
+      "type": "string"
+    }
+  },
+  "required": [
+    "message"
+  ]
+},
+```
+
 ### ExitCodeOutputChannel
+De *ExitCodeOutputChannel* is het uitvoerkanaal voor de stopcode van een uitgevoerd programma.
+
+De *ExitCodeOutputChannel* heeft 1 attribuut: `value`.
+- **value**: Dit is het geheel getal die de foutcode voorstelt.
+  Standaard is dit de waarde `0`.
+  ::: warning Opmerking
+  Wanneer de verwachte en uitgevoerde foutcodes `0` zijn, zal deze niet weergegeven worden op Dodona. 
+  :::
+
 ```json
 "ExitCodeOutputChannel": {
   "title": "ExitCodeOutputChannel",
@@ -757,6 +819,23 @@ maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 ```
 
 ### FileOutputChannel
+De *FileOutputChannel* is het uitvoerkanaal voor een bestand dat verwacht werd door de student te worden gecreëerd.
+::: warning Opmerking
+TESTed kan momenteel slechts één bestand evalueren per testgeval.
+:::
+::: warning Opmerking
+TESTed ondersteund momenteel enkel tekstbestanden.
+:::
+
+De *FileOutputChannel* heeft 3 attributen: `expected_path`, `actual_path` en `evaluator`.
+- **expected_path**: Relatief pad naar het bestand in de `workdir`, waarin de verwachte uitvoer bevat is.
+- **actual_path**: Relatief pad naar het bestand in de `workdir`, waarin de gegenereerde uitvoer bevat is.
+- **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde bestand.
+  Er kunnen twee evaluators gebruikt worden:
+  - [GenericTextEvaluator](#generictextevaluator): Dit is de interne evaluator van TESTed voor tekst en tekstbestanden.
+    Dit is de standaard evaluator.
+  - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator.
+
 ```json
 "FileOutputChannel": {
   "title": "FileOutputChannel",
@@ -790,6 +869,19 @@ maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 ```
 
 ### TextOutputChannel
+De *TextOutputChannel* is een tekstueel uitvoerkanaal, zoals standaarduitvoer.
+
+De *TextOutputChannel* heeft 3 attributen: `data`, `type` en `evaluator`.
+- **data**: De verwachte uitvoer zelf (type: `text`)
+  of een relatief pad naar het bestand, in de `workdir` map, die de verwachte uitvoer bevat (type: `file`).
+- **type**: Het type van de uitvoer: de tekst zelf (`text`) of een tekstbestand (`file`).
+  Zie [TextChannelType](#textchanneltype).
+- **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde tekstuele uitvoer.
+  Er kunnen twee evaluators gebruikt worden:
+  - [GenericTextEvaluator](#generictextevaluator): Dit is de interne evaluator van TESTed voor tekst en tekstbestanden.
+    Dit is de standaard evaluator.
+  - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator.
+
 ```json
 "TextOutputChannel": {
   "title": "TextOutputChannel",
@@ -825,6 +917,32 @@ maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 ```
 
 ### ValueOutputChannel
+De *ValueOutputChannel* is het uitvoerkanaal voor returnwaarden.
+
+De *ValueOutputChannel* heeft 2 attributen: `value` en `evaluator`.
+- **value**: De verwachte returnwaarde.
+  Zie [Statements en expressies](#statements-en-expressies) voor de mogelijke returnwaarden.
+  ::: danger Opmerking
+  De verwachte returnwaarde mag geen functieoproepen en variabelen bevatten.
+  :::
+- **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van de returnwaarde.
+  Er kunnen drie evaluators gebruikt worden:
+  - [GenericValueEvaluator](#genericvalueevaluator): Dit is de interne evaluator van TESTed voor returnwaarden.
+    Dit is de standaard evaluator.
+    ::: danger Opmerking
+    Deze evaluator ondersteund alleen de datatypes van TESTed.
+    :::
+  - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator,
+    die onafhankelijk is van de programmeertaal van de ingediende oplossing.
+    ::: danger Opmerking
+    Deze evaluator ondersteund alleen de datatypes van TESTed.
+    :::
+  - [SpecificEvaluator](#specificevaluator): Dit is een eigen geschreven evaluator,
+    die afhankelijk is van de programmeertaal van de ingediende oplossing.
+    ::: warning Opmerking
+    Dit is de enige evaluator die programmeertaal specifieke datatypes kan evalueren.
+    :::
+
 ```json
 "ValueOutputChannel": {
   "title": "ValueOutputChannel",
@@ -989,6 +1107,10 @@ De *ProgrammedEvaluator* is het object die gebruikt moet worden wanneer je een g
 
 De *ProgrammedEvaluator* heeft 2 attributen: `language`, `function`, `arguments` en `type`.
 - **language**: Een string de programmeertaal van de evaluator specificeert.
+  ::: warning Opmerking
+  De programmeertaal van de geprogrammeerde evaluator is onafhankelijk van de programmeertaal van de ingediende
+  oplossing.
+  :::
 - **function**: Een [EvaluationFunction](#evaluationfunction) object, welke informatie bevat over de evaluatiefunctie.
 - **arguments**: Een lijst met extra argumenten voor de evaluatiefunctie,
   zie [EvaluationFunction](#evaluationfunction) en [Statements en expressies](#statements-en-expressies).
@@ -996,6 +1118,15 @@ De *ProgrammedEvaluator* heeft 2 attributen: `language`, `function`, `arguments`
   Deze argumenten kunnen geen functieoproepen en variabelen bevatten.
   :::
 - **type**: Een string met de vaste waarde `programmed`.
+
+::: tip Tip
+Om een hoge evaluatieperformantie te hebben raden we aan op de geprogrammeerde evaluator in **Python** te schrijven.
+
+Dit komt omdat de geprogrammeerde evaluator in **Python** in hetzelfde proces als TESTed uitgevoerd wordt.
+In tegenstelling tot de evaluators in de andere programmeertalen,
+waarvoor een evaluatieprogramma gegenereerd moet worden.
+Daarnaast wordt deze ook uitgevoerd wordt in een ander process, welke een aanzienlijk performantie overhead heeft.
+:::
 
 ```json
 "ProgrammedEvaluator": {
@@ -1056,7 +1187,19 @@ De *SpecificEvaluator* heeft 2 attributen: `evaluators` en `type`.
 - **evaluators**: Dit is een object met de programmeertalen waarvoor een evaluator beschikbaar is als sleutels.
   De waarden van dit object zijn van het type [EvaluationFunction](#evaluationfunction),
   welke informatie bevat over de evaluatiefunctie.
+  ::: warning Opmerking
+  De programmeertaal van de specifieke evaluator is dezelfde als die van de ingediende oplossing.
+  :::
+  ::: danger Opmerking
+  Wanneer er geen specifieke evaluator beschikbaar is voor een programmeertaal,
+  kan de oefening niet opgelost worden in die programmeertaal.
+  :::
 - **type**: Dit is een string met de vaste waarde `specific`.
+
+::: danger Opmerking
+De specifieke evaluator wordt uitgevoerd in hetzelfde proces (dit is niet het TESTed proces)
+die uitgevoerd wordt voor het uitvoeren van de studentencode.
+:::
 
 ```json
 "SpecificEvaluator": {
