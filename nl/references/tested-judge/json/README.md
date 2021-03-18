@@ -18,7 +18,7 @@ Het doel van deze documentatie is een uitgebreid overzicht geven van alle parame
 worden ingesteld.
 Hiervoor zullen we ook partieel het JSON-schema gebruiken.
 
-Er kunnen voorbeeld JSON-testplannen gevonden in de
+Er kunnen voorbeeld JSON-testplannen en evaluators gevonden in de
 [GitHub repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) van TESTed.
 
 ## Het toplevel object
@@ -1234,16 +1234,22 @@ Het *EvaluationFunction*-object heeft 2 attributen: `file` en `name`.
   waarin de evaluator functie zich bevindt.
 - **name**: De naam van de evaluatiefunctie die opgeroepen moet worden.
   Standaard is dit de functie `evaluate`.
-  ::: warning Belangrijk
+  ::: danger Belangrijk
   Voor een specifieke evaluator verwacht deze functie slecht één argument `actual` welke de terug gekregen waarde bevat.
   :::
-  ::: warning Belangrijk
+  ::: danger Belangrijk
   Voor een geprogrammeerde evaluator verwacht deze functie drie argumenten: `expected`, `actual` en `arguments`.
   - `expected` bevat de verwachte returnwaarde uit het testplan.
   - `actual` bevat de werkelijke returnwaarde.
   - `arguments` bevat een lijst met extra argumenten voor de evaluator.
   :::
-
+  ::: danger Belangrijk
+  Voor zowel de specifieke evaluator als de geprogrammeerde evaluator moet deze een object van het type 
+  [EvaluationResult](https://github.com/dodona-edu/universal-judge/blob/4216ddd983add3bc05c61d47c09233093bff8808/tested/evaluators/__init__.py#L43).
+    
+  Dit object is geïmplementeerd voor elke ondersteunde programmeertaal.
+  :::
+    
 ```json
 "EvaluationFunction": {
   "title": "EvaluationFunction",
