@@ -995,7 +995,8 @@ Het *ValueOutputChannel*-object heeft 2 attributen: `value` en `evaluator`.
 ## Evaluators
 
 ### GenericExceptionEvaluator
-Het *GenericExceptionEvaluator*-object bevat alle informatie die nodig is om fouten te evalueren met de interne evaluator.
+Het *GenericExceptionEvaluator*-object bevat alle informatie die nodig is om fouten te evalueren met de interne
+evaluator.
 :::warning Opmerking
 Deze evaluator kan enkel foutboodschappen evalueren en niet de fouttypes.
 Dit komt door dat de fouttypes programmeertaal afhankelijk zijn.
@@ -1035,7 +1036,8 @@ Het *GenericExceptionEvaluator*-object heeft 3 attributen: `type`, `options` en 
 ```
 
 ### GenericValueEvaluator
-Het *GenericValueEvaluator*-object bevat alle informatie die nodig is om returnwaarden te evalueren met de interne evaluator.
+Het *GenericValueEvaluator*-object bevat alle informatie die nodig is om returnwaarden te evalueren met de interne
+evaluator.
 
 Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
@@ -1071,7 +1073,8 @@ Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `nam
 ```
 
 ### GenericTextEvaluator
-Het *GenericTextEvaluator*-object bevat alle informatie die nodig is om tekstuele data te evalueren met de interne evaluator.
+Het *GenericTextEvaluator*-object bevat alle informatie die nodig is om tekstuele data te evalueren met de interne
+evaluator.
 
 Het *GenericTextEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
@@ -1106,9 +1109,10 @@ Het *GenericTextEvaluator*-object heeft 3 attributen: `type`, `options` en `name
 ```
 
 ### ProgrammedEvaluator
-Het *ProgrammedEvaluator*-object is het object die gebruikt moet worden wanneer je een geprogrammeerde evaluatie gebruikt.
+Het *ProgrammedEvaluator*-object is het object die gebruikt moet worden wanneer je een geprogrammeerde evaluatie
+gebruikt.
 
-Het *ProgrammedEvaluator*-object heeft 2 attributen: `language`, `function`, `arguments` en `type`.
+Het *ProgrammedEvaluator*-object heeft 4 attributen: `language`, `function`, `arguments` en `type`.
 - **language**: Een string de programmeertaal van de evaluator specificeert.
   ::: warning Opmerking
   De programmeertaal van de geprogrammeerde evaluator is onafhankelijk van de programmeertaal van de ingediende
@@ -1123,7 +1127,7 @@ Het *ProgrammedEvaluator*-object heeft 2 attributen: `language`, `function`, `ar
 - **type**: Een string met de vaste waarde `programmed`.
 
 ::: tip Tip
-Om een hoge evaluatieperformantie te hebben raden we aan op de geprogrammeerde evaluator in **Python** te schrijven.
+Om een hoge evaluatieperformantie te hebben, raden we aan op de geprogrammeerde evaluator in **Python** te schrijven.
 
 Dit komt omdat de geprogrammeerde evaluator in **Python** in hetzelfde proces als TESTed uitgevoerd wordt.
 In tegenstelling tot de evaluators in de andere programmeertalen,
@@ -1183,11 +1187,11 @@ Daarnaast wordt deze ook uitgevoerd wordt in een ander process, welke een aanzie
 ```
 
 ### SpecificEvaluator
-Het *SpecificEvaluator*-object is het object die gebruikt moet worden wanneer je een programmeertaal specifieke evaluatie
-gebruikt.
+Het *SpecificEvaluator*-object is het object die gebruikt moet worden wanneer je een programmeertaal specifieke
+evaluatie gebruikt.
 
 Het *SpecificEvaluator*-object heeft 2 attributen: `evaluators` en `type`.
-- **evaluators**: Dit is een object met de programmeertalen waarvoor een evaluator beschikbaar is als sleutels.
+- **evaluators**: Dit is een object met de programmeertalen, waarvoor een evaluator beschikbaar, is als sleutels.
   De waarden van dit object zijn van het type [EvaluationFunction](#evaluationfunction),
   welke informatie bevat over de evaluatiefunctie.
   ::: warning Opmerking
@@ -1199,7 +1203,7 @@ Het *SpecificEvaluator*-object heeft 2 attributen: `evaluators` en `type`.
   :::
 - **type**: Dit is een string met de vaste waarde `specific`.
 
-::: danger Opmerking
+::: warning Opmerking
 De specifieke evaluator wordt uitgevoerd in hetzelfde proces (dit is niet het TESTed proces)
 die uitgevoerd wordt voor het uitvoeren van de studentencode.
 :::
@@ -1237,21 +1241,21 @@ Het *EvaluationFunction*-object heeft 2 attributen: `file` en `name`.
 - **name**: De naam van de evaluatiefunctie die opgeroepen moet worden.
   Standaard is dit de functie `evaluate`.
   ::: danger Belangrijk
-  Voor een specifieke evaluator verwacht deze functie slecht één argument `actual` welke de terug gekregen waarde bevat.
+  Voor een specifieke evaluator verwacht deze functie slecht één argument `actual` welke de returnwaarde bevat.
   :::
   ::: danger Belangrijk
   Voor een geprogrammeerde evaluator verwacht deze functie drie argumenten: `expected`, `actual` en `arguments`.
   - `expected` bevat de verwachte returnwaarde uit het testplan.
   - `actual` bevat de werkelijke returnwaarde.
-  - `arguments` bevat een lijst met extra argumenten voor de evaluator.
+  - `arguments` bevat een lijst met extra argumenten voor de evaluatiefunctie.
   :::
   ::: danger Belangrijk
-  Voor zowel de specifieke evaluator als de geprogrammeerde evaluator moet deze een object van het type 
+  Voor zowel de specifieke evaluator als de geprogrammeerde evaluator moet deze functie een object van het type 
   [EvaluationResult](https://github.com/dodona-edu/universal-judge/blob/4216ddd983add3bc05c61d47c09233093bff8808/tested/evaluators/__init__.py#L43).
     
   Dit object is geïmplementeerd voor elke ondersteunde programmeertaal.
   :::
-    
+
 ```json
 "EvaluationFunction": {
   "title": "EvaluationFunction",

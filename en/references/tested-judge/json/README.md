@@ -982,3 +982,283 @@ The *ValueOutputChannel*-object has 2 attributes: `value` and `evaluator`
 },
 ```
 
+## Evaluators
+
+### GenericExceptionEvaluator
+The **GenericExceptionEvaluator*-object contains all information that is needed to use the builtin evaluator for
+exceptions.
+:::warning Remark
+This evaluator can only evaluate fault messages and not exception types.
+This is the case because exception types are programming language dependent.
+:::
+
+The *GenericExceptionEvaluator*-object has 3 attributes: `type`, `options` and `name`.
+- **type**: A string with constant value `builtin`.
+- **options**: The additional evaluation options that can be used by the builtin evaluator.
+  ::: warning Remark
+  At this moment there are no options used by the builtin evaluator for exceptions.
+  :::
+- **name**: A string with constant value `exception`, see [ExceptionBuiltin](#exceptionbuiltin).
+
+```json
+"GenericExceptionEvaluator": {
+  "title": "GenericExceptionEvaluator",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "const": "builtin",
+      "type": "string"
+    },
+    "options": {
+      "title": "Options",
+      "type": "object"
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExceptionBuiltin"
+        }
+      ]
+    }
+  }
+},
+```
+
+### GenericValueEvaluator
+The *GenericValueEvaluator*-object contains all information that is need to use the builtin evaluator for return values.
+
+The *GenericValueEvaluator*-object has 3 attributes: `type`, `options` and `name`.
+- **type**: A string with constant value `builtin`.
+- **options**: The addition evaluation options that can be used by the builtin evaluator.
+  ::: warning Remark
+  At this moment there are no options used by the builtin evaluator for exceptions.
+  :::
+- **name**: A string with constant value `value`, see [ValueBuiltin](#valuebuiltin).
+
+```json
+"GenericValueEvaluator": {
+  "title": "GenericValueEvaluator",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "const": "builtin",
+      "type": "string"
+    },
+    "options": {
+      "title": "Options",
+      "type": "object"
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ValueBuiltin"
+        }
+      ]
+    }
+  }
+},
+```
+
+### GenericTextEvaluator
+The *GenericTextEvaluator*-object contains all information that is need to use the builtin evaluator for textual data.
+
+The *GenericTextEvaluator*-object has 3 attributes: `type`, `options`, `name`.
+- **type**: A string with constant value `builtin`.
+- **options**: The additional evaluation options that can be used by the builtin evaluator,
+  see [DSL Configuration options for standard output and error](../dsl/#configuration-options).
+- **name**: The type of textual source that must be evaluated.
+  Either `text` or `file`, see [TextBuiltin](#textbuiltin).
+
+```json
+"GenericTextEvaluator": {
+  "title": "GenericTextEvaluator",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "const": "builtin",
+      "type": "string"
+    },
+    "options": {
+      "title": "Options",
+      "type": "object"
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/TextBuiltin"
+        }
+      ]
+    }
+  }
+},
+```
+
+### ProgrammedEvaluator
+The *ProgrammedEvaluator*-object is the object that must be used when you use the programmed evaluation.
+
+The *ProgrammedEvaluator*-object has 4 attributes: `language`, `function`, `arguments` and `type`.
+- **language**: A string that specifies the programming language of the evaluator.
+  ::: warning Remark
+  The programming language of the programmed evaluator is independent of the programming language of the submission.
+  :::
+- **function**: A [EvaluationFunction](#evaluationfunction) object,
+  which contains the information about the evaluation function.
+- **arguments**: A list with additional arguments for the evaluation function,
+  see [EvaluationFunction](#evaluationfunction) and [Statements and expressions](#statements and expressions).
+  ::: warning Remark
+  These arguments can't have function calls or variables.
+  :::
+- **type**: A string with constant value `programmed`.
+
+::: tip Hint
+To have a high evaluation performance, we recommend writing the programmed evaluator in **Python**.
+
+This is the case because the programmed evaluator in **Python** is executed in the same proces as TESTed.
+This difference from the evaluators in the other programming languages.
+For these an evaluation program must be generated.
+Also are these programs are executed in a different process, which has an expensive overhead.
+:::
+
+```json
+"ProgrammedEvaluator": {
+  "title": "ProgrammedEvaluator",
+  "type": "object",
+  "properties": {
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "function": {
+      "$ref": "#/definitions/EvaluationFunction"
+    },
+    "arguments": {
+      "title": "Arguments",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/NumberType"
+          },
+          {
+            "$ref": "#/definitions/StringType"
+          },
+          {
+            "$ref": "#/definitions/BooleanType"
+          },
+          {
+            "$ref": "#/definitions/SequenceType"
+          },
+          {
+            "$ref": "#/definitions/ObjectType"
+          },
+          {
+            "$ref": "#/definitions/NothingType"
+          }
+        ]
+      }
+    },
+    "type": {
+      "title": "Type",
+      "const": "programmed",
+      "type": "string"
+    }
+  },
+  "required": [
+    "language",
+    "function"
+  ]
+},
+```
+
+### SpecificEvaluator
+The *SpecificEvaluator*-object is the object that must be used for a programming language specific evaluation.
+
+The *SpecificEvaluator*-object has 2 attributes: `evaluators` and `type`.
+- **evaluators**: This is an object with the programming languages, wherefore an evaluator is available, as keys.
+  The values in this object are of the type [EvaluationFunction](#evaluationfunction),
+  which contains information about the evaluation function.
+  ::: warning Remark
+  The programming language of a specific evaluator is the same is that of the submission.
+  :::
+  ::: danger Remark
+  When there is no specific evaluator for a programming language, the exercise could not be solved in that language.
+  :::
+- **type**: A string with constant value `specific`.
+
+::: warning Remark
+The specific evaluator is executed in the same process (not the TESTed process) as the execution of the submission code.
+:::
+
+```json
+"SpecificEvaluator": {
+  "title": "SpecificEvaluator",
+  "type": "object",
+  "properties": {
+    "evaluators": {
+      "title": "Evaluators",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/EvaluationFunction"
+      }
+    },
+    "type": {
+      "title": "Type",
+      "const": "specific",
+      "type": "string"
+    }
+  },
+  "required": [
+    "evaluators"
+  ]
+},
+```
+
+### EvaluationFunction
+The *EvaluationFunction*-object contains information about the function call of the specific/programmed evaluator.
+
+The *EvaluationFunction*-object has 2 attributes: `file` and `name`.
+- **file**: A relative path to the source code in the `evaluation` folder of the exercise,
+  which contains the evaluation function.
+- **name**: The name of the evaluation function that must be called.
+  The default function name is `evaluate`.
+  ::: danger Important
+  For a specific evaluator, this function expects only one argument `actual` which contains the return value.
+  :::
+  ::: danger Important
+  For a programmed evaluator, this function has three arguments: `expected`, `actual` and `arguments`.
+  - `expected` contains the expected return value of the testplan.
+  - `actual` contains the actual return value.
+  - `arguments` contains a list of additional arguments for the evaluation function.
+  :::
+  ::: danger Important
+  Both the function for the specific evaluator, as the function for the programmed evaluator must return an object of
+  the type [EvaluationResult](https://github.com/dodona-edu/universal-judge/blob/4216ddd983add3bc05c61d47c09233093bff8808/tested/evaluators/__init__.py#L43).
+
+  This object is implemented foreach supported programming language.
+  :::
+
+```json
+"EvaluationFunction": {
+  "title": "EvaluationFunction",
+  "type": "object",
+  "properties": {
+    "file": {
+      "title": "File",
+      "type": "string",
+      "format": "path"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "file"
+  ]
+},
+```
+
+## Statements and expressions
