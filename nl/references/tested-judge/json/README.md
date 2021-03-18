@@ -122,10 +122,10 @@ De run heeft twee attributen `run` en `contexts`.
 ```
 
 ## De Run
-De *Run* is het testgeval die het geschreven programma zelf uitvoert.
+Het *Run*-object is het testgeval die het geschreven programma zelf uitvoert.
 Deze wordt weergegeven als een aparte context op Dodona.
 
-De *Run* heeft 4 attributen: `input`, `output`, `description` en `link_files`.
+Het *Run*-object heeft 4 attributen: `input`, `output`, `description` en `link_files`.
 - **input**: De [invoergegevens](#runinput) voor het programma.
 - **output**: De [verwachte uitvoer](#runoutput) van het programma en evaluators.
 - **description**: De beschrijving voor de weergave op Dodona,
@@ -169,9 +169,9 @@ De *Run* heeft 4 attributen: `input`, `output`, `description` en `link_files`.
 ```
 
 ### RunInput
-De *RunInput* bevat alle informatie voor het opstarten van de programmatest.
+Het *RunInput*-object bevat alle informatie voor het opstarten van de programmatest.
 
-De *RunInput* heeft 3 attributen: `stdin`, `arguments` en `main_call`.
+Het *RunInput*-object heeft 3 attributen: `stdin`, `arguments` en `main_call`.
 - **stdin**: De gegeven invoer op standaardinvoer.
   Dit kan ofwel het lege kanaal zijn ([EmptyChannel](#emptychannel)).
   Ofwel [TextData](#textdata) welke een bestandslocatie of string verwacht.
@@ -211,9 +211,9 @@ De *RunInput* heeft 3 attributen: `stdin`, `arguments` en `main_call`.
 ```
 
 ### RunOutput
-De *RunOutput* bevat alle informatie die nodig is voor het evalueren van de *programma* uitvoer.
+Het *RunOutput*-object bevat alle informatie die nodig is voor het evalueren van Het *programma*-object uitvoer.
 
-De *RunOutput* heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `exit_code`.
+Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `exit_code`.
 - **stdout** en **stderr**: Het uitvoerkanaal voor standaardfout en -error.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
@@ -433,9 +433,9 @@ Een testcase heeft 3 attributen: `input`, `description` en `output`.
 ```
 
 ### Output
-De *Output* bevat alle informatie die nodig is voor het evalueren van het testgeval.
+Het *Output*-object bevat alle informatie die nodig is voor het evalueren van het testgeval.
 
-De *Output* heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `value`.
+Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `value`.
 - **stdout** en **stderr**: Het uitvoerkanaal voor standaardfout en -error.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
@@ -548,14 +548,14 @@ De *Output* heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`, `value`
 ```
 
 ## FileUrl
-*FileUrl* is een object voor het linken van bestand in de feedback mogelijk te maken.
+Het *FileUrl*-object wordt gebruikt om het linken van bestand in de feedback mogelijk te maken.
 De inhoud van dit object is gebaseerd op de invoer de verwacht wordt voor de *Python Tutor*.
 ::: warning Opmerking
 Hoewel dit object overeenkomt met de invoer voor de *Python Tutor*.
 Is TESTed momenteel beperkt tot het openen van  gelinkte bestanden in een nieuw browsertabblad.
 :::
 
-*FileUrl* heeft 4 attributen: `content`, `name`, `location` en `storage`.
+Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `storage`.
 - **content**: De inhoud van het bestand.
   Voorlopig beperkt tot een url (meestal een relative url naar een bestand in de `description` map van de oefening).
 - **name**: De naam van het bestand die gelinkt moet worden.
@@ -594,9 +594,9 @@ Is TESTed momenteel beperkt tot het openen van  gelinkte bestanden in een nieuw 
 ```
 
 ## TextData
-*TextData* is het object die gebruikt wordt om tekst of tekstbestanden als invoer te gebruiken.
+Het *TextData*-object, is het object die gebruikt wordt om tekst of tekstbestanden als invoer te gebruiken.
 
-*TextData* heeft 2 attributen: `data` en `type`.
+Het *TextData*-object heeft 2 attributen: `data` en `type`.
 - **data**: Wanneer het type `text` is, is dit de tekst zelf.
   Anders is dit een pad naar een bestand in de `workdir` van de judge.
 - **type**: Het type van de invoer: de tekst zelf (`text`) of een tekstbestand (`file`).
@@ -693,7 +693,7 @@ De enige aanvaarde waarde is `value`.
 ## Kanalen
 
 ### EmptyChannel
-*EmptyChannel* stelt het lege invoer-/uitvoerkanaal voor.
+Het *EmptyChannel*-object stelt het lege invoer-/uitvoerkanaal voor.
 Dit is de constante string `none`.
 
 ```json
@@ -708,8 +708,9 @@ Dit is de constante string `none`.
 ```
 
 ### IgnoreChannel
-*IgnoreChannel* stelt het uitvoerkanaal voor die geen uitvoer verwacht, 
+Het *IgnoreChannel*-object stelt het uitvoerkanaal voor die geen uitvoer verwacht, 
 maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
+Dit is de constante string `ignore`.
 
 ```json
 "IgnoredChannel": {
@@ -723,10 +724,10 @@ maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 ```
 
 ### ExceptionOutputChannel
-De *ExceptionOutputChannel* is het uitvoerkanaal voor verwachte opgegooide fouten.
+Het *ExceptionOutputChannel*-object is het uitvoerkanaal voor verwachte opgegooide fouten.
 Deze verwacht de boodschap van de opgegooide fout en de gebruikte evaluator.
 
-De *ExceptionOutputChannel* heeft 2 attributen: `exception` en `evaluator`.
+Het *ExceptionOutputChannel*-object heeft 2 attributen: `exception` en `evaluator`.
 - **exception**: De verwachte foutboodschap in een [ExceptionValue](#exceptionvalue) object.
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van de fout.
   Er kunnen twee evaluators gebruikt worden:
@@ -764,9 +765,9 @@ De *ExceptionOutputChannel* heeft 2 attributen: `exception` en `evaluator`.
 ```
 
 #### ExceptionValue
-De *ExceptionValue* bevat het bericht die verwacht wordt in een opgegooide fout.
+Het *ExceptionValue*-object bevat het bericht die verwacht wordt in een opgegooide fout.
 
-De *ExceptionValue* heeft 2 attributen: `message` en `stacktrace`.
+Het *ExceptionValue*-object heeft 2 attributen: `message` en `stacktrace`.
 - **message**: Het tekstbericht van de opgegooide fout.
 - **stacktrace**: De stacktrace van de fout.
   ::: danger Opmerking
@@ -796,9 +797,9 @@ De *ExceptionValue* heeft 2 attributen: `message` en `stacktrace`.
 ```
 
 ### ExitCodeOutputChannel
-De *ExitCodeOutputChannel* is het uitvoerkanaal voor de stopcode van een uitgevoerd programma.
+Het *ExitCodeOutputChannel*-object is het uitvoerkanaal voor de stopcode van een uitgevoerd programma.
 
-De *ExitCodeOutputChannel* heeft 1 attribuut: `value`.
+Het *ExitCodeOutputChannel*-object heeft 1 attribuut: `value`.
 - **value**: Dit is het geheel getal die de foutcode voorstelt.
   Standaard is dit de waarde `0`.
   ::: warning Opmerking
@@ -819,7 +820,7 @@ De *ExitCodeOutputChannel* heeft 1 attribuut: `value`.
 ```
 
 ### FileOutputChannel
-De *FileOutputChannel* is het uitvoerkanaal voor een bestand dat verwacht werd door de student te worden gecreëerd.
+Het *FileOutputChannel*-object is het uitvoerkanaal voor een bestand dat verwacht werd door de student te worden gecreëerd.
 ::: warning Opmerking
 TESTed kan momenteel slechts één bestand evalueren per testgeval.
 :::
@@ -827,7 +828,7 @@ TESTed kan momenteel slechts één bestand evalueren per testgeval.
 TESTed ondersteund momenteel enkel tekstbestanden.
 :::
 
-De *FileOutputChannel* heeft 3 attributen: `expected_path`, `actual_path` en `evaluator`.
+Het *FileOutputChannel*-object heeft 3 attributen: `expected_path`, `actual_path` en `evaluator`.
 - **expected_path**: Relatief pad naar het bestand in de `workdir`, waarin de verwachte uitvoer bevat is.
 - **actual_path**: Relatief pad naar het bestand in de `workdir`, waarin de gegenereerde uitvoer bevat is.
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde bestand.
@@ -869,9 +870,9 @@ De *FileOutputChannel* heeft 3 attributen: `expected_path`, `actual_path` en `ev
 ```
 
 ### TextOutputChannel
-De *TextOutputChannel* is een tekstueel uitvoerkanaal, zoals standaarduitvoer.
+Het *TextOutputChannel*-object is een tekstueel uitvoerkanaal, zoals standaarduitvoer.
 
-De *TextOutputChannel* heeft 3 attributen: `data`, `type` en `evaluator`.
+Het *TextOutputChannel*-object heeft 3 attributen: `data`, `type` en `evaluator`.
 - **data**: De verwachte uitvoer zelf (type: `text`)
   of een relatief pad naar het bestand, in de `workdir` map, die de verwachte uitvoer bevat (type: `file`).
 - **type**: Het type van de uitvoer: de tekst zelf (`text`) of een tekstbestand (`file`).
@@ -917,9 +918,9 @@ De *TextOutputChannel* heeft 3 attributen: `data`, `type` en `evaluator`.
 ```
 
 ### ValueOutputChannel
-De *ValueOutputChannel* is het uitvoerkanaal voor returnwaarden.
+Het *ValueOutputChannel*-object is het uitvoerkanaal voor returnwaarden.
 
-De *ValueOutputChannel* heeft 2 attributen: `value` en `evaluator`.
+Het *ValueOutputChannel*-object heeft 2 attributen: `value` en `evaluator`.
 - **value**: De verwachte returnwaarde.
   Zie [Statements en expressies](#statements-en-expressies) voor de mogelijke returnwaarden.
   ::: danger Opmerking
@@ -992,13 +993,13 @@ De *ValueOutputChannel* heeft 2 attributen: `value` en `evaluator`.
 ## Evaluators
 
 ### GenericExceptionEvaluator
-De *GenericExceptionEvaluator* bevat alle informatie die nodig is om fouten te evalueren met de interne evaluator.
+Het *GenericExceptionEvaluator*-object bevat alle informatie die nodig is om fouten te evalueren met de interne evaluator.
 :::warning Opmerking
 Deze evaluator kan enkel foutboodschappen evalueren en niet de fouttypes.
 Dit komt door dat de fouttypes programmeertaal afhankelijk zijn.
 :::
 
-De *GenericExceptionEvaluator* heeft 3 attributen: `type`, `options` en `name`.
+Het *GenericExceptionEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatie opties die gebruikt kunnen worden door de interne evaluator.
   ::: warning Opmerking
@@ -1032,9 +1033,9 @@ De *GenericExceptionEvaluator* heeft 3 attributen: `type`, `options` en `name`.
 ```
 
 ### GenericValueEvaluator
-De *GenericValueEvaluator* bevat alle informatie die nodig is om returnwaarden te evalueren met de interne evaluator.
+Het *GenericValueEvaluator*-object bevat alle informatie die nodig is om returnwaarden te evalueren met de interne evaluator.
 
-De *GenericValueEvaluator* heeft 3 attributen: `type`, `options` en `name`.
+Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatie opties die gebruikt kunnen worden door de interne evaluator.
   ::: warning Opmerking
@@ -1068,9 +1069,9 @@ De *GenericValueEvaluator* heeft 3 attributen: `type`, `options` en `name`.
 ```
 
 ### GenericTextEvaluator
-De *GenericTextEvaluator* bevat alle informatie die nodig is om tekstuele data te evalueren met de interne evaluator.
+Het *GenericTextEvaluator*-object bevat alle informatie die nodig is om tekstuele data te evalueren met de interne evaluator.
 
-De *GenericTextEvaluator* heeft 3 attributen: `type`, `options` en `name`.
+Het *GenericTextEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatie opties die gebruikt kunnen worden door de interne evaluator,
   zie [DSL Configuratie opties voor standaarduitvoer en standaarderror](../dsl/#configuratieopties).
@@ -1103,9 +1104,9 @@ De *GenericTextEvaluator* heeft 3 attributen: `type`, `options` en `name`.
 ```
 
 ### ProgrammedEvaluator
-De *ProgrammedEvaluator* is het object die gebruikt moet worden wanneer je een geprogrammeerde evaluatie gebruikt.
+Het *ProgrammedEvaluator*-object is het object die gebruikt moet worden wanneer je een geprogrammeerde evaluatie gebruikt.
 
-De *ProgrammedEvaluator* heeft 2 attributen: `language`, `function`, `arguments` en `type`.
+Het *ProgrammedEvaluator*-object heeft 2 attributen: `language`, `function`, `arguments` en `type`.
 - **language**: Een string de programmeertaal van de evaluator specificeert.
   ::: warning Opmerking
   De programmeertaal van de geprogrammeerde evaluator is onafhankelijk van de programmeertaal van de ingediende
@@ -1180,10 +1181,10 @@ Daarnaast wordt deze ook uitgevoerd wordt in een ander process, welke een aanzie
 ```
 
 ### SpecificEvaluator
-De *SpecificEvaluator* is het object die gebruikt moet worden wanneer je een programmeertaal specifieke evaluatie
+Het *SpecificEvaluator*-object is het object die gebruikt moet worden wanneer je een programmeertaal specifieke evaluatie
 gebruikt.
 
-De *SpecificEvaluator* heeft 2 attributen: `evaluators` en `type`.
+Het *SpecificEvaluator*-object heeft 2 attributen: `evaluators` en `type`.
 - **evaluators**: Dit is een object met de programmeertalen waarvoor een evaluator beschikbaar is als sleutels.
   De waarden van dit object zijn van het type [EvaluationFunction](#evaluationfunction),
   welke informatie bevat over de evaluatiefunctie.
@@ -1226,9 +1227,9 @@ die uitgevoerd wordt voor het uitvoeren van de studentencode.
 ```
 
 ### EvaluationFunction
-De *EvaluationFunction* bevat de informatie voor de functieoproep voor de specifieke/geprogrammeerde evaluator.
+Het *EvaluationFunction*-object bevat de informatie voor de functieoproep voor de specifieke/geprogrammeerde evaluator.
 
-De *EvaluationFunction* heeft 2 attributen: `file` en `name`.
+Het *EvaluationFunction*-object heeft 2 attributen: `file` en `name`.
 - **file**: Het relatief pad naar het broncode bestand in de `evaluation` map van de oefening,
   waarin de evaluator functie zich bevindt.
 - **name**: De naam van de evaluatiefunctie die opgeroepen moet worden.
@@ -1571,19 +1572,467 @@ Een assignment heeft drie attributen `variable`, `expression` en `type`.
 ```
 
 ### Expressies
+TESTed ondersteund momenteel drie types van expressies: [Identifier](#identifier), [FunctionCall](#functioncall)
+en [waarden](#waarden).
 
 #### Identifier
+Een identifier is een string die een variabele voorstelt.
 
 #### FunctionCall
+Het *FunctionCall*-object stelt een functieoproep voor.
 
-#### NumberType
+Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `arguments`.
+- **type**: Het type van de functie: een gewone functieoproep, een constructor of een eigenschap,
+  zie [FunctionType](#functiontype).
+- **name**: De naam van de functie.
+- **namespace**: De namespace van de functie.
+  Wanneer deze niet opgegeven wordt is het een globale functie.
+  Wanneer deze opgegeven is zal dit meestal een object variabele zijn, maar dit is niet altijd het geval.
 
-#### StringType
+```json
+"FunctionCall": {
+  "title": "FunctionCall",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/FunctionType"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "namespace": {
+      "title": "Namespace",
+      "type": "string"
+    },
+    "arguments": {
+      "title": "Arguments",
+      "default": [],
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/FunctionCall"
+              },
+              {
+                "$ref": "#/definitions/NumberType"
+              },
+              {
+                "$ref": "#/definitions/StringType"
+              },
+              {
+                "$ref": "#/definitions/BooleanType"
+              },
+              {
+                "$ref": "#/definitions/SequenceType"
+              },
+              {
+                "$ref": "#/definitions/ObjectType"
+              },
+              {
+                "$ref": "#/definitions/NothingType"
+              }
+            ]
+          },
+          {
+            "$ref": "#/definitions/NamedArgument"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "name"
+  ]
+},
+```
 
-#### BooleanType
+##### FunctionType
+TESTed heeft 3 functietypes: `function`, `constructor` en `property`.
+- **function**: Een normale functieoproep
+- **constructor**: Een object constructor oproep
+- **property**: Een objecteigenschap
 
-#### SequenceType
+```json
+"FunctionType": {
+  "title": "FunctionType",
+  "description": "An enumeration.",
+  "enum": [
+    "function",
+    "constructor",
+    "property"
+  ],
+  "type": "string"
+},
+```
 
-#### ObjectType
+##### NamedArgument
+Het *NamedArgument*-object wordt gebruikt voor genaamde argumenten voor een functieoproep.
 
-#### NothingType
+Het *NamedArgument*-object heeft 2 attributen: `name` en `value`.
+- **name**: De naam van het argument.
+- **value**: De waarde van het argument welke een [expressie](#expressies) is.
+
+```json
+"NamedArgument": {
+  "title": "NamedArgument",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "value": {
+      "title": "Value",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "value"
+  ]
+},
+```
+
+#### Waarden
+TESTed ondersteund momenteel 6 mogelijke waarden: [getallen](#numbertype), [tekst](#stringtype),
+[booleaanse waarden](#booleantype), [sequenties](#sequencetype), [afbeeldingen](#objecttype) en ['niets'](#nothingtype).
+
+##### NumberType
+Het *NumberType*-object stelt numerieke data voor.
+
+Het *NumberType*-object heeft 2 attributen: `type` en `data`.
+- **type**: Het type van de numerieke data,
+  zie [BasicNumericTypes](#basicnumerictypes) en [AdvancedNumericTypes](#advancednumerictypes).
+- **data**: De numerieke data.
+
+```json
+"NumberType": {
+  "title": "NumberType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicNumericTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedNumericTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### StringType
+Het *StringType*-object stelt tekstuele data voor.
+
+Het *StringType*-object heeft 2 attributen: `type` en `data`.
+- **type**: Het type van de tekstuele data,
+  zie [BasicStringTypes](#basicstringtypes) en [AdvancedStringTypes](#advancedstringtypes).
+- **data**: De tekstuele data als string.
+
+```json
+"StringType": {
+  "title": "StringType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicStringTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedStringTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### BooleanType
+Het *BooleanType*-object stelt een booleaanse waarde voor.
+
+Het *BooleanType*-object heeft 2 attributen: `type` en `data`.
+- **type**: Het `boolean` datatype, zie [BasicBooleanTypes](#basicbooleantypes).
+- **data**: Een booleaanse waarde `true` of `false`.
+
+```json
+"BooleanType": {
+  "title": "BooleanType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/BasicBooleanTypes"
+    },
+    "data": {
+      "title": "Data",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### SequenceType
+Het *SequenceType*-object stelt de collectie van waarden voor.
+
+Het *SequenceType*-object heeft 2 attributen: `type` en `data`.
+- **type**: Het type van de sequentie,
+  zie [BasicSequencetypes](#basicsequencetypes) en [AdvancedSequenceTypes](#advancedsequencetypes).
+- **data**: De lijst van [expressie](#expressies)-elementen.
+
+```json
+"SequenceType": {
+  "title": "SequenceType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicSequenceTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedSequenceTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "$ref": "#/definitions/FunctionCall"
+          },
+          {
+            "$ref": "#/definitions/NumberType"
+          },
+          {
+            "$ref": "#/definitions/StringType"
+          },
+          {
+            "$ref": "#/definitions/BooleanType"
+          },
+          {
+            "$ref": "#/definitions/SequenceType"
+          },
+          {
+            "$ref": "#/definitions/ObjectType"
+          },
+          {
+            "$ref": "#/definitions/NothingType"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### ObjectType
+Het *ObjectType*-object stelt een collectie van sleutel-waarde paren voor.
+
+Het *ObjectType*-object heeft 2 attributen: `type` en `data`.
+- **type**: Het object wat altijd de waarde `map` is, zie [BasicObjectTypes](#basicobjecttypes).
+- **data**: De lijst van de [sleutel-waarde paren](#objectkeyvaluepair).
+
+```json
+"ObjectType": {
+  "title": "ObjectType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/BasicObjectTypes"
+    },
+    "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ObjectKeyValuePair"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+###### ObjectKeyValuePair
+Het *ObjectKeyValuePair*-object stelt een sleutel-waarde paar voor.
+
+Het *ObjectKeyValuePair*-object heet twee attributen: `key` en `value`.
+- **key**: De sleutel, wat een [expressie](#expressies) is.
+- **value**: De waarde, wat opnieuw een [expressie](#expressies) is.
+
+```json
+"ObjectKeyValuePair": {
+  "title": "ObjectKeyValuePair",
+  "type": "object",
+  "properties": {
+    "key": {
+      "title": "Key",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    },
+    "value": {
+      "title": "Value",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+},
+```
+
+##### NothingType
+Het *NothingType*-object stelt de 'niets'-waarde voor.
+
+Het *NothingType*-object heeft 2 attributen: `type` en `data`.
+- **type**: Het `nothing` datatype, zie [BasicNothingTypes](#basicnothingtypes).
+- **data**: De constante waarde `null`.
+
+```json
+"NothingType": {
+  "title": "NothingType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BasicNothingTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "const": null
+    }
+  }
+},
+```
