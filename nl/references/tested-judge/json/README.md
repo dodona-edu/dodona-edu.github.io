@@ -1265,3 +1265,325 @@ De *EvaluationFunction* heeft 2 attributen: `file` en `name`.
 ```
 
 ## Statements en expressies
+In deze paragraaf zullen de mogelijke statements en expressies in TESTed.
+
+### Datatypes TESTed
+TESTed heeft verschillende datatypes die gebruikt kunnen worden.
+
+We kunnen 3 soorten datatypes onderscheiden: [basis datatypes](#basis-datatypes),
+[geavanceerde datatypes](#geavanceerde-datatypes) en [het variabele type](#variabletype).
+
+#### Basis datatypes
+De basis datatypes zijn een abstract datatype voor een concept, zoals gehele getallen en niet 8-bit gehele getallen.
+Deze datatypes zullen gegenereerd worden als het standaard datatype in die programmeertaal voor een concept.
+
+##### BasicNumericTypes
+Er bestaan twee basis numerieke datatypes in TESTed: `integer` en `rational`.
+- **integer**: gehele getallen
+- **rational**: rationale getallen
+
+```json
+"BasicNumericTypes": {
+  "title": "BasicNumericTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "integer",
+    "rational"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicStringTypes
+Er bestaan twee basis string datatypes in TESTed: `text` en `any`.
+- **text**: tekst
+- **any**: Het datatype die elke waarde voorstelt.
+  ::: warning Opmerking
+  Dit datatype moet normaal niet gebruikt worden in het testplan. 
+  :::
+
+```json
+"BasicStringTypes": {
+  "title": "BasicStringTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "text",
+    "any"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicBooleanTypes
+Er bestaat één boolean datatype in TESTed: `boolean`.
+```json
+"BasicBooleanTypes": {
+  "title": "BasicBooleanTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "boolean"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicObjectTypes
+Er bestaat één object datatype in TESTed: `map`.
+Dit datatype stelt een collectie van sleutel-waarde paren voor.
+
+```json
+"BasicObjectTypes": {
+  "title": "BasicObjectTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "map"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicNothingTypes
+Er bestaat één 'niets' datatype in TESTed: `nothing`.
+Dit datatype stelt de waarde 'niets' voor.
+
+```json
+"BasicNothingTypes": {
+  "title": "BasicNothingTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "nothing"
+  ],
+  "type": "string"
+},
+```
+
+##### BasicSequenceTypes
+Er bestaan twee basis sequentie datatypes in TESTed: `sequence` en `set`.
+- **sequence**: Een geordende sequentie van gegevens
+- **set**: Een ongeordende collectie van unieke invariabele gegevens.
+
+```json
+"BasicSequenceTypes": {
+  "title": "BasicSequenceTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "sequence",
+    "set"
+  ],
+  "type": "string"
+},
+```
+
+#### Geavanceerde datatypes
+De geavanceerde datatypes zijn een concrete datatype voor een concept,
+zoals 8-bit gehele getallen en niet gehele getallen.
+Deze datatypes zijn een specifiek datatype in de programmeertaal.
+
+##### AdvancedNumericTypes
+Er bestaan dertien geavanceerde numerieke datatypes in TESTed: `int8`, `uint8`, `int16`, `uint16`, `int32`, `uint32`,
+`int64`, `uint64`, `bigint`, `single_precision`, `double_precision`, `double_extended` en `fixed_precision`.
+- **int8**: 8-bit gehele getallen
+- **uint8**: 8-bit natuurlijke getallen
+- **int16**: 16-bit gehele getallen
+- **uint16**: 16-bit natuurlijke getallen
+- **int32**: 32-bit gehele getallen
+- **uint32**: 32-bit natuurlijke getallen
+- **int64**: 64-bit gehele getallen
+- **uint64**: 64-bit natuurlijke getallen
+- **bigint**: Onbeperkte grote gehele getallen
+- **single_precision**: 32-bit vlottende komma getallen
+- **double_precision**: 64-bit vlottende komma getallen
+- **double_extended**: Onbeperkt grote vlottende komma getallen
+- **fixed_precision**: Vast komma getallen
+```json
+"AdvancedNumericTypes": {
+  "title": "AdvancedNumericTypes",
+  "description": "The advanced numeric types. Programming configs should be implemented using\nthe C/C++ rules: the size of the types is a minimum. For example, Python's ints\nare arbitrary precision, which means Python supports all integer types.\nOn the other hand, C only supports up to 64 bits.",
+  "enum": [
+    "int8",
+    "uint8",
+    "int16",
+    "uint16",
+    "int32",
+    "uint32",
+    "int64",
+    "uint64",
+    "bigint",
+    "single_precision",
+    "double_precision",
+    "double_extended",
+    "fixed_precision"
+  ],
+  "type": "string"
+},
+```
+
+##### AdvancedSequenceTypes
+Er bestaan drie geavanceerde sequentie datatypes in TESTed: `array`, `list` en `tuple`.
+- **array**: Een dynamische sequentie van vaste lengte.
+- **list**: Een dynamische sequentie van dynamische lengte.
+- **tuple**: Een invariabele sequentie.
+
+```json
+"AdvancedSequenceTypes": {
+  "title": "AdvancedSequenceTypes",
+  "description": "Advanced sequence types. The names of these types are kept as generic as\npossible, to accommodate as many types as possible.",
+  "enum": [
+    "array",
+    "list",
+    "tuple"
+  ],
+  "type": "string"
+},
+```
+
+##### AdvancedStringTypes
+Er bestaat één geavanceerd string datatype in TESTed.
+Dit is `char` welke een karakter voor stelt.
+```json
+"AdvancedStringTypes": {
+  "title": "AdvancedStringTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "char"
+  ],
+  "type": "string"
+},
+```
+
+#### VariableType
+Het variabele type moet gebruikt worden wanneer de waarde die men wil voorstellen niet voorgesteld kan worden door een
+datatype van TESTed.
+
+Dit object heeft twee attributen: `data` en `type`.
+- **data**: De naam van het datatype.
+- **type**: De string met constante waarde `custom`.
+
+```json
+"VariableType": {
+  "title": "VariableType",
+  "type": "object",
+  "properties": {
+    "data": {
+      "title": "Data",
+      "type": "string"
+    },
+    "type": {
+      "title": "Type",
+      "const": "custom",
+      "type": "string"
+    }
+  },
+  "required": [
+    "data"
+  ]
+},
+```
+
+### Assignment
+TESTed ondersteund momenteel slechts één statement, welke een assignment is.
+
+Een assignment heeft drie attributen `variable`, `expression` en `type`.
+- **variable**: De naam van de variabele.
+- **expression**: De [expressie](#expressies) die moet worden toegekend aan de variabele.
+- **type**: Het [datatype](#datatypes-tested) van de variabele.
+
+```json
+"Assignment": {
+  "title": "Assignment",
+  "type": "object",
+  "properties": {
+    "variable": {
+      "title": "Variable",
+      "type": "string"
+    },
+    "expression": {
+      "title": "Expression",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    },
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicNumericTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicStringTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicBooleanTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicObjectTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicNothingTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicSequenceTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedNumericTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedSequenceTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedStringTypes"
+        },
+        {
+          "$ref": "#/definitions/VariableType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "variable",
+    "expression",
+    "type"
+  ]
+},
+```
+
+### Expressies
+
+#### Identifier
+
+#### FunctionCall
+
+#### NumberType
+
+#### StringType
+
+#### BooleanType
+
+#### SequenceType
+
+#### ObjectType
+
+#### NothingType
