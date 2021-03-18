@@ -539,3 +539,81 @@ The *Output*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`, `
 },
 ```
 
+## FileUrl
+The *FileUrl*-object is used to enable file linking in the feedback.
+The content of this object is based in the input expected by the *Python Tutor*.
+::: warning Opmerking
+However this object looks like the input for the *Python Tutor*,
+is TESTed only be able to open the linked files in a new browser tab.
+:::
+
+The *FileUrl*-object has 4 attributes: `content`, `name`, `location` and `storage`.
+- **content**: The content of the file.
+  At this moment limited to an url (mostly a relative url to a file in the `description` folder of the exercise).
+- **name**: The name of the file that must be linked.
+- **location**: The location type of the content.
+  At this moment is only `href` supported, which is also the default value.
+- **storage**: The storage method of the content.
+  At this moment is only `disk` supported, which is also the default value.
+  
+```json
+"FileUrl": {
+  "title": "FileUrl",
+  "type": "object",
+  "properties": {
+    "content": {
+      "title": "Content",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "location": {
+      "title": "Location",
+      "type": "string"
+    },
+    "storage": {
+      "title": "Storage",
+      "type": "string"
+    }
+  },
+  "required": [
+    "content",
+    "name"
+  ]
+},
+```
+
+## TextData
+The *TextData*-object is the object used for text or text-files as input.
+
+The *TextData*-object has 2 attributes: `data` and `type`.
+- **data**: When the type is `text`, this is the text itself.
+  Otherwise, this is a path to a file located in the `workdir` folder of the judge.
+- **type**: This is type of input: the text itself (`text`) or a text-file (`file`).
+  See [TextChannelType](#textchanneltype).
+  
+```json
+"TextData": {
+  "title": "TextData",
+  "type": "object",
+  "properties": {
+    "data": {
+      "title": "Data",
+      "type": "string"
+    },
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/TextChannelType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+},
+```
+

@@ -552,14 +552,14 @@ Het *FileUrl*-object wordt gebruikt om het linken van bestand in de feedback mog
 De inhoud van dit object is gebaseerd op de invoer de verwacht wordt voor de *Python Tutor*.
 ::: warning Opmerking
 Hoewel dit object overeenkomt met de invoer voor de *Python Tutor*.
-Is TESTed momenteel beperkt tot het openen van  gelinkte bestanden in een nieuw browsertabblad.
+Is TESTed momenteel beperkt tot het openen van gelinkte bestanden in een nieuw browsertabblad.
 :::
 
 Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `storage`.
 - **content**: De inhoud van het bestand.
   Voorlopig beperkt tot een url (meestal een relative url naar een bestand in de `description` map van de oefening).
 - **name**: De naam van het bestand die gelinkt moet worden.
-- **location**: De locatie van de inhoud.
+- **location**: Het locatietype van de inhoud.
   Voorlopig is enkel `href` toegestaan, wat ook de standaardwaarde is.
 - **storage**: De opslag methode van de inhoud.
   Voorlopig is enkel `disk` toegestaan, wat ook de standaardwaarde is.
@@ -594,7 +594,7 @@ Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `stora
 ```
 
 ## TextData
-Het *TextData*-object, is het object die gebruikt wordt om tekst of tekstbestanden als invoer te gebruiken.
+Het *TextData*-object is het object die gebruikt wordt om tekst of tekstbestanden als invoer te gebruiken.
 
 Het *TextData*-object heeft 2 attributen: `data` en `type`.
 - **data**: Wanneer het type `text` is, is dit de tekst zelf.
