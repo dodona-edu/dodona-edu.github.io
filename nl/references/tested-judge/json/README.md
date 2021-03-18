@@ -448,7 +448,7 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
   - [IgnoreChannel](#ignorechannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
     Dit is de standaard optie.
-  - [FileOutputChannel](#fileoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
+  - [FileOutputChannel](#fileoutputchannel): Er wordt een bestand verwacht als uitvoer.
 
   ::: warning Opmerking
   Het is momenteel niet mogelijk op in TESTed meer dan één bestand te verwachten per test.
