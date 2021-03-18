@@ -218,12 +218,12 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
     Dit is de standaard optie.
-  - [IgnoreChannel](#ignorechannel): Er wordt geen uitvoer verwacht opt dit kanaal,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
   - [TextOutputChannel](#textoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
 - **file**: Het uitvoerkanaal voor een bestand.
   De mogelijke uitvoerkanalen zijn:
-  - [IgnoreChannel](#ignorechannel): Er wordt geen uitvoer verwacht opt dit kanaal,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
     Dit is de standaard optie.
   - [FileOutputChannel](#fileoutputchannel): Een bestand is verwacht als uitvoer.
@@ -238,7 +238,7 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen fout verwacht tijdens de uitvoer.
     Dit is de standaard optie.
-  - [IgnoreChannel](#ignorechannel): Er wordt geen fout verwacht tijdens de uitvoer,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen fout verwacht tijdens de uitvoer,
     maar een opgeworpen fout zal genegeerd worden.
   - [ExceptionOutputChannel](#exceptionoutputchannel): Er wordt een fout verwacht op dit kanaal.
 - **exit_code**: Het uitvoerkanaal voor de stopcode van het programma.
@@ -440,12 +440,12 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
     Dit is de standaard optie.
-  - [IgnoreChannel](#ignorechannel): Er wordt geen uitvoer verwacht opt dit kanaal,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
   - [TextOutputChannel](#textoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
 - **file**: Het uitvoerkanaal voor een bestand.
   De mogelijke uitvoerkanalen zijn:
-  - [IgnoreChannel](#ignorechannel): Er wordt geen uitvoer verwacht opt dit kanaal,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
     Dit is de standaard optie.
   - [FileOutputChannel](#fileoutputchannel): Er wordt een bestand verwacht als uitvoer.
@@ -460,14 +460,14 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen fout verwacht tijdens de uitvoer.
     Dit is de standaard optie.
-  - [IgnoreChannel](#ignorechannel): Er wordt geen fout verwacht tijdens de uitvoer,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen fout verwacht tijdens de uitvoer,
     maar een opgeworpen fout zal genegeerd worden.
   - [ExceptionOutputChannel](#exceptionoutputchannel): Er wordt een fout verwacht op dit kanaal.
 - **value**: Het uitvoerkanaal voor de returnwaarde van een expressie.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen returnwaarde verwacht.
     Dit is de standaard optie.
-  - [IgnoreChannel](#ignorechannel): Er wordt geen returnwaarde verwacht tijdens de uitvoer,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen returnwaarde verwacht tijdens de uitvoer,
     maar teruggegeven waarde zal genegeerd worden.
   - [ValueOutputChannel](#valueoutputchannel): Er wordt een returnwaarde verwacht op dit kanaal.
   
@@ -691,6 +691,7 @@ De enige aanvaarde waarde is `value`.
 ```
 
 ## Kanalen
+Hierbij een overzicht van alle uitvoerkanalen.
 
 ### EmptyChannel
 Het *EmptyChannel*-object stelt het lege invoer-/uitvoerkanaal voor.
@@ -707,8 +708,8 @@ Dit is de constante string `none`.
 },
 ```
 
-### IgnoreChannel
-Het *IgnoreChannel*-object stelt het uitvoerkanaal voor die geen uitvoer verwacht, 
+### IgnoredChannel
+Het *IgnoredChannel*-object stelt het uitvoerkanaal voor die geen uitvoer verwacht, 
 maar wanneer er uitvoer aanwezig is zal dit genegeerd worden.
 Dit is de constante string `ignore`.
 
@@ -736,7 +737,7 @@ Het *ExceptionOutputChannel*-object heeft 2 attributen: `exception` en `evaluato
     ::: warning Opmerking
     Alleen de foutboodschap (niet te verwarren met het fouttype) kan gecontroleerd worden in de interne evaluator.
     :::
-  - [SpecificEvaluator](#specificevaluator): Dit is een evaluator geschreven in de programmeertaal zelf.
+  - [SpecificEvaluator](#specificevaluator): Dit is een evaluator geschreven in de programmeertaal van de oplossing.
     ::: tip Tip
     Wanneer je fouttypes wilt kunnen evalueren, moet je deze evaluators gebruiken.
     :::
@@ -820,7 +821,8 @@ Het *ExitCodeOutputChannel*-object heeft 1 attribuut: `value`.
 ```
 
 ### FileOutputChannel
-Het *FileOutputChannel*-object is het uitvoerkanaal voor een bestand dat verwacht werd door de student te worden gecreëerd.
+Het *FileOutputChannel*-object is het uitvoerkanaal voor een bestand dat door de student verwacht werd gecreëerd
+te worden.
 ::: warning Opmerking
 TESTed kan momenteel slechts één bestand evalueren per testgeval.
 :::
@@ -875,7 +877,7 @@ Het *TextOutputChannel*-object is een tekstueel uitvoerkanaal, zoals standaardui
 Het *TextOutputChannel*-object heeft 3 attributen: `data`, `type` en `evaluator`.
 - **data**: De verwachte uitvoer zelf (type: `text`)
   of een relatief pad naar het bestand, in de `workdir` map, die de verwachte uitvoer bevat (type: `file`).
-- **type**: Het type van de uitvoer: de tekst zelf (`text`) of een tekstbestand (`file`).
+- **type**: Het type van de verwachte uitvoer: de tekst zelf (`text`) of een tekstbestand (`file`).
   Zie [TextChannelType](#textchanneltype).
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde tekstuele uitvoer.
   Er kunnen twee evaluators gebruikt worden:

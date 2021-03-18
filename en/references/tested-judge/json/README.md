@@ -217,11 +217,11 @@ The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`
   The possible output channels are:
   - [EmptyChannel](#emptychannel): No output is expected on this channel.
     This is the default option.
-  - [IgnoreChannel](#ignorechannel): No output is expected on this channel, but given output is ignored.
+  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
   - [TextOutputChannel](#textoutputchannel): Some output is expected on this channel.
 - **file**: The output channel for a file.
   The possible output channels are:
-  - [IgnoreChannel](#ignorechannel): No output is expected on this channel, but given output is ignored.
+  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
     This is the default option.
   - [FileOutputChannel](#fileoutputchannel): A file is expected as output.
     
@@ -235,7 +235,7 @@ The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`
   The possible output channels are:
   - [EmptyChannel](#emptychannel): No exception is expected.
     This is the default option.
-  - [IgnoreChannel](#ignorechannel): No exception is expected, but a thrown exception is ignored.
+  - [IgnoredChannel](#ignoredchannel): No exception is expected, but a thrown exception is ignored.
   - [ExceptionOutputChannel](#exceptionoutputchannel): An exception is expected to be thrown.
 - **exit_code**: The outputchannel for the exit code of the program.
   The exit code must be passed in the object [ExitCodeOutputChannel](#exitcodeoutputchannel).
@@ -436,11 +436,11 @@ The *Output*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`, `
   The possible output channels are:
   - [EmptyChannel](#emptychannel): No output is expected on this channel.
     This is the default option.
-  - [IgnoreChannel](#ignorechannel): No output is expected on this channel, but given output is ignored.
+  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
   - [TextOutputChannel](#textoutputchannel): Some output is expected on this channel.
 - **file**: The output channel for a file.
   The possible output channels are:
-  - [IgnoreChannel](#ignorechannel): No output is expected on this channel, but given output is ignored.
+  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
     This is the default option.
   - [FileOutputChannel](#fileoutputchannel): A file is expected as output.
 
@@ -454,13 +454,13 @@ The *Output*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`, `
   The possible output channels are:
   - [EmptyChannel](#emptychannel): No exception is expected.
     This is the default option.
-  - [IgnoreChannel](#ignorechannel): No exception is expected, but a thrown exception is ignored.
+  - [IgnoredChannel](#ignoredchannel): No exception is expected, but a thrown exception is ignored.
   - [ExceptionOutputChannel](#exceptionoutputchannel): An exception is expected to be thrown.
 - **value**: The output channel for the return value of an expression.
   The possible output channel are:
   - [EmptyChannel](#emptychannel): No output is expected on this channel.
     This is the default option.
-  - [IgnoreChannel](#ignorechannel): No output is expected on this channel, but given output is ignored.
+  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
   - [ValueOutputChannel](#valueoutputchannel): There is a return value expected at this channel.
 
 ```json
@@ -679,6 +679,306 @@ The only excepted value is `value`.
     "value"
   ],
   "type": "string"
+},
+```
+
+## Channels
+An overview of all output channels.
+
+### EmptyChannel
+The *EmptyChannel*-object describes the empty input/output channel.
+This is the constant string `none`.
+
+```json
+"EmptyChannel": {
+  "title": "EmptyChannel",
+  "description": "There is nothing on this output channel.",
+  "enum": [
+    "none"
+  ],
+  "type": "string"
+},
+```
+
+### IgnoredChannel
+Het *IgnoredChannel*-object is the output channel that doesn't expect output, but generated output will be ignored.
+This is the constant string `ignore`.
+
+```json
+"IgnoredChannel": {
+  "title": "IgnoredChannel",
+  "description": "A file channel is ignored by default.",
+  "enum": [
+    "ignored"
+  ],
+  "type": "string"
+},
+```
+
+### ExceptionOutputChannel
+The *ExceptionOutputChannel*-object is the output channel for expected exceptions.
+This channel expects the fault message and the used evaluator.
+
+The *ExceptionOutputChannel*-object has 2 attributes: `exception` and `evaluator`.
+- **exception**: The expected fault message in an [ExceptionValue](#exceptionvalue) object.
+- **evaluator**: The evaluator that must be used to evaluate the exception.
+  There are two evaluators that coulde be used:
+  - [GenericExceptionEvaluator](#genericexceptionevaluator): This the builtin evaluator of TESTed for exceptions.
+    This is the default evaluator.
+    ::: warning Remark
+    Only the fault message (not to be confused with the exception type) coulde be evaluated with the builtin evaluator.
+    :::
+  - [SpecificEvaluator](#specificevaluator): This is an evaluator in the programming language of the submission.
+    ::: tip Hint
+    When you want to check exception types, you need to use these evaluators.
+    :::
+
+```json
+"ExceptionOutputChannel": {
+  "title": "ExceptionOutputChannel",
+  "type": "object",
+  "properties": {
+    "exception": {
+      "$ref": "#/definitions/ExceptionValue"
+    },
+    "evaluator": {
+      "title": "Evaluator",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/GenericExceptionEvaluator"
+        },
+        {
+          "$ref": "#/definitions/SpecificEvaluator"
+        }
+      ]
+    },
+  }
+},
+```
+
+#### ExceptionValue
+The *ExceptionValue*-object contains the message that is expected from the thrown exception.
+
+The *ExceptionValue*-object has 2 attributes: `message` and `stacktrace`.
+- **message**: The text message of the thrown exception.
+- **stacktrace**: The stacktrace of the exception.
+  ::: danger Remark
+  The "expected" stacktrace shouldn't be added in the testplan.
+  
+  This attribute is used in the internal processing of TESTed.
+  :::
+
+```json
+"ExceptionValue": {
+  "title": "ExceptionValue",
+  "type": "object",
+  "properties": {
+    "message": {
+      "title": "Message",
+      "type": "string"
+    },
+    "stacktrace": {
+      "title": "Stacktrace",
+      "type": "string"
+    }
+  },
+  "required": [
+    "message"
+  ]
+},
+```
+
+### ExitCodeOutputChannel
+The *ExitCodeOutputChannel*-object is the output channel for the exit code of the executed program.
+
+The *ExitCodeOutputChannel*-object has 1 attribute: `value`.
+- **value**: This is an integer that represent the exit code.
+  The default value is `0`.
+  ::: warning Remark
+  When the expected and return exit codes are `0`, will this not be shown at Dodona.
+  :::
+
+```json
+"ExitCodeOutputChannel": {
+  "title": "ExitCodeOutputChannel",
+  "type": "object",
+  "properties": {
+    "value": {
+      "title": "Value",
+      "type": "integer"
+    },
+  }
+},
+```
+
+### FileOutputChannel
+The *FileOutputChannel*-object is the output channel for a file that must be created by the student code.
+::: warning Remark
+At this moment can TESTed only evaluate one file foreach testcase.
+:::
+::: warning Remark
+At this moment support TESTed only text files.
+:::
+
+The *FileOutputChannel*-object has 3 attributes: `expected_path`, `actual_path` and `evaluator`.
+- **expected_path**: A relative path to a file in the `workdir`, which contains the expected output.
+- **actual_path**: A relative path to a file in the `workdir`, which is expected to contains the generated output.
+- **evaluator**: The evaluator that must be used to evaluate the generated text file.
+  There are two evaluator that could be used:
+  - [GenericTextEvaluator](#generictextevaluator): This is the builtin evaluator of TESTed for text and text files.
+    This is the default evaluator.
+  - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator.
+    
+```json
+"FileOutputChannel": {
+  "title": "FileOutputChannel",
+  "type": "object",
+  "properties": {
+    "expected_path": {
+      "title": "Expected Path",
+      "type": "string"
+    },
+    "actual_path": {
+      "title": "Actual Path",
+      "type": "string"
+    },
+    "evaluator": {
+      "title": "Evaluator",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/GenericTextEvaluator"
+        },
+        {
+          "$ref": "#/definitions/ProgrammedEvaluator"
+        }
+      ]
+    }
+  },
+  "required": [
+    "expected_path",
+    "actual_path"
+  ]
+},
+```
+
+### TextOutputChannel
+The *TextOutputChannel*-object is a textual output channel, like standard output.
+
+The *TextOutputChannel*-object has 3 attributes: `data`, `type` and `evaluator`.
+- **data**: The expected output itself (type: `text`), or a relative path to a file located in the `workdir`,
+  that contains the expected output (type: `file`).
+- **type**: The type of the expected output: the text itself (`text`) or a text file (`file`).
+  See [TextChannelType](#textchanneltype).
+- **evaluator**: The evaluator that must be used to evaluate the generated output.
+  There are two evaluators that could be used:
+  - [GenericTextEvaluator](#generictextevaluator): This the builtin evaluator for text and text file.
+    This is the default evaluator.
+  - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator.
+
+```json
+"TextOutputChannel": {
+  "title": "TextOutputChannel",
+  "type": "object",
+  "properties": {
+    "data": {
+      "title": "Data",
+      "type": "string"
+    },
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/TextChannelType"
+        }
+      ]
+    },
+    "evaluator": {
+      "title": "Evaluator",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/GenericTextEvaluator"
+        },
+        {
+          "$ref": "#/definitions/ProgrammedEvaluator"
+        }
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+},
+```
+
+### ValueOutputChannel
+The *ValueOutputChannel*-object is the output channel for return values.
+
+The *ValueOutputChannel*-object has 2 attributes: `value` and `evaluator`
+- **value**: The expected return value.
+  See [Statements and expressions](#statements-and-expressions) voor the possible return values.
+  ::: danger Remark
+  The expected return value may not contain function calls and variables.
+  :::
+- **evaluator**: The evaluator that could be used the evaluate the return value.
+  There are three evaluators that could be used:
+  - [GenericValueEvaluator](#genericvalueevaluator): This the builtin evaluator of TESTed for return values.
+    This is the default evaluator.
+    ::: danger Remark
+    This evaluator only support the datatypes of TESTed.
+    :::
+  - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator,
+    that is independent of the programming language of the submission.
+    ::: danger Remark
+    This evaluator only support the datatypes of TESTed.
+    :::
+  - [SpecificEvaluator](#specificevaluator): This is a written custom evaluator,
+    that is dependent of the programming language of the submission.
+    ::: warning Opmerking
+    This the only evaluator that could be used to evaluate programming language specific datatypes.
+    :::
+
+```json
+"ValueOutputChannel": {
+  "title": "ValueOutputChannel",
+  "type": "object",
+  "properties": {
+    "value": {
+      "title": "Value",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    },
+    "evaluator": {
+      "title": "Evaluator",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/GenericValueEvaluator"
+        },
+        {
+          "$ref": "#/definitions/ProgrammedEvaluator"
+        },
+        {
+          "$ref": "#/definitions/SpecificEvaluator"
+        }
+      ]
+    }
+  }
 },
 ```
 
