@@ -171,6 +171,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
             'teachers/evaluate-series/',
             'teachers/new-exercise-repo/',
             'teachers/ufora/',
+            'teachers/tested-template-exercise/',
           ]
         },
         {
