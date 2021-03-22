@@ -1600,8 +1600,12 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
   zie [FunctionType](#functiontype).
 - **name**: De naam van de functie.
 - **namespace**: De namespace van de functie.
+  ::: warning Opmerking
   Wanneer deze niet opgegeven wordt is het een globale functie.
   Wanneer deze opgegeven is zal dit meestal een object variabele zijn, maar dit is niet altijd het geval.
+  :::
+- **arguments**: Een lijst van van [expressies](#expressies) en [NamedArguments](#namedargument) die meegeven moeten
+  worden als argumenten van de functieoproep.
 
 ```json
 "FunctionCall": {
@@ -1669,9 +1673,9 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
 
 ##### FunctionType
 TESTed heeft 3 functietypes: `function`, `constructor` en `property`.
-- **function**: Een normale functieoproep
-- **constructor**: Een object constructor oproep
-- **property**: Een objecteigenschap
+- **function**: Een normale functieoproep.
+- **constructor**: Een object constructor oproep.
+- **property**: Een objecteigenschap.
 
 ```json
 "FunctionType": {

@@ -1476,3 +1476,252 @@ This object has two attributes: `data` and `type`.
   ]
 },
 ```
+
+### Assignment
+At this moment, TESTed only support one statement, which is an assignment.
+
+Een assignment has 3 attirbutes: `variable`, `expression` and `type`.
+- **variable**: The name of the variable.
+- **expression**: The [expression](#expressions) that must be assigned to the variable.
+- **type**: The [datatype](#datatypes-tested) of the variable.
+
+```json
+"Assignment": {
+  "title": "Assignment",
+  "type": "object",
+  "properties": {
+    "variable": {
+      "title": "Variable",
+      "type": "string"
+    },
+    "expression": {
+      "title": "Expression",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    },
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicNumericTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicStringTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicBooleanTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicObjectTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicNothingTypes"
+        },
+        {
+          "$ref": "#/definitions/BasicSequenceTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedNumericTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedSequenceTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedStringTypes"
+        },
+        {
+          "$ref": "#/definitions/VariableType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "variable",
+    "expression",
+    "type"
+  ]
+},
+```
+
+### Expressions
+TESTed supports 3 different types of expressions: [Identifier](#identifier), [FunctionCall](#functioncall) and
+[values](#values).
+
+#### Identifier
+An identifier is a string that repressents a variable.
+
+#### FunctionCall
+The *FunctionCall*-object represents a function call.
+
+The *FunctionCall*-object has 4 attributes: `type`, `name`, `namespace`, and `arguments`.
+- **type**: The type of the function: a normal function, a constructor or a property, see [FunctionType](#functiontype).
+- **name**: The name of the function.
+- **namespace**: The namespace of the function.
+  ::: warning Remark
+  When the namespace isn't given, the function is a global function.
+  When the namespace is given, the namespace will be mostly an object variable, but that will not always be the case.
+  :::
+- **arguments**: A list of [expressions](#expressions) and [NamedArguments](#namedargument) that are the arguments for
+  the function calls.
+
+```json
+"FunctionCall": {
+  "title": "FunctionCall",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/FunctionType"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "namespace": {
+      "title": "Namespace",
+      "type": "string"
+    },
+    "arguments": {
+      "title": "Arguments",
+      "default": [],
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/FunctionCall"
+              },
+              {
+                "$ref": "#/definitions/NumberType"
+              },
+              {
+                "$ref": "#/definitions/StringType"
+              },
+              {
+                "$ref": "#/definitions/BooleanType"
+              },
+              {
+                "$ref": "#/definitions/SequenceType"
+              },
+              {
+                "$ref": "#/definitions/ObjectType"
+              },
+              {
+                "$ref": "#/definitions/NothingType"
+              }
+            ]
+          },
+          {
+            "$ref": "#/definitions/NamedArgument"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "name"
+  ]
+},
+```
+
+##### FunctionType
+TESTed has 3 function types: `function`, `constructor` and `property`.
+- **function**: A normal function call.
+- **constructor**: An object constructor call.
+- **property**: An object property.
+
+```json
+"FunctionType": {
+  "title": "FunctionType",
+  "description": "An enumeration.",
+  "enum": [
+    "function",
+    "constructor",
+    "property"
+  ],
+  "type": "string"
+},
+```
+
+##### NamedArguments
+The **NamedArgument**-object is used for the named arguments of a function call.
+
+The **NamedArguments**-object has 2 attributes: `name` and `value`.
+- **name**: The name of the argument.
+- **value**: The value of the argument, which must be an [expression](#expressions).
+
+```json
+"NamedArgument": {
+  "title": "NamedArgument",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "value": {
+      "title": "Value",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "value"
+  ]
+},
+```
+
+#### Values
