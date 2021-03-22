@@ -1924,7 +1924,7 @@ Het *SequenceType*-object heeft 2 attributen: `type` en `data`.
 Het *ObjectType*-object stelt een collectie van sleutel-waarde paren voor.
 
 Het *ObjectType*-object heeft 2 attributen: `type` en `data`.
-- **type**: Het object wat altijd de waarde `map` is, zie [BasicObjectTypes](#basicobjecttypes).
+- **type**: Het `map` datatype, zie [BasicObjectTypes](#basicobjecttypes).
 - **data**: De lijst van de [sleutel-waarde paren](#objectkeyvaluepair).
 
 ```json
@@ -1953,7 +1953,7 @@ Het *ObjectType*-object heeft 2 attributen: `type` en `data`.
 ###### ObjectKeyValuePair
 Het *ObjectKeyValuePair*-object stelt een sleutel-waarde paar voor.
 
-Het *ObjectKeyValuePair*-object heet twee attributen: `key` en `value`.
+Het *ObjectKeyValuePair*-object heeft 2 attributen: `key` en `value`.
 - **key**: De sleutel, wat een [expressie](#expressies) is.
 - **value**: De waarde, wat opnieuw een [expressie](#expressies) is.
 

@@ -1725,3 +1725,313 @@ The **NamedArguments**-object has 2 attributes: `name` and `value`.
 ```
 
 #### Values
+At this moment does TESTed support 6 different values: [numbers](#numbertype), [text](#stringtype),
+[booleans](#booleantype), [sequences](#sequencetype), [dictionaries](#objecttype) and ['nothing'](#nothingtype).
+
+##### NumberType
+The *NumberType*-object represents numeric values.
+
+The *NumberType*-object has 2 attributes: `type` and `data`.
+- **type**: The type of the numeric value,
+  see [BasicNumericTypes](#basicnumerictypes) and [AdvancedNumericTypes](#advancednumerictypes).
+- **data**: The numeric value.
+
+```json
+"NumberType": {
+  "title": "NumberType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicNumericTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedNumericTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### StringType
+The *StringType*-object represents textual values.
+
+The *StringType*-object has 2 attributes: `type` and `data`.
+- **type**: The type of the textual value,
+  see [BasicStringTypes](#basicstringtypes) and [AdvancedStringTypes](#advancedstringtypes).
+- **data**: The textual value as string.
+
+```json
+"StringType": {
+  "title": "StringType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicStringTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedStringTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### BooleanType
+The *BooleanType*-object represent a boolean value.
+
+The *BooleanType*-object has 2 attributes: `type` and `data`.
+- **type**: The `boolean` datatype, see [BasicBooleanTypes](#basicbooleantypes).
+- **data**: A boolean value `true` or `false`.
+
+```json
+"BooleanType": {
+  "title": "BooleanType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/BasicBooleanTypes"
+    },
+    "data": {
+      "title": "Data",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### SequenceType
+The *SequenceType*-object represents a collection of values.
+
+The *SequenceType*-object has 2 attributes: `type` and `data`.
+- **type**: The type of the sequence,
+  see [BasicSequencetypes](#basicsequencetypes) and [AdvancedSequenceTypes](#advancedsequencetypes).
+- **data**: The list of [expression](#expressions) elements.
+
+```json
+"SequenceType": {
+  "title": "SequenceType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Type",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BasicSequenceTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedSequenceTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "$ref": "#/definitions/FunctionCall"
+          },
+          {
+            "$ref": "#/definitions/NumberType"
+          },
+          {
+            "$ref": "#/definitions/StringType"
+          },
+          {
+            "$ref": "#/definitions/BooleanType"
+          },
+          {
+            "$ref": "#/definitions/SequenceType"
+          },
+          {
+            "$ref": "#/definitions/ObjectType"
+          },
+          {
+            "$ref": "#/definitions/NothingType"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+##### ObjectType
+The *ObjectType*-object represents a collection of key-value pairs.
+
+The *ObjectType*-object has 2 attributes: `type` and `data`.
+- **type**: The `map` datatype, see [BasicObjectTypes](#basicobjecttypes).
+- **data**: The list of the [key-value pairs](#objectkeyvaluepair).
+
+```json
+"ObjectType": {
+  "title": "ObjectType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "#/definitions/BasicObjectTypes"
+    },
+    "data": {
+      "title": "Data",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ObjectKeyValuePair"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "data"
+  ]
+},
+```
+
+###### ObjectKeyValuePair
+The *ObjectKeyValuePair*-object represents a key-value pair.
+
+The *ObjectKeyValuePair*-object has 2 attributes: `key` and `value`.
+- **key**: The key, what must be an [expression](#expressions).
+- **value**: The value, what must also be an [expression](#expressions).
+
+```json
+"ObjectKeyValuePair": {
+  "title": "ObjectKeyValuePair",
+  "type": "object",
+  "properties": {
+    "key": {
+      "title": "Key",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    },
+    "value": {
+      "title": "Value",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+},
+```
+
+##### NothingType
+The *NothingType*-object represents the 'nothing' value.
+
+The *NothingType*-object has 2 attributes: `type` and `data`.
+- **type**: The `nothing` datatype, see [BasicNothingTypes](#basicnothingtypes).
+- **data**: The constant value `null`.
+
+```json
+"NothingType": {
+  "title": "NothingType",
+  "type": "object",
+  "properties": {
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BasicNothingTypes"
+        }
+      ]
+    },
+    "data": {
+      "title": "Data",
+      "const": null
+    }
+  }
+},
+```
