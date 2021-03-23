@@ -24,7 +24,7 @@ De uitleg om een nieuwe Git repository te maken voor Dodona bevindt zich in
 ## 2. Mapstructuur
 De mapstructuur voor een sjabloonoefening van TESTed komt in grote mate overeen met de
 [vereiste structuur door Dodona](../../../references/exercise-directory-structure).
-Bij de sjabloonoefening is het `config.json` hernoemd naar `config.template.json`,
+Bij de sjabloonoefening is het `config.json` bestand hernoemd naar `config.template.json`,
 met als hoofdreden dat we de sjabloonoefening niet als een oefening op Dodona willen weergeven.
 
 ### Voorbeeld minimale mapstructuur
@@ -58,7 +58,7 @@ Deze moeten zich bevinden in de bestanden `description.nl.md.mako` (nederlands) 
 We raden sterk aan om de opgaven in markdown te schrijven,
 zie [Oefeningbeschrijvingen](../../../references/exercise-description).
 
-## 5. Configureren van de oefening
+## 5. Configureren van de sjabloonoefening
 Het configureren van een oefening wordt uitgelegd in [Oefeningconfiguratie](../../../references/exercise-config).
 Wij zullen de specifieke configuratie voor TESTed in `config.template.json` bekijken.
 
@@ -107,8 +107,8 @@ Het script kan uitgevoerd worden met het volgende commando in de root directory 
 $ python3 -m tested.instantiate_exercise "sjabloon/oefening/map" "instanties/oefening/map"
 ```
 
-Dit script zal voor de sjabloonoefening, in de map `sjabloon/oefening/map`
-per programmeertaal een instantie genereren, in de map `instanties/oefening/map/{programmeer_taal}`.
+Dit script zal, voor de sjabloonoefening in de map `sjabloon/oefening/map`,
+per programmeertaal een instantie genereren in de map `instanties/oefening/map/{programmeer_taal}`.
 
 Dit script heeft enkele optionele opties:
 - `-i`, `--programming_languages_included`:
