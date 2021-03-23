@@ -53,10 +53,13 @@ De sjabloonoefeningen kunnen ook gebruikmaken van de
 ## 4. Opstellen sjabloonopgaven
 De sjabloonopgaven worden opgesteld met behulp van Mako sjabloonbestanden,
 zie [TESTed sjabloonbeschrijvingen](../../../references/tested-judge/template-description).
-De sjabloonbeschrijvingen moet zich in de `description` map bevinden.
-Deze moeten zich bevinden in de bestanden `description.nl.md.mako` (nederlands) en ` description.en.md.mako` (engels).
+Deze sjabloonopgaven moeten zich bevinden in de bestanden `description/description.nl.md.mako` (nederlands) en
+`description/description.en.md.mako` (engels).
+
+::: tip Tip
 We raden sterk aan om de opgaven in markdown te schrijven,
 zie [Oefeningbeschrijvingen](../../../references/exercise-description).
+:::
 
 ## 5. Configureren van de sjabloonoefening
 Het configureren van een oefening wordt uitgelegd in [Oefeningconfiguratie](../../../references/exercise-config).
@@ -83,7 +86,7 @@ Wij zullen de specifieke configuratie voor TESTed in `config.template.json` beki
 Het `access`-veld en het `description`-object zijn vereist door Dodona.
 De programmeertaal zal toegevoegd worden aan de benamingen van de oefening wanneer er een instantie gegeneerd wordt.
 Dodona vereist ook het `programming_language`-veld,
-maar deze wordt pas ingevuld tijdens het gegeneren van instances van de sjabloonoefening.
+maar deze wordt pas ingevuld tijdens het gegeneren van de instanties van de sjabloonoefening.
 
 Voor de sjabloonoefeningen vereisen we dat het veld `evaluation.plan_name` ingevuld is.
 Dit veld bepaalt, welk testplan er zal gebruikt worden door TESTed.

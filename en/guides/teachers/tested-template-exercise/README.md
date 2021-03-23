@@ -24,8 +24,8 @@ could be found at [Creating a new exercise repo](../new-exercise-repo).
 ## 2. Directory structure
 The directory structure for a template exercise of TESTed corresponds to a large extent with the
 [expected structure by Dodona](../../../references/exercise-directory-structure).
-For the template exercises the file `config.json` renamed to `config.template.json`.
-The most important reason for this is that we won't present the template as exercise at Dodona.
+For the template exercises, the file `config.json` is renamed to `config.template.json`.
+The most important reason for this is that we don't want to display the template as exercise at Dodona.
 
 ### Example minimal directory structure
 ```text
@@ -49,13 +49,15 @@ The template exercise can also make use of the [TESTed JSON test plans](../../..
 :::
 
 ## 4. Create template descriptions
-The template descriptions will be written in the Make template files,
+The template descriptions will be written in the Mako template files,
 see [TESTed template descriptions](../../../references/tested-judge/template-description).
-The template descriptions must be located in the `description` folder of the exercise.
-This template descriptions must be located in the files `description.nl.md.mako` (Dutch) and
-`description.en.md.mako` (English).
+These template descriptions must be located in the files `description/description.nl.md.mako` (Dutch) and
+`description/description.en.md.mako` (English).
+
+::: tip Hint
 We recommend to write the descriptions in Markdown,
 see [Exercise descriptions](../../../references/exercise-description).
+:::
 
 ## 5. Configuring the template exercise
 How to configure an exercise is explained in [Exercise configuration](../../../references/exercise-config).
