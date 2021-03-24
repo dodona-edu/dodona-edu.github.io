@@ -5,17 +5,17 @@ description: "Configureren nieuwe programmeertaal TESTed"
 
 # Configuratie van een programmeertaal
 In deze handleiding wordt in detail uitgelegd hoe een nieuwe programmeertaal aan TESTed kan toegevoegd worden.
-We doen dat door te beschrijven hoe de programmeertaal C aan toegevoegd is.
-Enkele nuttige links en verwijzingen hierbij zijn:
+We doen dat door te beschrijven hoe de programmeertaal C toegevoegd is.
+Enkele nuttige links die hierbij kunnen helpen zijn:
 
 - Bestaande configuraties: <https://github.com/dodona-edu/universal-judge/tree/master/tested/languages>
-- Test oefeningen: <https://github.com/dodona-edu/universal-judge/tree/master/exercise>
+- Testoefeningen: <https://github.com/dodona-edu/universal-judge/tree/master/exercise>
 
 In deze referentie worden regelmatig codebestanden getoond, verspreid over meerdere codefragmenten
 (bijvoorbeeld eerst `n` regels, daarna wat tekst en dan pas de rest van de regels).
 
 ## TESTed lokaal uitvoeren
-Tijdens het configureren van een programmeertaal is het nuttig om lokaal uit te voeren,
+Tijdens het configureren van een programmeertaal is het nuttig om TESTed lokaal uit te voeren,
 zonder daarvoor het volledige Dodona-platform te moeten uitvoeren.
 Buiten de _dependencies_ voor de bestaande programmeertalen is TESTed een Python-package,
 dat op de normale manier uitgevoerd kan worden.
@@ -53,7 +53,7 @@ Voor de programmeertalen die momenteel reeds geconfigureerd zijn, zijn volgende 
 - **Java**: vereist Java 11, maar heeft verder geen dependencies.
   De commando's `javac` en `java` moeten beschikbaar zijn in het `PATH`.
 
-- **JavaScript**: vereist NodeJS v10, maar heeft verder geen dependencies.
+- **JavaScript**: vereist NodeJS v10 of later, maar heeft verder geen dependencies.
   Het commando `node` moet beschikbaar zijn in het `PATH`.
 
 - **Kotlin**: vereist Kotlin 1.4.10, maar heeft verder geen dependencies.
@@ -80,14 +80,14 @@ We gaan er voor de rest van het hoofdstuk van uit dat commando's uitgevoerd word
 
 Er zijn twee manieren om TESTed uit te voeren.
 Ten eerste is er de "gewone" manier; dit is ook hoe Dodona TESTed uitvoert.
-Bij het uitvoeren op deze manier zal een configuratie lezen van `stdin` en zal TESTed het resultaat van de beoordeling
-in Dodona-formaat uitgeschreven worden naar `stdout`.
+Bij het uitvoeren op deze manier zal TESTed een configuratie lezen van `stdin` en zal TESTed het resultaat van de
+beoordeling in Dodona-formaat uitgeschreven worden naar `stdout`.
 
 ```shell
 > python -m tested
 ```
 
-Bij het configureren van een programmeertaal of het werken aan is het echter nuttiger om meer uitvoer te zien en
+Bij het configureren van een programmeertaal of het werken aan TESTed is het echter nuttiger om meer uitvoer te zien en
 is het vervelend om telkens een configuratie te lezen vanop `stdin`. Daarom is er een tweede manier:
 
 ```shell
@@ -129,7 +129,8 @@ Is bovenstaande hulpmiddel wel gebruikt, dan kunnen de instructies voor het make
 
 ## De programmeertaal C
 Voor we beginnen aan de configuratie, overlopen we kort welke functionaliteit we willen ondersteunen:
-welke functionaliteit uit C kunnen we aanbieden in TESTed en welke functionaliteit uit kunnen we implementeren in C?
+welke functionaliteit uit C kunnen we aanbieden in TESTed en welke functionaliteit uit TESTed kunnen we implementeren in
+C?
 Uiteraard willen we zoveel mogelijk ondersteunen, maar vooral op het vlak van gegevenstypes zijn er momenteel beperkingen.
 
 ##### Welke basistypes gaan we niet ondersteunen?
@@ -372,15 +373,17 @@ C ondersteunt geen collecties, dus zijn beide lijst leeg.
 ### Typeconfiguratiebestand
 Het typeconfiguratiebestand is een JSON-bestand met de benamingen van datatypes en gebruikte conventies voor het
 visualiseren van een codeprompt.
-Dit configuratiebestand wordt gebruikt om sjabloonopgaven te instantiëren voor de programmeertaal.
+Dit configuratiebestand wordt gebruikt om sjabloonopgaven
+(zie [Documentatie sjabloonbeschrijvingen](../../../references/tested-judge/template-description))
+te instantiëren voor de programmeertaal.
 Maak eerst het configuratiebestand aan: `tested/languages/c/types.json`.
 
-#### Console informatie
+#### Informatie voor de consoleprompt
 - `console.name`:
-  De gebruikt naam van de programmeertaal in de console prompt.
+  De gebruikte naam van de programmeertaal in de consoleprompt.
   Bijvoorbeeld: `python` voor Python en `c` voor C.
 - `console.prompt`:
-  Het prompt symbool voor de programmeertaal.
+  Het promptsymbool voor de programmeertaal.
   Bijvoorbeeld: `>>>` voor Python en `>` voor C.
 
 ```json
@@ -391,9 +394,9 @@ Maak eerst het configuratiebestand aan: `tested/languages/c/types.json`.
 ```
 
 #### Haakjes
-De gebruikte haakjes voor collectie datatypes.
-Bijvoorbeeld: `[]` voor de python collecties, `<>` voor de generieke Java objecten behalve arrays die `[]` gebruiken.
-C in TESTed ondersteund geen collecties, dus zullen Java en Haskell als voorbeeld nemen.
+De gebruikte haakjes voor collectiedatatypes.
+Bijvoorbeeld: `[]` voor de Python-collecties, `<>` voor de generieke Java-objecten (behalve arrays die `[]` gebruiken).
+C in TESTed ondersteunt geen collecties, dus zullen we Java en Haskell als voorbeeld nemen.
 - `brackets.open`: Generiek openingshaakje
 - `brackets.clase`: Generiek sluitingshaakje
 
@@ -403,11 +406,11 @@ C in TESTed ondersteund geen collecties, dus zullen Java en Haskell als voorbeel
 - `brackets.<collection>.close`: Specifiek sluitingshaakje voor de gegeven collectie
 
 > Voorbeeld Java integer array: `int[]`
-> 
+>
 > Voorbeeld Haskell integer lijst: `[Int]`
 
 #### Datatypes
-Naast de console informatie en haakjes moeten ook de benaming van de ondersteunde datatypes worden opgegeven.
+Naast de console-informatie en haakjes moeten ook de benaming van de ondersteunde datatypes worden opgegeven.
 ```json
 "integer": "int",
 "rational": "double",
@@ -432,23 +435,23 @@ Naast de console informatie en haakjes moeten ook de benaming van de ondersteund
 ```
 
 Ondersteunde waarden:
-- **string**: Naam van het TESTed datatype in de programmeertaal.
-- **boolean**: Alleen voor collectie datatypes waarbij de notatie van het collectietype uitsluitend met haakjes gebeurt.
+- **string**: Naam van het TESTed-datatype in de programmeertaal.
+- **boolean**: Alleen voor collectiedatatypes waarbij de notatie van het collectietype uitsluitend met haakjes gebeurt.
   - `true`: Het datatype van de gegevens in de collectie bevindt zich tussen de haakjes.
     Hierbij moeten de haakjes van het collectie type expliciet worden opgeven.
-    Bijvoorbeeld Haskell lijst: `[Int]`
+    Bijvoorbeeld een lijst in Haskell: `[Int]`
   - `false`: De haakjes bevinden zich achter het datatype van de gegevens in de collectie.
     Hierbij moeten de haakjes van het collectie type expliciet worden opgeven.
-    Bijvoorbeeld Java array: `int[]`
+    Bijvoorbeeld de Java-array: `int[]`
 
-`inner` is het object waarbij elk datatype, die een andere naam moet krijgen in een collectie, moet opgegeven worden.
+`inner` is het object waarbij elk datatype, dat een andere naam moet krijgen in een collectie, moet opgegeven worden.
 Dit geldt niet voor datatypes waarbij de haakjes achter het datatype geplaatst worden.
-Bijvoorbeeld Java: `Integer` in plaats van `int` voor `int32`.
+Bijvoorbeeld in Java: `Integer` in plaats van `int` voor `int32`.
 
-#### Natuurlijke taal constructies
-De benaming in de natuurlijke taal voor de collectie datatypes en tekst, is afhankelijk van de programmeertaal.
+#### Ondersteuning voor natuurlijke talen
+De benaming in de natuurlijke taal voor de collectiedatatypes en `text`, is afhankelijk van de programmeertaal.
 Hiervoor wordt gevraagd om deze benaming op te geven in zowel het Engels als het Nederlands.
-De vereiste velden zijn alle collectie datatypes die ondersteund worden in TESTed door de programmeertaal,
+De vereiste velden zijn alle collectiedatatypes die ondersteund worden in TESTed door de programmeertaal,
 alsook de benaming voor tekst.
 
 Bijvoorbeeld: in JavaScript spreekt men over *array* voor een `sequence`,
@@ -493,12 +496,12 @@ def compilation(self, config: Config, files: List[str]) -> CallbackResult:
 De eerste parameter van deze methode is een klasse met enkele configuratie-opties, zoals de tijdslimiet, geheugenlimiet
 en de programmeertaalspecifieke opties.
 Dit zou bijvoorbeeld gebruikt kunnen worden om de versie van C mee te geven (zoals C11 of C99).
-Dit wordt momenteel niet gedaan in C, want TESTed vereist C11, maar de mogelijkheid bestaat. 
+Dit wordt momenteel niet gedaan in C, want TESTed vereist C11, maar de mogelijkheid bestaat.
 Wel moeten we opmerken dat de tijdslimiet zelden nuttig zal zijn, daar TESTed de uitvoeringstijd bijhoudt.
 In de configuratieklasse is het dus niet nodig om daar rekening mee te houden.
 
-De andere parameter van deze methode is een lijst van bestanden waarvan vermoedt dat ze nuttig kunnen zijn voor de
-compilatiestap.
+De andere parameter van deze methode is een lijst van bestanden waarvan TESTed vermoedt dat ze nuttig kunnen zijn voor
+de compilatiestap.
 Het bevat onder andere de dependencies uit het configuratiebestand,
 de ingediende oplossing en de uit de sjablonen gegenereerde bestanden.
 Die laatste bestanden zijn bijvoorbeeld de verschillende contexten bij een batchcompilatie,
@@ -536,7 +539,7 @@ Ook hier moet de conventie gerespecteerd worden dat het bestand met de `main`-fu
 
 Het is echter niet altijd mogelijk om op voorhand te weten in welke bestanden de code zal resulteren.
 Zo resulteert compilatie van één `.java`-bestand mogelijk in meerdere `.class`-bestanden,
-afhankelijk vande inhoud van de bestanden.
+afhankelijk van de inhoud van de bestanden.
 Om dit op te lossen kan in plaats van een lijst ook een filterfunctie teruggegeven worden.
 
 Nadat de compilatie uitgevoerd is,
@@ -570,7 +573,7 @@ Deze functie heeft vier parameters:
 
 - `config`:
   Dezelfde configuratie-opties als bij de compilatiemethode.
-  Bij Java wordt dit bijvoorbeeld gebruikt om de geheugenlimiet van de juist in te stellen.
+  Bij Java wordt dit bijvoorbeeld gebruikt om de geheugenlimiet van de JVM juist in te stellen.
 - `cwd`:
   de map waarin het uitvoeren plaatsvindt
 - `file`:
@@ -638,8 +641,8 @@ De derde stap bestaat uit het schrijven van de sjablonen.
 We hebben uiteraard de verplichte sjablonen nodig,
 maar om code te hergebruiken kiezen we ervoor om enkele bijkomende sjablonen te schrijven:
 
-- `run.c`: het sjabloon voor run (**verplicht**) 
-- `selector.c`: het sjabloon voor de selector voor batchcompilatie (**verplicht** bij batchcompilatie) 
+- `run.c`: het sjabloon voor run (**verplicht**)
+- `selector.c`: het sjabloon voor de selector voor batchcompilatie (**verplicht** bij batchcompilatie)
 - `declaration.mako`: vertaalt de declaratie van een variabele naar code
 - `function.mako`: vertaalt een functieoproep naar code
 - `statement.mako`: vertaalt een statement of een expressie naar code (**verplicht**)
@@ -655,7 +658,7 @@ Standaard zijn de toegelaten extensies `.mako` en een programmeertaalafhankelijk
 Een conventie die gebruikt wordt binnen TESTed, is de volgende:
 - Sjablonen eindigen op de programmeertaalafhankelijke extensie (`.c`)
   indien het sjabloon resulteert in een op zichzelf staand bestand.
-  Voorbeelden zijn het contextsjabloon en de selector.
+  Voorbeelden zijn het runsjabloon en de selector.
 
 - Sjablonen die resulteren in een codefragment en dus vooral gebruikt worden als onderdeel van andere sjablonen eindigen
   op `.mako`.
