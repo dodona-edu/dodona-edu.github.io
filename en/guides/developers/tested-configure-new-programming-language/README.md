@@ -1,5 +1,5 @@
 ---
-title: "[nl] Configureren nieuwe programmeertaal TESTed"
+title: Configureren nieuwe programmeertaal TESTed
 description: "Configureren nieuwe programmeertaal TESTed"
 ---
 
@@ -8,7 +8,7 @@ For now, this page is only available in Dutch. Sorry!
 :::
 
 # Configuratie van een programmeertaal
-In deze referentie wordt in detail uitgelegd hoe een nieuwe programmeertaal aan kan toegevoegd worden.
+In deze handleiding wordt in detail uitgelegd hoe een nieuwe programmeertaal aan TESTed kan toegevoegd worden.
 We doen dat door te beschrijven hoe de programmeertaal C aan toegevoegd is.
 Enkele nuttige links en verwijzingen hierbij zijn:
 
@@ -19,15 +19,13 @@ In deze referentie worden regelmatig codebestanden getoond, verspreid over meerd
 (bijvoorbeeld eerst `n` regels, daarna wat tekst en dan pas de rest van de regels).
 
 ## TESTed lokaal uitvoeren
-Tijdens het configureren van een programmeertaal is het nuttig om lokaal
-uit te voeren, zonder daarvoor het volledige Dodona-platform te moeten
-uitvoeren. Buiten de voor de bestaande programmeertalen is een
-Python-package, dat op de normale manier uitgevoerd kan worden.
+Tijdens het configureren van een programmeertaal is het nuttig om lokaal uit te voeren,
+zonder daarvoor het volledige Dodona-platform te moeten uitvoeren.
+Buiten de _dependencies_ voor de bestaande programmeertalen is TESTed een Python-package,
+dat op de normale manier uitgevoerd kan worden.
 
 ### De broncode
-Na het klonen van de repository van beschikken we over volgende
-mappenstructuur:
-
+Na het klonen van de repository van beschikken we over volgende mappenstructuur:
 ```text
 universal-judge
 ├── docker/ # Een Docker-image om TESTed uit te voeren.
@@ -40,39 +38,32 @@ universal-judge
 ```
 
 ### Dependencies
-De dependencies van zelf zijn opgelijst in een
-`requirements.txt`-bestand, zoals gebruikelijk is bij Python-projecten.
+De dependencies van zelf zijn opgelijst in een `requirements.txt`-bestand, zoals gebruikelijk is bij Python-projecten.
 Vereisten voor het uitvoeren van tests staan in `requirements-test.txt`.
-gebruikt Python of later. Het installeren van deze vereisten gebeurt op
-de gebruikelijke manier:
-``` {.console}
+TESTed gebruikt Python 3.9 of later.
+Het installeren van deze vereisten gebeurt op de gebruikelijke manier:
+```shell
 > pip install -r requirements.txt
 ```
 
-Voor de programmeertalen die momenteel reeds geconfigureerd zijn, zijn
-volgende dependencies nodig:
+Voor de programmeertalen die momenteel reeds geconfigureerd zijn, zijn volgende dependencies nodig:
 
-- **Python**:
-  vereist Python 3.9.
+- **Python**: vereist Python 3.9.
   Indien de linter gebruikt wordt, is `pylint` een dependency.
   Daarnaast moet `python` beschikbaar zijn in het `PATH`.
-  Door optimalisaties is het momenteel aan te raden om dezelfde Python-versie te gebruiken voor als voor de
+  Door optimalisaties is het momenteel aan te raden om dezelfde Python-versie te gebruiken voor TESTed als voor de
   Python-oefeningen.
 
-- **Java**:
-  vereist Java 11, maar heeft verder geen dependencies.
+- **Java**: vereist Java 11, maar heeft verder geen dependencies.
   De commando's `javac` en `java` moeten beschikbaar zijn in het `PATH`.
 
-- **JavaScript**:
-  vereist NodeJS v10, maar heeft verder geen dependencies.
+- **JavaScript**: vereist NodeJS v10, maar heeft verder geen dependencies.
   Het commando `node` moet beschikbaar zijn in het `PATH`.
 
-- **Kotlin**:
-  vereist Kotlin 1.4.10, maar heeft verder geen dependencies.
+- **Kotlin**: vereist Kotlin 1.4.10, maar heeft verder geen dependencies.
   De commando's `kotlinc` en `kotlin` moeten beschikbaar zijn in het `PATH`.
 
-- **Haskell**:
-  Voor Haskell is GHC 8.6 (`ghc`) of later nodig.
+- **Haskell**: Voor Haskell is GHC 8.6 (`ghc`) of later nodig.
   Daarnaast is `aeson` nodig.
   Beiden moeten globaal beschikbaar zijn in het `PATH`.
 
@@ -92,18 +83,18 @@ Gebruikers op Windows kunnen MingW of MSYS2 proberen.
 We gaan er voor de rest van het hoofdstuk van uit dat commando's uitgevoerd worden in de map `./`.
 
 Er zijn twee manieren om TESTed uit te voeren.
-Ten eerste is er de "gewone" manier; dit is ook hoe Dodona uitvoert.
-Bij het uitvoeren op deze manier zal een configuratie lezen van `stdin` en zal het resultaat van de beoordeling in
-Dodona-formaat uitgeschreven worden naar `stdout`.
+Ten eerste is er de "gewone" manier; dit is ook hoe Dodona TESTed uitvoert.
+Bij het uitvoeren op deze manier zal een configuratie lezen van `stdin` en zal TESTed het resultaat van de beoordeling
+in Dodona-formaat uitgeschreven worden naar `stdout`.
 
-```bash
+```shell
 > python -m tested
 ```
 
 Bij het configureren van een programmeertaal of het werken aan is het echter nuttiger om meer uitvoer te zien en
 is het vervelend om telkens een configuratie te lezen vanop `stdin`. Daarom is er een tweede manier:
 
-```bash
+```shell
 > python -m tested.manual
 ```
 
@@ -113,7 +104,7 @@ Deze uitvoer verschilt op een aantal vlakken van de gewone uitvoering:
     De configuratie is gedefinieerd in de code zelf en gebruikt een van de oefeningen die in de map `exercise` zitten.
 2.  Er worden, naast de resultaten van de beoordeling, logs uitgeschreven naar `stdout` die aangeven wat TESTed doet.
     Als er bijvoorbeeld een fout optreedt tijdens het compileren zullen deze logs nuttig zijn: zo wordt uitgeschreven
-    welk commando exact uitvoert voor de compilatie en ook in welke map dat gebeurt.
+    welk commando TESTed exact uitvoert voor de compilatie en ook in welke map dat gebeurt.
 3.  De configuratie is zo opgesteld dat de werkmap van de judge de map `workdir` zal zijn. Dit laat toe om de
     gegenereerde code te inspecteren.
 
@@ -121,15 +112,15 @@ Deze uitvoer verschilt op een aantal vlakken van de gewone uitvoering:
 Het configureren van een programmeertaal in TESTed bestaat uit drie grote onderdelen:
 
 1.  Het configuratiebestand, met enkele opties voor de programmeertaal.
-    Het typeconfiguratbestand, met de benaming van de datatypes.
+    Het typeconfiguratiebestand, met de benaming van de datatypes.
 2.  De configuratieklasse, met de meer dynamische opties, zoals het compilatiecommando.
 3.  De sjablonen, die gebruikt worden om code te genereren.
 
 TESTed voorziet een hulpmiddel om de bestanden op de juiste plaats te genereren.
-Op basis van enkele vragen worden gegenereerd voor het configuratiebestand, de configuratieklasse en de sjablonen.
+Op basis van enkele vragen worden _stubs_ gegenereerd voor het configuratiebestand,
+de configuratieklasse en de sjablonen.
 Dit hulpmiddel kan als volgt uitgevoerd worden:
-
-```bash
+```shell
 > python -m tested.generation
 ```
 
@@ -142,7 +133,7 @@ Is bovenstaande hulpmiddel wel gebruikt, dan kunnen de instructies voor het make
 
 ## De programmeertaal C
 Voor we beginnen aan de configuratie, overlopen we kort welke functionaliteit we willen ondersteunen:
-welke functionaliteit uit C kunnen we aanbieden in en welke functionaliteit uit kunnen we implementeren in C?
+welke functionaliteit uit C kunnen we aanbieden in TESTed en welke functionaliteit uit kunnen we implementeren in C?
 Uiteraard willen we zoveel mogelijk ondersteunen, maar vooral op het vlak van gegevenstypes zijn er momenteel beperkingen.
 
 ##### Welke basistypes gaan we niet ondersteunen?
@@ -171,7 +162,7 @@ Uiteraard willen we zoveel mogelijk ondersteunen, maar vooral op het vlak van ge
 ### Locatie van de code
 De eerste stap in het configureren van een programmeertaal is het aanmaken van een map waarin we de code voor de
 programmeertaal zullen zetten.
-Deze map moet de naam van de programmeertaal krijgen en op de juiste plaats binnen aanwezig zijn.
+Deze map moet de naam van de programmeertaal krijgen en op de juiste plaats binnen TESTed aanwezig zijn.
 Maak een nieuwe map `tested/languages/c`.
 Na het aanmaken van de map moet de mappenstructuur er zo uitzien:
 ```text
@@ -304,7 +295,7 @@ Hieronder volgt een lijst van elke taalconstructie en een korte beschrijving:
   gaat al iets moeilijker in Java (`List<Object> = List.of(1, 52.23)`), maar zal niet lukken in Haskell.
 - `heterogeneous_arguments`:
   Hiermee bedoelen we functieoproepen waarbij dezelfde functie meerdere keren wordt opgeroepen met argumenten met
-  verschillende datatypes (bijvoorbeeld eerst `check(True)` daarna `check(hallo)`).
+  verschillende datatypes (bijvoorbeeld eerst `check(True)` daarna `check('hallo')`).
   Dit zal lukken in Python en Java, maar niet in Haskell en C.
 - `evaluation`:
   Of een geprogrammeerde evaluatie mogelijk is in deze programmeertaal.
@@ -416,7 +407,7 @@ C in TESTed ondersteund geen collecties, dus zullen Java en Haskell als voorbeel
 - `brackets.<collection>.close`: Specifiek sluitingshaakje voor de gegeven collectie
 
 > Voorbeeld Java integer array: `int[]`
-> 
+>
 > Voorbeeld Haskell integer lijst: `[Int]`
 
 #### Datatypes
@@ -479,8 +470,8 @@ terwijl in Python men spreekt over een *lijst*.
 ```
 
 ### Configuratieklasse
-De configuratieklasse is de schakel tussen de generieke aspecten van en het programmeertaalafhankelijke gedrag.
-Omdat in Python geschreven is, moet deze klasse ook in Python geïmplementeerd worden.
+De configuratieklasse is de schakel tussen de generieke aspecten van TESTed en het programmeertaalafhankelijke gedrag.
+Omdat TESTed in Python geschreven is, moet deze klasse ook in Python geïmplementeerd worden.
 
 Maak een nieuw Python-bestand `tested/languages/c/config.py` aan.
 Hierin moet een klasse komen die van `Language` overerft:
@@ -506,7 +497,7 @@ def compilation(self, config: Config, files: List[str]) -> CallbackResult:
 De eerste parameter van deze methode is een klasse met enkele configuratie-opties, zoals de tijdslimiet, geheugenlimiet
 en de programmeertaalspecifieke opties.
 Dit zou bijvoorbeeld gebruikt kunnen worden om de versie van C mee te geven (zoals C11 of C99).
-Dit wordt momenteel niet gedaan in C, want TESTed vereist C11, maar de mogelijkheid bestaat. 
+Dit wordt momenteel niet gedaan in C, want TESTed vereist C11, maar de mogelijkheid bestaat.
 Wel moeten we opmerken dat de tijdslimiet zelden nuttig zal zijn, daar TESTed de uitvoeringstijd bijhoudt.
 In de configuratieklasse is het dus niet nodig om daar rekening mee te houden.
 
@@ -553,7 +544,7 @@ afhankelijk vande inhoud van de bestanden.
 Om dit op te lossen kan in plaats van een lijst ook een filterfunctie teruggegeven worden.
 
 Nadat de compilatie uitgevoerd is,
-zal TESTed deze filter toepassen elk bestand in de map waarin de compilatie uitgevoerd is.
+zal TESTed deze filter toepassen op elk bestand in de map waarin de compilatie uitgevoerd is.
 De filterfunctie krijgt als argument de naam van een bestand en moet `True` of `False` teruggeven als het bestand
 respectievelijk wel of niet moet meegenomen worden naar een volgende stap.
 
@@ -609,7 +600,7 @@ Voor de meeste programmeertalen kan nu overgegaan worden naar de sjablonen,
 maar in C moeten we nog een extra methode implementeren.
 
 #### Aanpassen van de ingediende oplossing
-De testcode die door gegenereerd wordt, kan meerdere `main`-functies bevatten:
+De testcode die door TESTed gegenereerd wordt, kan meerdere `main`-functies bevatten:
 - De ingediende oplossing kan een `main`-functie hebben.
 - Zowel de contexten als de selector kunnen `main`-functies hebben.
 
@@ -651,8 +642,8 @@ De derde stap bestaat uit het schrijven van de sjablonen.
 We hebben uiteraard de verplichte sjablonen nodig,
 maar om code te hergebruiken kiezen we ervoor om enkele bijkomende sjablonen te schrijven:
 
-- `run.c`: het sjabloon voor run (**verplicht**) 
-- `selector.c`: het sjabloon voor de selector voor batchcompilatie (**verplicht** bij batchcompilatie) 
+- `run.c`: het sjabloon voor run (**verplicht**)
+- `selector.c`: het sjabloon voor de selector voor batchcompilatie (**verplicht** bij batchcompilatie)
 - `declaration.mako`: vertaalt de declaratie van een variabele naar code
 - `function.mako`: vertaalt een functieoproep naar code
 - `statement.mako`: vertaalt een statement of een expressie naar code (**verplicht**)
@@ -704,7 +695,7 @@ De variabele `evaluator_names` bevat een verzameling van deze namen.
 ```
 
 ##### Witruimte in Mako
-Nuttig om weten is dat een extensie heeft toegevoegd aan Mako,
+Nuttig om weten is dat TESTed een extensie heeft toegevoegd aan Mako,
 waardoor de indentatie van Mako-gerelateerde taalconstructies zal verdwijnen.
 De `for`-loop in het fragment hierboven resulteert bijvoorbeeld in deze code:
 ```c
@@ -715,10 +706,9 @@ De `for`-loop in het fragment hierboven resulteert bijvoorbeeld in deze code:
 ##### Regeleindes in Mako
 Ook nuttig om weten is dat een regeleinde in een sjabloon in Mako resulteert in een regeleinde in het
 geproduceerde bestand.
-Mako voorziet hier een oplossing voor: door een `\` op het einde van de regel te plaatsen zal er geen regeleinde komen
-in het geproduceerde bestand.
+Mako voorziet hier een oplossing voor:
+door een _backslash_ op het einde van de regel te plaatsen zal er geen regeleinde komen in het geproduceerde bestand.
 Volgende codefragment (let op de `\`):
-
 ```c
 int test = \⏎
 "test";⏎
@@ -770,7 +760,7 @@ TESTed verwacht dat volgende functies beschikbaar zijn:
   exception-channel.
 
 Bij het implementeren moeten de conventies voor naamgeving van de programmeertaal toegepast worden
-zo zal in Java een oproep naar een functie met naam `sendValue` genereren.
+zo zal TESTed in Java een oproep naar een functie met naam `sendValue` genereren.
 
 We zullen later zien dat we zelf de oproepen naar deze functies in het sjabloon schrijven.
 Toegepast op C zijn er wat wijzigingen, omdat C geen exceptions ondersteunt.
@@ -791,8 +781,8 @@ We zien ook dat de implementatie eenvoudig is: we geven de gekregen waarde of ex
 de `values`-module en geven ook het bestand mee waarin de waarde of exception moet komen.
 
 De lezer zal zich misschien afvragen waarom het nodig is om deze functies te gebruiken:
-als een functieoproep naar deze functies kan definiëren,
-waarom kan  TESTed dan niet direct de `values`-module gebruiken, zonder daar deze functies tussen te plaatsen?
+als TESTed een functieoproep naar deze functies kan definiëren,
+waarom kan TESTed dan niet direct de `values`-module gebruiken, zonder daar deze functies tussen te plaatsen?
 
 Het antwoord is dat de `values`-module niet verplicht is.
 Dit is een conventie die in alle ondersteunde programmeertalen gebruikt wordt,
@@ -1023,7 +1013,7 @@ Het gaat om volgende sjablonen:
 - `value_arguments.mako`
 - `value_basic.mako`
 
-We hebben ze niet opgenomen in dit hoofdstuk, omdat ze sterk lijken op het statementsjabloon.
+We hebben ze niet opgenomen in deze handleiding, omdat ze sterk lijken op het statementsjabloon.
 De implementatie van deze sjablonen is te bekijken in de repository.
 
 ### Hulpmodules
@@ -1087,22 +1077,22 @@ Het is nodig om minstens een goede kennis te hebben van volgende aspecten van de
   Elke run moet namelijk uitvoerbaar zijn op zichzelf, maar ook als onderdeel van een groter programma.
   In C vraagt dit bijvoorbeeld enige inspanning en wat goochelen met macro's om de `main`-functies juist te krijgen.
 - Het schrijven van tekst naar bestanden.
-- Hoe de gegevenstypes die ondersteund worden door voorgesteld kunnen worden in de programmeertaal.
+- Hoe de gegevenstypes die ondersteund worden door TESTed voorgesteld kunnen worden in de programmeertaal.
 - Het serialiseren van die gegevenstypes naar het -formaat van TESTed.
-  Een mogelijk struikelblok hier is dat een functie verwacht die het serialiseren doet voor alle gegevenstypes.
+  Een mogelijk struikelblok hier is dat TESTed een functie verwacht die het serialiseren doet voor alle gegevenstypes.
   Dit is in sommige programmeertalen zoals Haskell of C minder voor de hand liggend.
 - Andere zaken die de programmeertaal mogelijk ondersteunt, zoals assignments, functieoproepen en objectgerichte acties
   (objecten aanmaken en gebruiken).
 
 Kennis over hoe TESTed werkt wordt niet verwacht of nodig geacht, met uitzondering van twee onderdelen:
--   Informatie over hoe de verschillende compilatiemanier werken.
+-   Informatie over hoe de verschillende compilatiemanieren werken.
 -   Informatie over de verschillende evaluatievormen.
 
-Voor de rest zou het moeten volstaan om dit hoofdstuk door te nemen en de stappen die er in beschreven staan uit te
+Voor de rest zou het moeten volstaan om deze handleiding door te nemen en de stappen die er in beschreven staan uit te
 voeren.
-Op verschillende plaatsen wordt verwezen naar andere onderdelen van de
+Voor meer informatie verwijzen we naar de
 [masterproef *TESTed: one judge to rule them all*](https://lib.ugent.be/catalog/rug01:002836313):
-deze kunnen nuttig zijn om het hoe en waarom te beantwoorden, maar zijn niet strikt nodig voor het implementeren van
+dit kan nuttig zijn om het hoe en waarom te beantwoorden, maar zijn niet strikt nodig voor het implementeren van
 een programmeertaal.
 Ook de bestaande configuraties zijn een grote bron van informatie, zeker als het op syntaxis aankomt.
 Een voorbeeld hiervan zijn de Mako-sjablonen.
@@ -1126,7 +1116,7 @@ waarvoor er verschillende oefeningen opgelost moeten worden.
 
 ## Stabiliteit van TESTed
 Met stabiliteit wordt hier bedoeld hoe weinig er bij het toevoegen van een nieuwe programmeertaal of het opstellen van
-nieuwe soorten oefeningen nog veranderd moet worden aan zelf, configuraties van bestaande programmeertalen en de
+nieuwe soorten oefeningen nog veranderd moet worden aan TESTed zelf, configuraties van bestaande programmeertalen en de
 testplannen van bestaande oefeningen.
 
 We kunnen de interne werking van in grote lijnen verdelen in drie onderdelen:
@@ -1157,7 +1147,7 @@ Daar is het juist de bedoeling dat nieuwe programmeertalen bijkomende geavanceer
 Als een nieuwe programmeertaal bijvoorbeeld ondersteuning wil bieden voor oneindige generators
 (bijvoorbeeld een functie die getallen blijft teruggeven), dan is dat mogelijk.
 Er zullen ook geen wijzigingen nodig zijn aan de bestaande programmeertalen bij het toevoegen van nieuwe gegevenstypes.
-Aan de testplannen zelf (dus niet het formaat, maar de -bestanden van de oefeningen) verwachten we niet dat er
+Aan de testplannen zelf (dus niet het formaat, maar de JSON-bestanden van de oefeningen) verwachten we niet dat er
 wijzigingen nodig zijn.
 
 Het omgekeerde is ook waar: we verwachten dat er wijzigingen nodig kunnen zijn aan de configuratieklasse en/of de
