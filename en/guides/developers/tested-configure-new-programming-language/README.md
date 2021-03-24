@@ -13,7 +13,7 @@ We doen dat door te beschrijven hoe de programmeertaal C toegevoegd is.
 Enkele nuttige links die hierbij kunnen helpen zijn:
 
 - Bestaande configuraties: <https://github.com/dodona-edu/universal-judge/tree/master/tested/languages>
-- Test oefeningen: <https://github.com/dodona-edu/universal-judge/tree/master/exercise>
+- Testoefeningen: <https://github.com/dodona-edu/universal-judge/tree/master/exercise>
 
 In deze referentie worden regelmatig codebestanden getoond, verspreid over meerdere codefragmenten
 (bijvoorbeeld eerst `n` regels, daarna wat tekst en dan pas de rest van de regels).
