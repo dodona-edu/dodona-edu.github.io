@@ -33,10 +33,10 @@ We zullen eerst een overzicht zien van de constanten die gebruikt kunnen worden 
   Deze zal voor HTML geëscaped worden.
   Bijvoorbeeld: `>>>` voor Python.
 - **language en language_html**:
-  Deze constanten bevat de naam van de programmeertaal waarvoor een instantie gegenereerd wordt. 
+  Deze constanten bevatten de naam van de programmeertaal waarvoor een instantie gegenereerd wordt. 
   `language_html` is de HTML-veilige versie van `language`.
 - **namespace en namespace_html**:
-  Deze constanten bevat de `namespace` van de code.
+  Deze constanten bevatten de `namespace` van de code.
   Deze kan meegegeven worden als parameter aan het conversieprogramma.
   `namespace_html` is de HTML-veilige versie van `namespace`.
 
