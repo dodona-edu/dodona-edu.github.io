@@ -395,7 +395,7 @@ Maak eerst het configuratiebestand aan: `tested/languages/c/types.json`.
 
 #### Haakjes
 De gebruikte haakjes voor collectiedatatypes.
-Bijvoorbeeld: `[]` voor de Python-collecties, `<>` voor de generieke Java-objecten (behalve arrays die `[]` gebruiken).
+Bijvoorbeeld: `[]` voor de Python-collecties, `<>` voor de generieke Java-objecten (behalve arrays, die `[]` gebruiken).
 C in TESTed ondersteunt geen collecties, dus zullen we Java en Haskell als voorbeeld nemen.
 - `brackets.open`: Generiek openingshaakje
 - `brackets.clase`: Generiek sluitingshaakje
