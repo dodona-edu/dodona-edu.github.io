@@ -34,7 +34,8 @@ universal-judge
 ```
 
 ### Dependencies
-De dependencies van zelf zijn opgelijst in een `requirements.txt`-bestand, zoals gebruikelijk is bij Python-projecten.
+De dependencies van TESTed zelf zijn opgelijst in een `requirements.txt`-bestand, zoals gebruikelijk is bij
+Python-projecten.
 Vereisten voor het uitvoeren van tests staan in `requirements-test.txt`.
 TESTed gebruikt Python 3.9 of later.
 Het installeren van deze vereisten gebeurt op de gebruikelijke manier:
