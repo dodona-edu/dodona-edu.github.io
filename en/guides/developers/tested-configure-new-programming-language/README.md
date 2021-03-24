@@ -364,7 +364,7 @@ Sommige talen leggen restricties op met betrekking tot de datatypes voor verzame
 Hiervoor moeten er twee lijsten worden opgegeven worden: `restrictions.map_key` en `restrictions.set`.
 De inhoud van de lijsten zijn de `supported` datatypes van TESTed die gebruikt kunnen worden, daarnaast kun je opgeven
 of functieoproepen (`function_calls`) en variabelen (`identifiers`) gebruikt kunnen worden.
-De `reduced` geavanceerde datatypes zullen afgeleidt worden, als de basisdatatypes ondersteund worden.
+De `reduced` geavanceerde datatypes zullen afgeleid worden, als de basisdatatypes ondersteund worden.
 
 C ondersteunt geen collecties, dus zijn beide lijst leeg.
 ```json
