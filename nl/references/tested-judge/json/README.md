@@ -1671,6 +1671,12 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
 },
 ```
 
+::: warning Opmerking
+Wanneer je een functie wil testen die geen returnwaarde heeft (niet de waarde [NothingType](#nothingtype),
+bijvoorbeeld `void` in Java),
+moet het uitvoerkanaal een [EmptyChannel](#emptychannel) of [IgnoreChannel](#ignoredchannel) zijn.
+:::
+
 ##### FunctionType
 TESTed heeft 3 functietypes: `function`, `constructor` en `property`.
 - **function**: Een normale functieoproep.

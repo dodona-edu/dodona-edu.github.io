@@ -985,7 +985,7 @@ The *ValueOutputChannel*-object has 2 attributes: `value` and `evaluator`
 ## Evaluators
 
 ### GenericExceptionEvaluator
-The **GenericExceptionEvaluator*-object contains all information that is needed to use the builtin evaluator for
+The *GenericExceptionEvaluator*-object contains all information that is needed to use the builtin evaluator for
 exceptions.
 :::warning Remark
 This evaluator can only evaluate fault messages and not exception types.
@@ -1652,6 +1652,13 @@ The *FunctionCall*-object has 4 attributes: `type`, `name`, `namespace`, and `ar
 },
 ```
 
+::: warning Remark
+When you want to test a function that has no return value (not the value [NothingType](#nothingtype),
+`void` in Java by example),
+must the output channel be [EmptyChannel](#emptychannel) or [IgnoreChannel](#ignoredchannel).
+:::
+
+
 ##### FunctionType
 TESTed has 3 function types: `function`, `constructor` and `property`.
 - **function**: A normal function call.
@@ -1672,9 +1679,9 @@ TESTed has 3 function types: `function`, `constructor` and `property`.
 ```
 
 ##### NamedArguments
-The **NamedArgument**-object is used for the named arguments of a function call.
+The *NamedArgument*-object is used for the named arguments of a function call.
 
-The **NamedArguments**-object has 2 attributes: `name` and `value`.
+The *NamedArguments*-object has 2 attributes: `name` and `value`.
 - **name**: The name of the argument.
 - **value**: The value of the argument, which must be an [expression](#expressions).
 
