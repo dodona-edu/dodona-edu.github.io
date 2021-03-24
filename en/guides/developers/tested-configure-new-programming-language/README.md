@@ -9,7 +9,7 @@ For now, this page is only available in Dutch. Sorry!
 
 # Configuratie van een programmeertaal
 In deze handleiding wordt in detail uitgelegd hoe een nieuwe programmeertaal aan TESTed kan toegevoegd worden.
-We doen dat door te beschrijven hoe de programmeertaal C aan toegevoegd is.
+We doen dat door te beschrijven hoe de programmeertaal C toegevoegd is.
 Enkele nuttige links en verwijzingen hierbij zijn:
 
 - Bestaande configuraties: <https://github.com/dodona-edu/universal-judge/tree/master/tested/languages>
