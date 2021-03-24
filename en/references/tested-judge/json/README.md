@@ -1585,7 +1585,7 @@ The *FunctionCall*-object has 4 attributes: `type`, `name`, `namespace`, and `ar
   When the namespace isn't given, the function is a global function.
   When the namespace is given, the namespace will be mostly an object variable, but that will not always be the case.
   :::
-- **arguments**: A list of [expressions](#expressions) and [NamedArguments](#namedargument) that are the arguments for
+- **arguments**: A list of [expressions](#expressions) and [NamedArguments](#namedarguments) that are the arguments for
   the function calls.
 
 ```json
