@@ -329,6 +329,11 @@ Either you use the `return` or you use` return-raw`.
   The YAML data types will be translated to the basic data types of TESTed.
 - **return-raw**:
   The expected value of the expression is noted using the same grammar as for statements and expressions (see section [Statements, expressions and return-raw](#statements-expressions-and-return-raw)).
+
+::: warning Remark
+When you want to test a function that has no return value (not the value `null`, `void` in Java by example),
+you may not specify `return` or` return-raw`.
+:::
   
 ## Variable assignments
 We will now look at a test plan where we also assign values to a variable.

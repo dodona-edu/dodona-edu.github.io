@@ -329,7 +329,13 @@ Ofwel gebruikt je het `return`, ofwel gebruik je `return-raw`.
   De YAML-datatypes zullen vertaald worden naar de basisdatatypes van TESTed.
 - **return-raw**:
   Hierbij wordt de verwachte waarde van de expressie genoteerd met behulp van dezelfde grammatica als voor statements en expressies (zie paragraaf [Statements, expressies en return-raw](#statements-expressies-en-return-raw)).
-  
+
+::: warning Opmerking
+Wanneer je een functie wil testen die geen returnwaarde heeft (niet de waarde `null`,
+bijvoorbeeld `void` in Java),
+mag je geen `return` of `return-raw` opgeven.
+:::
+
 ## Variabeletoekenningen
 We zullen nu een testplan bekijken waarbij we ook waarden aan een variabele toekennen.
 Hiervoor maken we gebruik van de voorbeeld oefening [Objects](https://github.com/dodona-edu/universal-judge/tree/master/exercise/objects) van TESTed.
