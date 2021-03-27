@@ -677,7 +677,7 @@ Forgetting hyphen and space by list elements.
 Or using it to much, which leads to much more elements than expected.
 Example:
 
-Fault:
+Wrong:
 ```yaml
 - tab: "Feedback"
 - contexts:
@@ -687,7 +687,7 @@ Fault:
     stdout: "output-1"
 ```
 
-Corrected:
+Correct:
 ```yaml
 - tab: "Feedback"
   contexts:
