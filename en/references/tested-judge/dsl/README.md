@@ -84,7 +84,7 @@ Objects consist of key-value pairs, where the **key** is a string without whites
 The values could be other objects, but also strings, numbers, logical values and lists.
 
 #### Lists
-When you use lists in `yaml`, the **first key** of each object in the list must be **prepended** by an **underscore** followed by a **space**.
+When you use lists in `yaml`, the **first key** of each object in the list must be **prepended** by a **dash** followed by a **space**.
 
 #### Testplan
 The structure of the testplans is a list at the highest level, which contains tab-objects.
