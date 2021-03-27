@@ -958,7 +958,3 @@ $ python3 -m tested.translate_dsl --dsl testplan.yaml --json testplan.json
 # Positional arguments
 $ python3 -m tested.translate_dsl testplan.yaml testplan.json
 ```
-
-
-
-
