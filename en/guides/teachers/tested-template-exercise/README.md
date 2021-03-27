@@ -1,66 +1,64 @@
 ---
-title: "Template exercise TESTed"
-description: "Tutorial: Template exercise TESTed"
+title: "Exercise templates for TESTed"
+description: "Tutorial: Exercise template for TESTed"
 ---
 
 ::: warning Remark
-Template exercise are used when you want to offer one exercise in multiple programming languages.
+Exercise templates are used when you want to offer one exercise in multiple programming languages.
 :::
 
 # Template exercise TESTed
-The TESTed judge is a programming language independent judge.
-This means that written test plans are independent of the programming language of the solution.
-More information see [TESTed judge](../../../references/tested-judge/).
+TESTed is a polyglot judge, meaning it supports multiple programming languages.
+This is achieved by using programming language independent exercises: you write one exercise, which is then solvable in multiple programming languages (see the [reference on TESTed](../../../references/tested-judge/) for more information).
 
-Because of the fact that the judge is programming language independent,
-you only have to write once the testplan and the description.
-Then you can generate an instance foreach programming language.
+However, Dodona still expects each exercise to be for one specific programming language.
+As a solution, this guide introduces the concept of an exercise template.
+This is a programming language independent exercise description, which is converted to a programming language specific (and Dodona compatible) exercise by TESTed.
 
-## 1. Creating Git repository
-The exercises for Dodona must be located in a Git repository.
-The description how to create a new Git repository for Dodona,
-could be found at [Creating a new exercise repo](../new-exercise-repo).
+## 1. Create a Git repository
+Exercise templates must located in a git repository, just as normal exercises.
+Refer to the [guide on create exercise repositories](../new-exercise-repo) for more information.
 
 ## 2. Directory structure
-The directory structure for a template exercise of TESTed corresponds to a large extent with the
+The directory structure for an exercise template for TESTed corresponds to a large extent with the
 [expected structure by Dodona](../../../references/exercise-directory-structure).
-For the template exercises, the file `config.json` is renamed to `config.template.json`.
+For the exercise templates, the file `config.json` is renamed to `config.template.json`.
 The most important reason for this is that we don't want to display the template as exercise at Dodona.
 
 ### Example minimal directory structure
 ```text
 +-- template/exercise/directory
-|   +-- config.template.json       # Configuration template exercise
+|   +-- config.template.json       # Template configuration
 |   +-- evaluation                 #
 |   |   +-- plan.yaml              # DSL-testplan
 |   +-- description                #
-|   |   +-- description.nl.md.mako # Markdown template exercise Dutch
-|   |   +-- description.en.md.mako # Markdown template exercise English
+|   |   +-- description.nl.md.mako # Markdown exercise template for Dutch
+|   |   +-- description.en.md.mako # Markdown exercise template for English
 :   :   :
 ```
 
-## 3. Create testplan
-To offer a programming exercise, a test plan must be written.
-We assume that this test plan is in the file `evaluation/plan.yaml`. 
-The documentation to create a test plan can be found at  [TESTed DSL test plans](../../../references/tested-judge/dsl).
+## 3. Create a testplan
+The tests for an exercise for TESTed are written in a testplan.
+The documentation for creating testplans can be found at  [TESTed DSL test plans](../../../references/tested-judge/dsl).
+We assume that this testplan is located at `evaluation/plan.yaml` in the repository. 
 
 ::: tip Hint for advanced users
-The template exercise can also make use of the [TESTed JSON test plans](../../../references/tested-judge/json).
+The exercise templates can also make use of the [advanced testplans](../../../references/tested-judge/json).
 :::
 
-## 4. Create template descriptions
-The template descriptions will be written in the Mako template files,
-see [TESTed template descriptions](../../../references/tested-judge/template-description).
-These template descriptions must be located in the files `description/description.nl.md.mako` (Dutch) and
+## 4. Create the description templates
+The description templates will be written using the Mako templating system.
+See [TESTed template descriptions](../../../references/tested-judge/template-description).
+These description templates must be located at `description/description.nl.md.mako` (Dutch) and
 `description/description.en.md.mako` (English).
 
 ::: tip Hint
-We recommend to write the descriptions in Markdown,
+We recommend writing the descriptions in Markdown,
 see [Exercise descriptions](../../../references/exercise-description).
 :::
 
-## 5. Configuring the template exercise
-How to configure an exercise is explained in [Exercise configuration](../../../references/exercise-config).
+## 5. Configuring the exercise templates
+The general configuration of an exercise is explained in [Exercise configuration](../../../references/exercise-config).
 We will see the specific configuration for TESTed in `config.template.json`.
 
 ```json
@@ -82,7 +80,7 @@ We will see the specific configuration for TESTed in `config.template.json`.
 ```
 
 The `access`-field and the `description`-object are mandatory by TESTed.
-The programming languages will be add to description names when an instance is generated.
+The programming languages will be added to description names when an instance is generated.
 Dodona also requires the `programming_language` field,
 but this field will be automatically filled when generating an instance.
 
@@ -91,34 +89,32 @@ This field determines, which test plan will be used by TESTed.
 This test plan will also be used to determine the `namespace` used by the template descriptions,
 also it will be used to determine for which programming languages an instances may be generated.
 
-## 6. Generating instances
+## 6. Generate the exercise instances
 ::: warning Remark
-At this moment Dodona requires for each programming language an individual exercies.
+Dodona currently requires a separate exercise for each programming language.
 
-In the future we want the change this,
-so that you only have to add one exercise to support multiple programming languages.
+We're exploring changing this in the future, with the goal of supporting multiple programming languages for the same exercise on Dodona.
 :::
 
-After drafting the template exercise, we can instantiate it for all required programming languages.
-A Python script that is part of TESTed can be used for this.
-This script could be found at the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
+After writing the exercise template, we can use it to generate the programming language specific exercises.
+TESTed provides a Python script specifically created to do this.
+This script can be found in the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
 The script can be executed with the following command in the root directory of the GitHub repository:
 ```shell
 $ python3 -m tested.instantiate_exercise "template/exercise/directory" "instance/exercise/directory"
 ```
 
 This script will, for the template exercise in the directory `template/exercise/directory`,
-generate foreach programming language an instance in the directory `instance/exercise/directory/{programming_language}`.
+generate a programming language specific exercise in the directory `instance/exercise/directory/{programming_language}` for each supported programming language.
 
 This script has some optional options:
 - `-i`, `--programming_languages_included`:
-  List of programming languages for which an instance may be generated, if the testplan allowes this.
-  This are all programming languages of TESTed by default.
+  List of programming languages for which an exercise may be generated, if the testplan allows this.
+  By default, an exercise is generated for each programming language supported by TESTed.
 - `-e`, `--programming_languages_excluded`:
-  List of programming languages for which no instance may be generated.
-  This is not a single programming language by default.
+  List of programming languages for which no exercise may be generated.
+  Default empty.
 - `-n`, `--i18n`: The default natural language for the descriptions, when this can't be derived from the file name.
   Options ‘en’ (default) and ‘nl’.
-- `-H`, `--human_readable`: The generated JSON-testplan from the DSL-testplan, must be human-readable.
-- `-b`, `--backup_descriptions`: Keep the old `description` directory (renamed to `description.bak`).
-
+- `-H`, `--human_readable`: The generated JSON-testplan from the DSL-testplan must be human-readable.
+- `-b`, `--backup_descriptions`: Keep existing exercise descriptions. The `description` directory will be renamed to `description.bak`.
