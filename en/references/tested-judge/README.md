@@ -10,7 +10,7 @@ Here do you find all information for the use of the **TESTed** judge.
 
 ## Suppported programming languages
 
-**TESTed** support at this moment 6 programming languages:
+**TESTed** supports 6 programming languages:
 
 * C (gcc 8.3.0)
 * Haskell (ghc 8.4.4)
