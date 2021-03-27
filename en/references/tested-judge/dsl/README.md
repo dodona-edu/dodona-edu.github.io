@@ -4,9 +4,9 @@ description: "TESTed DSL testplans"
 ---
 
 # Documentation TESTed DSL
-A DSL-testplan for TESTed is described in the YAML-syntax.
-The DSL follows in large lines the structure how Dodona the tests described.
-The following codefragment describes the structure of the DSL-testplans.
+A DSL-testplan for TESTed is written in YAML.
+The structure of the DSL is very similar to the structure of the tests used in Dodona.
+The following code fragment describes the structure of the DSL-testplans.
 The use of square brackets indicates a list of objects.
 
 ```text
@@ -53,11 +53,11 @@ The use of square brackets indicates a list of objects.
 └ ... # identical to tabs above
 ```
 
-In the following paragraphs will we describe the DSL with examples.
+In the following sections will we describe the DSL with examples.
 
 ## Simple input-output
-The first kind of exercises are input-output exercises.
-We will describe an example testplan of an exercise that expects one line at standard input and copied that line to standard output.
+A first type of exercises are input-output exercises.
+As an example, we use the "echo" exercise: solutions should read data from stdin and copy it to stdout.
 
 ```yaml
 - tab: "Feedback"
@@ -68,8 +68,9 @@ We will describe an example testplan of an exercise that expects one line at sta
     stdout: "invoertekst-1"
 ```
 
-The following figure visualised the previous codefragment at Dodona.
-This figure has extra annotations of the form `[0].testcases[0].stdin`, these annotations describes a path to an object in the testplan.
+The following figure shows how the feedback from the previous testplan is shown in Dodona.
+The figure has been augmented with annotations of the form `[0].testcases[0].stdin`.
+These annotations describe a path to an object in the testplan.
 Interpretation: `[0]` the first tab, `contexts[0]` the first context, `stdin` the given input at standard input and `stdout` the expected output at standard output.
 
 ![Visualisation Dodona echo exercise](./echo.png)
@@ -78,8 +79,8 @@ Interpretation: `[0]` the first tab, `contexts[0]` the first context, `stdin` th
 
 #### Objects
 `yaml` make use of objects to describe data.
-It uses indentation levels to **nested** objects in another.
-Objects exists of key-valuepairs, thereby is the **key** a string without whitespace and must be **terminated with a colon**.
+It uses indentation levels to create **nested** objects.
+Objects consist of key-value pairs, where the **key** is a string without whitespace, and must be **terminated with a colon**.
 The values could be other objects, but also strings, numbers, logical values and lists.
 
 #### Lists
@@ -95,7 +96,7 @@ The second key of a tab is `contexts`, this one expects a list of all contexts t
 
 #### Context
 A context is an independent executed test-sequence.
-At this moment we only have seen an example of input-output tests.
+At this moment we have only seen an example for input-output tests.
 
 ##### stdin
 The keyword `stdin` is used to provide the standard input for a testcase.
@@ -136,20 +137,20 @@ Because of a display problem at Dodona, are the newlines in the description in t
 ### Description
 
 #### Multi-line
-As visible in the testplan from the codefragment, has YAML multiple ways to describe multi-line strings.
+As visible in the testplan from the codefragment, YAML has multiple ways to describe multi-line strings.
 A first is the classic escape-string and a second notation uses ‘|’.
-The class escape-string gives the most control about whitespace to the user.
+The class escape-string gives the most control over whitespace.
 
 ::: tip Hint
-More information about multi-line in paragraph [Known traps](#known-traps).
+More information about multi-line in section [Known traps](#known-traps).
 :::
 
 #### Multi-tab
 As visible in the example, can you also use multiple tabs.
 
-## Commandline-arguments, standarderror and exit code
-Now, we will add commandline-arguments, standarderror and exit code to the testplan.
-Hereby we will look for a fictive exercises for a simple calculator with integers.
+## Command line arguments, standard error and exit code
+Now, we will add command line arguments, standarderror and exit code to the testplan.
+As example, we'll use a fictional exercise where the goal is a simple calculator with integers.
 
 ```yaml
 - tab: "Sum"
@@ -183,7 +184,7 @@ Hereby we will look for a fictive exercises for a simple calculator with integer
 ### Description
 
 #### arguments
-The arguments are a list of commandline-arguments that must be passed to the program for the testcase.
+The arguments are a list of command line arguments that must be passed to the program for the testcase.
 
 ::: tip Hint
 We advise using strings for these arguments, however the textual types are also supported.
@@ -194,7 +195,7 @@ This keyword defines the expected output for the testcase.
 This is analogous to `stderr`.
 
 #### exit_code
-Hereby must you give the expected exit code of the program for the testcase.
+Used to provide the expected exit code of the program for the testcase.
 This must be an integer.
 
 ## Configuration options
@@ -229,26 +230,26 @@ tabs:
 ### Description
 
 #### namespace
-Default will TESTed use `submission` as namespace for an exercise.
-For Java this must also be the name of the class.
-When you, as teacher, expect that students must write a class, you would like to define the namespace yourself.
-So you can set the namespace for this purpose.
-When you set the namespace, you best use `snake_case` so that foreach programming language the correct conventions.
+By default, TESTed will use `submission` as the namespace for an exercise.
+How this namespace is used, depends on the programming language.
+For example, in Java this must be the name of the class of the solution submitted by the students.
+You might want to change this to something that makes sense for the exercise.
+You should use `snake_case` for the submission. TESTed will automatically convert it to the conventions of each programming language. For example, the namespace `result_calculator` will require Java submissions to contain the class `ResultCalculator`.
 
 #### disable_optimizations
-TESTed will use some default optimization techniques to optimize the execution time.
+By default, TESTed will use some optimization techniques to reduce the execution time.
 However, these optimization techniques could cause the optimized code to lead to unwanted results.
-Therefore can the user disable these optimizations for the entire testplan, must this be necessary.
+Therefore can the user disable these optimizations for the entire testplan, should this be necessary.
 
 #### tabs
-When jou wanted to give `namespace`, `disable_optimizations` or global configuration, you must use the keyword `tabs` the pass the list of tabs.
+When you want to provide `namespace`, `disable_optimizations` or global configuration options, you must use the keyword `tabs` the pass the list of tabs.
 
 #### Textual types
-The second testcase in the testplan for __How smart are you?__, illustrate that not only strings could be used for standard input, output or error.
+The second testcase in the testplan for __How smart are you?__, illustrates that not only strings can be used for standard input, output or error.
 In this case it where integers, but also logical values and rational numbers are supported.
 
 ::: warning Remark
-To avoid problems, we recommended to use strings for standard input, output and error.
+To avoid problems, we recommend to use strings for standard input, output and error.
 This is caused by the fact that the textual types will be converted to strings.
 For more information about the translation of textual types, see paragraph [Known traps](#known-traps).
 :::
@@ -260,8 +261,7 @@ These options are:
 - **ignoreWhitespace**:
   Ignore whitespace in prefix and suffix of the text by comparing the output.
 - **caseInsensitive**:
-  Compare the output case insensitive.
-  So without making a distinction between uppercase and lowercase letters.
+Ignore the difference between uppercase and lowercase when comparing the output.
 - **tryFloatingPoint**:
   Try to compare the output as floats.
 - **applyRounding**:
@@ -270,12 +270,12 @@ These options are:
   The number of decimals after the point, that you want to keep after rounding.
   This is mandatory when you want to apply rounding.
   
-You can pass the configuration options at the global level, foreach tab, context and/or specific for each output.
+You can pass the configuration options at the global level, for each tab, context and/or specific for each output.
 The configuration options must be accumulated, the option at to must specific level will be kept.
 
 - **Global**:
-  Globally the options must be passed foreach output stream, in the object by the optional key `config`.
-  This object has two keys `stdout` (options for standard output) and `stderr` (options for standarderror), whereby at least on key must be passed.
+  Globally the options must be passed for each output stream, in the object by the optional key `config`.
+  This object has two keys `stdout` (options for standard output) and `stderr` (options for standarderror), where at least on key must be passed.
 - **Tab**:
   Identical to __global__.
 - **Context**:
@@ -314,10 +314,10 @@ The testplan that we will examine is for the exercise [Rail fence cipher](https:
 ### Description
 
 #### Expression
-By function call tests is the input a statement or expresssion (both can use one of the following keywords: `expression` or `statement`) in a testcase for a context.
+With function call tests, the input is a statement or expression (both can use one of the following keywords: `expression` or `statement`) in a testcase for a context.
 
 ::: tip Hint
-Statements and expressions are discussed in detail in paragraph [Statements, expressions and return-raw](#statements-expressions-and-return-raw).
+Statements and expressions are discussed in detail in section [Statements, expressions and return-raw](#statements-expressions-and-return-raw).
 :::
 
 #### Return values
@@ -336,7 +336,7 @@ you may not specify `return` or` return-raw`.
 :::
   
 ## Variable assignments
-We will now look at a test plan where we also assign values to a variable.
+We will now look at a testplan where we also assign values to a variable.
 For this we use the example exercise [Objects](https://github.com/dodona-edu/universal-judge/tree/master/exercise/objects) from TESTed.
 
 ```yaml
@@ -356,20 +356,20 @@ tabs:
 
 ### Description
 In a context can we define multiple testcase, that can depends on another.
-In this example we first create an object, after which we will call functions on these objects.
+In this example we first create an object, after which we will call functions on this object.
 
-This is the most important reason to make a difference between contexts and testcases.
-The contexts could be executed independent, while testcase in a context could be dependent.
+This is the most important reason to differentiate between contexts and testcases.
+The contexts could be executed independently, while testcases in a context could be dependent.
 
 #### Testcases
 To use multiple testcases in a context, you must use the keyword `testcases`.
-This is a list of sequential dependent testcases.
+This is a list of sequential testcases: you may depend on the order of the testcases.
 
-If you want to evaluate one/more function call test(s) in addition to the code itself (or `main` method), you must also use the list of testcases.
+If you want to evaluate one or more function call test(s) in addition to the code itself (or `main` method), you must also use the list of testcases.
 
-## Fault messages
-A concept often used in programming languages are errors that can be thrown up.
-Our testplans can expect error messages, not to be confused with error types (which are programming language dependent).
+## Error messages
+A concept often used in programming languages are errors that can be raised.
+You can specify the expected error messages in testplans, not to be confused with error types (which are programming language dependent).
 For this we are looking at a testplan for the "division" function.
 
 ```yaml
@@ -385,9 +385,9 @@ For this we are looking at a testplan for the "division" function.
 This keyword expects the expected fault message (as textual type) for a testcase.
 
 ## File linking
-In some programming exercises are the students expected to read input from files.
+In some programming exercises the students are expected to read input from files.
 In the evaluation feedback you often want to allow the student to see the content of these files.
-Hereby can you add list of files that must be linked at the context and/or testcase level.
+You can add a list of files that must be linked at the context and/or testcase level.
 
 ```yaml
 - tab: "Count"
@@ -413,7 +413,7 @@ Name of the file.
 The relative path to the file that is located in the description folder of the exercise.
 
 ## Hidden tabs
-Dodona support to hide tabs.
+Dodona supports hiding tabs.
 However, it is visible when this tab contains errors.
 For this you can give the option `hidden` to a tab that expects a Boolean value.
 
@@ -433,9 +433,9 @@ For this you can give the option `hidden` to a tab that expects a Boolean value.
 ![Fault in hidden tab](./hidden.png)
 
 ## Combination of function calls and input-output
-We have already seen testplans for either input-output or function calls.
+We have already seen testplans for both input-output or function calls.
 We will now combine these concepts in one testplan.
-We will use a basic calculator example for this testplan.
+We will use the basic calculator example for this testplan.
 YAML also support comments.
 The line is preceded by a pound sign (#).
 
@@ -532,8 +532,8 @@ The two boolean values are `true` and `false`.
 `null` and `undefined` represent both null-values.
 
 #### Strings
-Text or strings must be noted between double quotes, where the special characters are escaped using a backslash.
-In the table below is there an overview of these special characters.
+Text or strings must be written between double quotes, where the special characters are escaped using a backslash.
+The table below is an overview of these special characters.
 
 | Description | Escape sequence |
 | ------------ | ---------------- |
@@ -555,7 +555,7 @@ In the table below is there an overview of these special characters.
 
 #### Collections
 There are multiple data collections in TESTed: sequence, sets, tuples and dictionaires.
-When you use collections in expressions and statements can the values in these collection contain both values and expressions.
+When you use collections in expressions and statements, the values in these collection can contain both values and expressions.
 For the **return values** can these collections only contains values and **no expressions**.
 In addition, the values in these collections can be heterogeneous (different data types).
 
@@ -583,7 +583,7 @@ Some examples:
 
 ##### Sets
 An unordered dynamic collection of unique invariable values.
-These are denoted with help of accolades.
+These are denoted with help of curly brackets.
 Empty sets must be notated in a specific way because the dictionaries als use curly brackets for notation.
 Some examples:
 ```javascript
@@ -593,12 +593,12 @@ Some examples:
 ```
 
 ::: warning Remark
-Not every programming language support each datatype as set element.
+Not every programming language supports each datatype as set element.
 ::::
 
 ##### Dictionaries
 An unordered dynamic collection of key-value pairs.
-Hereby must the keys be invariable, the values could be both invariable and variable.
+The keys must be invariable, the values could be both invariable and variable.
 Like the sets are dictionaries denoted with curly brackets, but dictionaries could be empty.
 Both the keys and values can be of any datatype.
 Some examples:
@@ -610,7 +610,7 @@ Some examples:
 ```
 
 ::: warning Remark
-Not every programming language support each datatype as key.
+Not every programming language supports each datatype as key.
 :::
 
 #### Cast
@@ -624,7 +624,7 @@ An empty set by examples kan be denoted with one of the following notations:
 ```
 
 ### Functions
-The arguments of a function call are notated within round brackets.
+The arguments of a function call are notated within parentheses.
 A function call can be both be a global function, or an object function.
 Some examples:
 ```javascript
@@ -645,8 +645,8 @@ new object.Pair("Pair", 8.4e-5)
 By expressions we mean values, function calls, constructors and variables (and properties).
 
 ### Variable assignments
-If we want to use variables, we want to assign values to these variables.
-For constructors and values can the datatype be derived and must not be specified.
+If we want to use variables, we need to assign values to these variables.
+For constructors and values, the datatype can be derived and must not be specified.
 For function calls, however, the data type must be specified explicitly.
 Some examples:
 ```javascript
@@ -659,15 +659,15 @@ number = 5 :: int8
 ## Known traps
 
 ### Keys
-Forgetting a colon after the keynames in the YAML-syntax.
+Forgetting a colon after the key names in YAML.
 Example:
 
-Fault:
+Wrong:
 ```yaml
 - tab "Feedback"
 ```
 
-Corrected:
+Correct:
 ```yaml
 - tab: "Feedback"
 ```
@@ -699,17 +699,17 @@ Corrected:
 
 ### Text
 There are multiple ways to denote strings in YAML.
-The different notations have different ways to handle whitespace.
+The different notations handle whitespace in different ways.
 ::: tip Hint
-To avoid confusion we recommend using the double quotes' notation when you want to pass textual values.
-Whereby you can escape special characters, for example newlines.
+To avoid confusion we recommend using the double quotes notation when you want to pass textual values.
+Using this notation, you can escape special characters, for example newlines.
 When you want to specify statements, expressions and raw return-values, we recommend to use single quotes, because it doesn't escape special characters.
 :::
 Below you find an overview of all YAML strings notations, if you want to use another.
 
 #### Single quotes
 By the single quotes, no character will be escaped.
-Except for the single quote itself, that must be escaped by repeating the symbol.
+Except for the single quote itself, which must be escaped by repeating the symbol.
 Example YAML:
 ```yaml
 single: 'data''\ndata'
@@ -721,7 +721,7 @@ Translation JSON:
 ```
 
 #### Double quotes
-By the double quotes, characters will be escaped.
+Using double quotes, special characters need to be escaped.
 Example YAML:
 ```yaml
 double: "data\ndata"
@@ -733,7 +733,7 @@ Translate JSON:
 ```
 
 #### Unquoted
-When you use unqouted strings, no character will be escaped.
+When using unquoted strings, no character escaping is necessary.
 Example YAML:
 ```yaml
 unquoted: data \ data
@@ -745,8 +745,8 @@ Translation JSON:
 ```
 
 #### Multi-line unquoted
-By multi-line unquoted string, will a single newline character be replaced with a space and will the whitespace around a line be trimmed.
-A complet empty line by replaced with a newline character.
+Using multi-line unquoted string, a single newline character will be replaced with a space and the whitespace around a line will be trimmed.
+A completely empty line by replaced with a newline character.
 Example YAML:
 ```yaml
 multi unquoted:
@@ -804,8 +804,8 @@ Translation JSON:
 ```
 
 #### literal block
-YAML support multiple bloknotations, whereby newlines are kept.
-Hereby will the indentation, that deviates from the alignment not be trimmed away.
+YAML supports multiple block notations, where newlines are kept.
+In this mode, indentation that deviates from the alignment not be trimmed.
 There will be also no escaping.
 
 ##### Default (`|`)
@@ -845,7 +845,7 @@ Translation JSON:
 ```
 
 ##### Trim (`|-`)
-Hereby will each newline at the end be removed and there will be no newline at the end of the string.
+Here each newline at the end will be removed and there will be no newline at the end of the string.
 Example YAML:
 ```yaml
 literal: |-
@@ -941,13 +941,13 @@ stdin: "63"
 ```
 
 ### Function name
-De style convention for function names in the DSL is `snake_case`.
-When you deviate from this convention, it can't be guaranteed that the correct style convention for a specific programming languages could be followed.
+The convention for function names in the DSL is `snake_case`.
+When you deviate from this convention, it can't be guaranteed that the correct style convention for a specific programming languages will be used.
 
 ## Convert
 To translate DSL-testplans to JSON-testplans for TESTed, a Python script can be used, which is part of TESTed.
-This script could be found on the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
-The script could be execute with one of the following commands (and combinations) in the root directory of the GitHub repository:
+This script can be found on the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
+The script can be execute with one of the following commands (and combinations) in the root directory of the GitHub repository:
 ```bash
 # Standard input - standard output
 $ python3 -m tested.translate_dsl < testplan.yaml > testplan.json
@@ -958,7 +958,6 @@ $ python3 -m tested.translate_dsl --dsl testplan.yaml --json testplan.json
 # Positional arguments
 $ python3 -m tested.translate_dsl testplan.yaml testplan.json
 ```
-
 
 
 
