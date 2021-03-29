@@ -48,3 +48,4 @@ Hier vind je alle informatie voor het gebruik van de **TESTed** judge.
   
 ## Handleidingen
 * [Configureren nieuwe programmeertaal](../../guides/developers/tested-configure-new-programming-language)
+* [Sjabloonoefeningen](../../guides/teachers/tested-template-exercise)

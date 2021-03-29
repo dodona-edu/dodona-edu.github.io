@@ -7,7 +7,7 @@ description: "TESTed sjabloonbeschrijvingen"
 Sjabloonopgaven worden gebruikt om één keer een beschrijving op te stellen, waarvan per programmeertaal een instantie
 gegenereerd kan worden met de juiste benamingen van datatypes en stijlconventies.
 
-De sjabloonopgave worden geschreven in de Mako-sjabloonbestanden.
+De sjabloonopgave worden geschreven met het Mako sjablonensysteem.
 TESTed ondersteunde twee opmaaktalen voor de opgaven: Markdown en HTML.
 De opgaven kunnen zowel in het Nederlands, als in het Engels geschreven worden.
 

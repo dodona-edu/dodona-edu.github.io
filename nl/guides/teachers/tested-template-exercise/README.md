@@ -51,7 +51,7 @@ De sjabloonoefeningen kunnen ook gebruikmaken van de
 :::
 
 ## 4. Opstellen sjabloonopgaven
-De sjabloonopgaven worden opgesteld met behulp van Mako sjabloonbestanden,
+De sjabloonopgaven worden geschreven met het Mako sjablonensysteem,
 zie [TESTed sjabloonbeschrijvingen](../../../references/tested-judge/template-description).
 Deze sjabloonopgaven moeten zich bevinden in de bestanden `description/description.nl.md.mako` (nederlands) en
 `description/description.en.md.mako` (engels).

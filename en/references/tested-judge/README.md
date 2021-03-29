@@ -22,7 +22,8 @@ Here do you find all information for the use of the **TESTed** judge.
 ## Documentation
 * [DSL-Testplans](dsl)
 * [JSON-Testplans](json)
-* [Template description](template-description)
+* [Description templates](template-description)
   
 ## Guides
 * [\[nl\] Configure new programming language](../../guides/developers/tested-configure-new-programming-language)
+* [Exercise template](../../guides/teachers/tested-template-exercise)

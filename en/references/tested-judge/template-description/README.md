@@ -1,14 +1,14 @@
 ---
-title: "TESTed template descriptions"
-description: "TESTed template descriptions"
+title: "TESTed description templates"
+description: "TESTed description templates"
 ---
 
-# Documentation template descriptions
-Template descriptions are used to only write once a descriptions.
+# Documentation description templates
+Description templates are used to only write a description once.
 That description can be instantiated foreach programming language that is necessary with the correct names and style
 conventions.
 
-The template descritions are written in the Mako-template files.
+The description templates will be written using the Mako templating system.
 TESTed supported two markup languages for the exercises: Markdown and HTML.
 The descriptions could be both written in English and Dutch.
 
@@ -31,7 +31,7 @@ Which parts of the description should be generated for a programming language?
 First we will look to the constants that could be used in the templates.
 - **prompt**:
   This constant contains the console-prompt-prefix.
-  In the HTML template will it be the escaped version.
+  In the HTML template it will be the escaped version.
   Example: `>>>` for Python.
 - **language and language_html**:
   These constants contains the name of the programming language, wherefore an instance is generated.
@@ -113,7 +113,7 @@ We will again given an overview of all available functions that could be used in
   - **statement** must be used for all input code snippets.
   - **expression** must be used for all return values.
   
-  Both functions expect as string as input.
+  Both functions expect a string as argument.
 
 ### Example
 Now we look at a Markdown example description for Python and JavaScript.
@@ -149,7 +149,7 @@ The content of these code blocks are the same for both markup languages.
 The code snippets must be notated in the mini-programming language of TESTed
 (see [Statements, expressies and return-raw](../dsl/#statements-expressions-and-return-raw)),
 in a Python doctest-style manner.
-The input statements and expressions must be prefixed with the larger than character (`>`), the return values not.
+The input statements and expressions must be prefixed with the _larger than_ character (`>`), the return values not.
 
 To be able to use multiple lines, we look at the balancing of the brackets.
 In addition, you can also explicitly indicate that a statement/expression continues on the next line,
