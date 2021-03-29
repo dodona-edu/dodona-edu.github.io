@@ -21,8 +21,8 @@ Hiervoor zullen we ook partieel het JSON-schema gebruiken.
 Er kunnen voorbeeld JSON-testplannen en evaluators gevonden in de
 [GitHub repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) van TESTed.
 
-## Het toplevel object
-Dit object heeft 2 attributen: `namespace` en `tabs`.
+## Plan
+Het *Plan*-object heeft 2 attributen: `namespace` en `tabs`.
 - **namespace**: De `namespace` is de naam van het bestand van de ingediende oplossing (`<namespace>.<ext>`).
   De `namespace` is ook de namespace in de code.
   Standaard is de namespace `submission`.
@@ -30,7 +30,7 @@ Dit object heeft 2 attributen: `namespace` en `tabs`.
   De namespace wordt het best genoteerd in `snake_case`,
   zodat de juiste stijlconventie per programmeertaal gevolgd kan worden.
   :::
-- **tabs**: Het `tabs` object bevat een lijst met alle [tabbladen](#tabblad) die moet worden uitgevoerd.
+- **tabs**: Het `tabs` object bevat een lijst met alle [tabbladen](#tab) die uitgevoerd moet worden.
 
 ```json
 "Plan": {
@@ -52,11 +52,11 @@ Dit object heeft 2 attributen: `namespace` en `tabs`.
 }
 ```
 
-## Tabblad
+## Tab
 Tabbladen in het testplan komen overeen met de weergave op Dodona.
 Een tabblad bevat een lijst van runs die uitgevoerd moeten worden.
 
-Een tabblad heeft 3 attributen: `name`, `hidden` en `runs`.
+Een *tab*-object heeft 3 attributen: `name`, `hidden` en `runs`.
 - **name**: Hieraan moet de naam meegegeven worden voor het tabblad, zoals deze moet weergegeven worden op Dodona.
 - **hidden**: Heeft aan of het tabblad verborgen moet worden, wanneer alle testgevallen slagen.
 - **runs**: Dit is de lijst van alle [runs](#run) (generereerde uitvoerbare bestanden) die uitgevoerd moeten worden.
@@ -93,8 +93,8 @@ Een tabblad heeft 3 attributen: `name`, `hidden` en `runs`.
 Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten bevat en ook een optioneel testgeval
 kan bevatten die het geschreven programma zelf uitvoert.
 
-De run heeft twee attributen: `run` en `contexts`.
-- **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [De Run](#de-run)).
+Het *run*-object heeft twee attributen: `run` en `contexts`.
+- **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [RunTestcase](#runtestcase)).
 - **contexts**: Deze bevat een lijst van alle [contexten](#context) die uitgevoerd moeten worden.
 
 ```json
@@ -121,11 +121,11 @@ De run heeft twee attributen: `run` en `contexts`.
 },
 ```
 
-## De Run
-De *Run* is het testgeval die het geschreven programma zelf uitvoert.
+## RunTestcase
+Het *RunTestcase*-object is het testgeval die het geschreven programma zelf uitvoert.
 Deze wordt weergegeven als een aparte context op Dodona.
 
-De *Run* heeft 4 attributen: `input`, `output`, `description` en `link_files`.
+Het *RunTestcase*-object heeft 4 attributen: `input`, `output`, `description` en `link_files`.
 - **input**: De [invoergegevens](#runinput) voor het programma.
 - **output**: De [verwachte uitvoer](#runoutput) en evaluators voor het programma.
 - **description**: De beschrijving voor de weergave op Dodona,
@@ -319,7 +319,7 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
 Een context is een lijst van testgevallen die uitgevoerd moeten worden.
 Daarnaast kan een context ook voorbereiden en afsluitende code bevatten die programmeertaal afhankelijk is.
 
-Een context heeft 5 attributen: `testcases`, `before`, `after`, `description` en `link_files`.
+Het *context*-object heeft 5 attributen: `testcases`, `before`, `after`, `description` en `link_files`.
 - **testcases**: De lijst van [testgevallen](#testcase) die geëvalueerd moeten worden.
 - **before** en **after**: Een object waarbij de sleutels de programmeertalen zijn,
   waarbij voorbereidende en/of afstuitende code als [TextData](#textdata) objecten meegegeven worden.
@@ -370,7 +370,7 @@ Een context heeft 5 attributen: `testcases`, `before`, `after`, `description` en
 ## Testcase
 Een testcase is een assignment of expressie die geëvalueerd moet worden.
 
-Een testcase heeft 3 attributen: `input`, `description` en `output`.
+Het *testcase*-object heeft 3 attributen: `input`, `description` en `output`.
 - **input**: Het invoer statement of expressie, zie [Statements en expressies](#statements-en-expressies).
 - **description**: De beschrijving voor de weergave op Dodona,
   wanneer de `description` niet is opgegeven zal deze door TESTed genereert worden.

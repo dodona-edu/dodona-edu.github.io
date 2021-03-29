@@ -19,7 +19,7 @@ welke zal worden omgezet naar een programmeertaal specifieke (en Dodona compatib
 
 ## 1. Aanmaken Git repository
 De oefeningen voor Dodona bevinden zich in een Git repository, zoals normale oefeningen.
-We verwijzen naar [de handleiding _creëren oefening repositories_](../new-exercise-repo).
+We verwijzen naar [de handleiding _oefening repositories aanmaken_](../new-exercise-repo).
 
 ## 2. Mapstructuur
 De mapstructuur voor een sjabloonoefening van TESTed komt in grote mate overeen met de
