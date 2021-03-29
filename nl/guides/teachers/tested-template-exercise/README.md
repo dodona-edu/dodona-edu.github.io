@@ -7,19 +7,19 @@ Sjabloonoefeningen worden gebruikt wanneer je één oefening in meerdere program
 :::
 
 # Sjabloonoefening TESTed
-De TESTed judge is een programmeertaal onafhankelijke judge.
-Dit wil zeggen dat de testplannen die opgesteld worden onafhankelijk zijn van de programmeertaal van de ingediende
-oplossing.
-Meer informatie zie [TESTed judge](../../../references/tested-judge/).
+De TESTed judge is een programmeertaal onafhankelijke judge,
+dit betekent dat TESTed meerdere programmeertalen ondersteund.
+Dit is mogelijk door het opstellen van programmeertaal onafhankelijke oefeningen: je schrijf één oefening,
+welke oplosbaar is in meerdere programmeertalen (zie de [TESTed-referentie](../../../references/tested-judge/)).
 
-Omdat judge programmeertaal onafhankelijk is,
-hoef je om meerdere programmeertalen te ondersteunen slechts eenmaal het testplan en opgave te schrijven.
-Hiervan kun je dan per programmeertaal een instantie genereren.
+Hoewel de judge programmeertaal onafhankelijk is, verwacht Dodona voorlopig per programmeertaal een aparte oefening.
+Als oplossing hiervoor introduceert deze handleiding het concept van sjabloonoefeningen.
+Dit is een programmeertaal onafhankelijke oefening beschrijving,
+welke zal worden omgezet naar een programmeertaal specifieke (en Dodona compatibele) oefening voor TESTed.
 
 ## 1. Aanmaken Git repository
-De oefeningen voor Dodona bevinden zich in een Git repository.
-De uitleg om een nieuwe Git repository te maken voor Dodona bevindt zich in
-[Een nieuwe repository met oefeningen maken](../new-exercise-repo).
+De oefeningen voor Dodona bevinden zich in een Git repository, zoals normale oefeningen.
+We verwijzen naar [de handleiding _creëren oefening repositories_](../new-exercise-repo).
 
 ## 2. Mapstructuur
 De mapstructuur voor een sjabloonoefening van TESTed komt in grote mate overeen met de
@@ -40,14 +40,14 @@ met als hoofdreden dat we de sjabloonoefening niet als een oefening op Dodona wi
 ```
 
 ## 3. Opstellen testplan
-Om een programmeeroefening aan te bieden moet er een testplan geschreven worden.
+De testen voor in oefening in TESTed worden geschreven in een testplan.
+Documentatie over hoe een testplan kan worden opgesteld,
+kan gevonden worden op [TESTed DSL-testplannen](../../../references/tested-judge/dsl).
 We veronderstellen dat dit testplan zich bevindt in het bestand `evaluation/plan.yaml`.
-Voor hoe het testplan moet worden opgesteld verwijzen we naar de documentatie van de
-[TESTed DSL-testplannen](../../../references/tested-judge/dsl).
 
 ::: tip Tip voor geavanceerde gebruikers
 De sjabloonoefeningen kunnen ook gebruikmaken van de
-[JSON-testplannen van TESTed](../../../references/tested-judge/json).
+[geavanceerde testplannen](../../../references/tested-judge/json).
 :::
 
 ## 4. Opstellen sjabloonopgaven
@@ -121,7 +121,7 @@ Voorbeeld finaal configuratiebestand voor Java:
 Op dit ogenlijk vereist Dodona voor elke programmeertaal een afzonderlijke oefening.
 
 In de toekomst willen we dit aanpassen,
-zodat je één oefening in meerdere programmeertalen kunt aanbieden zonder deze te moeten kopiëren.
+met als doel meerdere programmeertalen te ondersteunen voor dezelfde oefening op Dodona.
 :::
 
 Na het opstellen van de sjabloonoefening, kunnen we deze instantiëren voor alle vereiste programmeertalen.
@@ -139,13 +139,14 @@ per programmeertaal een instantie genereren in de map `instanties/oefening/map/{
 Dit script heeft enkele optionele opties:
 - `-i`, `--programming_languages_included`:
   Lijst van programmeertalen waarvoor een instantie gegenereerd mag worden indien het testplan dit toelaat.
-  Standaard alle programmeertalen van TESTed.
+  Standaard alle programmeertalen ondersteund door TESTed.
 - `-e`, `--programming_languages_excluded`:
   Lijst van programmeertalen waarvoor geen instantie gegenereerd mag worden.
-  Standaard is dit geen enkele programmeertaal.
+  Standaard een lege lijst.
 - `-n`, `--i18n`:
   Standaard natuurlijke taal voor de beschrijvingen, wanneer dit niet afgeleid kan worden uit de bestandsnaam.
   Opties ‘en’ (standaard) en ‘nl’.
 - `-H`, `--human_readable`:
   Het genereerde JSON-testplan vanuit het DSL-testplan moet leesbaar zijn door een mens.
-- `-b`, `--backup_descriptions`: Behoud de oude `description` map (hernoemd naar `description.bak`).
+- `-b`, `--backup_descriptions`: Behoud de bestaande beschrijvingen.
+  De `description` map zal naar `description.bak` hernoemd worden.
