@@ -127,10 +127,10 @@ Deze wordt weergegeven als een aparte context op Dodona.
 
 De *Run* heeft 4 attributen: `input`, `output`, `description` en `link_files`.
 - **input**: De [invoergegevens](#runinput) voor het programma.
-- **output**: De [verwachte uitvoer](#runoutput) van het programma en evaluators.
+- **output**: De [verwachte uitvoer](#runoutput) en evaluators voor het programma.
 - **description**: De beschrijving voor de weergave op Dodona,
   wanneer de `description` niet is opgegeven zal deze door TESTed genereert worden.
-- **link_files**: De lijst met bestanden die gelinkt moeten worden in de feedback (Zie [FileUrl](#fileurl)).
+- **link_files**: De lijst met bestanden die gelinkt moeten worden in de feedback (zie [FileUrl](#fileurl)).
 
 ```json
 "RunTestcase": {
@@ -832,7 +832,8 @@ TESTed ondersteund momenteel enkel tekstbestanden.
 
 Het *FileOutputChannel*-object heeft 3 attributen: `expected_path`, `actual_path` en `evaluator`.
 - **expected_path**: Relatief pad naar het bestand in de `workdir`, waarin de verwachte uitvoer bevat is.
-- **actual_path**: Relatief pad naar het bestand in de `workdir`, waarin de gegenereerde uitvoer bevat is.
+- **actual_path**: Relatief pad naar het bestand die verwacht werd geschreven te zijn door de ingediende oplossing,
+  waarin de gegenereerde uitvoer bevat is.
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde bestand.
   Er kunnen twee evaluators gebruikt worden:
   - [GenericTextEvaluator](#generictextevaluator): Dit is de interne evaluator van TESTed voor tekst en tekstbestanden.
@@ -938,7 +939,8 @@ Het *ValueOutputChannel*-object heeft 2 attributen: `value` en `evaluator`.
   - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator,
     die onafhankelijk is van de programmeertaal van de ingediende oplossing.
     ::: danger Opmerking
-    Deze evaluator ondersteund alleen de datatypes van TESTed.
+    Deze evaluator ondersteund alleen de datatypes van TESTed,
+    die ondersteund worden door de programmeertaal van de evaluator.
     :::
   - [SpecificEvaluator](#specificevaluator): Dit is een eigen geschreven evaluator,
     die afhankelijk is van de programmeertaal van de ingediende oplossing.
@@ -1130,9 +1132,9 @@ Het *ProgrammedEvaluator*-object heeft 4 attributen: `language`, `function`, `ar
 Om een hoge evaluatieperformantie te hebben, raden we aan op de geprogrammeerde evaluator in **Python** te schrijven.
 
 Dit komt omdat de geprogrammeerde evaluator in **Python** in hetzelfde proces als TESTed uitgevoerd wordt.
-In tegenstelling tot de evaluators in de andere programmeertalen,
-waarvoor een evaluatieprogramma gegenereerd moet worden.
-Daarnaast wordt deze ook uitgevoerd wordt in een ander process, welke een aanzienlijk performantie overhead heeft.
+In tegenstelling tot de evaluators in de andere programmeertalen.
+Deze evaluators worden in een ander process uitgevoerd (en moeten mogelijks ook gecompileerd worden),
+wat een niet verwaarloosbare performantie overhead heeft.
 :::
 
 ```json
