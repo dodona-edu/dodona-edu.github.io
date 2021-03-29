@@ -38,8 +38,7 @@ The use of square brackets indicates a list of objects.
     ├ exit_code
     ├ stderr
     ├ stdout
-    └ testcases[] # Could be removed if the context only exists of one testcase
-      │           # and have not contexttestcase
+    └ testcases[] # Can be omitted when the context contains only one test case, so no context test case.
       ├ files[]
       │ └ ... # identical to files of context
       ├ statement
@@ -114,18 +113,19 @@ We will use the exercise [Thoughts that count](https://dodona.ugent.be/en/course
 ```yaml
 - tab: "Kleiner dan"
   contexts:
-  - stdin: |
-      100
-      53
-      <
-    stdout: |
-      2
-      51
-      49
+  - stdin: "100\n53\n<\n"
+    stdout: "2\n51\n49\n"
 - tab: "Groter dan"
   contexts:
-  - stdin: "34\n4\n>\n"
-    stdout: "2\n2\n32\n"
+  - stdin: |
+      34
+      4
+      >
+    stdout: |
+      2
+      2
+      32
+
 ```
 
 Because of a display problem at Dodona, are the newlines in the description in the following figures replaced by spaces.
@@ -142,7 +142,7 @@ A first is the classic escape-string and a second notation uses ‘|’.
 The class escape-string gives the most control over whitespace.
 
 ::: tip Hint
-More information about multi-line in section [Known traps](#known-traps).
+More information about multi-line in section [Known pitfalls](#known-pitfalls).
 :::
 
 #### Multi-tab
@@ -192,7 +192,7 @@ We advise using strings for these arguments, however the textual types are also 
 
 #### stderr
 This keyword defines the expected output for the testcase.  
-This is analogous to `stderr`.
+This is analogous to `stdout`.
 
 #### exit_code
 Used to provide the expected exit code of the program for the testcase.
@@ -246,12 +246,12 @@ When you want to provide `namespace`, `disable_optimizations` or global configur
 
 #### Textual types
 The second testcase in the testplan for __How smart are you?__, illustrates that not only strings can be used for standard input, output or error.
-In this case it where integers, but also logical values and rational numbers are supported.
+In this case they are integers but also logical values and floating decimal numbers are possible (the textual types).
 
 ::: warning Remark
 To avoid problems, we recommend to use strings for standard input, output and error.
 This is caused by the fact that the textual types will be converted to strings.
-For more information about the translation of textual types, see paragraph [Known traps](#known-traps).
+For more information about the translation of textual types, see paragraph [Known pitfalls](#known-pitfalls).
 :::
 
 #### Configuration
@@ -656,7 +656,7 @@ text value = get_value(0, pair)
 number = 5 :: int8
 ```
 
-## Known traps
+## Known pitfalls
 
 ### Keys
 Forgetting a colon after the key names in YAML.
@@ -673,7 +673,7 @@ Correct:
 ```
 
 ### Lists
-Forgetting hyphen and space by list elements.
+Forgetting the hyphen and space in list elements.
 Or using it to much, which leads to much more elements than expected.
 Example:
 
@@ -715,7 +715,7 @@ Example YAML:
 single: 'data''\ndata'
 ```
 
-Translation JSON:
+JSON Translation (YAML rewritten as JSON):
 ```json
 {"single": "data'\\ndata"}
 ```
@@ -727,7 +727,7 @@ Example YAML:
 double: "data\ndata"
 ```
 
-Translate JSON:
+JSON Translation:
 ```json
 {"double": "data\ndata"}
 ```
@@ -739,7 +739,7 @@ Example YAML:
 unquoted: data \ data
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"unquoted": "data \\ data"}
 ```
@@ -760,7 +760,7 @@ multi unquoted:
   line5
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"multi unquoted": "line1 line2 line3\nline4\n\nline5"}
 ```
@@ -779,7 +779,7 @@ multi single quoted: 'line1''\nline1a
   line5'
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"multi single quoted": "line1'\\nline1a line2 line3\nline4\n\nline5"}
 ```
@@ -798,7 +798,7 @@ multi double quoted: "line1\nline1a
   line5"
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"multi double quoted": "line1\nline1a line2 line3\nline4\n\nline5"}
 ```
@@ -821,7 +821,7 @@ literal: |
 # end of statement
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"literal": "line1a\\nline1b\n  line2\n# not a comment\nend\n"}
 ```
@@ -839,7 +839,7 @@ literal: |+
 # end of statement
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"literal": "line1a\\nline1b\n  line2\n# not a comment\nend\n\n"}
 ```
@@ -857,15 +857,15 @@ literal: |-
 # end of statement
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"literal": "line1a\\nline1b\n  line2\n# not a comment\nend"}
 ```
 
 #### Folded block
-YAML also support multiple block notations whereby newline are replaced by a space, when te next line the alignment respects.
+YAML supports different block formats where a line break is replaced with a space when the next line respects the alignment.
 Each empty line will be interpreted as a newline.
-Also will an alignment, that deviates not be trimmed away.
+The indentation that deviates from the alignment is not trimmed away.
 There will also be no escaping.
 
 ##### Default (`>`)
@@ -882,7 +882,7 @@ literal: >
 # end of statement
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"literal": "line1a line1b\n  line2\n\nline3\n"}
 ```
@@ -901,7 +901,7 @@ literal: >+
 # end of statement
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"literal": "line1a line1b\n  line2\n\nline3\n\n"}
 ```
@@ -920,7 +920,7 @@ literal: >-
 # end of statement
 ```
 
-Translation JSON:
+JSON Translation:
 ```json
 {"literal": "line1a line1b\n  line2\n\nline3"}
 ```

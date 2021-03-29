@@ -113,18 +113,19 @@ Hiervoor zullen we gebruikmaken van de oefening [Boeketje rozen](https://dodona.
 ```yaml
 - tab: "Kleiner dan"
   contexts:
-  - stdin: |
-      100
-      53
-      <
-    stdout: |
-      2
-      51
-      49
+    - stdin: "100\n53\n<\n"
+      stdout: "2\n51\n49\n"
 - tab: "Groter dan"
   contexts:
-  - stdin: "34\n4\n>\n"
-    stdout: "2\n2\n32\n"
+    - stdin: |
+        34
+        4
+        >
+      stdout: |
+        2
+        2
+        32
+
 ```
 
 Door een weergave probleem op Dodona, zijn de newlines in de beschrijvingen in de volgende figuren vervangen door spaties.
@@ -716,7 +717,7 @@ Voorbeeld YAML:
 single: 'data''\ndata'
 ```
 
-Vertaling JSON:
+Vertaling JSON (YAML herschreven als JSON):
 ```json
 {"single": "data'\\ndata"}
 ```
