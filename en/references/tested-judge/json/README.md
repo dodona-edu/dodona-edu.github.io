@@ -92,7 +92,7 @@ A *tab*-object has 3 attributes: `name`, `hidden` en `runs`.
 A run is a generated executable,
 that contains a collections of contexts and also an optional testcase that evaluates the written program.
 
-A run has two attributes: `run` and `contexts`.
+The *Run*-object has two attributes: `run` and `contexts`.
 - **run**: This is the testcase that executes the written program (see [RunTestcase](#runtestcase)).
 - **contexts**: This is a list of all [contexts](#context) that must be executed.
 

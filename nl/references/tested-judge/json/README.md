@@ -93,7 +93,7 @@ Een *tab*-object heeft 3 attributen: `name`, `hidden` en `runs`.
 Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten bevat en ook een optioneel testgeval
 kan bevatten die het geschreven programma zelf uitvoert.
 
-Het *run*-object heeft twee attributen: `run` en `contexts`.
+Het *Run*-object heeft twee attributen: `run` en `contexts`.
 - **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [RunTestcase](#runtestcase)).
 - **contexts**: Deze bevat een lijst van alle [contexten](#context) die uitgevoerd moeten worden.
 
