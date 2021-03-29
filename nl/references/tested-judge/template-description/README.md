@@ -4,8 +4,9 @@ description: "TESTed sjabloonbeschrijvingen"
 ---
 
 # Documentatie sjabloonbeschrijvingen
-Sjabloonopgaven worden gebruikt om één keer een beschrijving op te stellen, waarvan per programmeertaal een instantie
-gegenereerd kan worden met de juiste benamingen van datatypes en stijlconventies.
+Sjabloonopgaven worden gebruikt om één keer een beschrijving op te stellen.
+Deze beschrijving kan dan geïnstantieerd worden per programmeertaal die nodig is met de juiste benamingen van datatypes
+en stijlconventies.
 
 De sjabloonopgave worden geschreven met het Mako sjablonensysteem.
 TESTed ondersteunde twee opmaaktalen voor de opgaven: Markdown en HTML.
