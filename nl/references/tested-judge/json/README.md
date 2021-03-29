@@ -90,8 +90,8 @@ Een tabblad heeft 3 attributen: `name`, `hidden` en `runs`.
 ```
 
 ## Run
-Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten bevat en ook een testgeval kan bevatten die
-het geschreven programma zelf uitvoert.
+Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten bevat en ook een optioneel testgeval
+kan bevatten die het geschreven programma zelf uitvoert.
 
 De run heeft twee attributen: `run` en `contexts`.
 - **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [De Run](#de-run)).

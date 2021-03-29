@@ -10,19 +10,19 @@ The [DSL-testplans](../dsl) are recommended to be used whenever this is possible
 :::
 
 # TESTed JSON-testplans
-The JSON-testplan supports all possible configuration options and evaluations that are supported by TESTed.
+The JSON-testplan supports all possible configuration options and evaluations possibilities that are supported by TESTed.
 The complete JSON-schema for these testplans could be found
 <a href="/tested-json-testplan-schema.json" target="_blank">here</a>.
 
-The purpose of this documentation is to give an overview of all parameters that in the JSON-testplan could be set.
+The purpose of this documentation is to give an overview of all parameters of the JSON-testplan that could be set.
 Therefore we will also use partial JSON-schemes.
 
 Examples of the JSON-testplans and evaluators could be found at the
 [GitHub repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) of TESTed.
 
 ## The toplevel object
-This object has two attributes: `namespace` and `tabs:
-- **namespace**: The `namespace` is the namespace is the name of the submission solution file (`<namespace>.<ext>`).
+This object has two attributes: `namespace` and `tabs`:
+- **namespace**: The `namespace` is the name of the submission solution file (`<namespace>.<ext>`).
   The `namespace` is also the namespace of the code.
   The default namespace is `submission`.
   :::tip Hint
@@ -57,7 +57,7 @@ A tab contains a list of runs that must be executed.
 
 A tab has 3 attributes: `name`, `hidden` en `runs`.
 - **name**: This is the name of tab, as presented at Dodona.
-- **hidden**: This is a boolean that indicates if tab may be hidden, if all testcases succeeded.
+- **hidden**: This is a boolean that indicates if the tab must be hidden, when all the testcases succeeded.
 - **runs**: This is a list of all [runs](#run) (generated executables) that must be executed.
 
 ```json
@@ -90,7 +90,7 @@ A tab has 3 attributes: `name`, `hidden` en `runs`.
 
 ## Run
 A run is a generated executable,
-that will contain a collections of contexts and also a testcase that evaluates the written program.
+that contains a collections of contexts and also an optional testcase that evaluates the written program.
 
 A run has two attributes: `run` and `contexts`.
 - **run**: This is the testcase that executes the written program (see [The Run](#the-run)).
