@@ -77,11 +77,13 @@ TESTed werkt op elk besturingssysteem dat ondersteund wordt door Python.
 Sommige dependencies, zoals GCC, vragen wel meer moeite om te installeren op Windows.
 
 ::: tip Windows tip
-Gebruikers op Windows kunnen MingW of MSYS2 proberen.
+We raden Windows 10 gebruikers aan om het [Windows Subsystem for Linux](https://ubuntu.com/wsl) te gebruiken.
+
+Wanneer dit niet mogelijk is, kunnen Windows gebruikers MingW of MSYS2 proberen.
 :::
 
 ### Uitvoeren
-We gaan er voor de rest van het hoofdstuk van uit dat commando's uitgevoerd worden in de map `./`.
+We gaan er voor de rest van de handleiding vanuit dat commando's uitgevoerd worden in de map `./`.
 
 Er zijn twee manieren om TESTed uit te voeren.
 Ten eerste is er de "gewone" manier; dit is ook hoe Dodona TESTed uitvoert.
