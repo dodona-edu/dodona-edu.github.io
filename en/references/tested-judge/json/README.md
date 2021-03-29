@@ -313,7 +313,7 @@ The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`
 
 ## Context
 A context is a list of testcases that must be executed.
-Next to the testcases, could a context contains preparing and exiting code that are programming language depended.
+Next to the testcases, a context could contains preparing and exiting code that are programming language depended.
 
 The *context*-object has 5 attributes: `testcases`, `before`, `after`, `description` en `link_files`.
 - **testcases**: The list of [testcases](#testcase) that must be evaluated.
@@ -544,7 +544,7 @@ The *FileUrl*-object is used to enable file linking in the feedback.
 The content of this object is based in the input expected by the *Python Tutor*.
 ::: warning Opmerking
 However this object looks like the input for the *Python Tutor*,
-is TESTed only be able to open the linked files in a new browser tab.
+TESTed will only be able to open the linked files in a new browser tab.
 :::
 
 The *FileUrl*-object has 4 attributes: `content`, `name`, `location` and `storage`.
@@ -722,11 +722,11 @@ This channel expects the fault message and the used evaluator.
 The *ExceptionOutputChannel*-object has 2 attributes: `exception` and `evaluator`.
 - **exception**: The expected fault message in an [ExceptionValue](#exceptionvalue) object.
 - **evaluator**: The evaluator that must be used to evaluate the exception.
-  There are two evaluators that coulde be used:
+  There are two evaluators that could be used:
   - [GenericExceptionEvaluator](#genericexceptionevaluator): This the builtin evaluator of TESTed for exceptions.
     This is the default evaluator.
     ::: warning Remark
-    Only the fault message (not to be confused with the exception type) coulde be evaluated with the builtin evaluator.
+    Only the fault message (not to be confused with the exception type) could be evaluated with the builtin evaluator.
     :::
   - [SpecificEvaluator](#specificevaluator): This is an evaluator in the programming language of the submission.
     ::: tip Hint
@@ -933,7 +933,7 @@ The *ValueOutputChannel*-object has 2 attributes: `value` and `evaluator`
     :::
   - [SpecificEvaluator](#specificevaluator): This is a written custom evaluator,
     that is dependent of the programming language of the submission.
-    ::: warning Opmerking
+    ::: warning Remark
     This the only evaluator that could be used to evaluate programming language specific datatypes.
     :::
 
@@ -1108,7 +1108,7 @@ The *ProgrammedEvaluator*-object has 4 attributes: `language`, `function`, `argu
 - **function**: A [EvaluationFunction](#evaluationfunction) object,
   which contains the information about the evaluation function.
 - **arguments**: A list with additional arguments for the evaluation function,
-  see [EvaluationFunction](#evaluationfunction) and [Statements and expressions](#statements and expressions).
+  see [EvaluationFunction](#evaluationfunction) and [Statements and expressions](#statements-and-expressions).
   ::: warning Remark
   These arguments can't have function calls or variables.
   :::
@@ -1654,7 +1654,7 @@ The *FunctionCall*-object has 4 attributes: `type`, `name`, `namespace`, and `ar
 ```
 
 ::: warning Remark
-When you want to test a function that has no return value (not the value [NothingType](#nothingtype),
+When you want to test a function that has no return value (not the value [NothingType](#nothingtype), but
 `void` in Java by example),
 must the output channel be [EmptyChannel](#emptychannel) or [IgnoreChannel](#ignoredchannel).
 :::
