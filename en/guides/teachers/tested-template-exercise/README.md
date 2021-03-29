@@ -79,15 +79,36 @@ We will see the specific configuration for TESTed in `config.template.json`.
 }
 ```
 
-The `access`-field and the `description`-object are mandatory by TESTed.
+The `access`-field and the `description`-object are mandatory by Dodona.
 The programming languages will be added to description names when an instance is generated.
 Dodona also requires the `programming_language` field,
 but this field will be automatically filled when generating an instance.
 
-For the template exercise we required that also the field `evaluation.plan_name` is filled.
+For the template exercise TESTed required that the field `evaluation.plan_name` is filled.
 This field determines, which test plan will be used by TESTed.
 This test plan will also be used to determine the `namespace` used by the template descriptions,
 also it will be used to determine for which programming languages an instances may be generated.
+
+Example of final configuration file for Java:
+
+```json
+{
+  "access": "private",
+  "description": {
+    "names": {
+      "en": "My exercise (java)",
+      "nl": "Mijn oefening (java)"
+    }
+  },
+  "programming_language": "java",
+  "evaluation": {
+    "handler": "TESTed",
+    "memory_limit": 500000000,
+    "plan_name": "plan.yaml"
+  },
+  "labels": []
+}
+```
 
 ## 6. Generate the exercise instances
 ::: warning Remark

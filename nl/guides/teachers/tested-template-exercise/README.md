@@ -88,10 +88,33 @@ De programmeertaal zal toegevoegd worden aan de benamingen van de oefening wanne
 Dodona vereist ook het `programming_language`-veld,
 maar deze wordt pas ingevuld tijdens het gegeneren van de instanties van de sjabloonoefening.
 
-Voor de sjabloonoefeningen vereisen we dat het veld `evaluation.plan_name` ingevuld is.
+Voor de sjabloonoefeningen vereist TESTed dat het veld `evaluation.plan_name` ingevuld is.
 Dit veld bepaalt, welk testplan er zal gebruikt worden door TESTed.
 Dit testplan zal ook worden gebruikt om te bepalen welke `namespace` de sjabloonbeschrijvingen zullen gebruiken,
 alsook om te bepalen voor welke programmeertalen een instantie gegenereerd mag worden.
+
+
+Voorbeeld finaal configuratiebestand voor Java:
+
+```json
+{
+  "access": "private",
+  "description": {
+    "names": {
+      "en": "My exercise (java)",
+      "nl": "Mijn oefening (java)"
+    }
+  },
+  "programming_language": "java",
+  "evaluation": {
+    "handler": "TESTed",
+    "memory_limit": 500000000,
+    "plan_name": "plan.yaml"
+  },
+  "labels": []
+}
+```
+
 
 ## 6. Genereren instanties
 ::: warning Opmerking
