@@ -22,12 +22,12 @@ Examples of the JSON-testplans and evaluators could be found at the
 
 ## Plan
 This object has two attributes: `namespace` and `tabs`:
-- **namespace**: The `namespace` is the name of the submission solution file (`<namespace>.<ext>`).
+- **namespace**: The `namespace` is the name of the submission file (`<namespace>.<ext>`).
   The `namespace` is also the namespace of the code.
   The default namespace is `submission`.
   :::tip Hint
   The namespace is best notated in `snake_case`,
-  which enables to use the right style convention foreach programming language.
+  which enables using the right style convention foreach programming language.
   :::
 - **tabs**: The `tabs` object is a list of all [tabs](#tab) that must be executed.
 
@@ -124,7 +124,7 @@ The *Run*-object has two attributes: `run` and `contexts`.
 A *RunTestcase*-object is a testcase that executes the written program.
 This will be visualised as a separate context at Dodona.
 
-The *RunTestcase*-object has 4 attributes: `input`, `output`, `description` en `link_files`.
+The *RunTestcase*-object has 4 attributes: `input`, `output`, `description` and `link_files`.
 - **input**: The [input data](#runinput) for the program.
 - **output**: The [expected output](#runoutput) and evaluators for the program.
 - **description**: The description to display at Dodona.
@@ -175,8 +175,8 @@ The *RunInput*-object has 3 attributes: `stdin`, `arguments` and `main_call`.
   This could either be the empty channel ([EmptyChannel](#emptychannel)),
   or [TextData](#textdata) which contains a file location or string.
 - **arguments**: The list of program arguments, these must be strings.
-- **main_call**: This a boolean that indicates if the program test must be executed.
-  Default will the program test not be executed.
+- **main_call**: This is a boolean that indicates if the program test must be executed.
+  The program test will not be executed by default.
   
 ```json
 "RunInput": {
@@ -212,7 +212,7 @@ The *RunInput*-object has 3 attributes: `stdin`, `arguments` and `main_call`.
 ### RunOutput
 The *RunOutput*-object contains all information that is needed to evaluate the *program* output.
 
-The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`, `exit_code`.
+The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception` and `exit_code`.
 - **stdout** and **stderr**: The output channel for standard output and error.
   The possible output channels are:
   - [EmptyChannel](#emptychannel): No output is expected on this channel.
@@ -315,7 +315,7 @@ The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`
 A context is a list of testcases that must be executed.
 Next to the testcases, a context could contains preparing and exiting code that are programming language depended.
 
-The *context*-object has 5 attributes: `testcases`, `before`, `after`, `description` en `link_files`.
+The *context*-object has 5 attributes: `testcases`, `before`, `after`, `description` and `link_files`.
 - **testcases**: The list of [testcases](#testcase) that must be evaluated.
 - **before** and **after**: An object whereby the keys are the programming languages,
   hereby are the preparing and/or exiting code passed as [TextData](#textdata) objects.
@@ -431,7 +431,7 @@ The *testcase*-object has 3 attributes: `input`, `description` and `output`.
 ### Output
 The *Output*-object contains all information that is needed to evaluate the testcase.
 
-The *Output*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception`, `exit_code`.
+The *Output*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception` and `exit_code`.
 - **stdout** and **stderr**: The output channel for standard output and error.
   The possible output channels are:
   - [EmptyChannel](#emptychannel): No output is expected on this channel.
@@ -1065,7 +1065,7 @@ The *GenericValueEvaluator*-object has 3 attributes: `type`, `options` and `name
 ### GenericTextEvaluator
 The *GenericTextEvaluator*-object contains all information that is need to use the builtin evaluator for textual data.
 
-The *GenericTextEvaluator*-object has 3 attributes: `type`, `options`, `name`.
+The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The additional evaluation options that can be used by the builtin evaluator,
   see [DSL Configuration options for standard output and error](../dsl/#configuration-options).
