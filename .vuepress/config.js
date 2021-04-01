@@ -217,6 +217,7 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
           sidebarDepth: 1,
           children: [
             ['tested-judge/', FirstItem],
+            'tested-judge/config/',
             'tested-judge/dsl/',
             'tested-judge/json/',
             'tested-judge/template-description/',
