@@ -4,9 +4,9 @@ description: "TESTed DSL testplannen"
 ---
 
 # Documentatie TESTed DSL
-Een DSL-testplan voor TESTed wordt beschreven met behulp van de YAML-syntaxis.
+Een DSL-testplan voor TESTed wordt beschreven met behulp van YAML.
 Daarnaast volgt de DSL in grote mate de structuur waarmee Dodona de testen beschrijft.
-Het volgende codefragment stelt de structuur van DSL-testplannen weer.
+Het volgende codefragment geeft de structuur van DSL-testplannen weer.
 Hierbij stelt het gebruik van vierkante haakjes lijsten van objecten voor.
 
 ```text
@@ -57,7 +57,7 @@ In de volgende paragrafen zullen we met behulp van voorbeelden de DSL beschrijve
 
 ## Eenvoudige invoer-uitvoer
 De eerste soort oefeningen zijn invoer-uitvoeroefeningen.
-We zullen een voorbeeld testplan bekijken voor een oefening die één regel op standaardinvoer verwacht en deze terug wegschrijft naar standaarduitvoer.
+We zullen een voorbeeldtestplan bekijken voor een oefening die één regel op standaardinvoer verwacht en deze terug wegschrijft naar standaarduitvoer.
 
 ```yaml
 - tab: "Feedback"
@@ -95,7 +95,7 @@ De tweede sleutel van een tabblad is `contexts`, deze verwacht een lijst met all
 
 #### context
 Een context is een onafhankelijk uitgevoerde testsequentie.
-Voorlopig hebben we enkel een voorbeeld van invoer-uitvoer testen.
+Voorlopig hebben we enkel een voorbeeld van invoer-uitvoertesten.
 
 ##### stdin
 Het sleutelwoord `stdin` wordt gebruikt om de standaardinvoer op te geven voor een testgeval.
@@ -128,7 +128,7 @@ Hiervoor zullen we gebruikmaken van de oefening [Boeketje rozen](https://dodona.
 
 ```
 
-Door een weergave probleem op Dodona, zijn de newlines in de beschrijvingen in de volgende figuren vervangen door spaties.
+Door een weergaveprobleem op Dodona, zijn de newlines in de beschrijvingen in de volgende figuren vervangen door spaties.
 <p float="left">
   ![Boeketje rozen Kleiner Dan](./boeketje_rozen_KleinerDan.png)
   ![Boeketje rozen Groter Dan](./boeketje_rozen_GroterDan.png)
@@ -237,8 +237,8 @@ Hiervoor kun je dus de namespace instellen.
 Voor de namespace gebruikt je best `snake_case` zodat voor elke programmeertaal de juiste stijlconventie gevolgd kan worden.
 
 #### disable_optimizations
-TESTed gebruikt standaard aan aantal optimalisatie technieken om de uitvoertijd in te korten.
-Deze optimalisatie technieken kunnen echter tot gevolg hebben dat de geoptimaliseerde code tot ongewenste resultaten kan leiden.
+TESTed gebruikt standaard aan aantal optimalisatietechnieken om de uitvoertijd in te korten.
+Deze optimalisatietechnieken kunnen echter tot gevolg hebben dat de geoptimaliseerde code tot ongewenste resultaten kan leiden.
 Daarom kan de gebruiker deze optimalisaties uitschakelen voor het volledige testplan, moest dit nodig zijn.
 
 #### tabs
@@ -272,7 +272,7 @@ Deze opties zijn:
   Verplicht op te geven wanneer je afronding wenst toe te passen.
 
 Je kunt een configuratie opgeven globaal, per tabblad, per context en/of specifiek per uitvoer.
-Deze configuratieopties worden geaccumuleerd, waarbij telkens de optie op de meeste specifieke positie (globaal < tabblad < context < testcase) behouden wordt.
+Deze configuratieopties worden geaccumuleerd, waarbij telkens de optie op het diepste niveau (testcase > context > tabblad > globaal) behouden wordt.
 
 - **Globaal**:
   Globaal worden de opties per uitvoerstroom opgegeven in het object horende bij de optionele sleutel `config`.
@@ -339,7 +339,7 @@ mag je geen `return` of `return-raw` opgeven.
 
 ## Variabeletoekenningen
 We zullen nu een testplan bekijken waarbij we ook waarden aan een variabele toekennen.
-Hiervoor maken we gebruik van de voorbeeld oefening [Objects](https://github.com/dodona-edu/universal-judge/tree/master/exercise/objects) van TESTed.
+Hiervoor maken we gebruik van de voorbeeldoefening [Objects](https://github.com/dodona-edu/universal-judge/tree/master/exercise/objects) van TESTed.
 
 ```yaml
 namespace: "equal_checker"
@@ -388,7 +388,7 @@ Hier wordt de verwachte foutboodschap opgegeven als tekstueel type.
 
 ## Linken bestanden
 Bij sommige programmeeroefeningen moeten de studenten invoer lezen vanuit bestanden.
-Bij de evaluatie feedback wil je de student vaak de mogelijkheid bieden om de inhoud van deze bestanden te kunnen bekijken.
+Bij de evaluatiefeedback wil je de student vaak de mogelijkheid bieden om de inhoud van deze bestanden te kunnen bekijken.
 Hiervoor kun je op het niveau van een context en/of testgeval een lijst meegeven van alle bestanden die gelinkt moeten worden.
 
 ```yaml
@@ -661,7 +661,7 @@ number = 5 :: int8
 ## Bekende valkuilen
 
 ### Sleutels
-Vergeten van het dubbelepunt na een sleutelnaam in de YAML-syntaxis.
+Vergeten van het dubbelepunt na een sleutelnaam in YAML.
 Voorbeeld:
 
 Fout:
