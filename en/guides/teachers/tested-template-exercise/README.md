@@ -16,16 +16,18 @@ As a solution, this guide introduces the concept of an exercise template.
 This is a programming language independent exercise description, which is converted to a programming language specific (and Dodona compatible) exercise by TESTed.
 
 ## 1. Create a Git repository
-Exercise templates must located in a git repository, just as normal exercises.
+Exercise templates must be located in a git repository, just as normal exercises.
 Refer to the [guide on create exercise repositories](../new-exercise-repo) for more information.
 
 ## 2. Directory structure
 The directory structure for an exercise template for TESTed corresponds to a large extent with the
 [expected structure by Dodona](../../../references/exercise-directory-structure).
 For the exercise templates, the file `config.json` is renamed to `config.template.json`.
-The most important reason for this is that we don't want to display the template as exercise at Dodona.
+The most important reason for this is that we don't want to display the template itself as an exercise in Dodona.
 
-### Example minimal directory structure
+### Minimal directory structure
+
+The following is an example of the minimal directory structure you'll need:
 ```text
 +-- template/exercise/directory
 |   +-- config.template.json       # Template configuration
@@ -38,17 +40,17 @@ The most important reason for this is that we don't want to display the template
 ```
 
 ## 3. Create a testplan
-The tests for an exercise for TESTed are written in a testplan.
-The documentation for creating testplans can be found at  [TESTed DSL test plans](../../../references/tested-judge/dsl).
+The tests for a TESTed exercise are written in a testplan.
+The documentation for creating testplans can be found at  [TESTed DSL testplans](../../../references/tested-judge/dsl).
 We assume that this testplan is located at `evaluation/plan.yaml` in the repository. 
 
 ::: tip Hint for advanced users
-The exercise templates can also make use of the [advanced testplans](../../../references/tested-judge/json).
+You can also use [advanced testplans](../../../references/tested-judge/json) with the exercise templates.
 :::
 
 ## 4. Create the description templates
 The description templates will be written using the Mako templating system.
-See [TESTed template descriptions](../../../references/tested-judge/template-description).
+See [TESTed description templates](../../../references/tested-judge/template-description).
 These description templates must be located at `description/description.nl.md.mako` (Dutch) and
 `description/description.en.md.mako` (English).
 
@@ -114,12 +116,12 @@ Example of final configuration file for Java:
 ::: warning Remark
 Dodona currently requires a separate exercise for each programming language.
 
-We're exploring changing this in the future, with the goal of supporting multiple programming languages for the same exercise on Dodona.
+We're exploring changing this in the future, with the goal of supporting multiple programming languages for the same exercise in Dodona.
 :::
 
 After writing the exercise template, we can use it to generate the programming language specific exercises.
 TESTed provides a Python script specifically created to do this.
-This script can be found in the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
+This script can be found in TESTed's [GitHub repository](https://github.com/dodona-edu/universal-judge).
 The script can be executed with the following command in the root directory of the GitHub repository:
 ```shell
 $ python3 -m tested.instantiate_exercise "template/exercise/directory" "instance/exercise/directory"
