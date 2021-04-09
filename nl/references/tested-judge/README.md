@@ -6,11 +6,11 @@ description: "TESTed judge"
 # TESTed judge
 
 Hier vind je alle informatie voor het gebruik van de **TESTed** judge.
-**TESTed** is een programmeertaal onafhankelijke judge.
+**TESTed** is een programmeertaalonafhankelijke judge.
 
 ## Ondersteunde programmeertalen
 
-**TESTed** ondersteund om dit moment 6 programmeertalen:
+**TESTed** ondersteunt momenteel 6 programmeertalen:
 
 * C (gcc 8.3.0)
 * Haskell (ghc 8.4.4)
