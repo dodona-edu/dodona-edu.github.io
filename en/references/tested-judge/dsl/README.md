@@ -413,8 +413,8 @@ Name of the file.
 The relative path to the file that is located in the description folder of the exercise.
 
 ## Hidden tabs
-Dodona supports hiding tabs.
-However, it is visible when this tab contains errors.
+Dodona supports hiding tabs if all tests in those tabs are correct.
+These hidden tabs will thus still be visible if they contain errors.
 For this you can give the option `hidden` to a tab that expects a Boolean value.
 
 ```yaml
@@ -940,14 +940,15 @@ Will be interpreted as an octal number: `7 ⋅ 8 + 7 = 63`.
 stdin: "63"
 ```
 
-### Function name
+### Function names
 The convention for function names in the DSL is `snake_case`.
 When you deviate from this convention, it can't be guaranteed that the correct style convention for a specific programming languages will be used.
 
 ## Convert
-To translate DSL-testplans to JSON-testplans for TESTed, a Python script can be used, which is part of TESTed.
-This script can be found on the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
-The script can be execute with one of the following commands (and combinations) in the root directory of the GitHub repository:
+The canonical format for TESTed testplans is the full JSON format. However, TESTed converts the DSL internally to the JSON format, so you can use the DSL directly.
+
+However, it can be useful to view the full JSON format, especially if things go wrong. TESTed provides a Python script to do this translation. The script can be found in [TESTed's GitHub repository](https://github.com/dodona-edu/universal-judge).
+The script can be executed with one of the following commands (and combinations) in the root directory of the GitHub repository:
 ```bash
 # Standard input - standard output
 $ python3 -m tested.translate_dsl < testplan.yaml > testplan.json
