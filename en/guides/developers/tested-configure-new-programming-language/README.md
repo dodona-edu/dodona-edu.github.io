@@ -1,5 +1,5 @@
 ---
-title:  "[nl] Configureren nieuwe programmeertaal TESTed"
+title: "[nl] Configureren nieuwe programmeertaal TESTed"
 description: "[nl] Configureren nieuwe programmeertaal TESTed"
 ---
 
@@ -379,9 +379,9 @@ C ondersteunt geen collecties, dus zijn beide lijst leeg.
 
 ### Typeconfiguratiebestand
 Het typeconfiguratiebestand is een JSON-bestand met de benamingen van datatypes en gebruikte conventies voor het
-visualiseren van een codeprompt.
-Dit configuratiebestand wordt gebruikt om sjabloonopgaven
-(zie [Documentatie sjabloonbeschrijvingen](../../../references/tested-judge/template-description))
+visualiseren van een consoleprompt.
+Dit configuratiebestand wordt gebruikt om opgavesjablonen
+(zie [Documentatie opgavesjablonen](../../../references/tested-judge/template-description))
 te instantiëren voor de programmeertaal.
 Maak eerst het configuratiebestand aan: `tested/languages/c/types.json`.
 
@@ -702,7 +702,8 @@ De variabele `evaluator_names` bevat een verzameling van deze namen.
 
 ##### Witruimte in Mako
 Nuttig om weten is dat TESTed een extensie heeft toegevoegd aan Mako,
-waardoor de indentatie van Mako-gerelateerde taalconstructies zal verdwijnen.
+waardoor de inspringing van Mako-gerelateerde taalconstructies zal verdwijnen
+(de inspringing van de `for` wordt dus verwijderd).
 De `for`-loop in het fragment hierboven resulteert bijvoorbeeld in deze code:
 ```c
 #include "context_0_0.c"
@@ -786,8 +787,8 @@ bestanden kunnen definiëren.
 We zien ook dat de implementatie eenvoudig is: we geven de gekregen waarde of exception door aan de juiste functie uit
 de `values`-module en geven ook het bestand mee waarin de waarde of exception moet komen.
 
-De lezer zal zich misschien afvragen waarom het nodig is om deze functies te gebruiken:
-als TESTed een functieoproep naar deze functies kan definiëren,
+Waarom is het nodig is om deze functies te gebruiken?
+Als TESTed een functieoproep naar deze functies kan definiëren,
 waarom kan TESTed dan niet direct de `values`-module gebruiken, zonder daar deze functies tussen te plaatsen?
 
 Het antwoord is dat de `values`-module niet verplicht is.
