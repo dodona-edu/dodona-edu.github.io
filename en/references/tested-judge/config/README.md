@@ -82,7 +82,7 @@ These options will be discussed in the next paragraphs.
 ```
 
 ## Parallelisation
-The field `parallel` specifies whether the evaluation may be performed in parallel.
+The field `parallel` specifies whether the evaluations may be executed in parallel.
 The parallellisation has effect on the different executables for one tab.
 By default, there will be no parallellisation.
 
@@ -104,7 +104,7 @@ TESTed support two modes:
 2) Compile each executable file separately (`context`, individual compilation).
 
 `batch` compilation has as result that there will be less time spend at compiling test and solution code,
-if we compare to the individual compilation.
+if we compare it to the individual compilation.
 
 By default, will TESTed compile all executables in one step.
 
