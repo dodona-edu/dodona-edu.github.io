@@ -105,7 +105,7 @@ We will again given an overview of all available functions that could be used in
   programming language.
   The input of this function is one string.
 - **statement and expression**:
-  These functions are not meant to use by the redactor of the descriptions.
+  These functions are not meant to use by the author of the descriptions.
   But for the sake of completeness, they are listed anyway.
   These functions are used to convert code snippets in the mini-programming language of TESTed
   (see [Statements, expressions and return-raw](../dsl/#statements-expressions-and-return-raw)) to code snippets in the
