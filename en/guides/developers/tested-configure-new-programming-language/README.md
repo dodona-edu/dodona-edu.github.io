@@ -25,7 +25,7 @@ Buiten de _dependencies_ voor de bestaande programmeertalen is TESTed een Python
 dat op de normale manier uitgevoerd kan worden.
 
 ### De broncode
-Na het klonen van de repository van beschikken we over volgende mappenstructuur:
+Na het klonen van de repository van TESTed beschikken we over volgende mappenstructuur:
 ```text
 universal-judge
 ├── docker/ # Een Docker-image om TESTed uit te voeren.
