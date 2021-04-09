@@ -1,21 +1,20 @@
 ---
-title: "Sjabloonoefening TESTed"
-description: "Tutorial: Sjabloonoefening TESTed"
+title: "Oefeningssjabloon TESTed"
+description: "Tutorial: Oefeningssjabloon TESTed"
 ---
 ::: warning Opmerking
 Sjabloonoefeningen worden gebruikt wanneer je één oefening in meerdere programmeertalen wilt aanbieden.
 :::
 
 # Sjabloonoefening TESTed
-De TESTed judge is een programmeertaal onafhankelijke judge,
-dit betekent dat TESTed meerdere programmeertalen ondersteund.
-Dit is mogelijk door het opstellen van programmeertaal onafhankelijke oefeningen: je schrijf één oefening,
-welke oplosbaar is in meerdere programmeertalen (zie de [TESTed-referentie](../../../references/tested-judge/)).
+TESTed is een meertalige judge, waarmee we bedoelen dat TESTed meerdere programmeertalen ondersteunt.
+Dit maakt het mogelijk om programmeertaalonafhankelijke oefeningen op te stellen: je schrijf één oefening,
+die oplosbaar zal zijn in meerdere programmeertalen (zie de [TESTed-referentie](../../../references/tested-judge/)).
 
-Hoewel de judge programmeertaal onafhankelijk is, verwacht Dodona voorlopig per programmeertaal een aparte oefening.
+Hoewel de judge meerdere programmeertalen ondersteunt, verwacht Dodona voorlopig per programmeertaal een aparte oefening.
 Als oplossing hiervoor introduceert deze handleiding het concept van sjabloonoefeningen.
-Dit is een programmeertaal onafhankelijke oefening beschrijving,
-welke zal worden omgezet naar een programmeertaal specifieke (en Dodona compatibele) oefening voor TESTed.
+Dit is een programmeertaalonafhankelijk sjabloon voor een oefening,
+dat zal worden omgezet naar een programmeertaalspecifieke (en Dodona-compatibele) oefening voor TESTed.
 
 ## 1. Aanmaken Git repository
 De oefeningen voor Dodona bevinden zich in een Git repository, zoals normale oefeningen.
@@ -40,7 +39,7 @@ met als hoofdreden dat we de sjabloonoefening niet als een oefening op Dodona wi
 ```
 
 ## 3. Opstellen testplan
-De testen voor in oefening in TESTed worden geschreven in een testplan.
+De testen voor een oefening in TESTed worden geschreven in een testplan.
 Documentatie over hoe een testplan kan worden opgesteld,
 kan gevonden worden op [TESTed DSL-testplannen](../../../references/tested-judge/dsl).
 We veronderstellen dat dit testplan zich bevindt in het bestand `evaluation/plan.yaml`.
@@ -51,7 +50,7 @@ De sjabloonoefeningen kunnen ook gebruikmaken van de
 :::
 
 ## 4. Opstellen sjabloonopgaven
-De sjabloonopgaven worden geschreven met het Mako sjablonensysteem,
+De sjabloonopgaven worden geschreven met het sjablonensysteem Mako,
 zie [TESTed sjabloonbeschrijvingen](../../../references/tested-judge/template-description).
 Deze sjabloonopgaven moeten zich bevinden in de bestanden `description/description.nl.md.mako` (nederlands) en
 `description/description.en.md.mako` (engels).
@@ -89,7 +88,7 @@ Dodona vereist ook het `programming_language`-veld,
 maar deze wordt pas ingevuld tijdens het gegeneren van de instanties van de sjabloonoefening.
 
 Voor de sjabloonoefeningen vereist TESTed dat het veld `evaluation.plan_name` ingevuld is.
-Dit veld bepaalt, welk testplan er zal gebruikt worden door TESTed.
+Dit veld bepaalt welk testplan er zal gebruikt worden door TESTed.
 Dit testplan zal ook worden gebruikt om te bepalen welke `namespace` de sjabloonbeschrijvingen zullen gebruiken,
 alsook om te bepalen voor welke programmeertalen een instantie gegenereerd mag worden.
 
@@ -125,7 +124,7 @@ met als doel meerdere programmeertalen te ondersteunen voor dezelfde oefening op
 :::
 
 Na het opstellen van de sjabloonoefening, kunnen we deze instantiëren voor alle vereiste programmeertalen.
-Hiervoor kan er gebruikt gemaakt worden van een Python script dat deel uitmaakt van TESTed.
+Hiervoor kan er gebruikt gemaakt worden van een Python-script dat deel uitmaakt van TESTed.
 Dit script kan terug gevonden worden in de
 [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed.
 Het script kan uitgevoerd worden met het volgende commando in de root directory van de GitHub repository:
