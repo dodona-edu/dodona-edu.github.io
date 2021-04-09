@@ -104,16 +104,6 @@ We will again given an overview of all available functions that could be used in
   This function searches the natural name for a collection datatype and/or the string datatype of TESTed for a given
   programming language.
   The input of this function is one string.
-- **statement and expression**:
-  These functions are not meant to use by the author of the descriptions.
-  But for the sake of completeness, they are listed anyway.
-  These functions are used to convert code snippets in the mini-programming language of TESTed
-  (see [Statements, expressions and return-raw](../dsl/#statements-expressions-and-return-raw)) to code snippets in the
-  programming languages.
-  - **statement** must be used for all input code snippets.
-  - **expression** must be used for all return values.
-  
-  Both functions expect a string as argument.
 
 ### Example
 Now we look at a Markdown example description for Python and JavaScript.

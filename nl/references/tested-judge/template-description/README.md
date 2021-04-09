@@ -106,16 +106,6 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Deze functie zoekt de natuurlijke naam voor een collectiedatatype en/of het string-datatype van TESTed voor een
   gegeven programmeertaal.
   Deze functie verwacht een string als argument.
-- **statement en expression**:
-  Met deze functies zal de opsteller van de opgaven normaal gezien niet direct in contact komen.
-  Maar voor de volledigheid worden ze toch vermeld.
-  Deze functies dienen om codefragmenten geschreven in de mini-programmeertaal
-  (zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)) van TESTed te vertalen naar
-  de codefragmenten in de programmeertalen.
-  - **statement** moet gebruikt worden voor alle invoercodefragmenten.
-  - **expression** moet gebruikt worden voor alle returnwaarden.
-  
-  Beide functies verwachten een string als argument.
 
 ### Voorbeeld
 We zullen een voorbeeld bekijken van een Markdown-opgave voor Python en JavaScript.
