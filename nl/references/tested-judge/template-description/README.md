@@ -1,14 +1,14 @@
 ---
-title: TESTed sjabloonbeschrijvingen
-description: "TESTed sjabloonbeschrijvingen"
+title: TESTed opgavesjablonen
+description: "TESTed opgavesjablonen"
 ---
 
-# Documentatie sjabloonbeschrijvingen
-Sjabloonopgaven worden gebruikt om één keer een beschrijving op te stellen.
-Deze beschrijving kan dan geïnstantieerd worden per programmeertaal die nodig is met de juiste benamingen van datatypes
+# Documentatie opgavesjablonen
+Opgavesjablonen worden gebruikt om één keer een opgave op te stellen.
+Deze opgave kan dan geïnstantieerd worden per programmeertaal die nodig is met de juiste benamingen van datatypes
 en stijlconventies.
 
-De sjabloonopgave worden geschreven met het Mako-sjablonensysteem.
+De opgavesjabloon worden geschreven met het Mako-sjablonensysteem.
 TESTed ondersteunt twee opmaaktalen voor de opgaven: Markdown en HTML.
 De opgaven kunnen zowel in het Nederlands, als in het Engels geschreven worden.
 
@@ -118,7 +118,7 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Beide functies verwachten een string als argument.
 
 ### Voorbeeld
-We zullen een voorbeeld bekijken van een Markdown-beschrijving voor Python en JavaScript.
+We zullen een voorbeeld bekijken van een Markdown-opgave voor Python en JavaScript.
 
 Sjabloon:
 ```mako
@@ -270,7 +270,7 @@ werden als elementen in de ${lijst}.
 ```
 
 ## Volledige opgave in HTML
-Hieronder volgt een volledige sjabloonopgave in HTML.
+Hieronder volgt een volledige opgavesjabloon in HTML.
 ```mako
 <p>
     In the <span style="font-style: italic;">rail fence cipher</span> (also called
