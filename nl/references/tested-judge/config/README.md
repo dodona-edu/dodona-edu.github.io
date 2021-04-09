@@ -17,7 +17,7 @@ De opties moeten worden ingesteld worden in het `config.json` van een Dodona oef
 De opties moeten meegegeven worden in het object `evaluation.options`.
 
 ## JSON-Schema
-Hieronder kun je het JSON-Schema vinden van de verschillende opties.
+Hieronder kun je het JSON Schema vinden van de verschillende opties.
 De opties zullen in de volgende paragrafen verder uitgelegd worden.
 ```json
 {
@@ -100,7 +100,7 @@ Voorbeeld toepassen parallellisatie:
 
 ## Compilatie modus
 Het veld `mode` heeft aan hoe er gecompileerd moet worden.
-TESTed ondersteund twee modi:
+TESTed ondersteunt twee modi:
 1) Alle uitvoerbare bestanden in één keer compileren (`batch`).
 2) Elke uitvoerbaar bestand apart compileren (`context`, individuele compilatie).
 
@@ -142,10 +142,10 @@ Voorbeeld uitschakelen compilatie fallback:
 Het veld `optimized` wordt gebruikt om aan te geven
 of de geprogrammeerde Python evaluators geoptimaliseerd uitgevoerd mogen worden.
 Met geoptimaliseerd bedoelen we dat ze in hetzelfde proces als TESTed uitgevoerd zullen worden.
-Anders zullen ze een apart process uitgevoerd worden, welke een niet verwaarloosbare performantie overhead hebben.
+Anders zullen ze een apart process uitgevoerd worden, wat een niet verwaarloosbare performantie overhead hebben.
 Standaard zal TESTed deze geoptimaliseerd uitvoeren.
 
-Voorbeeld niet geoptimaliseerde Python evaluatie:
+Voorbeeld niet geoptimaliseerde Python-evaluatie:
 ```json
 {
   "evaluation": {
@@ -193,18 +193,18 @@ Voorbeeld uitschakelen linters:
 ```
 
 ## Programmeertaal specifiek
-Naast de configuratieopties voor TESTed zelf, bestaan er ook per programmeertaal specifieke optionele opties.
+Naast de configuratieopties voor TESTed zelf, bestaan er ook optionele programmeertaalspecifieke opties.
 Deze opties worden ingesteld in het object bijhorend bij het veld `evaluation.language`.
 
 ### C
-De programmeertaal C heeft geen specifiek opties.
+De programmeertaal C heeft geen programmeertaalspecifieke opties.
 
 ### Haskell
 De programmeertaal Haskell heeft 1 optie: `hlint_config`.
-Deze verwacht de bestandsnaam van een HLint configuratiebestand.
-Dit bestand moet zich in de `evaluation` map van de Dodona oefening bevinden.
+Deze verwacht de bestandsnaam van een HLint-configuratiebestand.
+Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
 
-Voorbeeld HLint configuratie:
+Voorbeeld HLint-configuratie:
 ```json
 {
   "evaluation": {
@@ -221,10 +221,10 @@ Voorbeeld HLint configuratie:
 
 ### Java
 De programmeertaal Java heeft 1 optie: `checkstyle_config`.
-Deze verwacht de bestandsnaam van een Checkstyle configuratiebestand.
-Dit bestand moet zich in de `evaluation` map van de Dodona oefening bevinden.
+Deze verwacht de bestandsnaam van een Checkstyle-configuratiebestand.
+Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
 
-Voorbeeld Checkstyle configuratie:
+Voorbeeld Checkstyle-configuratie:
 ```json
 {
   "evaluation": {
@@ -241,10 +241,10 @@ Voorbeeld Checkstyle configuratie:
 
 ### JavaScript
 De scripttaal JavaScript heeft 1 optie: `eslint_config`.
-Deze verwacht de bestandsnaam van een ESLint configuratiebestand.
-Dit bestand moet zich in de `evaluation` map van de Dodona oefening bevinden.
+Deze verwacht de bestandsnaam van een ESLint-configuratiebestand.
+Dit bestand moet zich in de `evaluation`-map van de Dodona-oefening bevinden.
 
-Voorbeeld ESLint configuratie:
+Voorbeeld ESLint-configuratie:
 ```json
 {
   "evaluation": {
@@ -263,16 +263,16 @@ Voorbeeld ESLint configuratie:
 De programmeertaal Kotlin heeft 4 opties:
 `editorconfig`, `disabled_rules_ktlint`, `ktlint_ruleset` en `ktlint_experimental`.
 Al deze opties worden gebruikt door de linter *KTLint*.
-- `editorconfig`: bestandsnaam van een `.editorconfig` bestand (zie <https://editorconfig.org/>) in de `evaluation` map
-  van de Dodona oefening.
-- `disabled_rules_ktlint`: een lijst van *KTLint* regels die genegeerd mogen worden.
+- `editorconfig`: bestandsnaam van een `.editorconfig`-bestand (zie <https://editorconfig.org/>) in de map `evaluation`
+  van de Dodona-oefening.
+- `disabled_rules_ktlint`: een lijst van *KTLint*-regels die genegeerd mogen worden.
   Er kan ook gebruik gemaakt worden van een kommagescheiden string van regels.
 - `ktlint_ruleset`: Een bestandsnaam van een JAR-bestand met extra regels.
-  Dit bestand moet zich in de `evaluation` map van de Dodona oefening bevinden.
-- `ktlint_experimental`: Duid aan of de experimentele linter regels gebruikt mogen worden.
+  Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
+- `ktlint_experimental`: Duid aan of de experimentele linterregels gebruikt mogen worden.
   Standaard zullen deze regels gebruikt worden.
 
-Voorbeeld KTLint configuratie:
+Voorbeeld KTLint-configuratie:
 ```json
 {
   "evaluation": {
@@ -292,10 +292,10 @@ Voorbeeld KTLint configuratie:
 
 ### Python
 De scripttaal Python heeft 1 optie: `pylint_config`.
-Deze verwacht de bestandsnaam van een PYLint configuratiebestand.
-Dit bestand moet zich in de `evaluation` map van de Dodona oefening bevinden.
+Deze verwacht de bestandsnaam van een PYLint-configuratiebestand.
+Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
 
-Voorbeeld PYLint configuratie:
+Voorbeeld PYLint-configuratie:
 ```json
 {
   "evaluation": {
