@@ -11,14 +11,14 @@ Het is aangeraden om de [DSL-tesplannen](../dsl) te gebruiken wanneer dit mogeli
 
 # TESTed JSON-testplannen
 Het JSON-testplan bevat alle mogelijke configuratieopties en evaluatiemogelijkheden die door TESTed ondersteund worden.
-Het volledige JSON-schema voor de testplannen kan <a href="/tested-json-testplan-schema.json" target="_blank">hier</a>
+Het volledige JSON Schema voor de testplannen kan <a href="/tested-json-testplan-schema.json" target="_blank">hier</a>
 worden bekeken.
 
 Het doel van deze documentatie is een uitgebreid overzicht geven van alle parameters die in het JSON-testplan kunnen
 worden ingesteld.
-Hiervoor zullen we ook partieel het JSON-schema gebruiken.
+Hiervoor zullen we ook partieel het JSON Schema gebruiken.
 
-Er kunnen voorbeeld JSON-testplannen en evaluators gevonden in de
+Voorbeelden van JSON-testplannen en evaluators kunnen gevonden worden in de
 [GitHub repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) van TESTed.
 
 ## Plan
@@ -94,7 +94,7 @@ Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten beva
 kan bevatten die het door de student geschreven programma zelf uitvoert.
 
 Het *Run*-object heeft twee attributen: `run` en `contexts`.
-- **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [RunTestcase](#runtestcase)).
+- **run**: Dit is het testgeval dat het geschreven programma zelf uitvoert (zie [RunTestcase](#runtestcase)).
 - **contexts**: Deze bevat een lijst van alle [contexten](#context) die uitgevoerd moeten worden.
 
 ```json
@@ -218,18 +218,18 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
     Dit is de standaard optie.
-  - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
+  - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht op dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
   - [TextOutputChannel](#textoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
 - **file**: Het uitvoerkanaal voor een bestand.
   De mogelijke uitvoerkanalen zijn:
   - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
-    Dit is de standaard optie.
-  - [FileOutputChannel](#fileoutputchannel): Een bestand is verwacht als uitvoer.
+    Dit is de standaardoptie.
+  - [FileOutputChannel](#fileoutputchannel): Een bestand wordt verwacht als uitvoer.
   
   ::: warning Opmerking
-  Het is momenteel niet mogelijk op in TESTed meer dan één bestand te verwachten per programmatest.
+  Het is momenteel niet mogelijk om in TESTed meer dan één bestand te verwachten per programmatest.
   :::
   ::: warning Opmerking
   Het is momenteel ook niet mogelijk in TESTed om te controleren of er geen bestanden aangemaakt werden.
@@ -237,7 +237,7 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
 - **exception**: Het uitvoerkanaal voor een fout.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen fout verwacht tijdens de uitvoer.
-    Dit is de standaard optie.
+    Dit is de standaardoptie.
   - [IgnoredChannel](#ignoredchannel): Er wordt geen fout verwacht tijdens de uitvoer,
     maar een opgeworpen fout zal genegeerd worden.
   - [ExceptionOutputChannel](#exceptionoutputchannel): Er wordt een fout verwacht op dit kanaal.
@@ -317,7 +317,7 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
 
 ## Context
 Een context is een lijst van testgevallen die uitgevoerd moeten worden.
-Daarnaast kan een context ook voorbereiden en afsluitende code bevatten die programmeertaal afhankelijk is.
+Daarnaast kan een context ook voorbereidende en afsluitende code bevatten die programmeertaalafhankelijk is.
 
 Het *context*-object heeft 5 attributen: `testcases`, `before`, `after`, `description` en `link_files`.
 - **testcases**: De lijst van [testgevallen](#testcase) die geëvalueerd moeten worden.
@@ -371,9 +371,9 @@ Het *context*-object heeft 5 attributen: `testcases`, `before`, `after`, `descri
 Een testcase is een assignment of expressie die geëvalueerd moet worden.
 
 Het *testcase*-object heeft 3 attributen: `input`, `description` en `output`.
-- **input**: Het invoer statement of expressie, zie [Statements en expressies](#statements-en-expressies).
+- **input**: Het invoer-statement of -expressie, zie [Statements en expressies](#statements-en-expressies).
 - **description**: De beschrijving voor de weergave op Dodona,
-  wanneer de `description` niet is opgegeven zal deze door TESTed genereert worden.
+  wanneer de `description` niet is opgegeven zal deze door TESTed genegeerd worden.
 - **output**: Het [Output](#output) object met alle uitvoerkanalen van het testgeval.
 
 ```json
@@ -439,7 +439,7 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
 - **stdout** en **stderr**: Het uitvoerkanaal voor standaardfout en -error.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
-    Dit is de standaard optie.
+    Dit is de standaardoptie.
   - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
   - [TextOutputChannel](#textoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
@@ -447,7 +447,7 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
   De mogelijke uitvoerkanalen zijn:
   - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht opt dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
-    Dit is de standaard optie.
+    Dit is de standaardoptie.
   - [FileOutputChannel](#fileoutputchannel): Er wordt een bestand verwacht als uitvoer.
 
   ::: warning Opmerking
@@ -459,14 +459,14 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
 - **exception**: Het uitvoerkanaal voor een fout.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen fout verwacht tijdens de uitvoer.
-    Dit is de standaard optie.
+    Dit is de standaardoptie.
   - [IgnoredChannel](#ignoredchannel): Er wordt geen fout verwacht tijdens de uitvoer,
     maar een opgeworpen fout zal genegeerd worden.
   - [ExceptionOutputChannel](#exceptionoutputchannel): Er wordt een fout verwacht op dit kanaal.
 - **value**: Het uitvoerkanaal voor de returnwaarde van een expressie.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen returnwaarde verwacht.
-    Dit is de standaard optie.
+    Dit is de standaardoptie.
   - [IgnoredChannel](#ignoredchannel): Er wordt geen returnwaarde verwacht tijdens de uitvoer,
     maar teruggegeven waarde zal genegeerd worden.
   - [ValueOutputChannel](#valueoutputchannel): Er wordt een returnwaarde verwacht op dit kanaal.
@@ -557,7 +557,7 @@ Is TESTed momenteel beperkt tot het openen van gelinkte bestanden in een nieuw b
 
 Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `storage`.
 - **content**: De inhoud van het bestand.
-  Voorlopig beperkt tot een url (meestal een relative url naar een bestand in de `description` map van de oefening).
+  Voorlopig beperkt tot een url (meestal een relative url naar een bestand in de `description`-map van de oefening).
 - **name**: De naam van het bestand die gelinkt moet worden.
 - **location**: Het locatietype van de inhoud.
   Voorlopig is enkel `href` toegestaan, wat ook de standaardwaarde is.
@@ -733,7 +733,7 @@ Het *ExceptionOutputChannel*-object heeft 2 attributen: `exception` en `evaluato
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van de fout.
   Er kunnen twee evaluators gebruikt worden:
   - [GenericExceptionEvaluator](#genericexceptionevaluator): Dit is de interne evaluator van TESTed voor fouten.
-    Dit is de standaard evaluator.
+    Dit is de standaardevaluator.
     ::: warning Opmerking
     Alleen de foutboodschap (niet te verwarren met het fouttype) kan gecontroleerd worden in de interne evaluator.
     :::
@@ -827,7 +827,7 @@ Het *FileOutputChannel*-object heeft 3 attributen: `expected_path`, `actual_path
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde bestand.
   Er kunnen twee evaluators gebruikt worden:
   - [GenericTextEvaluator](#generictextevaluator): Dit is de interne evaluator van TESTed voor tekst en tekstbestanden.
-    Dit is de standaard evaluator.
+    Dit is de standaardevaluator.
   - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator.
 
 ```json
@@ -873,7 +873,7 @@ Het *TextOutputChannel*-object heeft 3 attributen: `data`, `type` en `evaluator`
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde tekstuele uitvoer.
   Er kunnen twee evaluators gebruikt worden:
   - [GenericTextEvaluator](#generictextevaluator): Dit is de interne evaluator van TESTed voor tekst en tekstbestanden.
-    Dit is de standaard evaluator.
+    Dit is de standaardevaluator.
   - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator.
 
 ```json
@@ -922,20 +922,20 @@ Het *ValueOutputChannel*-object heeft 2 attributen: `value` en `evaluator`.
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van de returnwaarde.
   Er kunnen drie evaluators gebruikt worden:
   - [GenericValueEvaluator](#genericvalueevaluator): Dit is de interne evaluator van TESTed voor returnwaarden.
-    Dit is de standaard evaluator.
+    Dit is de standaardevaluator.
     ::: danger Opmerking
-    Deze evaluator ondersteund alleen de datatypes van TESTed.
+    Deze evaluator ondersteunt alleen de datatypes van TESTed.
     :::
   - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator,
     die onafhankelijk is van de programmeertaal van de ingediende oplossing.
     ::: danger Opmerking
-    Deze evaluator ondersteund alleen de datatypes van TESTed,
+    Deze evaluator ondersteunt alleen de datatypes van TESTed,
     die ondersteund worden door de programmeertaal van de evaluator.
     :::
   - [SpecificEvaluator](#specificevaluator): Dit is een eigen geschreven evaluator,
     die afhankelijk is van de programmeertaal van de ingediende oplossing.
     ::: warning Opmerking
-    Dit is de enige evaluator die programmeertaal specifieke datatypes kan evalueren.
+    Dit is de enige evaluator die programmeertaalspecifieke datatypes kan evalueren.
     :::
 
 ```json
@@ -991,12 +991,12 @@ Het *GenericExceptionEvaluator*-object bevat alle informatie die nodig is om fou
 evaluator.
 :::warning Opmerking
 Deze evaluator kan enkel foutboodschappen evalueren en niet de fouttypes.
-Dit komt door dat de fouttypes programmeertaal afhankelijk zijn.
+Dit komt door dat de fouttypes programmeertaalafhankelijk zijn.
 :::
 
 Het *GenericExceptionEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
-- **options**: De extra evaluatie opties die gebruikt kunnen worden door de interne evaluator.
+- **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
   ::: warning Opmerking
   Voorlopig worden er geen opties gebruikt in de interne evaluator voor fouten.
   :::
@@ -1033,7 +1033,7 @@ evaluator.
 
 Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
-- **options**: De extra evaluatie opties die gebruikt kunnen worden door de interne evaluator.
+- **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
   ::: warning Opmerking
   Voorlopig worden er geen opties gebruikt in de interne evaluator voor de returnwaarden.
   :::
@@ -1070,7 +1070,7 @@ evaluator.
 
 Het *GenericTextEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
-- **options**: De extra evaluatie opties die gebruikt kunnen worden door de interne evaluator,
+- **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator,
   zie [DSL Configuratie opties voor standaarduitvoer en standaarderror](../dsl/#configuratieopties).
 - **name**: Het type van de tekstbron die geëvalueerd moet worden.
   Ofwel `text`, ofwel `file`, zie [TextBuiltin](#textbuiltin).
@@ -1124,7 +1124,7 @@ Om een hoge evaluatieperformantie te hebben, raden we aan op de geprogrammeerde 
 Dit komt omdat de geprogrammeerde evaluator in **Python** in hetzelfde proces als TESTed uitgevoerd wordt.
 In tegenstelling tot de evaluators in de andere programmeertalen.
 Deze evaluators worden in een ander process uitgevoerd (en moeten mogelijks ook gecompileerd worden),
-wat een niet verwaarloosbare performantie overhead heeft.
+wat een niet-verwaarloosbare performantie overhead heeft.
 :::
 
 ```json
@@ -1279,7 +1279,7 @@ We kunnen 3 soorten datatypes onderscheiden: [basis datatypes](#basis-datatypes)
 
 #### Basis datatypes
 De basis datatypes zijn een abstract datatype voor een concept, zoals gehele getallen en niet 8-bit gehele getallen.
-Deze datatypes zullen gegenereerd worden als het standaard datatype in die programmeertaal voor een concept.
+Deze datatypes zullen gegenereerd worden als het standaarddatatype in die programmeertaal voor een concept.
 
 ##### BasicNumericTypes
 Er bestaan twee basis numerieke datatypes in TESTed: `integer` en `rational`.
@@ -1334,7 +1334,7 @@ Er bestaat één booleaans datatype in TESTed: `boolean`.
 
 ##### BasicObjectTypes
 Er bestaat één object datatype in TESTed: `map`.
-Dit datatype stelt een collectie van sleutel-waarde paren voor.
+Dit datatype stelt een collectie van sleutel-waardeparen voor.
 
 ```json
 "BasicObjectTypes": {
@@ -1444,8 +1444,8 @@ Er bestaan drie geavanceerde sequentie datatypes in TESTed: `array`, `list` en `
 ```
 
 ##### AdvancedStringTypes
-Er bestaat één geavanceerd string datatype in TESTed.
-Dit is `char` welke een karakter voor stelt.
+Er bestaat één geavanceerd stringdatatype in TESTed.
+Dit is `char`, dat een karakter voorstelt.
 
 ```json
 "AdvancedStringTypes": {
@@ -1488,7 +1488,7 @@ Dit object heeft twee attributen: `data` en `type`.
 ```
 
 ### Assignment
-TESTed ondersteund momenteel slechts één statement, welke een assignment is.
+TESTed ondersteunt momenteel slechts één statement, welke een assignment is.
 
 Een assignment heeft drie attributen `variable`, `expression` en `type`.
 - **variable**: De naam van de variabele.
@@ -1578,7 +1578,7 @@ Een assignment heeft drie attributen `variable`, `expression` en `type`.
 ```
 
 ### Expressies
-TESTed ondersteund momenteel drie types van expressies: [Identifier](#identifier), [FunctionCall](#functioncall)
+TESTed ondersteunt momenteel drie types van expressies: [Identifier](#identifier), [FunctionCall](#functioncall)
 en [waarden](#waarden).
 
 #### Identifier
@@ -1742,7 +1742,7 @@ Het *NamedArgument*-object heeft 2 attributen: `name` en `value`.
 ```
 
 #### Waarden
-TESTed ondersteund momenteel 6 mogelijke waarden: [getallen](#numbertype), [tekst](#stringtype),
+TESTed ondersteunt momenteel 6 mogelijke waarden: [getallen](#numbertype), [tekst](#stringtype),
 [booleaanse waarden](#booleantype), [sequenties](#sequencetype), [afbeeldingen](#objecttype) en ['niets'](#nothingtype).
 
 ##### NumberType
@@ -1919,7 +1919,7 @@ Het *SequenceType*-object heeft 2 attributen: `type` en `data`.
 ```
 
 ##### ObjectType
-Het *ObjectType*-object stelt een collectie van sleutel-waarde paren voor.
+Het *ObjectType*-object stelt een collectie van sleutel-waardeparen voor.
 
 Het *ObjectType*-object heeft 2 attributen: `type` en `data`.
 - **type**: Het `map` datatype, zie [BasicObjectTypes](#basicobjecttypes).
@@ -1949,7 +1949,7 @@ Het *ObjectType*-object heeft 2 attributen: `type` en `data`.
 ```
 
 ###### ObjectKeyValuePair
-Het *ObjectKeyValuePair*-object stelt een sleutel-waarde paar voor.
+Het *ObjectKeyValuePair*-object stelt een sleutel-waardepaar voor.
 
 Het *ObjectKeyValuePair*-object heeft 2 attributen: `key` en `value`.
 - **key**: De sleutel, wat een [expressie](#expressies) is.
