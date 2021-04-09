@@ -8,16 +8,16 @@ Sjabloonopgaven worden gebruikt om één keer een beschrijving op te stellen.
 Deze beschrijving kan dan geïnstantieerd worden per programmeertaal die nodig is met de juiste benamingen van datatypes
 en stijlconventies.
 
-De sjabloonopgave worden geschreven met het Mako sjablonensysteem.
-TESTed ondersteunde twee opmaaktalen voor de opgaven: Markdown en HTML.
+De sjabloonopgave worden geschreven met het Mako-sjablonensysteem.
+TESTed ondersteunt twee opmaaktalen voor de opgaven: Markdown en HTML.
 De opgaven kunnen zowel in het Nederlands, als in het Engels geschreven worden.
 
 Wat moet er per programmeertaal gegenereerd worden?
 - **Functienamen**:
   De stijlconventies voor functienamen zijn afhankelijk van de programmeertaal.
-  Bijvoorbeeld: Python gebruikt de `snake_case` conventie, Java gebruikt de `camelCase` conventie.
+  Bijvoorbeeld: Python gebruikt de `snake_case`-conventie, Java gebruikt de `camelCase`-conventie.
 - **Typenamen**:
-  Een van de grotere verschillen tussen programmeertalen is de benaming de gebruikt voor hetzelfde datatype.
+  Een van de grotere verschillen tussen programmeertalen is de benaming voor hetzelfde datatype.
   Voorbeeld 8-bit gehele getallen: Java gebruikt hiervoor de naam `byte`,
   Haskell gebruikt hiervoor de naam `Data.Int.Int8`.
 - **Natuurlijke typenamen**:
@@ -25,7 +25,7 @@ Wat moet er per programmeertaal gegenereerd worden?
   Zo spreek je voor JavaScript over arrays, terwijl Python spreekt over lijsten,
   hoewel je het voor beide talen over dezelfde soort datastructuur hebt.
 - **Codevoorbeelden**:
-  Het grootste verschil tussen de programmeertalen, is de syntaxis die gebruikt wordt om de code te schrijven.
+  Het grootste verschil tussen de programmeertalen is de syntaxis die gebruikt wordt om de code te schrijven.
 
 ## Constanten
 We zullen eerst een overzicht zien van de constanten die gebruikt kunnen worden in de sjablonen.
@@ -85,7 +85,7 @@ Instantie JavaScript:
 ```
 
 ## Functies
-Zoals reeds aangegeven in de sectie [Constanten](#constanten) ondersteund Mako ook functies.
+Zoals reeds aangegeven in de sectie [Constanten](#constanten) ondersteunt Mako ook functies.
 
 We zullen terug een overzicht geven van de beschikbare functies die gebruikt kunnen worden met enkele voorbeelden.
 
@@ -93,7 +93,7 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Deze functie dient om de correcte stijlconventie voor de functienamen te kunnen renderen per programmeertaal.
   Deze functie verwacht een string als argument.
   ::: tip Tip
-  Wanneer een functienaam in het sjabloon opgegeven wordt, gebruikt men best de `snake_case` stijlconventie.
+  Wanneer een functienaam in het sjabloon opgegeven wordt, gebruikt men best de `snake_case`-stijlconventie.
   Dit zorgt ervoor dat de functienamen per taal correct gegenereerd kunnen worden.
   :::
 - **type_name**:
@@ -118,7 +118,7 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Beide functies verwachten een string als argument.
 
 ### Voorbeeld
-We zullen een voorbeeld bekijken van een Markdown beschrijving voor Python en JavaScript.
+We zullen een voorbeeld bekijken van een Markdown-beschrijving voor Python en JavaScript.
 
 Sjabloon:
 ```mako
@@ -143,14 +143,14 @@ of characters of type `List[str]`.
 
 ## Codevoorbeelden
 Een belangrijke eis voor de sjabloonbestanden is het eenvoudig kunnen noteren van codevoorbeelden.
-Dit is de enige functionaliteit die licht verschilt tussen de Markdown en HTML versie.
+Dit is de enige functionaliteit die licht verschilt tussen de Markdown- en HTML-versie.
 Het grootste verschil ligt aan de manier hoe de codeblokken voorgesteld worden.
 De inhoud van deze codeblokken zijn voor beide opmaaktalen wel hetzelfde.
 
 ### Codefragmenten
 De codefragmenten worden genoteerd met behulp van de mini-programmeertaal van TESTed
 (zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)),
-op een Python doctest-stijl manier.
+op een Python doctest-achtige manier.
 De invoerstatements en -expressies moeten worden voorafgegaan door het groter dan teken (`>`), de returnwaarden niet.
 
 Om meerdere regels te kunnen gebruiken wordt er gekeken naar het balanceren van de haakjes.
@@ -159,8 +159,8 @@ wanneer het laatste symbool op de regel een backslash (`\`) is.
 
 :::warning Belangrijk
 De codefragmenten worden verwerkt in de voorbereidende stap voor het renderen van de template.
-Bij deze verwerking worden de statements en expressies vertaalt naar de bijhorende functieoproepen.
-Bijgevolg kunnen er geen Mako directieven gebruikt worden in deze codefragmenten.
+Bij deze verwerking worden de statements en expressies vertaald naar de bijhorende functieoproepen.
+Bijgevolg kunnen er geen Mako-directieven gebruikt worden in deze codefragmenten.
 :::
 
 #### Voorbeeld
@@ -173,15 +173,15 @@ Bijgevolg kunnen er geen Mako directieven gebruikt worden in deze codefragmenten
 ### Hoofding
 De codefragmenten die geanalyseerd moeten worden in Markdown starten met de hoofding ` ```tested` zonder witruimte voor.
 Deze sluit af met ` ``` ` zonder witruimte voor.
-De enige beperking in de Markdown codefragmenten is dat de regels niet mogen starten met ` ``` `.
+De enige beperking in de Markdown-codefragmenten is dat de regels niet mogen starten met ` ``` `.
 
 De codefragmenten die geanalyseerd moeten worden in HTML bevinden zich in de tag `code` en
 moeten lid zijn van de klasse `tested`.
 De enige beperking in de codefragmenten is dat deze geen inwendige `code` tags mogen bevatten, ook niet in de strings.
 
 ### Voorbeelden
-Een eerste voorbeeld is in Markdown met een Kotlin instantie.
-Een tweede voorbeeld is in HTML met een Haskell instantie.
+Een eerste voorbeeld is in Markdown met een Kotlin-instantie.
+Een tweede voorbeeld is in HTML met een Haskell-instantie.
 
 #### Markdown
 Sjabloon:
@@ -371,7 +371,7 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
 ```
 
 ## Instantiëren van een sjabloon
-Om de sjablonen te instantiëren voor een programmeertaal, kan er gebruikgemaakt worden van een Python script, 
+Om de sjablonen te instantiëren voor een programmeertaal, kan er gebruikgemaakt worden van een Python-script, 
 dat deel uitmaakt van TESTed.
 Dit script kan terug gevonden op [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed.
 Het script kan uitgevoerd worden met één van de volgende commando's (en combinaties) in de root directory van de
