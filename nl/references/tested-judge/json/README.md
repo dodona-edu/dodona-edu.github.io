@@ -91,7 +91,7 @@ Een *tab*-object heeft 3 attributen: `name`, `hidden` en `runs`.
 
 ## Run
 Een run is een gegenereerd uitvoerbare bestand, die een collectie contexten bevat en ook een optioneel testgeval
-kan bevatten die het geschreven programma zelf uitvoert.
+kan bevatten die het door de student geschreven programma zelf uitvoert.
 
 Het *Run*-object heeft twee attributen: `run` en `contexts`.
 - **run**: Dit is het testgeval die het geschreven programma zelf uitvoert (zie [RunTestcase](#runtestcase)).
@@ -122,7 +122,7 @@ Het *Run*-object heeft twee attributen: `run` en `contexts`.
 ```
 
 ## RunTestcase
-Het *RunTestcase*-object is het testgeval die het geschreven programma zelf uitvoert.
+Het *RunTestcase*-object is het testgeval die het door de student geschreven programma zelf uitvoert.
 Deze wordt weergegeven als een aparte context op Dodona.
 
 Het *RunTestcase*-object heeft 4 attributen: `input`, `output`, `description` en `link_files`.
@@ -768,14 +768,8 @@ Het *ExceptionOutputChannel*-object heeft 2 attributen: `exception` en `evaluato
 #### ExceptionValue
 Het *ExceptionValue*-object bevat het bericht die verwacht wordt in een opgegooide fout.
 
-Het *ExceptionValue*-object heeft 2 attributen: `message` en `stacktrace`.
+Het *ExceptionValue*-object heeft 1 attribuut: `message`.
 - **message**: Het tekstbericht van de opgegooide fout.
-- **stacktrace**: De stacktrace van de fout.
-  ::: danger Opmerking
-  De "verwachte" stacktrace moet niet worden opgegeven in het testplan.
-  
-  Dit attribuut wordt gebruikt in de interne werking van TESTed.
-  :::
 
 ```json
 "ExceptionValue": {
@@ -784,10 +778,6 @@ Het *ExceptionValue*-object heeft 2 attributen: `message` en `stacktrace`.
   "properties": {
     "message": {
       "title": "Message",
-      "type": "string"
-    },
-    "stacktrace": {
-      "title": "Stacktrace",
       "type": "string"
     }
   },

@@ -90,7 +90,7 @@ A *tab*-object has 3 attributes: `name`, `hidden` en `runs`.
 
 ## Run
 A run is a generated executable,
-that contains a collections of contexts and also an optional testcase that evaluates the written program.
+that contains a collections of contexts and also an optional testcase that evaluates the written program by the student.
 
 The *Run*-object has two attributes: `run` and `contexts`.
 - **run**: This is the testcase that executes the written program (see [RunTestcase](#runtestcase)).
@@ -168,7 +168,7 @@ The *RunTestcase*-object has 4 attributes: `input`, `output`, `description` and 
 ```
 
 ### RunInput
-The *RunInput*-object contains all information to run the program test.
+The *RunInput*-object contains all information to run that evaluates the written program by the student.
 
 The *RunInput*-object has 3 attributes: `stdin`, `arguments` and `main_call`.
 - **stdin**: The given input at standard input.
@@ -759,14 +759,8 @@ The *ExceptionOutputChannel*-object has 2 attributes: `exception` and `evaluator
 #### ExceptionValue
 The *ExceptionValue*-object contains the message that is expected from the thrown exception.
 
-The *ExceptionValue*-object has 2 attributes: `message` and `stacktrace`.
+The *ExceptionValue*-object has 1 attribute: `message`.
 - **message**: The text message of the thrown exception.
-- **stacktrace**: The stacktrace of the exception.
-  ::: danger Remark
-  The "expected" stacktrace shouldn't be added in the testplan.
-  
-  This attribute is used in the internal processing of TESTed.
-  :::
 
 ```json
 "ExceptionValue": {
@@ -775,10 +769,6 @@ The *ExceptionValue*-object has 2 attributes: `message` and `stacktrace`.
   "properties": {
     "message": {
       "title": "Message",
-      "type": "string"
-    },
-    "stacktrace": {
-      "title": "Stacktrace",
       "type": "string"
     }
   },
