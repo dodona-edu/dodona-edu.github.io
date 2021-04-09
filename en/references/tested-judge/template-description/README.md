@@ -5,40 +5,40 @@ description: "TESTed description templates"
 
 # Documentation description templates
 Description templates are used to only write a description once.
-That description can be instantiated foreach programming language that is necessary with the correct names and style
+That description can be instantiated for each programming language that is necessary with the correct names and style
 conventions.
 
-The description templates will be written using the Mako templating system.
-TESTed supported two markup languages for the exercises: Markdown and HTML.
-The descriptions could be both written in English and Dutch.
+Description templates are written using the Mako templating system.
+TESTed supports two markup languages for the exercises: Markdown and HTML.
+The descriptions can be written in both English and Dutch.
 
 Which parts of the description should be generated for a programming language?
 
 - **Function names**:
-  The style conventions for function names are programming language depended.
+  The style conventions for function names are programming language dependant.
   Example: Python uses the `snake_case` convention, Java uses the `camelCase` convention.
 - **Type names**:
   One of the larger difference between programming languages are the names that are used for the same datatype.
-  Example 8-bit integers: Java uses the name `byte`, Haskell uses the name `Data.Int.Int8`.
+  For example, 8-bit integers: in Java they're called `byte`, while Haskell uses `Data.Int.Int8`.
 - **Natural type names**:
-  The natural types names, more specific these for collections of values, could also differ for a programming language.
-  In JavaScript, you speak about arrays, but in Python, you speak about lists.
-  However, the datastructures is the same for both languages.
+  The type names in natural language, especially those for collections, also differ between programming languages.
+  For example, JavaScript has arrays, while Python has lists. Similarly, Java has maps, while Python has dictionaries.
+  However, the data structures are the same for both languages.
 - **Code examples**:
-  The biggest difference between programming languages, is the syntax used to write code.
+  The biggest difference between programming languages is the syntax used to write code.
   
 ## Constants
-First we will look to the constants that could be used in the templates.
+First we will look at the constants that can be used in the templates.
 - **prompt**:
-  This constant contains the console-prompt-prefix.
+  This constant contains the prefix for the console prompt.
   In the HTML template it will be the escaped version.
   Example: `>>>` for Python.
 - **language and language_html**:
-  These constants contains the name of the programming language, wherefore an instance is generated.
+  These constants contain the name of the programming language for which an instance is generated.
   `language_html` is the HTML-safe version of `language`.
 - **namespace and namespace_html**:
-  These constants contains the `namespace` of the code.
-  The namespace could be passed as a parameter to the conversion program.
+  These constants contain the `namespace` of the code.
+  The namespace can be passed as a parameter to the conversion program.
   `namespace_html` is the HTML-safe version of `namespace`.
 
 The constants and function calls in Mako must be notated between `${...}`.
@@ -93,7 +93,7 @@ We will again given an overview of all available functions that could be used in
   The input of this function is one string.
   ::: tip Hint
   When you pass the function name in the template, it's best to use the `snake_case` style convention.
-  This makes it possible to generate the correct function names foreach language.
+  This makes it possible to generate the correct function names for each language.
   :::
 - **type_name**:
   This function is used to translate the TESTed datatypes to the programming language datatypes.
@@ -101,13 +101,13 @@ We will again given an overview of all available functions that could be used in
   The first argument of the pair must be a collection datatype string,
   the second either one type argument, or a list of type arguments.
 - **natural_type_name**:
-  This function searches the natural name for a collectiondatatype and/or the string-datatype of TESTed for a given
+  This function searches the natural name for a collection datatype and/or the string datatype of TESTed for a given
   programming language.
   The input of this function is one string.
 - **statement and expression**:
-  This functions are not meant to use by the redactor of the descriptions.
+  These functions are not meant to use by the redactor of the descriptions.
   But for the sake of completeness, they are listed anyway.
-  This functions are used to convert code snippets in the mini-programming language of TESTed
+  These functions are used to convert code snippets in the mini-programming language of TESTed
   (see [Statements, expressions and return-raw](../dsl/#statements-expressions-and-return-raw)) to code snippets in the
   programming languages.
   - **statement** must be used for all input code snippets.
@@ -146,7 +146,7 @@ The biggest difference is the way how the code blocks are represented.
 The content of these code blocks are the same for both markup languages.
 
 ### Code snippets
-The code snippets must be notated in the mini-programming language of TESTed
+The code snippets must be written in the mini-programming language of TESTed
 (see [Statements, expressies and return-raw](../dsl/#statements-expressions-and-return-raw)),
 in a Python doctest-style manner.
 The input statements and expressions must be prefixed with the _larger than_ character (`>`), the return values not.
@@ -248,7 +248,7 @@ Common text
 ```
 
 ## Custom variables
-When you use a name frequent in the text, you can define a variable in Make,
+When you frequently use a name in the text, you can define a variable in Mako,
 the advantages is avoiding multiple function calls that returns the same value.
 
 ### Example
@@ -368,8 +368,8 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
 
 ## Instances of the template
 To instantiate the templates for a programming language, you can use a Python script that is in TESTed repository.
-This script could be found at the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
-The script could be runned with one of the following commands (and combinations) in the root directory of the
+This script can be found at the [GitHub repository](https://github.com/dodona-edu/universal-judge) of TESTed.
+The script can be run with one of the following commands (and combinations) in the root directory of the
 GitHub repository:
 ```bash
 # Default instantiate English HTML for python with namespace 'submission'
