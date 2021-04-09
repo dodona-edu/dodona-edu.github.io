@@ -3,16 +3,16 @@ title: "Oefeningssjabloon TESTed"
 description: "Tutorial: Oefeningssjabloon TESTed"
 ---
 ::: warning Opmerking
-Sjabloonoefeningen worden gebruikt wanneer je één oefening in meerdere programmeertalen wilt aanbieden.
+Oefeningssjabloonen worden gebruikt wanneer je één oefening in meerdere programmeertalen wilt aanbieden.
 :::
 
-# Sjabloonoefening TESTed
+# Oefeningssjabloon TESTed
 TESTed is een meertalige judge, waarmee we bedoelen dat TESTed meerdere programmeertalen ondersteunt.
 Dit maakt het mogelijk om programmeertaalonafhankelijke oefeningen op te stellen: je schrijf één oefening,
 die oplosbaar zal zijn in meerdere programmeertalen (zie de [TESTed-referentie](../../../references/tested-judge/)).
 
 Hoewel de judge meerdere programmeertalen ondersteunt, verwacht Dodona voorlopig per programmeertaal een aparte oefening.
-Als oplossing hiervoor introduceert deze handleiding het concept van sjabloonoefeningen.
+Als oplossing hiervoor introduceert deze handleiding het concept van oefeningssjabloonen.
 Dit is een programmeertaalonafhankelijk sjabloon voor een oefening,
 dat zal worden omgezet naar een programmeertaalspecifieke (en Dodona-compatibele) oefening voor TESTed.
 
@@ -21,10 +21,10 @@ De oefeningen voor Dodona bevinden zich in een Git repository, zoals normale oef
 We verwijzen naar [de handleiding _oefening repositories aanmaken_](../new-exercise-repo).
 
 ## 2. Mapstructuur
-De mapstructuur voor een sjabloonoefening van TESTed komt in grote mate overeen met de
+De mapstructuur voor een oefeningssjabloon van TESTed komt in grote mate overeen met de
 [vereiste structuur door Dodona](../../../references/exercise-directory-structure).
-Bij de sjabloonoefening is het `config.json` bestand hernoemd naar `config.template.json`,
-met als hoofdreden dat we de sjabloonoefening niet als een oefening op Dodona willen weergeven.
+Bij de oefeningssjabloon is het `config.json` bestand hernoemd naar `config.template.json`,
+met als hoofdreden dat we de oefeningssjabloon niet als een oefening op Dodona willen weergeven.
 
 ### Voorbeeld minimale mapstructuur
 ```text
@@ -45,7 +45,7 @@ kan gevonden worden op [TESTed DSL-testplannen](../../../references/tested-judge
 We veronderstellen dat dit testplan zich bevindt in het bestand `evaluation/plan.yaml`.
 
 ::: tip Tip voor geavanceerde gebruikers
-De sjabloonoefeningen kunnen ook gebruikmaken van de
+De oefeningssjabloonen kunnen ook gebruikmaken van de
 [geavanceerde testplannen](../../../references/tested-judge/json).
 :::
 
@@ -60,7 +60,7 @@ We raden sterk aan om de opgaven in markdown te schrijven,
 zie [Oefeningbeschrijvingen](../../../references/exercise-description).
 :::
 
-## 5. Configureren van de sjabloonoefening
+## 5. Configureren van de oefeningssjabloon
 Het configureren van een oefening wordt uitgelegd in [Oefeningconfiguratie](../../../references/exercise-config).
 Wij zullen de specifieke configuratie voor TESTed in `config.template.json` bekijken.
 
@@ -85,9 +85,9 @@ Wij zullen de specifieke configuratie voor TESTed in `config.template.json` beki
 Het `access`-veld en het `description`-object zijn vereist door Dodona.
 De programmeertaal zal toegevoegd worden aan de benamingen van de oefening wanneer er een instantie gegeneerd wordt.
 Dodona vereist ook het `programming_language`-veld,
-maar deze wordt pas ingevuld tijdens het gegeneren van de instanties van de sjabloonoefening.
+maar deze wordt pas ingevuld tijdens het gegeneren van de instanties van de oefeningssjabloon.
 
-Voor de sjabloonoefeningen vereist TESTed dat het veld `evaluation.plan_name` ingevuld is.
+Voor de oefeningssjabloonen vereist TESTed dat het veld `evaluation.plan_name` ingevuld is.
 Dit veld bepaalt welk testplan er zal gebruikt worden door TESTed.
 Dit testplan zal ook worden gebruikt om te bepalen welke `namespace` de sjabloonbeschrijvingen zullen gebruiken,
 alsook om te bepalen voor welke programmeertalen een instantie gegenereerd mag worden.
@@ -123,7 +123,7 @@ In de toekomst willen we dit aanpassen,
 met als doel meerdere programmeertalen te ondersteunen voor dezelfde oefening op Dodona.
 :::
 
-Na het opstellen van de sjabloonoefening, kunnen we deze instantiëren voor alle vereiste programmeertalen.
+Na het opstellen van de oefeningssjabloon, kunnen we deze instantiëren voor alle vereiste programmeertalen.
 Hiervoor kan er gebruikt gemaakt worden van een Python-script dat deel uitmaakt van TESTed.
 Dit script kan terug gevonden worden in de
 [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed.
@@ -132,7 +132,7 @@ Het script kan uitgevoerd worden met het volgende commando in de root directory 
 $ python3 -m tested.instantiate_exercise "sjabloon/oefening/map" "instanties/oefening/map"
 ```
 
-Dit script zal, voor de sjabloonoefening in de map `sjabloon/oefening/map`,
+Dit script zal, voor de oefeningssjabloon in de map `sjabloon/oefening/map`,
 per programmeertaal een instantie genereren in de map `instanties/oefening/map/{programmeer_taal}`.
 
 Dit script heeft enkele optionele opties:
