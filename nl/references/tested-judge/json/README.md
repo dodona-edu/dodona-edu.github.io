@@ -30,7 +30,7 @@ Het *Plan*-object heeft 2 attributen: `namespace` en `tabs`.
   De namespace wordt het best genoteerd in `snake_case`,
   zodat de juiste stijlconventie per programmeertaal gevolgd kan worden.
   :::
-- **tabs**: Het `tabs` object bevat een lijst met alle [tabbladen](#tab) die uitgevoerd moet worden.
+- **tabs**: Het `tabs`-object bevat een lijst met alle [tabbladen](#tab) die uitgevoerd moet worden.
 
 ```json
 "Plan": {
@@ -122,7 +122,7 @@ Het *Run*-object heeft twee attributen: `run` en `contexts`.
 ```
 
 ## RunTestcase
-Het *RunTestcase*-object is het testgeval die het door de student geschreven programma zelf uitvoert.
+Het *RunTestcase*-object is het testgeval dat het door de student geschreven programma zelf uitvoert.
 Deze wordt weergegeven als een aparte context op Dodona.
 
 Het *RunTestcase*-object heeft 4 attributen: `input`, `output`, `description` en `link_files`.
@@ -217,7 +217,7 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
 - **stdout** en **stderr**: Het uitvoerkanaal voor standaardfout en -error.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen uitvoer verwacht op dit kanaal.
-    Dit is de standaard optie.
+    Dit is de standaardoptie.
   - [IgnoredChannel](#ignoredchannel): Er wordt geen uitvoer verwacht op dit kanaal,
     maar gegeven uitvoer zal genegeerd worden.
   - [TextOutputChannel](#textoutputchannel): Er wordt uitvoer verwacht op dit kanaal.
