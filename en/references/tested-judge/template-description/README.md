@@ -20,7 +20,7 @@ Which parts of the description should be generated for a programming language?
 - **Type names**:
   One of the larger difference between programming languages are the names that are used for the same datatype.
   For example, 8-bit integers: in Java they're called `byte`, while Haskell uses `Data.Int.Int8`.
-- **Natural type names**:
+- **Type names in natural language**:
   The type names in natural language, especially those for collections, also differ between programming languages.
   For example, JavaScript has arrays, while Python has lists. Similarly, Java has maps, while Python has dictionaries.
   However, the data structures are the same for both languages.
