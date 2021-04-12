@@ -82,8 +82,38 @@ Er wordt gebruikgemaakt van **inspringsniveaus** om verschillende objecten in el
 Objecten bestaan uit sleutel-waardeparen, waarbij de **sleutel** een string is zonder witruimte die moet **eindigen op een dubbelepunt**.
 De waarden kunnen zowel andere objecten zijn alsook tekst, getallen, logische waarden en lijsten.
 
+Voorbeelden:
+```yaml
+object0: 1
+```
+```yaml
+root:
+  child0:
+    subchild0: "leaf"
+    subchild1: "leaf"
+  child1:
+    subchild0: "leaf"
+```
+
 #### Lijsten
 Wanneer je gebruik wilt maken van lijsten, moet de **eerste sleutel** van elk object in de lijst **voorafgegaan** worden door een **liggend streepje** gevolg door een **spatie**.
+
+Voorbeelden:
+```yaml
+- name: "Item 0"
+- name: "Item 1"
+- name: "Item 2"
+- name: "Item 3"
+```
+```yaml
+list:
+- name: "Item 0"
+  items: 5
+- name: "Item 1"
+- name: "Item 2"
+  items: 3
+- name: "Item 3"
+```
 
 #### Testplan
 De structuur van de testplannen is een lijst op het hoogste niveau waarin tabblad-objecten bevat zijn.

@@ -82,8 +82,38 @@ It uses indentation levels to create **nested** objects.
 Objects consist of key-value pairs, where the **key** is a string without whitespace, and must be **terminated with a colon**.
 The values could be other objects, but also strings, numbers, logical values and lists.
 
+Examples:
+```yaml
+object0: 1
+```
+```yaml
+root:
+  child0:
+    subchild0: "leaf"
+    subchild1: "leaf"
+  child1:
+    subchild0: "leaf"
+```
+
 #### Lists
 When you use lists in `yaml`, the **first key** of each object in the list must be **prepended** by a **dash** followed by a **space**.
+
+Examples:
+```yaml
+- name: "Item 0"
+- name: "Item 1"
+- name: "Item 2"
+- name: "Item 3"
+```
+```yaml
+list:
+- name: "Item 0"
+  items: 5
+- name: "Item 1"
+- name: "Item 2"
+  items: 3
+- name: "Item 3"
+```
 
 #### Testplan
 The structure of the testplans is a list at the highest level, which contains tab-objects.
