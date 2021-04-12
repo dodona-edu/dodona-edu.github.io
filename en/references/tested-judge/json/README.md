@@ -986,9 +986,8 @@ This is the case because exception types are programming language dependent.
 The *GenericExceptionEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The additional evaluation options that can be used by the builtin evaluator.
-  ::: warning Remark
-  At this moment there are no options used by the builtin evaluator for exceptions.
-  :::
+  
+  _**Remark:**_ At this moment there are no options used by the builtin evaluator for exceptions.
 - **name**: A string with constant value `exception`, see [ExceptionBuiltin](#exceptionbuiltin).
 
 ```json
@@ -1022,9 +1021,8 @@ The *GenericValueEvaluator*-object contains all information that is need to use 
 The *GenericValueEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The addition evaluation options that can be used by the builtin evaluator.
-  ::: warning Remark
-  At this moment there are no options used by the builtin evaluator for exceptions.
-  :::
+  
+  _**Remark:**_ At this moment there are no options used by the builtin evaluator for exceptions.
 - **name**: A string with constant value `value`, see [ValueBuiltin](#valuebuiltin).
 
 ```json
@@ -1099,9 +1097,8 @@ The *ProgrammedEvaluator*-object has 4 attributes: `language`, `function`, `argu
   which contains the information about the evaluation function.
 - **arguments**: A list with additional arguments for the evaluation function,
   see [EvaluationFunction](#evaluationfunction) and [Statements and expressions](#statements-and-expressions).
-  ::: warning Remark
-  These arguments can't have function calls or variables.
-  :::
+  
+  _**Remark:**_ These arguments can't have function calls or variables.
 - **type**: A string with constant value `programmed`.
 
 ::: tip Hint
@@ -1171,17 +1168,15 @@ The *SpecificEvaluator*-object has 2 attributes: `evaluators` and `type`.
 - **evaluators**: This is an object with the programming languages, wherefore an evaluator is available, as keys.
   The values in this object are of the type [EvaluationFunction](#evaluationfunction),
   which contains information about the evaluation function.
-  ::: warning Remark
-  The programming language of a specific evaluator is the same is that of the submission.
-  :::
+  
+  _**Remark:**_ The programming language of a specific evaluator is the same is that of the submission.
   ::: danger Remark
   When there is no specific evaluator for a programming language, the exercise could not be solved in that language.
   :::
 - **type**: A string with constant value `specific`.
 
-::: warning Remark
+_**Remark:**_
 The specific evaluator is executed in the same process (not the TESTed process) as the execution of the submission code.
-:::
 
 ```json
 "SpecificEvaluator": {
@@ -1215,21 +1210,20 @@ The *EvaluationFunction*-object has 2 attributes: `file` and `name`.
   which contains the evaluation function.
 - **name**: The name of the evaluation function that must be called.
   The default function name is `evaluate`.
-  ::: danger Important
+  
+  _**Important for a specific evaluator:**_
   For a specific evaluator, this function expects only one argument `actual` which contains the return value.
-  :::
-  ::: danger Important
+  
+  _**Important for a programmed evaluator:**_
   For a programmed evaluator, this function has three arguments: `expected`, `actual` and `arguments`.
   - `expected` contains the expected return value of the testplan.
   - `actual` contains the actual return value.
   - `arguments` contains a list of additional arguments for the evaluation function.
-  :::
-  ::: danger Important
+  
+  _**Important:**_
   Both the function for the specific evaluator, as the function for the programmed evaluator must return an object of
   the type [EvaluationResult](https://github.com/dodona-edu/universal-judge/blob/4216ddd983add3bc05c61d47c09233093bff8808/tested/evaluators/__init__.py#L43).
-
   This object is implemented foreach supported programming language.
-  :::
 
 ```json
 "EvaluationFunction": {

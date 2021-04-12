@@ -997,9 +997,8 @@ Dit komt door dat de fouttypes programmeertaalafhankelijk zijn.
 Het *GenericExceptionEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
-  ::: warning Opmerking
-  Voorlopig worden er geen opties gebruikt in de interne evaluator voor fouten.
-  :::
+  
+  _**Opmerking:**_ Voorlopig worden er geen opties gebruikt in de interne evaluator voor fouten.
 - **name**: Een string met vaste waarde `exception`, zie [ExceptionBuiltin](#exceptionbuiltin).
 
 ```json
@@ -1034,9 +1033,8 @@ evaluator.
 Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
-  ::: warning Opmerking
-  Voorlopig worden er geen opties gebruikt in de interne evaluator voor de returnwaarden.
-  :::
+  
+  _**Opmerking:**_ Voorlopig worden er geen opties gebruikt in de interne evaluator voor de returnwaarden.
 - **name**: Een string met vaste waarde `value`, zie [ValueBuiltin](#valuebuiltin).
 
 ```json
@@ -1113,9 +1111,8 @@ Het *ProgrammedEvaluator*-object heeft 4 attributen: `language`, `function`, `ar
 - **function**: Een [EvaluationFunction](#evaluationfunction) object, welke informatie bevat over de evaluatiefunctie.
 - **arguments**: Een lijst met extra argumenten voor de evaluatiefunctie,
   zie [EvaluationFunction](#evaluationfunction) en [Statements en expressies](#statements-en-expressies).
-  ::: warning Opmerking
-  Deze argumenten kunnen geen functieoproepen en variabelen bevatten.
-  :::
+  
+  _**Opmerking:**_ Deze argumenten kunnen geen functieoproepen en variabelen bevatten.
 - **type**: Een string met de vaste waarde `programmed`.
 
 ::: tip Tip
@@ -1186,19 +1183,16 @@ Het *SpecificEvaluator*-object heeft 2 attributen: `evaluators` en `type`.
 - **evaluators**: Dit is een object met de programmeertalen, waarvoor een evaluator beschikbaar, is als sleutels.
   De waarden van dit object zijn van het type [EvaluationFunction](#evaluationfunction),
   welke informatie bevat over de evaluatiefunctie.
-  ::: warning Opmerking
-  De programmeertaal van de specifieke evaluator is dezelfde als die van de ingediende oplossing.
-  :::
+  
+  _**Opmerking:**_ De programmeertaal van de specifieke evaluator is dezelfde als die van de ingediende oplossing.
   ::: danger Opmerking
   Wanneer er geen specifieke evaluator beschikbaar is voor een programmeertaal,
   kan de oefening niet opgelost worden in die programmeertaal.
   :::
 - **type**: Dit is een string met de vaste waarde `specific`.
 
-::: warning Opmerking
-De specifieke evaluator wordt uitgevoerd in hetzelfde proces (dit is niet het TESTed proces)
+_**Opmerking:**_ De specifieke evaluator wordt uitgevoerd in hetzelfde proces (dit is niet het TESTed proces),
 die uitgevoerd wordt voor het uitvoeren van de studentencode.
-:::
 
 ```json
 "SpecificEvaluator": {
@@ -1232,21 +1226,20 @@ Het *EvaluationFunction*-object heeft 2 attributen: `file` en `name`.
   waarin de evaluator functie zich bevindt.
 - **name**: De naam van de evaluatiefunctie die opgeroepen moet worden.
   Standaard is dit de functie `evaluate`.
-  ::: danger Belangrijk
+  
+  _**Belangrijk voor een specifieke evaluator:**_
   Voor een specifieke evaluator verwacht deze functie slecht één argument `actual` welke de returnwaarde bevat.
-  :::
-  ::: danger Belangrijk
-  Voor een geprogrammeerde evaluator verwacht deze functie drie argumenten: `expected`, `actual` en `arguments`.
-  - `expected` bevat de verwachte returnwaarde uit het testplan.
-  - `actual` bevat de werkelijke returnwaarde.
-  - `arguments` bevat een lijst met extra argumenten voor de evaluatiefunctie.
-  :::
-  ::: danger Belangrijk
+  
+  _**Belangrijk voor een geprogrammeerde evaluator:**_
+    Voor een geprogrammeerde evaluator verwacht deze functie drie argumenten: `expected`, `actual` en `arguments`.
+    - `expected` bevat de verwachte returnwaarde uit het testplan.
+    - `actual` bevat de werkelijke returnwaarde.
+    - `arguments` bevat een lijst met extra argumenten voor de evaluatiefunctie.
+  
+  _**Belangrijk:**_
   Voor zowel de specifieke evaluator als de geprogrammeerde evaluator moet deze functie een object van het type 
   [EvaluationResult](https://github.com/dodona-edu/universal-judge/blob/4216ddd983add3bc05c61d47c09233093bff8808/tested/evaluators/__init__.py#L43).
-    
   Dit object is geïmplementeerd voor elke ondersteunde programmeertaal.
-  :::
 
 ```json
 "EvaluationFunction": {
