@@ -86,7 +86,7 @@ The field `parallel` specifies whether the evaluations may be executed in parall
 The parallellisation has effect on the different executables for one tab.
 By default, there will be no parallellisation.
 
-Example of applying parallelization:
+Example of applying parallelisation:
 ```json
 {
   "evaluation": {
@@ -104,7 +104,7 @@ TESTed support two modes:
 2) Compile each executable file separately (`context`, individual compilation).
 
 `batch` compilation has as result that there will be less time spend at compiling test and solution code,
-if we compare it to the individual compilation.
+when we compare it to the individual compilation.
 
 By default, will TESTed compile all executables in one step.
 
