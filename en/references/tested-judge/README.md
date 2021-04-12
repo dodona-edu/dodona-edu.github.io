@@ -15,7 +15,7 @@ This is the reference for the **TESTed** judge.
 * C (gcc 8.3.0)
 * Haskell (ghc 8.4.4)
 * Java 11
-* JavaScript (NodeJS v10)
+* JavaScript (NodeJS v14)
 * Kotlin 1.4.10
 * Python 3.9
 
