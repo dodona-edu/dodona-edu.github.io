@@ -906,26 +906,23 @@ The *ValueOutputChannel*-object is the output channel for return values.
 The *ValueOutputChannel*-object has 2 attributes: `value` and `evaluator`
 - **value**: The expected return value.
   See [Statements and expressions](#statements-and-expressions) for the possible return values.
-  ::: danger Remark
-  The expected return value may not contain function calls and variables.
-  :::
+  
+  _**Remark:**_ The expected return value may not contain function calls and variables.
 - **evaluator**: The evaluator that can be used to evaluate the return value.
   There are three evaluators that can be used:
   - [GenericValueEvaluator](#genericvalueevaluator): This the built-in evaluator of TESTed for return values.
     This is the default evaluator.
-    ::: danger Remark
-    This evaluator only supports the datatypes of TESTed.
-    :::
+    
+    _**Remark:**_ This evaluator only supports the datatypes of TESTed.
   - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator,
     that is independent of the programming language of the submission.
-    ::: danger Remark
+    
+    _**Remark:**_
     This evaluator only support the datatypes of TESTed that are supported by the programming language of the evaluator.
-    :::
   - [SpecificEvaluator](#specificevaluator): This is a written custom evaluator,
     that is dependent of the programming language of the submission.
-    ::: warning Remark
-    This the only evaluator that could be used to evaluate programming language specific datatypes.
-    :::
+    
+    _**Remark:**_ This the only evaluator that could be used to evaluate programming language specific datatypes.
 
 ```json
 "ValueOutputChannel": {

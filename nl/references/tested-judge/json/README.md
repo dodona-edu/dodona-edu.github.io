@@ -916,27 +916,23 @@ Het *ValueOutputChannel*-object is het uitvoerkanaal voor returnwaarden.
 Het *ValueOutputChannel*-object heeft 2 attributen: `value` en `evaluator`.
 - **value**: De verwachte returnwaarde.
   Zie [Statements en expressies](#statements-en-expressies) voor de mogelijke returnwaarden.
-  ::: danger Opmerking
-  De verwachte returnwaarde mag geen functieoproepen en variabelen bevatten.
-  :::
+  
+  _**Opmerking:**_ De verwachte returnwaarde mag geen functieoproepen en variabelen bevatten.
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van de returnwaarde.
   Er kunnen drie evaluators gebruikt worden:
   - [GenericValueEvaluator](#genericvalueevaluator): Dit is de interne evaluator van TESTed voor returnwaarden.
     Dit is de standaardevaluator.
-    ::: danger Opmerking
-    Deze evaluator ondersteunt alleen de datatypes van TESTed.
-    :::
+    
+    _**Opmerking:**_ Deze evaluator ondersteunt alleen de datatypes van TESTed.
   - [ProgrammedEvaluator](#programmedevaluator): Dit is een eigen geschreven evaluator,
     die onafhankelijk is van de programmeertaal van de ingediende oplossing.
-    ::: danger Opmerking
-    Deze evaluator ondersteunt alleen de datatypes van TESTed,
+    
+    _**Opmerking:**_ Deze evaluator ondersteunt alleen de datatypes van TESTed,
     die ondersteund worden door de programmeertaal van de evaluator.
-    :::
   - [SpecificEvaluator](#specificevaluator): Dit is een eigen geschreven evaluator,
     die afhankelijk is van de programmeertaal van de ingediende oplossing.
-    ::: warning Opmerking
-    Dit is de enige evaluator die programmeertaalspecifieke datatypes kan evalueren.
-    :::
+    
+    _**Opmerking:**_ Dit is de enige evaluator die programmeertaalspecifieke datatypes kan evalueren.
 
 ```json
 "ValueOutputChannel": {
