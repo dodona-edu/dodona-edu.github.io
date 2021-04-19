@@ -444,26 +444,6 @@ Naam van het bestand.
 #### url
 Relatief pad naar het bestand, in de description map van de oefening.
 
-## Verborgen tabbladen
-Dodona biedt ondersteuning om tabbladen te verbergen.
-Deze is echter wel zichtbaar wanneer dit tabblad fouten bevat.
-Hiervoor kun je de optie `hidden` meegeven aan een tabblad die een booleaanse waarde verwacht.
-
-```yaml
-- tab: "Hidden"
-  hidden: true
-  contexts:
-  - stdin: "zero"
-    stdout: "0\n"
-- tab: "Visible"
-  hidden: false
-  contexts:
-  - stdin: "one"
-    stdout: "1\n"
-```
-
-![Fout in verborgen tabblad](./hidden.png)
-
 ## Combinatie van functieoproepen en invoer-uitvoer
 We hebben nu telkens testplannen bekeken voor ofwel invoer-uitvoer ofwel functieoproepen.
 We kunnen deze echter combineren in één testplan.
@@ -555,7 +535,7 @@ De grammatica ondersteunt getallen, booleaanse waarden, nullwaarden en strings.
 #### Getallen
 Zowel gehele getallen als rationale getallen worden ondersteund.
 Gehele getallen gebruiken altijd de decimale notatie (bv: `2020`, `+5`, `−2`).
-Rationale getallen kunnen zowel de decimale (bv: `2.5`) als exponentiële (bv: `27.15e2`, `−2e−2`) notatie gebruiken.
+Rationale getallen kunnen zowel de decimale (bv: `2.5`) als wetenschappelijke notatie (bv: `27.15e2`, `−2e−2`) notatie gebruiken.
 
 #### Booleaanse waarden
 De twee booleaanse waarden zijn `true` (waarheidswaarde waar) en `false` (waarheidswaarde vals).
@@ -632,6 +612,7 @@ Niet elke programmeertaal ondersteunt elke datatype als verzamelingselement.
 Een veranderlijke ongeordende collectie van sleutel-waarde paren.
 Waarbij de sleutels onveranderlijk zijn, de waarden kunnen zowel veranderlijk als onveranderlijk zijn.
 Deze worden zoals verzamelingen genoteerd met behulp van accolades en kunnen leeg zijn.
+Lege verzameling moeten met behulp van [expliciete typering](#expliciete-typering) genoteerd worden.
 Zowel de sleutels als de waarden van deze afbeeldingen zijn kunnen van elk datatype zijn.
 Enkele voorbeelden:
 ```javascript
@@ -645,8 +626,9 @@ Enkele voorbeelden:
 Niet elke programmeertaal ondersteunt elke datatype als sleutelwaarde.
 :::
 
-#### Casten
-Onze grammatica ondersteunt de mogelijkheid om de waarden (geen expressies) te ‘casten’ naar een specifiek datatype.
+#### Expliciete typering
+Onze grammatica ondersteunt de mogelijkheid om de waarden (geen expressies) te voorzien van een uitdrukkelijk
+specifiek datatype.
 Hiervoor gebruiken we de notatie `<Waarde> :: <Datatype>`.
 Een lege verzameling kunnen we bijvoorbeeld op de volgende manier noteren:
 ```haskell

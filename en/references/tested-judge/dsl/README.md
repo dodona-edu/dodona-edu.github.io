@@ -442,26 +442,6 @@ Name of the file.
 #### url
 The relative path to the file that is located in the description folder of the exercise.
 
-## Hidden tabs
-Dodona supports hiding tabs if all tests in those tabs are correct.
-These hidden tabs will thus still be visible if they contain errors.
-For this you can give the option `hidden` to a tab that expects a Boolean value.
-
-```yaml
-- tab: "Hidden"
-  hidden: true
-  contexts:
-  - stdin: "zero"
-    stdout: "0\n"
-- tab: "Visible"
-  hidden: false
-  contexts:
-  - stdin: "one"
-    stdout: "1\n"
-```
-
-![Fault in hidden tab](./hidden.png)
-
 ## Combination of function calls and input-output
 We have already seen testplans for both input-output or function calls.
 We will now combine these concepts in one testplan.
@@ -553,7 +533,7 @@ The grammar supports numbers, booleans, null-values and strings.
 #### Numbers
 Both integers and rational numbers are supported.
 Integers always use a decimal format (ex: `2020`,` + 5`, `−2`).
-Rational numbers can use either decimal (ex: `2.5`) or exponential (ex:` 27.15e2`, `−2e − 2`) format.
+Rational numbers can use either decimal (ex: `2.5`) or scientific notation (ex:` 27.15e2`, `−2e − 2`) format.
 
 #### Booleans
 The two boolean values are `true` and `false`.
@@ -630,6 +610,7 @@ Not every programming language supports each datatype as set element.
 An unordered dynamic collection of key-value pairs.
 The keys must be immutable, the values could be both immutable and mutable.
 Like sets, dictionaries are written with curly brackets, but dictionaries can be empty.
+Sets could also be empty but must use [explicit typing](#explicit-typing).
 Both the keys and values can be of any datatype.
 Some examples:
 ```javascript
@@ -643,9 +624,9 @@ Some examples:
 Not every programming language supports each datatype as key.
 :::
 
-#### Cast
-Our grammar supports the ability to "cast" the values (not expressions) to a specific data type.
-Casting is denoted with `<Value> :: <Datatype>`.
+#### Explicit typing
+Our grammar supports the ability to specify the "explicit type" of the values (not expressions).
+Explicit typing is denoted with `<Value> :: <Datatype>`.
 An empty set for example can be denoted with one of the following expressions:
 ```haskell
 [] :: set
