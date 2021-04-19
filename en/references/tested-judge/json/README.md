@@ -168,7 +168,8 @@ The *RunTestcase*-object has 4 attributes: `input`, `output`, `description` and 
 ```
 
 ### RunInput
-The *RunInput*-object contains all information to run that evaluates the written program by the student.
+The *RunInput*-object contains all information that is necessary to evaluates the written program
+(`main`-call or the code itself) by the student.
 
 The *RunInput*-object has 3 attributes: `stdin`, `arguments` and `main_call`.
 - **stdin**: The given input at standard input.
