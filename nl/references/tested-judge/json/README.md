@@ -228,12 +228,10 @@ Het *RunOutput*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exceptio
     Dit is de standaardoptie.
   - [FileOutputChannel](#fileoutputchannel): Een bestand wordt verwacht als uitvoer.
   
-  ::: warning Opmerking
-  Het is momenteel niet mogelijk om in TESTed meer dan één bestand te verwachten per programmatest.
-  :::
-  ::: warning Opmerking
-  Het is momenteel ook niet mogelijk in TESTed om te controleren of er geen bestanden aangemaakt werden.
-  :::
+    _**Opmerking:**_ Het is momenteel niet mogelijk om in TESTed meer dan één bestand te verwachten per programmatest.
+  
+    _**Opmerking:**_
+    Het is momenteel ook niet mogelijk in TESTed om te controleren of er geen bestanden aangemaakt werden.
 - **exception**: Het uitvoerkanaal voor een fout.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen fout verwacht tijdens de uitvoer.
@@ -450,12 +448,10 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
     Dit is de standaardoptie.
   - [FileOutputChannel](#fileoutputchannel): Er wordt een bestand verwacht als uitvoer.
 
-  ::: warning Opmerking
-  Het is momenteel niet mogelijk op in TESTed meer dan één bestand te verwachten per test.
-  :::
-  ::: warning Opmerking
-  Het is momenteel ook niet mogelijk in TESTed om te controleren of er geen bestanden aangemaakt werden.
-  :::
+    _**Opmerking:**_ Het is momenteel niet mogelijk op in TESTed meer dan één bestand te verwachten per test.
+  
+    _**Opmerking:**_
+    Het is momenteel ook niet mogelijk in TESTed om te controleren of er geen bestanden aangemaakt werden.
 - **exception**: Het uitvoerkanaal voor een fout.
   De mogelijke uitvoerkanalen zijn:
   - [EmptyChannel](#emptychannel): Er wordt geen fout verwacht tijdens de uitvoer.
@@ -748,10 +744,10 @@ Het *ExitCodeOutputChannel*-object heeft 1 attribuut: `value`.
 Het *FileOutputChannel*-object is het uitvoerkanaal voor een bestand dat door de student verwacht werd gecreëerd
 te worden.
 ::: warning Opmerking
-TESTed kan momenteel slechts één bestand evalueren per testgeval.
-:::
-::: warning Opmerking
-TESTed ondersteund momenteel enkel tekstbestanden.
+Op dit moment zijn er enkel beperking wat betreft het evalueren van bestanden als uitvoer:
+
+- TESTed kan momenteel slechts één bestand evalueren per testgeval.
+- TESTed ondersteund momenteel enkel tekstbestanden.
 :::
 
 Het *FileOutputChannel*-object heeft 3 attributen: `expected_path`, `actual_path` en `evaluator`.
@@ -1033,10 +1029,9 @@ gebruikt.
 
 Het *ProgrammedEvaluator*-object heeft 4 attributen: `language`, `function`, `arguments` en `type`.
 - **language**: Een string de programmeertaal van de evaluator specificeert.
-  ::: warning Opmerking
-  De programmeertaal van de geprogrammeerde evaluator is onafhankelijk van de programmeertaal van de ingediende
-  oplossing.
-  :::
+  
+  _**Opmerking:**_ De programmeertaal van de geprogrammeerde evaluator is onafhankelijk van de programmeertaal van de
+  ingediende oplossing.
 - **function**: Een [EvaluationFunction](#evaluationfunction) object, welke informatie bevat over de evaluatiefunctie.
 - **arguments**: Een lijst met extra argumenten voor de evaluatiefunctie,
   zie [EvaluationFunction](#evaluationfunction) en [Statements en expressies](#statements-en-expressies).
@@ -1224,9 +1219,8 @@ Er bestaan twee basis numerieke datatypes in TESTed: `integer` en `rational`.
 Er bestaan twee basis string datatypes in TESTed: `text` en `any`.
 - **text**: tekst.
 - **any**: Het datatype die elke waarde voorstelt.
-  ::: warning Opmerking
-  Dit datatype moet normaal niet gebruikt worden in het testplan. 
-  :::
+  
+  _**Opmerking:**_ Dit datatype moet normaal niet gebruikt worden in het testplan.
 
 ```json
 "BasicStringTypes": {
