@@ -4,7 +4,7 @@ description: "Tutorial: Exercise template for TESTed"
 ---
 
 ::: warning Remark
-Exercise templates are used when you want to offer one exercise in multiple programming languages.
+Exercise templates are used when you want to make an exercise available in multiple programming languages.
 :::
 
 # Template exercise TESTed
@@ -56,7 +56,7 @@ These description templates must be located at `description/description.nl.md.ma
 
 ::: tip Hint
 We recommend writing the descriptions in Markdown,
-see [Exercise descriptions](../../../references/exercise-description).
+see [Exercise descriptions](../../../references/exercise-description) for the Markdown constructs supported by Dodona.
 :::
 
 ## 5. Configuring the exercise templates
