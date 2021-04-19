@@ -130,10 +130,7 @@ of characters of type `List[str]`.
 ```
 
 ## Code examples
-An important possibility for the template descriptions, was the simplicity to notate the code examples.
-This is the only functionality that slightly differs between the Markdown and HTML version.
-The biggest difference is the way how the code blocks are represented.
-The content of these code blocks are the same for both markup languages.
+The templates have the possibilities to notate the code examples in a _DOCTEST_-style.
 
 ### Code snippets
 The code snippets must be written in the mini-programming language of TESTed

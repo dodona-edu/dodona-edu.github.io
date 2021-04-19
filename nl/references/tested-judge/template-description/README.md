@@ -132,10 +132,7 @@ of characters of type `List[str]`.
 ```
 
 ## Codevoorbeelden
-Een belangrijke eis voor de sjabloonbestanden is het eenvoudig kunnen noteren van codevoorbeelden.
-Dit is de enige functionaliteit die licht verschilt tussen de Markdown- en HTML-versie.
-Het grootste verschil ligt aan de manier hoe de codeblokken voorgesteld worden.
-De inhoud van deze codeblokken zijn voor beide opmaaktalen wel hetzelfde.
+De sjablonen hebben de mogelijkheid om de codevoorbeelden in een _DOCTEST_-stijl te noteren.
 
 ### Codefragmenten
 De codefragmenten worden genoteerd met behulp van de mini-programmeertaal van TESTed
