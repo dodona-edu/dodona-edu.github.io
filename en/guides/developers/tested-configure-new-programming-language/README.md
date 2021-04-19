@@ -903,7 +903,7 @@ Vervolgens genereren we de code die nodig is om de verschillende context uit te 
 }
 ```
 
-Omdat zowel runcompilatie als batchcompilatie ondersteunt, moet elke run een `main`-functie hebben.
+Omdat zowel runcompilatie als batchcompilatie ondersteunt wordt, moet elke run een `main`-functie hebben.
 C laat slechts 1 `main`-functie toe.
 Indien we in batchcompilatie zitten, zal de selector gebruikt worden, en zal `INCLUDED` op `TRUE` staan.
 In dat geval voegen we geen `main`-functie toe.
@@ -981,7 +981,7 @@ De implementatie van dit sjabloon komt conceptueel neer op een grote `switch`,
 waarbij we delegeren naar het juiste sjabloon op basis van welk soort statement of expressie het is.
 
 Een aspect dat wat meer uitleg vraagt, is de `full`-parameter.
-Dit geeft aan dat het gegevenstype van de variabele bij een assignment ook nodig is.
+Dit geeft aan dat het gegevenstype bij een variabele declaratie ook nodig is.
 Het verschil is duidelijk met een voorbeeld:
 
 ```c
