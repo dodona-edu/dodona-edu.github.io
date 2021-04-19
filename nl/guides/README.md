@@ -21,7 +21,7 @@ Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 * [Een reeks evalueren](teachers/evaluate-series)
 * [Een nieuwe repository met oefeningen maken](teachers/new-exercise-repo)
 * [Dodona en Ufora](teachers/ufora) (enkel voor UGent)
-* [Sjabloonoefening TESTed](teachers/tested-template-exercise)
+* [Sjabloon TESTed-oefening](teachers/tested-template-exercise)
 
 ## Voor studenten
 * [Van start met Dodona als student](students/getting-started)
