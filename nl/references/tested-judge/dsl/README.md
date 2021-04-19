@@ -271,6 +271,11 @@ TESTed gebruikt standaard aan aantal optimalisatietechnieken om de uitvoertijd i
 Deze optimalisatietechnieken kunnen echter tot gevolg hebben dat de geoptimaliseerde code tot ongewenste resultaten kan leiden.
 Daarom kan de gebruiker deze optimalisaties uitschakelen voor het volledige testplan, moest dit nodig zijn.
 
+De ongewenste resultaten zijn het gevolg van de gedeelde programma-staat tussen de verschillende contexten in de testcode.
+Een aantal mogelijk ongewenste resultaten zijn: het gebruik van gedeelde caches tussen verschillende contexten waardoor
+er een sneller uitvoer van testen bereikt wordt (niet noodzakelijk een negatief resultaat);
+achterpoorten waardoor de studenten informatie kunnen delen tussen de verschillende contexten.
+
 #### tabs
 Wanneer je de `namespace`, `disable_optimizations` of globale configuratie wenst op te geven, moet je verplicht het sleutelwoord `tabs` gebruiken om de tabbladen op te lijsten.
 

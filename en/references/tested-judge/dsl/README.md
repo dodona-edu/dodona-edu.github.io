@@ -271,6 +271,11 @@ By default, TESTed will use some optimization techniques to reduce the execution
 However, these optimization techniques could cause the optimized code to lead to unwanted results.
 Therefore can the user disable these optimizations for the entire testplan, should this be necessary.
 
+The unwanted results are due to the shared program state between the different contexts in the test code.
+Some potentially unwanted results are: the use of shared caches between different contexts,
+which achieves a faster execution of tests (not necessarily a negative result);
+back gates through which the students can share information between the different contexts.
+
 #### tabs
 When you want to provide `namespace`, `disable_optimizations` or global configuration options, you must use the keyword `tabs` the pass the list of tabs.
 
