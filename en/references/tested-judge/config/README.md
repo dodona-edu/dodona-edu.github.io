@@ -5,7 +5,7 @@ sidebarDepth: 2
 ---
 
 # Configuration TESTed
-The TESTed judge has one required field `evaluation.plan_name` in het `config.json` file of a Dodona exercise.
+The TESTed judge has one required field `evaluation.plan_name` in the `config.json` file of a Dodona exercise.
 This field must contain the name of the test plan, in the `evaluation`-folder.
 The test plan can be either a [DSL test plan](../dsl) or an [advanced test plan](../json).
 The DLS test plans must end on one of the YAML extensions (`.yaml` or `.yml`).
@@ -167,7 +167,7 @@ The linters used are:
 | Kotlin               | KTLint     |
 | Python               | PYLint     |
 
-The linters could be set in the object associated with the field `linter`.
+The linters can be set in the object associated with the field `linter`.
 The keys of this object are the supported programming languages.
 A boolean will indicate if the linters should be used or not.
 By default, the linters will be used for every programming language.

@@ -15,7 +15,7 @@ Enkele nuttige links die hierbij kunnen helpen zijn:
 - Bestaande configuraties: <https://github.com/dodona-edu/universal-judge/tree/master/tested/languages>
 - Testoefeningen: <https://github.com/dodona-edu/universal-judge/tree/master/exercise>
 
-In deze referentie worden regelmatig codebestanden getoond, verspreid over meerdere codefragmenten
+In deze handleiding worden regelmatig codebestanden getoond, verspreid over meerdere codefragmenten
 (bijvoorbeeld eerst `n` regels, daarna wat tekst en dan pas de rest van de regels).
 
 ## TESTed lokaal uitvoeren
@@ -369,7 +369,7 @@ De inhoud van de lijsten zijn de `supported` datatypes van TESTed die gebruikt k
 of functieoproepen (`function_calls`) en variabelen (`identifiers`) gebruikt kunnen worden.
 De `reduced` geavanceerde datatypes zullen afgeleid worden, als de basisdatatypes ondersteund worden.
 
-C ondersteunt geen collecties, dus zijn beide lijst leeg.
+C ondersteunt geen collecties, dus zijn beide lijsten leeg.
 ```json
 "restrictions": {
   "map_key": [],
@@ -617,7 +617,7 @@ en elke run ook de oplossing insluit.
 
 Om deze redenen moeten we de code van de ingediende oplossing een beetje aanpassen:
 
-- We voegen aan `guard` toe, zodat de oplossing slechts eenmaal geladen wordt.
+- We voegen een `guard` toe, zodat de oplossing slechts eenmaal geladen wordt.
 - We hernoemen de `main`-functie naar `solution_main` indien die bestaat.
   Als de `main`-functie geen argumenten had dan voegen we die ook toe.
 

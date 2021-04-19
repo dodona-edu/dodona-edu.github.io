@@ -137,7 +137,7 @@ The content of these code blocks are the same for both markup languages.
 
 ### Code snippets
 The code snippets must be written in the mini-programming language of TESTed
-(see [Statements, expressies and return-raw](../dsl/#statements-expressions-and-return-raw)),
+(see [Statements, expressions and return-raw](../dsl/#statements-expressions-and-return-raw)),
 in a Python doctest-style manner.
 The input statements and expressions must be prefixed with the _larger than_ character (`>`), the return values not.
 
@@ -210,7 +210,7 @@ Instance Haskell:
 ```
 
 ## Language specific information
-The Mako-templates have also conditional constructs,
+The Mako-templates also have conditional constructs,
 this makes it possible to add information for only one specific programming language.
 
 ### Example
@@ -225,14 +225,14 @@ The function must be static declared in the class ${namespace}.
 % endif
 ```
 
-Instantie Java:
+Instance Java:
 ```markdown
 Common text
 
 The function must be static declared in the class Solution.
 ```
 
-Instantie C:
+Instance C:
 ```markdown
 Common text
 ```
@@ -245,7 +245,7 @@ the advantages is avoiding multiple function calls that returns the same value.
 We will now look at an example in Markdown without instances.
 ```mako
 <% list = natural_type_name("list") %>\
-Write a function ${function_name("heir")}, with has two parameters $k$ en $n$,
+Write a function ${function_name("heir")}, which has two parameters $k$ and $n$,
 which have both the type ${type_name("integer")}, you may assume that $k >= 2$.
 The function must return a ${list} of the type ${type_name(("list", "integer"))}
 that contains the order of the removed children of the circle.
