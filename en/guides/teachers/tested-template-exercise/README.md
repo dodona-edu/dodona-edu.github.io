@@ -32,20 +32,20 @@ The following is an example of the minimal directory structure you'll need:
 +-- template/exercise/directory
 |   +-- config.template.json       # Template configuration
 |   +-- evaluation                 #
-|   |   +-- plan.yaml              # DSL-testplan
+|   |   +-- plan.yaml              # DSL-test plan
 |   +-- description                #
 |   |   +-- description.nl.md.mako # Markdown exercise template for Dutch
 |   |   +-- description.en.md.mako # Markdown exercise template for English
 :   :   :
 ```
 
-## 3. Create a testplan
-The tests for a TESTed exercise are written in a testplan.
-The documentation for creating testplans can be found at  [TESTed DSL testplans](../../../references/tested-judge/dsl).
-We assume that this testplan is located at `evaluation/plan.yaml` in the repository. 
+## 3. Create a test plan
+The tests for a TESTed exercise are written in a test plan.
+The documentation for creating test plans can be found at  [TESTed DSL test plans](../../../references/tested-judge/dsl).
+We assume that this test plan is located at `evaluation/plan.yaml` in the repository. 
 
 ::: tip Hint for advanced users
-You can also use [advanced testplans](../../../references/tested-judge/json) with the exercise templates.
+You can also use [advanced test plans](../../../references/tested-judge/json) with the exercise templates.
 :::
 
 ## 4. Create the description templates
@@ -132,12 +132,12 @@ generate a programming language specific exercise in the directory `instance/exe
 
 This script has some optional options:
 - `-i`, `--programming_languages_included`:
-  List of programming languages for which an exercise may be generated, if the testplan allows this.
+  List of programming languages for which an exercise may be generated, if the test plan allows this.
   By default, an exercise is generated for each programming language supported by TESTed.
 - `-e`, `--programming_languages_excluded`:
   List of programming languages for which no exercise may be generated.
   Default empty.
 - `-n`, `--i18n`: The default natural language for the descriptions, when this can't be derived from the file name.
   Options ‘en’ (default) and ‘nl’.
-- `-H`, `--human_readable`: The generated JSON-testplan from the DSL-testplan must be human-readable.
+- `-H`, `--human_readable`: The generated JSON-test plan from the DSL-test plan must be human-readable.
 - `-b`, `--backup_descriptions`: Keep existing exercise descriptions. The `description` directory will be renamed to `description.bak`.
