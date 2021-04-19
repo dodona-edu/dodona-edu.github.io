@@ -10,8 +10,9 @@ Hier vind je alle informatie voor het gebruik van de **TESTed** judge.
 
 ## Ondersteunde programmeertalen
 
-**TESTed** ondersteunt momenteel 6 programmeertalen:
+**TESTed** ondersteunt momenteel 7 programmeertalen:
 
+* Bash 5.0.3
 * C (gcc 8.3.0)
 * Haskell (ghc 8.4.4)
 * Java 11

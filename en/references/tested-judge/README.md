@@ -10,8 +10,9 @@ This is the reference for the **TESTed** judge.
 
 ## Suppported programming languages
 
-**TESTed** supports 6 programming languages:
+**TESTed** supports 7 programming languages:
 
+* Bash 5.0.3
 * C (gcc 8.3.0)
 * Haskell (ghc 8.4.4)
 * Java 11
