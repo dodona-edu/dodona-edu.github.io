@@ -593,7 +593,6 @@ The *TextData*-object has 2 attributes: `data` and `type`.
 - **data**: When the type is `text`, this is the text itself.
   Otherwise, this is a path to a file located in the `workdir` folder of the judge.
 - **type**: This is type of input: the text itself (`text`) or a text-file (`file`).
-  See [TextChannelType](#textchanneltype).
   
 ```json
 "TextData": {
@@ -615,71 +614,6 @@ The *TextData*-object has 2 attributes: `data` and `type`.
   "required": [
     "data"
   ]
-},
-```
-
-## Enums
-The enums are used to define the type of objects.
-
-### ExceptionBuiltin
-The enum for the builtin exception evaluator.
-The only excepted value is `exception`.
-
-```json
-"ExceptionBuiltin": {
-  "title": "ExceptionBuiltin",
-  "description": "Built in evaluators for exceptions.",
-  "enum": [
-    "exception"
-  ],
-  "type": "string"
-},
-```
-
-### TextBuiltin
-The enum for the builtin text evaluator.
-The two possible values are `text` (for textual evaluation) and `file` (for file evaluation).
-
-```json
-"TextBuiltin": {
-  "title": "TextBuiltin",
-  "description": "Textual built in evaluators.",
-  "enum": [
-    "text",
-    "file"
-  ],
-  "type": "string"
-},
-```
-
-### TextChannelType
-This the enum for textual channels.
-TextChannelType has two types: `text` and `file`.
-
-```json
-"TextChannelType": {
-  "title": "TextChannelType",
-  "description": "An enumeration.",
-  "enum": [
-    "text",
-    "file"
-  ],
-  "type": "string"
-},
-```
-
-### ValueBuiltin
-The enum for the builtin value evaluator.
-The only available value is `value`.
-
-```json
-"ValueBuiltin": {
-  "title": "ValueBuiltin",
-  "description": "Built in evaluators for values.",
-  "enum": [
-    "value"
-  ],
-  "type": "string"
 },
 ```
 
@@ -860,7 +794,6 @@ The *TextOutputChannel*-object has 3 attributes: `data`, `type` and `evaluator`.
 - **data**: The expected output itself (type: `text`), or a relative path to a file located in the `workdir`,
   that contains the expected output (type: `file`).
 - **type**: The type of the expected output: the text itself (`text`) or a text file (`file`).
-  See [TextChannelType](#textchanneltype).
 - **evaluator**: The evaluator that must be used to evaluate the generated output.
   There are two evaluators that could be used:
   - [GenericTextEvaluator](#generictextevaluator): This the builtin evaluator for text and text file.
@@ -986,7 +919,7 @@ The *GenericExceptionEvaluator*-object has 3 attributes: `type`, `options` and `
 - **options**: The additional evaluation options that can be used by the builtin evaluator.
   
   _**Remark:**_ At this moment there are no options used by the builtin evaluator for exceptions.
-- **name**: A string with constant value `exception`, see [ExceptionBuiltin](#exceptionbuiltin).
+- **name**: A string with constant value `exception`.
 
 ```json
 "GenericExceptionEvaluator": {
@@ -1021,7 +954,7 @@ The *GenericValueEvaluator*-object has 3 attributes: `type`, `options` and `name
 - **options**: The addition evaluation options that can be used by the builtin evaluator.
   
   _**Remark:**_ At this moment there are no options used by the builtin evaluator for exceptions.
-- **name**: A string with constant value `value`, see [ValueBuiltin](#valuebuiltin).
+- **name**: A string with constant value `value`.
 
 ```json
 "GenericValueEvaluator": {
@@ -1056,7 +989,7 @@ The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`
 - **options**: The additional evaluation options that can be used by the builtin evaluator,
   see [DSL Configuration options for standard output and error](../dsl/#configuration-options).
 - **name**: The type of textual source that must be evaluated.
-  Either `text` or `file`, see [TextBuiltin](#textbuiltin).
+  Either `text` or `file`.
 
 ```json
 "GenericTextEvaluator": {

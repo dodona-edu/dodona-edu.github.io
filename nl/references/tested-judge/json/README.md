@@ -600,7 +600,6 @@ Het *TextData*-object heeft 2 attributen: `data` en `type`.
 - **data**: Wanneer het type `text` is, is dit de tekst zelf.
   Anders is dit een pad naar een bestand in de `workdir` van de judge.
 - **type**: Het type van de invoer: de tekst zelf (`text`) of een tekstbestand (`file`).
-  Zie [TextChannelType](#textchanneltype).
 
 ```json
 "TextData": {
@@ -622,71 +621,6 @@ Het *TextData*-object heeft 2 attributen: `data` en `type`.
   "required": [
     "data"
   ]
-},
-```
-
-## Opsomtypes
-De opsomtypes worden gebruikt om het type van objecten te definiëren.
-
-### ExceptionBuiltin
-Opsomtype interne fout-evaluator.
-De enige aanvaarde waarde is `exception`.
-
-```json
-"ExceptionBuiltin": {
-  "title": "ExceptionBuiltin",
-  "description": "Built in evaluators for exceptions.",
-  "enum": [
-    "exception"
-  ],
-  "type": "string"
-},
-```
-
-### TextBuiltin
-Opsomtype interne tekstevaluator.
-De twee waarden zijn `text` (voor tekstuele evaluaties) en `file` (voor bestandsevaluaties).
-
-```json
-"TextBuiltin": {
-  "title": "TextBuiltin",
-  "description": "Textual built in evaluators.",
-  "enum": [
-    "text",
-    "file"
-  ],
-  "type": "string"
-},
-```
-
-### TextChannelType
-Dit is het opsomtype voor tekstuele kanalen.
-TextChannelType heeft 2 types: `text` en `file`.
-
-```json
-"TextChannelType": {
-  "title": "TextChannelType",
-  "description": "An enumeration.",
-  "enum": [
-    "text",
-    "file"
-  ],
-  "type": "string"
-},
-```
-
-### ValueBuiltin
-Opsomtype interne waarde-evaluator.
-De enige aanvaarde waarde is `value`.
-
-```json
-"ValueBuiltin": {
-  "title": "ValueBuiltin",
-  "description": "Built in evaluators for values.",
-  "enum": [
-    "value"
-  ],
-  "type": "string"
 },
 ```
 
@@ -869,7 +803,6 @@ Het *TextOutputChannel*-object heeft 3 attributen: `data`, `type` en `evaluator`
 - **data**: De verwachte uitvoer zelf (type: `text`)
   of een relatief pad naar het bestand, in de `workdir` map, die de verwachte uitvoer bevat (type: `file`).
 - **type**: Het type van de verwachte uitvoer: de tekst zelf (`text`) of een tekstbestand (`file`).
-  Zie [TextChannelType](#textchanneltype).
 - **evaluator**: De evaluator die gebruikt moet worden voor het evalueren van het gegenereerde tekstuele uitvoer.
   Er kunnen twee evaluators gebruikt worden:
   - [GenericTextEvaluator](#generictextevaluator): Dit is de interne evaluator van TESTed voor tekst en tekstbestanden.
@@ -995,7 +928,7 @@ Het *GenericExceptionEvaluator*-object heeft 3 attributen: `type`, `options` en 
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
   
   _**Opmerking:**_ Voorlopig worden er geen opties gebruikt in de interne evaluator voor fouten.
-- **name**: Een string met vaste waarde `exception`, zie [ExceptionBuiltin](#exceptionbuiltin).
+- **name**: Een string met vaste waarde `exception`.
 
 ```json
 "GenericExceptionEvaluator": {
@@ -1031,7 +964,7 @@ Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `nam
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
   
   _**Opmerking:**_ Voorlopig worden er geen opties gebruikt in de interne evaluator voor de returnwaarden.
-- **name**: Een string met vaste waarde `value`, zie [ValueBuiltin](#valuebuiltin).
+- **name**: Een string met vaste waarde `value`.
 
 ```json
 "GenericValueEvaluator": {
@@ -1067,7 +1000,7 @@ Het *GenericTextEvaluator*-object heeft 3 attributen: `type`, `options` en `name
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator,
   zie [DSL Configuratie opties voor standaarduitvoer en standaarderror](../dsl/#configuratieopties).
 - **name**: Het type van de tekstbron die geëvalueerd moet worden.
-  Ofwel `text`, ofwel `file`, zie [TextBuiltin](#textbuiltin).
+  Ofwel `text`, ofwel `file`.
 
 ```json
 "GenericTextEvaluator": {
