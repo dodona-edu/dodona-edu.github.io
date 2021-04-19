@@ -26,7 +26,7 @@ This object has two attributes: `namespace` and `tabs`:
   The `namespace` is also the namespace of the code.
   The default namespace is `submission`.
   :::tip Hint
-  The namespace is best notated in `snake_case`,
+  The namespace is best written in `snake_case`,
   which enables using the right style convention for each programming language.
   :::
 - **tabs**: The `tabs` object is a list of all [tabs](#tab) that must be executed.
@@ -1460,7 +1460,7 @@ This object has two attributes: `data` and `type`.
 ```
 
 ### Assignment
-At this moment, TESTed only support one statement, which is an assignment.
+At this moment, TESTed only supports one statement, which is an assignment.
 
 An assignment has 3 attributes: `variable`, `expression` and `type`.
 - **variable**: The name of the variable.

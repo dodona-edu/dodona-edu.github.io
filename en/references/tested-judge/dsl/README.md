@@ -158,7 +158,7 @@ We will use the exercise [Thoughts that count](https://dodona.ugent.be/en/course
 
 ```
 
-Because of a display problem at Dodona, are the newlines in the description in the following figures replaced by spaces.
+Because of a display problem in Dodona, are the newlines in the description in the following figures replaced by spaces.
 <p float="left">
   ![Thoughts that count Smaller](./boeketje_rozen_KleinerDan.png)
   ![Thoughts that count Larger](./boeketje_rozen_GroterDan.png)
@@ -176,11 +176,11 @@ More information about multi-line in section [Known pitfalls](#known-pitfalls).
 :::
 
 #### Multi-tab
-As visible in the example, can you also use multiple tabs.
+As is shown in the example, can you also use multiple tabs.
 
 ## Command line arguments, standard error and exit code
-Now, we will add command line arguments, standarderror and exit code to the testplan.
-As example, we'll use a fictional exercise where the goal is a simple calculator with integers.
+Now, we will add command line arguments, standarderror and exit code to the test plan.
+As an example, we'll use a fictional exercise where the goal is a simple calculator with integers.
 
 ```yaml
 - tab: "Sum"
@@ -217,7 +217,7 @@ As example, we'll use a fictional exercise where the goal is a simple calculator
 The arguments are a list of command line arguments that must be passed to the program for the testcase.
 
 ::: tip Hint
-We advise using strings for these arguments, however the textual types are also supported.
+We recommend using strings for these arguments, however the textual types are also supported.
 :::
 
 #### stderr
@@ -279,7 +279,7 @@ The second testcase in the testplan for __How smart are you?__, illustrates that
 In this case they are integers but also logical values and floating decimal numbers are possible (the textual types).
 
 ::: warning Remark
-To avoid problems, we recommend to use strings for standard input, output and error.
+To avoid problems, we recommend using strings for standard input, output and error.
 This is caused by the fact that the textual types will be converted to strings.
 For more information about the translation of textual types, see paragraph [Known pitfalls](#known-pitfalls).
 :::
@@ -297,7 +297,7 @@ Ignore the difference between uppercase and lowercase when comparing the output.
 - **applyRounding**:
   Apply rounding when comparing the output as floats.
 - **roundTo**:
-  The number of decimals after the point, that you want to keep after rounding.
+  The number of decimals after the point that you want to keep after rounding.
   This is mandatory when you want to apply rounding.
   
 You can pass the configuration options at the global level, for each tab, context and/or specific for each output.
@@ -347,7 +347,7 @@ The testplan that we will examine is for the exercise [Rail fence cipher](https:
 With function call tests, the input is a statement or expression (both can use one of the following keywords: `expression` or `statement`) in a testcase for a context.
 
 ::: tip Hint
-Statements and expressions are discussed in detail in section [Statements, expressions and return-raw](#statements-expressions-and-return-raw).
+Statements and expressions are discussed in detail in the section [Statements, expressions and return-raw](#statements-expressions-and-return-raw).
 :::
 
 #### Return values
@@ -385,7 +385,7 @@ tabs:
 ![Objects](./equal_checker.png)
 
 ### Description
-In a context can we define multiple testcase, that can depends on another.
+In a context we can define multiple testcases, that can depend on an earlier testcase.
 In this example we first create an object, after which we will call functions on this object.
 
 This is the most important reason to differentiate between contexts and testcases.
@@ -586,12 +586,12 @@ The table below is an overview of these special characters.
 #### Collections
 There are multiple data collections in TESTed: sequence, sets, tuples and dictionaires.
 When you use collections in expressions and statements, the values in these collection can contain both values and expressions.
-For the **return values** can these collections only contains values and **no expressions**.
+For **return values** these collections can only contain values and **no expressions**.
 In addition, the values in these collections can be heterogeneous (different data types).
 
 ##### Sequences
 An ordered dynamic collection of values.
-These are denoted with help of squared brackets and could be empty.
+These are denoted with the help of squared brackets and could be empty.
 Some examples:
 ```javascript
 [5, 7, 8]
@@ -602,7 +602,7 @@ Some examples:
 
 ##### Tuples
 An ordered fixed collection of values.
-These are denoted with help of round brackets and could be empty.
+These are denoted with the help of round brackets and could be empty.
 Some examples:
 ```javascript
 (5, 7, 8)
@@ -612,9 +612,9 @@ Some examples:
 ```
 
 ##### Sets
-An unordered dynamic collection of unique invariable values.
-These are denoted with help of curly brackets.
-Empty sets must be notated in a specific way because the dictionaries als use curly brackets for notation.
+An unordered dynamic collection of unique immutable values.
+These are denoted with the help of curly brackets.
+Empty sets must be written in a specific way because dictionaries also written with curly brackets.
 Some examples:
 ```javascript
 {5, 7, 8}
@@ -628,8 +628,8 @@ Not every programming language supports each datatype as set element.
 
 ##### Dictionaries
 An unordered dynamic collection of key-value pairs.
-The keys must be invariable, the values could be both invariable and variable.
-Like the sets are dictionaries denoted with curly brackets, but dictionaries could be empty.
+The keys must be immutable, the values could be both immutable and mutable.
+Like sets, dictionaries are written with curly brackets, but dictionaries can be empty.
 Both the keys and values can be of any datatype.
 Some examples:
 ```javascript
@@ -646,7 +646,7 @@ Not every programming language supports each datatype as key.
 #### Cast
 Our grammar supports the ability to "cast" the values (not expressions) to a specific data type.
 Casting is denoted with `<Value> :: <Datatype>`.
-An empty set by examples kan be denoted with one of the following notations:
+An empty set for example can be denoted with one of the following expressions:
 ```haskell
 [] :: set
 () :: set
@@ -654,7 +654,7 @@ An empty set by examples kan be denoted with one of the following notations:
 ```
 
 ### Functions
-The arguments of a function call are notated within parentheses.
+The arguments of a function call are written within parentheses.
 A function call can be both be a global function, or an object function.
 Some examples:
 ```javascript
@@ -672,7 +672,7 @@ new object.Pair("Pair", 8.4e-5)
 ```
 
 ### Expression
-By expressions we mean values, function calls, constructors and variables (and properties).
+Expressions are values, function calls, constructors or variables (and properties).
 
 ### Variable assignments
 If we want to use variables, we need to assign values to these variables.
@@ -733,9 +733,9 @@ The different notations handle whitespace in different ways.
 ::: tip Hint
 To avoid confusion we recommend using the double quotes notation when you want to pass textual values.
 Using this notation, you can escape special characters, for example newlines.
-When you want to specify statements, expressions and raw return-values, we recommend to use single quotes, because it doesn't escape special characters.
+When you want to specify statements, expressions and raw return-values, we recommend using single quotes, because it doesn't escape special characters.
 :::
-Below you find an overview of all YAML strings notations, if you want to use another.
+Below you can find an overview of all YAML strings notations, if you want to use another.
 
 #### Single quotes
 By the single quotes, no character will be escaped.
@@ -776,7 +776,7 @@ JSON Translation:
 
 #### Multi-line unquoted
 Using multi-line unquoted string, a single newline character will be replaced with a space and the whitespace around a line will be trimmed.
-A completely empty line by replaced with a newline character.
+A completely empty line will be replaced with a newline character.
 Example YAML:
 ```yaml
 multi unquoted:
@@ -965,7 +965,7 @@ Example:
 stdin: 077
 ```
 
-Will be interpreted as an octal number: `7 ⋅ 8 + 7 = 63`.
+Will be interpreted as an octal number: `7 * 8 + 7 = 63`.
 ```yaml
 stdin: "63"
 ```
