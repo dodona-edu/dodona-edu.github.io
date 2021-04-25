@@ -25,7 +25,7 @@ In de volgende stap selecteer je alle gebruikers die je wenst op te nemen in de 
 
 ![Studenten selecteren](./students.png)
 
-### Overzicht
+### Evaluatie-overzicht
 Na het selecteren van studenten kom je op de overzichtpagina terecht. Hier zie je voor elke oefeningen hoe ver je staat in je evaluatie en welke oplossingen je nog moet bekijken. Het gekleurde streepje onder de tekstballon geeft aan of die oefening fout of correct was. Door er op te klikken kan je de oplossing evalueren door er commentaar op te geven. Studenten krijgen de toegevoegde commentaar pas te zien als je op de overzichtspagina op "feedback vrijgeven" klikt.
 
 ![Overzicht](./overzicht.png)
