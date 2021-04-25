@@ -11,21 +11,21 @@ date: "2020-09-16"
 
 ## Dodona 4.0 - 16/09/2020
 
-Dodona 4.0 is een grote nieuwe release en bevat veel aanpassingen onder de motorkap. Daarnaast zijn er ook enkele belangrijke nieuwe features voor gebruikers.
+Dodona 4.0 is een grote release en bevat veel aanpassingen onder de motorkap. Daarnaast zijn er ook enkele belangrijke nieuwe features voor gebruikers.
 
 ### LTI
-Er werd ondersteuning voor LTI toegevoegd waardoor het eenvoudiger wordt om Dodona te linken met bestaande leeromgevingen. Deze koppeling wordt gebruikt voor onze samenwerking met [i-Learn](https://www.i-learn.vlaanderen/) en integratie in de UGent leeromgeving Ufora. Voor meer informatie over de koppeling met Ufora kan je terecht in [deze handleiding](/guides/teachers/ufora).
+Er werd ondersteuning voor LTI toegevoegd waardoor het eenvoudiger wordt om Dodona te linken met bestaande leeromgevingen. Deze koppeling wordt gebruikt voor onze samenwerking met [i-Learn](https://www.i-learn.vlaanderen/) en integratie in de UGent leeromgeving Ufora. Voor meer informatie over de koppeling met Ufora kan je terecht in [deze handleiding](/nl/guides/teachers/ufora).
 
 ### Vragen stellen
 In een vorige versie van Dodona werd de mogelijkheid toegevoegd voor lesgevers om opmerkingen te geven op de ingediende code van studenten. In Dodona 4.0 draaien we de rollen om en kunnen studenten vragen stellen aan de lesgevers. Dit kunnen ze doen vanaf het codeoverzicht van een oplossingspagina waar ze een vraag kunnen stellen over hun volledige oplossing of over een specifieke regel code.
 
-Lesgevers kunnen op cursusniveau het stellen van vragen in- of uitschakelen. Ze krijgen bovendien steeds een melding als er een vraag gesteld is. Een antwoord geven op een vraag doe je voorlopig door een nieuwe opmerking te plaatsen bij diezelfde oplossing.
+Lesgevers kunnen op cursusniveau het stellen van vragen in- of uitschakelen. Ze krijgen bovendien steeds een melding als er een vraag gesteld is. Een antwoord geven op een vraag doe je voorlopig door een nieuwe opmerking te plaatsen bij diezelfde oplossing en de vraag als beantwoord te markeren.
 
 ### Nieuwe loginpagina
 Omdat er steeds meer scholen gebruik maken van Dodona kreeg de inlogpagina een opfrisbeurt. Scholen in het secundair onderwijs hebben nu geen eigen aanmeldknop meer, maar kunnen gebruikmaken van de doorzoekbare lijst.
 
 ### Emoji ondersteuning
-Door beperkingen in hoe de gegevens in onze databank werden bijgehouden kon er tot voor kort geen gebruik gemaakt worden van emoji in Dodona. Dit probleem is in deze versie opgelost.
+Door beperkingen in hoe de gegevens in onze databank werden bijgehouden kon er tot voor kort geen gebruik gemaakt worden van emoji in Dodona. Dit probleem is in deze versie opgelost 👍.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.0).
 
