@@ -11,7 +11,7 @@ date: "2020-09-16"
 
 ## Dodona 4.0 - 2020-09-16
 
-Dodona 4.0 is a big release and contains a log of changes under the hood. Next to those, there are several important user facing features.
+Dodona 4.0 is a big release and contains a lot of changes under the hood. Next to those, there are several important user-facing features.
 
 ### LTI support
 We added support for LTI to make it easier to integrate Dodona in existing learning environments. This is used for our collaboration with [i-Learn](https://www.i-learn.vlaanderen/en) and for integration with the UGent learning environment Ufora. For more information about the Ufora integration, see [this guide](/en/guides/teachers/ufora).
@@ -19,7 +19,7 @@ We added support for LTI to make it easier to integrate Dodona in existing learn
 ### Ask questions
 In a previous version of Dodona, we added the possibility for teachers to add comments to their students' code. In this release, we turn the tables and add the ability for students to ask questions to teachers. This can be done from the code overview of a submission where a question can be asked on their entire solution or a specific line of code.
 
-Teacher can enable or disable questions on a course level. In addition, they get a notification when a new question arrives. For now, answering a question can be done by adding a new comment to the same solution and marking the question as answered.
+Teachers can enable or disable questions on a course level. In addition, they get a notification when a new question arrives. For now, answering a question can be done by adding a new comment to the same solution and marking the question as answered.
 
 ### New sign in page
 Because the number of schools that use Dodona keeps growing, our sign in page was ready for an update. Schools don't get a dedicated sign in button anymore, but can use the filterable list on the sign in page instead.

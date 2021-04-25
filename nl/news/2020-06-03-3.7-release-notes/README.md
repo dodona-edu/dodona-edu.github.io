@@ -16,7 +16,7 @@ Na het geven van een taak of toets wil je vaak de ingediende oplossingen van je 
 ![Reeks evalueren](./menu.png =300x)
 
 ### Een deadline kiezen
-In een eerste stap moet je een deadline kiezen. De laatst ingediende oplossing voor deze deadline voor elke student zal in rekening gebracht worden. Als je reeks al een deadline had, dan wordt die deadline automatisch overgenomen, maar je kan ze eventuele nog aanpassen.
+In een eerste stap moet je een deadline kiezen. De laatst ingediende oplossing voor deze deadline voor elke student zal in rekening gebracht worden. Als je reeks al een deadline had, dan wordt die deadline automatisch overgenomen, maar je kan ze eventueel nog aanpassen.
 
 ![Een deadline kiezen](./deadline.png)
 

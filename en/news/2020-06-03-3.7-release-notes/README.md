@@ -7,7 +7,7 @@ date: "2020-06-03"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
-> Dodona 3.7 introduces a new way the evaluate you student's solutions in a structured way.
+> Dodona 3.7 introduces a new way to evaluate your student's solutions in a structured way.
 
 ## Evaluating a series
 
@@ -33,7 +33,7 @@ After selecting your students, you land on the overview page. Here, you can see 
 ### Evaluating a solution
 If you evaluate a solution, you get to see the submitted code, the correctness of the solution and the individual tests. You can easily add feedback to a solution by adding a global comment or a comment at a specific line of code. Students can only see this feedback after you clicked the release feedback button on the overview page.
 
-You can easily navigate to the next student using the sidebar on the right. Je can choose to manually mark a solution as done, or do this automatically by clicking on the next button.
+You can easily navigate to the next student using the sidebar on the right. You can choose to manually mark a solution as done, or do this automatically by clicking on the next button.
 
 ![Evaluate a solution](./evaluate.png)
 
