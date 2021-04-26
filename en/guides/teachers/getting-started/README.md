@@ -25,7 +25,7 @@ Sommige scholen bieden zowel inloggen via Smartschool als via Office 365 of G Su
 Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:dodona@ugent.be"> dodona@ugent.be</a>.
 :::
 
-Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeperkt oefeningen indienen. Wil je als lesgever zelf een cursus aanmaken of oefeningen opstellen, dan heb je extra rechten nodig. Contacteer ons op [dodona@ugent.be](mailto:dodona@ugent.be) of via het [contactformulier](https://dodona.ugent.be/nl/contact) en we geven je account zo snel mogelijk de nodige toegangsrechten.
+Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeperkt oefeningen indienen. Wil je als lesgever zelf een cursus aanmaken of oefeningen opstellen, dan heb je extra rechten nodig. Gebruik het [aanvraagformulier](https://dodona.ugent.be/nl/rights_requests/new) op Dodona en we geven je zo snel mogelijk de nodige rechten.
 
 ## Een cursus aanmaken
 
