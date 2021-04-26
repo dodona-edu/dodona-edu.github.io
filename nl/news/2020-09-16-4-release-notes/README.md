@@ -40,3 +40,9 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 Dodona 4.2 bevat enkele aanpassingen die het voor ons beheerders gemakkelijker maakt om om te gaan met de instroom aan nieuwe scholen. De naam van een school zal bijvoorbeeld automatisch ingesteld worden op de hostname die we uit de url van de loginprovider halen.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.2).
+
+## Dodona 4.3 - 26/04/2021
+
+Dodona 4.3 bevat een nieuwe manier om lesgeversrechten aan te vragen. In plaats van het contactformulier kan je nu terecht op [een specifiek formulier](https://dodona.ugent.be/nl/rights_requests/new/) waarmee je ook direct de naam van je school kan instellen. Daarnaast hebben we op onze [about pagina](https://dodona.ugent.be/nl/about) ook enkele statistieken over het aantal Dodonagebruikers toegevoegd.
+
+Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.3).
