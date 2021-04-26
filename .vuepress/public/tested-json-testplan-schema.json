@@ -153,6 +153,16 @@
       ],
       "type": "string"
     },
+    "SpecialNumbers": {
+      "title": "SpecialNumbers",
+      "description": "An enumeration.",
+      "enum": [
+        "nan",
+        "inf",
+        "-inf"
+      ],
+      "type": "string"
+    },
     "NumberType": {
       "title": "NumberType",
       "type": "object",
@@ -171,6 +181,9 @@
         "data": {
           "title": "Data",
           "anyOf": [
+            {
+              "$ref": "#/definitions/SpecialNumbers"
+            },
             {
               "type": "number"
             },
@@ -300,15 +313,27 @@
       ],
       "type": "string"
     },
+    "AdvancedNothingTypes": {
+      "title": "AdvancedNothingTypes",
+      "description": "An enumeration.",
+      "enum": [
+        "undefined"
+      ],
+      "type": "string"
+    },
     "NothingType": {
       "title": "NothingType",
       "type": "object",
       "properties": {
         "type": {
+          "title": "Type",
           "default": "nothing",
-          "allOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BasicNothingTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedNothingTypes"
             }
           ]
         },
@@ -900,27 +925,17 @@
       "title": "FileUrl",
       "type": "object",
       "properties": {
-        "content": {
-          "title": "Content",
+        "url": {
+          "title": "Url",
           "type": "string"
         },
         "name": {
           "title": "Name",
           "type": "string"
-        },
-        "location": {
-          "title": "Location",
-          "default": "href",
-          "type": "string"
-        },
-        "storage": {
-          "title": "Storage",
-          "default": "disk",
-          "type": "string"
         }
       },
       "required": [
-        "content",
+        "url",
         "name"
       ]
     },
@@ -1058,6 +1073,9 @@
             },
             {
               "$ref": "#/definitions/AdvancedStringTypes"
+            },
+            {
+              "$ref": "#/definitions/AdvancedNothingTypes"
             },
             {
               "$ref": "#/definitions/VariableType"

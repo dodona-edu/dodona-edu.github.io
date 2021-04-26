@@ -1650,7 +1650,10 @@ The *NumberType*-object represents numeric values.
 The *NumberType*-object has 2 attributes: `type` and `data`.
 - **type**: The type of the numeric value,
   see [BasicNumericTypes](#basicnumerictypes) and [AdvancedNumericTypes](#advancednumerictypes).
-- **data**: The numeric value.
+- **data**: The numeric value or one of the following floating-point constants:
+  - `"nan"`: _Not-a-number_ value for floating point numbers.
+  - `"inf"`: _Positive infinity_ value for floating point numbers.
+  - `"-inf"`: _Negative infinity_ value for floating point numbers.
 
 ```json
 "NumberType": {
@@ -1658,8 +1661,8 @@ The *NumberType*-object has 2 attributes: `type` and `data`.
   "type": "object",
   "properties": {
     "type": {
-      "title": "Type",
-      "anyOf": [
+    "title": "Type",
+    "anyOf": [
         {
           "$ref": "#/definitions/BasicNumericTypes"
         },
@@ -1669,8 +1672,11 @@ The *NumberType*-object has 2 attributes: `type` and `data`.
       ]
     },
     "data": {
-      "title": "Data",
-      "anyOf": [
+    "title": "Data",
+    "anyOf": [
+        {
+          "$ref": "#/definitions/SpecialNumbers"
+        },
         {
           "type": "number"
         },

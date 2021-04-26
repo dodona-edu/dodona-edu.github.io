@@ -1667,7 +1667,11 @@ Het *NumberType*-object stelt numerieke data voor.
 Het *NumberType*-object heeft 2 attributen: `type` en `data`.
 - **type**: Het type van de numerieke data,
   zie [BasicNumericTypes](#basicnumerictypes) en [AdvancedNumericTypes](#advancednumerictypes).
-- **data**: De numerieke data.
+- **data**: De numerieke data of één van de volgende vlottende kommagetal constanten:
+  - `"nan"`: _Geen getalswaarde_ voor de vlottende kommagetallen.
+  - `"inf"`: _Positieve oneindigswaarde_ voor de vlottende kommagetallen.
+  - `"-inf"`: _Negatieve oneindigswaarde_ voor de vlottende kommagetallen.
+  
 
 ```json
 "NumberType": {
@@ -1688,6 +1692,9 @@ Het *NumberType*-object heeft 2 attributen: `type` en `data`.
     "data": {
       "title": "Data",
       "anyOf": [
+        {
+          "$ref": "#/definitions/SpecialNumbers"
+        },
         {
           "type": "number"
         },
