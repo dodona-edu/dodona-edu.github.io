@@ -40,3 +40,11 @@ All details about this Dodona version can be found in [our GitHub release notes]
 Dodona 4.2 contains some changes which make it easier for us, administrators, to manage the increasing number of schools using Dodona. For example, the default name of a new school will be automatically set using the host name of the sign in provider.
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.2).
+
+## Dodona 4.3 - 2021-04-26
+
+Dodona 4.3 contains a new way to request teacher privileges. Instead of using the generic contact form, there is now [a dedicated form](https://dodona.ugent.be/en/rights_requests/new/) which allows you to request privileges and set the correct school name at the same time. Your request will be processed as soon as possible and you will receive an email after approval.
+
+In addition, we added statistics about Dodona (number of submissions, users, exercises and school) to the [about page](https://dodona.ugent.be/en/about).
+
+All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.3).
