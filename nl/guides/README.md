@@ -21,16 +21,12 @@ Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 * [Een reeks evalueren](teachers/evaluate-series)
 * [Een nieuwe repository met oefeningen maken](teachers/new-exercise-repo)
 * [Dodona en Ufora](teachers/ufora) (enkel voor UGent)
-* [Sjabloon TESTed-oefening](teachers/tested-template-exercise)
 
 ## Voor studenten
 * [Van start met Dodona als student](students/getting-started)
 * [Aanmelden en gebruikersinstallingen](students/login-and-settings/)
 * [Cursussen op Dodona](students/courses/)
 * [Oefeningen oplossen](students/exercises/)
-
-## Voor ontwikkelaars
-* [Configureren nieuwe programmeertaal TESTed](developers/tested-configure-new-programming-language)
 
 ## Enkel in het Engels
 * [Creating a judge](creating-a-judge)

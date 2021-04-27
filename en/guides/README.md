@@ -14,7 +14,6 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [The Coder's Apprentice](the-coders-apprentice)
 * [Creating an API token](creating-an-api-token)
 * [Creating a judge](creating-a-judge)
-* [Template exercise TESTed](teachers/tested-template-exercise)
 
 ## Only in Dutch
 * [Van start met Dodona als student](students/getting-started)
@@ -24,4 +23,3 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [Gebruikersbeheer](teachers/user-management)
 * [Oefeningenreeksenbeheer](teachers/exercise-series-management)
 * [Een reeks evalueren](teachers/evaluate-series)
-* [Configureren nieuwe programmeertaal TESTed](developers/tested-configure-new-programming-language)

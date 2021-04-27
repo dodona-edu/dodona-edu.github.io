@@ -17,11 +17,11 @@ This is a programming language independent exercise description, which is conver
 
 ## 1. Create a Git repository
 Exercise templates must be located in a git repository, just as normal exercises.
-Refer to the [guide on create exercise repositories](../new-exercise-repo) for more information.
+Refer to the [guide on create exercise repositories](en/guides/teachers/new-exercise-repo) for more information.
 
 ## 2. Directory structure
 The directory structure for an exercise template for TESTed corresponds to a large extent with the
-[expected structure by Dodona](../../../references/exercise-directory-structure).
+[expected structure by Dodona](en/references/exercise-directory-structure).
 For the exercise templates, the file `config.json` is renamed to `config.template.json`.
 The most important reason for this is that we don't want to display the template itself as an exercise in Dodona.
 
@@ -41,26 +41,26 @@ The following is an example of the minimal directory structure you'll need:
 
 ## 3. Create a test plan
 The tests for a TESTed exercise are written in a test plan.
-The documentation for creating test plans can be found at  [TESTed DSL test plans](../../../references/tested-judge/dsl).
+The documentation for creating test plans can be found at  [TESTed DSL test plans](en/tested-judge/dsl).
 We assume that this test plan is located at `evaluation/plan.yaml` in the repository. 
 
 ::: tip Hint for advanced users
-You can also use [advanced test plans](../../../references/tested-judge/json) with the exercise templates.
+You can also use [advanced test plans](en/tested-judge/json) with the exercise templates.
 :::
 
 ## 4. Create the description templates
 The description templates will be written using the Mako templating system.
-See [TESTed description templates](../../../references/tested-judge/template-description).
+See [TESTed description templates](en/tested-judge/template-description).
 These description templates must be located at `description/description.nl.md.mako` (Dutch) and
 `description/description.en.md.mako` (English).
 
 ::: tip Hint
 We recommend writing the descriptions in Markdown,
-see [Exercise descriptions](../../../references/exercise-description) for the Markdown constructs supported by Dodona.
+see [Exercise descriptions](en/references/exercise-description) for the Markdown constructs supported by Dodona.
 :::
 
 ## 5. Configuring the exercise templates
-The general configuration of an exercise is explained in [Exercise configuration](../../../references/exercise-config).
+The general configuration of an exercise is explained in [Exercise configuration](en/references/exercise-config).
 We will see the specific configuration for TESTed in `config.template.json`.
 
 ```json

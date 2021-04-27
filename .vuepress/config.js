@@ -51,12 +51,14 @@ module.exports = {
           { text: 'Nieuws', link: '/nl/news/' },
           { text: 'Handleidingen', link: '/nl/guides/' },
           { text: 'Referenties', link: '/nl/references/' },
+          { text: 'TESTed', link: '/nl/tested-judge/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
-          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten', 'Voor ontwikkelaars'),
+          '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
+          '/nl/tested-judge/': getTESTedSidebar('nl', 'TESTed judge', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
       },
@@ -67,12 +69,14 @@ module.exports = {
           { text: 'News', link: '/en/news/' },
           { text: 'Guides', link: '/en/guides/' },
           { text: 'References', link: '/en/references/' },
+          { text: 'TESTed', link: '/en/tested-judge/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
-          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers', 'For developers'),
+          '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
+          '/en/tested-judge/': getTESTedSidebar('en', 'TESTed judge', 'Overview'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -113,7 +117,8 @@ function getGeneralSidebar() {
     '',
     'news/',
     'guides/',
-    'references/'
+    'references/',
+    'tested-judge/'
   ]
 }
 
@@ -129,11 +134,12 @@ function getNewsSidebar(lang, groupTitle, FirstItem) {
       ]
     },
     `/${lang}/guides/`,
-    `/${lang}/references/`
+    `/${lang}/references/`,
+    `/${lang}/tested-judge/`,
   ]
 }
 
-function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacherGuideItem, developerGuideItem) {
+function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacherGuideItem) {
   return [
     `/${lang}/news/`,
     {
@@ -171,17 +177,6 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
             'teachers/evaluate-series/',
             'teachers/new-exercise-repo/',
             'teachers/ufora/',
-            'teachers/tested-template-exercise/',
-          ]
-        },
-        {
-          title: developerGuideItem,
-          collapsable: false,
-          path: `/${lang}/guides/developers/tested-configure-new-programming-language`,
-          sidebarDepth: 1,
-          initialOpenGroupIndex: -1,
-          children: [
-            'developers/tested-configure-new-programming-language/',
           ]
         },
         'pycharm-plugin/',
@@ -191,7 +186,8 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
         'creating-a-judge/'
       ]
     },
-    `/${lang}/references/`
+    `/${lang}/references/`,
+    `/${lang}/tested-judge/`,
   ]
 }
 
@@ -210,23 +206,35 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'repository-directory-structure/',
         'exercise-directory-structure/',
         'python-judge/',
-        {
-          title: "TESTed judge",
-          collapsable: false,
-          path: `/${lang}/references/tested-judge/`,
-          sidebarDepth: 1,
-          children: [
-            ['tested-judge/', FirstItem],
-            'tested-judge/config/',
-            'tested-judge/dsl/',
-            'tested-judge/json/',
-            'tested-judge/template-description/',
-          ]
-        },
+      ]
+    },
+    `/${lang}/tested-judge/`,
+  ]
+}
+
+
+function getTESTedSidebar(lang, groupTitle, FirstItem) {
+  return [
+    `/${lang}/news/`,
+    `/${lang}/guides/`,
+    `/${lang}/references/`,
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['', FirstItem],
+        'config/',
+        'configure-new-programming-language/',
+        'dsl/',
+        'json/',
+        'template-description/',
+        'template-exercise/'
       ]
     }
   ]
 }
+
 
 function getNewsLinks() {
   return fs

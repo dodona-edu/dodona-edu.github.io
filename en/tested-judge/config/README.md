@@ -7,12 +7,12 @@ sidebarDepth: 2
 # Configuration TESTed
 The TESTed judge has one required field `evaluation.plan_name` in the `config.json` file of a Dodona exercise.
 This field must contain the name of the test plan, in the `evaluation`-folder.
-The test plan can be either a [DSL test plan](../dsl) or an [advanced test plan](../json).
+The test plan can be either a [DSL test plan](en/tested-judge/dsl) or an [advanced test plan](en/tested-judge/json).
 The DLS test plans must end on one of the YAML extensions (`.yaml` or `.yml`).
 For the advanced test plans, there are no restrictions about the file extension, except the YAML extensions.
 
 In addition to the mandatory test plan field, TESTed has some configuration options that can be set.
-The options must be set in the `config.json` of the Dodona exercise (see [Exercise config](../../exercise-config)).
+The options must be set in the `config.json` of the Dodona exercise (see [Exercise config](en/references/exercise-config)).
 The options must be set in the object `evaluation.options`.
 
 ## JSON Scheme

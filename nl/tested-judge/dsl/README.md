@@ -72,7 +72,7 @@ De volgende figuur visualiseert het vorige codefragment op Dodona.
 Deze figuur heeft extra annotaties van de vorm `[0].testcases[0].stdin`, deze annotaties stellen een pad voor naar een object uit het testplan.
 Interpretatie: `[0]` het eerste tabblad, `contexts[0]` de eerste context, `stdin` de gegeven invoer op standaardinvoer en `stdout` de verwachte uitvoer op standaarduitvoer.
 
-![Visualisatie Dodona echo oefening](./echo.png)
+![Visualisatie Dodona echo oefening](nl/tested-judge/dsl/echo.png)
 
 ### Beschrijving
 
@@ -344,8 +344,8 @@ Het testplan dat we zullen bekijken is voor de oefening [Spoorhekcodering](https
     return: "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present."
 ```
 
-![Spoorhekcodering Encode](./spoorhekcodering_encode.png)
-![Spoorhekcodering Decode](./spoorhekcodering_decode.png)
+![Spoorhekcodering Encode](nl/tested-judge/dsl/spoorhekcodering_encode.png)
+![Spoorhekcodering Decode](nl/tested-judge/dsl/spoorhekcodering_decode.png)
 
 ### Beschrijving
 
@@ -389,7 +389,7 @@ tabs:
       return: true
 ```
 
-![Objects](./equal_checker.png)
+![Objects](nl/tested-judge/dsl/equal_checker.png)
 
 ### Beschrijving
 Binnen een context kunnen we verschillende testgevallen definiëren die afhankelijk zijn van elkaar.
@@ -436,7 +436,7 @@ Hiervoor kun je op het niveau van een context en/of testgeval een lijst meegeven
       url: "media/workdir/passports01.txt"
 ```
 
-![Linken bestanden](./link_files.png)
+![Linken bestanden](nl/tested-judge/dsl/link_files.png)
 
 ### Beschrijving
 

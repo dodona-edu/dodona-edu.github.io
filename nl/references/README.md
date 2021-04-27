@@ -11,4 +11,3 @@ Hier vind je up-to-date beschrijvingen van de Dodona configuratiebestanden en ma
 * [Oefeningconfiguratie](exercise-config)
 * [Oefeningmap-structuur](exercise-directory-structure)
 * [Python judge](python-judge)
-* [TESTed judge](tested-judge)

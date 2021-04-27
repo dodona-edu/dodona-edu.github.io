@@ -7,13 +7,13 @@ sidebarDepth: 2
 # Configuratie TESTed
 De TESTed judge heeft een verplicht veld `evaluation.plan_name` in het `config.json` bestand van een Dodona oefening.
 Dit veld moet de naam van een testplan, in de map `evaluation` van de oefening, bevatten.
-Het testplan kan zowel een [DSL-testplan](../dsl) zijn, als een [geavanceerd testplan](../json).
+Het testplan kan zowel een [DSL-testplan](nl/tested-judge/dslted-judge/dsl) zijn, als een [geavanceerd testplan](nl/tested-judge/jsoned-judge/json).
 De DSL-testplannen moet eindigen op één van de YAML-extensies (`.yaml` of `.yml`).
 Voor de geavanceerde testplannen zijn er geen beperkingen op de bestandsextensie, behalve de YAML-extensies.
 
 Naast het verplichte testplan-veld, heeft TESTed enkele configuratieopties die ingesteld kunnen worden.
 De opties moeten ingesteld worden in het `config.json` van een Dodona oefening
-(zie [Oefeningconfiguratie](../../exercise-config)).
+(zie [Oefeningconfiguratie](nl/references/exercise-config)).
 De opties moeten meegegeven worden in het object `evaluation.options`.
 
 ## JSON-Schema

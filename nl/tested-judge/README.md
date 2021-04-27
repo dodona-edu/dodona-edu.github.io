@@ -21,10 +21,13 @@ Hier vind je alle informatie voor het gebruik van de **TESTed** judge.
 * Python 3.9
 
 ## Documentatie
+* [Configuratie-opties TESTed](config)
 * [DSL-Testplannen](dsl)
 * [JSON-Testplannen](json)
 * [Sjabloonbeschrijvingen](template-description)
-  
-## Handleidingen
-* [Configureren nieuwe programmeertaal](../../guides/developers/tested-configure-new-programming-language)
-* [Sjabloonoefeningen](../../guides/teachers/tested-template-exercise)
+* [Sjabloonoefeningen](template-exercise)
+
+## Een programmeertaal toevoegen
+Een programmeertaal toevoegen aan TESTed is relatief eenvoudig.
+Als je een wenst toe te voegen, raden we aan om ons eerst te contacteren.
+We hebben een uitgebreide handle voor het [configureren nieuwe programmeertaal](configure-new-programming-language).
