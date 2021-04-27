@@ -136,7 +136,7 @@ De sjablonen hebben de mogelijkheid om de codevoorbeelden in een _DOCTEST_-stijl
 
 ### Codefragmenten
 De codefragmenten worden genoteerd met behulp van de mini-programmeertaal van TESTed
-(zie [Statements, expressies en return-raw](nl/tested-judge/dsl/#statements-expressies-en-return-raw)),
+(zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)),
 op een Python doctest-achtige manier.
 De invoerstatements en -expressies moeten worden voorafgegaan door het groter dan teken (`>`), de returnwaarden niet.
 

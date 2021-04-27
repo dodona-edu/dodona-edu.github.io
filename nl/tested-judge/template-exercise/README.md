@@ -9,7 +9,7 @@ Oefeningssjabloonen worden gebruikt wanneer je één oefening in meerdere progra
 # Oefeningssjabloon TESTed
 TESTed is een meertalige judge, waarmee we bedoelen dat TESTed meerdere programmeertalen ondersteunt.
 Dit maakt het mogelijk om programmeertaalonafhankelijke oefeningen op te stellen: je schrijf één oefening,
-die oplosbaar zal zijn in meerdere programmeertalen (zie de [TESTed-referentie](../../../references/tested-judge/)).
+die oplosbaar zal zijn in meerdere programmeertalen (zie de [TESTed-referentie](../)).
 
 Hoewel de judge meerdere programmeertalen ondersteunt, verwacht Dodona voorlopig per programmeertaal een aparte oefening.
 Als oplossing hiervoor introduceert deze handleiding het concept van oefeningssjabloonen.
@@ -18,11 +18,11 @@ dat zal worden omgezet naar een programmeertaalspecifieke (en Dodona-compatibele
 
 ## 1. Aanmaken Git repository
 De oefeningen voor Dodona bevinden zich in een Git repository, zoals normale oefeningen.
-We verwijzen naar [de handleiding _oefening repositories aanmaken_](nl/guides/teachers/new-exercise-repo).
+We verwijzen naar [de handleiding _oefening repositories aanmaken_](../../guides/teachers/new-exercise-repo).
 
 ## 2. Mapstructuur
 De mapstructuur voor een oefeningssjabloon van TESTed komt in grote mate overeen met de
-[vereiste structuur door Dodona](nl/references/exercise-directory-structure).
+[vereiste structuur door Dodona](../../references/exercise-directory-structure).
 Bij de oefeningssjabloon is het `config.json` bestand hernoemd naar `config.template.json`,
 met als hoofdreden dat we de oefeningssjabloon niet als een oefening op Dodona willen weergeven.
 
@@ -41,27 +41,27 @@ met als hoofdreden dat we de oefeningssjabloon niet als een oefening op Dodona w
 ## 3. Opstellen testplan
 De testen voor een oefening in TESTed worden geschreven in een testplan.
 Documentatie over hoe een testplan kan worden opgesteld,
-kan gevonden worden op [TESTed DSL-testplannen](nl/tested-judge/dsl).
+kan gevonden worden op [TESTed DSL-testplannen](../dsl).
 We veronderstellen dat dit testplan zich bevindt in het bestand `evaluation/plan.yaml`.
 
 ::: tip Tip voor geavanceerde gebruikers
 De oefeningssjabloonen kunnen ook gebruikmaken van de
-[geavanceerde testplannen](nl/tested-judge/json).
+[geavanceerde testplannen](../json).
 :::
 
 ## 4. Opstellen sjabloonopgaven
 De sjabloonopgaven worden geschreven met het sjablonensysteem Mako,
-zie [TESTed sjabloonbeschrijvingen](nl/tested-judge/template-description).
+zie [TESTed sjabloonbeschrijvingen](../template-description).
 Deze sjabloonopgaven moeten zich bevinden in de bestanden `description/description.nl.md.mako` (nederlands) en
 `description/description.en.md.mako` (engels).
 
 ::: tip Tip
 We raden sterk aan om de opgaven in markdown te schrijven,
-zie [Oefeningbeschrijvingen](nl/references/exercise-description).
+zie [Oefeningbeschrijvingen](../../references/exercise-description).
 :::
 
 ## 5. Configureren van de oefeningssjabloon
-Het configureren van een oefening wordt uitgelegd in [Oefeningconfiguratie](nl/references/exercise-config).
+Het configureren van een oefening wordt uitgelegd in [Oefeningconfiguratie](../../references/exercise-config).
 Wij zullen de specifieke configuratie voor TESTed in `config.template.json` bekijken.
 
 ```json

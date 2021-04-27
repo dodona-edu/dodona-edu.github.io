@@ -377,7 +377,7 @@ C ondersteunt geen collecties, dus zijn beide lijsten leeg.
 Het typeconfiguratiebestand is een JSON-bestand met de benamingen van datatypes en gebruikte conventies voor het
 visualiseren van een consoleprompt.
 Dit configuratiebestand wordt gebruikt om opgavesjablonen
-(zie [Documentatie opgavesjablonen](nl/tested-judge/template-description))
+(zie [Documentatie opgavesjablonen](../template-description))
 te instantiëren voor de programmeertaal.
 Maak eerst het configuratiebestand aan: `tested/languages/c/types.json`.
 

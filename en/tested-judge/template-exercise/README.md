@@ -9,7 +9,7 @@ Exercise templates are used when you want to make an exercise available in multi
 
 # Template exercise TESTed
 TESTed is a polyglot judge, meaning it supports multiple programming languages.
-This is achieved by using programming language independent exercises: you write one exercise, which is then solvable in multiple programming languages (see the [reference on TESTed](../../../references/tested-judge/) for more information).
+This is achieved by using programming language independent exercises: you write one exercise, which is then solvable in multiple programming languages (see the [reference on TESTed](../) for more information).
 
 However, Dodona still expects each exercise to be for one specific programming language.
 As a solution, this guide introduces the concept of an exercise template.
@@ -17,11 +17,11 @@ This is a programming language independent exercise description, which is conver
 
 ## 1. Create a Git repository
 Exercise templates must be located in a git repository, just as normal exercises.
-Refer to the [guide on create exercise repositories](en/guides/teachers/new-exercise-repo) for more information.
+Refer to the [guide on create exercise repositories](../../guides/teachers/new-exercise-repo) for more information.
 
 ## 2. Directory structure
 The directory structure for an exercise template for TESTed corresponds to a large extent with the
-[expected structure by Dodona](en/references/exercise-directory-structure).
+[expected structure by Dodona](../../references/exercise-directory-structure).
 For the exercise templates, the file `config.json` is renamed to `config.template.json`.
 The most important reason for this is that we don't want to display the template itself as an exercise in Dodona.
 
@@ -56,11 +56,11 @@ These description templates must be located at `description/description.nl.md.ma
 
 ::: tip Hint
 We recommend writing the descriptions in Markdown,
-see [Exercise descriptions](en/references/exercise-description) for the Markdown constructs supported by Dodona.
+see [Exercise descriptions](../../references/exercise-description) for the Markdown constructs supported by Dodona.
 :::
 
 ## 5. Configuring the exercise templates
-The general configuration of an exercise is explained in [Exercise configuration](en/references/exercise-config).
+The general configuration of an exercise is explained in [Exercise configuration](../exercise-config).
 We will see the specific configuration for TESTed in `config.template.json`.
 
 ```json

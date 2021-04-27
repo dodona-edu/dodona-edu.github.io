@@ -12,7 +12,7 @@ The DLS test plans must end on one of the YAML extensions (`.yaml` or `.yml`).
 For the advanced test plans, there are no restrictions about the file extension, except the YAML extensions.
 
 In addition to the mandatory test plan field, TESTed has some configuration options that can be set.
-The options must be set in the `config.json` of the Dodona exercise (see [Exercise config](../exercise-config)).
+The options must be set in the `config.json` of the Dodona exercise (see [Exercise config](../../references/exercise-config)).
 The options must be set in the object `evaluation.options`.
 
 ## JSON Scheme
