@@ -41,16 +41,16 @@ The following is an example of the minimal directory structure you'll need:
 
 ## 3. Create a test plan
 The tests for a TESTed exercise are written in a test plan.
-The documentation for creating test plans can be found at  [TESTed DSL test plans](en/tested-judge/dsl).
+The documentation for creating test plans can be found at  [TESTed DSL test plans](../dsl).
 We assume that this test plan is located at `evaluation/plan.yaml` in the repository. 
 
 ::: tip Hint for advanced users
-You can also use [advanced test plans](en/tested-judge/json) with the exercise templates.
+You can also use [advanced test plans](../json) with the exercise templates.
 :::
 
 ## 4. Create the description templates
 The description templates will be written using the Mako templating system.
-See [TESTed description templates](en/tested-judge/template-description).
+See [TESTed description templates](../template-description).
 These description templates must be located at `description/description.nl.md.mako` (Dutch) and
 `description/description.en.md.mako` (English).
 

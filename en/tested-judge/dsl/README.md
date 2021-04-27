@@ -72,7 +72,7 @@ The figure has been augmented with annotations of the form `[0].testcases[0].std
 These annotations describe a path to an object in the testplan.
 Interpretation: `[0]` the first tab, `contexts[0]` the first context, `stdin` the given input at standard input and `stdout` the expected output at standard output.
 
-![Visualisation Dodona echo exercise](en/tested-judge/dsl/echo.png)
+![Visualisation Dodona echo exercise](./echo.png)
 
 ### Description
 
@@ -160,8 +160,8 @@ We will use the exercise [Thoughts that count](https://dodona.ugent.be/en/course
 
 Because of a display problem in Dodona, are the newlines in the description in the following figures replaced by spaces.
 <p float="left">
-  ![Thoughts that count Smaller](./boeketje_rozen_KleinerDan.png)
-  ![Thoughts that count Larger](./boeketje_rozen_GroterDan.png)
+  ![Thoughts that count Smaller](././boeketje_rozen_KleinerDan.png)
+  ![Thoughts that count Larger](././boeketje_rozen_GroterDan.png)
 </p>
 
 ### Description
@@ -343,8 +343,8 @@ The testplan that we will examine is for the exercise [Rail fence cipher](https:
     return: "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present."
 ```
 
-![Rail fence cipher Encode](en/tested-judge/dsl/spoorhekcodering_encode.png)
-![Rail fence cipher Decode](en/tested-judge/dsl/spoorhekcodering_decode.png)
+![Rail fence cipher Encode](./spoorhekcodering_encode.png)
+![Rail fence cipher Decode](./spoorhekcodering_decode.png)
 
 ### Description
 
@@ -387,7 +387,7 @@ tabs:
       return: true
 ```
 
-![Objects](en/tested-judge/dsl/equal_checker.png)
+![Objects](./equal_checker.png)
 
 ### Description
 In a context we can define multiple testcases, that can depend on an earlier testcase.
@@ -434,7 +434,7 @@ You can add a list of files that must be linked at the context and/or testcase l
       url: "media/workdir/passports01.txt"
 ```
 
-![File linking](en/tested-judge/dsl/link_files.png)
+![File linking](./link_files.png)
 
 ### Description
 

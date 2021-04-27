@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 ::: warning Warning
 The JSON-testplans are only for advanced users of TESTed.
-The [DSL-testplans](dsl) are recommended to be used whenever this is possible.
+The [DSL-testplans](../dsl) are recommended to be used whenever this is possible.
 :::
 
 # TESTed JSON-testplans
@@ -981,7 +981,7 @@ The *GenericTextEvaluator*-object contains all information that is need to use t
 The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The additional evaluation options that can be used by the builtin evaluator,
-  see [DSL Configuration options for standard output and error](en/tested-judge/dsl/#configuration-options).
+  see [DSL Configuration options for standard output and error](../dsl/#configuration-options).
 - **name**: The type of textual source that must be evaluated.
   Either `text` or `file`.
 

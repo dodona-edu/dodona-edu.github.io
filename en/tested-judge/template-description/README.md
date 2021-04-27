@@ -134,7 +134,7 @@ The templates have the possibilities to notate the code examples in a _DOCTEST_-
 
 ### Code snippets
 The code snippets must be written in the mini-programming language of TESTed
-(see [Statements, expressions and return-raw](en/tested-judge/dsl/#statements-expressions-and-return-raw)),
+(see [Statements, expressions and return-raw](../dsl/#statements-expressions-and-return-raw)),
 in a Python doctest-style manner.
 The input statements and expressions must be prefixed with the _larger than_ character (`>`), the return values not.
 

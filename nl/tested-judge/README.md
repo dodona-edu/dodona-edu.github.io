@@ -21,7 +21,7 @@ Hier vind je alle informatie voor het gebruik van de **TESTed** judge.
 * Python 3.9
 
 ## Documentatie
-* [Configuratie-opties TESTed](config)
+* [Configuratie-opties TESTed](exercise-config)
 * [DSL-Testplannen](dsl)
 * [JSON-Testplannen](json)
 * [Sjabloonbeschrijvingen](template-description)

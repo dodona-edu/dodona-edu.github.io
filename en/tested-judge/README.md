@@ -26,7 +26,7 @@ As with all exercises for Dodona, you'll need to write a description and define 
 You probably want to start with the [guide on creating an exercise template](template-exercise).
 
 We also have some useful references:
-- [Configuration TESTed exercise](config)
+- [Configuration TESTed exercise](exercise-config)
 - [Simple testplans using the DSL](dsl)
 - [Advanced testplans using JSON](json)
 - [Description templates](template-description)
