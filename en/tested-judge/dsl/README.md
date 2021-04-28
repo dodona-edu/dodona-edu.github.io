@@ -21,7 +21,7 @@ The use of square brackets indicates a list of objects.
 │ │ └ roundTo
 │ └ stderr
 │   └ ... # identical to stdout
-├ disable_optimizations
+├ disableOptimizations
 └ tabs[]
   ├ config
   │ └ ... # identical to config at top-level
@@ -35,7 +35,7 @@ The use of square brackets indicates a list of objects.
     ├ arguments
     ├ stdin
     ├ exception
-    ├ exit_code
+    ├ exitCode
     ├ stderr
     ├ stdout
     └ testcases[] # Can be omitted when the context contains only one test case, so no context test case.
@@ -189,7 +189,7 @@ As an example, we'll use a fictional exercise where the goal is a simple calcula
     stdout: "25"
   - arguments: [ "-a", "alpha", "beta" ]
     stderr: "'alpha' and 'beta' aren't integers"
-    exit_code: 1
+    exitCode: 1
 - tab: "Difference"
   contexts:
   - arguments: [ "-s", "5", "20" ]
@@ -197,7 +197,7 @@ As an example, we'll use a fictional exercise where the goal is a simple calcula
   - arguments: [ "-s", "5", "20" ]
     stdin: "Random input"
     stderr: "There is no input expected at standard input"
-    exit_code: 1
+    exitCode: 1
 - tab: "Multiplication"
   contexts:
   - arguments: [ "-m", "25", "5" ]
@@ -208,7 +208,7 @@ As an example, we'll use a fictional exercise where the goal is a simple calcula
     stdout: "5"
   - arguments: [ "-d", "25", "0" ]
     stderr: "Integer division by zero"
-    exit_code: 2
+    exitCode: 2
 ```
 
 ### Description
@@ -224,7 +224,7 @@ We recommend using strings for these arguments, however the textual types are al
 This keyword defines the expected output for the testcase.  
 This is analogous to `stdout`.
 
-#### exit_code
+#### exitCode
 Used to provide the expected exit code of the program for the testcase.
 This must be an integer.
 
@@ -234,7 +234,7 @@ We will use the exercise [How smart are you?](https://dodona.ugent.be/en/courses
 
 ```yaml
 namespace: "solution"
-disable_optimizations: true
+disableOptimizations: true
 tabs:
 - tab: "Hoe slim ben jij?"
   config:
@@ -266,7 +266,7 @@ For example, in Java this must be the name of the class of the solution submitte
 You might want to change this to something that makes sense for the exercise.
 You should use `snake_case` for the submission. TESTed will automatically convert it to the conventions of each programming language. For example, the namespace `result_calculator` will require Java submissions to contain the class `ResultCalculator`.
 
-#### disable_optimizations
+#### disableOptimizations
 By default, TESTed will use some optimization techniques to reduce the execution time.
 However, these optimization techniques could cause the optimized code to lead to unwanted results.
 Therefore can the user disable these optimizations for the entire testplan, should this be necessary.
@@ -277,7 +277,7 @@ which achieves a faster execution of tests (not necessarily a negative result);
 back gates through which the students can share information between the different contexts.
 
 #### tabs
-When you want to provide `namespace`, `disable_optimizations` or global configuration options, you must use the keyword `tabs` the pass the list of tabs.
+When you want to provide `namespace`, `disableOptimizations` or global configuration options, you must use the keyword `tabs` the pass the list of tabs.
 
 #### Textual types
 The second testcase in the testplan for __How smart are you?__, illustrates that not only strings can be used for standard input, output or error.
@@ -489,7 +489,7 @@ The line is preceded by a pound sign (#).
       return: 4
   - arguments: [ "-d", "25", "0" ]
     stderr: "Integer division by zero"
-    exit_code: 1
+    exitCode: 1
     testcases:
     - statement: 'div(1, 0)'
       exception: "Integer division by zero"

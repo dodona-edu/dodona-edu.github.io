@@ -21,7 +21,7 @@ Hierbij stelt het gebruik van vierkante haakjes lijsten van objecten voor.
 │ │ └ roundTo
 │ └ stderr
 │   └ ... # identiek aan stdout
-├ disable_optimizations
+├ disableOptimizations
 └ tabs[]
   ├ config
   │ └ ... # identiek aan de config hierboven
@@ -35,7 +35,7 @@ Hierbij stelt het gebruik van vierkante haakjes lijsten van objecten voor.
     ├ arguments
     ├ stdin
     ├ exception
-    ├ exit_code
+    ├ exitCode
     ├ stderr
     ├ stdout
     └ testcases[] # Kan weggelaten worden wanneer de context maar één testgeval
@@ -189,7 +189,7 @@ Hierbij zullen we een testplan bekijken voor een fictieve oefening van een simpe
     stdout: "25"
   - arguments: [ "-a", "alpha", "beta" ]
     stderr: "'alpha' en 'beta' zijn geen geldige getallen"
-    exit_code: 1
+    exitCode: 1
 - tab: "Verschil"
   contexts:
   - arguments: [ "-s", "5", "20" ]
@@ -197,7 +197,7 @@ Hierbij zullen we een testplan bekijken voor een fictieve oefening van een simpe
   - arguments: [ "-s", "5", "20" ]
     stdin: "Willekeurige invoer"
     stderr: "Er wordt geen invoer verwacht op stdin"
-    exit_code: 1
+    exitCode: 1
 - tab: "Product"
   contexts:
   - arguments: [ "-m", "25", "5" ]
@@ -208,7 +208,7 @@ Hierbij zullen we een testplan bekijken voor een fictieve oefening van een simpe
     stdout: "5"
   - arguments: [ "-d", "25", "0" ]
     stderr: "Gehele deling door nul"
-    exit_code: 2
+    exitCode: 2
 ```
 
 ### Beschrijving
@@ -224,7 +224,7 @@ We raden aan om strings te gebruiken voor deze argumenten maar ook de tekstuele 
 Hierbij wordt de verwachte standaardfout opgegeven voor een testgeval.
 Dit is analoog aan `stdout`.
 
-#### exit_code
+#### exitCode
 Hierbij wordt de verwachte exitcode van het programma opgegeven voor een testgeval.
 Dit is een geheel getal.
 
@@ -234,7 +234,7 @@ Hiervoor zullen we gebruikmaken van de oefening [Hoe slim ben jij?](https://dodo
 
 ```yaml
 namespace: "solution"
-disable_optimizations: true
+disableOptimizations: true
 tabs:
 - tab: "Hoe slim ben jij?"
   config:
@@ -265,8 +265,9 @@ Dit is bijvoorbeeld in Java echter ook de naam van de klasse die gebruikt moet w
 Wanneer je echter als lesgever wilt dat de studenten een klasse schrijven, zal je meestal de namespace zelf willen bepalen.
 Hiervoor kun je dus de namespace instellen.
 Voor de namespace gebruikt je best `snake_case` zodat voor elke programmeertaal de juiste stijlconventie gevolgd kan worden.
+Bijvoorbeeld de namespace `result_calculator` zal een Java oplossing de klasse `ResultCalculator` moeten bevatten.
 
-#### disable_optimizations
+#### disableOptimizations
 TESTed gebruikt standaard aan aantal optimalisatietechnieken om de uitvoertijd in te korten.
 Deze optimalisatietechnieken kunnen echter tot gevolg hebben dat de geoptimaliseerde code tot ongewenste resultaten kan leiden.
 Daarom kan de gebruiker deze optimalisaties uitschakelen voor het volledige testplan, moest dit nodig zijn.
@@ -277,7 +278,7 @@ er een sneller uitvoer van testen bereikt wordt (niet noodzakelijk een negatief 
 achterpoorten waardoor de studenten informatie kunnen delen tussen de verschillende contexten.
 
 #### tabs
-Wanneer je de `namespace`, `disable_optimizations` of globale configuratie wenst op te geven, moet je verplicht het sleutelwoord `tabs` gebruiken om de tabbladen op te lijsten.
+Wanneer je de `namespace`, `disableOptimizations` of globale configuratie wenst op te geven, moet je verplicht het sleutelwoord `tabs` gebruiken om de tabbladen op te lijsten.
 
 #### Tekstuele types
 Het tweede testgeval in het testplan voor __Hoe slim ben jij?__, illustreert dat standaardinvoer en standaarduitvoer niet noodzakelijk strings moeten zijn.
@@ -491,7 +492,7 @@ Hierbij wordt de regel voorafgegaan door een hekje (#).
       return: 4
   - arguments: [ "-d", "25", "0" ]
     stderr: "Gehele deling door nul"
-    exit_code: 1
+    exitCode: 1
     testcases:
     - statement: 'div(1, 0)'
       exception: "Gehele deling door nul"
