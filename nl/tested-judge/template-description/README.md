@@ -8,7 +8,7 @@ Opgavesjablonen worden gebruikt om één keer een opgave op te stellen.
 Deze opgave kan dan geïnstantieerd worden per programmeertaal die nodig is met de juiste benamingen van datatypes
 en stijlconventies.
 
-De opgavesjabloon worden geschreven met het Mako-sjablonensysteem.
+Het opgavesjabloon worden geschreven met het Mako-sjablonensysteem.
 TESTed ondersteunt twee opmaaktalen voor de opgaven: Markdown en HTML.
 De opgaven kunnen zowel in het Nederlands, als in het Engels geschreven worden.
 
