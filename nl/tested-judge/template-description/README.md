@@ -17,7 +17,7 @@ Wat moet er per programmeertaal gegenereerd worden?
   De stijlconventies voor functienamen zijn afhankelijk van de programmeertaal.
   Bijvoorbeeld: Python gebruikt de `snake_case`-conventie, Java gebruikt de `camelCase`-conventie.
 - **Typenamen**:
-  Een van de grotere verschillen tussen programmeertalen is de benaming voor hetzelfde datatype.
+  Eén van de grotere verschillen tussen programmeertalen is de benaming voor hetzelfde datatype.
   Voorbeeld 8-bit gehele getallen: Java gebruikt hiervoor de naam `byte`,
   Haskell gebruikt hiervoor de naam `Data.Int.Int8`.
 - **Natuurlijke typenamen**:
@@ -97,7 +97,7 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Dit zorgt ervoor dat de functienamen per taal correct gegenereerd kunnen worden.
   :::
 - **type_name**:
-  Deze functie dient gebruikt te worden om de datatypes van te vertalen in de datatypes die gebruikt worden in de
+  Deze functie dient gebruikt te worden om de datatypes van TESTEd te vertalen in de datatypes die gebruikt worden in de
   programmeertalen.
   Deze functie verwacht ofwel een string ofwel een paar als typeargument.
   Het eerste argument van het paar is een collectiedatatype string,
