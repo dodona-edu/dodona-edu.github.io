@@ -97,7 +97,7 @@ We zullen terug een overzicht geven van de beschikbare functies die gebruikt kun
   Dit zorgt ervoor dat de functienamen per taal correct gegenereerd kunnen worden.
   :::
 - **type_name**:
-  Deze functie dient gebruikt te worden om de datatypes van TESTEd te vertalen in de datatypes die gebruikt worden in de
+  Deze functie dient gebruikt te worden om de datatypes van TESTed te vertalen in de datatypes die gebruikt worden in de
   programmeertalen.
   Deze functie verwacht ofwel een string ofwel een paar als typeargument.
   Het eerste argument van het paar is een collectiedatatype string,
