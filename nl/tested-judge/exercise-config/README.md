@@ -5,20 +5,31 @@ sidebarDepth: 2
 ---
 
 # Configuratie TESTed
-De TESTed judge heeft een verplicht veld `evaluation.plan_name` in het `config.json` bestand van een Dodona oefening.
-Dit veld moet de naam van een testplan, in de map `evaluation` van de oefening, bevatten.
-Het testplan kan zowel een [DSL-testplan](../dsl) zijn, als een [geavanceerd testplan](../json).
-De DSL-testplannen moet eindigen op één van de YAML-extensies (`.yaml` of `.yml`).
-Voor de geavanceerde testplannen zijn er geen beperkingen op de bestandsextensie, behalve de YAML-extensies.
 
-Naast het verplichte testplan-veld, heeft TESTed enkele configuratieopties die ingesteld kunnen worden.
-De opties moeten ingesteld worden in het `config.json` van een Dodona oefening
-(zie [Oefeningconfiguratie](../../references/exercise-config)).
-De opties moeten meegegeven worden in het object `evaluation.options`.
+Als judge die oplossingen voor programmeeroefeningen automatisch beoordeelt, 
+heeft TESTed een verplicht veld `evaluation.plan_name` in het 
+configuratiebestand van de oefening (`config.json`). Dit veld moet aangeven
+wat de bestandsnaam is van het testplan in de map `evaluation` van de oefening.
 
-## JSON-Schema
-Hieronder kun je het JSON Schema vinden van de verschillende opties.
-De opties zullen in de volgende paragrafen verder uitgelegd worden.
+Voor testplannen zijn er twee opties. TESTed ondersteunt een domeinspecifieke
+taal (DSL; *domain specific language*) om de testen te beschrijven waaraan een
+ingediende oplossing zal onderworpen worden. Het gebruik van deze DSL is de 
+meest eenvoudige manier om de testen te beschrijven. De specificatie van 
+[**DSL-testplannen**](../dsl) gebeurt in het 
+[YAML-formaat](https://en.wikipedia.org/wiki/YAML){: target="_blank"} in 
+bestanden met de extensie `.yaml` of `.yml`. Meer 
+[**geavanceerde testplannen**](../json) worden beschreven in het 
+[JSON-formaat](https://nl.wikipedia.org/wiki/JSON){: target="_blank"} in 
+bestanden die typisch de extensie `.json` gebruiken, al legt TESTed geen 
+specifieke beperkingen op aan de bestandsextensie van geavanceerde testplannen.
+
+Naast het verplichte veld voor het testplan, kan je in het configuratiebestand 
+van een oefening (`config.json`) 
+[bijkomende configuratieopties](../../references/exercise-config) instellen in 
+het object `evaluation.options`. In de volgende secties bespreken de 
+verschillende opties. Hun specificatie wordt vastgelegd in onderstaand 
+[JSON Schema](https://json-schema.org/){: target="_blank"}.
+
 ```json
 {
   "title": "OptionsModel",
@@ -82,12 +93,16 @@ De opties zullen in de volgende paragrafen verder uitgelegd worden.
 }
 ```
 
-## Parallellisatie
-Het veld `parallel` heeft aan of de evaluatie geparallelliseerd uitgevoerd mag worden.
-De parallellisatie slaat op de verschillende gegenereerde uitvoerbare bestanden voor een tabblad.
-Standaard wordt er niet geparallelliseerd.
+## Parallel uitvoeren van testbestanden
 
-Voorbeeld toepassen parallellisatie:
+Het veld `parallel` geeft aan of de beoordeling geparallelliseerd mag uitgevoerd
+worden. Dit gaat specifiek over het uitvoeren van de verschillende testbestanden 
+die voor één tabblad gegenereerd worden. Standaard worden deze testbestanden 
+sequentieel uitgevoerd, maar de testen in die bestanden zijn wel altijd 
+onafhankelijk van elkaar.
+
+Voorbeeld (parallel uitvoeren ingeschakeld):
+
 ```json
 {
   "evaluation": {
@@ -98,18 +113,21 @@ Voorbeeld toepassen parallellisatie:
 }
 ```
 
-## Compilatie modus
-Het veld `mode` heeft aan hoe er gecompileerd moet worden.
-TESTed ondersteunt twee modi:
-1) Alle uitvoerbare bestanden in één keer compileren (`batch`).
-2) Elke uitvoerbaar bestand apart compileren (`context`, individuele compilatie).
+## Compilatiemodus
 
-`batch`-compilatie heeft als gevolg dat er minder tijd gespendeerd wordt aan het compileren van testcode en oplossing,
-in vergelijking met de individuele compilatie.
+Het veld `mode` geeft aan hoe uitvoerbare bestanden (testbestanden en ingediende 
+oplossingen) moeten gecompileerd moet worden. Daarvoor biedt TESTed twee 
+mogelijkheden aan:
 
-Standaard zal TESTed alle uitvoerbare bestanden in één keer compileren.
+* `batch`: Alle uitvoerbare bestanden in één keer compileren.
+* `context`: Elk uitvoerbare bestanden afzonderlijk compileren (individuele compilatie).
+
+In vergelijking met individuele compilatie, heeft `batch`-compilatie minder tijd
+nodig voor het compileren van testbestanden en ingediende oplossingen. Standaard 
+zal TESTed alle uitvoerbare bestanden in één keer compileren.
    
-Voorbeeld individueel compileren:
+Voorbeeld (individueel compileren):
+
 ```json
 {
   "evaluation": {
@@ -120,13 +138,15 @@ Voorbeeld individueel compileren:
 }
 ```
 
-### Compilatie fallback
-Wanneer je `batch`-compilatie gebruikt kun je instellen of er overgeschakeld mag worden naar de individuele compilatie,
-wanneer de `batch`-compilatie faalt.
-Hiervoor maak je gebruik van het veld `allow_fallback`.
-Standaard zal TESTed terugvallen naar de individuele compilatie, wanneer de `batch`-compilatie faalt.
+### Fallback voor compilatie
 
-Voorbeeld uitschakelen compilatie fallback:
+Bij `batch`-compilatie kan ingesteld worden dat TESTed mag teruggevallen op 
+individuele compilatie als de `batch`-compilatie faalt. Hiervoor gebruik je het 
+veld `allow_fallback`. Standaard mag TESTed terugvallen op individuele 
+compilatie als de `batch`-compilatie faalt.
+
+Voorbeeld (fallback voor compilatie uitgeschakeld):
+
 ```json
 {
   "evaluation": {
@@ -138,14 +158,17 @@ Voorbeeld uitschakelen compilatie fallback:
 }
 ```
 
-## Geoptimaliseerde python evaluatie
-Het veld `optimized` wordt gebruikt om aan te geven
-of de geprogrammeerde Python evaluators geoptimaliseerd uitgevoerd mogen worden.
-Met geoptimaliseerd bedoelen we dat ze in hetzelfde proces als TESTed uitgevoerd zullen worden.
-Anders zullen ze een apart process uitgevoerd worden, wat een niet verwaarloosbare performantie overhead hebben.
-Standaard zal TESTed deze geoptimaliseerd uitvoeren.
+## Geoptimaliseerde Python-evaluatie
 
-Voorbeeld niet geoptimaliseerde Python-evaluatie:
+Gebruik het veld `optimized` om aan te geven of geprogrammeerde 
+Python-evaluators geoptimaliseerd mogen uitgevoerd worden. Daarmee bedoelen we
+dat de Python-evaluators in hetzelfde proces als TESTed mogen uitgevoerd worden.
+Het uitvoeren van evaluators in afzonderlijke processen zorgt voor een 
+aanzienlijke overhead qua performantie. Standaard mag TESTed Python-evaluators 
+geoptimaliseerd uitvoeren.
+
+Voorbeeld (geoptimaliseerde Python-evaluatie uitschakelen):
+
 ```json
 {
   "evaluation": {
@@ -157,24 +180,29 @@ Voorbeeld niet geoptimaliseerde Python-evaluatie:
 ```
 
 ## Linters
-De TESTed judge heeft ondersteuning voor linters.
-Per programmeertaal kan er beslist worden of je aldan niet de linter wenst te gebruiken voor die programmeertaal.
-De gebruikte linters zijn:
-| Programmeertaal | Linter     |
-| --------------- | ---------- |
-| C               | Cppcheck   |
-| Haskell         | HLint      |
-| Java            | Checkstyle |
-| JavaScript      | ESLint     |
-| Kotlin          | KTLint     |
-| Python          | PYLint     |
 
-De linters worden ingesteld in het object bijhorend bij het veld `linter`.
-De sleutels van dit object zijn de ondersteunde programmeertalen.
-Met een boolean wordt aangegeven of de linters gebruikt moeten worden.
-Standaard zullen de linters voor elke programmeertaal gebruikt worden.
+Bij de [configuratie van een programmeertaal voor TESTed](configure-new-programming-language) 
+kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)){: target="_blank"} 
+geconfigureerd worden. Dit zijn de linters die TESTed op dit moment gebruikt:
 
-Voorbeeld uitschakelen linters:
+| Programmeertaal | Linter                                                                    |
+| --------------- | ------------------------------------------------------------------------- |
+| C               | [Cppcheck](http://cppcheck.sourceforge.net/){: target="_blank"}           |
+| Haskell         | [HLint](https://github.com/ndmitchell/hlint){: target="_blank"}           |
+| Java            | [Checkstyle](https://github.com/checkstyle/checkstyle){: target="_blank"} |
+| JavaScript      | [ESLint](https://eslint.org/){: target="_blank"}                          |
+| Kotlin          | [ktlint](https://ktlint.github.io/){: target="_blank"}                    |
+| Python          | [Pylint](https://www.pylint.org/){: target="_blank"}                      |
+
+Bij de configuratie van een oefening kan je in het veld `linter` voor elke 
+programmeertaal instellen of ingediende oplossingen door de linter moeten 
+geëvalueerd worden. De sleutels van het geassocieerde object zijn de 
+programmeertalen die door TESTed ondersteund worden. Met een boolean wordt 
+aangegeven of TESTed de linter voor de programmeertaal moet gebruiken. Standaard 
+zal TESTed voor elke programmeertaal de linter gebruiken.
+
+Voorbeeld (linters uitschakelen):
+
 ```json
 {
   "evaluation": {
@@ -192,17 +220,19 @@ Voorbeeld uitschakelen linters:
 }
 ```
 
-## Programmeertaal specifiek
-Naast de configuratieopties voor TESTed zelf, bestaan er ook optionele programmeertaalspecifieke opties.
-Deze opties worden ingesteld in het object bijhorend bij het veld `evaluation.language`.
-
-### C
-De programmeertaal C heeft geen programmeertaalspecifieke opties.
+## Programmeertaal-specifieke opties
+ 
+Naast algemene configuratieopties, kunnen individuele programmeertalen ook eigen 
+opties hebben. Dergelijke programmeertaal-specifieke opties worden ingesteld in 
+het object dat geassocieerd wordt met het veld `evaluation.language`. Hieronder 
+bespreken we de opties per programmeertaal. Programmeertalen zonder
+programmeertaal-specifieke opties worden niet opgelijst. 
 
 ### Haskell
+
 De programmeertaal Haskell heeft 1 optie: `hlint_config`.
 Deze verwacht de bestandsnaam van een HLint-configuratiebestand.
-Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
+Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
 
 Voorbeeld HLint-configuratie:
 ```json
@@ -220,11 +250,13 @@ Voorbeeld HLint-configuratie:
 ```
 
 ### Java
-De programmeertaal Java heeft 1 optie: `checkstyle_config`.
-Deze verwacht de bestandsnaam van een Checkstyle-configuratiebestand.
-Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
 
-Voorbeeld Checkstyle-configuratie:
+Via de optie `checkstyle_config` kan de bestandsnaam van een 
+Checkstyle-configuratiebestand (linter) ingesteld worden. Het bestand zelf moet
+in de map `evaluation` van de oefening geplaatst worden.
+
+Voorbeeld:
+
 ```json
 {
   "evaluation": {
@@ -240,11 +272,13 @@ Voorbeeld Checkstyle-configuratie:
 ```
 
 ### JavaScript
-De scripttaal JavaScript heeft 1 optie: `eslint_config`.
-Deze verwacht de bestandsnaam van een ESLint-configuratiebestand.
-Dit bestand moet zich in de `evaluation`-map van de Dodona-oefening bevinden.
 
-Voorbeeld ESLint-configuratie:
+Via de optie `eslint_config` kan de bestandsnaam van een 
+ESLint-configuratiebestand (linter) ingesteld worden. Het bestand zelf moet
+in de map `evaluation` van de oefening geplaatst worden.
+
+Voorbeeld:
+
 ```json
 {
   "evaluation": {
@@ -260,19 +294,20 @@ Voorbeeld ESLint-configuratie:
 ```
 
 ### Kotlin
-De programmeertaal Kotlin heeft 4 opties:
-`editorconfig`, `disabled_rules_ktlint`, `ktlint_ruleset` en `ktlint_experimental`.
-Al deze opties worden gebruikt door de linter *KTLint*.
-- `editorconfig`: bestandsnaam van een `.editorconfig`-bestand (zie <https://editorconfig.org/>) in de map `evaluation`
-  van de Dodona-oefening.
-- `disabled_rules_ktlint`: een lijst van *KTLint*-regels die genegeerd mogen worden.
-  Er kan ook gebruik gemaakt worden van een kommagescheiden string van regels.
-- `ktlint_ruleset`: Een bestandsnaam van een JAR-bestand met extra regels.
-  Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
-- `ktlint_experimental`: Duid aan of de experimentele linterregels gebruikt mogen worden.
-  Standaard zullen deze regels gebruikt worden.
 
-Voorbeeld KTLint-configuratie:
+De linter `ktlint` kan geconfigureerd worden op basis van de volgende opties:
+
+- `editorconfig`: Bestandsnaam van een `.editorconfig`-bestand 
+  (zie <https://editorconfig.org/>) in de map `evaluation` van de oefening.
+- `disabled_rules_ktlint`: Lijst van regels die *ktlint* moeten negeren. Kan ook
+  ingesteld worden als een kommagescheiden string van regels.
+- `ktlint_ruleset`: Bestandsnaam van een JAR-bestand met extra regels. Dit 
+  bestand moet in de map `evaluation` van de oefening geplaatst worden.
+- `ktlint_experimental`: Boolean die aangeeft of *ktlint* ook experimentele 
+  regels moet gebruiken. Standaard zal *ktlint* experimentele regels gebruiken.
+
+Voorbeeld:
+
 ```json
 {
   "evaluation": {
@@ -291,11 +326,13 @@ Voorbeeld KTLint-configuratie:
 ```
 
 ### Python
-De scripttaal Python heeft 1 optie: `pylint_config`.
-Deze verwacht de bestandsnaam van een PYLint-configuratiebestand.
-Dit bestand moet zich in de map `evaluation` van de Dodona-oefening bevinden.
 
-Voorbeeld PYLint-configuratie:
+Via de optie `pylint_config` kan de bestandsnaam van een 
+Pylint-configuratiebestand (linter) ingesteld worden. Het bestand zelf moet
+in de map `evaluation` van de oefening geplaatst worden.
+
+Voorbeeld:
+
 ```json
 {
   "evaluation": {
@@ -310,7 +347,11 @@ Voorbeeld PYLint-configuratie:
 }
 ```
 
-## Voorbeeld volledig `config.json`
+## Uitgewerkt voorbeeld
+
+Hieronder zie je een volledig configuratiebestand van een oefening 
+( `config.json`) waarvan de oplossingen door TESTed beoordeeld worden.
+
 ```json
 {
   "access": "private",
