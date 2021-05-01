@@ -1187,8 +1187,8 @@ Om de programmeertaal manueel te testen is het volgende stappenplan aanbevolen:
 TESTed heeft ook een testsuite met verschillende oefeningen en scenario's. Om de 
 nieuwe programmeertaal hieraan toe te voegen, moeten de juiste oplossingen 
 geïmplementeerd worden. Hiervoor wordt best gekeken naar 
-`tests/test_functionality.py`. In dat bestand staan de verschillende testen. Bij 
-elke test staat welke oplossing gebruikt wordt. Als het niet duidelijk zou zijn 
-wat de oplossing voor een bepaalde test moet doen, kijk dan zeker eens naar de 
-bestaande oplossingen voor de programmeertalen die al voor TESTed 
-geconfigureerd waren.
+[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py){: target="_blank"}. 
+In dat bestand staan de verschillende testen. Bij elke test staat welke 
+oplossing gebruikt wordt. Als het niet duidelijk zou zijn wat de oplossing voor 
+een bepaalde test moet doen, kijk dan zeker eens naar de bestaande oplossingen 
+voor de programmeertalen die al voor TESTed geconfigureerd waren.
