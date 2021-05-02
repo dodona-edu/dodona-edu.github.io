@@ -4,7 +4,7 @@ description: "Configuratie TESTed"
 sidebarDepth: 2
 ---
 
-# Configuratie TESTed
+# TESTed configureren
 
 Als judge die oplossingen voor programmeeroefeningen automatisch beoordeelt, 
 heeft TESTed een verplicht veld `evaluation.plan_name` in het 
