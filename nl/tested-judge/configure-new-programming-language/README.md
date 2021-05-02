@@ -752,8 +752,8 @@ extensie `.c` of `.mako` kunnen krijgen, of een mengeling. De conventie geldt
 voornamelijk voor de verplichte sjablonen. De andere sjablonen (die als 
 hulpmiddel gebruikt worden door de verplichte sjablonen) kunnen eender welke
 extensie krijgen, want bij het gebruiken van een sjabloon in 
-[Mako](https://www.makotemplates.org/){: target="_blank"} moet de 
-bestandsextensie opgegeven worden.
+[Mako](https://www.makotemplates.org/) moet de bestandsextensie opgegeven 
+worden.
 
 #### Het runsjabloon
 
@@ -764,9 +764,9 @@ We importeren de values-module (hierover later meer) en de ingediende oplossing.
 De variabele `submission_name` zal de naam van het oplossingsbestand bevatten.
 Een overzicht van alle beschikbare variabelen in het runsjabloon is te vinden in 
 de klasse 
-[`_ExecutionArguments`](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/generator.py#L124){: target="_blank"}
+[`_ExecutionArguments`](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/generator.py#L124)
 uit de module 
-[`tested.languages.generator`](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/generator.py){: target="_blank"}.
+[`tested.languages.generator`](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/generator.py).
 
 We importeren ook alle programmeertaalspecifieke evaluatoren die we nodig zullen 
 hebben. De variabele `evaluator_names` bevat een verzameling van deze namen.
@@ -1134,7 +1134,7 @@ het statementsjabloon. Het gaat om volgende sjablonen:
 
 We hebben ze niet opgenomen in deze handleiding, omdat ze sterk lijken op het 
 statementsjabloon. De implementatie van deze sjablonen is te bekijken in de 
-[repository van TESTed](https://github.com/dodona-edu/universal-judge/tree/master/tested/languages/c/templates){: target="_blank"}.
+[repository van TESTed](https://github.com/dodona-edu/universal-judge/tree/master/tested/languages/c/templates).
 
 ### Hulpmodules
 
@@ -1187,7 +1187,7 @@ Om de programmeertaal manueel te testen is het volgende stappenplan aanbevolen:
 TESTed heeft ook een testsuite met verschillende oefeningen en scenario's. Om de 
 nieuwe programmeertaal hieraan toe te voegen, moeten de juiste oplossingen 
 geïmplementeerd worden. Hiervoor wordt best gekeken naar 
-[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py){: target="_blank"}. 
+[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py). 
 In dat bestand staan de verschillende testen. Bij elke test staat welke 
 oplossing gebruikt wordt. Als het niet duidelijk zou zijn wat de oplossing voor 
 een bepaalde test moet doen, kijk dan zeker eens naar de bestaande oplossingen 

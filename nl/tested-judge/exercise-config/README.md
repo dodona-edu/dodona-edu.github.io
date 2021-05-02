@@ -16,10 +16,10 @@ taal (DSL; *domain specific language*) om de testen te beschrijven waaraan een
 ingediende oplossing zal onderworpen worden. Het gebruik van deze DSL is de 
 meest eenvoudige manier om de testen te beschrijven. De specificatie van 
 [**DSL-testplannen**](../dsl) gebeurt in het 
-[YAML-formaat](https://en.wikipedia.org/wiki/YAML){: target="_blank"} in 
+[YAML-formaat](https://en.wikipedia.org/wiki/YAML) in 
 bestanden met de extensie `.yaml` of `.yml`. Meer 
 [**geavanceerde testplannen**](../json) worden beschreven in het 
-[JSON-formaat](https://nl.wikipedia.org/wiki/JSON){: target="_blank"} in 
+[JSON-formaat](https://nl.wikipedia.org/wiki/JSON) in 
 bestanden die typisch de extensie `.json` gebruiken, al legt TESTed geen 
 specifieke beperkingen op aan de bestandsextensie van geavanceerde testplannen.
 
@@ -28,7 +28,7 @@ van een oefening (`config.json`)
 [bijkomende configuratieopties](../../references/exercise-config) instellen in 
 het object `evaluation.options`. In de volgende secties bespreken de 
 verschillende opties. Hun specificatie wordt vastgelegd in onderstaand 
-[JSON Schema](https://json-schema.org/){: target="_blank"}.
+[JSON Schema](https://json-schema.org/).
 
 ```json
 {
@@ -182,17 +182,17 @@ Voorbeeld (geoptimaliseerde Python-evaluatie uitschakelen):
 ## Linters
 
 Bij de [configuratie van een programmeertaal voor TESTed](configure-new-programming-language) 
-kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)){: target="_blank"} 
+kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)) 
 geconfigureerd worden. Dit zijn de linters die TESTed op dit moment gebruikt:
 
 | Programmeertaal | Linter                                                                    |
 | --------------- | ------------------------------------------------------------------------- |
-| C               | [Cppcheck](http://cppcheck.sourceforge.net/){: target="_blank"}           |
-| Haskell         | [HLint](https://github.com/ndmitchell/hlint){: target="_blank"}           |
-| Java            | [Checkstyle](https://github.com/checkstyle/checkstyle){: target="_blank"} |
-| JavaScript      | [ESLint](https://eslint.org/){: target="_blank"}                          |
-| Kotlin          | [ktlint](https://ktlint.github.io/){: target="_blank"}                    |
-| Python          | [Pylint](https://www.pylint.org/){: target="_blank"}                      |
+| C               | [Cppcheck](http://cppcheck.sourceforge.net/)           |
+| Haskell         | [HLint](https://github.com/ndmitchell/hlint)           |
+| Java            | [Checkstyle](https://github.com/checkstyle/checkstyle) |
+| JavaScript      | [ESLint](https://eslint.org/)                          |
+| Kotlin          | [ktlint](https://ktlint.github.io/)                    |
+| Python          | [Pylint](https://www.pylint.org/)                      |
 
 Bij de configuratie van een oefening kan je in het veld `linter` voor elke 
 programmeertaal instellen of ingediende oplossingen door de linter moeten 

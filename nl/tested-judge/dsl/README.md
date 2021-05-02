@@ -6,7 +6,7 @@ description: "TESTed DSL testplannen"
 # DSL-testplannen
 
 TESTed ondersteunt een domeinspecifieke taal 
-(*[domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language){: target="_blank"}*)
+(*[domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language)*)
 om het testplan van een programmeeroefening op een 
 programmeertaal-onafhankelijke manier te beschrijven. Daarmee kan dus vastgelegd 
 worden welke testen moeten uitgevoerd worden op een ingediende 
@@ -20,7 +20,7 @@ testplan van een programmeeroefening extra functionaliteit of flexibiliteit
 nodig, dan kan je het testplan opstellen in het JSON-formaat van TESTed. 
 
 Een DSL-testplan wordt beschreven in het 
-[YAML-formaat](https://en.wikipedia.org/wiki/YAML){: target="_blank"}. De 
+[YAML-formaat](https://en.wikipedia.org/wiki/YAML). De 
 structuur van de DSL volgt in grote mate de opbouw waarmee feedback wordt 
 weergegeven in Dodona. In onderstaande voorstelling van een DSL-testplan 
 gebruiken we vierkante haakjes om lijsten van objecten voor te stellen.
@@ -232,7 +232,7 @@ meerdere regels.
 
 Opmerking: In dit geval gebruikt TESTed de tekst voor het standaardinvoer-kanaal 
 als beschrijving voor de test in de feedback. Door een 
-[probleem](https://github.com/dodona-edu/dodona/issues/2413){: target="_blank"}
+[probleem](https://github.com/dodona-edu/dodona/issues/2413)
 worden de newlines in deze beschrijving echter vervangen door spaties.
 
 ### Multitab
@@ -476,7 +476,7 @@ en resultaten weg te schrijven naar standaarduitvoer. Deze *black box* manier om
 code te testen maakt het makkelijk om de controle op een 
 programmeertaal-onafhankelijke manier uit te voeren, maar staat ver van de 
 standaard praktijk van 
-[unittesten](https://nl.wikipedia.org/wiki/Unittesten){: target="_blank"}. In 
+[unittesten](https://nl.wikipedia.org/wiki/Unittesten). In 
 een educatieve context laten unittesten toe om functionele units onafhankelijk 
 van elkaar te testen op hun correcte werking, en op een meer modulaire manier
 feedback te geven.
@@ -532,7 +532,7 @@ programmeertaal.
 ### Returnwaarden
 
 De functies voor deze oefening zijn 
-[**deterministisch**](https://en.wikipedia.org/wiki/Deterministic_algorithm){: target="_blank"}: 
+[**deterministisch**](https://en.wikipedia.org/wiki/Deterministic_algorithm): 
 als een functie wordt opgeroepen met specifieke argumenten, dan zal dit altijd 
 hetzelfde resultaat teruggeven. In het testplan wordt het resultaat dat we 
 verwachten bij het aanroepen van een functie met specifieke argumenten gekoppeld 
@@ -603,7 +603,7 @@ uit de code aangeroepen worden.
 ## Exceptions
 
 Verschillende programmeertalen gebruiken 
-[*exception handling*](https://nl.wikipedia.org/wiki/Exception_handling){: target="_blank"}
+[*exception handling*](https://nl.wikipedia.org/wiki/Exception_handling)
 als mechanisme om uitzonderlijke gebeurtenissen (*exceptions*) te kunnen 
 afhandelen tijdens het uitvoeren van code. Via het uitvoerkanaal `exception`
 kan er aangegeven worden dat code verwacht wordt om een *exception* op te 
