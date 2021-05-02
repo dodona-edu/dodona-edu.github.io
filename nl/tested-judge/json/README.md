@@ -9,7 +9,8 @@ De JSON-testplannen zijn enkel geschikt voor geavanceerde gebruikers van TESTed.
 Het is aangeraden om de [DSL-tesplannen](../dsl) te gebruiken wanneer dit mogelijk is.
 :::
 
-# TESTed JSON-testplannen
+# JSON-testplannen
+
 Het JSON-testplan bevat alle mogelijke configuratieopties en evaluatiemogelijkheden die door TESTed ondersteund worden.
 Het volledige JSON Schema voor de testplannen kan <a href="/tested-json-testplan-schema.json" target="_blank">hier</a>
 worden bekeken.
