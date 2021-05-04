@@ -181,7 +181,7 @@ Voorbeeld (geoptimaliseerde Python-evaluatie uitschakelen):
 
 ## Linters
 
-Bij de [configuratie van een programmeertaal voor TESTed](configure-new-programming-language) 
+Bij de [configuratie van een programmeertaal voor TESTed](../configure-new-programming-language) 
 kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)) 
 geconfigureerd worden. Dit zijn de linters die TESTed op dit moment gebruikt:
 
@@ -201,20 +201,32 @@ programmeertalen die door TESTed ondersteund worden. Met een boolean wordt
 aangegeven of TESTed de linter voor de programmeertaal moet gebruiken. Standaard 
 zal TESTed voor elke programmeertaal de linter gebruiken.
 
-Voorbeeld (linters uitschakelen):
+Voorbeeld (alle linters uitschakelen):
 
 ```json
 {
   "evaluation": {
     "options": {
-      "linter": {
-        "c": false,
-        "haskell": false,
-        "java": false,
-        "javascript": false,
-        "kotlin": false,
-        "python": false
-      }
+      "linter": false
+    }
+  }
+}
+```
+
+De linters kunnen ook per programmeertaal in-/uitgeschakelt worden in de programmeertaal-specifieke opties.
+
+Voorbeeld (alleen linting voor JavaScript):
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "linter": false,
+      "language": {
+        "javascript": {
+          "linter": true
+        }
+      } 
     }
   }
 }

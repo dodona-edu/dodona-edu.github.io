@@ -27,9 +27,9 @@ Op dit moment ondersteunt **TESTed** de volgende programmeertalen:
 
 ## Documentatie
 
-* [Configuratie-opties voor TESTed](exercise-config)
 * [DSL-testplannen](dsl)
 * [JSON-testplannen](json)
+* [Configuratie-opties voor TESTed](exercise-config)
 * [Sjabloonbeschrijvingen](template-description)
 * [Sjabloonoefeningen](template-exercise)
 
@@ -38,5 +38,5 @@ Op dit moment ondersteunt **TESTed** de volgende programmeertalen:
 TESTed is zo ontworpen dat je relatief eenvoudig de ondersteuning voor 
 bijkomende programmeertalen kunt configureren. Hoe dit moet staat uitgebreid
 beschreven in [deze handleiding](configure-new-programming-language). Aarzel
-niet om ons te [contacteren](dodona@ugent.be) als je de configuratie van een
+niet om ons te [contacteren](mailto:dodona@ugent.be) als je de configuratie van een
 nieuwe programmeertaal wilt opzetten.

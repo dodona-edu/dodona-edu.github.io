@@ -253,7 +253,7 @@ klassieke notatie betere controle over het gebruik van witruimtekarakters in de
 tekst.
 
 ::: tip Tip
-Zie [Bekende valkuilen](#bekende-valkuilen) voor meer informatie over het 
+Zie [Gekende valkuilen](#gekende-valkuilen) voor meer informatie over het 
 gebruik van multiline strings in het YAML-formaat.
 :::
 
@@ -417,7 +417,7 @@ uitsluitend strings te gebruiken voor het instellen van de kanalen voor
 standaardinvoer (`stdin`), standaarduitvoer (`stdout`) en standaardfout 
 (`stderr`).
 
-Zie [Bekende valkuilen](#bekende-valkuilen) voor meer informatie over het 
+Zie [Gekende valkuilen](#gekende-valkuilen) voor meer informatie over het 
 omzetten van tekstuele types naar strings.
 :::
 

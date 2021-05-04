@@ -144,7 +144,7 @@ Dit hulpmiddel kan als volgt uitgevoerd worden:
 ```
 
 Merk op dat dit enkel bestanden genereert. De stappen in 
-[Registratie](#registratie) voor het registreren van de nieuwe programmeertaal 
+[Programmeertaal registreren](#programmeertaal-registreren) voor het registreren van de nieuwe programmeertaal 
 in TESTed zijn nog steeds nodig.
 
 We overlopen nu elk onderdeel in functie van de programmeertaal C. We gaan er 
