@@ -49,6 +49,6 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 
 ## Dodona 4.4 - 06/05/2021
 
-Dodona 4.4 maakt het mogelijk voor lesgevers om punten aan oplossingen toe te kennen tijdens het verbeteren. Aangezien we zeker willen zijn dat hier geen bugs in geslopen zijn, is deze nieuwe functie voorlopig slechts beschkbaar voor enkele geselecteerde gebruikers als test.
+Dodona 4.4 maakt het mogelijk voor lesgevers om punten aan oplossingen toe te kennen tijdens het verbeteren. Aangezien we zeker willen zijn dat hier geen bugs in geslopen zijn, is deze nieuwe functie voorlopig slechts beschikbaar voor enkele geselecteerde gebruikers als test.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.4).
