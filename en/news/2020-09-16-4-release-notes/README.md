@@ -48,3 +48,9 @@ Dodona 4.3 contains a new way to request teacher privileges. Instead of using th
 In addition, we added statistics about Dodona (number of submissions, users, exercises and school) to the [about page](https://dodona.ugent.be/en/about).
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.3).
+
+## Dodona 4.4 - 2021-05-06
+
+Dodona 4.4 enables the grading of solutions by teachers. Because we want to make sure this works as expected, this feature is only available to a select number of users as a test.
+
+All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.4).

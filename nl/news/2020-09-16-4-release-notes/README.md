@@ -46,3 +46,9 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 Dodona 4.3 bevat een nieuwe manier om lesgeversrechten aan te vragen. In plaats van het contactformulier kan je nu terecht op [een specifiek formulier](https://dodona.ugent.be/nl/rights_requests/new/) waarmee je ook direct de naam van je school kan instellen. Daarnaast hebben we op onze [about pagina](https://dodona.ugent.be/nl/about) ook enkele statistieken over het aantal Dodonagebruikers toegevoegd.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.3).
+
+## Dodona 4.4 - 06/05/2021
+
+Dodona 4.4 maakt het mogelijk voor lesgevers om punten aan oplossingen toe te kennen tijdens het verbeteren. Aangezien we zeker willen zijn dat hier geen bugs in geslopen zijn, is deze nieuwe functie voorlopig slechts beschikbaar voor enkele geselecteerde gebruikers als test.
+
+Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.4).
