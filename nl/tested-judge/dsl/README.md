@@ -1374,7 +1374,6 @@ uitgevoerd worden voor elke ingediende oplossing. Het JSON-testplan beschrijft
 ook veel explicieter de testen die zullen uitgevoerd worden, waardoor je bij 
 problemen ook makkelijker de oorzaak kunt opsporen in een JSON-testplan.
 
-
 Het Python-script kan op de volgende vier manieren uitgevoerd worden in de root
 directory van de GitHub repository:
 

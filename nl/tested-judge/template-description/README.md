@@ -1,74 +1,105 @@
 ---
-title: TESTed opgavesjablonen
-description: "TESTed opgavesjablonen"
+title: Oefeningen beschrijven met sjablonen
+description: "Oefeningen beschrijven met sjablonen"
 ---
 
-# Documentatie opgavesjablonen
-Opgavesjablonen worden gebruikt om één keer een opgave op te stellen.
-Deze opgave kan dan geïnstantieerd worden per programmeertaal die nodig is met de juiste benamingen van datatypes
-en stijlconventies.
+# Oefeningen beschrijven met sjablonen
 
-Het opgavesjabloon worden geschreven met het Mako-sjablonensysteem.
-TESTed ondersteunt twee opmaaktalen voor de opgaven: Markdown en HTML.
-De opgaven kunnen zowel in het Nederlands, als in het Engels geschreven worden.
+Als je een oefening wil aanbieden voor meerdere programmeertalen, dan moet de 
+beschrijving van de oefening idealiter ook aangepast worden aan de gangbare
+terminologie en conventies in elk van de programmeertalen. Dit zijn een aantal
+zaken die kunnen verschillen naargelang de programmeertaal:
 
-Wat moet er per programmeertaal gegenereerd worden?
-- **Functienamen**:
-  De stijlconventies voor functienamen zijn afhankelijk van de programmeertaal.
-  Bijvoorbeeld: Python gebruikt de `snake_case`-conventie, Java gebruikt de `camelCase`-conventie.
-- **Typenamen**:
-  Eén van de grotere verschillen tussen programmeertalen is de benaming voor hetzelfde datatype.
-  Voorbeeld 8-bit gehele getallen: Java gebruikt hiervoor de naam `byte`,
-  Haskell gebruikt hiervoor de naam `Data.Int.Int8`.
-- **Natuurlijke typenamen**:
-  De natuurlijke typenamen, meer specifiek deze voor collecties van gegevens, kunnen ook variëren per programmeertaal.
-  Zo spreek je voor JavaScript over arrays, terwijl Python spreekt over lijsten,
-  hoewel je het voor beide talen over dezelfde soort datastructuur hebt.
-- **Codevoorbeelden**:
-  Het grootste verschil tussen de programmeertalen is de syntaxis die gebruikt wordt om de code te schrijven.
+- **conventies voor naamgeving**: Verschillende programmeertalen hanteren andere 
+  conventies voor het benoemen van variabelen, functies of klassen. Zo is het in 
+  Python bijvoorbeeld [pythonic](https://stackoverflow.com/questions/25011078/) 
+  om *snake case* te gebruiken voor namen van variabelen en functies, waar Java 
+  de voorkeur geeft aan *camel case*.
+- **formele namen voor ingebouwde types**: Verschillende programmeertalen 
+  hebben verschillende ingebouwde gegevenstypes. Ondanks soms subtiele 
+  verschillen qua interne voorstelling van data kunnen we toch parallellen 
+  trekken tussen de gegevenstypes van verschillende programmeertalen. Zo stelt 
+  het gegevenstype `byte` in Java in essentie hetzelfde soort data voor als 
+  `Data.Int.Int8` in Haskell: 8-bit gehele getallen. 
+- **informele namen voor ingebouwde types**: Als men het informeel heeft over 
+  gegeventypes van een programmeertaal, dan is het gangbaar om informele namen
+  te gebruiken in plaats van de formele namen voor de gegevenstypes. Zo heeft 
+  men het in Python bijvoorbeeld informeel over een *dictionary* als men spreekt
+  over het ingebouwde gegevenstype `dict`. Maar net zoals de formele namen voor
+  (quasi) dezelfde gegevenstypes kunnen verschillen tussen programmeertalen, 
+  geldt hetzelfde ook voor hun informele namen. Zo spreekt men in JavaScript 
+  over *arrays* (`Array`), waar men het in Python heeft over *lijsten* (`list`).
+- **grammatica voor code**: De beschrijving van veel oefeningen bevat 
+  codevoorbeelden. Maar code die hetzelfde doet, moet in verschillende 
+  programmeertalen op een andere manier geschreven worden.
+
+Het doel van TESTed is om al die verschillen tussen programmeertalen weg te 
+werken bij het opstellen van oefeningen, ook in het beschrijven van de opgave 
+zelf. Qua formaat kan je in Dodona al kiezen om de beschrijving op te stellen in 
+Markdown (`.md`) of HTML (`.html`). Bovendien kan je ook afzonderlijke 
+beschrijvingen opstellen in het Nederlands (`.nl`) en het Engels (`.en`). TESTed 
+voegt daar nog aan toe dat je **MAKO-sjablonen** kunt gebruiken om generieke 
+beschrijvingen op te stellen die de verschillen tussen programmeertalen 
+wegwerken. 
+
+In die MAKO-sjablonen gebruik je *placeholders* op plaatsen waar de 
+beschrijving verschilt per programmeertaal. TESTed kan dan automatisch die 
+*placeholders* invullen voor elke programmeertaal die ondersteund wordt. Zo 
+krijg je een beschrijving die zich aanpast aan de gekozen programmeertaal. 
+Hierna bespreken we de verschillende soorten *placeholders* die je in 
+Mako-sjablonen kan gebruiken.
 
 ## Constanten
-We zullen eerst een overzicht zien van de constanten die gebruikt kunnen worden in de sjablonen.
-- **prompt**:
-  Deze constante bevat de console-prompt-prefix.
-  Deze zal voor HTML geëscaped worden.
-  Bijvoorbeeld: `>>>` voor Python.
-- **language en language_html**:
-  Deze constanten bevatten de naam van de programmeertaal waarvoor een instantie gegenereerd wordt. 
-  `language_html` is de HTML-veilige versie van `language`.
-- **namespace en namespace_html**:
-  Deze constanten bevatten de `namespace` van de code.
-  Deze kan meegegeven worden als parameter aan het conversieprogramma.
-  `namespace_html` is de HTML-veilige versie van `namespace`.
 
-De constanten en functieoproepen in Mako moeten tussen `${...}` genoteerd worden.
+In een MAKO-sjabloon kan je de volgende **constanten** tussen `${...}` plaatsen:
 
-### Voorbeelden
-Een eerste voorbeeld is in Markdown voor Java en Python, met namespace 'solution'.
-Een tweede voorbeeld is in HTML voor JavaScript, met namespace 'submission'.
+- `prompt`: De prompt die typisch als prefix gebruikt wordt bij een 
+  interactieve sessie. Bij Python wordt bijvoorbeeld typische de prompt `>>>`
+  gebruikt in interactieve sessies.
+- `programming_language`: De naam van de programmeertaal (bv. Kotlin). 
+- `natural_language`: De naam van de natuurlijke taal (bv. Nederlands) waarin de
+  beschrijving is opgesteld. 
+- `namespace`: De namespace voor de ingediende oplossing. In Java is dit 
+  bijvoorbeeld de naam van de klasse waarin statische methoden moeten 
+  geïmplementeerd worden, voor oefeningen waar in andere programmeertalen 
+  gevraagd wordt om functies in de (onbenoemde) global scope te implementeren.
 
-#### Markdown
+In Markdown en HTML wordt automatisch escaping toegepast op de waarde waardoor 
+deze constanten vervangen worden. 
 
-Sjabloon:
+Daarnaast is er ook nog een constante `programming_language_raw` die op dezelfde 
+manier wordt vervangen als de constante `programming_language_raw`, maar dan 
+zonder extra escaping. Dit is de aanbevolen constante om te gebruiken in 
+voorwaardelijke fragmenten van een MAKO-sjabloon die enkel in de beschrijving 
+moeten opgenomen worden voor een specifieke programmeertaal (zie verder).
+
+### Markdown voorbeeld
+
+Dit MAKO-sjabloon in Markdown met namespace `solution`
+
 ```mako
-De prompt voor **${language}** is `${prompt}`.
+De prompt voor **${programming_language}** is `${prompt}`.
 De namespace is '${namespace}'.
 ```
 
-Instantie Java:
+wordt voor Java omgezet naar
+
 ```markdown
 De prompt voor **java** is `>`.
 De namespace is 'Solution'.
 ```
 
-Instantie Python:
+en voor Python naar
+
 ```markdown
 De prompt voor **python** is `>>>`.
 De namespace is 'solution'.
 ```
 
-#### HTML
-Sjabloon:
+#### HTML voorbeeld
+
+Dit MAKO-sjabloon in HTML met namespace `submission`
+
 ```mako
 <p>
     De prompt voor <span style="font-weight: bold">${language_html}</span> is <code>${prompt}</code>.
@@ -76,7 +107,8 @@ Sjabloon:
 </p>
 ```
 
-Instantie JavaScript:
+wordt voor JavaScript omgezet naar
+
 ```html
 <p>
     De prompt voor <span style="font-weight: bold">javascript</span> is <code>&gt;</code>.
@@ -85,93 +117,102 @@ Instantie JavaScript:
 ```
 
 ## Functies
-Zoals reeds aangegeven in de sectie [Constanten](#constanten) ondersteunt Mako ook functies.
 
-We zullen terug een overzicht geven van de beschikbare functies die gebruikt kunnen worden met enkele voorbeelden.
+In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
 
-- **function_name**:
-  Deze functie dient om de correcte stijlconventie voor de functienamen te kunnen renderen per programmeertaal.
-  Deze functie verwacht een string als argument.
+- **function**: Aan deze MAKO-functie moet de naam van een functie 
+  (`string`) doorgegeven worden. De MAKO-functie geeft de naam van de functie 
+  terug, opgemaakt volgens de conventie voor functienamen zoals die gangbaar is
+  in de programmeertaal (bijvoorbeeld *snake case* of *camel case*).
   ::: tip Tip
-  Wanneer een functienaam in het sjabloon opgegeven wordt, gebruikt men best de `snake_case`-stijlconventie.
-  Dit zorgt ervoor dat de functienamen per taal correct gegenereerd kunnen worden.
+  De omzetting naar de conventie van een programmeertaal is het meest accuraat 
+  als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
-- **type_name**:
-  Deze functie dient gebruikt te worden om de datatypes van TESTed te vertalen in de datatypes die gebruikt worden in de
-  programmeertalen.
-  Deze functie verwacht ofwel een string ofwel een paar als typeargument.
-  Het eerste argument van het paar is een collectiedatatype string,
-  het tweede ofwel één typeargument ofwel een lijst met typeargumenten.
-- **natural_type_name**:
-  Deze functie zoekt de natuurlijke naam voor een collectiedatatype en/of het string-datatype van TESTed voor een
-  gegeven programmeertaal.
-  Deze functie verwacht een string als argument.
+- **variable**: Aan deze MAKO-functie moet de naam van een variabele 
+  (`string`) doorgegeven worden. De MAKO-functie geeft de naam van de variabele 
+  terug, opgemaakt volgens de conventie voor functienamen zoals die gangbaar is
+  in de programmeertaal (bijvoorbeeld *snake case* of *camel case*).
+  ::: tip Tip
+  De omzetting naar de conventie van een programmeertaal is het meest accuraat 
+  als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
+  :::
+- **datatype**: Aan deze MAKO-functie moet een TESTed-gegevenstype (TODO: link) 
+  (`string`) doorgegeven worden. Als het TEST-gegevenstype een collectietype is,
+  dan moet als tweede argument ook nog het gegevenstype van de elementen 
+  (`string`) of een lijst (`list`) met de gegevenstypes van de elementen 
+  (`string`) van de collectie doorgegeven worden. De MAKO-functie geeft de 
+  formele naam van het gegevenstype terug zoals die ingebouwd is in de 
+  programmeertaal.
+- **datatype_common**: Aan deze MAKO-functie moet een TESTed-gegevenstype (TODO: link) 
+  (`string`) doorgegeven worden. De MAKO-functie geeft de informele naam van het 
+  gegevenstype terug zoals die in geschreven taal voor de programmeertaal 
+  gebruikt wordt. Standaard wordt die naam in het enkelvoud teruggegeven. De 
+  MAKO-functie heeft een tweede optionele parameter `plural` waaraan een 
+  Booleaanse waarde (`bool`) kan doorgegeven worden, die aangeeft of de naam in 
+  het enkelvoud (`False`) of in het meervoud (`True`) moet teruggegeven worden.
 
 ### Voorbeeld
-We zullen een voorbeeld bekijken van een Markdown-opgave voor Python en JavaScript.
 
-Sjabloon:
+Dit MAKO-sjabloon in Markdown
+
 ```mako
-The function ${function_name("characterize_string")} takes one
-${type_name("text")} as argument and returns the ${natural_type_name("sequence")}
-of characters of type ${type_name(("sequence", "char"))}.
+Aan de functie ${function("splits_in_woorden")} moet een ${datatype_common("text")} 
+(${datatype("text")}) doorgegeven worden. De functie geeft een ${datatype_common("sequence")} 
+van {datatype_common("character", plural=True)} (${datatype(("sequence", "char"))}) terug.
 ```
 
-Instantie JavaScript:
+wordt voor JavaScript omgezet naar
+
 ```markdown
-The function `characterizeString` takes one
-`string` as argument and returns the array
-of characters of type `array<string>`.
+Aan de functie `splitsInWoorden` moet een string 
+(`string`) doorgegeven worden. De functie geeft een array
+van karakters (`array<string>`) terug.
 ```
 
-Instantie Python:
+en voor Python naar
+
 ```markdown
-The function `characterize_string` takes one
-`str` as argument and returns the list
-of characters of type `List[str]`.
+Aan de functie `splits_in_woorden` moet een string 
+(`str`) doorgegeven worden. De functie geeft een lijst
+van karakters (`List[str]`) terug.
 ```
 
-## Codevoorbeelden
-De sjablonen hebben de mogelijkheid om de codevoorbeelden in een _DOCTEST_-stijl te noteren.
+## Codefragmenten
 
-### Codefragmenten
-De codefragmenten worden genoteerd met behulp van de mini-programmeertaal van TESTed
-(zie [Statements, expressies en return-raw](../dsl/#statements-expressies-en-return-raw)),
-op een Python doctest-achtige manier.
-De invoerstatements en -expressies moeten worden voorafgegaan door het groter dan teken (`>`), de returnwaarden niet.
+In een MAKO-sjabloon kan je generieke codefragmenten opnemen. Ze worden 
+genoteerd in _DOCTEST_-stijl en gebruiken de  
+[programmeertaal-onafhankelijke grammatica](../dsl/#statements-expressies-en-return-raw))
+van TESTed. Vanuit die generieke notatie worden ze omgezet naar codefragmenten 
+die de grammatica en stijlconventies van een specifieke programmeertaal 
+respecteren.
 
-Om meerdere regels te kunnen gebruiken wordt er gekeken naar het balanceren van de haakjes.
-Daarnaast kun je ook expliciet aanduiden dat een statement/expressie verder loopt op de volgende regel,
-wanneer het laatste symbool op de regel een backslash (`\`) is.
+In _DOCTEST_-stijl beginnen de statements en expressies van een codefragment 
+met een groter-dan-teken (`>`) en een spatie. De evaluatie van een expressie
+wordt onmiddellijk na de expressie weergegeven, op een regel die niet begint 
+met een groter-dan-teken (`>`) en een spatie. Op die manier krijgt het 
+codefragment het uitzicht van een read–eval–print loop (REPL) of een 
+interactieve shell van een programmeertaal.
+
+Als de haakjes op een regel die start met een groter-dan-teken (`>`) en een 
+spatie niet gebalanceerd zijn, dan wordt verondersteld dat het statement of de
+expressie verder loopt op de volgende regels. Een andere manier om aan te duiden
+dat een statement of een expressie verder loopt op de volgende regel, is door
+een backslash (`\`) op het einde van de regel te plaatsen.
 
 :::warning Belangrijk
-De codefragmenten worden verwerkt in de voorbereidende stap voor het renderen van de template.
-Bij deze verwerking worden de statements en expressies vertaald naar de bijhorende functieoproepen.
-Bijgevolg kunnen er geen Mako-directieven gebruikt worden in deze codefragmenten.
+Bij het omzetten van een MAKO-sjabloon naar de beschrijving voor een specifieke
+programmeertaal, worden de generieke codefragmenten afzonderlijk verwerkt, los 
+van de MAKO-engine. Daardoor worden MAKO-directieven (constanten en functies 
+tussen `${...}`) in codefragmenten niet verwerkt door MAKO.
 :::
 
-#### Voorbeeld
-```javascript
-> heir(8, 10)
-[10, 4, 15, 11, 7, 5, 3,
- 2, 16, 12, 1, 6, 13, 9, 14, 8]
-```
+### Markdown voorbeeld
 
-### Hoofding
-De codefragmenten die geanalyseerd moeten worden in Markdown starten met de hoofding ` ```tested` zonder witruimte voor.
-Deze sluit af met ` ``` ` zonder witruimte voor.
-De enige beperking in de Markdown-codefragmenten is dat de regels niet mogen starten met ` ``` `.
+In Markdown moeten generieke codefragmenten voor TESTed voorafgegaan worden door
+een regel met ` ```tested` zonder voorafgaande witruimte. Het codefragment 
+eindigt bij de eerstvolgende regel met ` ``` ` zonder voorafgaande witruimte. Zo
+wordt dit codefragment in een MAKO-sjabloon in Markdown
 
-De codefragmenten die geanalyseerd moeten worden in HTML bevinden zich in de tag `code` en
-moeten lid zijn van de klasse `tested`.
-De enige beperking in de codefragmenten is dat deze geen inwendige `code` tags mogen bevatten, ook niet in de strings.
-
-### Voorbeelden
-Een eerste voorbeeld is in Markdown met een Kotlin-instantie.
-Een tweede voorbeeld is in HTML met een Haskell-instantie.
-
-#### Markdown
-Sjabloon:
 ````mako
 ```tested
 > heir(8, 10)
@@ -180,7 +221,8 @@ Sjabloon:
 ```
 ````
 
-Instantie Kotlin:
+bijvoorbeeld voor Kotlin omgezet naar
+
 ````markdown
 ```console?lang=kotlin&prompt=>
 > heir(8, 10)
@@ -188,8 +230,12 @@ listOf(10, 4, 15, 11, 7, 5, 3, 2, 16, 12, 1, 6, 13, 9, 14, 8)
 ```
 ````
 
-#### HTML
-Sjabloon:
+### HTML voorbeeld
+
+In HTML moeten generieke codefragmenten voor TESTed ingesloten worden in een 
+`<code>`-tag van de klasse `tested`. Het codefragment mag zelf geen 
+`<code>`-tags bevatten. Zo wordt dit codefragment in een MAKO-sjabloon in HTML
+
 ```mako
 <div class="highlighter-rouge language-${language}">
 <pre class="highlight"><code class="color tested code" id="code">\
@@ -200,7 +246,8 @@ Sjabloon:
 </div>
 ```
 
-Instantie Haskell:
+bijvoorbeeld voor Haskell omgezet naar
+
 ```html
 <div class="highlighter-rouge language-haskell">
 <pre class="highlight"><code class="color tested code" id="code">&gt; <span class="nf">encode</span> <span class="p">(</span><span class="s">&quot;And now for something completely different.&quot;</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span> <span class="ow">::</span> <span class="kt">Int</span><span class="p">)</span>
@@ -208,56 +255,69 @@ Instantie Haskell:
 </div>
 ```
 
-## Taalspecifieke informatie
-De Mako-sjablonen hebben ook conditionele constructies,
-hierdoor kun je informatie toevoegen alleen voor een specifieke programmeertaal.
+## Programmeertaal-specifieke fragmenten
+
+De mogelijkheid om voorwaardelijke statements te gebruiken in MAKO-sjablonen, 
+kan je gebruiken om tekstfragmenten op te nemen die slechts bij één of een 
+selectie van programmeertalen zullen opgenomen worden. Zowel in de voorwaarden 
+als in de tekstfragmenten zelf kan je MAKO-directieven (constanten en functies)
+gebruiken. In een voorwaardelijke statement gebruik je ze als Python-variabelen
+en -functies, en in een tekstfragment moet je ze insluiten tussen `${...}`.
 
 ### Voorbeeld
-We zullen een voorbeeld zien in Markdown voor Java en C, maar een gelijkaardige structuur kan worden gebruikt in HTML.
 
-Sjabloon:
+Dit MAKO-sjabloon in Markdown
+
 ```mako
-Gemeenschappelijke tekst
+Deze tekst wordt in de beschrijving van alle programmeertalen opgenomen.
 
-% if language == 'java':
-De functies moeten statisch gedefinieerd worden in de klasse ${namespace}.
+% if programming_language == 'java':
+Deze tekst wordt enkel in de beschrijving van ${programming_language} opgenomen.
 % endif
 ```
 
-Instantie Java:
-```markdown
-Gemeenschappelijke tekst
+wordt voor Java omgezet naar
 
-De functies moeten statisch gedefinieerd worden in de klasse Solution.
+```markdown
+Deze tekst wordt in de beschrijving van alle programmeertalen opgenomen.
+
+Deze tekst wordt enkel in de beschrijving van java opgenomen.
 ```
 
-Instantie C:
+en voor C naar
+
 ```markdown
-Gemeenschappelijke tekst
+Deze tekst wordt in de beschrijving van alle programmeertalen opgenomen.
+
 ```
 
-## Eigen variabelen
-Voor vaak gebruikte benamingen kun je zelf variabelen definiëren in Mako,
-om niet telkens de functies te moeten oproepen.
+## Zelf-gedefinieerde variabelen
+
+In Mako-sjablonen kan je zelf ook variabelen definiëren. Je kan dit bijvoorbeeld
+gebruiken om een MAKO-functie slechts één keer aan te roepen en het resultaat 
+toe te kennen aan een variabele.
 
 ### Voorbeeld
-We zullen een voorbeeld in Markdown bekijken zonder instanties.
+
 ```mako
-<% lijst = natural_type_name("list") %>\
+<% lijst = datatype_common("list") %>\
+
 Schrijf een functie ${function_name("heir")}, waaraan de waarden $k$ en $n$,
-van het type ${type_name("integer")}, moeten doorgegeven worden,
-waarbij je er mag van uitgaan dat $k >= 2$
-De functie moet een ${lijst}, van het type ${type_name(("list", "integer"))}
-teruggeven die de volgorde aangeeft waarin de kinderen uit de cirkel
-verwijderd werden.
-Het eerst verwijderde kind staat daarbij als eerste in de ${lijst},
-en de uiteindelijke erfgenaam als laatste in de ${lijst}.
-Gebruik de volgnummers waarmee de kinderen in de ${lijst} genummerd
-werden als elementen in de ${lijst}.
+van het type ${type_name("integer")}, moeten doorgegeven worden, waarbij je er 
+mag van uitgaan dat $k >= 2$. De functie moet een ${lijst} van het type 
+${type_name(("list", "integer"))} teruggeven die de volgorde aangeeft waarin de 
+kinderen uit de cirkel verwijderd werden.
+
+Het eerst verwijderde kind staat daarbij als eerste in de ${lijst}, en de 
+uiteindelijke erfgenaam als laatste in de ${lijst}. Gebruik de volgnummers 
+waarmee de kinderen in de ${lijst} genummerd werden als elementen in de 
+${lijst}.
 ```
 
-## Volledige opgave in HTML
-Hieronder volgt een volledige opgavesjabloon in HTML.
+## Volledige opgave
+
+Dit is het MAKO-sjabloon in HTML voor de oefening Spoorhekcodering (TODO: link).
+
 ```mako
 <p>
     In the <span style="font-style: italic;">rail fence cipher</span> (also called
@@ -357,14 +417,16 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
 </div>
 ```
 
-## Instantiëren van een sjabloon
-Om de sjablonen te instantiëren voor een programmeertaal, kan er gebruikgemaakt worden van een Python-script, 
-dat deel uitmaakt van TESTed.
-Dit script kan terug gevonden op [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed.
-Het script kan uitgevoerd worden met één van de volgende commando's (en combinaties) in de root directory van de
-GitHub repository:
+## MAKO-sjablonen omzetten
+
+De [GitHub repository](https://github.com/dodona-edu/universal-judge) van TESTed
+bevat een Python-script waarmee je een MAKO-sjablonen met een generieke 
+beschrijving kunt omzetten naar de beschrijving voor een specifieke 
+programmeertaal. Het Python-script kan op de volgende vier manieren uitgevoerd 
+worden in de root directory van de GitHub repository:
+
 ```bash
-# Standaard instantiëring engelstalige HTML voor python met namespace 'submission'
+# Standaard instantiëring Engelstalige HTML voor python met namespace 'submission'
 $ python3 -m tested.description_instance < template.html.mako > description.html
 # Korte opties
 $ python3 -m tested.description_instance -d template.html.mako -o description.html
@@ -374,11 +436,12 @@ $ python3 -m tested.description_instance --description template.html.mako --outp
 $ python3 -m tested.description_instance template.html.mako description.html
 ```
 
-De extra opties zijn:
-| **Kort** | **Lang** | **Beschrijving** |
-| -------- | -------- | -----------------|
-| `-l` | `--language` | Programmeertaal, standaard 'python' |
-| `-i` | `--i18n` | Natuurlijke taal, standaard 'en' |
-| `-n` | `--namespace` | Namespace van de oefening, standaard 'submission' |
-| `-M` | `--markdown` | Markdown sjabloon |
-| `-H` | `--html` | HTML Sjabloon, standaard |
+Dit zijn de overige opties die het Python-script ondersteunt:
+
+| **Kort** | **Lang**      | **Beschrijving**          | **Standaardwaarde** |
+| -------- | ------------- | ------------------------- | ------------------- |
+| `-l`     | `--language`  | Programmeertaal           | `python`            |
+| `-i`     | `--i18n`      | Natuurlijke taal          | `en`                |
+| `-n`     | `--namespace` | Namespace van de oefening | `submission`        |
+| `-M`     | `--markdown`  | Markdown sjabloon         | -                   |
+| `-H`     | `--html`      | HTML Sjabloon (standaard) | -                   |
