@@ -72,6 +72,9 @@ volgende dependencies:
   ook `aeson` nodig. Beide commando's moeten globaal beschikbaar zijn in het 
   `PATH`.
 
+- **Bash**: Vereist bash 5.0.3 of later, maar heeft verder geen dependencies.
+  Het commando `bash`moet beschikbaar zijn in het `PATH`.
+
 Merk op dat de dependencies voor de programmeertalen optioneel zijn. Om 
 bijvoorbeeld enkel Python-oplossingen te beoordelen, heb je de dependencies voor
 de andere programmeertalen niet nodig.
@@ -297,7 +300,8 @@ vastleggen van de taalconstructies:
   "heterogeneous_arguments": false,
   "evaluation": false,
   "named_arguments": false,
-  "default_parameters": false
+  "default_parameters": false,
+  "global_variables": false
 },
 ```
 
@@ -340,11 +344,13 @@ en een korte beschrijving:
 - `default_parameters`: Geeft aan of de programmeertaal standaardwaarden voor 
   parameters ondersteunt, wat betekent dat ze kunnen weggelaten worden bij het 
   aanroepen van de functie.
+- `global_variables`: Geeft aan of de programmeertaal ondersteuning biedt voor
+  globale variabelen.
 
 Dan moeten we nu de ondersteuning voor de gegevenstypes vastleggen:
 
 ```json
-"gegevenstypes": {
+"datatypes": {
   "integer": "supported",
   "rational": "supported",
   "char": "supported",
@@ -519,11 +525,21 @@ men in Python spreekt over een *lijst*.
 
 ```json
 "natural": {
-  "en": {
-    "text": "string"
+  "singular": {
+    "en": {
+      "text": "string"
+    },
+    "nl": {
+      "text": "string"
+    }
   },
-  "nl": {
-    "text": "string"
+  "plural": {
+    "en": {
+      "text": "strings"
+    },
+    "nl": {
+      "text": "strings"
+    }
   }
 }
 ```
@@ -551,7 +567,7 @@ worden de abstracte methodes voorzien van uitgebreide documentatie.
 Een eerste en belangrijke methode is de callback voor de compilatiestap:
 
 ```python
-def compilation(self, config: Config, files: List[str]) -> CallbackResult:
+def compilation(self, bundle: Bundle, files: List[str]) -> CallbackResult:
     main_file = files[-1]
     exec_file = Path(main_file).stem
     result = executable_name(exec_file)
