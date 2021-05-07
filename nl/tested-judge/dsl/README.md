@@ -737,6 +737,13 @@ Namen van variabelen, functies, methoden en klassen kunnen bestaan uit kleine
 letters, hoofdletters, cijfers en underscores (`_`). Het eerste karakter van een
 naam mag geen cijfer zijn. Enkel letters zonder accenten zijn toegelaten.
 
+:::tip Tip
+De conventie voor de naamgeving voor de namen van variabelen, functies, methoden
+en klassen in de testplannen van TESTed is *snake case*.
+Het gebruik van *snake case* in de testplannen zorgt ervoor dat de conventie wat
+betreft de naamgeving per programmeertaal gevolgd kan worden.
+:::
+
 De volgende **sleutelwoorden** hebben een speciale betekenis in de grammatica en 
 kunnen niet als naam gebruikt worden: `false`, `new`, `no`, `null`, `true`, 
 `undefined` en `yes`.
@@ -932,11 +939,14 @@ Een globale functie wordt zonder namespace opgeroepen. Een functie uit een
 specifieke namespace (bijvoorbeeld een methode die aan de namespace van een 
 object gekoppeld is) wordt opgeroepen via de **dot-notatie** (`.`). Daarbij 
 wordt de functieoproep voorafgegaan door de namespace en een punt (`.`).
+Een specifieke namespace van een functie is een algemene expressie.
+Dus niet enkel variabelen, maar bijvoorbeeld ook andere functies.
 
 ```javascript
 add(5, 2)
 object.get_name()
 get_element(4, ["first", 2, 3.4])
+get_object().to_string()
 ```
 
 Bij functieoproepen ondersteunt TESTed voorlopig enkel argumenten die 
@@ -953,10 +963,19 @@ new Counter()
 new object.Pair("Paar", 8.4e-5)
 ```
 
+### Globale variabelen
+
+Een **globale variabele** is een eigenschap van de globale namespace.
+Een **globale variabele** wordt genoteerd als een naam genoteerd tussen scheve haken.
+
+```
+<my_global_variable>
+```
+
 ### Expressies
 
 Een **expressie** is een letterlijke waarde, een variabele (of eigenschap), een
-functieoproep of een constructor.
+functieoproep, een constructor of een globale variabele.
 
 ### Toekenningen
 
