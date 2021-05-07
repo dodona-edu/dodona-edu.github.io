@@ -7,7 +7,7 @@ sidebarDepth: 2
 # TESTed configureren
 
 Als judge die oplossingen voor programmeeroefeningen automatisch beoordeelt, 
-heeft TESTed een verplicht veld `evaluation.plan_name` in het 
+heeft TESTed een verplicht veld `evaluation.testplan` in het 
 configuratiebestand van de oefening (`config.json`). Dit veld moet aangeven
 wat de bestandsnaam is van het testplan in de map `evaluation` van de oefening.
 
@@ -76,11 +76,8 @@ verschillende opties. Hun specificatie wordt vastgelegd in onderstaand
         },
         "linter": {
           "title": "Linter",
-          "default": {},
-          "type": "object",
-          "additionalProperties": {
-            "type": "boolean"
-          }
+          "default": true,
+          "type": "boolean"
         },
         "optimized": {
           "title": "Optimized",
@@ -213,7 +210,7 @@ Voorbeeld (alle linters uitschakelen):
 }
 ```
 
-De linters kunnen ook per programmeertaal in-/uitgeschakelt worden in de programmeertaal-specifieke opties.
+De linters kunnen ook per programmeertaal in-/uitgeschakeld worden in de programmeertaal-specifieke opties.
 
 Voorbeeld (alleen linting voor JavaScript):
 
