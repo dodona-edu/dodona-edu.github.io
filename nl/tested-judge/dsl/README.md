@@ -1205,9 +1205,14 @@ omgezet naar het volgende sleutel/waarde-paar in JSON:
 
 #### Bloknotaties
 
-Voor multiline strings ondersteunt YAML verschillende **bloknotaties**. Daarbij 
-wordt geen escaping gebruikt, worden newlines bewaard en worden bijkomende
-insprongen bovenop de eerste insprong ook bewaard.
+Voor multiline strings ondersteunt YAML verschillende **bloknotaties**.
+Daarbij wordt geen escaping gebruikt, worden newlines bewaard en worden
+bijkomende insprongen bovenop de eerste insprong ook bewaard.
+
+Het gebruik van commentaar in de bloknotaties wijkt af van de algemene
+regel voor het gebruik van commentaar. Wanneer een regel die met een `#`
+start de diepte van de insprong van het blok respecteert of een diepere
+insprong gebruikt, dan zal deze regel niet als commentaar gezien worden.
 
 ##### Standaard (`|`)
 
