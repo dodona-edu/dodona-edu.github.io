@@ -1376,13 +1376,13 @@ stdin: 077
 stdin: "63"
 ```
 
-### Functienamen
+### Naamgeving
 
-In de DSL wordt *snake case* gebruikt als conventie voor functienamen. TESTed 
-zal deze functienamen omzetten volgens de gangbare conventie voor de 
-programmeertaal van een ingediende oplossing. Een correcte omzetting is echter 
-niet gegarandeerd als je voor functienamen in de DSL afwijkt van de *snake case* 
-conventie.
+In de DSL wordt *snake case* gebruikt als conventie voor alle namen voor
+variabelen, functies, methoden en klassen. TESTed zal deze functienamen
+omzetten volgens de gangbare conventie voor de programmeertaal van een
+ingediende oplossing. Een correcte omzetting is echter niet gegarandeerd
+als je voor deze namen in de DSL afwijkt van de *snake case* conventie.
 
 ## DSL-testplan omzetten naar JSON
 
