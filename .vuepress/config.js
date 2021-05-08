@@ -4,14 +4,20 @@ const path = require("path");
 
 const Prism = require("prismjs");
 Prism.languages['tested'] = Prism.languages.extend("javascript", {
-  operator: /--|::|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*\/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/,
   'class-name': [
     ...Prism.languages.javascript['class-name'],
     {
-      pattern: /<\w+>/,
+      pattern: /<\w+>/
+    }
+  ],
+  keyword: [
+    ...Prism.languages.javascript.keyword,
+    {
+      pattern: /(integer|rational|char|text|boolean|sequence|set|map|nothing|undefined|null|new|any|int[0-9]+|uint[0-9]+|bigint|single|double|extended|fixed|array|list)\b/,
       lookbehind: true
     }
   ],
+  operator: /--|[!:]::|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*\/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/
 });
 
 module.exports = {

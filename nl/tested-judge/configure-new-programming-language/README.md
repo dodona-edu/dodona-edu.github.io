@@ -29,7 +29,7 @@ een Python-package dat op de normale manier kan uitgevoerd worden.
 Na het klonen van de repository van TESTed beschikken we over volgende 
 mappenstructuur:
 
-```text
+```
 universal-judge
 ├── docker/ # Een Docker-image om TESTed uit te voeren.
 ├── exercise/ # De map met oefeningen die dienen als voorbeeld en voor de tests.
@@ -195,7 +195,7 @@ plaats binnen TESTed aanwezig zijn.
 Voor de programmeertaal C maken we een nieuwe map `tested/languages/c`. Na het 
 aanmaken van de map moet de mappenstructuur er zo uitzien:
 
-```text
+```
 universal-judge/
 ├─ tested/
 │ ├─ languages/

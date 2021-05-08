@@ -69,7 +69,7 @@ bestand `config.template.json`, zodat Dodona het sjabloon zelf niet als een
 oefening zal beschouwen. De map-structuur voor het sjabloon ziet er minimaal als 
 volgt uit:
 
-```text
+```
 +-- sjabloon/oefening/map
 |   +-- config.template.json       # configuratiebestand voor oefening
 |   +-- evaluation                 #

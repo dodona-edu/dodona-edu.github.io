@@ -25,7 +25,7 @@ structuur van de DSL volgt in grote mate de opbouw waarmee feedback wordt
 weergegeven in Dodona. In onderstaande voorstelling van een DSL-testplan 
 gebruiken we vierkante haakjes om lijsten van objecten voor te stellen.
 
-```text
+```
 . # testplan met top-level sectie
 ├ namespace
 ├ config
