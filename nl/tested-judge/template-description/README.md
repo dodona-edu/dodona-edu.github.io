@@ -80,6 +80,7 @@ moeten opgenomen worden voor een specifieke programmeertaal (zie verder).
 Dit MAKO-sjabloon in Markdown met namespace `solution`
 
 ```mako
+## Data
 De prompt voor **${programming_language}** is `${prompt}`.
 De namespace is '${namespace}'.
 ```
