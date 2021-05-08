@@ -792,7 +792,7 @@ teruggevallen op het basistype.
 
 Een lege verzameling kan je enkel noteren via expliciete typering. 
 
-```haskell
+```tested
 [] :: set
 () :: set
 {} :: set
@@ -857,7 +857,7 @@ volgorde in de reeks. De objecten van een sequentie worden van elkaar gescheiden
 door komma's en ingesloten tussen vierkante haakjes. Een lege sequentie wordt 
 genoteerd als een paar vierkante haakjes (`[]`).
 
-```javascript
+```tested
 [5, 7, 8]
 [5, 7.5, true, "text", null]
 [random()]
@@ -874,7 +874,7 @@ Een **tuple** is een onveranderlijke sequentie. De objecten van een tuple worden
 van elkaar gescheiden door komma's en ingesloten tussen ronde haakjes. Een 
 leeg tuple wordt genoteerd als een paar ronde haakjes (`()`).
 
-```javascript
+```tested
 (5, 7, 8)
 (5, 7.5, [true, "text"], null)
 (random())
@@ -890,7 +890,7 @@ ingesloten tussen accolades. Lege verzamelingen kunnen enkel beschreven worden
 via expliciete typering, omdat ook de notatie van dictionaries gebruikmaakt van
 accolades en `{}` een lege dictionary voorstelt.
 
-```javascript
+```tested
 {5, 7, 8}
 {5, 7.5, (true, "text")}
 {random()}
@@ -915,7 +915,7 @@ van elkaar gescheiden door een dubbelpunt (`.`). Een lege dictionary wordt
 genoteerd als een paar accolades (`{}`).
 
 
-```javascript
+```tested
 {}
 {"first": 5}
 {"size": 5, "precision": 0.75, "rounding active": true}
@@ -942,7 +942,7 @@ wordt de functieoproep voorafgegaan door de namespace en een punt (`.`).
 Een specifieke namespace van een functie is een algemene expressie.
 Dus niet enkel variabelen, maar bijvoorbeeld ook andere functies.
 
-```javascript
+```tested
 add(5, 2)
 object.get_name()
 get_element(4, ["first", 2, 3.4])
@@ -958,7 +958,7 @@ voorlopig niet ondersteund.
 Een **constructor** is een functieoproep die voorafgegaan wordt door het 
 sleutelwoord `new`.
 
-```javascript
+```tested
 new Counter()
 new object.Pair("Paar", 8.4e-5)
 ```
@@ -968,7 +968,7 @@ new object.Pair("Paar", 8.4e-5)
 Een **globale variabele** is een eigenschap van de globale namespace.
 Een **globale variabele** wordt genoteerd als een naam genoteerd tussen scheve haken.
 
-```
+```tested
 <my_global_variable>
 ```
 
@@ -990,7 +990,7 @@ constructor in het rechterlid. Dit is niet het geval als het rechterlid bestaat
 uit een functieoproep. In dat geval moet de toekenning voorafgegaan worden door
 het gegevenstype van de variabele.
 
-```javascript
+```tested
 Counter counter = new Counter()
 pair = new object.Pair("Paar", 8.4e-5)
 text value = get_value(0, pair)

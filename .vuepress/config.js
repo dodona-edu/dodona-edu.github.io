@@ -2,6 +2,18 @@ const { description } = require('../package')
 const fs = require("fs");
 const path = require("path");
 
+const Prism = require("prismjs");
+Prism.languages['tested'] = Prism.languages.extend("javascript", {
+  operator: /--|::|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*\/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/,
+  'class-name': [
+    ...Prism.languages.javascript['class-name'],
+    {
+      pattern: /<\w+>/,
+      lookbehind: true
+    }
+  ],
+});
+
 module.exports = {
   title: 'Dodona Docs',
   description: description,
