@@ -181,7 +181,7 @@ Dit MAKO-sjabloon in Markdown
 ```mako
 Aan de functie ${function("splits_in_woorden")} moet een ${datatype_common("text")} 
 (${datatype("text")}) doorgegeven worden. De functie geeft een ${datatype_common("sequence")} 
-van {datatype_common("char", plural=True)} (${datatype(("sequence", "char"))}) terug.
+van ${datatype_common("char", plural=True)} (${datatype(("sequence", "char"))}) terug.
 ```
 
 wordt voor JavaScript omgezet naar

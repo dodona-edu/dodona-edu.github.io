@@ -1,36 +1,8 @@
 const { description } = require('../package')
 const fs = require("fs");
 const path = require("path");
-
-const Prism = require("prismjs");
-Prism.languages['tested'] = Prism.languages.extend("javascript", {
-  operator: /--|::|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*\/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/,
-  'class-name': [
-    ...Prism.languages.javascript['class-name'],
-    {
-      pattern: /<\w+>/
-    }
-  ],
-  keyword: [
-    ...Prism.languages.javascript.keyword,
-    {
-      pattern: /(^|[^.]|\.\.\.\s*)\b(integer|rational|char|text|boolean|sequence|set|map|nothing|undefined|null|new|any|int[0-9]+|uint[0-9]+|bigint|single|double|extended|fixed|array|list)\b/,
-      lookbehind: true
-    }
-  ],
-});
-Prism.languages['text'] = {};
-
-const loadLanguages = require('prismjs/components/');
-loadLanguages(['markdown']);
-Prism.languages['mako'] = Prism.languages.extend("markdown", {
-  'comment': [
-    Prism.languages['markdown'].comment,
-    { pattern: /##.+/ }
-  ],
-});
-
-
+const { loadLanguages } = require("./extendPrism")
+loadLanguages();
 
 module.exports = {
   title: 'Dodona Docs',

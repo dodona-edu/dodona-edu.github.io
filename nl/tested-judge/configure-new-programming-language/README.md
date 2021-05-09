@@ -787,7 +787,7 @@ uit de module
 We importeren ook alle programmeertaalspecifieke evaluatoren die we nodig zullen 
 hebben. De variabele `evaluator_names` bevat een verzameling van deze namen.
 
-```c
+```mako
 #include <stdio.h>
 
 #include "values.h"
@@ -843,7 +843,7 @@ omdat het in C niet mogelijk is om in meerdere bestanden functies met dezelfde
 naam te hebben. Als we dus meerdere runs samen compileren en elke run heeft zijn 
 eigen `write_separator`-functies, dan zou het compileren mislukken.
 
-```c
+```mako
 static FILE* ${execution_name}_value_file = NULL;
 static FILE* ${execution_name}_exception_file = NULL;
 
@@ -884,7 +884,7 @@ implementeren en zullen we ook geen oproep naar deze functies genereren. In C
 gebruiken we ook een macro in plaats van een functie: dit opnieuw omdat we niet 
 dezelfde functie in meerdere bestanden kunnen definiëren.
 
-```c
+```mako
 #undef send_value
 #define send_value(value) write_value(${execution_name}_value_file, value)
 
@@ -945,7 +945,7 @@ voor het sjabloon, maar het kan toch geen kwaad om het te weten:
 Als afsluiter zetten we de `after`-code en sluiten we de bestanden. De 
 `after`-code is analoog aan de `before`-code.
 
-```c
+```mako
 % for i, ctx in enumerate(contexts):
     void ${execution_name}_context_${i}(void) {
         ${ctx.before}
@@ -962,7 +962,7 @@ Nu zijn we aangekomen bij het uitvoeren van de run zelf. In C gebeurt dit in een
 functie die de naam van de run (`execution_name`) krijgt. Als eerste stap maken 
 we de bestanden voor het return- en *exception*-kanaal aan.
 
-```c
+```mako
 int ${execution_name}() {
 
     ${execution_name}_value_file = fopen("${value_file}", "w");
@@ -992,7 +992,7 @@ door de gewone `main`-functie te hernoemen (zie
 `main`-functie bevat, maar het testplan verwachtte die wel, dan zal de 
 compilatie falen.
 
-```c
+```mako
     ${execution_name}_write_context_separator();
     % if run_testcase.exists:
         char* args[] = {\
@@ -1010,7 +1010,7 @@ compilatie falen.
 Vervolgens genereren we de code die nodig is om de verschillende contexten uit 
 te voeren.
 
-```c
+```mako
     % for i, ctx in enumerate(contexts):
         ${execution_name}_write_context_separator();
         ${execution_name}_context_${i}();
@@ -1028,7 +1028,7 @@ C laat echter slechts één `main`-functie toe. Als we in batchcompilatie zitten
 zal de selector gebruikt worden, en zal `INCLUDED` op `TRUE` staan. In dat geval 
 voegen we geen `main`-functie toe.
 
-```c
+```mako
 #ifndef INCLUDED
 int main() {
     return ${execution_name}();
@@ -1044,7 +1044,7 @@ context uit te voeren op basis van een argument. Het is in dit sjabloon dat de
 macro `INCLUDED` op `true` gezet wordt, waardoor de `main`-functies in andere 
 contexten niet gebruikt worden.
 
-```c
+```mako
 #include <string.h>
 #include <stdio.h>
 
@@ -1077,7 +1077,7 @@ int main(int argc, const char* argv[]) {
 Dit sjabloon wordt door TESTed gebruikt om statements te vertalen naar code. Dit 
 omvat onder andere assignments, functieoproepen en waarden:
 
-```c
+```mako
 ## Convert a statement and/or expression into Java code.
 <%! from tested.utils import get_args %>\
 <%! from tested.serialisation import Value, Identifier, FunctionCall, Assignment %>\
@@ -1108,7 +1108,7 @@ Een aspect dat wat meer uitleg vraagt, is de `full`-parameter die aangeeft of
 het gegevenstype nodig is bij de declaratie van een variabele. Het verschil 
 wordt duidelijk met een voorbeeld:
 
-```c
+```mako
 int variabele = 5;  // met declaratie
 variabele = 6;      // zonder declaratie
 ```
