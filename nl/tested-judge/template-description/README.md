@@ -70,7 +70,7 @@ In Markdown en HTML wordt automatisch escaping toegepast op de waarde waardoor
 deze constanten vervangen worden. 
 
 Daarnaast is er ook nog een constante `programming_language_raw` die op dezelfde 
-manier wordt vervangen als de constante `programming_language_raw`, maar dan 
+manier wordt vervangen als de constante `programming_language`, maar dan 
 zonder extra escaping. Dit is de aanbevolen constante om te gebruiken in 
 voorwaardelijke fragmenten van een MAKO-sjabloon die enkel in de beschrijving 
 moeten opgenomen worden voor een specifieke programmeertaal (zie verder).
