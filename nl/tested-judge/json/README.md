@@ -9,7 +9,8 @@ De JSON-testplannen zijn enkel geschikt voor geavanceerde gebruikers van TESTed.
 Het is aangeraden om de [DSL-tesplannen](../dsl) te gebruiken wanneer dit mogelijk is.
 :::
 
-# TESTed JSON-testplannen
+# JSON-testplannen
+
 Het JSON-testplan bevat alle mogelijke configuratieopties en evaluatiemogelijkheden die door TESTed ondersteund worden.
 Het volledige JSON Schema voor de testplannen kan <a href="/tested-json-testplan-schema.json" target="_blank">hier</a>
 worden bekeken.
@@ -994,7 +995,7 @@ evaluator.
 Het *GenericTextEvaluator*-object heeft 3 attributen: `type`, `options` en `name`.
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator,
-  zie [DSL Configuratie opties voor standaarduitvoer en standaarderror](../dsl/#configuratieopties).
+  zie [DSL Configuratie opties voor standaarduitvoer en standaarderror](../dsl/#namespaces-en-configuratieopties).
 - **name**: Het type van de tekstbron die geëvalueerd moet worden.
   Ofwel `text`, ofwel `file`.
 
