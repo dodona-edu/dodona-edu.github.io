@@ -813,7 +813,10 @@ en `false` (waarheidswaarde vals).
 
 ### Null-waarden
 
-Zowel `null` als `undefined` stellen null-waarden voor.
+Zowel `null` als `undefined` stellen null-waarden voor. `undefined` is een speciale
+null-waarde wanneer er een onderscheidt wordt gemaakt tussen `null` en niet
+gedifinieerd, zoals in de JavaScript programmeertaal. Wanneer `undefined` niet
+ondersteund wordt in een programmeertaal heeft deze dezelfde betekenis als `null`.
 
 ### Strings
 
@@ -969,7 +972,7 @@ Een **globale variabele** is een eigenschap van de globale namespace.
 Een **globale variabele** wordt genoteerd als een naam genoteerd tussen scheve haken.
 
 ```tested
-<my_global_variable>
+<mijn_globale_variabele>
 ```
 
 ### Expressies
