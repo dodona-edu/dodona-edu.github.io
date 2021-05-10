@@ -1,15 +1,15 @@
 ---
-title: "Oefeningssjabloon TESTed"
-description: "Tutorial: Oefeningssjabloon TESTed"
+title: "Meertalige programmeeroefeningen"
+description: "Tutorial: mMertalige programmeeroefeningen"
 ---
 ::: warning Opmerking
 Deze handleiding legt uit hoe je TESTed kunt gebruiken om programmeeroefeningen 
 op te stellen in Dodona, waarvoor oplossingen kunnen ingediend worden in 
 meerdere programmeertalen.
 
-Ga naar [???]() als je TESTed wil gebruiken om programmeeroefeningen op te 
-stellen in Dodona waarvoor enkel oplossingen moeten ingediend worden voor één
-specifieke programmeertaal.
+Ga naar [Dodona programmeeroefeningen](../#dodona-programmeeroefeningen) als je
+TESTed wil gebruiken om programmeeroefeningen op te stellen in Dodona waarvoor
+enkel oplossingen moeten ingediend worden voor één specifieke programmeertaal.
 :::
 
 # TESTed: programmeeroefeningen voor meerdere programmeertalen
@@ -100,7 +100,7 @@ configuratiebestand ziet er bijvoorbeeld als volgt uit:
   "evaluation": {
     "handler": "TESTed",
     "memory_limit": 500000000,
-    "plan_name": "testplan.yaml"
+    "testplan": "testplan.yaml"
   },
   "labels": []
 }

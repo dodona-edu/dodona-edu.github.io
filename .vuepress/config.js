@@ -226,9 +226,9 @@ function getTESTedSidebar(lang, groupTitle, FirstItem) {
       sidebarDepth: 2,
       children: [
         ['', FirstItem],
+        'exercise-config/',
         'dsl/',
         'json/',
-        'exercise-config/',
         'template-description/',
         'template-exercise/',
         'configure-new-programming-language/',
