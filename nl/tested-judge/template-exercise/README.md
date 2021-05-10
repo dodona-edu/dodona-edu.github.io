@@ -108,7 +108,7 @@ configuratiebestand ziet er bijvoorbeeld als volgt uit:
 
 Daarin zien we dat TESTed ingesteld werd als de judge (`evalaution.handler`) 
 voor het beoordelen van ingediende oplossingen. Dit zal gebeuren op basis van
-een testplan (`evaluation.plan_name`) dat beschreven wordt in het bestand
+een testplan (`evaluation.testplan`) dat beschreven wordt in het bestand
 (`testplan.yaml`). TESTed zal automatisch controleren of er voor het testplan
 een oefening kan gegenereerd worden voor een specifieke programmeertaal.
 
@@ -135,7 +135,7 @@ uitzien:
   "evaluation": {
     "handler": "TESTed",
     "memory_limit": 500000000,
-    "plan_name": "plan.yaml"
+    "plan_name": "testplan.yaml"
   },
   "labels": []
 }
