@@ -1,6 +1,6 @@
 ---
 title: "Meertalige programmeeroefeningen"
-description: "Tutorial: mMertalige programmeeroefeningen"
+description: "Tutorial: Meertalige programmeeroefeningen"
 ---
 ::: warning Opmerking
 Deze handleiding legt uit hoe je TESTed kunt gebruiken om programmeeroefeningen 
