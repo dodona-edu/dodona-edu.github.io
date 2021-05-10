@@ -182,8 +182,9 @@ Bij de [configuratie van een programmeertaal voor TESTed](../configure-new-progr
 kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)) 
 geconfigureerd worden. Dit zijn de linters die TESTed op dit moment gebruikt:
 
-| Programmeertaal | Linter                                                                    |
-| --------------- | ------------------------------------------------------------------------- |
+| Programmeertaal | Linter                                                 |
+| --------------- | -------------------------------------------------------|
+| Bash            | [Shellcheck](https://www.shellcheck.net/)              |
 | C               | [Cppcheck](http://cppcheck.sourceforge.net/)           |
 | Haskell         | [HLint](https://github.com/ndmitchell/hlint)           |
 | Java            | [Checkstyle](https://github.com/checkstyle/checkstyle) |
