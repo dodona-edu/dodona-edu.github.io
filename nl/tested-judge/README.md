@@ -62,13 +62,13 @@ Als je oefeningen wil publiceren in Dodona, dan moet je ze opstellen in een Git
 repository die aan Dodona gekoppeld is. Meerdere oefeningen kunnen vanuit
 dezelfde repository gepubliceerd worden. Meer info hierover vind je in de
 handleiding die beschrijft hoe je een
-[nieuwe repository met oefeningen](../../guides/teachers/new-exercise-repo)
+[nieuwe repository met oefeningen](../guides/teachers/new-exercise-repo)
 aanmaakt voor Dodona.
 
 ### 2. Vaste mapstructuur
 
 Dodona gebruikt een
-[vaste map-structuur](../../references/exercise-directory-structure) voor het
+[vaste map-structuur](../references/exercise-directory-structure) voor het
 opstellen van programmeeroefeningen. Elk map in de Git repository met een
 bestand `config.json` wordt door Dodona beschouwd als een leeractiviteit
 die in het leerplatform moet gepubliceerd worden. In dat configuratiebestand
@@ -88,7 +88,7 @@ wordt onder andere vastgelegd welke judge aan de oefening gekoppeld wordt.
 ### 3. Judge configureren
 
 Het configuren van een oefening volgt de algemene regels voor het
-[configuratiebestand van een oefening](../../references/exercise-config).
+[configuratiebestand van een oefening](../references/exercise-config).
 Daarnaast heeft TESTed enkele [specifieke opties](exercise-config).
 Waaronder het verplichte veld `evaluation.testplan` welke de naam van het
 testplanbestand bevat, welke zich in de `evaluation` map van de oefening
@@ -96,20 +96,16 @@ bevinden moet..
 
 ### 4. Testplan opstellen
 
-TESTed ondersteunt een [domeinspecifieke taal](../dsl) (DSL) om op een
+TESTed ondersteunt een [domeinspecifieke taal](dsl) (DSL) om op een
 eenvoudige manier testplannen te kunnen opstellen. In de meeste gevallen is dit
 ook de aangewezen manier om testplannen op te stellen. TESTed ondersteunt ook
-meer [geavanceerde testplannen](../json) die meer flexibiliteit bieden maar ook
+meer [geavanceerde testplannen](json) die meer flexibiliteit bieden maar ook
 een stuk complexer zijn.
-
 
 Het testplan van een programmeeroefening moet in de map `evaluation` geplaatst
 worden. Bovenstaande map-structuur voor het sjabloon heeft bijvoorbeeld een
 DSL-testplan `testplan.yaml`, waarvan de extensie verraadt dat het is opgesteld
 in YAML.
-
-
-
 
 ## Documentatie
 
