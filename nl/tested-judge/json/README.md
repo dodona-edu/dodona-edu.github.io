@@ -1353,15 +1353,19 @@ Er bestaat één geavanceerd stringdatatype in TESTed.
 Dit is `char`, dat een karakter voorstelt.
 
 ```json
-"AdvancedStringTypes": {
-  "title": "AdvancedStringTypes",
+"AdvancedNothingTypes": {
+  "title": "AdvancedNothingTypes",
   "description": "An enumeration.",
   "enum": [
-    "char"
+    "undefined"
   ],
   "type": "string"
 },
 ```
+
+##### AdvancedNothingTypes
+Er bestaat één geavanceerd nothingdatatype in TESTed.
+Dit is `undefined`, die de waarde niet gedefinieerd voorstelt.
 
 #### VariableType
 Het variabele type moet gebruikt worden wanneer de waarde die men wil voorstellen niet voorgesteld kan worden door een
@@ -1496,7 +1500,7 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
 - **type**: Het type van de functie: een gewone functieoproep, een constructor of een eigenschap,
   zie [FunctionType](#functiontype).
 - **name**: De naam van de functie.
-- **namespace**: De namespace van de functie.
+- **namespace**: De namespace van de functie. Dit kunnen zowel variabelen als algemene expressies zijn.
   ::: warning Opmerking
   Wanneer deze niet opgegeven wordt is het een globale functie.
   Wanneer deze opgegeven is zal dit meestal een object variabele zijn, maar dit is niet altijd het geval.
@@ -1518,7 +1522,32 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
     },
     "namespace": {
       "title": "Namespace",
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
     },
     "arguments": {
       "title": "Arguments",
@@ -1569,7 +1598,7 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
 ```
 
 ::: warning Opmerking
-Wanneer je een functie wil testen die geen returnwaarde heeft (niet de waarde [NothingType](#nothingtype),
+Wanneer je een methode wil testen die geen returnwaarde heeft (niet de waarde [NothingType](#nothingtype),
 bijvoorbeeld `void` in Java),
 moet het uitvoerkanaal een [EmptyChannel](#emptychannel) of [IgnoreChannel](#ignoredchannel) zijn.
 :::
@@ -1578,7 +1607,7 @@ moet het uitvoerkanaal een [EmptyChannel](#emptychannel) of [IgnoreChannel](#ign
 TESTed heeft 3 functietypes: `function`, `constructor` en `property`.
 - **function**: Een normale functieoproep.
 - **constructor**: Een object constructor oproep.
-- **property**: Een objecteigenschap.
+- **property**: Een objecteigenschap of een globale variabele (zonder `namespace`).
 
 ```json
 "FunctionType": {
@@ -1942,7 +1971,8 @@ Het *ObjectKeyValuePair*-object heeft 2 attributen: `key` en `value`.
 Het *NothingType*-object stelt de 'niets'-waarde voor.
 
 Het *NothingType*-object heeft 2 attributen: `type` en `data`.
-- **type**: Het `nothing` datatype, zie [BasicNothingTypes](#basicnothingtypes).
+- **type**: Het `nothing` of `undefined` datatype, zie [BasicNothingTypes](#basicnothingtypes)
+  en [AdvancedNothingTypes](#advancednothingtypes).
 - **data**: De constante waarde `null`.
 
 ```json
@@ -1951,9 +1981,13 @@ Het *NothingType*-object heeft 2 attributen: `type` en `data`.
   "type": "object",
   "properties": {
     "type": {
-      "allOf": [
+      "anyOf": [
         {
           "$ref": "#/definitions/BasicNothingTypes"
+        },
+
+        {
+          "$ref": "#/definitions/AdvancedNothingTypes"
         }
       ]
     },
