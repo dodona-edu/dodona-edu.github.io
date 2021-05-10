@@ -62,8 +62,10 @@ volgende dependencies:
 - **Java**: Vereist Java 11, maar heeft verder geen dependencies. De commando's 
   `javac` en `java` moeten beschikbaar zijn in het `PATH`.
 
-- **JavaScript**: Vereist NodeJS v10 of later, maar heeft verder geen 
-  dependencies. Het commando `node` moet beschikbaar zijn in het `PATH`.
+- **JavaScript**: Vereist NodeJS v14 of later en vereist de
+  [`abstract-syntax-tree@2.17.6`](https://www.npmjs.com/package/abstract-syntax-tree)
+  module. Het commando `node` moet beschikbaar zijn in het `PATH` en de module
+  `abstract-syntax-tree@2.17.6` moet globaal beschikbaar zijn.
 
 - **Kotlin**: Vereist Kotlin 1.4.10, maar heeft verder geen dependencies. De 
   commando's `kotlinc` en `kotlin` moeten beschikbaar zijn in het `PATH`.
@@ -516,9 +518,9 @@ Java: `Integer` in plaats van `int` voor `int32`.
 In natuurlijke taal gebruiken verschillende programmeertalen andere namen voor 
 collectiegegevenstypes en `text`. Om deze verschillen te ondersteunen, wordt 
 gevraagd om de gebruikte namen zowel het Engels als het Nederlands op te geven. 
-De vereiste velden zijn alle collectiegegevenstypes die voor de programmeertaal 
-ondersteund worden in TESTed, samen met de benaming voor het gegevenstype 
-waarmee tekstuele data voorgesteld wordt.
+De vereiste velden zijn alle ondersteunde gegevenstypes die voor de
+programmeertaal ondersteund worden in TESTed, samen met de benaming voor het
+gegevenstype waarmee tekstuele data voorgesteld wordt.
 
 Bijvoorbeeld: Een `sequence` wordt in JavaScript een *array* genoemd, terwijl 
 men in Python spreekt over een *lijst*.
@@ -527,18 +529,22 @@ men in Python spreekt over een *lijst*.
 "natural": {
   "singular": {
     "en": {
-      "text": "string"
+      "text": "string",
+      ...
     },
     "nl": {
-      "text": "string"
+      "text": "string",
+      ...
     }
   },
   "plural": {
     "en": {
-      "text": "strings"
+      "text": "strings",
+      ...
     },
     "nl": {
-      "text": "strings"
+      "text": "strings",
+      ...
     }
   }
 }
@@ -1203,8 +1209,10 @@ Om de programmeertaal manueel te testen is het volgende stappenplan aanbevolen:
 TESTed heeft ook een testsuite met verschillende oefeningen en scenario's. Om de 
 nieuwe programmeertaal hieraan toe te voegen, moeten de juiste oplossingen 
 geïmplementeerd worden. Hiervoor wordt best gekeken naar 
-[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py). 
-In dat bestand staan de verschillende testen. Bij elke test staat welke 
-oplossing gebruikt wordt. Als het niet duidelijk zou zijn wat de oplossing voor 
-een bepaalde test moet doen, kijk dan zeker eens naar de bestaande oplossingen 
-voor de programmeertalen die al voor TESTed geconfigureerd waren.
+[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py),
+maar ook de andere testbestanden bevatten enkele benodigde testen die
+programmeertaalafhankelijk zijn. In dat bestand staan de verschillende testen.
+Bij elke test staat welke oplossing gebruikt wordt. Als het niet duidelijk zou
+zijn wat de oplossing voor een bepaalde test moet doen, kijk dan zeker eens naar
+de bestaande oplossingen voor de programmeertalen die al voor TESTed
+geconfigureerd waren.
