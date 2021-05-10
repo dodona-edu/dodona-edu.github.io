@@ -487,7 +487,32 @@
         },
         "namespace": {
           "title": "Namespace",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/FunctionCall"
+            },
+            {
+              "$ref": "#/definitions/NumberType"
+            },
+            {
+              "$ref": "#/definitions/StringType"
+            },
+            {
+              "$ref": "#/definitions/BooleanType"
+            },
+            {
+              "$ref": "#/definitions/SequenceType"
+            },
+            {
+              "$ref": "#/definitions/ObjectType"
+            },
+            {
+              "$ref": "#/definitions/NothingType"
+            }
+          ]
         },
         "arguments": {
           "title": "Arguments",
@@ -727,6 +752,24 @@
         "actual_path"
       ]
     },
+    "InternalExceptionMessage": {
+      "title": "InternalExceptionMessage",
+      "type": "object",
+      "properties": {
+        "i18n_key": {
+          "title": "I18N Key",
+          "type": "string"
+        },
+        "variables": {
+          "title": "Variables",
+          "default": [],
+          "type": "object"
+        }
+      },
+      "required": [
+        "i18n_key"
+      ]
+    },
     "ExceptionValue": {
       "title": "ExceptionValue",
       "type": "object",
@@ -739,6 +782,9 @@
           "title": "Stacktrace",
           "default": "",
           "type": "string"
+        },
+        "tested": {
+          "$ref": "#/definitions/InternalExceptionMessage"
         }
       },
       "required": [

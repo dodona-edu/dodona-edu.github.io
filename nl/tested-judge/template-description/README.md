@@ -152,7 +152,7 @@ In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
   De omzetting naar de conventie van een programmeertaal is het meest accuraat
   als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
-- **datatype**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../dsl#letterlijke-waarden)
+- **datatype**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../json#datatypes-tested)
   (`string`) doorgegeven worden. Als het TEST-gegevenstype een collectietype is,
   dan moet als tweede argument ook nog het gegevenstype van de elementen 
   (`string`) of een lijst (`list`) met de gegevenstypes van de elementen 
@@ -166,7 +166,7 @@ In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
   De omzetting naar de conventie van een programmeertaal is het meest accuraat
   als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
-- **datatype_common**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../dsl#letterlijke-waarden)
+- **datatype_common**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../json#datatypes-tested)
   (`string`) doorgegeven worden. De MAKO-functie geeft de informele naam van het 
   gegevenstype terug zoals die in geschreven taal voor de programmeertaal 
   gebruikt wordt. Standaard wordt die naam in het enkelvoud teruggegeven. De 

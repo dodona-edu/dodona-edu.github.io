@@ -552,14 +552,10 @@ Hoewel dit object overeenkomt met de invoer voor de *Python Tutor*.
 Is TESTed momenteel beperkt tot het openen van gelinkte bestanden in een nieuw browsertabblad.
 :::
 
-Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `storage`.
+Het *FileUrl*-object heeft 4 attributen: `content` en `name`.
 - **content**: De inhoud van het bestand.
   Voorlopig beperkt tot een url (meestal een relative url naar een bestand in de `description`-map van de oefening).
 - **name**: De naam van het bestand die gelinkt moet worden.
-- **location**: Het locatietype van de inhoud.
-  Voorlopig is enkel `href` toegestaan, wat ook de standaardwaarde is.
-- **storage**: De opslag methode van de inhoud.
-  Voorlopig is enkel `disk` toegestaan, wat ook de standaardwaarde is.
 
 ```json
 "FileUrl": {
@@ -572,14 +568,6 @@ Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `stora
     },
     "name": {
       "title": "Name",
-      "type": "string"
-    },
-    "location": {
-      "title": "Location",
-      "type": "string"
-    },
-    "storage": {
-      "title": "Storage",
       "type": "string"
     }
   },
