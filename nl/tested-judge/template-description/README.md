@@ -152,7 +152,7 @@ In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
   De omzetting naar de conventie van een programmeertaal is het meest accuraat
   als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
-- **datatype**: Aan deze MAKO-functie moet een TESTed-gegevenstype (TODO: link) 
+- **datatype**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../dsl#letterlijke-waarden)
   (`string`) doorgegeven worden. Als het TEST-gegevenstype een collectietype is,
   dan moet als tweede argument ook nog het gegevenstype van de elementen 
   (`string`) of een lijst (`list`) met de gegevenstypes van de elementen 
@@ -166,7 +166,7 @@ In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
   De omzetting naar de conventie van een programmeertaal is het meest accuraat
   als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
-- **datatype_common**: Aan deze MAKO-functie moet een TESTed-gegevenstype (TODO: link) 
+- **datatype_common**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../dsl#letterlijke-waarden)
   (`string`) doorgegeven worden. De MAKO-functie geeft de informele naam van het 
   gegevenstype terug zoals die in geschreven taal voor de programmeertaal 
   gebruikt wordt. Standaard wordt die naam in het enkelvoud teruggegeven. De 
@@ -339,7 +339,8 @@ ${lijst}.
 
 ## Volledige opgave
 
-Dit is het MAKO-sjabloon in HTML voor de oefening Spoorhekcodering (TODO: link).
+Dit is het MAKO-sjabloon in HTML voor de oefening
+[Spoorhekcodering](https://dodona.ugent.be/nl/courses/392/#series-card-3922).
 
 ```mako
 <p>

@@ -98,7 +98,7 @@ weergegeven onder één tab met de naam `Feedback`.
 Dit is hoe de feedback voor een (correcte) ingediende oplossing voor een 
 oefening met dit testplan er zal uitzien in Dodona. Daarbij hebben we extra 
 aanduidingen aangebracht die het pad aangeven van het corresponderende object
-uit het testplan. Zo verwijst `[0].testcases[0].stdin` bijvoorbeeld naar de 
+uit het testplan. Zo verwijst `[0].contexts[0].stdin` bijvoorbeeld naar de 
 gegeven tekst op standaardinvoer (`stdin`) voor de eerste context
 (`contexts[0]`) van het eerste tabblad (`[0]`).
 
@@ -226,8 +226,8 @@ de oplossing naar standaarduitvoer moet schrijven bestaat in dit geval uit
 meerdere regels.
 
 <p float="left">
-  ![Boeketje rozen Kleiner Dan](./boeketje_rozen_KleinerDan.png)
-  ![Boeketje rozen Groter Dan](./boeketje_rozen_GroterDan.png)
+  <img src="./boeketje_rozen_KleinerDan.png" alt="Boeketje rozen Kleiner Dan" class="medium-zoom-image"/>
+  <img src="./boeketje_rozen_GroterDan.png" alt="Boeketje rozen Groter Dan" class="medium-zoom-image"/>
 </p>
 
 Opmerking: In dit geval gebruikt TESTed de tekst voor het standaardinvoer-kanaal 
@@ -303,6 +303,9 @@ kunnen opgegeven worden.
 De commandolijn-argumenten van een context wordt ingesteld via de sleutel 
 `arguments` waaraan een lijst met tekstuele waarden moet toegekend worden. Deze 
 argumenten worden doorgegeven bij het uitvoeren van de context.
+
+De commandolijn-argumenten kunnen enkel meegegeven worden aan een
+context-testgeval, niet aan de normale testgevallen.
 
 :::tip Tip
 In de DSL kunnen zowel strings, getallen als Booleaanse waarden als argumenten
@@ -546,9 +549,8 @@ functieoproep.
   [Statements, expressies en return-raw](#statements-expressies-en-return-raw)).
 
 ::: warning Opmerking
-Als je een functie wil testen die geen waarde teruggeeft (niet de waarde `null`,
-bijvoorbeeld `void` in Java), dan het testgeval geen sleutel `return` of 
-`return-raw` hebben.
+Als je een methode wil testen zonder returnwaarde, dan mag het testgeval geen
+sleutel `return` of `return-raw` hebben.
 :::
 
 ## Variabelen
@@ -566,7 +568,7 @@ tabs:
 - tab: "Feedback"
   contexts:
   - testcases:
-    - statement: 'instance = new EqualChecker(5)'
+    - statement: 'instance = new equal_checker(5)'
     - expression: 'instance.check(25)'
       return: false
     - expression: 'instance.check(5)'
@@ -576,7 +578,7 @@ tabs:
 ![Objects](./equal_checker.png)
 
 Het testplan bevat één enkele context met drie testgevallen. In het eerste
-testgeval wordt er een nieuw object van de klasse `EqualChecker` aangemaakt. Dat
+testgeval wordt er een nieuw object van de klasse `equal_checker` aangemaakt. Dat
 object wordt toegekend aan de variabele `instance`. In de daaropvolgende 
 testgevallen worden dan methoden aangeroepen op het object waar de variabele
  `instance` naar verwijst. In TESTed verloopt het testen van methoden op exact 
@@ -645,7 +647,7 @@ het bestand te linken aan de bestandsnaam in de beschrijving van het testgeval.
 
 ![Linken bestanden](./link_files.png)
 
-Bestand die niet rechtstreeks in de beschrijving van een testgeval kunnen 
+Bestanden die niet rechtstreeks in de beschrijving van een testgeval kunnen 
 gelinkt worden, zullen door TESTed afzonderlijk opgelijst worden.
 
 Een item uit de lijst met bestanden voor het invoerkanaal `files` wordt 
@@ -818,6 +820,9 @@ null-waarde wanneer er een onderscheidt wordt gemaakt tussen `null` en niet
 gedifinieerd, zoals in de JavaScript programmeertaal. Wanneer `undefined` niet
 ondersteund wordt in een programmeertaal heeft deze dezelfde betekenis als `null`.
 
+Null-waarden stellen de waarde 'niets' voor, bijvoorbeeld: `null` in Java, `None` in
+Python en `Nothing` in Haskell.
+
 ### Strings
 
 Tekst wordt ingesloten tussen dubbele aanhalingstekens. De volgende speciale
@@ -914,7 +919,7 @@ een dictionary zijn sleutel/waarde-paren. De sleutels moeten onveranderlijke
 objecten zijn. De waarden mogen zowel veranderlijke als onveranderlijke objecten
 zijn. De sleutel/waarde-paren van een dictionary worden van elkaar gescheiden
 door komma's en ingesloten tussen accolades. Een sleutel en een waarde worden
-van elkaar gescheiden door een dubbelpunt (`.`). Een lege dictionary wordt 
+van elkaar gescheiden door een dubbelpunt (`:`). Een lege dictionary wordt 
 genoteerd als een paar accolades (`{}`).
 
 
@@ -926,8 +931,8 @@ genoteerd als een paar accolades (`{}`).
 ```
 
 ::: warning Opmerking
-TESTed legt de beperking op dat sleutel van dictionaries veranderlijke objecten 
-moeten zijn. Sommige programmeertalen leggen nog bijkomende beperkingen op. 
+TESTed legt geen beperking op aan de sleutels van een dictionary, maar in
+sommige programmeertalen is dat wel het geval.
 TESTed zal automatisch controleren of alle sleutels in een dictionary 
 ondersteund worden door de programmeertaal van de ingediende oplossing.
 :::
@@ -952,7 +957,7 @@ get_element(4, ["first", 2, 3.4])
 get_object().to_string()
 ```
 
-Bij functieoproepen ondersteunt TESTed voorlopig enkel argumenten die 
+Bij functieoproepen ondersteunt de TESTed DSL voorlopig enkel argumenten die 
 positioneel doorgegeven worden. Het doorgeven van benoemde argumenten wordt
 voorlopig niet ondersteund.
 
