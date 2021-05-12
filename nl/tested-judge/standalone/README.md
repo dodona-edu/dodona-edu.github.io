@@ -10,7 +10,7 @@ In deze handleiding zullen we uitleg hoe je TESTed kan gebruiken los van het Dod
 
 ## 1. Klonen van de TESTed GitHub repository
 De eerst stap om TESTed los van Dodona te gebruiken is het klonen of downloaden van de
-[TESTEd GitHub repository](https://github.com/dodona-edu/universal-judge).
+[TESTed GitHub repository](https://github.com/dodona-edu/universal-judge).
 
 ![Klonen TESTed GitHub repository](./klonen_tested_repo.png)
 
@@ -21,7 +21,7 @@ De volgende stap is het installeren van de afhankelijkheden van de TESTed judge.
 Windows 10 gebruikers raden we aan om het [Windows Subsystem for Linux](https://ubuntu.com/wsl) te gebruiken.
 :::
 
-### 1) Installeren basis software
+### 1) Installeren kern software
 De kern van de TESTed judge maakt gebruikt van [Python 3.9](https://docs.python.org/3/whatsnew/3.9.html).
 Hiervoor moet het `python3.9` commando beschikbaar zijn vanuit het `PATH`.
 

@@ -114,6 +114,7 @@ in YAML.
 * [JSON-testplannen](json)
 * [Sjabloonbeschrijvingen](template-description)
 * [Meertalige programmeeroefeningen](template-exercise)
+* [TESTed zonder Dodona](standalone)
 
 ## Nieuwe programmeertaal toevoegen
 
