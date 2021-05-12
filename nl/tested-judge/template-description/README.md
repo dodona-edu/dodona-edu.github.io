@@ -153,7 +153,7 @@ In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
   als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
 - **datatype**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../json/#datatypes-tested)
-  (`string`) doorgegeven worden. Als het TEST-gegevenstype een collectietype is,
+  (`string`) doorgegeven worden. Als het TESTed-gegevenstype een collectietype is,
   dan moet als tweede argument ook nog het gegevenstype van de elementen 
   (`string`) of een lijst (`list`) met de gegevenstypes van de elementen 
   (`string`) van de collectie doorgegeven worden. De MAKO-functie geeft de 
