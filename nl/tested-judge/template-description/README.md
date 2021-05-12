@@ -420,13 +420,13 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
     </li>
 </ul>
 
-% if programming_language_raw == 'java':
+% if language_raw == 'java':
 <p> The functions must be static declared in the class ${namespace}.</p>
 % endif
 
 <h3>Example</h3>
 
-<div class="highlighter-rouge language-${programming_language_raw}">
+<div class="highlighter-rouge language-${language_raw}">
 <pre class="highlight"><code class="tested" id="code">\
 > encode("And now for something completely different.", 1)
 "And now for something completely different."
