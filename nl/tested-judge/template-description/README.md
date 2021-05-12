@@ -420,7 +420,7 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
     </li>
 </ul>
 
-% if language_raw == 'java':
+% if programming_language_raw == 'java':
 <p> The functions must be static declared in the class ${namespace}.</p>
 % endif
 
