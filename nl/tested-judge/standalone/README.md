@@ -148,3 +148,23 @@ Voorbeeld invoer:
 
 De uitvoer van TESTed volgt het [JSON-formaat](https://dodona.ugent.be/schemas/partial_output.json)
 voor de gedeeltelijke uitvoer van Dodona.
+
+Voorbeeld uitvoer:
+```json
+{"command": "start-judgement"}
+{"title": "Feedback", "command": "start-tab"}
+{"command": "start-context"}
+{"description": {"description": "EqualChecker instance = new EqualChecker(5)", "format": "java"}, "command": "start-testcase"}
+{"command": "close-testcase"}
+{"description": {"description": "instance.check(25)", "format": "java"}, "command": "start-testcase"}
+{"expected": "false", "channel": "return", "command": "start-test"}
+{"generated": "false", "status": {"enum": "correct"}, "command": "close-test"}
+{"command": "close-testcase"}
+{"description": {"description": "instance.check(5)", "format": "java"}, "command": "start-testcase"}
+{"expected": "true", "channel": "return", "command": "start-test"}
+{"generated": "true", "status": {"enum": "correct"}, "command": "close-test"}
+{"command": "close-testcase"}
+{"command": "close-context"}
+{"command": "close-tab"}
+{"command": "close-judgement"}
+```
