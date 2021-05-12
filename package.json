@@ -9,7 +9,7 @@
   },
   "repository": "https://github.com/dodona-edu/dodona-edu.github.io",
   "scripts": {
-    "dev": "vuepress dev . -c cache -t tmp",
+    "dev": "vuepress dev .",
     "build": "vuepress build ."
   },
   "license": "MIT",
