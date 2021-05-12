@@ -105,7 +105,7 @@ Deze zal mee geïnstalleerd worden met de Python dependencies.
 ::::
 
 ## 3. Evalueren oefeningen
-TESTed kan uitgevoerd met behulp van het volgende commando:
+TESTed kan uitgevoerd met behulp van het volgende commando in de TESTed root-directory:
 ```bash
 > python3 -m tested
 ```
