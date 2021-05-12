@@ -9,7 +9,7 @@
   },
   "repository": "https://github.com/dodona-edu/dodona-edu.github.io",
   "scripts": {
-    "dev": "vuepress dev .",
+    "dev": "vuepress dev . -c cache -t tmp",
     "build": "vuepress build ."
   },
   "license": "MIT",
@@ -19,7 +19,9 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "markdown-it-imsize": "^2.0.1",
     "prismjs": "^1.23.0",
+    "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.8.2",
-    "vuepress-plugin-redirect": "^1.2.5"
+    "vuepress-plugin-redirect": "^1.2.5",
+    "vuepress-plugin-tabs": "^0.3.0"
   }
 }

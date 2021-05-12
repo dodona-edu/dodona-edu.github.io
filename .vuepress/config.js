@@ -89,6 +89,7 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+    'tabs',
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     [
@@ -231,6 +232,7 @@ function getTESTedSidebar(lang, groupTitle, FirstItem) {
         'json/',
         'template-description/',
         'template-exercise/',
+        'standalone/',
         'configure-new-programming-language/',
       ]
     }
