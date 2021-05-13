@@ -819,7 +819,7 @@ en `false` (waarheidswaarde vals).
 
 Zowel `null` als `undefined` stellen null-waarden voor. `undefined` is een speciale
 null-waarde wanneer er een onderscheidt wordt gemaakt tussen `null` en niet
-gedifinieerd, zoals in de JavaScript programmeertaal. Wanneer `undefined` niet
+gedefinieerd, zoals in de JavaScript programmeertaal. Wanneer `undefined` niet
 ondersteund wordt in een programmeertaal heeft deze dezelfde betekenis als `null`.
 
 Null-waarden stellen de waarde 'niets' voor, bijvoorbeeld: `null` in Java, `None` in
