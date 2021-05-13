@@ -645,10 +645,12 @@ op het niveau van de context een oplijsting met links naar de bestanden. Voor
 bestanden die aan een testgeval gekoppeld worden, probeert TESTed rechtstreeks
 het bestand te linken aan de bestandsnaam in de beschrijving van het testgeval.
 
-![Linken bestanden](./link_files.png)
+![Linken bestanden inline](./dodona_bestanden_inline.png)
 
 Bestanden die niet rechtstreeks in de beschrijving van een testgeval kunnen 
 gelinkt worden, zullen door TESTed afzonderlijk opgelijst worden.
+
+![Linken bestanden](./dodona_bestanden.png)
 
 Een item uit de lijst met bestanden voor het invoerkanaal `files` wordt 
 beschreven aan de hand van twee verplichte sleutels:
