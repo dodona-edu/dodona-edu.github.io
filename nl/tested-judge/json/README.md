@@ -948,7 +948,10 @@ Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `nam
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
   
-  _**Opmerking:**_ Voorlopig worden er geen opties gebruikt in de interne evaluator voor de returnwaarden.
+  De interne evaluator voor de returnwaarden heeft één optie:
+  - **stringsAsText**: Met deze booleaanse optie (`boolean`) wordt aangegeven of de _multiline string_ returnwaarden
+    (`string`) op meerdere regels weergegeven mogen worden (`true`) of als escaped string (`false`).
+    Standaard zal TESTed deze weergeven over meerdere regels.
 - **name**: Een string met vaste waarde `value`.
 
 ```json
@@ -1354,6 +1357,21 @@ Dit is `char`, dat een karakter voorstelt.
 
 ```json
 "AdvancedNothingTypes": {
+  "title": "AdvancedStringTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "char"
+  ],
+  "type": "string"
+},
+```
+
+##### AdvancedNothingTypes
+Er bestaat één geavanceerd nothingdatatype in TESTed.
+Dit is `undefined`, die de waarde _niet gedefinieerd_ voorstelt.
+
+```json
+"AdvancedNothingTypes": {
   "title": "AdvancedNothingTypes",
   "description": "An enumeration.",
   "enum": [
@@ -1362,10 +1380,6 @@ Dit is `char`, dat een karakter voorstelt.
   "type": "string"
 },
 ```
-
-##### AdvancedNothingTypes
-Er bestaat één geavanceerd nothingdatatype in TESTed.
-Dit is `undefined`, die de waarde niet gedefinieerd voorstelt.
 
 #### VariableType
 Het variabele type moet gebruikt worden wanneer de waarde die men wil voorstellen niet voorgesteld kan worden door een
@@ -1471,6 +1485,9 @@ Een assignment heeft drie attributen `variable`, `expression` en `type`.
         },
         {
           "$ref": "#/definitions/AdvancedStringTypes"
+        },
+        {
+          "$ref": "#/definitions/AdvancedNothingTypes"
         },
         {
           "$ref": "#/definitions/VariableType"
