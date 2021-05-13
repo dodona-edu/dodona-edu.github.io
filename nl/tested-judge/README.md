@@ -19,9 +19,11 @@ Waarom zou je TESTed gebruiken om oefening aan te bieden?
 TESTed kan gebruikt worden om een oefening in één programmeertaal aan te bieden
 om de volgende redenen:
 - Er bestaat geen specifieke judge voor de programmeertaal die je wenst te
-  ondersteunen. Het is eenvoudig om TESTed uit te breiden met een
-  [nieuwe programmeertaal](configure-new-programming-language) (het
-  implementeren van een specifieke judge voor die programmeertaal is complexer).
+  ondersteunen.
+  
+  Het is eenvoudig om TESTed uit te breiden met een
+  [nieuwe programmeertaal](configure-new-programming-language) (het implementeren
+  van een specifieke judge voor die programmeertaal is complexer en vergt meer tijd).
 - De testplannen kunnen eenvoudig beschreven worden met behulp van de
   [domeinspecifieke taal](dsl/).
 
@@ -53,8 +55,8 @@ Op dit moment ondersteunt **TESTed** de volgende programmeertalen:
 
 ## Dodona programmeeroefeningen
 
-In deze paragraaf zullen we beschrijven hoe een oefening voor Dodona aangeboden
-kan worden met behulp van TESTed.
+In deze paragraaf zullen we beschrijven hoe een oefening in één programmeertaal
+voor Dodona aangeboden kan worden met behulp van TESTed.
 
 ### 1. Git repository aanmaken
 
@@ -92,7 +94,7 @@ Het configuren van een oefening volgt de algemene regels voor het
 Daarnaast heeft TESTed enkele [specifieke opties](exercise-config).
 Waaronder het verplichte veld `evaluation.testplan` welke de naam van het
 testplanbestand bevat, welke zich in de `evaluation` map van de oefening
-bevinden moet..
+moet bevinden.
 
 ### 4. Testplan opstellen
 

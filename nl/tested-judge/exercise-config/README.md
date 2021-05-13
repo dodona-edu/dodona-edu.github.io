@@ -12,14 +12,13 @@ configuratiebestand van de oefening (`config.json`). Dit veld moet aangeven
 wat de bestandsnaam is van het testplan in de map `evaluation` van de oefening.
 
 Voor testplannen zijn er twee opties. TESTed ondersteunt een domeinspecifieke
-taal (DSL; *domain specific language*) om de testen te beschrijven waaraan een
-ingediende oplossing zal onderworpen worden. Het gebruik van deze DSL is de 
-meest eenvoudige manier om de testen te beschrijven. De specificatie van 
-[**DSL-testplannen**](../dsl) gebeurt in het 
-[YAML-formaat](https://en.wikipedia.org/wiki/YAML) in 
-bestanden met de extensie `.yaml` of `.yml`. Meer 
-[**geavanceerde testplannen**](../json) worden beschreven in het 
-[JSON-formaat](https://nl.wikipedia.org/wiki/JSON) in 
+taal (DSL; [*domain specific language*](https://en.wikipedia.org/wiki/Domain-specific_language))
+om de testen te beschrijven waaraan een ingediende oplossing zal onderworpen
+worden. Het gebruik van deze DSL is de  meest eenvoudige manier om de testen te
+beschrijven. De specificatie van [**DSL-testplannen**](../dsl) gebeurt in het 
+[YAML-formaat](https://en.wikipedia.org/wiki/YAML) in bestanden met de extensie
+`.yaml` of `.yml`. Meer [**geavanceerde testplannen**](../json) worden
+beschreven in het [JSON-formaat](https://nl.wikipedia.org/wiki/JSON) in 
 bestanden die typisch de extensie `.json` gebruiken, al legt TESTed geen 
 specifieke beperkingen op aan de bestandsextensie van geavanceerde testplannen.
 
@@ -189,7 +188,7 @@ geconfigureerd worden. Dit zijn de linters die TESTed op dit moment gebruikt:
 | Haskell         | [HLint](https://github.com/ndmitchell/hlint)           |
 | Java            | [Checkstyle](https://github.com/checkstyle/checkstyle) |
 | JavaScript      | [ESLint](https://eslint.org/)                          |
-| Kotlin          | [ktlint](https://ktlint.github.io/)                    |
+| Kotlin          | [Ktlint](https://ktlint.github.io/)                    |
 | Python          | [Pylint](https://www.pylint.org/)                      |
 
 Bij de configuratie van een oefening kan je in het veld `linter` voor elke 
@@ -238,13 +237,34 @@ het object dat geassocieerd wordt met het veld `evaluation.language`. Hieronder
 bespreken we de opties per programmeertaal. Programmeertalen zonder
 programmeertaal-specifieke opties worden niet opgelijst. 
 
+### Bash
+
+De programmeertaal Bash heeft 1 optie: `shellcheck_config`.
+Deze verwacht de bestandsnaam van een HLint-configuratiebestand.
+Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
+
+Voorbeeld (Shellcheck-configuratie):
+```json
+{
+  "evaluation": {
+    "options": {
+      "language": {
+        "bash": {
+          "shellcheck_config": "shellcheckrc"
+        }
+      }
+    }
+  }
+}
+```
+
 ### Haskell
 
 De programmeertaal Haskell heeft 1 optie: `hlint_config`.
 Deze verwacht de bestandsnaam van een HLint-configuratiebestand.
 Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
 
-Voorbeeld HLint-configuratie:
+Voorbeeld (HLint-configuratie):
 ```json
 {
   "evaluation": {
@@ -265,7 +285,7 @@ Via de optie `checkstyle_config` kan de bestandsnaam van een
 Checkstyle-configuratiebestand (linter) ingesteld worden. Het bestand zelf moet
 in de map `evaluation` van de oefening geplaatst worden.
 
-Voorbeeld:
+Voorbeeld (Checkstyle-configuratie):
 
 ```json
 {
@@ -287,7 +307,7 @@ Via de optie `eslint_config` kan de bestandsnaam van een
 ESLint-configuratiebestand (linter) ingesteld worden. Het bestand zelf moet
 in de map `evaluation` van de oefening geplaatst worden.
 
-Voorbeeld:
+Voorbeeld (ESLint-configuratie):
 
 ```json
 {
@@ -316,7 +336,7 @@ De linter `ktlint` kan geconfigureerd worden op basis van de volgende opties:
 - `ktlint_experimental`: Boolean die aangeeft of *ktlint* ook experimentele 
   regels moet gebruiken. Standaard zal *ktlint* experimentele regels gebruiken.
 
-Voorbeeld:
+Voorbeeld (KTLint-configuratie):
 
 ```json
 {
@@ -341,7 +361,7 @@ Via de optie `pylint_config` kan de bestandsnaam van een
 Pylint-configuratiebestand (linter) ingesteld worden. Het bestand zelf moet
 in de map `evaluation` van de oefening geplaatst worden.
 
-Voorbeeld:
+Voorbeeld (PyLint-configuratie):
 
 ```json
 {
