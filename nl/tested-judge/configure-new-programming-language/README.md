@@ -277,10 +277,34 @@ omgezet in functie van de codestijl die gebruikelijk is in de programmeertaal:
 De mogelijke waarden zijn:
 
 - `snake_case`: Tussen elk woord staat een underscore: `dit_is_een_voorbeeld`.
+- `macro_case`: Tussen elk woord staat een underscore,
+  en alle letters zijn hoofdletters: `DIT_IS_EEN_VOORBEELD`.
 - `camel_case`: Elk woord, buiten het eerste, start met een hoofdletter: 
   `ditIsEenVoorbeeld`. Deze variant wordt ook wel *lowerCamelCase* genoemd.
 - `pascal_case`: Elk woord, ook het eerste, start met een hoofdletter: 
   `DitIsEenVoorbeeld`. Deze variant wordt ook wel *UpperCamelCase* genoemd.
+- `camel_snake_case`: Elk woord, buiten het eerste, start met een hoofdletter
+  en tussen elk woord staat een underscore: `dit_Is_Een_Voorbeeld`.
+- `pascal_snake_case`: Elk woord, ook het eerste, start met een hoofdletter
+  en tussen elk woord staat een underscore: `Dit_Is_Een_Voorbeeld`.
+- `dash_case`: Tussen elk woord staat een liggend streepje: `dit-is-een-voorbeeld`.
+- `train_case`: Tussen elk woord staat een liggend streepje
+  en elk woord start met een hoofdletter: `Dit-Is-Een-Voorbeeld`.
+- `cobol_case`: Tussen elk woord staat een liggend streepje
+  en alle letters zijn hoofdletters: `DIT-IS-EEN-VOORBEELD`.
+- `donor_case`: Tussen elk woord staat een verticale streep: `dit|is|een|voorbeeld`.
+- `flat_case`: Alle woorden zijn aan elkaar geschreven: `ditiseenvoorbeeld`.
+- `upper_flat_case`: Alle woorden zijn aan elkaar geschreven
+  en alle letters zijn hoofdletters: `DITISEENVOORBEELD`.
+
+De mogelijke componenten zijn:
+
+- `namespace`: Stijlconventie van de naamruimte van de code.
+- `function`: Stijlconventie voor de functienamen.
+- `identifier`: Stijlconventie voor de lokale variabelenamen.
+- `global_identifier`: Stijlconventie voor de globale variabelenamen.
+- `property`: Stijlconventie voor de eigenschapsnamen.
+- `class`: Stijlconventie voor de klassennamen.
 
 Standaard wordt `snake_case` gebruikt, dus bij C is het niet strikt nodig om 
 deze optie in de configuratie op te nemen.
