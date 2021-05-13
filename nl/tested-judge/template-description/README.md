@@ -426,7 +426,7 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
 
 <h3>Example</h3>
 
-<div class="highlighter-rouge language-${language_raw}">
+<div class="highlighter-rouge language-${programming_language_raw}">
 <pre class="highlight"><code class="tested" id="code">\
 > encode("And now for something completely different.", 1)
 "And now for something completely different."
