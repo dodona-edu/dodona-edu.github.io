@@ -976,7 +976,7 @@ new object.Pair("Paar", 8.4e-5)
 ### Globale variabelen
 
 Een **globale variabele** is een eigenschap van de globale namespace.
-Een **globale variabele** wordt genoteerd als een naam genoteerd tussen scheve haken.
+Een **globale variabele** wordt genoteerd als een naam genoteerd tussen punthaakjes.
 
 ```tested
 <mijn_globale_variabele>
