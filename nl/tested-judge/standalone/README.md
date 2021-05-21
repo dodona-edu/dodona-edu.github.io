@@ -22,11 +22,12 @@ Gebruikers van Windows 10 raden we aan om het [Windows Subsystem for Linux](http
 :::
 
 ### 1) Installeren kern software
+De TESTed-judge is een relatief standaard Python-project (Python & Pip & requirements.txt).
 De kern van de TESTed maakt gebruikt van [Python 3.9](https://docs.python.org/3/whatsnew/3.9.html).
 Hiervoor moet het `python3.9` commando beschikbaar zijn vanuit het `PATH`.
 
 TESTed heeft een aantal Python dependencies die met behulp van het
-[pip](https://en.wikipedia.org/wiki/Pip_(package_manager)) commando vanuit de root-directory van TESTed:
+[pip](https://pip.pypa.io/en/stable/) commando vanuit de root-directory van TESTed:
 ```bash
 > pip3 install -r requirement.txt
 ```
@@ -41,8 +42,6 @@ Wanneer je de Python testen wil uitvoeren moet je ook de Python dependencies ins
 ::: tab Bash
 De Bash-oefening vereisen dat het [bash](https://nl.wikipedia.org/wiki/Bash) commando geïnstalleerd is en
 beschikbaar is vanuit het `PATH`.
-
-Bash is standaard geïnstalleerd op de Debian besturingssystemen en Mac OS.
 
 De Bash-linter [shellcheck](https://www.shellcheck.net/) moet ook beschikbaar zijn in het `PATH`,
 wanneer je linting wenst te gebruiken.
