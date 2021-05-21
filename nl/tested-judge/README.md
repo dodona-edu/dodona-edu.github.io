@@ -16,19 +16,19 @@ integreert ook met de elektronische leeromgeving Dodona.
 ## Waarom TESTed?
 Waarom zou je TESTed gebruiken om oefening aan te bieden?
 
-TESTed kan gebruikt worden om een oefening in één programmeertaal aan te bieden
-om de volgende redenen:
+Redenen om TESTed te gebruiken om een oefening in één programmeertaal 
+aan te bieden zijn:
 - Er bestaat geen specifieke judge voor de programmeertaal die je wenst te
   ondersteunen.
   
   Het is eenvoudig om TESTed uit te breiden met een
   [nieuwe programmeertaal](configure-new-programming-language) (het implementeren
-  van een specifieke judge voor die programmeertaal is complexer en vergt meer tijd).
-- De testplannen kunnen eenvoudig beschreven worden met behulp van de
+  van een judge specifiek voor die programmeertaal is complexer en vergt meer tijd).
+- De testplannen kunnen eenvoudig geschreven worden met behulp van de
   [domeinspecifieke taal](dsl/).
 
-TESTed kan ook gebruikt worden om een oefening in meerdere programmeertalen aan
-te bieden om de volgende redenen:
+Om een oefening in meerdere programmeertalen aan te bieden zijn er ook enkele redenen
+om TESTed te gebruiken:
 - De oefening bevat enkel concepten die in (quasi) elke programmeertaal terug
   te vinden zijn.
 - De nadruk van een oefening is gericht op het implementeren van algoritmen en
@@ -53,7 +53,7 @@ Op dit moment ondersteunt **TESTed** de volgende programmeertalen:
 * Kotlin 1.4.10
 * Python 3.9
 
-## Dodona programmeeroefeningen
+## Programmeeroefeningen in Dodona
 
 In deze paragraaf zullen we beschrijven hoe een oefening in één programmeertaal
 voor Dodona aangeboden kan worden met behulp van TESTed.
@@ -67,10 +67,10 @@ handleiding die beschrijft hoe je een
 [nieuwe repository met oefeningen](../guides/teachers/new-exercise-repo)
 aanmaakt voor Dodona.
 
-### 2. Vaste mapstructuur
+### 2. Vaste mappenstructuur
 
 Dodona gebruikt een
-[vaste map-structuur](../references/exercise-directory-structure) voor het
+[vaste mappenstructuur](../references/exercise-directory-structure) voor het
 opstellen van programmeeroefeningen. Elk map in de Git repository met een
 bestand `config.json` wordt door Dodona beschouwd als een leeractiviteit
 die in het leerplatform moet gepubliceerd worden. In dat configuratiebestand
@@ -82,8 +82,8 @@ wordt onder andere vastgelegd welke judge aan de oefening gekoppeld wordt.
 |   +-- evaluation            #
 |   |   +-- testplan.yaml     # DSL-testplan
 |   +-- description           #
-|   |   +-- description.nl.md # Markdown beschrijving van oefening in het Nederlands
-|   |   +-- description.en.md # Markdown beschrijving van oefening in het Engels
+|   |   +-- description.nl.md # Markdown-beschrijving van oefening in het Nederlands
+|   |   +-- description.en.md # Markdown-beschrijving van oefening in het Engels
 :   :   :
 ```
 
@@ -92,8 +92,8 @@ wordt onder andere vastgelegd welke judge aan de oefening gekoppeld wordt.
 Het configuren van een oefening volgt de algemene regels voor het
 [configuratiebestand van een oefening](../references/exercise-config).
 Daarnaast heeft TESTed enkele [specifieke opties](exercise-config).
-Waaronder het verplichte veld `evaluation.testplan` welke de naam van het
-testplanbestand bevat, welke zich in de `evaluation` map van de oefening
+Waaronder het verplichte veld `evaluation.testplan`, dat de naam van het
+testplanbestand bevat, dat zich in de `evaluation` map van de oefening
 moet bevinden.
 
 ### 4. Testplan opstellen
@@ -101,11 +101,11 @@ moet bevinden.
 TESTed ondersteunt een [domeinspecifieke taal](dsl) (DSL) om op een
 eenvoudige manier testplannen te kunnen opstellen. In de meeste gevallen is dit
 ook de aangewezen manier om testplannen op te stellen. TESTed ondersteunt ook
-meer [geavanceerde testplannen](json) die meer flexibiliteit bieden maar ook
+meer [geavanceerde testplannen](json), die meer flexibiliteit bieden maar ook
 een stuk complexer zijn.
 
 Het testplan van een programmeeroefening moet in de map `evaluation` geplaatst
-worden. Bovenstaande map-structuur voor het sjabloon heeft bijvoorbeeld een
+worden. Bovenstaande mappenstructuur voor het sjabloon heeft bijvoorbeeld een
 DSL-testplan `testplan.yaml`, waarvan de extensie verraadt dat het is opgesteld
 in YAML.
 

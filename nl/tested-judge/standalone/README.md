@@ -4,12 +4,12 @@ description: "TESTed zonder Dodona"
 ---
 
 # TESTed zonder Dodona
-Hoewel tijdens de ontwikkeling van TESTed er gefocust werd voor het gebruik op het Dodona-platform, kan TESTed ook los
+Hoewel er tijdens de ontwikkeling van TESTed gefocust werd voor het gebruik met het Dodona-platform, kan TESTed ook los
 van Dodona gebruikt worden.
-In deze handleiding zullen we uitleg hoe je TESTed kan gebruiken los van het Dodona-platform.
+In deze handleiding zullen we uitleggen hoe je TESTed kan gebruiken los van het Dodona-platform.
 
 ## 1. Klonen van de TESTed GitHub repository
-De eerst stap om TESTed los van Dodona te gebruiken is het klonen of downloaden van de
+De eerst stap is het klonen of downloaden van de
 [TESTed GitHub repository](https://github.com/dodona-edu/universal-judge).
 
 ![Klonen TESTed GitHub repository](./klonen_tested_repo.png)
@@ -17,12 +17,12 @@ De eerst stap om TESTed los van Dodona te gebruiken is het klonen of downloaden 
 ## 2. Installeren software
 De volgende stap is het installeren van de afhankelijkheden van de TESTed judge.
 
-::: tip Windows 10 tip
-Windows 10 gebruikers raden we aan om het [Windows Subsystem for Linux](https://ubuntu.com/wsl) te gebruiken.
+::: tip Tip voor Windows 10
+Gebruikers van Windows 10 raden we aan om het [Windows Subsystem for Linux](https://ubuntu.com/wsl) te gebruiken.
 :::
 
 ### 1) Installeren kern software
-De kern van de TESTed judge maakt gebruikt van [Python 3.9](https://docs.python.org/3/whatsnew/3.9.html).
+De kern van de TESTed maakt gebruikt van [Python 3.9](https://docs.python.org/3/whatsnew/3.9.html).
 Hiervoor moet het `python3.9` commando beschikbaar zijn vanuit het `PATH`.
 
 TESTed heeft een aantal Python dependencies die met behulp van het
@@ -61,13 +61,13 @@ wanneer je linting wenst te gebruiken.
 :::
 ::: tab Java
 De Java-oefeningen vereisen dat Java 11 geïnstalleerd is.
-Zowel de [Oracle versie](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-als de [OpenJDK versie](https://openjdk.java.net/projects/jdk/11/) kan gebruikt worden.
+Zowel de [Oracle-editie](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+als de [OpenJDK-editie](https://openjdk.java.net/projects/jdk/11/) kan gebruikt worden.
 
 De commando's `javac` en `java` moeten beschikbaar zijn in het `PATH`.
 
 Java gebruikt de *Checkstyle-8.41* linter, dit is een JAR-bestand die gedownload kan worden op de
-[Checkstyle GitHub pagina](https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.41/checkstyle-8.41-all.jar).
+[GitHub-pagina van Checkstyle](https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.41/checkstyle-8.41-all.jar).
 De locatie naar de *Checkstyle*-jarbestand moet beschikbaar zijn in de omgevingsvariabele `CHECKSTYLE_JAR`.
 :::
 ::: tab JavaScript
@@ -86,10 +86,10 @@ wanneer je linting wenst te gebruiken.
 ::: tab Kotlin
 De Kotlin-oefeningen vereisen dat de `kotlin` en `kotlinc` commando's beschikbaar zijn in het `PATH`.
 De installatiemogelijkheden kunnen teruggevonden worden op de
-[Kotlin website](https://kotlinlang.org/docs/command-line.html).
+[Kotlin-website](https://kotlinlang.org/docs/command-line.html).
 
 Kotlin gebruikt de *KTLint* linter, dit is een JAR-bestand die gedownload kan worden op de
-[KTLint GitHub pagina](https://github.com/pinterest/ktlint/releases/download/0.41.0/ktlint).
+[GitHub-pagina voor KTLint](https://github.com/pinterest/ktlint/releases/download/0.41.0/ktlint).
 De locatie naar de *KTLint*-jarbestand moet beschikbaar zijn in de omgevingsvariabele `KTLINT_JAR`.
 :::
 ::: tab Python
@@ -113,8 +113,8 @@ TESTed kan uitgevoerd met behulp van het volgende commando in de TESTed root-dir
 Dit commando vereist een JSON-document als standaardinvoer met de volgende velden:
 | Optie | Beschrijving |
 | ------| ------------ |
-| `time_limit` | De maximale tijdslimiet die gebruikt mag worden tijdens de evaluatie. |
-| `memory_limit` | De maximale geheugenlimiet die gebruikt mag worden tijdens de evaluatie. |
+| `time_limit` | De tijdslimiet die gebruikt mag worden tijdens de evaluatie. |
+| `memory_limit` | De geheugenlimiet die gebruikt mag worden tijdens de evaluatie. |
 | `natural_language` | De natuurlijke taal van de indiening. |
 | `programming_language` | De programmeertaal van de indiening. |
 | `judge` | De locatie van de judge (meestal de huidige map). |

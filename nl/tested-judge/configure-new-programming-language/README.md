@@ -63,8 +63,8 @@ volgende dependencies:
   `javac` en `java` moeten beschikbaar zijn in het `PATH`.
 
 - **JavaScript**: Vereist NodeJS v14 of later en vereist de
-  [`abstract-syntax-tree@2.17.6`](https://www.npmjs.com/package/abstract-syntax-tree)
-  module. Het commando `node` moet beschikbaar zijn in het `PATH` en de module
+ module [`abstract-syntax-tree@2.17.6`](https://www.npmjs.com/package/abstract-syntax-tree).
+ Het commando `node` moet beschikbaar zijn in het `PATH` en de module
   `abstract-syntax-tree@2.17.6` moet globaal beschikbaar zijn.
 
 - **Kotlin**: Vereist Kotlin 1.4.10, maar heeft verder geen dependencies. De 
@@ -75,7 +75,7 @@ volgende dependencies:
   `PATH`.
 
 - **Bash**: Vereist bash 5.0.3 of later, maar heeft verder geen dependencies.
-  Het commando `bash`moet beschikbaar zijn in het `PATH`.
+  Het commando `bash` moet beschikbaar zijn in het `PATH`.
 
 Merk op dat de dependencies voor de programmeertalen optioneel zijn. Om 
 bijvoorbeeld enkel Python-oplossingen te beoordelen, heb je de dependencies voor
