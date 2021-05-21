@@ -7,7 +7,7 @@ Deze handleiding legt uit hoe je TESTed kunt gebruiken om programmeeroefeningen
 op te stellen in Dodona, waarvoor oplossingen kunnen ingediend worden in 
 meerdere programmeertalen.
 
-Ga naar [Dodona programmeeroefeningen](../#dodona-programmeeroefeningen) als je
+Ga naar [Dodona programmeeroefeningen](../#programmeeroefeningen-in-dodona) als je
 TESTed wil gebruiken om programmeeroefeningen op te stellen in Dodona waarvoor
 enkel oplossingen moeten ingediend worden voor één specifieke programmeertaal.
 :::
