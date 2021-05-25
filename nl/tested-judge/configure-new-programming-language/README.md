@@ -29,7 +29,7 @@ een Python-package dat op de normale manier kan uitgevoerd worden.
 Na het klonen van de repository van TESTed beschikken we over volgende 
 mappenstructuur:
 
-```text
+```
 universal-judge
 ├── docker/ # Een Docker-image om TESTed uit te voeren.
 ├── exercise/ # De map met oefeningen die dienen als voorbeeld en voor de tests.
@@ -62,8 +62,10 @@ volgende dependencies:
 - **Java**: Vereist Java 11, maar heeft verder geen dependencies. De commando's 
   `javac` en `java` moeten beschikbaar zijn in het `PATH`.
 
-- **JavaScript**: Vereist NodeJS v10 of later, maar heeft verder geen 
-  dependencies. Het commando `node` moet beschikbaar zijn in het `PATH`.
+- **JavaScript**: Vereist NodeJS v14 of later en vereist de
+ module [`abstract-syntax-tree@2.17.6`](https://www.npmjs.com/package/abstract-syntax-tree).
+ Het commando `node` moet beschikbaar zijn in het `PATH` en de module
+  `abstract-syntax-tree@2.17.6` moet globaal beschikbaar zijn.
 
 - **Kotlin**: Vereist Kotlin 1.4.10, maar heeft verder geen dependencies. De 
   commando's `kotlinc` en `kotlin` moeten beschikbaar zijn in het `PATH`.
@@ -71,6 +73,9 @@ volgende dependencies:
 - **Haskell**: Voor Haskell is GHC 8.6 (`ghc`) of later nodig. Daarnaast heb je 
   ook `aeson` nodig. Beide commando's moeten globaal beschikbaar zijn in het 
   `PATH`.
+
+- **Bash**: Vereist bash 5.0.3 of later, maar heeft verder geen dependencies.
+  Het commando `bash` moet beschikbaar zijn in het `PATH`.
 
 Merk op dat de dependencies voor de programmeertalen optioneel zijn. Om 
 bijvoorbeeld enkel Python-oplossingen te beoordelen, heb je de dependencies voor
@@ -192,7 +197,7 @@ plaats binnen TESTed aanwezig zijn.
 Voor de programmeertaal C maken we een nieuwe map `tested/languages/c`. Na het 
 aanmaken van de map moet de mappenstructuur er zo uitzien:
 
-```text
+```
 universal-judge/
 ├─ tested/
 │ ├─ languages/
@@ -272,10 +277,34 @@ omgezet in functie van de codestijl die gebruikelijk is in de programmeertaal:
 De mogelijke waarden zijn:
 
 - `snake_case`: Tussen elk woord staat een underscore: `dit_is_een_voorbeeld`.
+- `macro_case`: Tussen elk woord staat een underscore,
+  en alle letters zijn hoofdletters: `DIT_IS_EEN_VOORBEELD`.
 - `camel_case`: Elk woord, buiten het eerste, start met een hoofdletter: 
   `ditIsEenVoorbeeld`. Deze variant wordt ook wel *lowerCamelCase* genoemd.
 - `pascal_case`: Elk woord, ook het eerste, start met een hoofdletter: 
   `DitIsEenVoorbeeld`. Deze variant wordt ook wel *UpperCamelCase* genoemd.
+- `camel_snake_case`: Elk woord, buiten het eerste, start met een hoofdletter
+  en tussen elk woord staat een underscore: `dit_Is_Een_Voorbeeld`.
+- `pascal_snake_case`: Elk woord, ook het eerste, start met een hoofdletter
+  en tussen elk woord staat een underscore: `Dit_Is_Een_Voorbeeld`.
+- `dash_case`: Tussen elk woord staat een liggend streepje: `dit-is-een-voorbeeld`.
+- `train_case`: Tussen elk woord staat een liggend streepje
+  en elk woord start met een hoofdletter: `Dit-Is-Een-Voorbeeld`.
+- `cobol_case`: Tussen elk woord staat een liggend streepje
+  en alle letters zijn hoofdletters: `DIT-IS-EEN-VOORBEELD`.
+- `donor_case`: Tussen elk woord staat een verticale streep: `dit|is|een|voorbeeld`.
+- `flat_case`: Alle woorden zijn aan elkaar geschreven: `ditiseenvoorbeeld`.
+- `upper_flat_case`: Alle woorden zijn aan elkaar geschreven
+  en alle letters zijn hoofdletters: `DITISEENVOORBEELD`.
+
+De mogelijke componenten zijn:
+
+- `namespace`: Stijlconventie van de naamruimte van de code.
+- `function`: Stijlconventie voor de functienamen.
+- `identifier`: Stijlconventie voor de lokale variabelenamen.
+- `global_identifier`: Stijlconventie voor de globale variabelenamen.
+- `property`: Stijlconventie voor de eigenschapsnamen.
+- `class`: Stijlconventie voor de klassennamen.
 
 Standaard wordt `snake_case` gebruikt, dus bij C is het niet strikt nodig om 
 deze optie in de configuratie op te nemen.
@@ -297,7 +326,8 @@ vastleggen van de taalconstructies:
   "heterogeneous_arguments": false,
   "evaluation": false,
   "named_arguments": false,
-  "default_parameters": false
+  "default_parameters": false,
+  "global_variables": false
 },
 ```
 
@@ -340,11 +370,13 @@ en een korte beschrijving:
 - `default_parameters`: Geeft aan of de programmeertaal standaardwaarden voor 
   parameters ondersteunt, wat betekent dat ze kunnen weggelaten worden bij het 
   aanroepen van de functie.
+- `global_variables`: Geeft aan of de programmeertaal ondersteuning biedt voor
+  globale variabelen.
 
 Dan moeten we nu de ondersteuning voor de gegevenstypes vastleggen:
 
 ```json
-"gegevenstypes": {
+"datatypes": {
   "integer": "supported",
   "rational": "supported",
   "char": "supported",
@@ -510,20 +542,34 @@ Java: `Integer` in plaats van `int` voor `int32`.
 In natuurlijke taal gebruiken verschillende programmeertalen andere namen voor 
 collectiegegevenstypes en `text`. Om deze verschillen te ondersteunen, wordt 
 gevraagd om de gebruikte namen zowel het Engels als het Nederlands op te geven. 
-De vereiste velden zijn alle collectiegegevenstypes die voor de programmeertaal 
-ondersteund worden in TESTed, samen met de benaming voor het gegevenstype 
-waarmee tekstuele data voorgesteld wordt.
+De vereiste velden zijn alle ondersteunde gegevenstypes die voor de
+programmeertaal ondersteund worden in TESTed, samen met de benaming voor het
+gegevenstype waarmee tekstuele data voorgesteld wordt.
 
 Bijvoorbeeld: Een `sequence` wordt in JavaScript een *array* genoemd, terwijl 
 men in Python spreekt over een *lijst*.
 
 ```json
 "natural": {
-  "en": {
-    "text": "string"
+  "singular": {
+    "en": {
+      "text": "string",
+      ...
+    },
+    "nl": {
+      "text": "string",
+      ...
+    }
   },
-  "nl": {
-    "text": "string"
+  "plural": {
+    "en": {
+      "text": "strings",
+      ...
+    },
+    "nl": {
+      "text": "strings",
+      ...
+    }
   }
 }
 ```
@@ -551,7 +597,7 @@ worden de abstracte methodes voorzien van uitgebreide documentatie.
 Een eerste en belangrijke methode is de callback voor de compilatiestap:
 
 ```python
-def compilation(self, config: Config, files: List[str]) -> CallbackResult:
+def compilation(self, bundle: Bundle, files: List[str]) -> CallbackResult:
     main_file = files[-1]
     exec_file = Path(main_file).stem
     result = executable_name(exec_file)
@@ -771,7 +817,7 @@ uit de module
 We importeren ook alle programmeertaalspecifieke evaluatoren die we nodig zullen 
 hebben. De variabele `evaluator_names` bevat een verzameling van deze namen.
 
-```c
+```mako
 #include <stdio.h>
 
 #include "values.h"
@@ -827,7 +873,7 @@ omdat het in C niet mogelijk is om in meerdere bestanden functies met dezelfde
 naam te hebben. Als we dus meerdere runs samen compileren en elke run heeft zijn 
 eigen `write_separator`-functies, dan zou het compileren mislukken.
 
-```c
+```mako
 static FILE* ${execution_name}_value_file = NULL;
 static FILE* ${execution_name}_exception_file = NULL;
 
@@ -868,7 +914,7 @@ implementeren en zullen we ook geen oproep naar deze functies genereren. In C
 gebruiken we ook een macro in plaats van een functie: dit opnieuw omdat we niet 
 dezelfde functie in meerdere bestanden kunnen definiëren.
 
-```c
+```mako
 #undef send_value
 #define send_value(value) write_value(${execution_name}_value_file, value)
 
@@ -929,7 +975,7 @@ voor het sjabloon, maar het kan toch geen kwaad om het te weten:
 Als afsluiter zetten we de `after`-code en sluiten we de bestanden. De 
 `after`-code is analoog aan de `before`-code.
 
-```c
+```mako
 % for i, ctx in enumerate(contexts):
     void ${execution_name}_context_${i}(void) {
         ${ctx.before}
@@ -946,7 +992,7 @@ Nu zijn we aangekomen bij het uitvoeren van de run zelf. In C gebeurt dit in een
 functie die de naam van de run (`execution_name`) krijgt. Als eerste stap maken 
 we de bestanden voor het return- en *exception*-kanaal aan.
 
-```c
+```mako
 int ${execution_name}() {
 
     ${execution_name}_value_file = fopen("${value_file}", "w");
@@ -976,7 +1022,7 @@ door de gewone `main`-functie te hernoemen (zie
 `main`-functie bevat, maar het testplan verwachtte die wel, dan zal de 
 compilatie falen.
 
-```c
+```mako
     ${execution_name}_write_context_separator();
     % if run_testcase.exists:
         char* args[] = {\
@@ -994,7 +1040,7 @@ compilatie falen.
 Vervolgens genereren we de code die nodig is om de verschillende contexten uit 
 te voeren.
 
-```c
+```mako
     % for i, ctx in enumerate(contexts):
         ${execution_name}_write_context_separator();
         ${execution_name}_context_${i}();
@@ -1012,7 +1058,7 @@ C laat echter slechts één `main`-functie toe. Als we in batchcompilatie zitten
 zal de selector gebruikt worden, en zal `INCLUDED` op `TRUE` staan. In dat geval 
 voegen we geen `main`-functie toe.
 
-```c
+```mako
 #ifndef INCLUDED
 int main() {
     return ${execution_name}();
@@ -1028,7 +1074,7 @@ context uit te voeren op basis van een argument. Het is in dit sjabloon dat de
 macro `INCLUDED` op `true` gezet wordt, waardoor de `main`-functies in andere 
 contexten niet gebruikt worden.
 
-```c
+```mako
 #include <string.h>
 #include <stdio.h>
 
@@ -1061,7 +1107,7 @@ int main(int argc, const char* argv[]) {
 Dit sjabloon wordt door TESTed gebruikt om statements te vertalen naar code. Dit 
 omvat onder andere assignments, functieoproepen en waarden:
 
-```c
+```mako
 ## Convert a statement and/or expression into Java code.
 <%! from tested.utils import get_args %>\
 <%! from tested.serialisation import Value, Identifier, FunctionCall, Assignment %>\
@@ -1092,7 +1138,7 @@ Een aspect dat wat meer uitleg vraagt, is de `full`-parameter die aangeeft of
 het gegevenstype nodig is bij de declaratie van een variabele. Het verschil 
 wordt duidelijk met een voorbeeld:
 
-```c
+```mako
 int variabele = 5;  // met declaratie
 variabele = 6;      // zonder declaratie
 ```
@@ -1187,8 +1233,10 @@ Om de programmeertaal manueel te testen is het volgende stappenplan aanbevolen:
 TESTed heeft ook een testsuite met verschillende oefeningen en scenario's. Om de 
 nieuwe programmeertaal hieraan toe te voegen, moeten de juiste oplossingen 
 geïmplementeerd worden. Hiervoor wordt best gekeken naar 
-[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py). 
-In dat bestand staan de verschillende testen. Bij elke test staat welke 
-oplossing gebruikt wordt. Als het niet duidelijk zou zijn wat de oplossing voor 
-een bepaalde test moet doen, kijk dan zeker eens naar de bestaande oplossingen 
-voor de programmeertalen die al voor TESTed geconfigureerd waren.
+[`tests/test_functionality.py`](https://github.com/dodona-edu/universal-judge/blob/master/tests/test_functionality.py),
+maar ook de andere testbestanden bevatten enkele benodigde testen die
+programmeertaalafhankelijk zijn. In dat bestand staan de verschillende testen.
+Bij elke test staat welke oplossing gebruikt wordt. Als het niet duidelijk zou
+zijn wat de oplossing voor een bepaalde test moet doen, kijk dan zeker eens naar
+de bestaande oplossingen voor de programmeertalen die al voor TESTed
+geconfigureerd waren.

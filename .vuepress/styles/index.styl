@@ -3,6 +3,13 @@
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
+@require '~vuepress-plugin-tabs/dist/themes/default.styl'
 
 .home .hero img
   max-width 450px!important
+
+div[class~='language-tested']:before
+  content: "TESTed"
+
+div[class~='language-mako']:before
+  content: "Mako"

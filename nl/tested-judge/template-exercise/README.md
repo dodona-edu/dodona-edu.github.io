@@ -1,15 +1,15 @@
 ---
-title: "Oefeningssjabloon TESTed"
-description: "Tutorial: Oefeningssjabloon TESTed"
+title: "Meertalige programmeeroefeningen"
+description: "Tutorial: Meertalige programmeeroefeningen"
 ---
 ::: warning Opmerking
 Deze handleiding legt uit hoe je TESTed kunt gebruiken om programmeeroefeningen 
 op te stellen in Dodona, waarvoor oplossingen kunnen ingediend worden in 
 meerdere programmeertalen.
 
-Ga naar [???]() als je TESTed wil gebruiken om programmeeroefeningen op te 
-stellen in Dodona waarvoor enkel oplossingen moeten ingediend worden voor één
-specifieke programmeertaal.
+Ga naar [Dodona programmeeroefeningen](../#programmeeroefeningen-in-dodona) als je
+TESTed wil gebruiken om programmeeroefeningen op te stellen in Dodona waarvoor
+enkel oplossingen moeten ingediend worden voor één specifieke programmeertaal.
 :::
 
 # TESTed: programmeeroefeningen voor meerdere programmeertalen
@@ -69,7 +69,7 @@ bestand `config.template.json`, zodat Dodona het sjabloon zelf niet als een
 oefening zal beschouwen. De map-structuur voor het sjabloon ziet er minimaal als 
 volgt uit:
 
-```text
+```
 +-- sjabloon/oefening/map
 |   +-- config.template.json       # configuratiebestand voor oefening
 |   +-- evaluation                 #
@@ -100,7 +100,7 @@ configuratiebestand ziet er bijvoorbeeld als volgt uit:
   "evaluation": {
     "handler": "TESTed",
     "memory_limit": 500000000,
-    "plan_name": "testplan.yaml"
+    "testplan": "testplan.yaml"
   },
   "labels": []
 }
@@ -108,7 +108,7 @@ configuratiebestand ziet er bijvoorbeeld als volgt uit:
 
 Daarin zien we dat TESTed ingesteld werd als de judge (`evalaution.handler`) 
 voor het beoordelen van ingediende oplossingen. Dit zal gebeuren op basis van
-een testplan (`evaluation.plan_name`) dat beschreven wordt in het bestand
+een testplan (`evaluation.testplan`) dat beschreven wordt in het bestand
 (`testplan.yaml`). TESTed zal automatisch controleren of er voor het testplan
 een oefening kan gegenereerd worden voor een specifieke programmeertaal.
 
@@ -135,7 +135,7 @@ uitzien:
   "evaluation": {
     "handler": "TESTed",
     "memory_limit": 500000000,
-    "plan_name": "plan.yaml"
+    "plan_name": "testplan.yaml"
   },
   "labels": []
 }

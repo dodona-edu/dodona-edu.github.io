@@ -25,7 +25,7 @@ structuur van de DSL volgt in grote mate de opbouw waarmee feedback wordt
 weergegeven in Dodona. In onderstaande voorstelling van een DSL-testplan 
 gebruiken we vierkante haakjes om lijsten van objecten voor te stellen.
 
-```text
+```
 . # testplan met top-level sectie
 ├ namespace
 ├ config
@@ -98,7 +98,7 @@ weergegeven onder één tab met de naam `Feedback`.
 Dit is hoe de feedback voor een (correcte) ingediende oplossing voor een 
 oefening met dit testplan er zal uitzien in Dodona. Daarbij hebben we extra 
 aanduidingen aangebracht die het pad aangeven van het corresponderende object
-uit het testplan. Zo verwijst `[0].testcases[0].stdin` bijvoorbeeld naar de 
+uit het testplan. Zo verwijst `[0].contexts[0].stdin` bijvoorbeeld naar de 
 gegeven tekst op standaardinvoer (`stdin`) voor de eerste context
 (`contexts[0]`) van het eerste tabblad (`[0]`).
 
@@ -226,8 +226,8 @@ de oplossing naar standaarduitvoer moet schrijven bestaat in dit geval uit
 meerdere regels.
 
 <p float="left">
-  ![Boeketje rozen Kleiner Dan](./boeketje_rozen_KleinerDan.png)
-  ![Boeketje rozen Groter Dan](./boeketje_rozen_GroterDan.png)
+  <img src="./boeketje_rozen_KleinerDan.png" alt="Boeketje rozen Kleiner Dan" class="medium-zoom-image"/>
+  <img src="./boeketje_rozen_GroterDan.png" alt="Boeketje rozen Groter Dan" class="medium-zoom-image"/>
 </p>
 
 Opmerking: In dit geval gebruikt TESTed de tekst voor het standaardinvoer-kanaal 
@@ -303,6 +303,9 @@ kunnen opgegeven worden.
 De commandolijn-argumenten van een context wordt ingesteld via de sleutel 
 `arguments` waaraan een lijst met tekstuele waarden moet toegekend worden. Deze 
 argumenten worden doorgegeven bij het uitvoeren van de context.
+
+De commandolijn-argumenten kunnen enkel meegegeven worden aan een
+context-testgeval, niet aan de normale testgevallen.
 
 :::tip Tip
 In de DSL kunnen zowel strings, getallen als Booleaanse waarden als argumenten
@@ -546,9 +549,8 @@ functieoproep.
   [Statements, expressies en return-raw](#statements-expressies-en-return-raw)).
 
 ::: warning Opmerking
-Als je een functie wil testen die geen waarde teruggeeft (niet de waarde `null`,
-bijvoorbeeld `void` in Java), dan het testgeval geen sleutel `return` of 
-`return-raw` hebben.
+Als je een methode wil testen zonder returnwaarde, dan mag het testgeval geen
+sleutel `return` of `return-raw` hebben.
 :::
 
 ## Variabelen
@@ -566,7 +568,7 @@ tabs:
 - tab: "Feedback"
   contexts:
   - testcases:
-    - statement: 'instance = new EqualChecker(5)'
+    - statement: 'instance = new equal_checker(5)'
     - expression: 'instance.check(25)'
       return: false
     - expression: 'instance.check(5)'
@@ -576,7 +578,7 @@ tabs:
 ![Objects](./equal_checker.png)
 
 Het testplan bevat één enkele context met drie testgevallen. In het eerste
-testgeval wordt er een nieuw object van de klasse `EqualChecker` aangemaakt. Dat
+testgeval wordt er een nieuw object van de klasse `equal_checker` aangemaakt. Dat
 object wordt toegekend aan de variabele `instance`. In de daaropvolgende 
 testgevallen worden dan methoden aangeroepen op het object waar de variabele
  `instance` naar verwijst. In TESTed verloopt het testen van methoden op exact 
@@ -643,10 +645,12 @@ op het niveau van de context een oplijsting met links naar de bestanden. Voor
 bestanden die aan een testgeval gekoppeld worden, probeert TESTed rechtstreeks
 het bestand te linken aan de bestandsnaam in de beschrijving van het testgeval.
 
-![Linken bestanden](./link_files.png)
+![Linken bestanden inline](./dodona_bestanden_inline.png)
 
-Bestand die niet rechtstreeks in de beschrijving van een testgeval kunnen 
+Bestanden die niet rechtstreeks in de beschrijving van een testgeval kunnen 
 gelinkt worden, zullen door TESTed afzonderlijk opgelijst worden.
+
+![Linken bestanden](./dodona_bestanden.png)
 
 Een item uit de lijst met bestanden voor het invoerkanaal `files` wordt 
 beschreven aan de hand van twee verplichte sleutels:
@@ -737,6 +741,13 @@ Namen van variabelen, functies, methoden en klassen kunnen bestaan uit kleine
 letters, hoofdletters, cijfers en underscores (`_`). Het eerste karakter van een
 naam mag geen cijfer zijn. Enkel letters zonder accenten zijn toegelaten.
 
+:::tip Tip
+De conventie voor de naamgeving voor de namen van variabelen, functies, methoden
+en klassen in de testplannen van TESTed is *snake case*.
+Het gebruik van *snake case* in de testplannen zorgt ervoor dat de conventie wat
+betreft de naamgeving per programmeertaal gevolgd kan worden.
+:::
+
 De volgende **sleutelwoorden** hebben een speciale betekenis in de grammatica en 
 kunnen niet als naam gebruikt worden: `false`, `new`, `no`, `null`, `true`, 
 `undefined` en `yes`.
@@ -785,7 +796,7 @@ teruggevallen op het basistype.
 
 Een lege verzameling kan je enkel noteren via expliciete typering. 
 
-```haskell
+```tested
 [] :: set
 () :: set
 {} :: set
@@ -806,7 +817,13 @@ en `false` (waarheidswaarde vals).
 
 ### Null-waarden
 
-Zowel `null` als `undefined` stellen null-waarden voor.
+Zowel `null` als `undefined` stellen null-waarden voor. `undefined` is een speciale
+null-waarde wanneer er een onderscheidt wordt gemaakt tussen `null` en niet
+gedefinieerd, zoals in de programmeertaal JavaScript. Wanneer `undefined` niet
+ondersteund wordt in een programmeertaal heeft deze dezelfde betekenis als `null`.
+
+Null-waarden stellen de waarde 'niets' voor, bijvoorbeeld: `null` in Java, `None` in
+Python en `Nothing` in Haskell.
 
 ### Strings
 
@@ -850,7 +867,7 @@ volgorde in de reeks. De objecten van een sequentie worden van elkaar gescheiden
 door komma's en ingesloten tussen vierkante haakjes. Een lege sequentie wordt 
 genoteerd als een paar vierkante haakjes (`[]`).
 
-```javascript
+```tested
 [5, 7, 8]
 [5, 7.5, true, "text", null]
 [random()]
@@ -867,7 +884,7 @@ Een **tuple** is een onveranderlijke sequentie. De objecten van een tuple worden
 van elkaar gescheiden door komma's en ingesloten tussen ronde haakjes. Een 
 leeg tuple wordt genoteerd als een paar ronde haakjes (`()`).
 
-```javascript
+```tested
 (5, 7, 8)
 (5, 7.5, [true, "text"], null)
 (random())
@@ -883,7 +900,7 @@ ingesloten tussen accolades. Lege verzamelingen kunnen enkel beschreven worden
 via expliciete typering, omdat ook de notatie van dictionaries gebruikmaakt van
 accolades en `{}` een lege dictionary voorstelt.
 
-```javascript
+```tested
 {5, 7, 8}
 {5, 7.5, (true, "text")}
 {random()}
@@ -904,11 +921,11 @@ een dictionary zijn sleutel/waarde-paren. De sleutels moeten onveranderlijke
 objecten zijn. De waarden mogen zowel veranderlijke als onveranderlijke objecten
 zijn. De sleutel/waarde-paren van een dictionary worden van elkaar gescheiden
 door komma's en ingesloten tussen accolades. Een sleutel en een waarde worden
-van elkaar gescheiden door een dubbelpunt (`.`). Een lege dictionary wordt 
+van elkaar gescheiden door een dubbelpunt (`:`). Een lege dictionary wordt 
 genoteerd als een paar accolades (`{}`).
 
 
-```javascript
+```tested
 {}
 {"first": 5}
 {"size": 5, "precision": 0.75, "rounding active": true}
@@ -916,8 +933,8 @@ genoteerd als een paar accolades (`{}`).
 ```
 
 ::: warning Opmerking
-TESTed legt de beperking op dat sleutel van dictionaries veranderlijke objecten 
-moeten zijn. Sommige programmeertalen leggen nog bijkomende beperkingen op. 
+TESTed legt geen beperking op aan de sleutels van een dictionary, maar in
+sommige programmeertalen is dat wel het geval.
 TESTed zal automatisch controleren of alle sleutels in een dictionary 
 ondersteund worden door de programmeertaal van de ingediende oplossing.
 :::
@@ -932,14 +949,17 @@ Een globale functie wordt zonder namespace opgeroepen. Een functie uit een
 specifieke namespace (bijvoorbeeld een methode die aan de namespace van een 
 object gekoppeld is) wordt opgeroepen via de **dot-notatie** (`.`). Daarbij 
 wordt de functieoproep voorafgegaan door de namespace en een punt (`.`).
+Een specifieke namespace van een functie is een algemene expressie.
+Dus niet enkel variabelen, maar bijvoorbeeld ook andere functies.
 
-```javascript
+```tested
 add(5, 2)
 object.get_name()
 get_element(4, ["first", 2, 3.4])
+get_object().to_string()
 ```
 
-Bij functieoproepen ondersteunt TESTed voorlopig enkel argumenten die 
+Bij functieoproepen ondersteunt de TESTed DSL voorlopig enkel argumenten die 
 positioneel doorgegeven worden. Het doorgeven van benoemde argumenten wordt
 voorlopig niet ondersteund.
 
@@ -948,15 +968,24 @@ voorlopig niet ondersteund.
 Een **constructor** is een functieoproep die voorafgegaan wordt door het 
 sleutelwoord `new`.
 
-```javascript
+```tested
 new Counter()
 new object.Pair("Paar", 8.4e-5)
+```
+
+### Globale variabelen
+
+Een **globale variabele** is een eigenschap van de globale namespace.
+Een **globale variabele** wordt genoteerd als een naam genoteerd tussen punthaakjes.
+
+```tested
+<mijn_globale_variabele>
 ```
 
 ### Expressies
 
 Een **expressie** is een letterlijke waarde, een variabele (of eigenschap), een
-functieoproep of een constructor.
+functieoproep, een constructor of een globale variabele.
 
 ### Toekenningen
 
@@ -971,7 +1000,7 @@ constructor in het rechterlid. Dit is niet het geval als het rechterlid bestaat
 uit een functieoproep. In dat geval moet de toekenning voorafgegaan worden door
 het gegevenstype van de variabele.
 
-```javascript
+```tested
 Counter counter = new Counter()
 pair = new object.Pair("Paar", 8.4e-5)
 text value = get_value(0, pair)
@@ -1186,9 +1215,14 @@ omgezet naar het volgende sleutel/waarde-paar in JSON:
 
 #### Bloknotaties
 
-Voor multiline strings ondersteunt YAML verschillende **bloknotaties**. Daarbij 
-wordt geen escaping gebruikt, worden newlines bewaard en worden bijkomende
-insprongen bovenop de eerste insprong ook bewaard.
+Voor multiline strings ondersteunt YAML verschillende **bloknotaties**.
+Daarbij wordt geen escaping gebruikt, worden newlines bewaard en worden
+bijkomende insprongen bovenop de eerste insprong ook bewaard.
+
+Het gebruik van commentaar in de bloknotaties wijkt af van de algemene
+regel voor het gebruik van commentaar. Wanneer een regel die met een `#`
+start de diepte van de insprong van het blok respecteert of een diepere
+insprong gebruikt, dan zal deze regel niet als commentaar gezien worden.
 
 ##### Standaard (`|`)
 
@@ -1352,13 +1386,13 @@ stdin: 077
 stdin: "63"
 ```
 
-### Functienamen
+### Naamgeving
 
-In de DSL wordt *snake case* gebruikt als conventie voor functienamen. TESTed 
-zal deze functienamen omzetten volgens de gangbare conventie voor de 
-programmeertaal van een ingediende oplossing. Een correcte omzetting is echter 
-niet gegarandeerd als je voor functienamen in de DSL afwijkt van de *snake case* 
-conventie.
+In de DSL wordt *snake case* gebruikt als conventie voor alle namen voor
+variabelen, functies, methoden en klassen. TESTed zal deze functienamen
+omzetten volgens de gangbare conventie voor de programmeertaal van een
+ingediende oplossing. Een correcte omzetting is echter niet gegarandeerd
+als je voor deze namen in de DSL afwijkt van de *snake case* conventie.
 
 ## DSL-testplan omzetten naar JSON
 

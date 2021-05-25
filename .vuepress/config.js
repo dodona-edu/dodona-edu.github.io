@@ -1,6 +1,8 @@
 const { description } = require('../package')
 const fs = require("fs");
 const path = require("path");
+const { loadLanguages } = require("./extendPrism")
+loadLanguages();
 
 module.exports = {
   title: 'Dodona Docs',
@@ -10,7 +12,7 @@ module.exports = {
     '/nl/': {
       lang: 'nl-BE',
       title: 'Dodona Docs'
-    }, 
+    },
     '/en/': {
       lang: 'en-US',
       title: 'Dodona Docs'
@@ -87,6 +89,7 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+    'tabs',
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     [
@@ -224,11 +227,12 @@ function getTESTedSidebar(lang, groupTitle, FirstItem) {
       sidebarDepth: 2,
       children: [
         ['', FirstItem],
+        'exercise-config/',
         'dsl/',
         'json/',
-        'exercise-config/',
         'template-description/',
         'template-exercise/',
+        'standalone/',
         'configure-new-programming-language/',
       ]
     }

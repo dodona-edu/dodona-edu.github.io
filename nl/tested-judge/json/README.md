@@ -552,14 +552,10 @@ Hoewel dit object overeenkomt met de invoer voor de *Python Tutor*.
 Is TESTed momenteel beperkt tot het openen van gelinkte bestanden in een nieuw browsertabblad.
 :::
 
-Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `storage`.
+Het *FileUrl*-object heeft 4 attributen: `content` en `name`.
 - **content**: De inhoud van het bestand.
   Voorlopig beperkt tot een url (meestal een relative url naar een bestand in de `description`-map van de oefening).
 - **name**: De naam van het bestand die gelinkt moet worden.
-- **location**: Het locatietype van de inhoud.
-  Voorlopig is enkel `href` toegestaan, wat ook de standaardwaarde is.
-- **storage**: De opslag methode van de inhoud.
-  Voorlopig is enkel `disk` toegestaan, wat ook de standaardwaarde is.
 
 ```json
 "FileUrl": {
@@ -572,14 +568,6 @@ Het *FileUrl*-object heeft 4 attributen: `content`, `name`, `location` en `stora
     },
     "name": {
       "title": "Name",
-      "type": "string"
-    },
-    "location": {
-      "title": "Location",
-      "type": "string"
-    },
-    "storage": {
-      "title": "Storage",
       "type": "string"
     }
   },
@@ -960,7 +948,10 @@ Het *GenericValueEvaluator*-object heeft 3 attributen: `type`, `options` en `nam
 - **type**: Een string met vaste waarde `builtin`.
 - **options**: De extra evaluatieopties die gebruikt kunnen worden door de interne evaluator.
   
-  _**Opmerking:**_ Voorlopig worden er geen opties gebruikt in de interne evaluator voor de returnwaarden.
+  De interne evaluator voor de returnwaarden heeft één optie:
+  - **stringsAsText**: Met deze booleaanse optie (`boolean`) wordt aangegeven of de _multiline string_ returnwaarden
+    (`string`) op meerdere regels weergegeven mogen worden (`true`) of als escaped string (`false`).
+    Standaard zal TESTed deze weergeven over meerdere regels.
 - **name**: Een string met vaste waarde `value`.
 
 ```json
@@ -1365,11 +1356,26 @@ Er bestaat één geavanceerd stringdatatype in TESTed.
 Dit is `char`, dat een karakter voorstelt.
 
 ```json
-"AdvancedStringTypes": {
+"AdvancedNothingTypes": {
   "title": "AdvancedStringTypes",
   "description": "An enumeration.",
   "enum": [
     "char"
+  ],
+  "type": "string"
+},
+```
+
+##### AdvancedNothingTypes
+Er bestaat één geavanceerd nothingdatatype in TESTed.
+Dit is `undefined`, die de waarde _niet gedefinieerd_ voorstelt.
+
+```json
+"AdvancedNothingTypes": {
+  "title": "AdvancedNothingTypes",
+  "description": "An enumeration.",
+  "enum": [
+    "undefined"
   ],
   "type": "string"
 },
@@ -1481,6 +1487,9 @@ Een assignment heeft drie attributen `variable`, `expression` en `type`.
           "$ref": "#/definitions/AdvancedStringTypes"
         },
         {
+          "$ref": "#/definitions/AdvancedNothingTypes"
+        },
+        {
           "$ref": "#/definitions/VariableType"
         }
       ]
@@ -1508,7 +1517,7 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
 - **type**: Het type van de functie: een gewone functieoproep, een constructor of een eigenschap,
   zie [FunctionType](#functiontype).
 - **name**: De naam van de functie.
-- **namespace**: De namespace van de functie.
+- **namespace**: De namespace van de functie. Dit kunnen zowel variabelen als algemene expressies zijn.
   ::: warning Opmerking
   Wanneer deze niet opgegeven wordt is het een globale functie.
   Wanneer deze opgegeven is zal dit meestal een object variabele zijn, maar dit is niet altijd het geval.
@@ -1530,7 +1539,32 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
     },
     "namespace": {
       "title": "Namespace",
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/FunctionCall"
+        },
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/SequenceType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        },
+        {
+          "$ref": "#/definitions/NothingType"
+        }
+      ]
     },
     "arguments": {
       "title": "Arguments",
@@ -1581,7 +1615,7 @@ Het *FunctionCall*-object heeft 4 attributen: `type`, `name`, `namespace` en `ar
 ```
 
 ::: warning Opmerking
-Wanneer je een functie wil testen die geen returnwaarde heeft (niet de waarde [NothingType](#nothingtype),
+Wanneer je een methode wil testen die geen returnwaarde heeft (niet de waarde [NothingType](#nothingtype),
 bijvoorbeeld `void` in Java),
 moet het uitvoerkanaal een [EmptyChannel](#emptychannel) of [IgnoreChannel](#ignoredchannel) zijn.
 :::
@@ -1590,7 +1624,7 @@ moet het uitvoerkanaal een [EmptyChannel](#emptychannel) of [IgnoreChannel](#ign
 TESTed heeft 3 functietypes: `function`, `constructor` en `property`.
 - **function**: Een normale functieoproep.
 - **constructor**: Een object constructor oproep.
-- **property**: Een objecteigenschap.
+- **property**: Een objecteigenschap of een globale variabele (zonder `namespace`).
 
 ```json
 "FunctionType": {
@@ -1954,7 +1988,8 @@ Het *ObjectKeyValuePair*-object heeft 2 attributen: `key` en `value`.
 Het *NothingType*-object stelt de 'niets'-waarde voor.
 
 Het *NothingType*-object heeft 2 attributen: `type` en `data`.
-- **type**: Het `nothing` datatype, zie [BasicNothingTypes](#basicnothingtypes).
+- **type**: Het `nothing` of `undefined` datatype, zie [BasicNothingTypes](#basicnothingtypes)
+  en [AdvancedNothingTypes](#advancednothingtypes).
 - **data**: De constante waarde `null`.
 
 ```json
@@ -1963,9 +1998,13 @@ Het *NothingType*-object heeft 2 attributen: `type` en `data`.
   "type": "object",
   "properties": {
     "type": {
-      "allOf": [
+      "anyOf": [
         {
           "$ref": "#/definitions/BasicNothingTypes"
+        },
+
+        {
+          "$ref": "#/definitions/AdvancedNothingTypes"
         }
       ]
     },

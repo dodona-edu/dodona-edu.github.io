@@ -56,9 +56,11 @@ In een MAKO-sjabloon kan je de volgende **constanten** tussen `${...}` plaatsen:
 - `prompt`: De prompt die typisch als prefix gebruikt wordt bij een 
   interactieve sessie. Bij Python wordt bijvoorbeeld typische de prompt `>>>`
   gebruikt in interactieve sessies.
-- `programming_language`: De naam van de programmeertaal (bv. Kotlin). 
+- `programming_language`: De naam van de programmeertaal (bv. Kotlin).
 - `natural_language`: De naam van de natuurlijke taal (bv. Nederlands) waarin de
-  beschrijving is opgesteld. 
+  beschrijving is opgesteld.
+- `natural_language_iso639`: De [ISO 639-1 code](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes)
+  van de natuurlijke taal waarin de beschrijving is opgesteld.
 - `namespace`: De namespace voor de ingediende oplossing. In Java is dit 
   bijvoorbeeld de naam van de klasse waarin statische methoden moeten 
   geïmplementeerd worden, voor oefeningen waar in andere programmeertalen 
@@ -68,7 +70,7 @@ In Markdown en HTML wordt automatisch escaping toegepast op de waarde waardoor
 deze constanten vervangen worden. 
 
 Daarnaast is er ook nog een constante `programming_language_raw` die op dezelfde 
-manier wordt vervangen als de constante `programming_language_raw`, maar dan 
+manier wordt vervangen als de constante `programming_language`, maar dan 
 zonder extra escaping. Dit is de aanbevolen constante om te gebruiken in 
 voorwaardelijke fragmenten van een MAKO-sjabloon die enkel in de beschrijving 
 moeten opgenomen worden voor een specifieke programmeertaal (zie verder).
@@ -78,6 +80,7 @@ moeten opgenomen worden voor een specifieke programmeertaal (zie verder).
 Dit MAKO-sjabloon in Markdown met namespace `solution`
 
 ```mako
+## Data
 De prompt voor **${programming_language}** is `${prompt}`.
 De namespace is '${namespace}'.
 ```
@@ -102,8 +105,8 @@ Dit MAKO-sjabloon in HTML met namespace `submission`
 
 ```mako
 <p>
-    De prompt voor <span style="font-weight: bold">${language_html}</span> is <code>${prompt}</code>.
-    De namespace is '${namespace_html}'.
+    De prompt voor <span style="font-weight: bold">${programming_language}</span> is <code>${prompt}</code>.
+    De namespace is '${namespace}'.
 </p>
 ```
 
@@ -130,20 +133,40 @@ In een MAKO-sjabloon kan je de volgende **functies** tussen `${...}` plaatsen:
   :::
 - **variable**: Aan deze MAKO-functie moet de naam van een variabele 
   (`string`) doorgegeven worden. De MAKO-functie geeft de naam van de variabele 
-  terug, opgemaakt volgens de conventie voor functienamen zoals die gangbaar is
-  in de programmeertaal (bijvoorbeeld *snake case* of *camel case*).
+  terug, opgemaakt volgens de conventie voor variabelenamen zoals die gangbaar is
+  in de programmeertaal (bijvoorbeeld *snake case*, *macro case* of *camel case*).
+  Standaard zal deze functie een globale variabelenaam teruggeven. De MAKO-functie
+  heeft een tweede optionele parameter `global` waaraan een Booleaanse waarde
+  (`bool`) kan door gegeven worden, die aangeeft of het een lokale variabele
+  (`False`) of globale variabele (`True`) is.
+  
   ::: tip Tip
   De omzetting naar de conventie van een programmeertaal is het meest accuraat 
   als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
   :::
-- **datatype**: Aan deze MAKO-functie moet een TESTed-gegevenstype (TODO: link) 
-  (`string`) doorgegeven worden. Als het TEST-gegevenstype een collectietype is,
+- **property**: Aan deze MAKO-functie moet de naam van een eigenschap
+  (`string`) doorgegeven worden. De MAKO-functie geeft de naam van de eigenschap
+  terug, opgemaakt volgens de conventie voor een naam van de eigenschap zoals die
+  gangbaar is in de programmeertaal (bijvoorbeeld *snake case* of *camel case*).
+  ::: tip Tip
+  De omzetting naar de conventie van een programmeertaal is het meest accuraat
+  als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
+  :::
+- **datatype**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../json/#datatypes-tested)
+  (`string`) doorgegeven worden. Als het TESTed-gegevenstype een collectietype is,
   dan moet als tweede argument ook nog het gegevenstype van de elementen 
   (`string`) of een lijst (`list`) met de gegevenstypes van de elementen 
   (`string`) van de collectie doorgegeven worden. De MAKO-functie geeft de 
   formele naam van het gegevenstype terug zoals die ingebouwd is in de 
   programmeertaal.
-- **datatype_common**: Aan deze MAKO-functie moet een TESTed-gegevenstype (TODO: link) 
+  
+  Naast de TESTed-gegevenstypes kunnen er ook eigen klassennamen gebruikt worden
+  voor de gegevenstypes.
+  ::: tip Tip
+  De omzetting naar de conventie van een programmeertaal is het meest accuraat
+  als er aan de MAKO-functie een naam in *snake case* wordt doorgegeven.
+  :::
+- **datatype_common**: Aan deze MAKO-functie moet een [TESTed-gegevenstype](../json/#datatypes-tested)
   (`string`) doorgegeven worden. De MAKO-functie geeft de informele naam van het 
   gegevenstype terug zoals die in geschreven taal voor de programmeertaal 
   gebruikt wordt. Standaard wordt die naam in het enkelvoud teruggegeven. De 
@@ -158,7 +181,7 @@ Dit MAKO-sjabloon in Markdown
 ```mako
 Aan de functie ${function("splits_in_woorden")} moet een ${datatype_common("text")} 
 (${datatype("text")}) doorgegeven worden. De functie geeft een ${datatype_common("sequence")} 
-van {datatype_common("character", plural=True)} (${datatype(("sequence", "char"))}) terug.
+van ${datatype_common("char", plural=True)} (${datatype(("sequence", "char"))}) terug.
 ```
 
 wordt voor JavaScript omgezet naar
@@ -180,7 +203,7 @@ van karakters (`List[str]`) terug.
 ## Codefragmenten
 
 In een MAKO-sjabloon kan je generieke codefragmenten opnemen. Ze worden 
-genoteerd in _DOCTEST_-stijl en gebruiken de  
+genoteerd in _DOCTEST_-stijl en gebruiken de 
 [programmeertaal-onafhankelijke grammatica](../dsl/#statements-expressies-en-return-raw))
 van TESTed. Vanuit die generieke notatie worden ze omgezet naar codefragmenten 
 die de grammatica en stijlconventies van een specifieke programmeertaal 
@@ -237,7 +260,7 @@ In HTML moeten generieke codefragmenten voor TESTed ingesloten worden in een
 `<code>`-tags bevatten. Zo wordt dit codefragment in een MAKO-sjabloon in HTML
 
 ```mako
-<div class="highlighter-rouge language-${language}">
+<div class="highlighter-rouge language-${programming_language_raw}">
 <pre class="highlight"><code class="color tested code" id="code">\
 > encode("And now for something completely different.",
          1)
@@ -271,7 +294,7 @@ Dit MAKO-sjabloon in Markdown
 ```mako
 Deze tekst wordt in de beschrijving van alle programmeertalen opgenomen.
 
-% if programming_language == 'java':
+% if programming_language_raw == 'java':
 Deze tekst wordt enkel in de beschrijving van ${programming_language} opgenomen.
 % endif
 ```
@@ -302,10 +325,10 @@ toe te kennen aan een variabele.
 ```mako
 <% lijst = datatype_common("list") %>\
 
-Schrijf een functie ${function_name("heir")}, waaraan de waarden $k$ en $n$,
-van het type ${type_name("integer")}, moeten doorgegeven worden, waarbij je er 
+Schrijf een functie ${function("heir")}, waaraan de waarden $k$ en $n$,
+van het type ${datatype("integer")}, moeten doorgegeven worden, waarbij je er 
 mag van uitgaan dat $k >= 2$. De functie moet een ${lijst} van het type 
-${type_name(("list", "integer"))} teruggeven die de volgorde aangeeft waarin de 
+${datatype(("list", "integer"))} teruggeven die de volgorde aangeeft waarin de 
 kinderen uit de cirkel verwijderd werden.
 
 Het eerst verwijderde kind staat daarbij als eerste in de ${lijst}, en de 
@@ -316,7 +339,8 @@ ${lijst}.
 
 ## Volledige opgave
 
-Dit is het MAKO-sjabloon in HTML voor de oefening Spoorhekcodering (TODO: link).
+Dit is het MAKO-sjabloon in HTML voor de oefening
+[Spoorhekcodering](https://dodona.ugent.be/nl/courses/392/#series-card-3922).
 
 ```mako
 <p>
@@ -372,37 +396,37 @@ ${style_yellow}><strong>e</strong></span>###</span></code></pre>
 
 <h3>Assignment</h3>
 <ul>
-    <li>Write a function <code>${function_name("encode")}</code> that takes two
+    <li>Write a function <code>${function("encode")}</code> that takes two
     arguments:
         <ol>
-            <li>a text string (${type_name("text")}) and</li>
-            <li>the number (${type_name("integer")}) of rails used in the rail
+            <li>a text string (${datatype("text")}) and</li>
+            <li>the number (${datatype("integer")}) of rails used in the rail
             fence cipher.</li>
         </ol>
-        The function must return a string (${type_name("text")}) containing the
+        The function must return a string (${datatype("text")}) containing the
         encoded message of the given text, according to the rail fence cipher with
         the given number of rails.
     </li>
-    <li>Write a function <code>${function_name("decode")}</code> that takes two
+    <li>Write a function <code>${function("decode")}</code> that takes two
     arguments:
         <ol>
-            <li> a text (${type_name("text")}) encoded according to the rail fence
+            <li> a text (${datatype("text")}) encoded according to the rail fence
             cipher and</li>
-            <li>the number (${type_name("integer")}) of rails used in the coding
+            <li>the number (${datatype("integer")}) of rails used in the coding
             scheme.</li>
         </ol>
-        The function must return a string (${type_name("text")}) containing the
+        The function must return a string (${datatype("text")}) containing the
         original text after decoding.
     </li>
 </ul>
 
-% if language == 'java':
-<p> The functions must be static declared in the class ${namespace_html}.</p>
+% if programming_language_raw == 'java':
+<p> The functions must be static declared in the class ${namespace}.</p>
 % endif
 
 <h3>Example</h3>
 
-<div class="highlighter-rouge language-${language}">
+<div class="highlighter-rouge language-${programming_language_raw}">
 <pre class="highlight"><code class="tested" id="code">\
 > encode("And now for something completely different.", 1)
 "And now for something completely different."
