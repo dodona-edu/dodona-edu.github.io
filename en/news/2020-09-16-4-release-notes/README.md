@@ -54,3 +54,9 @@ All details about this Dodona version can be found in [our GitHub release notes]
 Dodona 4.4 enables the grading of solutions by teachers. Because we want to make sure this works as expected, this feature is only available to a select number of users as a test.
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.4).
+
+## Dodona 4.5 - 2021-06-04
+
+Dodona 4.5 enables the grading of solutions for all users as a beta. In addition, the "all courses" page was redesigned to make it more useful. The courses of your own institution are now more prominent. In a future release a tab with "featured courses" will be added.
+
+All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.5).
