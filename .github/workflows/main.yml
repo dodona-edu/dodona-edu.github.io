@@ -21,4 +21,4 @@ jobs:
         with:
           directory: "./.vuepress/dist"
           # The directory to scan
-          arguments: --url-ignore "/smartschool.be/" --hydra_config "{max_concurrency: 5}"
+          arguments: '--url-ignore "/smartschool.be/" --hydra_config "{max_concurrency: 5}"'
