@@ -23,7 +23,7 @@ Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door
 
 ![image](./student.explore_courses.png)
 
-Dit zal je naar een [overzicht van alle cursussen](https://dodona.ugent.be/nl/courses/) brengen. Hier kan je de zoekbalk gebruiken om op basis van een cursusnaam, een naam van een lesgever, de naam van je onderwijsinstelling of een academiejaar de juiste cursus kan vinden.
+Dit zal je naar een [overzicht van alle cursussen](https://dodona.ugent.be/nl/courses/) brengen. Je krijgt er een of meerdere tabs te zien waar je de zoekbalk kan gebruiken om op basis van een cursusnaam, een naam van een lesgever, de naam van je onderwijsinstelling of een academiejaar de juiste cursus kan vinden.
 
 ![image](./student.courses.png)
 
@@ -94,7 +94,7 @@ Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vó
 
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
-  | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) | 
+  | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) |
   | `verkeerd` | ![image](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
   | `correct` | ![image](../../../../images/course_exercise_status_icons/correct.png) (![image](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
 
