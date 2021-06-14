@@ -11,7 +11,7 @@ These features are available for both exercises and reading activities. They are
 
 ## Markdown
 
-For Dodona exercises and reading activities, we recommend using Markdown over HTML. Descriptions for courses and series can also be written in Markdown. Markdown is a markup language like HTML, but a lot simpler. Below, you can find more information about the basic formatting and a list of all syntax in this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). The rest of this page contains specific extentions (in both Markdown and HTML) that are available in exercise descriptions on Dodona.
+For Dodona exercises and reading activities, we recommend using Markdown over HTML. Descriptions for courses and series can also be written in Markdown. Markdown is a markup language like HTML, but a lot simpler. Below, you can find more information about the basic formatting and a list of all syntax in this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). The rest of this page contains specific extensions (in both Markdown and HTML) that are available in exercise descriptions on Dodona.
 
 ### Headers
 
