@@ -28,7 +28,7 @@ In markdown kan je eenvoudig titels van verschillende niveaus gebruiken. Je plaa
 
 ### Tekstopmaak
 
-Om tekst op te maken, plaats je tekst tussen sterretjes `*`. Als één of meerdere woorden tussen enkele sterretjes staan, dan zal de tekst cursief geplaatst worden. Als ze tussen dubbele sterretjes geplaatst worden dan zal de tekst in het vet verschijnen. Plaats je tekst tussen dubbele tildes `~`, dan zal de tekst doorstreept worden. Om code weer te geven in je beschrijving plaats je tekst tussen *back ticks* `` ` ``.
+Om tekst op te maken, plaats je tekst tussen sterretjes (`*`). Als één of meerdere woorden tussen enkele sterretjes staan, dan zal de tekst cursief geplaatst worden. Als ze tussen dubbele sterretjes geplaatst worden dan zal de tekst in het vet verschijnen. Plaats je tekst tussen dubbele tildes (`~`), dan zal de tekst doorstreept worden. Om code weer te geven in je beschrijving plaats je tekst tussen *back ticks* (`` ` ``).
 
 ```markdown
 Dit is een voorbeeldzin met woorden in *cursief*, **vet**, en ~~doorstreept~~ en met variabel `a` in functie `geefOplossing()`.
@@ -38,7 +38,7 @@ Dit ziet er dan uit als volgt: Dit is een voorbeeldzin met woorden in *cursief*,
 
 ### Links en afbeeldingen
 
-Links en oplossingen zijn iets complexer om toe te voegen. Ze bestaan uit twee delen waarvan het eerste deel tussen vierkantje haakjes `[]` staat en het tweede deel tussen ronde haakjes `()`. Het eerste deel wordt gebruikt voor de te linken tekst of de afbeeldingenomschrijving, het tweede deel voor de link zelf of de link naar de afbeelding. Om aan te geven dat het om een afbeelding gaat, en geen link, plaats je een uitroepingsteken `!` voor het eerste vierkantje haakje.
+Links en afbeeldingen zijn iets complexer om toe te voegen. Ze bestaan uit twee delen waarvan het eerste deel tussen vierkantje haakjes (`[]`) staat en het tweede deel tussen ronde haakjes (`()`). Het eerste deel wordt gebruikt voor de te linken tekst of de afbeeldingenomschrijving, het tweede deel voor de link zelf of de link naar de afbeelding. Om aan te geven dat het om een afbeelding gaat, en geen link, plaats je een uitroepingsteken (`!`) voor het eerste vierkantje haakje.
 
 ```markdown
 Dit is een zin waarbij [deze woorden](https://google.com) linken naar Google.
