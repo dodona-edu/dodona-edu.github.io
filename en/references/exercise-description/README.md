@@ -11,7 +11,69 @@ These features are available for both exercises and reading activities. They are
 
 ## Markdown
 
- For Dodona exercises and reading activities, we recommend using Markdown over HTML. Although Markdown is widely used on the internet, the format is not standardized. This led to existence of several Markdown "flavors". Dodona uses [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) and the Kramdown parser to generate HTML from the Markdown source. You can find more information about basic Markdown formatting on this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+For Dodona exercises and reading activities, we recommend using Markdown over HTML. Descriptions for courses and series can also be written in Markdown. Markdown is a markup language like HTML, but a lot simpler. Below, you can find more information about the basic formatting and a list of all syntax in this [Markdown Cheatsheet page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). The rest of this page contains specific extentions (in both Markdown and HTML) that are available in exercise descriptions on Dodona.
+
+### Headers
+
+In markdown, it is easy to use headers of different levels. For this, you simply put one or more hash symbols (`#`) in front of your title. Depending on the number of symbols used, a larger or smaller title will be shown.
+
+```markdown
+# Level 1
+## Level 2
+### Level 3
+#### Level 4
+##### Level 5
+###### Level 6
+```
+
+### Text formatting
+
+For simple text formatting, place tekst between stars (`*`). If one or more words are between single starts, the text will render in italics, if you use double stars, it wil render in bold. If you place words between double tilde signs (`~`), the text will be striked through. To format text as code, place the text between backticks (`` ` ``).
+
+```markdown
+This is an example with words in *italics*, **bold**, and ~~striked through~~ and with a variable `a` in function `returnSolution()`.
+```
+
+This example results in this formatting: This is an example with words in *italics*, **bold**, and ~~striked through~~ and with a variable `a` in function `returnSolution()`.
+
+### Hyperlinks and images
+
+Hyperlinks and images are a little more complex. They consist out of two parts of which you place the first part between square brackets (`[]`) and the second part between round pbrackets (`()`). The first part is used for the words that need to be linked or the image description, the second part is used for the url of the page or image. To indicate you want to render an image, place an exclamation mark (`!`) in front of the first square bracket.
+
+```markdown
+In this sentence, [these words](https://google.com) link to Google.
+Below you can see the Dodona logo.
+
+![Dodona logo](https://dodona.ugent.be/icon.png)
+```
+This results in: In this sentence, [these words](https://google.com) link to Google.
+Below you can see the Dodona logo.
+
+![Dodona logo](https://dodona.ugent.be/icon.png)
+
+### Lists
+
+Lists are very simple in Markdown. Depending if you want a numbered or normal list, simply prepend your lines with `1. ` or `* `. 
+
+```markdown
+1. item 1
+2. item 2
+3. item 3
+
+* item 1
+* item 2
+* item 3
+```
+
+Which results in:
+
+1. item 1
+2. item 2
+3. item 3
+
+* item 1
+* item 2
+* item 3
 
 ## Images
 
