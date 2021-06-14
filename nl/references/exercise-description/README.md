@@ -15,7 +15,7 @@ Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schri
 
 ### Titels
 
-In markdown kan je eenvoudig titels van verschillende niveaus gebruiken. Je plaats hiervoor één of meerdere hekjes (`#`) voor je titel. Afhankelijk van het aantal hekjes zal je een grotere of kleinere titel krijgen.
+In Markdown kan je eenvoudig titels van verschillende niveaus gebruiken. Je plaats hiervoor één of meerdere hekjes (`#`) voor je titel. Afhankelijk van het aantal hekjes zal je een grotere of kleinere titel krijgen.
 
 ```markdown
 # Niveau 1
@@ -54,7 +54,7 @@ Hieronder staat het Dodona logo afgebeeld.
 
 ### Opsommingen
 
-Opsommingen werken heel natuurlijk in markdown. Afhankelijk of je een genummerde of een gewone opsomming wil, laat je je regel voorafgaan door `1. ` of `* `. Dit ziet er dan als volgt uit:
+Opsommingen werken heel natuurlijk in Markdown. Afhankelijk of je een genummerde of een gewone opsomming wil, laat je je regel voorafgaan door `1. ` of `* `. Dit ziet er dan als volgt uit:
 
 ```markdown
 1. item 1

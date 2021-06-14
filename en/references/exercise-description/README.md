@@ -15,7 +15,7 @@ For Dodona exercises and reading activities, we recommend using Markdown over HT
 
 ### Headers
 
-In markdown, it is easy to use headers of different levels. For this, you simply put one or more hash symbols (`#`) in front of your title. Depending on the number of symbols used, a larger or smaller title will be shown.
+In Markdown, it is easy to use headers of different levels. For this, you simply put one or more hash symbols (`#`) in front of your title. Depending on the number of symbols used, a larger or smaller title will be shown.
 
 ```markdown
 # Level 1
@@ -28,17 +28,17 @@ In markdown, it is easy to use headers of different levels. For this, you simply
 
 ### Text formatting
 
-For simple text formatting, place tekst between stars (`*`). If one or more words are between single starts, the text will render in italics, if you use double stars, it wil render in bold. If you place words between double tilde signs (`~`), the text will be striked through. To format text as code, place the text between backticks (`` ` ``).
+For simple text formatting, place tekst between stars (`*`). If one or more words are between single starts, the text will render in italics, if you use double stars, it wil render in bold. If you place words between double tilde signs (`~`), the text will be struck through. To format text as code, place the text between backticks (`` ` ``).
 
 ```markdown
 This is an example with words in *italics*, **bold**, and ~~striked through~~ and with a variable `a` in function `returnSolution()`.
 ```
 
-This example results in this formatting: This is an example with words in *italics*, **bold**, and ~~striked through~~ and with a variable `a` in function `returnSolution()`.
+This example results in this formatting: This is an example with words in *italics*, **bold**, and ~~strikethrough~~ and with a variable `a` in function `returnSolution()`.
 
 ### Hyperlinks and images
 
-Hyperlinks and images are a little more complex. They consist out of two parts of which you place the first part between square brackets (`[]`) and the second part between round pbrackets (`()`). The first part is used for the words that need to be linked or the image description, the second part is used for the url of the page or image. To indicate you want to render an image, place an exclamation mark (`!`) in front of the first square bracket.
+Hyperlinks and images are a little more complex. They consist out of two parts of which you place the first part between square brackets (`[]`) and the second part between round brackets (`()`). The first part is used for the words that need to be linked or the image description, the second part is used for the URL of the page or image. To indicate you want to render an image, place an exclamation mark (`!`) in front of the first square bracket.
 
 ```markdown
 In this sentence, [these words](https://google.com) link to Google.
