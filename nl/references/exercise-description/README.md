@@ -11,7 +11,68 @@ De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oef
 
 ## Markdown
 
-Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schrijven in Markdown. Alhoewel Markdown veelgebruikt is op het Internet, is het formaat niet gestandaardiseerd. Dit heeft tot gevolg dat er verschillende Markdown varianten bestaan. Dodona gebruikt de [kramdown Syntax](http://kramdown.gettalong.org/syntax.html) en Parser om HTML te genereren van de Markdown broncode. Meer informatie over opmaak in Markdown kan je vinden op deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schrijven in Markdown. Ook voor beschrijvingen van cursussen en reeksen kan Markdown gebruikt worden. Markdown is een soort opmaaktaal zoals HTML, maar dan een stuk eenvoudiger. Hieronder kan je de basisopmaak vinden, een lijst van alle syntax kan je vinden in deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Verder op deze pagina staan specifieke uitbreidingen die werken binnen Dodona oefeningenbeschrijvingen.
+
+### Titels
+
+In Markdown kan je eenvoudig titels van verschillende niveaus gebruiken. Je plaats hiervoor één of meerdere hekjes (`#`) voor je titel. Afhankelijk van het aantal hekjes zal je een grotere of kleinere titel krijgen.
+
+```markdown
+# Niveau 1
+## Niveau 2
+### Niveau 3
+#### Niveau 4
+##### Niveau 5
+###### Niveau 6
+```
+
+### Tekstopmaak
+
+Om tekst op te maken, plaats je tekst tussen sterretjes (`*`). Als één of meerdere woorden tussen enkele sterretjes staan, dan zal de tekst cursief geplaatst worden. Als ze tussen dubbele sterretjes geplaatst worden dan zal de tekst in het vet verschijnen. Plaats je tekst tussen dubbele tildes (`~`), dan zal de tekst doorstreept worden. Om code weer te geven in je beschrijving plaats je tekst tussen *back ticks* (`` ` ``).
+
+```markdown
+Dit is een voorbeeldzin met woorden in *cursief*, **vet**, en ~~doorstreept~~ en met variabel `a` in functie `geefOplossing()`.
+```
+
+Dit ziet er dan uit als volgt: Dit is een voorbeeldzin met woorden in *cursief*, **vet**, en ~~doorstreept~~ en met variabel `a` in functie `geefOplossing()`.
+
+### Links en afbeeldingen
+
+Links en afbeeldingen zijn iets complexer om toe te voegen. Ze bestaan uit twee delen waarvan het eerste deel tussen vierkantje haakjes (`[]`) staat en het tweede deel tussen ronde haakjes (`()`). Het eerste deel wordt gebruikt voor de te linken tekst of de afbeeldingenomschrijving, het tweede deel voor de link zelf of de link naar de afbeelding. Om aan te geven dat het om een afbeelding gaat, en geen link, plaats je een uitroepingsteken (`!`) voor het eerste vierkantje haakje.
+
+```markdown
+Dit is een zin waarbij [deze woorden](https://google.com) linken naar Google.
+Hieronder staat het Dodona logo afgebeeld.
+
+![Dodona logo](https://dodona.ugent.be/icon.png)
+```
+
+Dit is een zin waarbij [deze woorden](https://google.com) linken naar Google.
+Hieronder staat het Dodona logo afgebeeld.
+
+![Dodona logo](https://dodona.ugent.be/icon.png)
+
+### Opsommingen
+
+Opsommingen werken heel natuurlijk in Markdown. Afhankelijk of je een genummerde of een gewone opsomming wil, laat je je regel voorafgaan door `1. ` of `* `. Dit ziet er dan als volgt uit:
+
+```markdown
+1. item 1
+2. item 2
+3. item 3
+
+* item 1
+* item 2
+* item 3
+```
+
+1. item 1
+2. item 2
+3. item 3
+
+* item 1
+* item 2
+* item 3
 
 ## Afbeeldingen
 
