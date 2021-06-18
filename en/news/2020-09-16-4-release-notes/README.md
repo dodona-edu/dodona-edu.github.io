@@ -63,6 +63,6 @@ All details about this Dodona version can be found in [our GitHub release notes]
 
 ## Dodona 4.6 - 2021-06-18
 
-Dodona 4.6 adds a "featured courses" section to the courses overview. The courses in this list contain instructions next to exercises and can be used for self-paced learning. As a teacher, they are also a great starting point for building your own course.
+Dodona 4.6 adds a "featured courses" section to the courses overview. The courses in this list contain instructions in addition to exercises and can be used for self-paced learning. As a teacher, they are also a great starting point for building your own course.
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.6).
