@@ -58,3 +58,9 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 Dodona 4.5 schakelt de mogelijkheid om punten te geven tijdens een evaluatie in voor alle gebruikers. Deze feature is nog in beta, dus problemen mogen steeds gemeld worden. Daarnaast kreeg de overzichtspagina van alle beschikbare cursussen een update. Deze is nu gebruiksvriendelijker door een beter onderscheid te maken tussen de cursussen van de eigen onderwijsinstelling.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.5).
+
+## Dodona 4.6 - 18/06/2021
+
+Dodona 4.6 voegt "uitgelichte cursussen" toe aan het globale cursusoverzicht. Deze cursussen bevatten naast oefeningen ook instructies om een programmeerataal te leren. Voor leerkrachten zijn ze een goed startpunt om een eigen cursus op te bouwen.
+
+Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.6).
