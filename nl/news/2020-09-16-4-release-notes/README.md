@@ -61,6 +61,6 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 
 ## Dodona 4.6 - 18/06/2021
 
-Dodona 4.6 voegt "uitgelichte cursussen" toe aan het globale cursusoverzicht. Deze cursussen bevatten naast oefeningen ook instructies om een programmeerataal te leren. Voor leerkrachten zijn ze een goed startpunt om een eigen cursus op te bouwen.
+Dodona 4.6 voegt "uitgelichte cursussen" toe aan het globale cursusoverzicht. Deze cursussen bevatten naast oefeningen ook instructies om een programmeertaal te leren. Voor leerkrachten zijn ze een goed startpunt om een eigen cursus op te bouwen.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.6).
