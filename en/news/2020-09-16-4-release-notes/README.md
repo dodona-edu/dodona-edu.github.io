@@ -60,3 +60,9 @@ All details about this Dodona version can be found in [our GitHub release notes]
 Dodona 4.5 enables the grading of solutions for all users as a beta. In addition, the "all courses" page was redesigned to make it more useful. The courses of your own institution are now more prominent. In a future release a tab with "featured courses" will be added.
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.5).
+
+## Dodona 4.6 - 2021-06-18
+
+Dodona 4.5 adds a "featured courses" section to the courses overview. The courses in this list contain instructions next to exercises and can be used for self-paced learning. As a teacher, they are also a great starting point for building your own course.
+
+All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.6).
