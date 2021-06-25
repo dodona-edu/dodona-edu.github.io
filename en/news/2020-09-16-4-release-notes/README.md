@@ -71,6 +71,6 @@ All details about this Dodona version can be found in [our GitHub release notes]
 
 Correctly solving an exercise should be a rewarding experience. In Dodona 4.7, after a submission is judged, the submit button temporarily changes color and shows an emoji to indicate the result of the submission. In addition, the results of a grading session are now presented more clearly to students.
 
-All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.7).
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/2890).
 
 
