@@ -64,3 +64,10 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 Dodona 4.6 voegt "uitgelichte cursussen" toe aan het globale cursusoverzicht. Deze cursussen bevatten naast oefeningen ook instructies om een programmeertaal te leren. Voor leerkrachten zijn ze een goed startpunt om een eigen cursus op te bouwen.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.6).
+
+## Dodona 4.7 - 25/06/2021
+
+Een oefening correct oplossen zou een leuke gebeurtenis moeten zijn. Vanaf Dodona 4.7 verandert de indienknop in een emoji die de status van je oplossing aangeeft nadat de oefening beoordeeld werd. We namen ook het studentenoverzicht van een evaluatie onder handen om de resultaten duidelijker weer te geven.
+
+Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.7).
+
