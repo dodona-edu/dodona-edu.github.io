@@ -69,5 +69,5 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 
 Een oefening correct oplossen zou een leuke gebeurtenis moeten zijn. Vanaf Dodona 4.7 verandert de indienknop in een emoji die de status van je oplossing aangeeft nadat de oefening beoordeeld werd. We namen ook het studentenoverzicht van een evaluatie onder handen om de resultaten duidelijker weer te geven.
 
-Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.7).
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/2890).
 
