@@ -66,3 +66,11 @@ All details about this Dodona version can be found in [our GitHub release notes]
 Dodona 4.6 adds a "featured courses" section to the courses overview. The courses in this list contain instructions in addition to exercises and can be used for self-paced learning. As a teacher, they are also a great starting point for building your own course.
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.6).
+
+## Dodona 4.7 - 2021-06-25
+
+Correctly solving an exercise should be a rewarding experience. In Dodona 4.7, after a submission is judged, the submit button temporarily changes color and shows an emoji to indicate the result of the submission. In addition, the results of a grading session are now presented more clearly to students.
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/2890).
+
+
