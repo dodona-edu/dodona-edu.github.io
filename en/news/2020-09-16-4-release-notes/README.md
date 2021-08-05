@@ -73,4 +73,10 @@ Correctly solving an exercise should be a rewarding experience. In Dodona 4.7, a
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/2890).
 
+## Dodona 4.8 - 2021-08-05
+
+Dodona 4.8 contains a huge number of bug fixes and lays the foundation for our upcoming 5.0 release. We used the feedback from the grading preview to make grading even more user-friendly. The biggest change was a revamp of the user selection which now closely follows the Material Design spec.
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/2965).
+
 
