@@ -73,6 +73,6 @@ Alle details over deze Dodona versie kan je vinden in onze [GitHub release discu
 
 ## Dodona 4.8 - 05/08/2021
 
-Dodona 4.8 bevat een hoop *bug fixes* en legt de basis voor de komende 5.0 release. Dankzij de feedback op de *grading preview* hebben we het geven van punten nog gebruiksvriendelijker gemaakt. De grootste aanpassing was hier een duidelijker manier om studenten te selecteren.
+Dodona 4.8 bevat een hoop *bug fixes* en legt de basis voor de komende 5.0 release. Dankzij de feedback op de *grading preview* hebben we het geven van punten nog gebruiksvriendelijker gemaakt. De grootste aanpassing was hier een duidelijkere manier om studenten te selecteren.
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/2965).
