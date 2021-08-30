@@ -29,6 +29,11 @@ Voor de Dodona webapplicatie kunt u terecht op [https://dodona.ugent.be](https:/
     <p>Technische referentie over configuraties en mappenstructuren.</p>
     <p><router-link to="/nl/references/">Ga naar referenties →</router-link></p>
   </div>
+  <div class="feature">
+    <h2>TESTed</h2>
+    <p>Technische informatie over het gebruik van de TESTed judge.</p>
+    <p><router-link to="/nl/tested-judge/">Ga naar TESTed →</router-link></p>
+  </div>
 </div>
 
 ## Recente berichten

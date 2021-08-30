@@ -1,6 +1,8 @@
 const { description } = require('../package')
 const fs = require("fs");
 const path = require("path");
+const { loadLanguages } = require("./extendPrism")
+loadLanguages();
 
 module.exports = {
   title: 'Dodona Docs',
@@ -10,7 +12,7 @@ module.exports = {
     '/nl/': {
       lang: 'nl-BE',
       title: 'Dodona Docs'
-    }, 
+    },
     '/en/': {
       lang: 'en-US',
       title: 'Dodona Docs'
@@ -51,12 +53,14 @@ module.exports = {
           { text: 'Nieuws', link: '/nl/news/' },
           { text: 'Handleidingen', link: '/nl/guides/' },
           { text: 'Referenties', link: '/nl/references/' },
+          { text: 'TESTed', link: '/nl/tested-judge/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
           '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
+          '/nl/tested-judge/': getTESTedSidebar('nl', 'TESTed judge', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
       },
@@ -67,12 +71,14 @@ module.exports = {
           { text: 'News', link: '/en/news/' },
           { text: 'Guides', link: '/en/guides/' },
           { text: 'References', link: '/en/references/' },
+          { text: 'TESTed', link: '/en/tested-judge/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
           '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
+          '/en/tested-judge/': getTESTedSidebar('en', 'TESTed judge', 'Overview'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -83,6 +89,7 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+    'tabs',
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     [
@@ -122,7 +129,8 @@ function getGeneralSidebar() {
     '',
     'news/',
     'guides/',
-    'references/'
+    'references/',
+    'tested-judge/'
   ]
 }
 
@@ -138,7 +146,8 @@ function getNewsSidebar(lang, groupTitle, FirstItem) {
       ]
     },
     `/${lang}/guides/`,
-    `/${lang}/references/`
+    `/${lang}/references/`,
+    `/${lang}/tested-judge/`,
   ]
 }
 
@@ -189,7 +198,8 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
         'creating-a-judge/'
       ]
     },
-    `/${lang}/references/`
+    `/${lang}/references/`,
+    `/${lang}/tested-judge/`,
   ]
 }
 
@@ -209,9 +219,35 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'exercise-directory-structure/',
         'python-judge/',
       ]
+    },
+    `/${lang}/tested-judge/`,
+  ]
+}
+
+
+function getTESTedSidebar(lang, groupTitle, FirstItem) {
+  return [
+    `/${lang}/news/`,
+    `/${lang}/guides/`,
+    `/${lang}/references/`,
+    {
+      title: groupTitle,
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['', FirstItem],
+        'exercise-config/',
+        'dsl/',
+        'json/',
+        'template-description/',
+        'template-exercise/',
+        'standalone/',
+        'configure-new-programming-language/',
+      ]
     }
   ]
 }
+
 
 function getNewsLinks() {
   return fs

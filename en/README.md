@@ -29,6 +29,11 @@ For the Dodona web application, please go to [https://dodona.ugent.be](https://d
     <p>Technical references on config files and directory structures.</p>
     <p><router-link to="/en/references/">Go to references →</router-link></p>
   </div>
+  <div class="feature">
+    <h2>TESTed Judge</h2>
+    <p>Technical information about the usage of the TESTed judge.</p>
+    <p><router-link to="/en/tested-judge/">Go to TESTed →</router-link></p>
+  </div>
 </div>
 
 ## Latest messages
