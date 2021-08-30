@@ -9,7 +9,7 @@ footer: Made by Team Dodona with ❤️
 
 On this website, you can find a number of [guides](/guides) and [reference pages](/references). The ultimate goal of this web site is to offer all content in both English and Dutch. For the time being, not all pages are translated.
 
-Are you a teacher and do you want to create your own Dodona course (with existing or own programming exercises)? Have a look at [this getting started guide](guides/teachers/getting-started).
+If you are a teacher and want to create your own Dodona course (with existing or own programming exercises), have a look at [this getting started guide](guides/teachers/getting-started).
 
 For the Dodona web application, please go to [https://dodona.ugent.be](https://dodona.ugent.be).
 

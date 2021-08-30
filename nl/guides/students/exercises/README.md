@@ -147,19 +147,19 @@ Als de judge binnen een testgeval rapporteert over individuele testen, dan worde
 
 ## Vragen stellen
 ![image](./student.ask_questions.png)
-Nadat je je oplossing ingediend hebt, kan je op twee manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `STEL EEN VRAAG OVER JE CODE` te klikken. Daarnaast kan je door links van het regelnummer op de oranje cirkel te klikken een vraag stellen bij een specifieke regel code.
+Nadat je je oplossing hebt ingediend, kan je op twee manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de oranje cirkel klikken een vraag stellen bij een specifieke regel code.
 
 ![image](./student.type_questions.png)
 
-Typ in het tekstvak de vraag die je aan je leerkracht wil stellen. Je kan Markdown gebruiken om je tekst extra opmaak te geven. Klik als laatste op `VRAAG STELLEN`.
+Typ in het tekstvak de vraag die je aan de lesgever wil stellen. Je kan Markdown gebruiken om je tekst extra opmaak te geven. Klik als laatste op `Vraag stellen`.
 
 ::: tip Ondersteuning voor Markdown
 
-Je kan een aantal woorden in een vraag beklemtonen door:
+Je kan met Markdown extra opmaak toevoegen door:
 
-- backticks (\` kan je typen door de toetscombinatie `Alt Gr`+ `µ`) rond een stukje code te zetten. \`Variabelen\` wordt bijvoorbeeld weergegeven als `Variabelen`.
-- asterisken (\*) of liggende streepjes (\_) rond woorden te zetten om het schuin weer te geven. \*schuine tekst\* wordt bijvoorbeeld weergegeven als *schuine tekst*.
-- twee asterisken (\**) of twee liggende streepjes (\__) rond woorden te zetten om het in het vet weer te geven. \*\*vette tekst\*\* wordt bijvoorbeeld weergegeven als **vette tekst**.
+- asterisken (\*)  rond woorden te zetten om het schuin weer te geven. \*schuine tekst\* wordt bijvoorbeeld weergegeven als *schuine tekst*.
+- twee asterisken (\**) rond woorden te zetten om het in het vet weer te geven. \*\*vette tekst\*\* wordt bijvoorbeeld weergegeven als **vette tekst**.
+- backticks (\`) rond een stukje code te zetten. \`Variabelen\` wordt bijvoorbeeld weergegeven als `Variabelen`.
 
 Bekijk hier [alle mogelijkheden van Markdown](../../../references/exercise-description/#markdown).
 :::
