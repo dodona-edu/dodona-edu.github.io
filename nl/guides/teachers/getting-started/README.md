@@ -36,7 +36,7 @@ Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken d
 Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud van een bestaande cursus over te nemen en aan te passen. Om inspiratie op te doen kan je een kijkje nemen in volgende bestaande cursussen:
 
 - **[De Programmeursleerling](/nl/guides/the-coders-apprentice)**: een cursus programmeren in Python die gebaseerd is op het boek De Programmeursleerling van Pieter Spronck.
-- **[Informatica](https://dodona.ugent.be/nl/courses/164/)**: een cursus programmeren in Python die gegeven wordt aan het vijfde jaar Wiskunde-Wetenschappen-Informatica van het [Sint-Paulusschool Campus College](https://www.collegewaregem.be/) in Waregem. De cursus en een groot deel van de oefeningen werd opgesteld door [Dominiek Vandewalle](mailto:dominiek.vandewalle@sgsintpaulus.eu).
+- **[Informatica](https://dodona.ugent.be/nl/courses/164/)**: een cursus programmeren in Python die gegeven wordt aan het vijfde jaar Wiskunde-Wetenschappen-Informatica van het [Sint-Paulusschool Campus College](https://www.sintpaulus.eu/) in Waregem. De cursus en een groot deel van de oefeningen werd opgesteld door [Dominiek Vandewalle](mailto:dominiek.vandewalle@sgsintpaulus.eu).
 - **[Programmeren](https://dodona.ugent.be/nl/courses/88/)**: een cursus programmeren in Python die gegeven wordt door prof. Peter Dawyndt aan de faculteit Wetenschappen van de Universiteit Gent.
 
 
