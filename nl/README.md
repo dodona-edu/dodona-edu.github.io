@@ -7,9 +7,9 @@ actionLink: "/en/"
 footer: Made by Team Dodona with ❤️
 ---
 
-Op deze website kunt u een aantal verschillende handleidingen en referenties terugvinden. Het uiteindelijke doel van deze website is om alle inhoud in zowel het Engels als Nederlands aan te bieden. Voorlopig bestaat ze uit een mix van beide.
+Op deze website kunt u een aantal verschillende [handleidingen](/guides) en [referenties](/references) terugvinden. Het uiteindelijke doel van deze website is om alle inhoud in zowel het Engels als Nederlands aan te bieden. Voorlopig bestaat ze uit een mix van beide.
 
-Nog niet alle handleidingen van onze vorige documentatiewebsite zijn gemigreerd. De oude website kunt u voorlopig raadplegen op [https://dodona.readthedocs.io/nl/latest/](https://dodona.readthedocs.io/nl/latest/).
+Ben je een leerkracht en wil je je eigen Dodona cursus aanmaken (met bestaande of eigen oefeningen)? Bekijk dan [deze handleiding](guides/teachers/getting-started).
 
 Voor de Dodona webapplicatie kunt u terecht op [https://dodona.ugent.be](https://dodona.ugent.be).
 

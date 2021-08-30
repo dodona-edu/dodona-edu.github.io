@@ -101,6 +101,15 @@ module.exports = {
       }
     ],
     [
+      'vuepress-plugin-mathjax',
+      {
+        target: 'svg',
+        macros: {
+          '*': '\\times',
+        },
+      },
+    ],
+    [
       '@vuepress/google-analytics',
       {
         'ga': 'UA-76309350-2'

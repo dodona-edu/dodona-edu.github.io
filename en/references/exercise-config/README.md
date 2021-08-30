@@ -80,7 +80,7 @@ The structure for a reading activity is identical to that of an exercise. There 
     }
   },
   "type": "content",
-  "visibility": "public",
+  "access": "public",
   "labels": ["test", "intro"]
 }
 ```
@@ -89,7 +89,7 @@ The structure for a reading activity is identical to that of an exercise. There 
 
 ```json
 {
-  "visibility": "private",
+  "access": "private",
   "evaluation": {
     "handler": "python",
     "time_limit": 15,

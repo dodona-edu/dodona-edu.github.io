@@ -7,8 +7,8 @@ description: "Python judge"
 
 Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
 
--   The **`OutputJudge`** klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen. Deze judge is dus geschikt voor oefeningen die input vragen via `input()` en de resultaten uitprinten via `print()`.
--   De **`DoctestJudge`** klasse implementeeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
+-   The [**`OutputJudge`**](#output-judge) klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen. Deze judge is dus geschikt voor oefeningen die input vragen via `input()` en de resultaten uitprinten via `print()`.
+-   De [**`DoctestJudge`**](#doctest-judge) klasse implementeeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
 
 ::: tip Voorbeelden
 Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.ugent.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze judges gebruikt.
@@ -29,9 +29,16 @@ De volgende instellingen kunnen zowel voor de output judge als voor de doctest j
 
 - **`continue upon wrong answer`**:   Boolean die aangeeft of er moet verdergegaan worden met het uitvoeren van testen wanneer er een fout antwoord gegenereerd wordt. Standaard `true`.
 
-- **`continue upon failure`**:   Boolean die aangeeft er er moet verdergegaan worden met het uitvoeren van testen wanneer een runtime error optreedt.
+- **`continue upon failure`**:   Boolean die aangeeft er er moet verdergegaan worden met het uitvoeren van testen wanneer een runtime error optreedt. Standaard `true`.
 
 - **`tab name`**:   String die de naam aangeeft van de tab in de feedback. Namen van tabs worden ook blootgesteld aan de vertalingen die door de judge worden uitgevoerd maar alle types van names worden los vertaald, wat betekent dat namen van functies, methodes, klassen en sleutelwoordargmenten als tokens gedetecteerd worden.
+
+Deze standaard instellingen kan je wijzigen onderaan een `.out` bestand, voorafgegaan door een lijn die opgebouwd is door (minstens 3) koppeltekens. Bijvoorbeeld:
+
+    ----------------------------------------
+    tab name: Echo
+    continue upon wrong answer: false
+    continue upon failure: false
 
 ## Output judge
 
@@ -43,7 +50,7 @@ De normale werking van de judge bestaat per geüploade testcase uit een aantal s
 
 Als er fouten (of runtime-errors/time limit exceeded) tegengekomen worden stopt de judge daar en wordt feedback teruggegeven (in de vorm van een tabel met aangeduide verschillen tussen verwachte en gegenereerde uitvoer). Als daarentegen alle blokken correct waren, wordt ook nog eens voor de volledige input gekeken of de gegeneerde output overeenkomt met de verwachte uitvoer en wordt daarna feedback teruggegeven over deze laatste vergelijking.
 
-De default werking van de judge kan veranderd worden aan de hand van een aantal parameters. Deze moeten toegevoegd worden aan het bestand met verwachte uitvoer na één enkele regel die enkel bestaat uit koppeltekens (minstens 3).
+De default werking van de judge kan veranderd worden aan de hand van een aantal parameters. Deze moeten onderaan toegevoegd worden aan het bestand met verwachte uitvoer na één enkele regel die enkel bestaat uit koppeltekens (minstens 3).
 
 ### Paramaters om de werking van de judge aan te passen
 
@@ -173,7 +180,7 @@ De doctest judge gebruikt doctests om de oplossingen van studenten te checken.
 
 ### Parameters
 
-- **`used output channel`**:   Zet het output kanaal voor de volledige doctest. Zie [Outputkanalen](#outputkanalen) voor de uitleg rond output kanalen. Standaard gebruiken alle doctests `return` als enige output kanaal. Mogelijke waarden zijn `stdout`, `return` ene `stdout return`.
+- **`used output channel`**:   Zet het output kanaal voor de volledige doctest. Zie [Outputkanalen](#outputkanalen) voor de uitleg rond output kanalen. Standaard gebruiken alle doctests `return` als enige output kanaal. Mogelijke waarden zijn `stdout`, `return` en `stdout return`.
 
 - **`independent examples`**:   Boolean die aangeeft of alle doctests als afhankelijk of onafhankelijk van elkaar beschouwd moeten worden. (Zie [Uitvoeringscontext](#uitvoeringscontext) voor meer info over uitvoeringscontexten voor de Python Tutor.) Standaard is deze parameter `true` en vormt dus elk statement zijn eigen uitvoeringscontext. Bij `false` worden de statements gebundeld om een uitvoeringscontext te vormen.
 
@@ -181,7 +188,7 @@ De doctest judge gebruikt doctests om de oplossingen van studenten te checken.
 
 De output van een uitvoering wordt gesplitst in kanalen (standaard uitvoer en returnwaarden). Dit verschilt van het standaard doctest gedrag.
 
-Standaard zal de doctest judge enkel returnwaarden vergelijken. Met de parameter vermeld in [Parameters](#parameters) en optievlaggen voor individuele testen kan dit veranderd worden. Zie het volgende voorbeeld:
+Standaard zal de doctest judge enkel returnwaarden vergelijken. Met de parameter `used output channel` vermeld in [Parameters](#parameters) en optievlaggen (`STDOUT` en `RETURN`) voor individuele testen kan dit veranderd worden. Zie het volgende voorbeeld:
 
 ``` python
 >>> def my_return(value):
@@ -235,7 +242,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-Er bestaat één speciale optie vlag die gebruikt wordt wanneer de representatie van een zelf-gedefinieerd object gebruikt wordt. Dit is enkel het geval wanneer deze representatie werd overschreven. Wanneer de vlag geactiveerd wordt zal de (representatie van het object) van de returnwaarde vergeleken worden met de verwachte output. Merk op dat dit enkel nuttig is (en zal werken) wanneer de `__repr__(self)` methode overschreven is. Anders zal het adres van het object opgenomen worden in de representatie (wat voor elke uitvoering zal verschillen).
+Er bestaat één speciale optie vlag (`REPR`) die gebruikt wordt wanneer de representatie van een zelf-gedefinieerd object gebruikt wordt. Dit is enkel het geval wanneer deze representatie werd overschreven. Wanneer de vlag geactiveerd wordt zal de (representatie van het object) van de returnwaarde vergeleken worden met de verwachte output. Merk op dat dit enkel nuttig is (en zal werken) wanneer de `__repr__(self)` methode overschreven is. Anders zal het adres van het object opgenomen worden in de representatie (wat voor elke uitvoering zal verschillen).
 
 ``` python
 >>> class MyObject(object):
@@ -253,7 +260,7 @@ De `REPR` vlag kan niet gecombineerd worden met andere vlaggen (de vlag overschr
 
 De hoofdreden voor het opsplitsen van de verschillende output is om toe te laten dat ze op een andere manier vergeleken worden. Returnwaarden worden vergeleken met type en inhoud. Standaard uitvoer (en dus ook tracebacks) worden gecontroleerd door de strings te vergelijken. De vergelijkingsmethode kan veranderd worden met de `OUTPUTPROCESSOR` optie tag. Het verwachte type voor de returnwaarden wordt afgeleid uit het type van de returnwaarde. Alleen als deze types overeenkomen zal de inhoud vergeleken worden. De vergelijking van de inhoud kan nu typespecifiek gebeuren.
 
-Om de vergelijking van de output aan te passen wordt de `OUTPUTPROCESSOR` tag gebruikt. Dit laat toe om een eigen processor te maken. Bijvoorbeeld, voor floats wordt standaard 2 decimalen vergeleken, maar dit kan aangepast owrden aar het volgende:
+Om de vergelijking van de output aan te passen wordt de `OUTPUTPROCESSOR` tag gebruikt. Dit laat toe om een eigen processor te maken. Bijvoorbeeld, voor floats wordt standaard 2 decimalen vergeleken, maar dit kan aangepast worden naar het volgende:
 
 ``` python
 >>> 0.001 # standaard precisie is 2, dus correct
@@ -375,7 +382,7 @@ Enkele opmerkingen:
 
 In het geval dat je een testgeval wil tonen aan de studenten maar niet uitvoeren kan je de `NOEXEC` vlag gebruiken. Omgekeerd (om een test uit te voeren maar niet te tonen) kan met de `NOSHOW` vlag.
 
-```
+```python
 >>> 1/0 #doctest: +NOEXEC
 "Dit testgeval werd niet uitgevoerd"
 >>> get_password() $doctest: +NOSHOW
@@ -409,7 +416,7 @@ De mogelijke types substitutie zijn `function`, `method`, `class`, `kwarg`, `fix
 
 Elke subtitutie tag heeft ook een optionele parameter `detect` die standaard `true` is. Dit betekent dat de `to` parameter van de tag ook gebruikt wordt om de taal te detecteren. Als `detect` echter op `false` ingesteld staat wordt de substitutie genegeerd om de taal te detecteren.
 
-Zodra de taal gedetecteerd wordt is het vertalen volledig automatisch. De taal moet echter wel gedetecteerd worden. De gededecteerde taal is de taal met de meeste woorden in de globale scope als er een met meer dan 0. Als er geen woorden gevonden worden wordt er geen vertaling of selectie uitgevoerd.
+Zodra de taal gedetecteerd wordt is het vertalen volledig automatisch. De taal moet echter wel gedetecteerd worden. De gededecteerde taal is de taal met de meeste woorden in de globale scope als er een met meer dan 0 is. Als er geen woorden gevonden worden, wordt er geen vertaling of selectie uitgevoerd.
 
 Selectie is het proces dat er rekening mee houdt dat niet alles met korte zinnetjes vertaald kan worden. Of soms wil je sommige dingen enkel uitvoeren voor gebruikers van een bepaalde taal. Het volgende voorbeeld brengt meer duidelijkheid:
 
@@ -451,7 +458,7 @@ languages)" and None
 
 ### Bestanden
 
-Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een popup. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gerbuikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
+Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een popup. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gebruikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
 
 -   Ingebed
 
@@ -464,12 +471,12 @@ Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bes
 
     Met de eerste vorm, zoals hierboven getoond, kan je je bestanden inbedden in
     de testdefinities. In plaats van deze code zal `filestring = StringIO("""This is the content of text.txt""").read()` uitgevoerd worden. Voor de student
-    wordt de originele code nog getoond worden.
+    wordt de originele code nog getoond.
 
 -   Open bestaand bestand
 
-    Deze vorm zorgt voor bestaande bestanden. Zo kan de inhoud gelinked worden aan
-    de popup.
+    Deze vorm zorgt voor bestaande bestanden. Zo kan de inhoud gelinkt worden aan
+    de pop-up.
 
     ``` xml
     <FILE name="text.txt" src="/temp/text.txt" />
@@ -478,7 +485,7 @@ Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bes
     Het `src` attribuut bevat de eigenlijke locatie van het bestand. Als dit
     leeg is gebruiken we `name` als pad naar het bestand.
 
--   Open nieuw bestand
+-   Maak en open nieuw bestand
 
     Deze vorm maakt een bestand aan met als inhoud de tekst van de tag. Dan wordt het op dezelfde manier als hierboven gebruikt.
 
@@ -497,7 +504,7 @@ Om het gebruik van de Python Tutor toe te laten voor oefeningen met bestanden mo
 
 ### Uitvoeringscontext
 
-Wanneer een sessie wordt opgestart van de Online Python Tutor voor het huidige statement, kan de uitvoering van het statement afhankelijk zijn van vroeger uitgevoerde statements. Daarom hebben we het concept van een uitvoeringscontext geïntroduceerd. De uitvoeringscontext kan op twee manieren aangepast worden.
+Wanneer een sessie wordt opgestart van de online Python Tutor voor het huidige statement, kan de uitvoering van het statement afhankelijk zijn van vroeger uitgevoerde statements. Daarom hebben we het concept van een uitvoeringscontext geïntroduceerd. De uitvoeringscontext kan op twee manieren aangepast worden.
 
 De parameter `independent examples` geeft aan of elk statement zijn eigen uitvoeringscontext vormt. Als deze parameter `True` is (de standaardwaarde) dan zal elk statement apart uitgevoerd worden en enkel het huidige stament zal aan de broncode toegevoegd worden wanneer de Python Tutor opgestart wordt. Als de parameter `False` is zullen standaard alle statements een uitvoeringscontext vormen. Met de vlag `NEWCONTEXT` kan een een nieuwe context gestart worden.
 
@@ -521,9 +528,9 @@ Doctests kunnen conditioneel uitgevoerd worden afhankelijk van of sommige namen 
 
 De elementen van de `NAMESPACE` tag beschrijven condities op meerdere benoemde objecten. Elk element heeft een verplicht `name` attribuut, resulterend in een test of de naam bestaat in de ingesloten namespace (`NAMESPACE` of `CLASS`) en het correcte type heeft (zoals gegeven door de naam van de tag).
 
-De namespace testen worden uitgeveord in de volgorde zoals ze in de `NAMESPACE` tag staan. Vanaf er een test faalt stopt de uitvoering van doctest en de volgende namespace testen. Maar één block zal getoond worden met de foutboodschap van het blok dat faalde.
+De namespace testen worden uitgevoerd in de volgorde zoals ze in de `NAMESPACE` tag staan. Vanaf er een test faalt stopt de uitvoering van doctest en de volgende namespace testen. Maar één block zal getoond worden met de foutboodschap van het blok dat faalde.
 
-Namespace testen zijn altijd *sticky* in dat een gefaalde namaspace test de huidige doctest en alle volgende doctesten niet uitvoert toet er een doctest wordt gevonden met een eigen `NAMESPACE` tag (en deze tag het `extend` attribuut niet op `true` heeft staan).
+Namespace testen zijn altijd *sticky* in dat een gefaalde namaspace test de huidige doctest en alle volgende doctesten niet uitvoert tot er een doctest wordt gevonden met een eigen `NAMESPACE` tag (en deze tag het `extend` attribuut niet op `true` heeft staan).
 
 De `arg` attributen van `FUNCTION` en `METHOD` zijn op een generieke manier geïmplementeerd en refereren naar de suffixen van de `function.__code__.co_` attributen. Bijvoorbeeld `names` kan gebruikt worden om te controleren dat de functie zelf alle verplichte functie oproept. De waarde in het argument wordt geëvalueerd als een python object.
 
