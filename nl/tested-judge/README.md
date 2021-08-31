@@ -50,7 +50,7 @@ Op dit moment ondersteunt **TESTed** de volgende programmeertalen:
 * Haskell (ghc 8.4.4)
 * Java 11
 * JavaScript (NodeJS v14)
-* Kotlin 1.4.10
+* Kotlin 1.5.21
 * Python 3.9
 
 ## Programmeeroefeningen in Dodona
