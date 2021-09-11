@@ -12,6 +12,8 @@ description: "Tutorial: taken en toetsen verbeteren met Dodona"
 - verbeteren gebeurt steeds per reeks
 - klik op "reeks evalueren" in het reeks menu + screenshot
 
+![reeks evalueren](reeks-evalueren.png)
+
 ## Je evaluatie configureren
 
 ### Een deadline kiezen
@@ -20,10 +22,14 @@ description: "Tutorial: taken en toetsen verbeteren met Dodona"
 - deadline selecteren en uitleggen waarom.
 - als eeen reeks een deadline had wordt automatisch dat tijdstip gekozen
 
+![deadline kiezen](deadline-kiezen.png)
+
 ### Studenten selecteren
 
 - je kan kiezen welke studenten je wil opnemen in de evaluatie
 - via de knoppen bovenaan kan je eenvoudig kiezen voor iedereen of iedereen die minstens 1 keer indiende
+
+![gebruikers selecteren](gebruikers-selecteren.png)
 
 ### Punten geven?
 
@@ -41,6 +47,8 @@ description: "Tutorial: taken en toetsen verbeteren met Dodona"
   - Maximum (in stappen van een kwart punt)
   - Zichtbaarheid
 
+![scoreonderdelen aanpassen](score-items.png)
+
 ## Het evaluatieoverzicht
 
 Eenmaal de evaluatie geconfigureerd is kom je op de overzichtspagina terecht
@@ -50,11 +58,15 @@ Eenmaal de evaluatie geconfigureerd is kom je op de overzichtspagina terecht
 - de balkjes bovenaan geven de voortgang van de evaluatie aan
 - via het pijltje rechts van een balkje kan je snel verder evalueren
 
+![evaluatie voortgang](evaluatie-voortgang.png)
+
 ### Detailoverzicht
 
 - betekenis icoontjes
 - betekenis lijntjes onder icoontjes
 - klikbaar
+
+![evaluatie overzicht](evaluatie-overzicht.png)
 
 ### Puntenoverzicht
 
@@ -63,8 +75,12 @@ Eenmaal de evaluatie geconfigureerd is kom je op de overzichtspagina terecht
 - gemiddelde wordt automatisch berekend
 - puntenoverzicht downloaden
 
+![evaluatie punten](evaluatie-punten.png)
+
 ## Een oplossing evalueren
 
 - tip: demomodus
+
+![punten geven](punten-geven.png)
 
 ## Feedback vrijgeven
