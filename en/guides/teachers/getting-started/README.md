@@ -3,6 +3,10 @@ title: '[nl] Van start met Dodona als leerkracht'
 description: "Tutorial: van start met Dodona als leerkracht"
 ---
 
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
+
 # Van start met Dodona als leerkracht
 
 > Alle informatie om vlot van start te gaan met Dodona als leerkracht.
