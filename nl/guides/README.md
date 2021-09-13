@@ -18,7 +18,7 @@ Op deze pagina vind je een aantal handleidingen om van start te gaan met Dodona.
 * [Cursusbeheer](teachers/course-management)
 * [Gebruikersbeheer](teachers/user-management)
 * [Oefeningenreeksenbeheer](teachers/exercise-series-management)
-* [Een reeks evalueren](teachers/evaluate-series)
+* [Taken en toetsen verbeteren met Dodona](teachers/grading)
 * [Een nieuwe repository met oefeningen maken](teachers/new-exercise-repo)
 * [Dodona en Ufora](teachers/ufora) (enkel voor UGent)
 
