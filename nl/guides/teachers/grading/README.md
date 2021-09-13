@@ -43,6 +43,8 @@ De studentenlijst is eenvoudig filterbaar via het zoekvak bovenaan de lijst en g
 
 In de volgende stap beslis je of je punten wil koppelen aan je evaluatie. Als je er voor kiest om geen punten te geven, dan kan je tijdens het evalueren op een gestructureerde manier door de ingediende oplossingen van de studenten stappen en manueel feedback aan hun oplossingen toevoegen.
 
+![Wil je punten geven?](./punten-geven.png)
+
 ### Een puntenverdeling opstellen
 
 Als je er voor gekozen hebt om punten te geven, dan kan je in de laatste stap de puntenverdeling configureren. Je kan per oefening een of meerdere scoreonderdelen toevoegen. Op basis van de verschillende deelpunten wordt automatisch een totaal per oefening en voor de volledige evaluatie berekend.
@@ -112,4 +114,4 @@ Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de stude
 
 :::
 
-![punten geven](./punten-geven.png)
+![punten geven](./evalueren.png)
