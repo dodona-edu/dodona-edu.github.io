@@ -93,8 +93,23 @@ In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Al
 
 ## Een oplossing evalueren
 
-- tip: demomodus
+Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de deadline van een student voor een bepaalde oefening te zien.
+
+Aan de linkerkant zie je de status van de testen en de ingediende code. Op de code kan feedback worden toegevoegd aan een bepaalde regel door op het regelnummer te klikken. Voor algemene feedback klik je op "Globale opmerking toevoegen".
+
+**Merk op**: de feedback die je hier geeft is niet automatisch zichtbaar voor de studenten. Feedback binnen een evaluatie moet je steeds vrijgeven via de "Feedback vrijgeven" knop op het evaluatieoverzicht.
+
+Aan de rechter kant van de pagina vind je de navigatie en score interface. Van boven naar onder zie je volgende elementen:
+* **Volgende**: via deze knop ga je snel naar de volgende student voor dezelfde oefening.
+* **Punten geven**: Hier zie je alle score-items voor deze oefening. Je kan een score geven voor elk van de onderdelen. Je punten worden automatische bijgehouden als je ze intikt en ook de totaalscore is zo steeds up to date. Als alle deelscores zijn ingegeven, dan verschijnt een vinkje onder **Totaal**: Via het duimpje omhoog en omlaag kan je snel een 0 of de maximumscore op een onderdeel invullen.
+* **Voortgang voor deze oefening**: Dit is dezelfde voorgangsindicator als op de overzichtpagina. Het balkje geeft weer hoe ver je staat in het verbeterproces voor deze oefening.
+
+* **Status van de student**: Hier zie je de status van de ingediende oplossingen voor alle oefeningen binnen deze reeks. Deze icoontjes zijn klikbaar en brengen je snel naar de corresponderende evaluatiepagina.
+
+::: tip Gebruik de demo modus voor anoniem verbeteren
+
+Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op dodona kan je hiervoor de demo modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
+
+:::
 
 ![punten geven](./punten-geven.png)
-
-## Feedback vrijgeven
