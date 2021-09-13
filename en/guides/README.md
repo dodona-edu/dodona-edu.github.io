@@ -22,4 +22,4 @@ Here you'll find a number of guides, primarily focused on teachers.
 * [Cursusbeheer](teachers/course-management)
 * [Gebruikersbeheer](teachers/user-management)
 * [Oefeningenreeksenbeheer](teachers/exercise-series-management)
-* [Een reeks evalueren](teachers/evaluate-series)
+* [Taken en toetsen verbeteren met Dodona](teachers/grading)

@@ -8,7 +8,7 @@ description: "Tutorial: oefeningenreeksenbeheer"
 **Inhoudsopgave**
 [[toc]]
 
-Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillenden oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen. 
+Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillenden oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen.
 
 ## Oefeningenreeks aanmaken
 
@@ -147,7 +147,7 @@ Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalue
 
 ## Oefeningenreeks evalueren
 
-Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](../evaluate-series).
+Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback en punten te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](../grading).
 
 ## Oefeningenreeks oplossingen exporteren
 
@@ -155,12 +155,12 @@ In het actiemenu van een reeks kan je als lesgever ook kiezen om de ingezonden c
 
 ![reeks exporteren](./staff.series_export_action.png)
 
-Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst. 
+Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst.
 ![oefeningen kiezen](./staff.series_export_exercise_choice.png)
 
 Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `VOLGENDE STAP` om verder te gaan.
 
-Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden. 
+Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden.
 
 ![export opties](./staff.series_export_options.png)
 
