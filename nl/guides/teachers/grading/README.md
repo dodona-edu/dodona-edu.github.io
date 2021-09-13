@@ -13,7 +13,7 @@ Het verbeteren van oefeningen gebeurt steeds per reeks. Als je een taak, toets o
 
 In het reeksmenu vind je een knop om een nieuwe evaluatie voor die reeks aan te maken. Eenmaal aangemaakt kan je via dezelfde weg de evaluatie terugvinden.
 
-![reeks evalueren](reeks-evalueren.png)
+![reeks evalueren](./reeks-evalueren.png)
 
 ## Je evaluatie configureren
 
@@ -27,7 +27,7 @@ Als een reeks een deadline had ingesteld dan wordt deze automatisch overgenomen,
 
 Een deadline kan enkel in het verleden liggen en na het maken van je keuze kan ze niet meer worden aangepast.
 
-![deadline kiezen](deadline-kiezen.png)
+![deadline kiezen](./deadline-kiezen.png)
 
 ### Studenten selecteren
 
@@ -37,7 +37,7 @@ Als je gebruik maakte van een van de standaardconfiguraties kan je nog steeds de
 
 De studentenlijst is eenvoudig filterbaar via het zoekvak bovenaan de lijst en geeft tevens een beknopt overzicht van wie welke oefeningen correct indiende.
 
-![gebruikers selecteren](gebruikers-selecteren.png)
+![gebruikers selecteren](./gebruikers-selecteren.png)
 
 ### Punten geven?
 
@@ -55,7 +55,7 @@ Als je een scoreonderdeel toevoegt, dan kan je volgende dingen instellen:
 * **maxiumscore**: hoeveel punten je aan dit onderdeel wil toekennen, tot op een kwart punt nauwkeurig
 * **zichtbaarheid**: nadat je de evaluatie hebt afgerond kan je alle feedback en punten vrijgeven aan de studenten. Je hebt hierbij de keuze om bepaalde deelpunten voor hun te verbergen.
 
-![scoreonderdelen aanpassen](score-items.png)
+![scoreonderdelen aanpassen](./score-items.png)
 
 ## Het evaluatieoverzicht
 
@@ -67,7 +67,7 @@ Bovenaan vind je een overzicht van de huidige toestand van de evaluatie. Per oef
 
 Studenten die voor een bepaalde oefening geen enkele oplossing indienden worden automatisch als afgewerkt gemarkeerd. Op die manier kan het dus voorkomen dat de voorgangsbalkjes al deels zijn gekleurd na het aanmaken van de evaluatie.
 
-![evaluatie voortgang](evaluatie-voortgang.png)
+![evaluatie voortgang](./evaluatie-voortgang.png)
 
 ### Detailoverzicht
 
@@ -79,7 +79,7 @@ Een licht grijs icoontje met een vinkje in wil zeggen dat de corresponderende op
 
 Elk van de icoontjes is aanklikbaar en brengt je naar de corresponderende oplossing van die student voor die oefening.
 
-![evaluatie overzicht](evaluatie-overzicht.png)
+![evaluatie overzicht](./evaluatie-overzicht.png)
 
 ### Puntenoverzicht
 
@@ -89,12 +89,12 @@ De totaalscore per student en het gemiddelde voor elke oefening worden automatis
 
 In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Als je hier op klikt, dan wordt een csv-bestand met de punten gedownload. Dit bestand kan je eenvoudig open in bijvoorbeeld Excel.
 
-![evaluatie punten](evaluatie-punten.png)
+![evaluatie punten](./evaluatie-punten.png)
 
 ## Een oplossing evalueren
 
 - tip: demomodus
 
-![punten geven](punten-geven.png)
+![punten geven](./punten-geven.png)
 
 ## Feedback vrijgeven
