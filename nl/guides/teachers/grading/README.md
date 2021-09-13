@@ -49,13 +49,13 @@ In de volgende stap beslis je of je punten wil koppelen aan je evaluatie. Als je
 
 Als je er voor gekozen hebt om punten te geven, dan kan je in de laatste stap de puntenverdeling configureren. Je kan per oefening een of meerdere scoreonderdelen toevoegen. Op basis van de verschillende deelpunten wordt automatisch een totaal per oefening en voor de volledige evaluatie berekend.
 
-Via het menu rechtsboven kan scoreonderdelen aan alle oefeningen tegelijk toevoegen.
+Via het menu rechtsboven kan je scoreonderdelen aan alle oefeningen tegelijk toevoegen.
 
 Als je een scoreonderdeel toevoegt, dan kan je volgende dingen instellen:
-* **naam**: de naam van het score onderdeel, typisch 1 woord
+* **naam**: de naam van het scoreonderdeel, typisch 1 woord
 * **beschrijving** (optioneel): een korte beschrijving van het scoreonderdeel
-* **maxiumscore**: hoeveel punten je aan dit onderdeel wil toekennen, tot op een kwart punt nauwkeurig
-* **zichtbaarheid**: nadat je de evaluatie hebt afgerond kan je alle feedback en punten vrijgeven aan de studenten. Je hebt hierbij de keuze om bepaalde deelpunten voor hun te verbergen.
+* **maximumscore**: hoeveel punten je aan dit onderdeel wil toekennen, tot op een kwart punt nauwkeurig
+* **zichtbaarheid**: nadat je de evaluatie hebt afgerond kan je alle feedback en punten vrijgeven aan de studenten. Je hebt hierbij de keuze om bepaalde deelpunten voor hen te verbergen.
 
 ![scoreonderdelen aanpassen](./score-items.png)
 
@@ -67,7 +67,7 @@ Nu je de evaluatie geconfigureerd hebt, kom je op de overzichtspagina van de eva
 
 Bovenaan vind je een overzicht van de huidige toestand van de evaluatie. Per oefening geeft een balkje weer welk percentage van de oplossingen al is bekeken. Via het pijltje rechts ervan kan je snel verder gaan met verbeteren en spring je naar een onbekeken oplossing.
 
-Studenten die voor een bepaalde oefening geen enkele oplossing indienden worden automatisch als afgewerkt gemarkeerd. Op die manier kan het dus voorkomen dat de voorgangsbalkjes al deels zijn gekleurd na het aanmaken van de evaluatie.
+Studenten die voor een bepaalde oefening geen enkele oplossing indienden worden automatisch als afgewerkt gemarkeerd. Op die manier kan het dus voorkomen dat de voortgangsbalkjes al deels zijn gekleurd na het aanmaken van de evaluatie.
 
 ![evaluatie voortgang](./evaluatie-voortgang.png)
 
@@ -77,7 +77,7 @@ Onder de samenvatting vind je het detailoverzicht. Deze tabel bevat een vakje vo
 
 Het gekleurd streepje geeft de dodona-status van de corresponderende oplossing weer. Bij een groen streepje slaagde alle testen, bij een rood streepje was er minstens een fout, bij een grijs streepje werd niets ingediend.
 
-Een licht grijs icoontje met een vinkje in wil zeggen dat de corresponderende oplossing al verbeterd werd. Een donkergrijze tekstballon geeft aan dat hier feedback of punten moeten ingevuld worden.
+Een lichtgrijs icoontje met een vinkje in wil zeggen dat de corresponderende oplossing al verbeterd werd. Een donkergrijze tekstballon geeft aan dat hier feedback of punten moeten ingevuld worden.
 
 Elk van de icoontjes is aanklikbaar en brengt je naar de corresponderende oplossing van die student voor die oefening.
 
@@ -99,18 +99,18 @@ Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de dea
 
 Aan de linkerkant zie je de status van de testen en de ingediende code. Op de code kan feedback worden toegevoegd aan een bepaalde regel door op het regelnummer te klikken. Voor algemene feedback klik je op "Globale opmerking toevoegen".
 
-**Merk op**: de feedback die je hier geeft is niet automatisch zichtbaar voor de studenten. Feedback binnen een evaluatie moet je steeds vrijgeven via de "Feedback vrijgeven" knop op het evaluatieoverzicht.
+**Merk op**: de feedback die je hier geeft is niet automatisch zichtbaar voor de studenten. Feedback binnen een evaluatie moet je steeds vrijgeven via de knop "Feedback vrijgeven" op het evaluatieoverzicht.
 
-Aan de rechter kant van de pagina vind je de navigatie en score interface. Van boven naar onder zie je volgende elementen:
+Aan de rechterkant van de pagina vind je de navigatie en score-interface. Van boven naar onder zie je volgende elementen:
 * **Volgende**: via deze knop ga je snel naar de volgende student voor dezelfde oefening.
-* **Punten geven**: Hier zie je alle score-items voor deze oefening. Je kan een score geven voor elk van de onderdelen. Je punten worden automatische bijgehouden als je ze intikt en ook de totaalscore is zo steeds up to date. Als alle deelscores zijn ingegeven, dan verschijnt een vinkje onder **Totaal**: Via het duimpje omhoog en omlaag kan je snel een 0 of de maximumscore op een onderdeel invullen.
-* **Voortgang voor deze oefening**: Dit is dezelfde voorgangsindicator als op de overzichtpagina. Het balkje geeft weer hoe ver je staat in het verbeterproces voor deze oefening.
+* **Punten geven**: Hier zie je alle score-items voor deze oefening. Je kan een score geven voor elk van de onderdelen. Je punten worden automatische bijgehouden als je ze intikt en ook de totaalscore is zo steeds up-to-date. Als alle deelscores zijn ingegeven, dan verschijnt een vinkje onder **Totaal**: Via het duimpje omhoog en omlaag kan je snel een 0 of de maximumscore op een onderdeel invullen.
+* **Voortgang voor deze oefening**: Dit is dezelfde voortgangsindicator als op de overzichtspagina. Het balkje geeft weer hoe ver je staat in het verbeterproces voor deze oefening.
 
 * **Status van de student**: Hier zie je de status van de ingediende oplossingen voor alle oefeningen binnen deze reeks. Deze icoontjes zijn klikbaar en brengen je snel naar de corresponderende evaluatiepagina.
 
 ::: tip Gebruik de demo modus voor anoniem verbeteren
 
-Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op dodona kan je hiervoor de demo modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
+Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op Dodona kan je hiervoor de demo modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
 
 :::
 
