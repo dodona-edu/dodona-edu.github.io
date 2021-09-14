@@ -32,3 +32,5 @@ Lesgevers kunnen nu nog beter hun studenten opvolgen. Aan elke reeks op een curs
 
 ### Kalenderintegratie
 Studenten kunnen nu eenvoudig de deadlines van een Dodonacursus toevoegen aan hun persoonlijke kalender zoals Google Calendar. Hiervoor klikken ze op de link die beschikbaar is in het menu bovenaan de cursuspagina.
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3102).
