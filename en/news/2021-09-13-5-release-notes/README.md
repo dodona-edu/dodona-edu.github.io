@@ -11,7 +11,7 @@ date: "2021-09-13"
 
 ## Dodona 5.0 - 2021-09-13
 
-After the huge 4.8 release, dodona 5.0 is even bigger with several major new features.
+After the huge 4.8 release, Dodona 5.0 is even bigger with several major new features.
 
 ### Design refresh
 
