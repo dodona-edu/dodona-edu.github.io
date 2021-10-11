@@ -37,10 +37,10 @@ Alle details over deze Dodona versie kan je vinden in onze [GitHub release discu
 
 ## Dodona 5.1 - 11/10/2021
 
-Dodona 5.1 voegt een nieuwe manier toe om tabulaire uitvoer weer te geven in de feedback tabel. De diff zal hierbij rekening houden met de rijen en kolommen uit het csv formaat en het resultaat weergeven als tabel. Deze weergave zal gebruikt worden door de nieuwe SQL judge.
+Dodona 5.1 voegt een nieuwe manier toe om tabulaire uitvoer weer te geven in de feedbacktabel. De diff zal hierbij rekening houden met de rijen en kolommen uit het csv-formaat en het resultaat weergeven als tabel. Deze weergave zal gebruikt worden door de nieuwe SQL-judge.
 ![csv diff](./csv-diff.png)
 
-Studenten stellen soms een vraag als ze vast zitten op een oefening, maar slagen er dan toch in om zelf verder te raken. Om te verhinderen dat lesgevers tijd verspillen aan het beantwoorden van zo'n vragen, geven we nu met een info icoontje weer als de student nog oplossingen heeft ingediend na het stellen van de vraag.
+Studenten stellen soms een vraag als ze vastzitten op een oefening, maar slagen er dan toch in om zelf verder te raken. Om te verhinderen dat lesgevers tijd verspillen aan het beantwoorden van zo'n vragen, geven we nu met een info-icoontje weer als de student nog oplossingen heeft ingediend na het stellen van de vraag.
 ![image](./info-question.png)
 
 Dodona 5.1 voegt ook ondersteuning toe voor *identity providers* die aanmelden via OpenID Connect.
