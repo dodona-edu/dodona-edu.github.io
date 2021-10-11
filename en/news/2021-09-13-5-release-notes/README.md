@@ -33,3 +33,16 @@ Teachers can now better follow students' behaviour using the new graphs for each
 It is now possible for students to add a course to your personal calendar application such as Google Calendar. This way, the series deadlines will show up as events.
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3102).
+
+
+## Dodona 5.1 - 2021-10-11
+
+Dodona 5.1 adds a new way to display table-based output in the feedback table. The diff will be calculated by taking into account the columnar properties of the csv format and the result is displayed as a table. The upcoming SQL judge will make great use of this new feature.
+![csv diff](./csv-diff.png)
+
+Students sometimes ask a question when they're stuck on an exercise, but then manage to find a solution on their own and forget to retract the question. To prevent teachers wasting time on answering such questions, we now display an info icon when the student submitted additional solutions after asking the question.
+![image](./info-question.png)
+
+Finally, Dodona 5.1 lays the foundation for supporting identity providers using OpenID Connect.
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3155).
