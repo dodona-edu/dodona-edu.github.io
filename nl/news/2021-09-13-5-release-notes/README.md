@@ -46,3 +46,11 @@ Studenten stellen soms een vraag als ze vastzitten op een oefening, maar slagen 
 Dodona 5.1 voegt ook ondersteuning toe voor *identity providers* die aanmelden via OpenID Connect.
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3155).
+
+## Dodona 5.2 - 25/10/2021
+
+Dodona 5.2 maakt het mogelijk voor ambtenaren van de Vlaamse overheid om aan te melden op Dodona. De loginpagina kreeg een opfrisbeurt om ook niet-onderwijsinstellingen toe te laten.
+
+Op alle oefeningenpagina's wordt nu bovenaan de pagina naast de naam van de oefening met een icoontje aangeduid wat de programmeertaal van de oefening is.
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3186).
