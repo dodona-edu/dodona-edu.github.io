@@ -46,3 +46,12 @@ Students sometimes ask a question when they're stuck on an exercise, but then ma
 Finally, Dodona 5.1 lays the foundation for supporting identity providers using OpenID Connect.
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3155).
+
+
+## Dodona 5.2 - 2021-10-25
+
+Dodona 5.2 makes it possible for officials of the Flemish government to sign in. The sign in page was redesigned to allow for sign in buttons from non-educational institutions.
+
+In addition, a programming language indicator icon was added next to the exercise name on all exercise pages.
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3186).
