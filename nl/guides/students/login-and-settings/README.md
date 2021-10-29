@@ -33,7 +33,7 @@ Om je aan te melden op dodona klik je ofwel op `Aanmelden` aan de rechterkant va
 
 ![image](./login.png)
 
-Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuw gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
+Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
 
 ![image](./sign_in.png)
 
