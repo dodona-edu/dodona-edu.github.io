@@ -17,7 +17,7 @@ We fixed it by placing exercise descriptions in an _iframe_. This ensures that y
 
 ## Speed
 
-For really large feedback tables it could take a while before the feedback table was shown after the submission was evaluated (sometimes up to 40 seconds!). By performing some smart tricks and falling back to a simpler output format for large results, we managed to significantly reduce the loading time. Now, it should never takes more than a second to load a feedback table.
+For really large feedback tables it could take a while before the feedback table was shown after the submission was evaluated (sometimes up to 40 seconds!). By performing some smart tricks and falling back to a simpler output format for large results, we managed to significantly reduce the loading time. Now, it should never take more than a second to load a feedback table.
 
 We also added a loading indicator to indicate that the feedback table is busy loading.
 

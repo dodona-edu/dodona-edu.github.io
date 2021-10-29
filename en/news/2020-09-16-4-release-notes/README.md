@@ -22,10 +22,10 @@ In a previous version of Dodona, we added the possibility for teachers to add co
 Teachers can enable or disable questions on a course level. In addition, they get a notification when a new question arrives. For now, answering a question can be done by adding a new comment to the same solution and marking the question as answered.
 
 ### New sign in page
-Because the number of schools that use Dodona keeps growing, our sign in page was ready for an update. Schools don't get a dedicated sign in button anymore, but can use the filterable list on the sign in page instead.
+Because the number of schools that use Dodona keeps growing, our sign-in page was ready for an update. Schools don't get a dedicated sign-in button anymore, but can use the filterable list on the sign-in page instead.
 
 ### Emoji support
-Due to limitations on how data was stored in the database, Dodonda didn't support emoji. This problem is now fixed 👍.
+Due to limitations on how data was stored in the database, Dodona didn't support emoji. This problem is now fixed 👍.
 
 All details about this Dodona version can be found in [our GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.0).
 

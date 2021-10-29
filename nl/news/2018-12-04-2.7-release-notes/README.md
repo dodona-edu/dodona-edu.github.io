@@ -43,8 +43,8 @@ Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub releas
 *   gebruik van basic auth stopzetten
 *   knoppen toevoegen om correcte testen te verbergen
 *   punchcard toevoegen aan de gebruikerspagina en gebruikerspagina binnen cursus
-*   altijd minstens één email uitsturen wanneer het verwerken van oefeningen misliep
-*   beide contenttypes van Github webhooks ondersteunen
+*   altijd minstens één e-mail uitsturen wanneer het verwerken van oefeningen misliep
+*   beide contenttypes van GitHub webhooks ondersteunen
 *   paginatieparameter opkuisen
 *   overzichtspagina met ingediende oplossingen optimaliseren voor smalle schermen
 *   compilatie van typescript toevoegen aan webpacker

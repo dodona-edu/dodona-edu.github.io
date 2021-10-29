@@ -60,7 +60,7 @@ Een tabblad bevat een lijst van runs die uitgevoerd moeten worden.
 Een *tab*-object heeft 3 attributen: `name`, `hidden` en `runs`.
 - **name**: Hieraan moet de naam meegegeven worden voor het tabblad, zoals deze moet weergegeven worden op Dodona.
 - **hidden**: Heeft aan of het tabblad verborgen moet worden, wanneer alle testgevallen slagen.
-- **runs**: Dit is de lijst van alle [runs](#run) (generereerde uitvoerbare bestanden) die uitgevoerd moeten worden.
+- **runs**: Dit is de lijst van alle [runs](#run) (gegenereerde uitvoerbare bestanden) die uitgevoerd moeten worden.
 
 ```json
 "Tab": {
@@ -546,7 +546,7 @@ Het *Output*-object heeft 5 attributen: `stdout`, `stderr`, `file`, `exception`,
 
 ## FileUrl
 Het *FileUrl*-object wordt gebruikt om het linken van bestand in de feedback mogelijk te maken.
-De inhoud van dit object is gebaseerd op de invoer de verwacht wordt voor de *Python Tutor*.
+De inhoud van dit object is gebaseerd op de invoer die verwacht wordt voor de *Python Tutor*.
 ::: warning Opmerking
 Hoewel dit object overeenkomt met de invoer voor de *Python Tutor*.
 Is TESTed momenteel beperkt tot het openen van gelinkte bestanden in een nieuw browsertabblad.

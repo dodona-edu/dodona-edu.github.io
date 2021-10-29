@@ -7,11 +7,11 @@ date: "2018-12-04"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
-> Release 2.7 contains a punchard with a visual representation when users have submitted their solutions and provides functionality to add labels to course members.
+> Release 2.7 contains a punchcard with a visual representation when users have submitted their solutions and provides functionality to add labels to course members.
 
 ## Punchcard
 
-A punchchard has been added to the user profile page and the course member profile page. This gives a visual representation when the user has submitted his solutions to Dodona. The punchcard on the user profile page takes into account all submitted solutions of the user. The course member profile page only takes into account the solutions the user has submitted within the course. Users can see their own profile pages and course admins can see the profile pages of all course members.
+A punchcard has been added to the user profile page and the course member profile page. This gives a visual representation when the user has submitted his solutions to Dodona. The punchcard on the user profile page takes into account all submitted solutions of the user. The course member profile page only takes into account the solutions the user has submitted within the course. Users can see their own profile pages and course admins can see the profile pages of all course members.
 
 ![punchcard](./punchcard.png)
 
@@ -44,7 +44,7 @@ For a full list of changes we refer to [our GitHub release](https://github.com/d
 *   add buttons to hide correct tests (contexts)
 *   add punchard to user profile page and course member profile page
 *   always send at least one email upon errors in processing exercises
-*   support both content types for Github webhooks 
+*   support both content types for GitHub webhooks 
 *   sanitize pagination parameter
 *   optimize multiline flow of submitted solutions overview for narrow screens
 *   add typescript compilation to webpacker

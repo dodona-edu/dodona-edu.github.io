@@ -20,7 +20,7 @@ You can also install the extension directly from the VS Code Marketplace. Surf t
 
 ## 3. Insert API token
 
-In the settings you have to paste the the generated token. Click on the cogwheel <img src="./cogwheel.png" alt="cogwheel" width=30px;/> (icon in bottom left corner), Settings (`Ctrl+,`).
+In the settings you have to paste the generated token. Click on the cogwheel <img src="./cogwheel.png" alt="cogwheel" width=30px;/> (icon in bottom left corner), Settings (`Ctrl+,`).
 
 ![Settings](./vs_code_settings.png)
 
@@ -40,7 +40,7 @@ Of course, VS Code must know for which exercise it has to submit your solution. 
 > }
 > ```
 
-VS Code uses this first line to submit to the correct exercise, so don't remove it. If you hold `ctrl` (or `cmd` on a mac) while clicking the URL, the exercise description will open in a new browser window.
+VS Code uses this first line to submit to the correct exercise, so don't remove it. If you hold `ctrl` (or `cmd` on a Mac) while clicking the URL, the exercise description will open in a new browser window.
 
 ## 5. Submit your solution
 

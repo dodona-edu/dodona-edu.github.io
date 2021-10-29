@@ -7,7 +7,7 @@ date: "2019-03-27"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
-Release 2.9 brings many small changes to the Dodona user interface, with a visual representation of the progress of all course members through a series of exercises as an eye-catcher. Because we merit the protection of persona data and confidential information, we provide full transparancy about the data we keep, why we keep it, who can access it and how we use it to further improve the learning environment.  
+Release 2.9 brings many small changes to the Dodona user interface, with a visual representation of the progress of all course members through a series of exercises as an eye-catcher. Because we merit the protection of persona data and confidential information, we provide full transparency about the data we keep, why we keep it, who can access it and how we use it to further improve the learning environment.  
 
 ## Tweaking the user interface  
 
@@ -17,7 +17,7 @@ For this release we paid a lot of attention to embellishing the Dodona web inter
 
 ## Processing of personal data and confidential information in Dodona
 
-Providing a good user experience in Dodona necessitates to keep track of some user data. On [this page](https://dodona.ugent.be/data/) we provide full transparancy on the data we store, why we store the data, who can access the data and how we use the data to further enhance the online learning environment. As an online learning environment developed at Ghent University (Belgium), Dodona also fully complies to the [Ghent University privacy policy](https://www.ugent.be/en/ghentuniv/privacy/privacystatement.htm). In case you have any further questions on the processing of personal data and confidential information in Dodona, please do not hesitate to [contact us](https://dodona.ugent.be/contact/).  
+Providing a good user experience in Dodona necessitates to keep track of some user data. On [this page](https://dodona.ugent.be/data/) we provide full transparency on the data we store, why we store the data, who can access the data and how we use the data to further enhance the online learning environment. As an online learning environment developed at Ghent University (Belgium), Dodona also fully complies to the [Ghent University privacy policy](https://www.ugent.be/en/ghentuniv/privacy/privacystatement.htm). In case you have any further questions on the processing of personal data and confidential information in Dodona, please do not hesitate to [contact us](https://dodona.ugent.be/contact/).  
 
 ## Full list of changes  
 

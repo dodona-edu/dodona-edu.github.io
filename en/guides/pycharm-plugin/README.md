@@ -32,7 +32,7 @@ When creating your first exercise, PyCharm will ask for your API token. Paste th
 
 Next, you should see a list of your Dodona courses. Pick the right course, exercise series and exercise. PyCharm will now automatically create a new file in which you can write your solution.
 
-The first line of the newly created file will contain the link the selected exercise as a comment. PyCharm uses this line to submit to the correct exercise, so don't remove it. If you hold `ctrl` (or `cmd` on a mac) while clicking the URL, the exercise description will open in a new browser window.
+The first line of the newly created file will contain the link the selected exercise as a comment. PyCharm uses this line to submit to the correct exercise, so don't remove it. If you hold `ctrl` (or `cmd` on a Mac) while clicking the URL, the exercise description will open in a new browser window.
 
 ![link to exercise](./link.png)
 

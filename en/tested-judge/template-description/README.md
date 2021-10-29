@@ -86,7 +86,7 @@ Instance JavaScript:
 ## Functions
 As already indicated in the section [Constants](#constants) Mako also supports functions.
 
-We will again given an overview of all available functions that could be used in the templates with some examples.
+We will again give an overview of all available functions that could be used in the templates with some examples.
 
 - **function_name**:
   This function is used the generated the correct style conventions for the function names.
@@ -144,7 +144,7 @@ when the last symbol on the line is a backslash (`\`).
 
 :::warning Important
 The code snippets are processed before the render step of the template.
-In this process, the statements and expression are translate to the calls to the corresponding functions.
+In this process, the statements and expression are translated to the calls to the corresponding functions.
 As a result, Mako directives cannot be used in these code snippets.
 :::
 
@@ -162,7 +162,7 @@ This code snippets must terminate with ` ``` ` without whitespace in front.
 The only limitation for the Markdown code snippets is that the lines may not start with ` ``` `.
 
 The code snippets that must be analysed in HTML are located in the tag `code` and must have the `tested` class.
-The only limitation for the HTML code snippets, is that they not may contain `code` tags inside, even in strings.
+The only limitation for the HTML code snippets, is that they may not contain `code` tags inside, even in strings.
 
 ### Examples
 A first example is a Markdown template with a Kotlin instance.

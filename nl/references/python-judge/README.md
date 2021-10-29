@@ -8,7 +8,7 @@ description: "Python judge"
 Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
 
 -   The [**`OutputJudge`**](#output-judge) klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen. Deze judge is dus geschikt voor oefeningen die input vragen via `input()` en de resultaten uitprinten via `print()`.
--   De [**`DoctestJudge`**](#doctest-judge) klasse implementeeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
+-   De [**`DoctestJudge`**](#doctest-judge) klasse implementeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
 
 ::: tip Voorbeelden
 Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.ugent.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze judges gebruikt.
@@ -29,9 +29,9 @@ De volgende instellingen kunnen zowel voor de output judge als voor de doctest j
 
 - **`continue upon wrong answer`**:   Boolean die aangeeft of er moet verdergegaan worden met het uitvoeren van testen wanneer er een fout antwoord gegenereerd wordt. Standaard `true`.
 
-- **`continue upon failure`**:   Boolean die aangeeft er er moet verdergegaan worden met het uitvoeren van testen wanneer een runtime error optreedt. Standaard `true`.
+- **`continue upon failure`**:   Boolean die aangeeft dat er moet verdergegaan worden met het uitvoeren van testen wanneer een runtime error optreedt. Standaard `true`.
 
-- **`tab name`**:   String die de naam aangeeft van de tab in de feedback. Namen van tabs worden ook blootgesteld aan de vertalingen die door de judge worden uitgevoerd maar alle types van names worden los vertaald, wat betekent dat namen van functies, methodes, klassen en sleutelwoordargmenten als tokens gedetecteerd worden.
+- **`tab name`**:   String die de naam aangeeft van de tab in de feedback. Namen van tabs worden ook blootgesteld aan de vertalingen die door de judge worden uitgevoerd maar alle types van names worden los vertaald, wat betekent dat namen van functies, methodes, klassen en sleutelwoordargumenten als tokens gedetecteerd worden.
 
 Deze standaard instellingen kan je wijzigen onderaan een `.out` bestand, voorafgegaan door een lijn die opgebouwd is door (minstens 3) koppeltekens. Bijvoorbeeld:
 
@@ -52,7 +52,7 @@ Als er fouten (of runtime-errors/time limit exceeded) tegengekomen worden stopt 
 
 De default werking van de judge kan veranderd worden aan de hand van een aantal parameters. Deze moeten onderaan toegevoegd worden aan het bestand met verwachte uitvoer na één enkele regel die enkel bestaat uit koppeltekens (minstens 3).
 
-### Paramaters om de werking van de judge aan te passen
+### Parameters om de werking van de judge aan te passen
 
 - **`python input without prompt`**:   Boolean die aangeeft of de prompt van de ingebouwde functies `input` en `raw_input` naar standaard uitvoer moeten geschreven worden of niet. Standaard `false` (waarbij het prompt dus **wel** naar standaard uitvoer geschreven wordt).
 
@@ -294,9 +294,9 @@ DefaultProcessor(expected_type=float, precision=6)
 >>> # De test hierboven is geslaagd
 ```
 
-Een *sticky* outputprocessor definiëren voegt het toe aan de lijst van stickies. Deze stickies zullen toegevoed worden aan een outputprocessor de expliciet in de tags gedefinieerd werd voor elke test behalve als de `NOSTICKY` vlag gebruikt werd. De `CLEARSTICKY` vlag maakt de lijst van *stickies*\* leeg.
+Een *sticky* outputprocessor definiëren voegt het toe aan de lijst van stickies. Deze stickies zullen toegevoegd worden aan een outputprocessor de expliciet in de tags gedefinieerd werd voor elke test behalve als de `NOSTICKY` vlag gebruikt werd. De `CLEARSTICKY` vlag maakt de lijst van *stickies*\* leeg.
 
-Er zijn nog meer standaard processors, maar deze zijn nogal specifiek. Ze worden allemaal gedefnieerd in `output_processors.py` samen met genoeg documentatie om hun werking en parameters uit te leggen. In het algemeen:
+Er zijn nog meer standaard processors, maar deze zijn nogal specifiek. Ze worden allemaal gedefinieerd in `output_processors.py` samen met genoeg documentatie om hun werking en parameters uit te leggen. In het algemeen:
 
 - **`FileContentChecker`**:   Kijkt of een bestand met een gegeven naam bestaat op het lokale file system en of de inhoud correspondeert met dat van een ander bestand. Dit tweede bestand kan zich in het lokale file system bevinden of de inhoud kan van het block gehaald worden (waarbij deze laatste optie voorrang heeft).
 
@@ -320,7 +320,7 @@ hello world
 Dit voorbeeld zou uiteraard verwarrend zijn voor studenten, aangezien zij de definities niet kunnen zien, maar wel de test zelf. De tag kan echter gebruikt worden om nieuwe output processors te definiëren. De onderstaande voorbeelden maken de standaard processors vriendelijker. Eerst kort nog een overzicht van de structuur van de standaard processoren:
 
 -   `BasicProcessor`: Zowel het verwerken van standaard uitvoer (`process_stdout`) en de returnwaarde (`process_return`) zetten de status van het block op \"WA\" (*wrong answer*).
--   `OutputComparator(BasicProcessor)`: Overschrijft `process_stdout` en zet de status op \"AC\" (*answer correct*) als de verwachte en de gegenereerde uitvoer gelijk zijn (met het vergelijken van strings). Voegt ook de verwachte en de genereerde output toe aan het block zodat ze met een diff kunnen getoond worden in de feedbacktabel.
+-   `OutputComparator(BasicProcessor)`: Overschrijft `process_stdout` en zet de status op \"AC\" (*answer correct*) als de verwachte en de gegenereerde uitvoer gelijk zijn (met het vergelijken van strings). Voegt ook de verwachte en de gegenereerde output toe aan het block zodat ze met een diff kunnen getoond worden in de feedbacktabel.
 -   `TypedContentChecker(BasicProcessor)`: Overschrijft `process_return` en zet de status op \"AC\" als het type en de waarden van de verwachte return en de gegenereerde return gelijk zijn. Voegt ook de verwachte en de gegenereerde return toe aan het block na ze te annoteren zodat ze in de feedbacktabel getoond kunnen worden.
 -   `DefaultProcessor(OutputComparator, TypedContentChecker)`: Erft over van de vorige twee output processoren en combineert hun functionaliteit: `process_stdout` roept `OutputComparator.process_stdout` op en `process_return` roept `TypedContentChecker.process_return` op.
 
@@ -391,7 +391,7 @@ In het geval dat je een testgeval wil tonen aan de studenten maar niet uitvoeren
 
 ### Doctests in meerdere talen
 
-Het is mogelijk meerdere talen te ondersteunen in doctests. Er moet niets veranderd worden aan het input bestand; bijna alles moet in het outputbestand gebeuren. Tussen de parameters onder de horizontale lijn moet er een `LANGUAGE` tag geplaatst worden. De geteste brondcode en een voorbeeldvertaling volgt. Hier gaan we er van uit dat de originele doctest in het Engels is.
+Het is mogelijk meerdere talen te ondersteunen in doctests. Er moet niets veranderd worden aan het input bestand; bijna alles moet in het outputbestand gebeuren. Tussen de parameters onder de horizontale lijn moet er een `LANGUAGE` tag geplaatst worden. De geteste broncode en een voorbeeldvertaling volgt. Hier gaan we er van uit dat de originele doctest in het Engels is.
 
 ``` python
 def show_usage():
@@ -414,9 +414,9 @@ class HtmlParagraph(object):
 
 De mogelijke types substitutie zijn `function`, `method`, `class`, `kwarg`, `fixed` en `regex`. Bij `kwarg` zullen de namen van keyword argumenten vervangen worden. `fixed` zorgt voor letterlijke substituties zonder extra grenzen.
 
-Elke subtitutie tag heeft ook een optionele parameter `detect` die standaard `true` is. Dit betekent dat de `to` parameter van de tag ook gebruikt wordt om de taal te detecteren. Als `detect` echter op `false` ingesteld staat wordt de substitutie genegeerd om de taal te detecteren.
+Elke substitutie tag heeft ook een optionele parameter `detect` die standaard `true` is. Dit betekent dat de `to` parameter van de tag ook gebruikt wordt om de taal te detecteren. Als `detect` echter op `false` ingesteld staat wordt de substitutie genegeerd om de taal te detecteren.
 
-Zodra de taal gedetecteerd wordt is het vertalen volledig automatisch. De taal moet echter wel gedetecteerd worden. De gededecteerde taal is de taal met de meeste woorden in de globale scope als er een met meer dan 0 is. Als er geen woorden gevonden worden, wordt er geen vertaling of selectie uitgevoerd.
+Zodra de taal gedetecteerd wordt is het vertalen volledig automatisch. De taal moet echter wel gedetecteerd worden. De gedetecteerde taal is de taal met de meeste woorden in de globale scope als er een met meer dan 0 is. Als er geen woorden gevonden worden, wordt er geen vertaling of selectie uitgevoerd.
 
 Selectie is het proces dat er rekening mee houdt dat niet alles met korte zinnetjes vertaald kan worden. Of soms wil je sommige dingen enkel uitvoeren voor gebruikers van een bepaalde taal. Het volgende voorbeeld brengt meer duidelijkheid:
 
@@ -506,7 +506,7 @@ Om het gebruik van de Python Tutor toe te laten voor oefeningen met bestanden mo
 
 Wanneer een sessie wordt opgestart van de online Python Tutor voor het huidige statement, kan de uitvoering van het statement afhankelijk zijn van vroeger uitgevoerde statements. Daarom hebben we het concept van een uitvoeringscontext geïntroduceerd. De uitvoeringscontext kan op twee manieren aangepast worden.
 
-De parameter `independent examples` geeft aan of elk statement zijn eigen uitvoeringscontext vormt. Als deze parameter `True` is (de standaardwaarde) dan zal elk statement apart uitgevoerd worden en enkel het huidige stament zal aan de broncode toegevoegd worden wanneer de Python Tutor opgestart wordt. Als de parameter `False` is zullen standaard alle statements een uitvoeringscontext vormen. Met de vlag `NEWCONTEXT` kan een een nieuwe context gestart worden.
+De parameter `independent examples` geeft aan of elk statement zijn eigen uitvoeringscontext vormt. Als deze parameter `True` is (de standaardwaarde) dan zal elk statement apart uitgevoerd worden en enkel het huidige statement zal aan de broncode toegevoegd worden wanneer de Python Tutor opgestart wordt. Als de parameter `False` is zullen standaard alle statements een uitvoeringscontext vormen. Met de vlag `NEWCONTEXT` kan een een nieuwe context gestart worden.
 
 ``` python
 # first context
@@ -530,7 +530,7 @@ De elementen van de `NAMESPACE` tag beschrijven condities op meerdere benoemde o
 
 De namespace testen worden uitgevoerd in de volgorde zoals ze in de `NAMESPACE` tag staan. Vanaf er een test faalt stopt de uitvoering van doctest en de volgende namespace testen. Maar één block zal getoond worden met de foutboodschap van het blok dat faalde.
 
-Namespace testen zijn altijd *sticky* in dat een gefaalde namaspace test de huidige doctest en alle volgende doctesten niet uitvoert tot er een doctest wordt gevonden met een eigen `NAMESPACE` tag (en deze tag het `extend` attribuut niet op `true` heeft staan).
+Namespace testen zijn altijd *sticky* in dat een gefaalde namespace test de huidige doctest en alle volgende doctesten niet uitvoert tot er een doctest wordt gevonden met een eigen `NAMESPACE` tag (en deze tag het `extend` attribuut niet op `true` heeft staan).
 
 De `arg` attributen van `FUNCTION` en `METHOD` zijn op een generieke manier geïmplementeerd en refereren naar de suffixen van de `function.__code__.co_` attributen. Bijvoorbeeld `names` kan gebruikt worden om te controleren dat de functie zelf alle verplichte functie oproept. De waarde in het argument wordt geëvalueerd als een python object.
 

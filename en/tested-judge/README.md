@@ -8,7 +8,7 @@ description: "TESTed judge"
 This is the reference for the **TESTed** judge.
 **TESTed** is a polyglot judge, supporting multiple programming languages.
 
-## Suppported programming languages
+## Supported programming languages
 
 **TESTed** supports 7 programming languages:
 

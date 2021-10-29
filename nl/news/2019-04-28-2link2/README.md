@@ -33,5 +33,5 @@ Op **donderdag 13 juni 2019** organiseert [2LinK2](http://2link2.be/index.php) i
 >   
 > ### Contactgegevens
 >   
-> email: [dodona@ugent.be](mailto:dodona@ugent.be)  
+> e-mail: [dodona@ugent.be](mailto:dodona@ugent.be)  
 > contactformulier: [https://dodona.ugent.be/nl/contact/](https://dodona.ugent.be/nl/contact/)

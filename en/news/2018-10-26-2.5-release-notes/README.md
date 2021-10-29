@@ -11,7 +11,7 @@ The arrival of the 2.5 millionth submission on Dodona is celebrated with the rel
 
 We welcome two new secondary schools to the Dodona family: MSKA Roeselare and Don Bosco College Kortrijk (both using Smartschool login) that are mentored by prof. dr. Veerle Fack.
 
-From now on, new Dodona features will be released as soon as they are ready and tested instead of grouped into larger updates. These smaller intermediate releases will allow deploying without any service interruptions, bring new features to you faster, reduce the risk of something going wrong and enable quick rollbacks in case of problems. Please keep forwarding your feedback, comments and suggestions, either as Dodona Github issues or using the [Dodona contact form](https://dodona.ugent.be/contact/).
+From now on, new Dodona features will be released as soon as they are ready and tested instead of grouped into larger updates. These smaller intermediate releases will allow deploying without any service interruptions, bring new features to you faster, reduce the risk of something going wrong and enable quick rollbacks in case of problems. Please keep forwarding your feedback, comments and suggestions, either as Dodona GitHub issues or using the [Dodona contact form](https://dodona.ugent.be/contact/).
 
 ## Manage labels using config files
 

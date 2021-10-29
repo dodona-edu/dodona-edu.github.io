@@ -42,12 +42,12 @@ For a full list of changes, we refer to [our GitHub release](https://github.com/
 *   visual representation of progress in overview of all course users
 *   display icon to course administrators if visual progress for exercises in series is disabled for course users
 *   clarify links in overview of all solutions submitted in a course
-*   fix width when dragging an dropping table rows
+*   fix width when dragging and dropping table rows
 *   convert all icons to [Material Design Icons](https://material.io/resources/icons/)
 *   add overview of solutions submitted for a specific judge
 *   faster filtering on educational institution in overview of course users
 *   send automatic email upon creation of repository with incorrect configuration files
-*   add button for directly unsubscribing course adminstrators
+*   add button for directly unsubscribing course administrators
 *   fix internal server error when requesting the 0th page from overview
 *   reduce number of queries when displaying course users
 *   allow course administrators to toggle visibility of exercises in a series

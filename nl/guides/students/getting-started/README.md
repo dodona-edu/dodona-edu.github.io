@@ -15,7 +15,7 @@ Dodona wordt gratis aangeboden voor educatieve doeleinden.
 
 ## Opdeling van de handleiding
 
-De handleding is onderverdeeld in drie onderdelen.
+De handleiding is onderverdeeld in drie onderdelen.
 
 * Het eerste deel [Aanmelden & gebruikersinstellingen](../login-and-settings/) legt uit hoe je een gebruikersaccount op Dodona kan aanmaken en hoe je die kan personaliseren.
 * Het tweede onderdeel [Cursussen op Dodona](../courses/) wordt besproken hoe je je kan registreren en uitschrijven voor een cursus, hoe je kan navigeren naar cursus en hoe je de indienstatus moet interpreteren.

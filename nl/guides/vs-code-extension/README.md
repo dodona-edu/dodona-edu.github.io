@@ -13,7 +13,7 @@ Voor je de extensie kan installeren moet je eerst een API token aanmaken op de D
 
 ## 2. De extensie installeren
 
-Je kan de extensie direct installeren vanuit VS Code. Je opent hiervoor eerst op het `Extensie`-menu (<img src="./extensions-view-icon.png" alt="Extensions" width=30px; />) . Hier zoek je naar `Dodona` en klik je op het zoekresultaat.
+Je kan de extensie direct installeren vanuit VS Code. Je opent hiervoor eerst op het `Extensie`-menu (<img src="./extensions-view-icon.png" alt="Extensions" width=30px; />). Hier zoek je naar `Dodona` en klik je op het zoekresultaat.
 
 ![settings](./vs_code_dodona_marketplace.png)
 

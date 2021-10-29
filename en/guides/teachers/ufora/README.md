@@ -34,7 +34,7 @@ The dialog should display an overview of all courses you have access to. After p
 
 ![select activity](./select-activity.png)
 
-Using the ctrl button (or command on a mac) on your keyboard, you can select one or more exercises. Next, click on the `Confirm` button to add those exercises to Ufora. If you don't select exercises or an exercise series, you'll add a link to the series or course respectively.
+Using the ctrl button (or command on a Mac) on your keyboard, you can select one or more exercises. Next, click on the `Confirm` button to add those exercises to Ufora. If you don't select exercises or an exercise series, you'll add a link to the series or course respectively.
 
 ## 4. Select 'Open as external resource'
 

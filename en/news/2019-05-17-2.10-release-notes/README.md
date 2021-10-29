@@ -22,7 +22,7 @@ The learning path of a course consists of multiple exercise series. A menu has b
 
 ## Copying courses
 
-When a teacher creates a new course, he now also has the option to start from the learning path of an existing course. The source course can be any accessible course on the platform, not only his own courses. Whoever creates a course automatically becomes a course manager of the new course, but when copying, additional course managers can also be taken over from the source course. After copying, thee learning path and course managers of the new course can be adjusted independently of the source course.
+When a teacher creates a new course, he now also has the option to start from the learning path of an existing course. The source course can be any accessible course on the platform, not only his own courses. Whoever creates a course automatically becomes a course manager of the new course, but when copying, additional course managers can also be taken over from the source course. After copying, the learning path and course managers of the new course can be adjusted independently of the source course.
 
 ![create course](./create-course.png)
 

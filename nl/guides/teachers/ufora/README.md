@@ -13,7 +13,7 @@ Sinds academiejaar 2020-2021 is het mogelijk om Dodona oefeningen en reeksen in 
 
 ## 1. Open je cursus op Ufora
 
-Surf naar [ufora.ugent.be](https://ufora.ugent.be) en navigeer naar je cursus. Open vervolgens  de inhoudstool en kies de gewenste module in de navigatiebalk.
+Surf naar [ufora.ugent.be](https://ufora.ugent.be) en navigeer naar je cursus. Open vervolgens de inhoudstool en kies de gewenste module in de navigatiebalk.
 
 ## 2. Open de oefeningenkiezer
 
@@ -38,7 +38,7 @@ Met behulp van de ctrl-knop (of command op een mac) op je toetsenbord kan je een
 ## 4. Selecteer 'Als externe bron openen' 
 
 Na het klikken op de knop `Bevestigen` zou het dialoogvenster moeten verdwijnen en zou je de gekozen oefeningen moeten zien verschijnen op Ufora. **Pas op!** Je bent nog niet klaar. Standaard zal Ufora de Dodona-oefening openen in een klein venster. Je kan dit echter eenvoudig aanpassen:
- - Klik op het pijlje naast de naam van de oefening
+ - Klik op het pijltje naast de naam van de oefening
  - Kies 'Eigenschappen op één plek bewerken'
  - Vink 'Als externe bron openen' aan
  - Herhaal dit voor alle toegevoegde oefeningen
