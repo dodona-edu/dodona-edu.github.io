@@ -467,7 +467,7 @@ Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bes
     ```
 
     Met de eerste vorm, zoals hierboven getoond, kan je je bestanden inbedden in
-    de tekstdefinities. In plaats van deze code zal `filestring = StringIO("""This is the content of text.txt""").read()` uitgevoerd worden. Voor de student
+    de testdefinities. In plaats van deze code zal `filestring = StringIO("""This is the content of text.txt""").read()` uitgevoerd worden. Voor de student
     wordt de originele code nog getoond worden.
 
 -   Open bestaand bestand
