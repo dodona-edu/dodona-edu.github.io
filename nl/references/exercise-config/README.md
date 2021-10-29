@@ -25,13 +25,13 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
   - **`memory_limit`** (integer, optioneel): de hoeveelheid geheugen in bytes die gebruikt kan worden bij het uitvoeren van de evaluatie. Standaard is dit ingesteld op 100M.
   - **`network_enabled`** (boolean, optioneel): ingesteld op `true` als toegang tot het internet toegelaten is. Standaard staat deze waarde op `false`.
 - **`labels`** (lijst van strings, optioneel): een lijst van labels die gebruikt kunnen worden om deze oefening te vinden via de Dodona web interface. Standaard een lege lijst.
-- **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een email-ontvanger hoofding.
+- **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een e-mail-ontvanger hoofding.
 
 ## Configuratiebestandsstructuur voor leesactiviteiten
 
 De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er zijn echter 2 grote verschillen: de waarde van `type` moet ingesteld worden op `content` en bepaalde verplichte velden zoals `programming_language` mogen achterwege gelaten worden.
 
-- **`type`**: Moet ingesteld worden op `content` voor leesctiviteiten.
+- **`type`**: Moet ingesteld worden op `content` voor leesactiviteiten.
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiker
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
@@ -40,7 +40,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     - **`nl`**: de naam van de oefening in het Nederlands
     - **`en`**: de naam van de oefening in het Engels
 - **`labels`** (lijst van strings, optioneel): een lijst van labels die gebruikt kunnen worden om deze oefening te vinden via de Dodona web interface. Standaard een lege lijst.
-- **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een email-ontvanger hoofding.
+- **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een e-mail-ontvanger hoofding.
 
 ## Voorbeeld configuratiebestand `config.json`
 

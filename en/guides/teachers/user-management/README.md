@@ -22,13 +22,13 @@ Als lesgever navigeer je naar het gebruikersoverzicht van je cursus door naar je
 
 ![admin menu users](./staff.course_users.png)
 
-In het gebruikersoverzicht worden de gebruikersnaam, de naam, het emailadres en [voortgangsstatus](#voortgangsstatus) opgelijst uit het gebruikersprofiel van alle gebruikers van jouw cursus. Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker toegewezen werden.
+In het gebruikersoverzicht worden de gebruikersnaam, de naam, het e-mailadres en [voortgangsstatus](#voortgangsstatus) opgelijst uit het gebruikersprofiel van alle gebruikers van jouw cursus. Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker toegewezen werden.
 
 ![gebruikers](./staff.users.png)
 
 ### Gebruiker zoeken
 
-Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifieke gebruikers op basis van een gebruikersnaam, een naam, een emailadres of gebruikerslabel. Verschillende filters kunnen tegelijkertijd actief zijn.
+Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifieke gebruikers op basis van een gebruikersnaam, een naam, een e-mailadres of gebruikerslabel. Verschillende filters kunnen tegelijkertijd actief zijn.
 
 ![gefilterde lijst](./staff.users_filtered.png)
 

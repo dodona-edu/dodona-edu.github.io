@@ -14,7 +14,7 @@ wat de bestandsnaam is van het testplan in de map `evaluation` van de oefening.
 Voor testplannen zijn er twee opties. TESTed ondersteunt een domeinspecifieke
 taal (DSL; [*domain specific language*](https://en.wikipedia.org/wiki/Domain-specific_language))
 om de testen te beschrijven waaraan een ingediende oplossing zal onderworpen
-worden. Het gebruik van deze DSL is de  meest eenvoudige manier om de testen te
+worden. Het gebruik van deze DSL is de meest eenvoudige manier om de testen te
 beschrijven. De specificatie van [**DSL-testplannen**](../dsl) gebeurt in het 
 [YAML-formaat](https://en.wikipedia.org/wiki/YAML) in bestanden met de extensie
 `.yaml` of `.yml`. Meer [**geavanceerde testplannen**](../json) worden

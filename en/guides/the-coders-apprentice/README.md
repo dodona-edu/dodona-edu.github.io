@@ -38,4 +38,4 @@ Being the administrator of the copied course enables you to set it up according 
 
 Creating your own courses (from scratch or starting from existing courses) or creating your own tutorials or programming exercises requires specific access rights on Dodona. These privileges are not granted by default, but teachers can send us a request by email (dodona@ugent.be) or via the [contact form] (https://dodona.ugent.be/en/contact). Team Dodona will process any incoming request as soon as possible.
 
-More information on gettings started with Dodona can be found in [this guide](/en/guides/teachers/getting-started).
+More information on getting started with Dodona can be found in [this guide](/en/guides/teachers/getting-started).

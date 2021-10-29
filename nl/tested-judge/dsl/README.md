@@ -171,7 +171,7 @@ testen in andere contexten. Elke test heeft een aantal invoerkanalen waarlangs
 informatie binnenkomt wordt en uitvoerkanalen waarin resultaten gerapporteerd
 worden. In het voorbeeld testplan is standaardinvoer (`stdin`) het enige
 invoerkanaal en is standaarduitvoer (`stdout`) het enige uitvoerkanaal. 
-Bestanden kunnen zowel als invoerkanaal als als uitvoerkanaal gebruikt worden.
+Bestanden kunnen zowel als invoerkanaal als uitvoerkanaal gebruikt worden.
 Andere uitvoerkanalen zijn bijvoorbeeld een returnwaarde, een *exit status* of
 een opgeworpen *exception*.
 

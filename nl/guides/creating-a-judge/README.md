@@ -26,7 +26,7 @@ The judge is basically the `run` executable, and interfaces with Dodona through 
 
 The `run` executable should accept JSON input with the following fields as configuration:
 
-- **memory_limit**: An integer, the memory limit in bytes. The docker container will be killed when it's internal processes exceed this limit. The judge can use this value to cut of the tests, so he might be able to give more feedback to the student than just the default "Memory limit exceeded."
+- **memory_limit**: An integer, the memory limit in bytes. The docker container will be killed when its internal processes exceed this limit. The judge can use this value to cut of the tests, so he might be able to give more feedback to the student than just the default "Memory limit exceeded."
 - **time_limit**: An integer, the time limit in seconds. Just like the memory limit, the docker will be killed if the judging takes longer. Can be used to for instance specify the specific test case the limit would be exceeded, instead of just "Time limit exceeded."
 
 These two values can be overwritten and extended with random other key-value pairs in _(1)_ the Judge configuration, found as `config.json` in the judge repository root and _(2)_ the `evaluation` subobject in the configuration of the submitted exercise, the latter overwriting the former.
@@ -44,7 +44,7 @@ In addition to the previous two, the following fields are also part of the input
 
 ### Output
 
-The `run` executable should output JSON to _stdout_, which will be interpreted by the Feedback Renderer to form the feedback table. There are two output schemas available: full and partial. "Full" should output a single JSON object at the end of its judgement. "Partial" should output multiple small JSON objects during it's run, describing its progress.
+The `run` executable should output JSON to _stdout_, which will be interpreted by the Feedback Renderer to form the feedback table. There are two output schemas available: full and partial. "Full" should output a single JSON object at the end of its judgement. "Partial" should output multiple small JSON objects during its run, describing its progress.
 
 #### Full output
 
@@ -61,7 +61,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - `annotations`, a list of `Annotation` objects, used to annotate the submitted source code.
 - A `Tab` object consists of:
   - An optional `description`, the string used as title for the tab (defaults to "Test").
-  - An optional `badgeCount`, an integer shown next to the title if present and non-zero. Use this _only_ for the number of remarks (failing tests, failing testcases, style issues, ...) with the submission. No remarks (value `0` or just absense of this key) will show no badge, to avoid drawing the user's attention.
+  - An optional `badgeCount`, an integer shown next to the title if present and non-zero. Use this _only_ for the number of remarks (failing tests, failing testcases, style issues, ...) with the submission. No remarks (value `0` or just absence of this key) will show no badge, to avoid drawing the user's attention.
   - `messages`, a list of `Message` objects, shown in order at the top of the tab if present.
   - `groups`, a list of `Context` objects, shown in order at the bottom of the tab if present.
 - A `Context` object consists of:
@@ -99,12 +99,12 @@ The full output returns a single JSON at the end. You must ensure that this is e
     - `"python"`, which is the same as `"code"` with Python highlighting;
     - `"javascript"`, which is the same as `"code"` with JavaScript highlighting.
   - `description`, the actual text of the message as a string.
-  - `permission`, a string specifiying the visibility of this message. The permission can be any of
+  - `permission`, a string specifying the visibility of this message. The permission can be any of
     - `"student"`, which makes the message visible for everyone;
     - `"staff"`, which makes the message visible only for staff members (e.g. for judge debug output);
     - `"zeus"`, which make is visible only for almighty Zeus (e.g. for application debug output);
 
-- A `Status` string indicates the status of the submission. They can be separated in two cathegories
+- A `Status` string indicates the status of the submission. They can be separated in two categories
   - Available for output by the judge:
     - `"compilation error"`, the submitted code did not compile.
     - `"runtime error"`, the submitted code crashed during the tests.

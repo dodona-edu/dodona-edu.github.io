@@ -68,7 +68,7 @@ Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub releas
 *   gebruik op meeste plaatsen naam van gebruiker in plaats van loginnaam
 *   geef Python Tutor toegang tot privé oefeningen
 *   toelaten om specifieke Docker-container in te stellen voor oefening
-*   gebruik naam en emailadres van gebruiker bij git commits door Dodona
+*   gebruik naam en e-mailadres van gebruiker bij git commits door Dodona
 *   beperk aantal PIDs die judges tegelijkertijd kunnen opstarten (preventie voor _fork bombs_)
 *   gebruikerspagina toevoegen die gekoppeld is aan cursus (toont voortgang van gebruiker binnen cursus)
 *   instellen van labels toelaten via configuratiebestanden van oefeningen

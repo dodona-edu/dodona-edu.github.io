@@ -9,7 +9,7 @@ date: "2020-02-27"
 
 > Dodona 3.3 voegt voor elke oefening een nieuwe informatiepagina to met extra info voor leerkrachten.
 
-## infopagina voor oefeningen
+## Infopagina voor oefeningen
 
 Als leerkracht heb je nu toegang tot een informatiepagina voor elke oefening. Deze pagina toont een aantal instellingen zoals de geheugenlimiet, maar ook wie de oefening opstelde. Daarnaast kan de maker van de oefening er ook voor kiezen om extra info ter beschikking te stellen en om een oplossing te delen.
 

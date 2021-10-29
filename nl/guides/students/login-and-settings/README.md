@@ -33,7 +33,7 @@ Om je aan te melden op dodona klik je ofwel op `Aanmelden` aan de rechterkant va
 
 ![image](./login.png)
 
-Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
+Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuw gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
 
 ![image](./sign_in.png)
 
@@ -49,7 +49,7 @@ Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat
 
 ::: tip Meerdere accounts?
 
-Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijke gebruikersaccount op Dodona. Gebruik dus steeds dezelfde account om aan te melden.
+Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijk gebruikersaccount op Dodona. Gebruik dus steeds dezelfde account om aan te melden.
 :::
 
 Eenmaal je bent aangemeld, dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/). Je kunt steeds terugkeren naar de landingspagina door op `Dodona` te klikken linksboven elke pagina.
@@ -61,11 +61,11 @@ Als dit de eerste keer is dat je aanmeldt op Dodona, dan ben je uiteraard nog vo
 
 Kies voor `Mijn profiel` in het gebruikersmenu aan de rechterkant van de navigatiebalk om naar je profielpagina te navigeren.
 
-Op de profielpagina staan je persoonsgegevens (voornaam, familienaam, gebruikersnaam en emailadres) en enkele persoonlijke voorkeuren ([taal](#selecteren-van-de-taal) en tijdzone) die samen je gebruikersprofiel vormen.
+Op de profielpagina staan je persoonsgegevens (voornaam, familienaam, gebruikersnaam en e-mailadres) en enkele persoonlijke voorkeuren ([taal](#selecteren-van-de-taal) en tijdzone) die samen je gebruikersprofiel vormen.
 
 ![image](./student.user_menu_my_profile.png)
 
-Klik op de bewerkknop in de rechterbenedenhoek van je profielpagina om je gebruikersprofiel te bewerken. Je persoonsgegevens zoals naam en emailadres kan je zelf niet aanpassen. Deze worden namelijk automatisch aangepast op basis van de gegevens die tijdens het aanmelden door je externe onderwijs- of onderzoeksinstelling naar Dodona worden doorgestuurd.
+Klik op de bewerkknop in de rechterbenedenhoek van je profielpagina om je gebruikersprofiel te bewerken. Je persoonsgegevens zoals naam en e-mailadres kan je zelf niet aanpassen. Deze worden namelijk automatisch aangepast op basis van de gegevens die tijdens het aanmelden door je externe onderwijs- of onderzoeksinstelling naar Dodona worden doorgestuurd.
 
 ![image](./student.edit_profile.png)
 
@@ -73,7 +73,7 @@ Wat je wel kan aanpassen is de **tijdzone** die gebruikt wordt voor het weergeve
 
 ![image](./student.edit_timezone.png)
 
-Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
+Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedetecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
 
 ![image](./student.wrong_timezone.png)
 

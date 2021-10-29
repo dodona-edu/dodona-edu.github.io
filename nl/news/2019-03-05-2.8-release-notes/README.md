@@ -11,7 +11,7 @@ date: "2019-03-05"
 
 ## Gegevens over oplossingen opslaan op het bestandssysteem
 
-Gegevens over een ingediende oplossing worden nu opgeslaan op het bestandssysteem in plaats van in de databank. Deze technische ingreep heeft geen impact op de manier waarop Dodona moet gebruikt worden, maar biedt wel mogelijkheden om in de toekomst alternatieve scenario's te gaan ondersteunen voor het indienen van oplossingen. We denken er bijvoorbeeld aan om het mogelijk te maken om in de teksteditor met meerdere tabs te werken (bijvoorbeeld voor HTML, CSS en JavaScript voor opgaven rond web design), toe te laten om bestanden op te laden (bijvoorbeeld .jar bestanden voor Java) of specfieke editors in te bouwen (bijvoorbeeld voor Scratch).
+Gegevens over een ingediende oplossing worden nu opgeslaan op het bestandssysteem in plaats van in de databank. Deze technische ingreep heeft geen impact op de manier waarop Dodona moet gebruikt worden, maar biedt wel mogelijkheden om in de toekomst alternatieve scenario's te gaan ondersteunen voor het indienen van oplossingen. We denken er bijvoorbeeld aan om het mogelijk te maken om in de teksteditor met meerdere tabs te werken (bijvoorbeeld voor HTML, CSS en JavaScript voor opgaven rond web design), toe te laten om bestanden op te laden (bijvoorbeeld .jar bestanden voor Java) of specifieke editors in te bouwen (bijvoorbeeld voor Scratch).
 
 ## Filteren van gebruikers in statusoverzicht
 

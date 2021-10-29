@@ -24,7 +24,7 @@ This new representation is mostly helpful with multiline values.
 
 ## Improved caching
 
-Dodona caches computed values to speed-up page loads. The caching mechanism has been improved to give Dodone more fine-grained control over the values that require caching and when cached values need to be recomputed. This reduces load times for some of the pages.
+Dodona caches computed values to speed-up page loads. The caching mechanism has been improved to give Dodona more fine-grained control over the values that require caching and when cached values need to be recomputed. This reduces load times for some of the pages.
 
 ## Dodona blog
 

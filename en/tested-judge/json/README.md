@@ -1266,7 +1266,7 @@ This datatype represent 'nothing'.
 ##### BasicSequenceTypes
 There exists two basic sequence datatypes in TESTed: `sequence` and `set`.
 - **sequence**: A ordered sequence of values.
-- **set**: An onordered collection of unique invariable values.
+- **set**: An unordered collection of unique invariable values.
 
 ```json
 "BasicSequenceTypes": {
@@ -1359,7 +1359,7 @@ This is the `char` datatype, which represents a single character.
 ```
 
 #### VariableType
-The variable type must be used when you want to represent a value, that can't be represent with a TESTed datatypes.
+The variable type must be used when you want to represent a value, that can't be represented with a TESTed datatypes.
 
 This object has two attributes: `data` and `type`.
 - **data**: The name of the datatype.
@@ -1481,7 +1481,7 @@ TESTed supports 3 different types of expressions: [Identifier](#identifier), [Fu
 [values](#values).
 
 #### Identifier
-An identifier is a string that repressents a variable.
+An identifier is a string that represents a variable.
 
 #### FunctionCall
 The *FunctionCall*-object represents a function call.

@@ -8,7 +8,7 @@ description: "Tutorial: oefeningenreeksenbeheer"
 **Inhoudsopgave**
 [[toc]]
 
-Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillenden oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen.
+Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillende oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen.
 
 ## Oefeningenreeks aanmaken
 
@@ -140,7 +140,7 @@ Bij het hertesten van een oplossing worden alle testen opnieuw uitgevoerd zonder
 
 ::: tip Belangrijk
 
-Bij het herevalueren krijgen oplossingen een lagere prioriteit in de wachtrij dan oplossingen die nieuw ingediend worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertaging, maar kan het herevalueren wel langer duren.
+Bij het herevalueren krijgen oplossingen een lagere prioriteit in de wachtrij dan oplossingen die nieuw ingediend worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertraging, maar kan het herevalueren wel langer duren.
 
 Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalueerd worden. Als je beslist om oplossingen te herevalueren, is het belangrijk om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de status van oplossingen die ze vroeger ingediend hebben als van hun indienstatus voor oefeningen in de oefeningenreeksen van de cursus.
 :::

@@ -89,7 +89,7 @@ wordt onder andere vastgelegd welke judge aan de oefening gekoppeld wordt.
 
 ### 3. Judge configureren
 
-Het configuren van een oefening volgt de algemene regels voor het
+Het configureren van een oefening volgt de algemene regels voor het
 [configuratiebestand van een oefening](../references/exercise-config).
 Daarnaast heeft TESTed enkele [specifieke opties](exercise-config).
 Waaronder het verplichte veld `evaluation.testplan`, dat de naam van het

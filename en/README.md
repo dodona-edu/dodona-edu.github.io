@@ -7,7 +7,7 @@ actionLink: "/nl/"
 footer: Made by Team Dodona with ❤️
 ---
 
-On this website, you can find a number of [guides](/en/guides) and [reference pages](/en/references). The ultimate goal of this web site is to offer all content in both English and Dutch. For the time being, not all pages are translated.
+On this website, you can find a number of [guides](/en/guides) and [reference pages](/en/references). The ultimate goal of this website is to offer all content in both English and Dutch. For the time being, not all pages are translated.
 
 If you are a teacher and want to create your own Dodona course (with existing or own programming exercises), have a look at [this getting started guide](guides/teachers/getting-started).
 

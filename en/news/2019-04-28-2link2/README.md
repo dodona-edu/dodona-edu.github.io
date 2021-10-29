@@ -7,7 +7,7 @@ date: "2019-04-28"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
-[2LinK2](http://2link2.be/index.php) organizes its [first conference on computational thinking](http://2link2.be/congres/) for computer science and STEM educators on **Thursday June 13, 2019** in Ghent, Belgium. In a hands-on workshop with Dominiek Vandewalle (College Waregem) and Alex Bervoets (Atheneum De Ring, Leuven) – two computer science educators in secondary schools – team Dodona introduces its intelligent tutoring system for learning computer programming in secundary education. Curious about exploring this online learning environment or looking for practical tips to get started with Dodona in secondary education? Registrations for the 2LinK2 conference are now open. We are looking forward to meeting you in person on the conference.  
+[2LinK2](http://2link2.be/index.php) organizes its [first conference on computational thinking](http://2link2.be/congres/) for computer science and STEM educators on **Thursday June 13, 2019** in Ghent, Belgium. In a hands-on workshop with Dominiek Vandewalle (College Waregem) and Alex Bervoets (Atheneum De Ring, Leuven) – two computer science educators in secondary schools – team Dodona introduces its intelligent tutoring system for learning computer programming in secondary education. Curious about exploring this online learning environment or looking for practical tips to get started with Dodona in secondary education? Registrations for the 2LinK2 conference are now open. We are looking forward to meeting you in person on the conference.  
 
 ![2link2](./flyer.jpg)
 
@@ -25,7 +25,7 @@ date: "2019-04-28"
 >   
 > ### Workshop outline
 >  
-> Two teachers who use Dodona in secundary education as support for their programming classes, guide you in an interactive exploration of all aspects of this learning environment. Bring your own laptop to this hands-on workshop for the ultimate user experience.  
+> Two teachers who use Dodona in secondary education as support for their programming classes, guide you in an interactive exploration of all aspects of this learning environment. Bring your own laptop to this hands-on workshop for the ultimate user experience.  
 >   
 > At the outset you take the role of a student to see the possibilities of the platform through their eyes. In this way, you experience the added value of an **online co-teacher that immediately gives feedback** on solutions that you submit for programming assignments. You will soon enough find out that this feedback takes various forms that you can use to **detect and fix bugs in your code**.  
 >   

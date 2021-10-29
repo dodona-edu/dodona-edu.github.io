@@ -4,7 +4,7 @@ sidebarDepth: 0
 ---
 # References
 
-Here you can find up to date descriptions of the Dodona config files and directory structures.
+Here you can find up-to-date descriptions of the Dodona config files and directory structures.
 
 ## In English
 * [Exercise descriptions](exercise-description)

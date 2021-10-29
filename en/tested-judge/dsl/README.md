@@ -131,7 +131,7 @@ At this moment we have only seen an example for input-output tests.
 The keyword `stdin` is used to provide the standard input for a testcase.
 
 ##### stdout
-The keyword `stdout` is used to specify the expect output at the standard output channel.
+The keyword `stdout` is used to specify the expected output at the standard output channel.
 For this output, we recommend to use strings.
 Numbers and boolean values are also supported, but they will be translated to strings.
 We will be referring to these datatypes as textual datatypes.
@@ -690,7 +690,7 @@ Correct:
 
 ### Lists
 Forgetting the hyphen and space in list elements.
-Or using it to much, which leads to much more elements than expected.
+Or using it too much, which leads to much more elements than expected.
 Example:
 
 Wrong:

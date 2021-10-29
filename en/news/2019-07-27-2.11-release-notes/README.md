@@ -7,7 +7,7 @@ date: "2019-07-27"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
-> Dodona 2.11 allows to login with a Google for Education (G Suite) account, visualise the history of submitted solutions, activate dark mode, and have more fine-grained control over visibility and registration modalities of a course.
+> Dodona 2.11 allows to log in with a Google for Education (G Suite) account, visualise the history of submitted solutions, activate dark mode, and have more fine-grained control over visibility and registration modalities of a course.
 
 ## Login with G Suite account
 

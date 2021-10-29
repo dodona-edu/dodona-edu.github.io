@@ -17,7 +17,7 @@ Dit hebben we opgelost door de opgaven van oefeningen in een _iframe_ te plaatse
 
 ## Snelheid
 
-Voor echt grote feedbacktabellen kon het soms lang duren voor de feedbacktabel getoond werd nadat de oplossing geevalueerd werd (soms tot wel 40 seconden!). Door een aantal slimme trucjes toe te passen en waar nodig een iets simpelere weergave te tonen hebben we er voor gezorgd dat het nooit meer dan een seconde duurt om een feedbacktabel in te laden.
+Voor echt grote feedbacktabellen kon het soms lang duren voor de feedbacktabel getoond werd nadat de oplossing geëvalueerd werd (soms tot wel 40 seconden!). Door een aantal slimme trucjes toe te passen en waar nodig een iets simpelere weergave te tonen hebben we er voor gezorgd dat het nooit meer dan een seconde duurt om een feedbacktabel in te laden.
 
 We hebben ook een visuele indicator toegevoegd om aan te geven dat de feedbacktabel wordt ingeladen.
 
@@ -30,7 +30,7 @@ Naast deze twee grote items zijn er natuurlijk ook een hoop andere kleine dingen
 * Voeg de scoresheet op cursusniveau en het statusoverzicht op reeksniveau samen
 * Zorg ervoor dat gestreepte tabellen er goed uit zien in donkere modus
 * Zorg ervoor dat gebruikers kunnen inschrijven in verborgen cursussen die voor iedereen openstaan
-* Gebruik enkel ingediende oplossingen die al geevalueerd zijn om de status van een oefening of een reeks te bepalen
+* Gebruik enkel ingediende oplossingen die al geëvalueerd zijn om de status van een oefening of een reeks te bepalen
 * Los enkele kleine problemen in donkere modus op
-* Breng het verdwenen icoon voor oplossingen in de wachtrij of die geevalueerd worden terug
+* Breng het verdwenen icoon voor oplossingen in de wachtrij of die geëvalueerd worden terug
 * Update naar Ruby 2.6.5

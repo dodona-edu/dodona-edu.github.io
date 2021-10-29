@@ -38,5 +38,5 @@ Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub releas
 *   onderwijsinstelling toevoegen aan tabel met cursusgebruikers en toelaten om daarop te zoeken
 *   cursusbeheerders toelaten om visualisatie van groepsvoortgang (per reeks) te verbergen voor studenten
 *   lesgevers toelaten om cursussen te kopiëren
-*   JSON syntaxisfouten duidelijker weergeven in emailboodschappen
+*   JSON syntaxisfouten duidelijker weergeven in e-mailboodschappen
 *   veel kleine bugfixes en verbeteringen

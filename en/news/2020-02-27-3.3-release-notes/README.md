@@ -28,4 +28,4 @@ Aside from these changes, we have also worked on a number of smaller issues. Ple
 * Add line numbers to the display of external text files
 * Automatically hide warning and info messages when there are errors in de source code
 * Make the export action asynchronous and add notifications
-* Add API access to the score sheet
+* Add API access to the scoresheet

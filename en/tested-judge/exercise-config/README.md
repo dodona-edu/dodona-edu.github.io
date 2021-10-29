@@ -240,7 +240,7 @@ Example Checkstyle configuration:
 ### JavaScript
 De scripting language JavaScript has one option: `eslint_config`.
 This option expects the file name of the ESLint config file.
-This file must be located in the `evaluation` folder of the Dodona exerise.
+This file must be located in the `evaluation` folder of the Dodona exercise.
 
 Example ESLint configuration:
 ```json
@@ -291,7 +291,7 @@ Example KTLint configuration:
 ### Python
 The scripting language Python has one option: `pylint_config`.
 This option expects the file name of the PYLint config file.
-This file must be located in the `evaluation` folder of the Dodona exerise.
+This file must be located in the `evaluation` folder of the Dodona exercise.
 
 Example PYLint configuration:
 ```json

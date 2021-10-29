@@ -31,7 +31,7 @@ Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes
 
 ## Dodona 4.1 - 11/03/2021
 
-Dodona 4.1 voegt een overzichtpagina toe die alle alle vragen bevat die gesteld zijn in een van de cursussen waarvan je cursusbeheerder bent. Je vindt de link naar deze pagina in de inklapbare navigatiebalk aan de linker kant van elke pagina.
+Dodona 4.1 voegt een overzichtpagina toe die alle vragen bevat die gesteld zijn in een van de cursussen waarvan je cursusbeheerder bent. Je vindt de link naar deze pagina in de inklapbare navigatiebalk aan de linker kant van elke pagina.
 
 Alle details over deze Dodona versie kan je vinden in [onze GitHub release notes](https://github.com/dodona-edu/dodona/releases/tag/4.1).
 

@@ -55,7 +55,7 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
 Nadat je geregistreerd bent, wordt de cursus getoond op je gepersonaliseerde startpagina.
 
-Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina de registratieprocedure te doorlopen, is het ook mogelijk dat je een registratielink ontvangt van een cursusbeheerder (bijvoorbeeld per email van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren.
+Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina de registratieprocedure te doorlopen, is het ook mogelijk dat je een registratielink ontvangt van een cursusbeheerder (bijvoorbeeld per e-mail van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren.
 
 ## Cursuscomponenten
 
@@ -81,7 +81,7 @@ Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daar
 ::: tip Dezelfde oefening in meerdere cursussen/oefeningenreeksen
 Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de oefening wordt hierbij niet overgenomen. Je moet dus de oefening binnen elke cursus afzonderlijk indienen.
 
-Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende opgelossingen wel in rekening genomen bij alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
+Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende oplossingen wel in rekening genomen bij alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
 :::
 
 In het menu van een oefeningenreeks vind je de volgende opties:

@@ -28,7 +28,7 @@ Omdat je beheerder wordt van de gekopieerde cursus, kan je die zelf [inrichten](
   - [eigen oefeningen](../teachers/new-exercise-repo/) toevoegen en delen met collega's
 - [deadlines instellen](../teachers/getting-started#een-cursus-opstellen)
 - de [voortgang opvolgen](../teachers/getting-started#je-cursus-gebruiken) van leerlingen opvolgen
-- online toesten en examens organiseren
+- online toetsen en examens organiseren
 - opmerkingen geven op de ingediende oplossingen van je leerlingen
 - collega's mee als cursusbeheerder aanduiden
 
