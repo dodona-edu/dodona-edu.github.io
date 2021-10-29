@@ -53,7 +53,7 @@ Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat
 
 ::: tip Meerdere accounts?
 
-Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijk gebruikersaccount op Dodona. Gebruik dus steeds dezelfde account om aan te melden.
+Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijke gebruikersaccount op Dodona. Gebruik dus steeds dezelfde account om aan te melden.
 :::
 
 Eenmaal je bent aangemeld, dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/). Je kunt steeds terugkeren naar de landingspagina door op `Dodona` te klikken linksboven elke pagina.
