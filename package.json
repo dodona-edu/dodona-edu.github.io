@@ -20,7 +20,7 @@
     "markdown-it-imsize": "^2.0.1",
     "prismjs": "^1.25.0",
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.8.2",
+    "vuepress": "^1.9.5",
     "vuepress-plugin-mathjax": "^1.2.8",
     "vuepress-plugin-redirect": "^1.2.5",
     "vuepress-plugin-tabs": "^0.3.0"
