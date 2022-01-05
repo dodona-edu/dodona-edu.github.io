@@ -35,7 +35,7 @@ module.exports = {
     nextLinks: false,
     prevLinks: false,
     algolia: {
-      apiKey: '6479590fc338465f3439cfe6ef357683',
+      apiKey: '60f1ac41f6f49d989a3b3c500aba3481',
       indexName: 'dodona-edu'
     },
     locales: {
