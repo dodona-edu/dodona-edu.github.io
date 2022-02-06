@@ -59,7 +59,7 @@ All details about this Dodona version can be found in the [GitHub release discus
 
 ## Dodona 5.3 - 2022-02-04
 
-It has been a while since our last release so the list of updates is a bit longer than usual. The main new feature in Dodona 5.3 is the addition of a new graph type for series. A new heatmap option was added showing when submissions were made for each exercise.
+It has been a while since our last release so the detailed list of updates is a bit longer than usual. The main new feature in Dodona 5.3 is the addition of a new graph type for series. A new heatmap option was added showing when submissions were made for each exercise.
 
 ![heatmap](./heatmap.png)
 
