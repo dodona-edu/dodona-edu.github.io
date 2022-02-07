@@ -54,3 +54,15 @@ Dodona 5.2 maakt het mogelijk voor ambtenaren van de Vlaamse overheid om aan te 
 Op alle oefeningenpagina's wordt nu bovenaan de pagina naast de naam van de oefening met een icoontje aangeduid wat de programmeertaal van de oefening is.
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3186).
+
+
+## Dodona 5.3 - 04/03/2022
+
+Het is een eindje geleden sinds onze vorige Dodona release, dus de gedetailleerde lijst met aanpassingen is een stuk langer dan gewoonlijk.
+De belangrijkste nieuwe feature in Dodona 5.3 is een nieuw grafiektype in de oefeningenreeksen. Op de heatmap kan je zien op welk tijdstip de meeste oplossingen werden ingediend.
+
+![heatmap](./heatmap.png)
+
+Het start- en eindtijdstip is aanpasbaar en de grafiek past zich automatisch aan om een gepast aantal blokjes te tonen. De selectie van de tijdsperiode werd ook toegevoegd aan de bestaande lijngrafieken.
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3345).

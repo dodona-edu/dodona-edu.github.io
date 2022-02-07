@@ -55,3 +55,14 @@ Dodona 5.2 makes it possible for officials of the Flemish government to sign in.
 In addition, a programming language indicator icon was added next to the exercise name on all exercise pages.
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3186).
+
+
+## Dodona 5.3 - 2022-02-04
+
+It has been a while since our last release so the detailed list of updates is a bit longer than usual. The main new feature in Dodona 5.3 is the addition of a new graph type for series. A new heatmap option was added showing when submissions were made for each exercise.
+
+![heatmap](./heatmap.png)
+
+The start and end time can be chosen by the user and the graph automatically picks the right bin size. The time selection and binning was also added to the existing line charts.
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3345).
