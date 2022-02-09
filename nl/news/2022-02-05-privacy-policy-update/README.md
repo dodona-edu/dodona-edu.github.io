@@ -1,5 +1,5 @@
 ---
-title: "Privacy policy update: Google Analytics geschraot"
+title: "Privacy policy update: Google Analytics geschrapt"
 description: "Privacy policy update: Google Analytics geschrapt"
 permalink: '/news/:year/:month/:day/:slug'
 date: "2022-02-05"
