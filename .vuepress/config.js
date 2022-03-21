@@ -54,14 +54,14 @@ module.exports = {
           { text: 'Nieuws', link: '/nl/news/' },
           { text: 'Handleidingen', link: '/nl/guides/' },
           { text: 'Referenties', link: '/nl/references/' },
-          { text: 'TESTed', link: '/nl/tested-judge/' },
+          { text: 'TESTed', link: '/nl/tested/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
           '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
-          '/nl/tested-judge/': getTESTedSidebar('nl', 'TESTed judge', 'Overzicht'),
+          '/nl/tested/': getTESTedSidebar('nl', 'TESTed judge', 'Overzicht', 'Referenties'),
           '/nl/': getGeneralSidebar()
         }
       },
@@ -72,14 +72,14 @@ module.exports = {
           { text: 'News', link: '/en/news/' },
           { text: 'Guides', link: '/en/guides/' },
           { text: 'References', link: '/en/references/' },
-          { text: 'TESTed', link: '/en/tested-judge/' },
+          { text: 'TESTed', link: '/en/tested/' },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         sidebar: {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
           '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
-          '/en/tested-judge/': getTESTedSidebar('en', 'TESTed judge', 'Overview'),
+          '/en/tested/': getTESTedSidebar('en', 'TESTed judge', 'Overview', 'References'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -131,7 +131,8 @@ function getGeneralSidebar() {
     'news/',
     'guides/',
     'references/',
-    'tested-judge/'
+    'tested-judge/',
+    'tested/'
   ]
 }
 
@@ -201,6 +202,7 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
     },
     `/${lang}/references/`,
     `/${lang}/tested-judge/`,
+    `/${lang}/tested/`
   ]
 }
 
@@ -222,11 +224,11 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
       ]
     },
     `/${lang}/tested-judge/`,
+    `/${lang}/tested/`
   ]
 }
 
-
-function getTESTedSidebar(lang, groupTitle, FirstItem) {
+function getTESTedSidebar(lang, groupTitle, FirstItem, referenceItem) {
   return [
     `/${lang}/news/`,
     `/${lang}/guides/`,
@@ -237,13 +239,21 @@ function getTESTedSidebar(lang, groupTitle, FirstItem) {
       sidebarDepth: 2,
       children: [
         ['', FirstItem],
-        'exercise-config/',
-        'dsl/',
-        'json/',
-        'template-description/',
-        'template-exercise/',
-        'standalone/',
-        'configure-new-programming-language/',
+        {
+          title: referenceItem,
+          collapsable: true,
+          path: `/${lang}/tested/references/`,
+          sidebarDepth: 1,
+          initialOpenGroupIndex: -1,
+          children: [
+            'references/dsl/',
+            'references/json/',
+            'references/exercise-config/'
+          ]
+        },
+        `new-programming-language/`,
+        `template-description/`,
+        `template-exercise/`,
       ]
     }
   ]
