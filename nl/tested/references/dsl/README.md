@@ -2,6 +2,7 @@
 title: "[en] Vereenvoudigde testplannen (DSL)"
 description: "Maak gemakkelijk testplannen voor TESTed met de DSL."
 ---
+# Vereenvoudigde testplannen (DSL)
 
 ::: warning Enkel Engels
 Deze handleiding is enkel in het Engels beschikbaar.

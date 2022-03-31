@@ -1,22 +1,35 @@
 ---
-title: Exercise configuration
-description: "Configuration options supported by TESTed"
+title: Configuration for exercises
+description: "The configuration options supported by TESTed"
 ---
 
-# Configuration TESTed
-The TESTed judge has one required field `evaluation.plan_name` in the `config.json` file of a Dodona exercise.
-This field must contain the name of the test plan, in the `evaluation`-folder.
-The test plan can be either a [DSL test plan](../dsl) or an [advanced test plan](../json).
-The DLS test plans must end on one of the YAML extensions (`.yaml` or `.yml`).
-For the advanced test plans, there are no restrictions about the file extension, except the YAML extensions.
+# Configuration for exercises
 
-In addition to the mandatory test plan field, TESTed has some configuration options that can be set.
-The options must be set in the `config.json` of the Dodona exercise (see [Exercise config](../../references/exercise-config)).
-The options must be set in the object `evaluation.options`.
+Apart from the default Dodona options, there are a few TESTed-speficic options than can be used.
 
-## JSON Scheme
-Below you can find the JSON Scheme of the different options.
-These options will be discussed in the next paragraphs.
+## Test suite
+
+The only mandatory option is the name of the test suite.
+For compatibility reasons, this is called `testplan` at the moment.
+This should be in the `evaluation` block:
+
+```json
+{
+  "evaluation": {
+    "testplan": "plan.json"
+  }
+}
+```
+
+When using the [Simplified test suites (DSL)](../../references/dsl), the extension must be `.yaml`.
+In all other cases, TESTed will assume you're using a [full test suite (with JSON)](../../references/json).
+
+## General options
+
+Certain parts of the behaviour of TESTed can be influenced by setting options in the `options` block.
+In the next section, we discuss the various options.
+Their specification is given as a [JSON Schema](https://json-schema.org/).
+
 ```json
 {
   "title": "OptionsModel",
@@ -35,11 +48,6 @@ These options will be discussed in the next paragraphs.
       "title": "Options",
       "type": "object",
       "properties": {
-        "parallel": {
-          "title": "Parallel",
-          "default": false,
-          "type": "boolean"
-        },
         "mode": {
           "default": "batch",
           "allOf": [
@@ -63,14 +71,6 @@ These options will be discussed in the next paragraphs.
         },
         "linter": {
           "title": "Linter",
-          "default": {},
-          "type": "object",
-          "additionalProperties": {
-            "type": "boolean"
-          }
-        },
-        "optimized": {
-          "title": "Optimized",
           "default": true,
           "type": "boolean"
         }
@@ -80,34 +80,19 @@ These options will be discussed in the next paragraphs.
 }
 ```
 
-## Parallelisation
-The field `parallel` specifies whether the evaluations may be executed in parallel.
-The parallellisation has effect on the different executables for one tab.
-By default, there will be no parallellisation.
+### Compilation mode
 
-Example of applying parallelisation:
-```json
-{
-  "evaluation": {
-    "options": {
-      "parallel": true
-    }   
-  }
-}
-```
+The `mode` field indicate how executable files (test code and submissions) should be compiled.
+TESTed supports two modes:
 
-## Compilation mode
-The field `mode` indicates how to compile.
-TESTed support two modes:
-1) Compile all executables at once (`batch`).
-2) Compile each executable file separately (`context`, individual compilation).
+* `batch`: All executable files are compiled at once.
+* `context`: Each executable file is compiled separately (individual compilation).
 
-`batch` compilation has as result that there will be less time spend at compiling test and solution code,
-when we compare it to the individual compilation.
+The main advantage of the back compilation is that it's faster than the individual compilation.
+As such, it is the default.
 
-By default, will TESTed compile all executables in one step.
+Example (using individual compilation):
 
-Example individual compilation:
 ```json
 {
   "evaluation": {
@@ -118,13 +103,15 @@ Example individual compilation:
 }
 ```
 
-### Compilation fallback
-When you use the `batch` compilation you can set whether you can switch to the individual compilation,
-when the `batch` compilation fails.
-For this you use the `allow_fallback` field.
-By default, will TESTed fallback to the individual compilation, when the `batch` compilation fails.
+### Fallback for compilation
 
-Example disabling compilation fallback:
+When using batch compilation,
+you can allow TESTed to fall back to the individual compilation if the batch compilation fails.
+This can be useful, for example, if a submission does not implement all required functions.
+By default, the `allow_fallback` field is true, meaning the fallback is enabled.
+
+Example (disabling the fallback):
+
 ```json
 {
   "evaluation": {
@@ -136,72 +123,86 @@ Example disabling compilation fallback:
 }
 ```
 
-## Optimized python evaluation
-The field `optimized` is used to indicate whether the programmed Python evaluators may be optimized.
-By optimized we mean that they will be executed in the same process as TESTed.
-Otherwise, they will be executed in a separate proces, which has a non-negligible performance overhead.
-By default, will TESTed use the optimized evaluation.
+## Linters
 
-Example not-optimized Python evaluation:
+When [adding support for a new programming language to TESTed](../../new-programming-language),
+it is possible to add support for a [linter](https://en.wikipedia.org/wiki/Lint_(software)).
+Following linters are supported by TESTed:
+
+| Language   | Linter                                                 |
+|------------|--------------------------------------------------------|
+| Bash       | [Shellcheck](https://www.shellcheck.net/)              |
+| C          | [Cppcheck](http://cppcheck.sourceforge.net/)           |
+| Haskell    | [HLint](https://github.com/ndmitchell/hlint)           |
+| Java       | [Checkstyle](https://github.com/checkstyle/checkstyle) |
+| JavaScript | [ESLint](https://eslint.org/)                          |
+| Kotlin     | [Ktlint](https://ktlint.github.io/)                    |
+| Python     | [Pylint](https://www.pylint.org/)                      |
+
+You can use the field `linter` to enable or disable all linters.
+Example of disabling all linters:
+
 ```json
 {
   "evaluation": {
     "options": {
-      "optimized": false
-    }   
+      "linter": false
+    }
   }
 }
 ```
 
-## Linters
-The TESTed judge has support for the linters.
-For each programming language it can be decided whether you wish to use the linter for that programming language.
-The linters used are:
-| Programming language | Linter     |
-| -------------------- | ---------- |
-| C                    | Cppcheck   |
-| Haskell              | HLint      |
-| Java                 | Checkstyle |
-| JavaScript           | ESLint     |
-| Kotlin               | KTLint     |
-| Python               | PYLint     |
+You can also enable or disable linters per programming language.
+For example, only enabling the JavaScript linter:
 
-The linters can be set in the object associated with the field `linter`.
-The keys of this object are the supported programming languages.
-A boolean will indicate if the linters should be used or not.
-By default, the linters will be used for every programming language.
-
-Example disabling linters:
 ```json
 {
   "evaluation": {
     "options": {
-      "linter": {
-        "c": false,
-        "haskell": false,
-        "java": false,
-        "javascript": false,
-        "kotlin": false,
-        "python": false
+      "linter": false,
+      "language": {
+        "javascript": {
+          "linter": true
+        }
+      } 
+    }
+  }
+}
+```
+
+## Programming-language-specific options
+
+There can also be options specific to a single programming language.
+We discuss the available options below.
+
+### Bash
+
+With the option `shellcheck_config` you can specify a Shellcheck configuration file,
+which will be used to configure the linter.
+This file must be located inside the `evaluation` direction of the exercise.
+
+Example (Shellcheck configuration):
+```json
+{
+  "evaluation": {
+    "options": {
+      "language": {
+        "bash": {
+          "shellcheck_config": "shellcheckrc"
+        }
       }
     }
   }
 }
 ```
 
-## Programming language specific
-Next to the configuration options for TESTed itself, there are also programming language specific optional options.
-These options are set in the object associated with the field `evaluation.language`.
-
-### C
-The programming language C has no programming language specific options.
-
 ### Haskell
-The programming language Haskell has one option: `hlint_config`.
-This option expects a file name of a HLint configuration file.
-This file must be located in the `evaluation` folder of the Dodona exercise.
 
-Example HLint configuration:
+With the option `hlint_config` you can specify a HLint configuration file,
+which will be used to configure the linter.
+This file must be located inside the `evaluation` direction of the exercise.
+
+Example (HLint configuration):
 ```json
 {
   "evaluation": {
@@ -217,11 +218,13 @@ Example HLint configuration:
 ```
 
 ### Java
-The programming language Java has one option: `checkstyle_config`.
-This option expects the file name of the Checkstyle config file.
-This file must be located in the `evaluation` folder of the Dodona exercise.
 
-Example Checkstyle configuration:
+With the option `checkstyle_config` you can specify a Checkstyle configuration file,
+which will be used to configure the linter.
+This file must be located inside the `evaluation` direction of the exercise.
+
+Example (Checkstyle configuration):
+
 ```json
 {
   "evaluation": {
@@ -237,11 +240,13 @@ Example Checkstyle configuration:
 ```
 
 ### JavaScript
-De scripting language JavaScript has one option: `eslint_config`.
-This option expects the file name of the ESLint config file.
-This file must be located in the `evaluation` folder of the Dodona exercise.
 
-Example ESLint configuration:
+With the option `eslint_config` you can specify a ESLint configuration file,
+which will be used to configure the linter.
+This file must be located inside the `evaluation` direction of the exercise.
+
+Example (ESLint configuration):
+
 ```json
 {
   "evaluation": {
@@ -257,19 +262,18 @@ Example ESLint configuration:
 ```
 
 ### Kotlin
-The programming language Kotlin has 4 options:
-`editorconfig`, `disabled_rules_ktlint`, `ktlint_ruleset` and `ktlint_experimental`.
-Al these options will be used by the *KTLint* linter.
-- `editorconfig`: file name of the `.editorconfig` file (see <https://editorconfig.org/>) in the `evaluation` folder
-  of the Dodona exercise.
-- `disabled_rules_ktlint`: a list of *KTLint* rules that must be disabled.
-  A comma separated string of rules could also be used.
-- `ktlint_ruleset`: A file name for a JAR file with extra rules.
-  This file must be located in the `evaluation` folder of the Dodona exercise.
-- `ktlint_experimental`: This options specifies of the experimental linter rules may be used.
-  By default, these rules will be used.
 
-Example KTLint configuration:
+Kotlin supports a number of options for the `ktlint` linter:
+
+- `editorconfig`: Name of a `.editorconfig` file (see <https://editorconfig.org/>) in the `evaluation` folder of the exercise.
+- `disabled_rules_ktlint`: List of rules that should be ignored by *ktlint*.
+  Can also be a comma-separated string.
+- `ktlint_ruleset`: Name of a JAR file with additional rules.
+  This file must be in located in the `evaluation` folder of the exercise.
+- `ktlint_experimental`: Boolean to indicate if *ktlint* should use experimental rules. Enabled by default.
+
+Example (KTLint configuration):
+
 ```json
 {
   "evaluation": {
@@ -288,11 +292,13 @@ Example KTLint configuration:
 ```
 
 ### Python
-The scripting language Python has one option: `pylint_config`.
-This option expects the file name of the PYLint config file.
-This file must be located in the `evaluation` folder of the Dodona exercise.
 
-Example PYLint configuration:
+With the option `pylint_config` you can specify a PyLint configuration file,
+which will be used to configure the linter.
+This file must be located inside the `evaluation` direction of the exercise.
+
+Example (PyLint configuration):
+
 ```json
 {
   "evaluation": {
@@ -307,7 +313,10 @@ Example PYLint configuration:
 }
 ```
 
-## Example full `config.json`
+## Full example
+
+Below is a full configuration file of an exercise (`config.json`):
+
 ```json
 {
   "access": "private",
@@ -321,10 +330,8 @@ Example PYLint configuration:
     "handler": "TESTed",
     "plan_name": "plan.yaml",
     "options": {
-      "parallel": true,
       "mode": "batch",
       "allow_fallback": true,
-      "optimized": true,
       "linter": {
         "c": true,
         "haskell": true,
