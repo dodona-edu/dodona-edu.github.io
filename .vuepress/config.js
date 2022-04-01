@@ -131,7 +131,6 @@ function getGeneralSidebar() {
     'news/',
     'guides/',
     'references/',
-    'tested-judge/',
     'tested/'
   ]
 }
@@ -149,7 +148,7 @@ function getNewsSidebar(lang, groupTitle, FirstItem) {
     },
     `/${lang}/guides/`,
     `/${lang}/references/`,
-    `/${lang}/tested-judge/`,
+    `/${lang}/tested/`,
   ]
 }
 
@@ -201,7 +200,6 @@ function getGuidesSidebar(lang, groupTitle, FirstItem, studentGuideItem, teacher
       ]
     },
     `/${lang}/references/`,
-    `/${lang}/tested-judge/`,
     `/${lang}/tested/`
   ]
 }
@@ -223,7 +221,6 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'python-judge/',
       ]
     },
-    `/${lang}/tested-judge/`,
     `/${lang}/tested/`
   ]
 }
