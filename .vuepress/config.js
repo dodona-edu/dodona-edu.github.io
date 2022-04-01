@@ -248,6 +248,7 @@ function getTESTedSidebar(lang, groupTitle, FirstItem, referenceItem) {
           children: [
             'references/dsl/',
             'references/json/',
+            'references/types/',
             'references/exercise-config/'
           ]
         },
