@@ -250,8 +250,6 @@ function getTESTedSidebar(lang, groupTitle, FirstItem, referenceItem) {
           ]
         },
         `new-programming-language/`,
-        `template-description/`,
-        `template-exercise/`,
       ]
     }
   ]

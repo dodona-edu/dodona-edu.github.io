@@ -12,7 +12,7 @@ This means that you only need to specify one test suite,
 after which submissions in different programming languages can be checked.
 Creating a test suite happens in one of two ways:
 
-- With a domain-specific language: easier, but more limited. This is described on [this page](../dsl).
+- With a domain-specific language: easier, but more limited. This is described on [this page](/en/tested/references/dsl).
 - With JSON: complexer, but more flexible. This is what we describe here.
 
 The JSON format for test suites supports all features supported by TESTed,
@@ -64,7 +64,7 @@ A tab contains a list of runs that must be executed.
 
 A *tab*-object has 3 attributes: `name`, `hidden` en `runs`.
 - **name**: This is the name of tab, as presented at Dodona.
-- **hidden**: This is a boolean that indicates if the tab must be hidden, when all the testcases succeed.
+- **hidden**: This is a boolean indicating if the tab must be hidden, when all the testcases succeed.
 - **runs**: This is a list of all [runs](#run) (generated executables) that must be executed.
 
 ```json
@@ -988,7 +988,7 @@ The *GenericTextEvaluator*-object contains all information that is need to use t
 The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The additional evaluation options that can be used by the builtin evaluator,
-  see [DSL Configuration options for standard output and error](../dsl/#configuration-options).
+  see [DSL Configuration options for standard output and error](/en/tested/references/dsl/#configuration-options).
 - **name**: The type of textual source that must be evaluated.
   Either `text` or `file`.
 

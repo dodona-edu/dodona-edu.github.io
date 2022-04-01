@@ -46,7 +46,7 @@ universal-judge
 └── run           # Used in Dodona
 ```
 
-In this guide, we assume you run the commands in the root directory of the repository. 
+In this guide, we assume you run the commands in the root directory of the repository.
 The main way to run TESTed is to use the following command:
 
 ```shell
@@ -99,7 +99,7 @@ You can run the utility as follows:
 
 Note that this will only generate the necessary files.
 It will not modify existing files,
-so you must not forget to do the steps in the [Registration](#registration) section later.
+so you must not forget to do the steps in the [Registration](#register-the-language) section later.
 
 We will now look at the various features of the programming language C.
 We will assume the generation tool was not used, so the files need to be created manually.
@@ -176,7 +176,7 @@ Create the configuration file `tested/languages/c/config.json`:
   // General options about the language.
   "general": {
     // Files which will be available in the compilation and execution step.
-    // We'll discuss these later, but these are depdencies that are needed
+    // We'll discuss these later, but these are dependencies that are needed
     // during the compilation step in C.
     "dependencies": [
       "values.h",
@@ -220,8 +220,8 @@ Create the configuration file `tested/languages/c/config.json`:
     // considered an assignment in TESTed.
     "assignments": true,
     // If collections (e.g. lists) can have elements of different types.
-    // For example, Python supports this, it is difficult in Java and
-    // Haskell does not support it at all.
+    // For example, there is support in Python; it is difficult 
+    // in Java and Haskell does not support it at all.
     "heterogeneous_collections": false,
     // If a function can accept arguments of different types.
     // For example, Java supports this with method overloading.
@@ -280,7 +280,7 @@ Create the configuration file `tested/languages/c/config.json`:
   // in map-like data structures.
   // For example, maps are implemented using Objects in JavaScript, which means
   // that not all types are usable as keys.
-  // This is an advanced configuration, we recommend leaving it until later.
+  // This is an advanced configuration. We recommend leaving it until later.
   // For C, the list is empty, since C does not support either data structure.
   "restrictions": {
     "map_key": [],
@@ -419,7 +419,7 @@ An example is:
 ['/test/path/executable.exe', 'arg1', 'arg2']
 ```
 
-In most languages, we would be done by now with the configuration.
+In most languages, we are done by now with the configuration.
 However, a C program can only have one main function.
 Since the submission can have a main function, and the generated test code also has a main function, there is a conflict.
 As such, we use the `submission` method to modify the submission by renaming the main function.
@@ -693,7 +693,7 @@ int variabele = 5; // with declaration
 variabele = 6; // without declaration
 ```
 
-See the actual templates for examples on how to handle most constructs.
+See the actual templates for examples of how to handle most constructs.
 
 ## Register the language
 
@@ -715,9 +715,9 @@ LANGUAGES = {
 
 ## Testing the language implementation
 
-To test the language implementation, there are a set of test.
+To test the language implementation, there is a set of tests.
 You should also add support for your new programming language:
 
-1. Add solutions in your programming language to one ore more of the test exercises (in the folder `exercise`).
+1. Add solutions in your programming language to one or more of the test exercises (in the folder `exercise`).
   See the existing solutions for what your solution should do.
 2. Modify `tests/test_functionality.py` and other test files to also test the new programming language.

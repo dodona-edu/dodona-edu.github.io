@@ -41,14 +41,14 @@ If you want to use TESTed outside of Dodona, we recommend following the [tutoria
 
 A number of references are also available:
 
-- [The configuration options](./references/exercise-config)
-- [Format of full test suites](./references/json)
-- [Format of simplified test suites](./references/dsl) (experimental)
+- [The configuration options](references/exercise-config)
+- [Format of full test suites](references/json)
+- [Format of simplified test suites](references/dsl) (experimental)
 
 If you want to work on TESTed itself, the following is useful:
 
 - The [installation instructions](https://github.com/dodona-edu/universal-judge) in the repository to run TESTed locally.
-- [Guide on adding a programming language](./guides/new-programming-language).
+- [Guide on adding a programming language](new-programming-language).
 
 ## Creating an exercise for TESTed
 
@@ -62,7 +62,7 @@ To follow this tutorial, you'll need the following on your system:
 - `git` - to get the exercises on Dodona. You can find more information in [chapter 1 of the book *Pro Git*](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), which explains how to install Git for various operating systems (Mac, Windows, Linux).
 - a text editor (like Notepad++) to create and edit text files
 
-In this tutorial, we explain how to create a simple exercises with TESTed and make the exercise available in Dodona.
+In this tutorial, we explain how to create a simple exercise with TESTed and make the exercise available in Dodona.
 The exercise we're creating is called "write".
 The problem statement is:
 
@@ -129,7 +129,7 @@ These are the submissions we want to test with TESTed.
 ### 1. Git repository
 
 Dodona uses Git repositories to manage exercises.
-Follow the guide [_Creating a new exercise repon_](../../guides/teachers/new-exercise-repo).
+Follow the guide [_Creating a new exercise repo_](/en/guides/teachers/new-exercise-repo).
 Once you have followed this guide and created the repository, you can return to this tutorial.
 
 ### 2. Folder structure
@@ -143,7 +143,7 @@ Create the following folders:
 |   └── description/
 ```
 
-This is the Dodona folder structure; more information can be found in the [reference](../../references/exercise-directory-structure).
+This is the Dodona folder structure; more information can be found in the [reference](/en/references/exercise-directory-structure).
 
 ### 3. Configuration options
 
@@ -180,9 +180,9 @@ Four things happen here:
 
 The problem statement instructs students on how to solve the exercise.
 This is again a Dodona thing; there is nothing TESTed-specific.
-More information is thus again found in the [relevant manual](../../references/exercise-description).
+More information is thus again found in the [relevant manual](/en/references/exercise-description).
 
-To make things easier, we'll use problem statement from above and add an example.
+To make things easier, we'll use the problem statement from above and add an example.
 Create a file `write/description/description.en.md` with the following content:
 
 ````markdown
@@ -193,10 +193,10 @@ The argument of the function will always be a string.
 ### Example in Python
 
 ```pycon
->>> write("5"); 
+>>> write("5");
 "5"
->>> write("ok");
-"ok"
+>>> write("OK");
+"OK"
 ```
 ````
 

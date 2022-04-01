@@ -5,7 +5,7 @@ description: "The configuration options supported by TESTed"
 
 # Configuration for exercises
 
-Apart from the default Dodona options, there are a few TESTed-speficic options than can be used.
+Apart from the default Dodona options, there are a few TESTed-specific options than can be used.
 
 ## Test suite
 
@@ -125,7 +125,7 @@ Example (disabling the fallback):
 
 ## Linters
 
-When [adding support for a new programming language to TESTed](../../new-programming-language),
+When [adding support for a new programming language to TESTed](/en/tested/new-programming-language),
 it is possible to add support for a [linter](https://en.wikipedia.org/wiki/Lint_(software)).
 Following linters are supported by TESTed:
 
@@ -137,7 +137,7 @@ Following linters are supported by TESTed:
 | Java       | [Checkstyle](https://github.com/checkstyle/checkstyle) |
 | JavaScript | [ESLint](https://eslint.org/)                          |
 | Kotlin     | [Ktlint](https://ktlint.github.io/)                    |
-| Python     | [Pylint](https://www.pylint.org/)                      |
+| Python     | [Pylint](https://pylint.pycqa.org/en/latest/)          |
 
 You can use the field `linter` to enable or disable all linters.
 Example of disabling all linters:

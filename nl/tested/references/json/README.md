@@ -6,6 +6,6 @@ description: "Maak volledige testplannen voor TESTed met JSON."
 
 ::: warning Enkel Engels
 Deze handleiding is enkel in het Engels beschikbaar.
-[Ga naar de Engelstalige versie.](../../../../en/tested/references/json)
+[Ga naar de Engelstalige versie.](/en/tested/references/json)
 :::
 

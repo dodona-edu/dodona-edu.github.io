@@ -39,15 +39,15 @@ Als je TESTEd wilt gebruiken buiten Dodona volg je best de [tutorial in de repos
 
 Ook nuttig zijn een aantal referentiegidsen:
 
-- [De configuratie-opties](./references/exercise-config)
-- [Formaat van geavanceerde testplannen](../../../en/tested/references/json) (Engels)
-- [Formaat van eenvoudige testplannen](../../../en/tested/references/dsl) (experimenteel, Engels)
+- [De configuratie-opties](references/exercise-config)
+- [Formaat van geavanceerde testplannen](/en/tested/references/json) (Engels)
+- [Formaat van eenvoudige testplannen](/en/tested/references/dsl) (experimenteel, Engels)
 
 Wil je aan TESTed zelf werken?
 Dan zijn volgende zaken interessant:
 
 - De [installatie-instructies](https://github.com/dodona-edu/universal-judge) in de repo om TESTed lokaal uit te voeren.
-- [Handleiding voor het toevoegen van een programmeertaal](../../en/tested/new-programming-language) (enkel in het Engels).
+- [Handleiding voor het toevoegen van een programmeertaal](/en/tested/new-programming-language) (enkel in het Engels).
 
 ## Oefeningen opstellen voor TESTed
 
@@ -128,8 +128,8 @@ Deze oplossingen willen we dus kunnen beoordelen met TESTed in Dodona.
 ### 1. Git-repository
 
 Dodona maakt gebruik van een Git-repository om oefeningen te beheren.
-Volg hiervoor de handleiding [_Een nieuwe repository met oefeningen maken_
-](../../guides/teachers/new-exercise-repo). Eens die gemaakt is, kan je terugkeren naar deze handleiding.
+Volg hiervoor de handleiding [_Een nieuwe repository met oefeningen maken_](/nl/guides/teachers/new-exercise-repo).
+Eens die gemaakt is, kan je terugkeren naar deze handleiding.
 
 ### 2. Mappenstructuur
 
@@ -142,7 +142,7 @@ Maak deze nieuwe mappen in de repository:
 |   └── description/
 ```
 
-Dit is de mappenstructuur van Dodona; meer informatie vind je in de [referentie](../../references/exercise-directory-structure).
+Dit is de mappenstructuur van Dodona; meer informatie vind je in de [referentie](/nl/references/exercise-directory-structure).
 
 ### 3. Configuratieopties
 
@@ -179,7 +179,7 @@ We doen hier vier dingen:
 
 De opgave van een oefening beschrijft voor de studenten wat ze moeten doen.
 Dit is opnieuw iets van Dodona; er is niets specifiek voor TESTed aan.
-Meer informatie is opnieuw te vinden in de [relevante handleiding](../../references/exercise-description).
+Meer informatie is opnieuw te vinden in de [relevante handleiding](/nl/references/exercise-description).
 
 Voor het gemak zullen we de opgave van hierboven overnemen, aangevuld met een voorbeeldje.
 Maak dus het bestand `schrijf/description/description.nl.md` aan met volgende inhoud:

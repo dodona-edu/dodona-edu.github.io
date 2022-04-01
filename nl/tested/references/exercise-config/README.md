@@ -136,7 +136,7 @@ Dit zijn de linters die TESTed op dit moment gebruikt:
 | Java            | [Checkstyle](https://github.com/checkstyle/checkstyle) |
 | JavaScript      | [ESLint](https://eslint.org/)                          |
 | Kotlin          | [Ktlint](https://ktlint.github.io/)                    |
-| Python          | [Pylint](https://www.pylint.org/)                      |
+| Python          | [Pylint](https://pylint.pycqa.org/en/latest/)          |
 
 Bij de configuratie van een oefening kan je in het veld `linter` globaal de linters uit- of inschakelen. Voorbeeld (alle linters uitschakelen):
 
