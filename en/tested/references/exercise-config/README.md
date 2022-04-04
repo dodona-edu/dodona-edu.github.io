@@ -88,7 +88,7 @@ TESTed supports two modes:
 * `batch`: All executable files are compiled at once.
 * `context`: Each executable file is compiled separately (individual compilation).
 
-The main advantage of the back compilation is that it's faster than the individual compilation.
+The main advantage of the batch compilation is that it's faster than the individual compilation.
 As such, it is the default.
 
 Example (using individual compilation):
