@@ -38,26 +38,35 @@ De tweede kolom toont wat het basistype van dit type is.
 
 | TESTed           | Basic    | Python    | JavaScript  | Java         | Kotlin       | Haskell            | C                | Bash |
 |------------------|----------|-----------|-------------|--------------|--------------|--------------------|------------------|------|
-| int8             | integer  | -         | -           | `byte`       | `Byte`       | `Data.Int.Int8`    | `signed char`    | -    |
-| uint8            | integer  | -         | -           | -            | `UByte`      | `Data.Word.Word8`  | `unsigned char`  | -    |
-| int16            | integer  | -         | -           | `short`      | `Short`      | `Data.Int.Int16`   | `short`          | -    |
-| uint16           | integer  | -         | -           | -            | `UShort`     | `Data.Word.Word16` | `unsigned short` | -    |
-| int32            | integer  | -         | -           | `int`        | `Int`        | `Data.Int.Int32`   | `int`            | -    |
-| uint32           | integer  | -         | -           | -            | `UInt`       | `Data.Word.Word32` | `unsigned int`   | -    |
-| int64            | integer  | -         | -           | `long`       | `Long`       | `Data.Int.Int64`   | `long`           | -    |
-| uint64           | integer  | -         | -           | -            | `ULong`      | `Data.Word.Word64` | `unsigned long`  | -    |
-| bigint           | integer  | -         | -           | `BigInteger` | `BigInteger` | -                  | -                | -    |
-| single_precision | rational | -         | -           | `float`      | `Float`      | `Float`            | `float`          | -    |
-| double_precision | rational | -         | -           | `double`     | `Double`     | `Double`           | `double`         | -    |
-| double_extended  | rational | -         | -           | -            | -            | -                  | `double double`  | -    |
-| fixed_precision  | rational | `Decimal` | -           | `BigDecimal` | `BigDecimal` | `Decimal`          | -                | -    |
-| array            | sequence | -         | -           | `array`      | `Array`      | -                  | -                | -    |
-| list             | sequence | `List`    | -           | `List`       | `List`       | `                  | -                | -    |
-| tuple            | sequence | `Tuple`   | -           | -            | -            | `()`¹              | -                | -    |
-| char             | text     | -         | -           | `char`       | `Char`       | `Char`             | `char`           | -    |
-| undefined        | nothing  | -         | `undefined` | -            | -            | -                  | -                | -    |
+| int8             | integer  | +         | +           | `byte`       | `Byte`       | `Data.Int.Int8`    | +                | -    |
+| uint8            | integer  | +         | +           | +            | `UByte`      | `Data.Word.Word8`  | +                | -    |
+| int16            | integer  | +         | +           | `short`      | `Short`      | `Data.Int.Int16`   | `short`          | -    |
+| uint16           | integer  | +         | +           | +            | `UShort`     | `Data.Word.Word16` | `unsigned short` | -    |
+| int32            | integer  | +         | +           | `int`        | `Int`        | `Data.Int.Int32`   | `int`            | -    |
+| uint32           | integer  | +         | +           | +            | `UInt`       | `Data.Word.Word32` | `unsigned int`   | -    |
+| int64            | integer  | +         | +           | `long`       | `Long`       | `Data.Int.Int64`   | `long`           | -    |
+| uint64           | integer  | +         | +           | +            | `ULong`      | `Data.Word.Word64` | `unsigned long`  | -    |
+| bigint           | integer  | `int`     | `BigInt`    | `BigInteger` | `BigInteger` | `Integer`          | -                | -    |
+| single_precision | rational | +         | +           | `float`      | `Float`      | `Float`            | `float`          | -    |
+| double_precision | rational | +         | +           | `double`     | `Double`     | `Double`           | `double`         | -    |
+| double_extended  | rational | +         | +           | +            | +            | -                  | `double double`  | -    |
+| fixed_precision  | rational | `Decimal` | -           | `BigDecimal` | `BigDecimal` | -                  | -                | -    |
+| array            | sequence | +         | +           | `array`      | `Array`      | -                  | -                | -    |
+| list             | sequence | `List`    | +           | `List`       | `List`       | `[]`²              | -                | -    |
+| tuple            | sequence | `Tuple`   | +           | +            | +            | `()`¹              | -                | -    |
+| char             | text     | +         | +           | `char`       | `Char`       | `Char`             | `char`           | +    |
+| undefined        | nothing  | +         | `undefined` | +            | +            | +                  | +                | -    |
 
 ¹ ingebouwd type voor tuples
+
+Een "+" (plusteken) betekent dat de programmeertaal beperkte ondersteuning heeft (`reduced`).
+Dit betekent vaak dat er geen eigen type bestaat in de programmeertaal, maar dat oefeningen die het type gebruiken wel gemaakt kunnen worden in de taal.
+Een voorbeeld zijn tuples: heel wat talen hebben er geen eigen type voor, maar de oefeningen kunnen wel opgelost worden door het basistype (een `sequence`) te gebruiken.
+Een oefening die tuples gebruikt zal bijvoorbeeld in Java ook oplosbaar zijn, omdat lijsten aanvaard worden.
+
+Een "-" (minteken) betekent dat de programmeertaal geen ondersteuning heeft (`unsupported`).
+Dit betekent dat een oefening die dergelijke types gebruikt niet oplosbaar zal zijn in de programmeertaal.
+Zo zal JavaScript geen `fixed_precision` ondersteunen, dus oefeningen die dat nodig hebben zullen niet opgelost kunnen worden in JavaScript.
 
 Dit zijn de definities van de types:
 
