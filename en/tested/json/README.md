@@ -1198,9 +1198,9 @@ The basic datatypes are an abstract datatype for a concept, like integers and no
 These datatypes will be generated as the default datatype in a programming language for a concept.
 
 ##### BasicNumericTypes
-There are two basic numeric datatypes in TESTed: `integer` and `rational`.
+There are two basic numeric datatypes in TESTed: `integer` and `real`.
 - **integer**: integers.
-- **rational**: rational numbers.
+- **real**: real numbers.
 
 ```json
 "BasicNumericTypes": {
@@ -1208,7 +1208,7 @@ There are two basic numeric datatypes in TESTed: `integer` and `rational`.
   "description": "An enumeration.",
   "enum": [
     "integer",
-    "rational"
+    "real"
   ],
   "type": "string"
 },

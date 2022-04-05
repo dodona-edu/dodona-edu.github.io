@@ -19,7 +19,7 @@ In the first column, we list the TESTed data type, followed by a column for each
 | TESTed   | Python  | JavaScript | Java          | Kotlin    | Haskell   | C        | Bash   |
 |----------|---------|------------|---------------|-----------|-----------|----------|--------|
 | integer  | `int`   | `number`   | `int`/`long`¹ | `Int`     | `Int`     | `int`    | -      |
-| rational | `float` | `number`   | `double`      | `Double`  | `Double`  | `double` | -      |
+| real     | `float` | `number`   | `double`      | `Double`  | `Double`  | `double` | -      |
 | boolean  | `bool`  | `boolean`  | `boolean`     | `Boolean` | `Bool`    | `bool`   | -      |
 | text     | `str`   | `String`   | `String`      | `String`  | `String`  | `char*`  | `text` |
 | sequence | `list`  | `array`    | `List`        | `List`    | `[]`²     | -        | -      |
@@ -46,9 +46,9 @@ The second column indicates what the basic type is of the advanced type.
 | int64            | integer  | +         | +           | `long`       | `Long`       | `Data.Int.Int64`   | `long`           | -    |
 | uint64           | integer  | +         | +           | +            | `ULong`      | `Data.Word.Word64` | `unsigned long`  | -    |
 | bigint           | integer  | `int`     | `BigInt`    | `BigInteger` | `BigInteger` | `Integer`          | -                | -    |
-| single_precision | rational | +         | +           | `float`      | `Float`      | `Float`            | `float`          | -    |
-| double_precision | rational | +         | +           | `double`     | `Double`     | `Double`           | `double`         | -    |
-| double_extended  | rational | +         | +           | +            | +            | -                  | `double double`  | -    |
+| single_precision | real     | +         | +           | `float`      | `Float`      | `Float`            | `float`          | -    |
+| double_precision | real     | +         | +           | `double`     | `Double`     | `Double`           | `double`         | -    |
+| double_extended  | real     | +         | +           | +            | +            | -                  | `double double`  | -    |
 | fixed_precision  | rational | `Decimal` | -           | `BigDecimal` | `BigDecimal` | -                  | -                | -    |
 | array            | sequence | +         | +           | `array`      | `Array`      | -                  | -                | -    |
 | list             | sequence | `List`    | +           | `List`       | `List`       | `[]`²              | -                | -    |
