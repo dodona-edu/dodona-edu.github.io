@@ -1,26 +1,24 @@
 ---
-title: TESTed JSON-testplans
-description: "TESTed JSON-testplans"
-sidebarDepth: 2
+title: Test suite format
+description: "Create test suites for TESTed"
 ---
 
-::: warning Warning
-The JSON-testplans are only for advanced users of TESTed.
-The [DSL-testplans](../dsl) are recommended to be used whenever this is possible.
-:::
+# Test suite format for TESTed
 
-# TESTed JSON-testplans
-The JSON-testplan supports all possible configuration options and evaluations possibilities that are supported by TESTed.
-The complete JSON-schema for these testplans can be found
-<a href="/tested-json-testplan-schema.json" target="_blank">here</a>.
+In TESTed, a test suite is a way to specify which tests are executed against a submission.
+TESTed is different from other systems in that the test suite is programming-language-independent.
+This means that you only need to specify one test suite,
+after which submissions in different programming languages can be checked.
 
-The purpose of this documentation is to give an overview of all parameters of the JSON-testplan that can be set.
-Therefore we will also use partial JSON Schemas.
+The format is defined by [this Python file](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
+To make validating test suites easier, you can also generate a JSON Schema.
 
-Examples of the JSON-testplans and evaluators can be found at the
-[GitHub repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) of TESTed.
+Examples of JSON test suites and evaluators can be found in the
+[repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise).
 
 ## Plan
+
+The top-level object of a test suite.
 This object has two attributes: `namespace` and `tabs`:
 - **namespace**: The `namespace` is the name of the submission file (`<namespace>.<ext>`).
   The `namespace` is also the namespace of the code.
@@ -52,12 +50,12 @@ This object has two attributes: `namespace` and `tabs`:
 ```
 
 ## Tab
-Tabs in the testplan correspond with the visualisation at Dodona.
+Tabs in the test suite correspond with the visualization on Dodona.
 A tab contains a list of runs that must be executed.
 
 A *tab*-object has 3 attributes: `name`, `hidden` en `runs`.
 - **name**: This is the name of tab, as presented at Dodona.
-- **hidden**: This is a boolean that indicates if the tab must be hidden, when all the testcases succeed.
+- **hidden**: This is a boolean indicating if the tab must be hidden, when all the testcases succeed.
 - **runs**: This is a list of all [runs](#run) (generated executables) that must be executed.
 
 ```json
@@ -981,7 +979,7 @@ The *GenericTextEvaluator*-object contains all information that is need to use t
 The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The additional evaluation options that can be used by the builtin evaluator,
-  see [DSL Configuration options for standard output and error](../dsl/#configuration-options).
+  see [below](#configuration-options).
 - **name**: The type of textual source that must be evaluated.
   Either `text` or `file`.
 
@@ -1009,6 +1007,22 @@ The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`
   }
 },
 ```
+
+#### Configuration options
+There are multiple configuration options to pass to the evaluator for standard output and error.
+These options are:
+
+- **ignoreWhitespace**:
+  Ignore whitespace in prefix and suffix of the text by comparing the output.
+- **caseInsensitive**:
+  Ignore the difference between uppercase and lowercase when comparing the output.
+- **tryFloatingPoint**:
+  Try to compare the output as floats.
+- **applyRounding**:
+  Apply rounding when comparing the output as floats.
+- **roundTo**:
+  The number of decimals after the point that you want to keep after rounding.
+  This is mandatory when you want to apply rounding.
 
 ### ProgrammedEvaluator
 The *ProgrammedEvaluator*-object is the object that must be used when you use the programmed evaluation.
@@ -1141,7 +1155,7 @@ The *EvaluationFunction*-object has 2 attributes: `file` and `name`.
   
   _**Important for a programmed evaluator:**_
   For a programmed evaluator, this function has three arguments: `expected`, `actual` and `arguments`.
-  - `expected` contains the expected return value of the testplan.
+  - `expected` contains the expected return value of the test suite.
   - `actual` contains the actual return value.
   - `arguments` contains a list of additional arguments for the evaluation function.
   
@@ -1205,7 +1219,7 @@ There are two basic string datatypes in TESTed: `text` and `any`.
 - **text**: text.
 - **any**: The datatype that represent any datatype.
   
-  **Remark**: This datatype is normally not used in the testplan.
+  **Remark**: This datatype is normally not used in the test suite.
 
 ```json
 "BasicStringTypes": {
