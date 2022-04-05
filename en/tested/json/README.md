@@ -1,23 +1,14 @@
 ---
-title: Full test suites (JSON)
-description: "Create test suites using the full flexibility of TESTed"
-sidebarDepth: 2
+title: Test suite format
+description: "Create test suites for TESTed"
 ---
 
-# Full test suites (JSON)
+# Test suite format for TESTed
 
 In TESTed, a test suite is a way to specify which tests are executed against a submission.
 TESTed is different from other systems in that the test suite is programming-language-independent.
 This means that you only need to specify one test suite,
 after which submissions in different programming languages can be checked.
-Creating a test suite happens in one of two ways:
-
-- With a domain-specific language: easier, but more limited. This is described on [this page](/en/tested/references/dsl).
-- With JSON: complexer, but more flexible. This is what we describe here.
-
-The JSON format for test suites supports all features supported by TESTed,
-as it is the native format for test suites.
-By comparison, the DSL test suites are converted to JSON internally before execution.
 
 The format is defined by [this Python file](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
 To make validating test suites easier, you can also generate a JSON Schema.
@@ -988,7 +979,7 @@ The *GenericTextEvaluator*-object contains all information that is need to use t
 The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`.
 - **type**: A string with constant value `builtin`.
 - **options**: The additional evaluation options that can be used by the builtin evaluator,
-  see [DSL Configuration options for standard output and error](/en/tested/references/dsl/#configuration-options).
+  see [below](#configuration-options).
 - **name**: The type of textual source that must be evaluated.
   Either `text` or `file`.
 
@@ -1016,6 +1007,22 @@ The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`
   }
 },
 ```
+
+#### Configuration options
+There are multiple configuration options to pass to the evaluator for standard output and error.
+These options are:
+
+- **ignoreWhitespace**:
+  Ignore whitespace in prefix and suffix of the text by comparing the output.
+- **caseInsensitive**:
+  Ignore the difference between uppercase and lowercase when comparing the output.
+- **tryFloatingPoint**:
+  Try to compare the output as floats.
+- **applyRounding**:
+  Apply rounding when comparing the output as floats.
+- **roundTo**:
+  The number of decimals after the point that you want to keep after rounding.
+  This is mandatory when you want to apply rounding.
 
 ### ProgrammedEvaluator
 The *ProgrammedEvaluator*-object is the object that must be used when you use the programmed evaluation.

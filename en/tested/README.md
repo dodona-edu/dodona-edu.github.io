@@ -1,6 +1,7 @@
 ---
 title: TESTed judge
 description: "TESTed judge"
+sidebarDepth: 2
 ---
 
 # TESTed: one judge to rule them all
@@ -34,16 +35,16 @@ TESTed is best suited for the following kinds of exercises:
 TESTed is less suitable for exercises that focus on programming-language-specific concepts.
 For example, an exercise on C pointers won't work well with TESTed.
 
-## Getting started with TESTed.
+## Getting started with TESTed
 
 The section after this one is a tutorial to create an exercise using TESTed within Dodona.
 If you want to use TESTed outside of Dodona, we recommend following the [tutorial in the repository](https://github.com/dodona-edu/universal-judge).
 
 A number of references are also available:
 
-- [The configuration options](references/exercise-config)
-- [Format of full test suites](references/json)
-- [Format of simplified test suites](references/dsl) (experimental)
+- [The configuration options](exercise-config)
+- [Format of the test suites](json)
+- [List of data types for programming languages](types)
 
 If you want to work on TESTed itself, the following is useful:
 

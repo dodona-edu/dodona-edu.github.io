@@ -233,23 +233,14 @@ function getTESTedSidebar(lang, groupTitle, FirstItem, referenceItem) {
     {
       title: groupTitle,
       collapsable: false,
-      sidebarDepth: 2,
+      sidebarDepth: 1,
       children: [
+        // These URLs should be stable, since they are published.
         ['', FirstItem],
-        {
-          title: referenceItem,
-          collapsable: true,
-          path: `/${lang}/tested/references/`,
-          sidebarDepth: 1,
-          initialOpenGroupIndex: -1,
-          children: [
-            'references/dsl/',
-            'references/json/',
-            'references/types/',
-            'references/exercise-config/'
-          ]
-        },
-        `new-programming-language/`,
+        'json/',
+        'types/',
+        'exercise-config/',
+        'new-programming-language/',
       ]
     }
   ]

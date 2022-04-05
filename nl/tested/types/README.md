@@ -1,14 +1,13 @@
 ---
 title: Ondersteuning gegevenstypes
 description: "De verschillende gegevenstypes ondersteund door TESTed"
-sidebarDepth: 0
 ---
 
 # Ondersteuning voor gegevenstypes in TESTed
 
-::: tip Hint
+::: tip Bijgewerkte informatie
 Deze data werden verzameld van de programmeertaalmodules in TESTed.
-Zij bevatten de meest recente data over de gegevenstypes.
+Zij bevatten de meest recente informatie over de gegevenstypes.
 :::
 
 Deze referentiegids toont welke gegevenstypes in verschillende programmeertalen gebruikt worden en hoe ze overeenkomen met de gegevenstypes van TESTed.

@@ -1,9 +1,9 @@
 ---
-title: Configuration for exercises
+title: Configuration options for exercises
 description: "The configuration options supported by TESTed"
 ---
 
-# Configuration for exercises
+# Configuration options for exercises in TESTed
 
 Apart from the default Dodona options, there are a few TESTed-specific options than can be used.
 
@@ -21,8 +21,7 @@ This should be in the `evaluation` block:
 }
 ```
 
-When using the [Simplified test suites (DSL)](../../references/dsl), the extension must be `.yaml`.
-In all other cases, TESTed will assume you're using a [full test suite (with JSON)](../../references/json).
+A full description of the test suite format is available in the [reference documentation on test suites](/en/tested/json).
 
 ## General options
 

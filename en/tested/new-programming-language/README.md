@@ -3,7 +3,7 @@ title: "Adding support for a new programming language"
 description: "Adding support for a new programming language in TESTed."
 ---
 
-# Adding support for a new programming language
+# Adding support for a new programming language to TESTed
 
 In this guide, we explain in detail how to add support for a new programming language to TESTed.
 In this guide, we add support for the programming language C.

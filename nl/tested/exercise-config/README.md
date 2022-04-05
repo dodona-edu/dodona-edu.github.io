@@ -1,9 +1,9 @@
 ---
-title: Configuratie voor oefeningen
+title: Configuratie-opties voor oefeningen
 description: "De configuratie-opties ondersteund door TESTed"
 ---
 
-# Configuratie voor oefeningen
+# Configuratie-opties voor oefeningen in TESTed
 
 Naast de standaardopties van Dodona zijn er een aantal opties die eigen aan TESTed zijn.
 
@@ -20,8 +20,7 @@ Dit moet binnen het `evaluation`-blok:
 }
 ```
 
-Bij het gebruik van de [vereenvoudigde testplannen (met de DSL)](../../references/dsl) is de extensie `.yaml` verplicht.
-In alle andere gevallen zal TESTed er van uitgaan dat je een [volledig testplan (met JSON)](../../references/json) gebruikt.
+Een volledige beschrijving van het testplan is beschikbaar in de [handleiding (Engels)](/en/tested/json).
 
 ## General opties
 
@@ -124,7 +123,7 @@ Voorbeeld (fallback voor compilatie uitgeschakeld):
 
 ## Linters
 
-Bij de [configuratie van een programmeertaal voor TESTed](../../new-programming-language)
+Bij de [configuratie van een programmeertaal voor TESTed](../new-programming-language)
 kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)) geconfigureerd worden.
 Dit zijn de linters die TESTed op dit moment gebruikt:
 

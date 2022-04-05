@@ -1,14 +1,13 @@
 ---
 title: Data type support
 description: "The various data types supported by TESTed"
-sidebarDepth: 0
 ---
 
 # Data type support in TESTed
 
-::: tip Hint
+::: tip Up-to-date information
 These data are sourced from the language modules in TESTed.
-They contain the most up-to-date data on data type support.
+They contain the most up-to-date information on data type support.
 :::
 
 This reference lists which types are used in the various programming languages and how they map to the TESTed data types.

@@ -1,6 +1,7 @@
 ---
 title: TESTed judge
 description: "TESTed judge"
+sidebarDepth: 2
 ---
 
 # TESTed: one judge to rule them all
@@ -39,9 +40,9 @@ Als je TESTEd wilt gebruiken buiten Dodona volg je best de [tutorial in de repos
 
 Ook nuttig zijn een aantal referentiegidsen:
 
-- [De configuratie-opties](references/exercise-config)
-- [Formaat van geavanceerde testplannen](/en/tested/references/json) (Engels)
-- [Formaat van eenvoudige testplannen](/en/tested/references/dsl) (experimenteel, Engels)
+- [De configuratie-opties](exercise-config)
+- [Formaat van geavanceerde testplannen](/en/tested/json) (Engels)
+- [Lijst van gegevenstypes in de verschillende talen](types)
 
 Wil je aan TESTed zelf werken?
 Dan zijn volgende zaken interessant:
