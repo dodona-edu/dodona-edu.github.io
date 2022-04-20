@@ -66,3 +66,14 @@ De belangrijkste nieuwe feature in Dodona 5.3 is een nieuw grafiektype in de oef
 Het start- en eindtijdstip is aanpasbaar en de grafiek past zich automatisch aan om een gepast aantal blokjes te tonen. De selectie van de tijdsperiode werd ook toegevoegd aan de bestaande lijngrafieken.
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3345).
+
+
+## Dodona 5.4 - 19/04/2022
+
+Dodona 5.4 voegt ondersteuning toe voor inloggen met SURFconext. Via deze weg kunnen alle scholen in Nederland eenvoudig en veilig aanmelden op Dodona.
+
+Een tweede grote wijziging is een overzicht van alle ingediende oplossingen in de resultaatweergave van een oplossing. Dit maakt het ook eenvoudiger om te linken naar een bepaalde oplossing.
+
+![feedback](./feedback-nl.png)
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3545).

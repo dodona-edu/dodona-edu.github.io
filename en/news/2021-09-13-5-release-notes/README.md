@@ -66,3 +66,11 @@ It has been a while since our last release so the detailed list of updates is a 
 The start and end time can be chosen by the user and the graph automatically picks the right bin size. The time selection and binning was also added to the existing line charts.
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3345).
+
+## Dodona 5.4 - 2022-04-19
+
+Dodona 5.4 adds support for signing in using SURF. This allows all school in the Netherlands to easily sign in using the account of their school. In addition, we added a list of all submissions to the results view of a submission. This also makes it easier to link to individual submissions.
+
+![feedback](./feedback-en.png)
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3545).
