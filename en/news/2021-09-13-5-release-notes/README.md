@@ -74,3 +74,13 @@ Dodona 5.4 adds support for signing in using SURF. This allows all school in the
 ![feedback](./feedback-en.png)
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3545).
+
+## Dodona 5.5 - 2022-04-25
+
+Dodona 5.5 contains an experimental new feature to run Python code in your browser! Every Python exercise now contains a "run your code" button at the bottom right of the page. If you click it, a Python scratchpad appears with the code from the Dodona editor already loaded. If you then click the "Run" button, the code is executed and the output appears below. More advanced features like processing input and importing packages are also supported.
+
+![Python scratchpad](./python-scratchpad.png)
+
+The scratchpad is powered by our [Papyros](https://github.com/dodona-edu/papyros) project. It makes use of cutting edge browser features so it might not run smoothly in all browsers. Any feedback is very welcome!
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3552).

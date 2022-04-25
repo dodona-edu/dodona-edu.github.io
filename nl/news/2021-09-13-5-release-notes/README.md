@@ -77,3 +77,14 @@ Een tweede grote wijziging is een overzicht van alle ingediende oplossingen in d
 ![feedback](./feedback-nl.png)
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3545).
+
+
+## Dodona 5.5 - 25/04/2022
+
+Dodona 5.5 bevat een experimentele nieuwe feature om Python code uit te voeren in je browser! Elke Python oefening heeft rechtsonder de pagina een "voer code uit"-knop gekregen. Als je hier op klikt dan verschijnt er een Python kladblok waar de code uit de Dodona-editor automatisch in werd ingeladen. Als je vervolgens uit "Run" klikt, dan wordt je code uitgevoerd en verschijnt de eventuele uitvoer onderaan de pagina. We ondersteunen ook meer geavanceerde features zoals het verwerken van invoer en het importeren van packages.
+
+![Python kladblok](./python-kladblok.png)
+
+Onder de motorkap werkt deze feature met ons [Papyros](https://github.com/dodona-edu/papyros) project. Het maakt gebruik van de nieuwste browserfeatures, dus het is mogelijk dat er hier en daar iets niet helemaal werkt zoals verwacht. Je feedback is dan ook zeer welkom!
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3552).
