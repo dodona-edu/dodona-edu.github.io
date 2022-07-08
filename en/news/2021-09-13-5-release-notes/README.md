@@ -84,3 +84,18 @@ Dodona 5.5 contains an experimental new feature to run Python code in your brows
 The scratchpad is powered by our [Papyros](https://github.com/dodona-edu/papyros) project. It makes use of cutting edge browser features so it might not run smoothly in all browsers. Any feedback is very welcome!
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3552).
+
+
+## Dodona 5.6 - 2022-06-04
+
+Dodona 5.6 is bigger than usual because we try to keeps things stable during the exam period.
+
+The biggest visible change is a refresh of the design (based on Material Design 3) and colors. The biggest changes were made to the buttons, which should be more consistent now. In addition, we said goodbye to our orange highlight color. The contrast of orange text on white backgrounds didn't have a high enough contrast to pass accessibility tests. Links (and buttons) are now dark blue and we added pink as a new highlight color. Finally, dark mode was recreated from scratch and now follows a more predictable pattern. These rewrites also pave the way for a color blind theme and a really dark mode in the future.
+
+A second big change is a complete rewrite of the filter and search capabilities. Under the hood, we now use web components to structure the code. Some filters are now more explicitly shown using dropdowns.
+
+Finally, we rewrote our sign in logic. The benefit here is that we can be more transparent about what happens if we encounter a new sign in with an email address that's already used for a different account. In addition, Office365 users will now have to confirm which account they want to use before signing in. This will prevent accidental sign ins with the wrong account.
+
+![filter](./filter.png)
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3763).
