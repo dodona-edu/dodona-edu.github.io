@@ -88,3 +88,18 @@ Dodona 5.5 bevat een experimentele nieuwe feature om Python code uit te voeren i
 Onder de motorkap werkt deze feature met ons [Papyros](https://github.com/dodona-edu/papyros) project. Het maakt gebruik van de nieuwste browserfeatures, dus het is mogelijk dat er hier en daar iets niet helemaal werkt zoals verwacht. Je feedback is dan ook zeer welkom!
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3552).
+
+
+## Dodona 5.6 - 04/07/2022
+
+Dodona 5.6 is iets groter uitgevallen dan normaal omdat we tijdens de examenperiode proberen om geen ingrijpende aanpassingen te doen.
+
+De grootste visuele aanpassing is een vernieuwd ontwerp en kleuren, gebaseerd op Material Design 3. De grootste aanpassingen zitten in de knoppen die nu wat consistenter zijn. We hebben ook afscheid genomen van oranje als kleur voor links en knoppen. Het contrast van oranje tekst op een witte achtergrond was niet hoog genoeg om aan alle toegankelijkheidsstandaarden te voldoen. We gebruiken nu donkerblauwe links en knoppen en gebruiken roze als accentkleur. Ten slotte hebben we onze donkere modus volledig opnieuw opgebouwd volgens een aantal stijlregels. Deze aanpassingen maken de weg vrij voor een speciale kleurenblindenmodus en een pikzwarte donkere modus in de toekomst.
+
+Een tweede grote wijziging is een volledige herwerking van onze filter- en zoekmogelijkheden. Onder de motorkap worden nu *web components* gebruikt om de code te structureren. Verschillende filters worden nu ook meer expliciet weergegeven.
+
+Ten slotte hebben we ook de inloglogica van Dodona herwerkt. Het grote voordeel hier is dat we nu transparanter kunnen zijn wanneer het fout loopt. Bijvoorbeeld wanneer je probeert in te loggen met een e-mailadres dat binnen Dodona al gekoppeld is met een andere bestaande account. Bovendien zullen Office 365 gebruikers nu telkens expliciet de account moeten selecteren waarmee ze willen inloggen. Dit zal verhinderen dat ze zich per ongeluk met de verkeerde account aanmelden.
+
+![filter](./filter.png)
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3763).
