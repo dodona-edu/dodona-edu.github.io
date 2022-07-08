@@ -86,7 +86,7 @@ The scratchpad is powered by our [Papyros](https://github.com/dodona-edu/papyros
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3552).
 
 
-## Dodona 5.6 - 2022-06-04
+## Dodona 5.6 - 2022-07-04
 
 Dodona 5.6 is bigger than usual because we try to keeps things stable during the exam period.
 
