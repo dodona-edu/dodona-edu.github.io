@@ -98,7 +98,7 @@ De grootste visuele aanpassing is een vernieuwd ontwerp en kleuren, gebaseerd op
 
 Een tweede grote wijziging is een volledige herwerking van onze filter- en zoekmogelijkheden. Onder de motorkap worden nu *web components* gebruikt om de code te structureren. Verschillende filters worden nu ook meer expliciet weergegeven.
 
-Ten slotte hebben we ook de inloglogica van Dodona herwerkt. Het grote voordeel hier is dat we nu transparanter kunnen zijn wanneer het fout loopt. Bijvoorbeeld wanneer je probeert in te loggen met een emailadres dat binnen Dodona al gekoppeld is met een andere bestaande account. Bovendien zullen Office 365 gebruikers nu telkens expliciet de account moeten selecteren waarmee ze willen inloggen. Dit zal verhinderen dat ze zich per ongeluk met de verkeerde account aanmelden.
+Ten slotte hebben we ook de inloglogica van Dodona herwerkt. Het grote voordeel hier is dat we nu transparanter kunnen zijn wanneer het fout loopt. Bijvoorbeeld wanneer je probeert in te loggen met een e-mailadres dat binnen Dodona al gekoppeld is met een andere bestaande account. Bovendien zullen Office 365 gebruikers nu telkens expliciet de account moeten selecteren waarmee ze willen inloggen. Dit zal verhinderen dat ze zich per ongeluk met de verkeerde account aanmelden.
 
 ![filter](./filter.png)
 
