@@ -7,7 +7,7 @@ date: "2022-08-18"
 
 <NewsHeader :title="$frontmatter.title" :date="$frontmatter.date" lang="en" />
 
-In Dodona release 6.0.0, we updated our privacy policy. In that version, we enabled users signing in using their personal Google or Microsoft account. Users signing in that way must explicitly agree with our privacy policy (*opt in*).
+In [Dodona release 6.0.0](https://github.com/dodona-edu/dodona/discussions/3900), we updated our privacy policy. In that version, we enabled users signing in using their personal Google or Microsoft account. Users signing in that way must explicitly agree with our privacy policy (*opt in*).
 
 For users signing in using their institutional account, nothing changes.
 
