@@ -13,7 +13,7 @@ date: "2022-08-18"
 
 Gebruikers met een persoonlijke Google (Gmail) of Microsoft (Hotmail, Outlook, ...) account kunnen nu ook aanmelden op Dodona! Voorheen moesten die accounts steeds gekoppeld zijn met een Office 365 of Google Workspace abonnement van een onderwijsinstelling. Deze beperking werd nu opgeheven.
 
-Om te voorkomen dat studenten hun persoonlijke account gebruiken om te registreren voor cursussen (in plaats van hun schoolaccount), moeten cursusbeheerder expliciet aangeven dat hun dat ook niet-schoolaccounts toegelaten zijn in hun cursus.
+Om te voorkomen dat studenten hun persoonlijke account gebruiken om te registreren voor cursussen (in plaats van hun schoolaccount), moeten cursusbeheerder expliciet aangeven dat ook niet-schoolaccounts toegelaten zijn in hun cursus.
 
 Onze privacy policy werd aangepast om dergelijke accounts toe te laten. Er zijn geen wijzigingen voor gebruikers met een schoolaccount.
 
