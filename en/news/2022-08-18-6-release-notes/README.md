@@ -18,3 +18,17 @@ To prevent students from using their private account (instead of their school ac
 The privacy policy has been updated to reflect this change, but contains no changes for existing users.
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3900).
+
+## Dodona 6.1 - 2022-09-19
+
+Dodona 6.1 contains a beta version of reusing annotations while manually evaluating submissions. For now, this feature is only available for a select subset of users.
+
+In addition, over the past few weeks, we made many changes to improve the sign in flow:
+- Better handling in case a Dodona account already exists with a certain email adress
+- Use more readable usernames where possible
+- Renamed private account to personal account
+- Use smartschool identifiers instead of usernames internally
+- Disable smartschool co-accounts
+- Several fixes for errors
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/4007).
