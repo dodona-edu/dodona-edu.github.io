@@ -27,7 +27,7 @@ Tussen versie 6.0 en 6.1 zijn er verschillende aanpassingen gedaan om het aanmel
 - Een betere afhandeling als er al een Dodona-account bestaat met een bepaald emailadres
 - Meer leesbare gebruikersnamen waar mogelijk
 - Private accounts werden hernoemd naar persoonlijke accounts
-- Inloggen met smartschool gebruikt nu identifiers in plaats van gebruikersnamen
+- Inloggen met smartschool gebruikt intern nu identifiers in plaats van gebruikersnamen
 - Het gebruik van smartschool co-accounts werd uitgeschakeld
 - Verschillende foutmeldingen werden opgelost.
 

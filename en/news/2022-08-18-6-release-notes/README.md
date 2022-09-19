@@ -27,7 +27,7 @@ In addition, over the past few weeks, we made many changes to improve the sign i
 - Better handling in case a Dodona account already exists with a certain email adress
 - Use more readable usernames where possible
 - Renamed private account to personal account
-- Use smartschool identifiers instead of usernames
+- Use smartschool identifiers instead of usernames internally
 - Disable smartschool co-accounts
 - Several fixes for errors
 
