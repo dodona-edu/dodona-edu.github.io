@@ -18,3 +18,17 @@ Om te voorkomen dat studenten hun persoonlijke account gebruiken om te registrer
 Onze privacy policy werd aangepast om dergelijke accounts toe te laten. Er zijn geen wijzigingen voor gebruikers met een schoolaccount.
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/3900).
+
+## Dodona 6.1 - 19/09/2022
+
+Dodona 6.1 bevat een beta versie van een nieuwe feature om opmerkingen gemakkelijk te hergebruiken als je een reeks manueel aan het evalueren bent. Deze feature is voorlopig slechts beschikbaar voor een zeer beperkte groep gebruikers.
+
+Tussen versie 6.0 en 6.1 zijn er verschillende aanpassingen gedaan om het aanmelden robuuster te maken:
+- Een betere afhandeling als er al een Dodona-account bestaat met een bepaald emailadres
+- Meer leesbare gebruikersnamen waar mogelijk
+- Private accounts werden hernoemd naar persoonlijke accounts
+- Inloggen met smartschool gebruikt nu identifiers in plaats van gebruikersnamen
+- Het gebruik van smartschool co-accounts werd uitgeschakeld
+- Verschillende foutmeldingen werden opgelost.
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/4007).
