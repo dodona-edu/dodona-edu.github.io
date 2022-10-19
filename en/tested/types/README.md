@@ -2,19 +2,39 @@
 title: Data type support
 description: "The various data types supported by TESTed"
 ---
+# Data type support
 
-# Data type support in TESTed
+This reference gives an overview of all TESTed data types (basic and advanced)
+and how they map to the data types in the programming languages that are currently supported by TESTed.
 
 ::: tip Up-to-date information
-These data are sourced from the language modules in TESTed.
-They contain the most up-to-date information on data type support.
+The mapping between TESTed data types and their mapping to the different programming languages is automatically sourced from the language modules of TESTed.
+As such, this reference should contain the most up-to-date information on data type support.
 :::
-
-This reference lists which types are used in the various programming languages and how they map to the TESTed data types.
 
 ## Basic types
 
-In the first column, we list the TESTed data type, followed by a column for each programming language.
+Basic types represent abstract data types such as integers,
+not specific implementations thereof like unsigned 8-bit integers.
+They are used as the default data type for a concept in a specific programming language,
+but each programming language can have multiple data types that map to the concept represented by a basic type.
+
+TESTed supports the following basic types:
+
+Numeric:
+- `integer`: an integer
+- `real`: a real number
+- `boolean`: a Boolean value
+- `text`: textual data (e.g. strings)
+- `sequence`: an ordered sequence of values
+- `set`: an unordered collection of unique values
+- `map`: a collection of key-value pairs
+- `nothing`: a representation of "nothing", meaning no value
+- `any`: any data type. **Note**: You cannot use this type in test suites. It is only used to indicate unknown types of return values.
+
+The following table gives an overview of basic types supported by TESTed.
+The first column contains all basic types,
+and the other columns contain the mapping to the data types of the programming languages currently supported by TESTed.
 
 | TESTed   | Python  | JavaScript | Java          | Kotlin    | Haskell   | C        | Bash   |
 |----------|---------|------------|---------------|-----------|-----------|----------|--------|
@@ -32,8 +52,36 @@ In the first column, we list the TESTed data type, followed by a column for each
 
 ## Advanced types
 
-The first column shows the name of the advanced type (below the table are some definitions of these types).
-The second column indicates what the basic type is of the advanced type.
+Advanced types represent specific implementations of data types, like unsigned 8-bit integers.
+Each advanced type corresponds to at most one data type in a programming language,
+and some programming languages will not have support for specific implementations.
+
+Currently, the following types are supported by TESTed:
+
+- `int8`: 8-bit integers (signed)
+- `uint8`: 8-bit natural numbers (unsigned)
+- `int16`: 16-bit integers (signed)
+- `uint16`: 16-bit natural numbers (unsigned)
+- `int32`: 32-bit integers (signed)
+- `uint32`: 32-bit natural numbers (unsigned)
+- `int64`: 64-bit integers (signed)
+- `uint64`: 64-bit natural numbers (unsigned)
+- `bigint`: integers without upper and lower limit (signed)
+- `single_precision` - IEEE 754 single precision real number
+- `double_precision` - IEEE 754 double precision real number
+- `double_extended` - IEEE 754 double extended precision real number
+- `fixed_precision` - fixed precision real number
+- `array`: a mutable fixed-size sequence
+- `list`: a mutable variable-size sequence
+- `tuple`: an immutable sequence
+- `char`: a single character
+- `undefined`: used for languages that make a distinction between `null` (with basic type nothing) and `undefined`, as in JavaScript
+
+The following table gives an overview of advanced types supported by TESTed.
+The first column contains all advanced types,
+and the second column contains their corresponding basic type.
+The other columns contain the mapping to the data types of the programming languages currently supported by TESTed.
+An explanation of the symbols used in the table follows after the table itself.
 
 | TESTed           | Basic    | Python    | JavaScript  | Java         | Kotlin       | Haskell            | C                | Bash |
 |------------------|----------|-----------|-------------|--------------|--------------|--------------------|------------------|------|
@@ -59,27 +107,14 @@ The second column indicates what the basic type is of the advanced type.
 ¹ built-in tuple type  
 ² built-in list type
 
-A "+" (plus sign) indicates that the programming language has limited supported (`reduced`).
-This often means there is no distinct type available in the language, but exercises using this type can still be solved in that language.
-An example is tuples: multiple languages have no tuple type, but exercises using tuples can still be solved by using the basic type (`sequence`).
-For example, an exercise using tuples will be solvable in Java by using a list.
+A plus sign (+) indicates that the programming language has **limited support** (`reduced`) for the data type.
+This often means that the programming language does not support a separate data type,
+but exercises using this type can still be solved in that language by using the basic type as a fallback.
+Let's use tuples as an example.
+Many programming languages do not have direct support for tuples,
+but exercises using tuples can still be solved by using the corresponding basic type (sequence).
+For example, an exercise using a `tuple` can be solved in Java by using a `List`.
 
-A "-" (minus sign) means that the programming language has no support (`unsupported`).
-This means exercises using those types will not be solvable in the programming language.
-For example, JavaScript does not support `fixed precision`,
-meaning exercises using this type will not be solvable in JavaScript.
-
-Below are some definitions of the types:
-
-- `intN` - signed integers, at least `N` bits; e.g. `int16` must have at least 16 bits
-- `uintN` - unsigned integers, at least `N` bits
-- `bigint` - arbitrary precision integers
-- `single_precision` - IEEE 754 single precision real number
-- `double_precision` - IEEE 754 double precision real number
-- `double_extended` - IEEE 754 double extended precision real number
-- `fixed_precision` - fixed precision real number
-- `array` - continuous piece of memory for elements of a fixed size. The difference with list is best explained in Java.
-- `list` - ordered sequence of elements, where duplicates are allowed
-- `tuple` - read-only, immutable list
-- `char` - a single character
-- `undefined` - separate from null, as in JavaScript
+A minus sign (-) means that the programming language has **no support** (`unsupported`) for the data type.
+This means that exercises using a data type that is not supported in a programming language, can not be solved in that language.
+For example, exercises using a fixed precision type can not be solved in JavaScript that does not support this data type.

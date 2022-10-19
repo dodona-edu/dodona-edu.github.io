@@ -1,17 +1,17 @@
 ---
-title: Configuration options for exercises
-description: "The configuration options supported by TESTed"
+title: Exercise configuration options
+description: "Configuration options for exercises in TESTed"
 ---
 
-# Configuration options for exercises in TESTed
+# Exercise configuration options
 
-Apart from the default Dodona options, there are a few TESTed-specific options than can be used.
+In addition to the [general configuration options](../../references/exercise-config) for programming exercises in Dodona,
+some specific options for TESTed can be used as well.
 
 ## Test suite
 
-The only mandatory option is the name of the test suite.
-For compatibility reasons, this is called `testplan` at the moment.
-This should be in the `evaluation` block:
+The default location of a test suite for TESTed is a JSON file `plan.json` in the `evaluation` directory of the exercise.
+The optional `testplan` attribute in the `evaluation` block takes an alternative location as a path name relative to the evaluation directory.
 
 ```json
 {
@@ -21,76 +21,28 @@ This should be in the `evaluation` block:
 }
 ```
 
-A full description of the test suite format is available in the [reference documentation on test suites](/en/tested/json).
+See [_Test suite format_](../json) for a detailed description of the test suite format for TESTed.
 
 ## General options
 
-Certain parts of the behaviour of TESTed can be influenced by setting options in the `options` block.
-In the next section, we discuss the various options.
-Their specification is given as a [JSON Schema](https://json-schema.org/).
+The `evaluation` block can contain an `option` block with attributes that influence the general behaviour of TESTed.
+We discuss each of these options below.
 
-```json
-{
-  "title": "OptionsModel",
-  "$ref": "#/definitions/Options",
-  "definitions": {
-    "ExecutionMode": {
-      "title": "ExecutionMode",
-      "description": "An enumeration.",
-      "enum": [
-        "batch",
-        "context"
-      ],
-      "type": "string"
-    },
-    "Options": {
-      "title": "Options",
-      "type": "object",
-      "properties": {
-        "mode": {
-          "default": "batch",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ExecutionMode"
-            }
-          ]
-        },
-        "allow_fallback": {
-          "title": "Allow Fallback",
-          "default": true,
-          "type": "boolean"
-        },
-        "language": {
-          "title": "Language",
-          "default": {},
-          "type": "object",
-          "additionalProperties": {
-            "type": "object"
-          }
-        },
-        "linter": {
-          "title": "Linter",
-          "default": true,
-          "type": "boolean"
-        }
-      }
-    }
-  }
-}
-```
+### `options.mode`
 
-### Compilation mode
+The `mode` attribute indicates how test code is generated and compiled (along with submissions).
+Two modes are supported:
 
-The `mode` field indicate how executable files (test code and submissions) should be compiled.
-TESTed supports two modes:
+* `batch` (default): All test code in a tab is generated and compiled in a single compilation unit (batch compilation).
+* `context`: Test code is generated and compiled per context (contextual compilation).
 
-* `batch`: All executable files are compiled at once.
-* `context`: Each executable file is compiled separately (individual compilation).
+The compilation process is faster with batch compilation than with contextual compilation,
+but may fail if a submission does not implement all requirements of the exercise.
+For example, if an exercise requires a student to implement two functions,
+but a submission only implements one function, this will result in a compilation error for Java submissions.
+See the next attribute for a workaround.
 
-The main advantage of the batch compilation is that it's faster than the individual compilation.
-As such, it is the default.
-
-Example (using individual compilation):
+Here's an example that uses contextual compilation:
 
 ```json
 {
@@ -102,14 +54,13 @@ Example (using individual compilation):
 }
 ```
 
-### Fallback for compilation
+### `options.allow_fallback`
 
-When using batch compilation,
-you can allow TESTed to fall back to the individual compilation if the batch compilation fails.
-This can be useful, for example, if a submission does not implement all required functions.
-By default, the `allow_fallback` field is true, meaning the fallback is enabled.
+When the boolean attribute `allow_fallback` is set to true (the default value),
+TESTed automatically falls back to contextual compilation when batch compilation fails.
+This may be useful with submissions that do not implement all requirements of the exercise.
 
-Example (disabling the fallback):
+Here's an example that disables falling back to contextual compilation:
 
 ```json
 {
@@ -124,9 +75,9 @@ Example (disabling the fallback):
 
 ## Linters
 
-When [adding support for a new programming language to TESTed](/en/tested/new-programming-language),
-it is possible to add support for a [linter](https://en.wikipedia.org/wiki/Lint_(software)).
-Following linters are supported by TESTed:
+When [adding support for a new programming language to TESTed](../new-programming-language),
+it is also possible to configure a [linter](https://en.wikipedia.org/wiki/Lint_(software)) that TESTed will use for static code analysis when processing submission for that language.
+TESTed currently uses the following linters:
 
 | Language   | Linter                                                 |
 |------------|--------------------------------------------------------|
@@ -138,8 +89,9 @@ Following linters are supported by TESTed:
 | Kotlin     | [Ktlint](https://ktlint.github.io/)                    |
 | Python     | [Pylint](https://pylint.pycqa.org/en/latest/)          |
 
-You can use the field `linter` to enable or disable all linters.
-Example of disabling all linters:
+The boolean attribute `options.linter` can be used to enable (`true`) or disable (`false`) linting for a programming exercise,
+either for all programming languages at once or for individual languages.
+Here's an example that disables linting for all programming languages:
 
 ```json
 {
@@ -151,8 +103,7 @@ Example of disabling all linters:
 }
 ```
 
-You can also enable or disable linters per programming language.
-For example, only enabling the JavaScript linter:
+Here's an example that only enables linting for JavaScript:
 
 ```json
 {
@@ -169,18 +120,18 @@ For example, only enabling the JavaScript linter:
 }
 ```
 
-## Programming-language-specific options
+## Options for individual programming languages
 
-There can also be options specific to a single programming language.
-We discuss the available options below.
+Programming language modules for TESTed can use their own specific options.
+Here's an overview of the options that can be used with the programming languages that are currently supported by TESTed.
 
 ### Bash
 
-With the option `shellcheck_config` you can specify a Shellcheck configuration file,
-which will be used to configure the linter.
-This file must be located inside the `evaluation` direction of the exercise.
+The attribute `shellcheck_config` takes the path name of a Shellcheck configuration file,
+relative to the `evaluation` directory of the exercise.
+TESTed will use this configuration file when linting Bash submissions.
+Here's an example that configures a Shellcheck configuration file `shellcheckrc`:
 
-Example (Shellcheck configuration):
 ```json
 {
   "evaluation": {
@@ -197,11 +148,11 @@ Example (Shellcheck configuration):
 
 ### Haskell
 
-With the option `hlint_config` you can specify a HLint configuration file,
-which will be used to configure the linter.
-This file must be located inside the `evaluation` direction of the exercise.
+The attribute `hlint_config` takes the path name of a HLint configuration file,
+relative to the `evaluation` directory of the exercise.
+TESTed will use this configuration file when linting Haskell submissions.
+Here's an example that configures a HLint configuration file `hlint.config.yaml`:
 
-Example (HLint configuration):
 ```json
 {
   "evaluation": {
@@ -218,11 +169,10 @@ Example (HLint configuration):
 
 ### Java
 
-With the option `checkstyle_config` you can specify a Checkstyle configuration file,
-which will be used to configure the linter.
-This file must be located inside the `evaluation` direction of the exercise.
-
-Example (Checkstyle configuration):
+The attribute `checkstyle_config` takes the path name of a Checkstyle configuration file,
+relative to the `evaluation` directory of the exercise.
+TESTed will use this configuration file when linting Java submissions.
+Here's an example that configures a Checkstyle configuration file `java_style.xml`:
 
 ```json
 {
@@ -240,11 +190,10 @@ Example (Checkstyle configuration):
 
 ### JavaScript
 
-With the option `eslint_config` you can specify a ESLint configuration file,
-which will be used to configure the linter.
-This file must be located inside the `evaluation` direction of the exercise.
-
-Example (ESLint configuration):
+The attribute `eslint_config` takes the path name of a ESLint configuration file,
+relative to the `evaluation` directory of the exercise.
+TESTed will use this configuration file when linting JavaScript submissions.
+Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
 
 ```json
 {
@@ -255,23 +204,21 @@ Example (ESLint configuration):
           "eslint_config": "eslintrc.yaml"
         }
       }
-    }   
+    }
   }
 }
 ```
 
 ### Kotlin
 
-Kotlin supports a number of options for the `ktlint` linter:
+TESTed supports the following attributes for linting Kotlin submissions:
 
-- `editorconfig`: Name of a `.editorconfig` file (see <https://editorconfig.org/>) in the `evaluation` folder of the exercise.
-- `disabled_rules_ktlint`: List of rules that should be ignored by *ktlint*.
-  Can also be a comma-separated string.
-- `ktlint_ruleset`: Name of a JAR file with additional rules.
-  This file must be in located in the `evaluation` folder of the exercise.
-- `ktlint_experimental`: Boolean to indicate if *ktlint* should use experimental rules. Enabled by default.
+- `editorconfig`: Path name of a `editorconfig` file, relative to the `evaluation` directory of the exercise (see <https://editorconfig.org/>).
+- `disabled_rules_ktlint`: Rules that should be ignored by `ktlint`, either provided as a list of strings or as a comma-separated string.
+- `ktlint_ruleset`: Path name of a JAR file with additional rules, relative to the `evaluation` directory of the exercise.
+- `ktlint_experimental`: Boolean value that indicates if `ktlint` should use experimental rules (`true`; default value) or not (`false`).
 
-Example (KTLint configuration):
+Here's an example that configures a `ktlint` configuration file `ktlint_rules.jar`:
 
 ```json
 {
@@ -292,11 +239,10 @@ Example (KTLint configuration):
 
 ### Python
 
-With the option `pylint_config` you can specify a PyLint configuration file,
-which will be used to configure the linter.
-This file must be located inside the `evaluation` direction of the exercise.
-
-Example (PyLint configuration):
+The attribute `pylint_config` takes the path name of a PyLint configuration file,
+relative to the `evaluation` directory of the exercise.
+TESTed will use this configuration file when linting Python submissions.
+Here's an example that configures a PyLint configuration file `pylint.rc`:
 
 ```json
 {
@@ -312,9 +258,9 @@ Example (PyLint configuration):
 }
 ```
 
-## Full example
+## Complete example
 
-Below is a full configuration file of an exercise (`config.json`):
+Here's an example of a complete configuration file (`config.json`) for a Dodona programming exercise that uses TESTed for automatic feedback generation:
 
 ```json
 {

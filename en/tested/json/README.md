@@ -1,1973 +1,1442 @@
 ---
 title: Test suite format
 description: "Create test suites for TESTed"
+sidebarDepth: 2
 ---
 
-# Test suite format for TESTed
+# Test suite format
 
-In TESTed, a test suite is a way to specify which tests are executed against a submission.
-TESTed is different from other systems in that the test suite is programming-language-independent.
-This means that you only need to specify one test suite,
-after which submissions in different programming languages can be checked.
+In TESTed, a test suite specifies which test cases are executed against a submission.
+TESTed differs from other test frameworks in that its test suites are independent of any programming language.
+As a result, a single test suite is sufficient to check submissions for the same exercise in different programming
+languages.
 
-The format is defined by [this Python file](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
-To make validating test suites easier, you can also generate a JSON Schema.
+The TESTed test suite format is formally specified
+by [this Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
+It can also generate a JSON Schema to make the validation of test suites easier.
+The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) of TESTed contains
+examples of JSON test suites and evaluators.
 
-Examples of JSON test suites and evaluators can be found in the
-[repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise).
+The first section of this reference describes the structure of the test suite.
+A simple dot notation is used to indicate where the attribute is located in the hierarchical structure.
+A star (`*`) is used to indicate a list of objects.
+For example, `plan.tabs.*.runs.*.run` can roughly be converted to json like this:
 
-## Plan
-
-The top-level object of a test suite.
-This object has two attributes: `namespace` and `tabs`:
-- **namespace**: The `namespace` is the name of the submission file (`<namespace>.<ext>`).
-  The `namespace` is also the namespace of the code.
-  The default namespace is `submission`.
-  :::tip Hint
-  The namespace is best written in `snake_case`,
-  which enables using the right style convention for each programming language.
-  :::
-- **tabs**: The `tabs` object is a list of all [tabs](#tab) that must be executed.
-
-```json
-"Plan": {
-  "title": "Plan",
-  "type": "object",
-  "properties": {
-    "tabs": {
-      "title": "Tabs",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Tab"
-      }
-    },
-    "namespace": {
-      "title": "Namespace",
-      "type": "string"
+```json5
+{
+ // `plan`
+ tabs: [
+  // `plan.tabs`
+  {
+   // `plan.tabs.*`
+   runs: [
+    // `plan.tabs.*.runs`
+    {
+     // `plan.tabs.*.runs.*` 
+     run: "example"
+     // `plan.tabs.*.runs.*.run`
     }
+   ]
   }
+ ]
 }
 ```
 
-## Tab
-Tabs in the test suite correspond with the visualization on Dodona.
-A tab contains a list of runs that must be executed.
+In the sections after that, some aspects are discussed in more detail.
 
-A *tab*-object has 3 attributes: `name`, `hidden` en `runs`.
-- **name**: This is the name of tab, as presented at Dodona.
-- **hidden**: This is a boolean indicating if the tab must be hidden, when all the testcases succeed.
-- **runs**: This is a list of all [runs](#run) (generated executables) that must be executed.
+## `plan`
 
-```json
-"Tab": {
-  "title": "Tab",
-  "type": "object",
-  "properties": {
-    "name": {
-      "title": "Name",
-      "type": "string"
-    },
-    "runs": {
-      "title": "Runs",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Run"
-      }
-    },
-    "hidden": {
-      "title": "Hidden",
-      "type": "boolean"
-    }
-  },
-  "required": [
-    "name",
-    "runs"
-  ]
-},
-```
+Top-level object of a test suite.
+Since this object is not named in a test suite, we ignore it in all titles below.
 
-## Run
-A run is a generated executable,
-that contains a collections of contexts and also an optional testcase that evaluates the written program by the student.
+### `.namespace`
 
-The *Run*-object has two attributes: `run` and `contexts`.
-- **run**: This is the testcase that executes the written program (see [RunTestcase](#runtestcase)).
-- **contexts**: This is a list of all [contexts](#context) that must be executed.
+The name of the submission file (`<namespace>.<ext>`).
 
-```json
-"Run": {
-  "title": "Run",
-  "type": "object",
-  "properties": {
-    "run": {
-      "title": "Run",
-      "allOf": [
-        {
-          "$ref": "#/definitions/RunTestcase"
-        }
-      ]
-    },
-    "contexts": {
-      "title": "Contexts",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Context"
-      }
-    }
-  }
-},
-```
+The `namespace` is also used as the namespace of the code.
+The default namespace is `submission`.
+For example, Java submissions must include a class called `Submission`.
 
-## RunTestcase
-A *RunTestcase*-object is a testcase that executes the written program.
-This will be visualised as a separate context on Dodona.
-
-The *RunTestcase*-object has 4 attributes: `input`, `output`, `description` and `link_files`.
-- **input**: The [input data](#runinput) for the program.
-- **output**: The [expected output](#runoutput) and evaluators for the program.
-- **description**: The description to display at Dodona.
-  When the `description` isn't given, it will be generated by TESTed.
-- **link_files**: The list of files that must be linked in the feedback (see [FileUrl](#fileurl)).
-
-```json
-"RunTestcase": {
-  "title": "RunTestcase",
-  "type": "object",
-  "properties": {
-    "input": {
-      "title": "Input",
-      "allOf": [
-        {
-          "$ref": "#/definitions/RunInput"
-        }
-      ]
-    },
-    "output": {
-      "title": "Output",
-      "allOf": [
-        {
-          "$ref": "#/definitions/RunOutput"
-        }
-      ]
-    },
-    "description": {
-      "title": "Description",
-      "type": "string"
-    },
-    "link_files": {
-      "title": "Link Files",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/FileUrl"
-      }
-    }
-  }
-},
-```
-
-### RunInput
-The *RunInput*-object contains all information that is necessary to evaluates the written program
-(`main`-call or the code itself) by the student.
-
-The *RunInput*-object has 3 attributes: `stdin`, `arguments` and `main_call`.
-- **stdin**: The given input at standard input.
-  This can either be the empty channel ([EmptyChannel](#emptychannel)),
-  or [TextData](#textdata) which contains a file location or string.
-- **arguments**: The list of program arguments, these must be strings.
-- **main_call**: This is a boolean that indicates if the program test must be executed.
-  The program test will not be executed by default.
-  
-```json
-"RunInput": {
-  "title": "RunInput",
-  "type": "object",
-  "properties": {
-    "stdin": {
-      "title": "Stdin",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/TextData"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        }
-      ]
-    },
-    "arguments": {
-      "title": "Arguments",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "main_call": {
-      "title": "Main Call",
-      "type": "boolean"
-    }
-  }
-},
-```
-
-### RunOutput
-The *RunOutput*-object contains all information that is needed to evaluate the *program* output.
-
-The *RunOutput*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception` and `exit_code`.
-- **stdout** and **stderr**: The output channel for standard output and error.
-  The possible output channels are:
-  - [EmptyChannel](#emptychannel): No output is expected on this channel.
-    This is the default option.
-  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
-  - [TextOutputChannel](#textoutputchannel): Some output is expected on this channel.
-- **file**: The output channel for a file.
-  The possible output channels are:
-  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
-    This is the default option.
-  - [FileOutputChannel](#fileoutputchannel): A file is expected as output.
-    
-    _**Remark:**_ At this moment TESTed only supports one expected file for one program test.
-    
-    _**Remark:**_ At this moment TESTed can't check if no files are generated by the program.
-- **exception**: The output channel for an exception.
-  The possible output channels are:
-  - [EmptyChannel](#emptychannel): No exception is expected.
-    This is the default option.
-  - [IgnoredChannel](#ignoredchannel): No exception is expected, but a raised exception is ignored.
-  - [ExceptionOutputChannel](#exceptionoutputchannel): An exception is expected to be raised.
-- **exit_code**: The outputchannel for the exit code of the program.
-  The exit code must be passed in the object [ExitCodeOutputChannel](#exitcodeoutputchannel).
-  By default `0` will be expected as the exit code.
-  
-```json
-"RunOutput": {
-  "title": "RunOutput",
-  "type": "object",
-  "properties": {
-    "stdout": {
-      "title": "Stdout",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/TextOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "stderr": {
-      "title": "Stderr",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/TextOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "file": {
-      "title": "File",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/FileOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "exception": {
-      "title": "Exception",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/ExceptionOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "exit_code": {
-      "title": "Exit Code",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ExitCodeOutputChannel"
-        }
-      ]
-    }
-  }
-},
-```
-
-## Context
-A context is a list of testcases that must be executed.
-Next to the testcases, a context can contain preparing and exiting code that are programming language dependent.
-
-The *context*-object has 5 attributes: `testcases`, `before`, `after`, `description` and `link_files`.
-- **testcases**: The list of [testcases](#testcase) that must be evaluated.
-- **before** and **after**: An object whereby the keys are the programming languages,
-  where the values are [TextData](#textdata) objects that are executed before (resp. after) the testcases.
-- **description**: The description to display in Dodona.
-- **link_files**: The list of files that must be linked in the feedback (See [FileUrl](#fileurl)).
-
-```json
-"Context": {
-  "title": "Context",
-  "type": "object",
-  "properties": {
-    "testcases": {
-      "title": "Testcases",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Testcase"
-      }
-    },
-    "before": {
-      "title": "Before",
-      "type": "object",
-      "additionalProperties": {
-        "$ref": "#/definitions/TextData"
-      }
-    },
-    "after": {
-      "title": "After",
-      "type": "object",
-      "additionalProperties": {
-        "$ref": "#/definitions/TextData"
-      }
-    },
-    "description": {
-      "title": "Description",
-      "type": "string"
-    },
-    "link_files": {
-      "title": "Link Files",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/FileUrl"
-      }
-    }
-  }
-},
-```
-
-## Testcase
-A testcase is an assignment or expression that must be evaluated.
-
-The *testcase*-object has 3 attributes: `input`, `description` and `output`.
-- **input**: The input statement or expression, see [Statements and expressions](#statements-and-expressions).
-- **description**: The description to be displayed in Dodona.
-  When the `description` isn't given, it will be generated by TESTed.
-- **output**: The [Output](#output) object contains all output channels for the testcase.
-
-```json
-"Testcase": {
-  "title": "Testcase",
-  "type": "object",
-  "properties": {
-    "input": {
-      "title": "Input",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/Assignment"
-        },
-        {
-          "type": "string"
-        },
-        {
-          "$ref": "#/definitions/FunctionCall"
-        },
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/SequenceType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        },
-        {
-          "$ref": "#/definitions/NothingType"
-        }
-      ]
-    },
-    "description": {
-      "title": "Description",
-      "type": "string"
-    },
-    "output": {
-      "title": "Output",
-      "allOf": [
-        {
-          "$ref": "#/definitions/Output"
-        }
-      ]
-    }
-  },
-  "required": [
-    "input"
-  ]
-},
-```
-
-### Output
-The *Output*-object contains all information that is needed to evaluate the testcase.
-
-The *Output*-object has 5 attributes: `stdout`, `stderr`, `file`, `exception` and `exit_code`.
-- **stdout** and **stderr**: The output channel for standard output and error.
-  The possible output channels are:
-  - [EmptyChannel](#emptychannel): No output is expected on this channel.
-    This is the default option.
-  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
-  - [TextOutputChannel](#textoutputchannel): Some output is expected on this channel.
-- **file**: The output channel for a file.
-  The possible output channels are:
-  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
-    This is the default option.
-  - [FileOutputChannel](#fileoutputchannel): A file is expected as output.
-
-    _**Remark:**_ At this moment TESTed only supports one expected file for one testcase.
-    
-    _**Remark:**_ At this moment TESTed can't check if no files are generated by the program.
-- **exception**: The output channel for an exception.
-  The possible output channels are:
-  - [EmptyChannel](#emptychannel): No exception is expected.
-    This is the default option.
-  - [IgnoredChannel](#ignoredchannel): No exception is expected, but a raised exception is ignored.
-  - [ExceptionOutputChannel](#exceptionoutputchannel): An exception is expected to be raised.
-- **value**: The output channel for the return value of an expression.
-  The possible output channel are:
-  - [EmptyChannel](#emptychannel): No output is expected on this channel.
-    This is the default option.
-  - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but given output is ignored.
-  - [ValueOutputChannel](#valueoutputchannel): There is a return value expected at this channel.
-
-```json
-"Output": {
-  "title": "Output",
-  "type": "object",
-  "properties": {
-    "stdout": {
-      "title": "Stdout",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/TextOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "stderr": {
-      "title": "Stderr",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/TextOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "file": {
-      "title": "File",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/FileOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "exception": {
-      "title": "Exception",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/ExceptionOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    },
-    "result": {
-      "title": "Result",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/ValueOutputChannel"
-        },
-        {
-          "$ref": "#/definitions/EmptyChannel"
-        },
-        {
-          "$ref": "#/definitions/IgnoredChannel"
-        }
-      ]
-    }
-  }
-},
-```
-
-## FileUrl
-The *FileUrl*-object is used to enable file linking in the feedback.
-The content of this object is based on the input expected by the *Python Tutor*.
-::: warning Opmerking
-While this object looks like the input for the *Python Tutor*,
-TESTed is currently only able to open the linked files in a new browser tab.
+:::tip Hint
+The namespace is best written in `snake_case`,
+which enables using the right style convention for each programming language.
 :::
 
-The *FileUrl*-object has 4 attributes: `content`, `name`, `location` and `storage`.
-- **content**: The content of the file.
-  At this moment limited to an url (mostly a relative url to a file in the `description` folder of the exercise).
-- **name**: The name of the file that must be linked.
-- **location**: The location type of the content.
-  At this moment is only `href` supported, which is also the default value.
-- **storage**: The storage method of the content.
-  At this moment is only `disk` supported, which is also the default value.
-  
-```json
-"FileUrl": {
-  "title": "FileUrl",
-  "type": "object",
-  "properties": {
-    "content": {
-      "title": "Content",
-      "type": "string"
-    },
-    "name": {
-      "title": "Name",
-      "type": "string"
-    },
-    "location": {
-      "title": "Location",
-      "type": "string"
-    },
-    "storage": {
-      "title": "Storage",
-      "type": "string"
-    }
-  },
-  "required": [
-    "content",
-    "name"
-  ]
-},
-```
+## `.tabs.*`
+
+A list of all tabs that will be executed.
+
+The tabs in a test suite correspond with the visual grouping of test cases into tabs on Dodona.
+A tab contains a list of the runs that must be executed.
+
+### `.name`
+
+The name of the tab; displayed on Dodona.
+
+### `.hidden`
+
+A boolean indicating if the tab must be hidden when all its test cases succeed.
+
+## `.tabs.*.runs.*`
+
+This is a list of all runs (generated executables) that must be executed.
+
+A run is a generated executable
+that contains a collection of contexts and an optional test case that evaluates the submission.
+
+## `.tabs.*.runs.*.run`
+
+The test case that executes the submission.
+It will be visualized as a separate context on Dodona.
+
+### `.input`
+
+The run input contains all information that is necessary to evaluates the written program
+(`main`-call or the code itself) by the student.
+
+#### `.input.stdin`
+
+The content that is made available on standard input.
+This can either be an ([EmptyChannel](#emptychannel)) object,
+or a [TextData](#textdata) object providing the path name of a text file or a string containing the content.
+
+#### `.input.arguments`
+
+list of string arguments that are passed when executing the submission.
+
+#### `.input.main_call`
+
+A boolean indicating if the submission must be executed. By default, the submission will not be executed.
+
+### `.output`
+
+This object contains all the necessary information to evaluate the executed submission.
+
+#### `.output.stdout`
+
+The output channel for standard output.
+Possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
+  This is the default option.
+- [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
+- [TextOutputChannel](#textoutputchannel): Expected output on this channel.
+
+#### `.output.stderr`
+
+The output channel for standard error.
+Possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
+  This is the default option.
+- [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
+- [TextOutputChannel](#textoutputchannel): Expected output on this channel.
+
+#### `.output.file`
+
+The output channel for a file.
+Possible output channels are:
+
+- [IgnoredChannel](#ignoredchannel) (default): No output is expected on this channel, but generated output is ignored.
+- [FileOutputChannel](#fileoutputchannel): Expected output on this channel.
+
+_**Note:**_ TESTed currently supports at most one expected file for each execution of the submission.
+Additionally, there is currently no way to check that _no_ files were generated.
+
+#### `.output.exception`
+
+The output channel for an exception.
+The possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No exception is expected.
+- [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
+- [ExceptionOutputChannel](#exceptionoutputchannel): Expected exception.
+
+#### `.output.exit_code`
+
+The output channel for the exit code upon termination of executing the submission.
+The exit code must be passed in the object [ExitCodeOutputChannel](#exitcodeoutputchannel).
+By default, the expected exit code is zero (0).
+
+### `.description`
+
+A description of the context as displayed by Dodona.
+When no description is given, it will be automatically generated by TESTed.
+
+### `.link_files.*`
+
+A list of files that must be linked in the feedback on Dodona (see [documentation for the contexts](#link-files-2)).
+
+## `.tabs.*.runs.*.contexts.*`
+
+A list of contexts that will be executed.
+A context is a list of dependent test cases that must be executed in succession.
+In addition to the test cases, a context can contain setup and teardown code,
+which is also described in a way that is independent of any programming language.
+
+### `.before`
+
+An object whose keys are programming languages.
+The corresponding values are [TextData](#textdata) objects that are executed before the test cases.
+
+### `.after`
+
+An object whose keys are programming languages.
+The corresponding values are [TextData](#textdata) objects that are executed after the test cases.
+
+### `.description`
+
+A description of the context as displayed by Dodona.
+When no description is given, it will be automatically generated.
+
+### `.link_files.*`
+
+A list of files that must be linked in the feedback on Dodona.
+Each object is used to enable file linking in the feedback.
+
+#### `.link_files.*.name`
+
+The name of a file.
+All exact matches of the filename will be linked to the content.
+
+#### `.link_files.*.content`
+
+The URL of a text file (usually a relative URL to a file in the description directory of the exercise).
+
+#### `.link_files.*.location`
+
+The type of content.
+Currently, the only value supported is `href`, which is also the default value.
+This attribute is only included for legacy reasons and may become deprecated in the future.
+
+#### `.link_files.*.storage`
+
+The storage method of the content.
+Currently, the only value supported is `disk`, which is also the default value.
+This attribute is only included for legacy reasons and may become deprecated in the future.
+
+## `.tabs.*.runs.*.contexts.*.testcases.*`
+
+A test case is a statement or an expression that must be executed and evaluated.
+
+### `.input`
+
+A statement or expression (see [Statements and expressions](#statements-and-expressions)).
+
+### `.description`
+
+A description of the test case as displayed by Dodona.
+When no description is given, it will be automatically generated by TESTed.
+
+### `.output`
+
+An object that contains all the necessary information to evaluate a test case.
+
+#### `.output.stdout`
+
+The output channel for standard output.
+Possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
+  This is the default option.
+- [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
+- [TextOutputChannel](#textoutputchannel): Expected output on this channel.
+
+#### `.output.stderr`
+
+The output channel for standard error.
+Possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
+  This is the default option.
+- [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
+- [TextOutputChannel](#textoutputchannel): Expected output on this channel.
+
+#### `.output.file`
+
+The output channel for a file.
+Possible output channels are:
+
+- [IgnoredChannel](#ignoredchannel) (default): No output is expected on this channel, but generated output is ignored.
+- [FileOutputChannel](#fileoutputchannel): Expected output on this channel.
+
+_**Note:**_ TESTed currently supports at most one expected file for each execution of the submission.
+Additionally, there is currently no way to check that _no_ files were generated.
+
+#### `.output.exception`
+
+The output channel for an exception.
+The possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No exception is expected.
+- [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
+- [ExceptionOutputChannel](#exceptionoutputchannel): Expected exception.
+
+#### `.output.result`
+
+The output channel for the result of an expression.
+The possible output channels are:
+
+- [EmptyChannel](#emptychannel) (default): No result is expected.
+- [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
+- [ValueOutputChannel](#valueoutputchannel): The expected result of the expression.
 
 ## TextData
-The *TextData*-object is the object used for text or text-files as input.
 
-The *TextData*-object has 2 attributes: `data` and `type`.
-- **data**: When the type is `text`, this is the text itself.
-  Otherwise, this is a path to a file located in the `workdir` folder of the judge.
-- **type**: This is type of input: the text itself (`text`) or a text-file (`file`).
-  
-```json
-"TextData": {
-  "title": "TextData",
-  "type": "object",
-  "properties": {
-    "data": {
-      "title": "Data",
-      "type": "string"
-    },
-    "type": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/TextChannelType"
-        }
-      ]
-    }
-  },
-  "required": [
-    "data"
-  ]
-},
-```
+A `TextData` object represents textual data.
+
+### `.type`
+
+The type of data: `text` or `file`.
+If `type` is `text`, the `.data` is interpreted as the textual data itself.
+If `type` is `file`, the `.data` is interpreted as the pathname of a text file in the workdir directory of the judge
+that contains the textual data.
+
+### `.data`
+
+A string.
 
 ## Channels
-An overview of all output channels.
+
+The output channels represent all possible side effects of executing the submission.
+Here's an overview of all output channels currently supported by TESTed:
 
 ### EmptyChannel
-The *EmptyChannel*-object describes the empty input/output channel.
-This is the constant string `none`.
+
+An `EmptyChannel` describes that no output is expected on a specific file descriptor (e.g. stdout or stderr).
+Any output generated will be considered as incorrect by TESTed.
+The `EmptyChannel` is represented by a string constant `none`.
+
+For example, disallowing any output on standard output:
 
 ```json
-"EmptyChannel": {
-  "title": "EmptyChannel",
-  "description": "There is nothing on this output channel.",
-  "enum": [
-    "none"
-  ],
-  "type": "string"
-},
+{
+ "output": {
+  "stdout": "none"
+ }
+}
 ```
 
+For most output types, this is the default value, meaning you don't need to specify it.
+
 ### IgnoredChannel
-The *IgnoredChannel* object is the output channel that doesn't expect output, but generated output will be ignored.
-This is the constant string `ignore`.
+
+An IgnoredChannel object describes that no output is expected on a specific file descriptor (e.g. stdout or stderr).
+Any output generated on the file descriptor will be ignored, and is considered correct by TESTed.
+In other words, if you do not want ouput, you should use [`EmptyChannel`](#emptychannel),
+while if you don't care about the output, you should use `IgnoredChannel`.
+The `EmptyChannel` is represented by a string constant `ignored`.
+
+For example, ignoring any output on standard output:
 
 ```json
-"IgnoredChannel": {
-  "title": "IgnoredChannel",
-  "description": "A file channel is ignored by default.",
-  "enum": [
-    "ignored"
-  ],
-  "type": "string"
-},
+{
+ "output": {
+  "stdout": "ignored"
+ }
+}
 ```
 
 ### ExceptionOutputChannel
-The *ExceptionOutputChannel*-object is the output channel for expected exceptions.
-This channel expects the fault message and the used evaluator.
 
-The *ExceptionOutputChannel*-object has 2 attributes: `exception` and `evaluator`.
-- **exception**: The expected fault message in an [ExceptionValue](#exceptionvalue) object.
-- **evaluator**: The evaluator that must be used to evaluate the exception.
-  There are two evaluators that could be used:
-  - [GenericExceptionEvaluator](#genericexceptionevaluator): This the builtin evaluator of TESTed for exceptions.
-    This is the default evaluator.
-    ::: warning Remark
-    Only the fault message (not to be confused with the exception type) can be evaluated with the built-in evaluator.
-    :::
-  - [SpecificEvaluator](#specificevaluator): This is an evaluator in the programming language of the submission.
-    ::: tip Hint
-    When you want to check exception types, you need to use the SpecificEvaluator.
-    :::
+An `ExceptionOutputChannel`describes an expected exception, thrown upon executing the submission by an error message and
+an evaluator used to evaluate the exception.
+It is represented by an object with two attributes.
+
+For example, if you require an error with the message `"Error"`:
 
 ```json
-"ExceptionOutputChannel": {
-  "title": "ExceptionOutputChannel",
-  "type": "object",
-  "properties": {
-    "exception": {
-      "$ref": "#/definitions/ExceptionValue"
-    },
-    "evaluator": {
-      "title": "Evaluator",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/GenericExceptionEvaluator"
-        },
-        {
-          "$ref": "#/definitions/SpecificEvaluator"
-        }
-      ]
-    },
+{
+ "output": {
+  "exception": {
+   "exception": {
+    "message": "Valid exceptions"
+   }
   }
-},
+ }
+}
 ```
 
-#### ExceptionValue
-The *ExceptionValue*-object contains the message that is expected from the thrown exception.
+Since evaluating anything more than the exception message requires programming-language-specific code,
+TESTed supports the concept of "evaluators".
+This is a function you can write,
+which will be called by TESTed to evaluate whether a thrown exception is the correct one.
+See the attribute documentation below or the [Evaluators section](#evaluators) for more information.
 
-The *ExceptionValue*-object has 1 attribute: `message`.
-- **message**: The text message of the thrown exception.
+For example, requiring a `assertion` exception, in an exercise supporting `Python`, `Java` and `Haskell`:
 
 ```json
-"ExceptionValue": {
-  "title": "ExceptionValue",
-  "type": "object",
-  "properties": {
-    "message": {
-      "title": "Message",
-      "type": "string"
+{
+ "output": {
+  "exception": {
+   "exception": {
+    "message": "Some assertions went wrong"
+   },
+   "evaluator": {
+    "type": "specific",
+    "evaluators": {
+     "python": {
+      "file": "evaluator.py"
+     },
+     "java": {
+      "file": "Evaluator.java"
+     },
+     "haskell": {
+      "file": "Evaluator.hs"
+     }
     }
-  },
-  "required": [
-    "message"
-  ]
-},
+   }
+  }
+ }
+}
 ```
+
+#### `.exception.message`
+
+An object representing an expected error message.
+
+#### `.evaluator`
+
+The evaluator to use to determine whether the exception is valid or not.
+TESTed currently supports the following two evaluators:
+
+- [GenericExceptionEvaluator](#genericexceptionevaluator) (default): Built-in evaluator for exceptions.
+  **Note:** Only the error message (not the exception type) is evaluated with the built-in evaluator.
+- [SpecificEvaluator](#specificevaluator): An evaluator in the programming language of the submission.
 
 ### ExitCodeOutputChannel
-The *ExitCodeOutputChannel*-object is the output channel for the exit code of the executed program.
 
-The *ExitCodeOutputChannel*-object has 1 attribute: `value`.
-- **value**: This is an integer that represent the exit code.
-  The default value is `0`.
-  ::: warning Remark
-  When the expected and actual exit codes are `0`, they won't be shown on Dodona.
-  :::
+An `ExitCodeOutputChannel` object describes the expected exit code of the executed submission.
+
+For example, if you require an exit code of -25:
 
 ```json
-"ExitCodeOutputChannel": {
-  "title": "ExitCodeOutputChannel",
-  "type": "object",
-  "properties": {
-    "value": {
-      "title": "Value",
-      "type": "integer"
-    },
+{
+ "output": {
+  "exit_code": {
+   "value": -25
   }
-},
+ }
+}
 ```
 
-### FileOutputChannel
-The *FileOutputChannel*-object is the output channel for a file that must be created by the student code.
-::: warning Remark
-There are currently some limitations on file-related tests:
-
-- Only one file can be evaluated for each testcase.
-- Only text files are supported (so no binary files).
+::: warning
+When the expected and actual exit codes are both `0`, no feedback is generated on this output channel.
 :::
 
-The *FileOutputChannel*-object has 3 attributes: `expected_path`, `actual_path` and `evaluator`.
-- **expected_path**: A relative path to a file in the `workdir`, which contains the expected output.
-- **actual_path**: A relative path to a file that is expected to be written by the submission,
-  which is expected to contain the generated output.
-- **evaluator**: The evaluator that must be used to evaluate the generated text file.
-  There are two evaluator that could be used:
-  - [GenericTextEvaluator](#generictextevaluator): This is the built-in evaluator of TESTed for text and text files.
-    This is the default evaluator.
-  - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator.
-    
+#### `.value`
+
+The expected exit code as an integer.
+
+### FileOutputChannel
+
+A `FileOutputChannel` object represents a file that is created upon executing the submission.
+
+::: warning
+Currently, these are some known limitations for testing file creation:
+
+- Only a single file can be evaluated per test case.
+- Only text files are supported (no binary files).
+  :::
+
+For example, if the generated file `gen.txt` must be identical to a sample file `expected.txt`:
+
 ```json
-"FileOutputChannel": {
-  "title": "FileOutputChannel",
-  "type": "object",
-  "properties": {
-    "expected_path": {
-      "title": "Expected Path",
-      "type": "string"
-    },
-    "actual_path": {
-      "title": "Actual Path",
-      "type": "string"
-    },
-    "evaluator": {
-      "title": "Evaluator",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/GenericTextEvaluator"
-        },
-        {
-          "$ref": "#/definitions/ProgrammedEvaluator"
-        }
-      ]
-    }
-  },
-  "required": [
-    "expected_path",
-    "actual_path"
-  ]
-},
+{
+ "output": {
+  "file": {
+   "expected_path": "gen.txt",
+   "actual_path": "expected.txt"
+  }
+ }
+}
 ```
+
+#### `.expected_path`
+
+A relative path to a text file in the `workdir` that contains the expected output.
+
+#### `.actual_path`
+
+A relative path where a text file is expectedly generated upon execution of the submission.
+
+#### `.evaluator`
+
+An evaluator used to evaluate the generated text file.
+TESTed currently supports the following two evaluators:
+
+- [GenericTextEvaluator](#generictextevaluator)(default): Built-in evaluator for text and text files.
+- [ProgrammedEvaluator](#programmedevaluator): A custom evaluator.
 
 ### TextOutputChannel
-The *TextOutputChannel*-object is a textual output channel, like standard output.
 
-The *TextOutputChannel*-object has 3 attributes: `data`, `type` and `evaluator`.
-- **data**: The expected output itself (type: `text`), or a relative path to a file located in the `workdir`,
-  that contains the expected output (type: `file`).
-- **type**: The type of the expected output: the text itself (`text`) or a text file (`file`).
-- **evaluator**: The evaluator that must be used to evaluate the generated output.
-  There are two evaluators that could be used:
-  - [GenericTextEvaluator](#generictextevaluator): This the builtin evaluator for text and text file.
-    This is the default evaluator.
-  - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator.
+A `TextOutputChannel` object represents text that is expected to be generated on an output channel (e.g. stdout or
+stderr).
+
+For example, if the text `"Hello world"` must be written to `stdout`:
 
 ```json
-"TextOutputChannel": {
-  "title": "TextOutputChannel",
-  "type": "object",
-  "properties": {
-    "data": {
-      "title": "Data",
-      "type": "string"
-    },
-    "type": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/TextChannelType"
-        }
-      ]
-    },
-    "evaluator": {
-      "title": "Evaluator",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/GenericTextEvaluator"
-        },
-        {
-          "$ref": "#/definitions/ProgrammedEvaluator"
-        }
-      ]
-    }
-  },
-  "required": [
-    "data"
-  ]
-},
+{
+ "output": {
+  "stdout": {
+   "data": "Hello world",
+   "type": "text"
+  }
+ }
+}
 ```
+
+It is also possible to use a file containing the expected output:
+
+```json
+{
+ "output": {
+  "stdout": {
+   "data": "./expected-output.txt",
+   "type": "file"
+  }
+ }
+}
+```
+
+#### `.type`
+
+Similar to the `.type` attribute of the [`TextData` object](#textdata).
+The type of data: `text` or `file`.
+If `type` is `text`, the `.data` is interpreted as the textual data itself.
+If `type` is `file`, the `.data` is interpreted as the pathname of a text file in the workdir directory of the judge
+that contains the textual data.
+
+#### `.data`
+
+Similar to the `.data` attribute of the [`TextData` object](#textdata).
+A string.
+
+#### `.evaluator`
+
+An evaluator used to evaluate the generated text.
+TESTed currently supports the following two evaluators:
+
+- [GenericTextEvaluator](#generictextevaluator)(default): Built-in evaluator for text and text files.
+- [ProgrammedEvaluator](#programmedevaluator): A custom evaluator.
 
 ### ValueOutputChannel
-The *ValueOutputChannel*-object is the output channel for return values.
 
-The *ValueOutputChannel*-object has 2 attributes: `value` and `evaluator`
-- **value**: The expected return value.
-  See [Statements and expressions](#statements-and-expressions) for the possible return values.
-  
-  _**Remark:**_ The expected return value may not contain function calls and variables.
-- **evaluator**: The evaluator that can be used to evaluate the return value.
-  There are three evaluators that can be used:
-  - [GenericValueEvaluator](#genericvalueevaluator): This the built-in evaluator of TESTed for return values.
-    This is the default evaluator.
-    
-    _**Remark:**_ This evaluator only supports the datatypes of TESTed.
-  - [ProgrammedEvaluator](#programmedevaluator): This is a written custom evaluator,
-    that is independent of the programming language of the submission.
-    
-    _**Remark:**_
-    This evaluator only support the datatypes of TESTed that are supported by the programming language of the evaluator.
-  - [SpecificEvaluator](#specificevaluator): This is a written custom evaluator,
-    that is dependent of the programming language of the submission.
-    
-    _**Remark:**_ This the only evaluator that could be used to evaluate programming language specific datatypes.
+A `ValueOutputChannel` object represents the value obtained upon evaluating the expression of the test case.
+
+For example, if a function call must produce a list with two strings (`"a"` and `"c"`):
 
 ```json
-"ValueOutputChannel": {
-  "title": "ValueOutputChannel",
-  "type": "object",
-  "properties": {
-    "value": {
-      "title": "Value",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/SequenceType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        },
-        {
-          "$ref": "#/definitions/NothingType"
-        }
-      ]
-    },
-    "evaluator": {
-      "title": "Evaluator",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/GenericValueEvaluator"
-        },
-        {
-          "$ref": "#/definitions/ProgrammedEvaluator"
-        },
-        {
-          "$ref": "#/definitions/SpecificEvaluator"
-        }
-      ]
-    }
+{
+ "output": {
+  "result": {
+   "value": {
+    "data": [
+     {
+      "data": "a",
+      "type": "text"
+     },
+     {
+      "data": "c",
+      "type": "text"
+     }
+    ],
+    "type": "sequence"
+   }
   }
-},
+ }
+}
 ```
+
+#### `.value`
+
+The expected value.
+See [Statements and expressions](#statements-and-expressions) to learn how values must be described.
+
+::: warning
+The expected value must be a literal value, and can not be a function call or a variable.
+:::
+
+#### `.evaluator`
+
+An evaluator used to evaluate the generated value.
+TESTed currently supports the following three evaluators:
+
+- [GenericValueEvaluator](#genericvalueevaluator) (default): Built-in evaluator that compares the generated value with
+  the expected value.
+- [ProgrammedEvaluator](#programmedevaluator): A custom evaluator that is independent of the programming language of the
+  submission.
+- [SpecificEvaluator](#specificevaluator): A custom evaluator that depends on the programming language of the
+  submission.
+
+::: warning
+The first two evaluators only support datatypes that are also [supported by TESTed](#data-types).
+To support custom datatypes, you must use a `SpecificEvaluator`.
+:::
 
 ## Evaluators
 
+There are three ways of checking results in TESTed:
+
+1. *Built-in checks*
+   These are programming-language-independent, and are the preferred way to use TESTed.
+2. *Programmed checks*
+   In this case, you, as the exercise author, provide an implementation of a function which will be called by TESTed
+   when checking the results.
+   You only have to implement this function once in one programming language.
+   TESTed takes care of translating the results between multiple programming languages.
+   This means these types of checks are still programming-language-independent.
+   A good example is checking non-deterministic behavior, such as randomness or dynamic results, e.g. when results are
+   dependent on the current date.
+3. *Language-specific checks*
+   Here, you need to provide the implementation of a function for each programming language the exercise needs to
+   support.
+   The downside is that the test suite is no longer programming-language-independent.
+   For example, if a new language is added to TESTed, your test suite will need updating.
+   However, this does allow you to test programming-language-specific aspects, such as custom datatypes.
+
+Internally, these checks are implemented using evaluators.
+The *built-in checks* are implemented using "generic evaluators", which are the default for all output channels.
+This means you often don't need to specify them.
+
+*Programmed checks* are achieved using the [`SpecificEvaluator`](#specificevaluator).
+*Language-specific checks* are implemented using the [`ProgrammedEvaluator`](#programmedevaluator).
+
+Each evaluator has an attribute `.type` with the internal type of the evaluator.
+Generic evaluators also have an attribute `.name` with the internal name of the evaluator.
+
 ### GenericExceptionEvaluator
-The *GenericExceptionEvaluator*-object contains all information that is needed to use the builtin evaluator for
+
+A `GenericExceptionEvaluator` object contains all the necessary information to use the built-in evaluator for
 exceptions.
-:::warning Remark
-This evaluator can only evaluate fault messages and not exception types.
-This is the case because exception types are programming language dependent.
+
+:::warning
+This evaluator only evaluates error messages.
+It does not take into account exception types because of their programming language dependencies.
 :::
 
-The *GenericExceptionEvaluator*-object has 3 attributes: `type`, `options` and `name`.
-- **type**: A string with constant value `builtin`.
-- **options**: The additional evaluation options that can be used by the builtin evaluator.
-  
-  _**Remark:**_ At this moment there are no options used by the builtin evaluator for exceptions.
-- **name**: A string with constant value `exception`.
+For example, an [`ExceptionOutputChannel`](#exceptionoutputchannel) with the generic evaluator:
 
 ```json
-"GenericExceptionEvaluator": {
-  "title": "GenericExceptionEvaluator",
-  "type": "object",
-  "properties": {
-    "type": {
-      "title": "Type",
-      "const": "builtin",
-      "type": "string"
-    },
-    "options": {
-      "title": "Options",
-      "type": "object"
-    },
-    "name": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/ExceptionBuiltin"
-        }
-      ]
-    }
+{
+ "output": {
+  "exception": {
+   "exception": {
+    "message": "Valid exceptions"
+   },
+   "evaluator": {
+    "type": "builtin",
+    "name": "exception"
+   }
   }
-},
+ }
+}
 ```
+
+Note that you never have to actually specify the example above, since the generic evaluator is the default value.
+
+#### `.type`
+
+A string with constant value `builtin`.
+
+#### `.name`
+
+A string with constant value `exception`.
+
+#### `.options`
+
+The *GenericExceptionEvaluator* does not support any options at the moment.
 
 ### GenericValueEvaluator
-The *GenericValueEvaluator*-object contains all information that is need to use the builtin evaluator for return values.
 
-The *GenericValueEvaluator*-object has 3 attributes: `type`, `options` and `name`.
-- **type**: A string with constant value `builtin`.
-- **options**: The addition evaluation options that can be used by the builtin evaluator.
-  
-  _**Remark:**_ At this moment there are no options used by the builtin evaluator for exceptions.
-- **name**: A string with constant value `value`.
+A `GenericValueEvaluator` object contains all the necessary information to use the built-in evaluator for values.
+
+For example, a [`ValueOutputChannel`](#valueoutputchannel) with the generic evaluator:
 
 ```json
-"GenericValueEvaluator": {
-  "title": "GenericValueEvaluator",
-  "type": "object",
-  "properties": {
-    "type": {
-      "title": "Type",
-      "const": "builtin",
-      "type": "string"
-    },
-    "options": {
-      "title": "Options",
-      "type": "object"
-    },
-    "name": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/ValueBuiltin"
-        }
-      ]
-    }
+{
+ "output": {
+  "result": {
+   "evaluator": {
+    "type": "builtin",
+    "name": "value"
+   },
+   "value": {
+    "data": [
+     {
+      "data": "a",
+      "type": "text"
+     },
+     {
+      "data": "c",
+      "type": "text"
+     }
+    ],
+    "type": "sequence"
+   }
   }
-},
+ }
+}
 ```
+
+#### `.type`
+
+A string with constant value `builtin`.
+
+#### `.name`
+
+A string with constant value `value`.
+
+#### `.options`
+
+The *GenericValueEvaluator* does not support any options at the moment.
 
 ### GenericTextEvaluator
-The *GenericTextEvaluator*-object contains all information that is need to use the builtin evaluator for textual data.
 
-The *GenericTextEvaluator*-object has 3 attributes: `type`, `options` and `name`.
-- **type**: A string with constant value `builtin`.
-- **options**: The additional evaluation options that can be used by the builtin evaluator,
-  see [below](#configuration-options).
-- **name**: The type of textual source that must be evaluated.
-  Either `text` or `file`.
+A `GenericTextEvaluator` object contains all the necessary information to use the built-in evaluator for textual data.
 
-```json
-"GenericTextEvaluator": {
-  "title": "GenericTextEvaluator",
-  "type": "object",
-  "properties": {
-    "type": {
-      "title": "Type",
-      "const": "builtin",
-      "type": "string"
-    },
-    "options": {
-      "title": "Options",
-      "type": "object"
-    },
-    "name": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/TextBuiltin"
-        }
-      ]
-    }
-  }
-},
-```
+#### `.type`
 
-#### Configuration options
-There are multiple configuration options to pass to the evaluator for standard output and error.
-These options are:
+A string with constant value `builtin`.
 
-- **ignoreWhitespace**:
-  Ignore whitespace in prefix and suffix of the text by comparing the output.
-- **caseInsensitive**:
-  Ignore the difference between uppercase and lowercase when comparing the output.
-- **tryFloatingPoint**:
-  Try to compare the output as floats.
-- **applyRounding**:
-  Apply rounding when comparing the output as floats.
-- **roundTo**:
-  The number of decimals after the point that you want to keep after rounding.
-  This is mandatory when you want to apply rounding.
+#### `.name`
+
+A string with constant value `text` or `file`.
+
+#### `.options`
+
+By default, exact matching is used to compare a generated text with an expected text.
+The following options can be used to adjust the matching behaviour:
+
+- `ignoreWhitespace`: Ignore leading and trailing whitespace.
+- `caseInsensitive`: Ignore differences between uppercase and lowercase.
+- `tryFloatingPoint`: Try to compare the text as floats.
+- `applyRounding`: Apply rounding when comparing text as floats.
+- `roundTo`: Precision of floating points when rounding numbers. Mandatory option when rounding is applied.
 
 ### ProgrammedEvaluator
-The *ProgrammedEvaluator*-object is the object that must be used when you use the programmed evaluation.
 
-The *ProgrammedEvaluator*-object has 4 attributes: `language`, `function`, `arguments` and `type`.
-- **language**: A string that specifies the programming language of the evaluator.
-  ::: warning Remark
-  The programming language of the programmed evaluator is independent of the programming language of the submission.
-  :::
-- **function**: A [EvaluationFunction](#evaluationfunction) object,
-  which contains the information about the evaluation function.
-- **arguments**: A list with additional arguments for the evaluation function,
-  see [EvaluationFunction](#evaluationfunction) and [Statements and expressions](#statements-and-expressions).
-  
-  _**Remark:**_ These arguments can't have function calls or variables.
-- **type**: A string with constant value `programmed`.
+A `ProgrammedEvaluator` object contains all the necessary information to use a custom evaluator for values that works
+independent of the programming language of the submission.
 
 ::: tip Hint
-For performant evaluation, we recommend writing the programmed evaluator in **Python**.
+For performance reasons, we strongly recommend implementing custom evaluators in Python if this is an option.
+If the programmed evaluator is implemented in Python, it is executed in the same process as TESTed and no language
+barriers need to be crossed.
 
-This is the case because the programmed evaluator in **Python** is executed in the same proces as TESTed.
-This differs for the evaluators in the other programming languages.
-These evaluators run in a different process (and may also need to be compiled),
-which has a significant performance overhead.
+Context switching between the TESTed core and a programmed evaluator comes with an overhead for starting new processes,
+compilation, and serializing and deserializing values and function calls.
 :::
 
+For example, using a programmed evaluator for the return value:
+
 ```json
-"ProgrammedEvaluator": {
-  "title": "ProgrammedEvaluator",
-  "type": "object",
-  "properties": {
-    "language": {
-      "title": "Language",
-      "type": "string"
-    },
+{
+ "output": {
+  "result": {
+   "value": {
+    "type": "text",
+    "data": "input-3"
+   },
+   "evaluator": {
+    "type": "programmed",
     "function": {
-      "$ref": "#/definitions/EvaluationFunction"
+     "file": "evaluator.py",
+     "name": "evaluate_value"
     },
-    "arguments": {
-      "title": "Arguments",
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "$ref": "#/definitions/NumberType"
-          },
-          {
-            "$ref": "#/definitions/StringType"
-          },
-          {
-            "$ref": "#/definitions/BooleanType"
-          },
-          {
-            "$ref": "#/definitions/SequenceType"
-          },
-          {
-            "$ref": "#/definitions/ObjectType"
-          },
-          {
-            "$ref": "#/definitions/NothingType"
-          }
-        ]
-      }
-    },
-    "type": {
-      "title": "Type",
-      "const": "programmed",
-      "type": "string"
-    }
-  },
-  "required": [
-    "language",
-    "function"
-  ]
-},
+    "language": "python"
+   }
+  }
+ }
+}
 ```
+
+#### `.type`
+
+A string with constant value `programmed`.
+
+#### `.language`
+
+The programming language of the evaluation function.
+Note that this is independent of the programming language of the submission.
+
+#### `.function`
+
+An [`EvaluationFunction`](#evaluationfunction) object that represents the custom evaluation function.
+
+#### `.arguments.*`
+
+A list of arguments that are passed when calling the evaluation function (see [EvaluationFunction](#evaluationfunction)
+and [Statements and expressions](#statements-and-expressions)).
 
 ### SpecificEvaluator
-The *SpecificEvaluator*-object is the object that must be used for a programming language specific evaluation.
 
-The *SpecificEvaluator*-object has 2 attributes: `evaluators` and `type`.
-- **evaluators**: This is an object with the programming languages, wherefore an evaluator is available, as keys.
-  The values in this object are of the type [EvaluationFunction](#evaluationfunction),
-  which contains information about the evaluation function.
-  
-  _**Remark:**_ The programming language of a specific evaluator is the same is that of the submission.
-  ::: danger Remark
-  When there is no specific evaluator for a programming language, the exercise could not be solved in that language.
-  :::
-- **type**: A string with constant value `specific`.
+A `SpecificEvaluator` object contains all the necessary information to use a custom evaluator for values that depends on
+the specific programming language of the submission.
 
-_**Remark:**_
-The specific evaluator is executed in the same process (not the TESTed process) as the execution of the submission code.
+For example, using a specific evaluator for the return value:
 
 ```json
-"SpecificEvaluator": {
-  "title": "SpecificEvaluator",
-  "type": "object",
-  "properties": {
+{
+ "output": {
+  "result": {
+   "evaluator": {
+    "type": "specific",
     "evaluators": {
-      "title": "Evaluators",
-      "type": "object",
-      "additionalProperties": {
-        "$ref": "#/definitions/EvaluationFunction"
-      }
-    },
-    "type": {
-      "title": "Type",
-      "const": "specific",
-      "type": "string"
+     "python": {
+      "file": "evaluator.py"
+     },
+     "java": {
+      "file": "Evaluator.java"
+     },
+     "haskell": {
+      "file": "Evaluator.hs"
+     },
+     "c": {
+      "file": "evaluator.c"
+     },
+     "javascript": {
+      "file": "evaluator.js"
+     }
     }
-  },
-  "required": [
-    "evaluators"
-  ]
-},
+   }
+  }
+ }
+}
 ```
+
+#### `.type`
+
+A string with constant value `specific`.
+
+#### `.evaluators`
+
+An object mapping programming languages onto a [`EvaluationFunction`](#evaluationfunction) object that represents the
+custom evaluation function for that programming language.
+The keys of the objects are strings, e.g. `"python"` or `"java"`.
+
+::: danger
+A submission can not be evaluated if there is no evaluator function associated with its programming language.
+For example, in the fragment above, the exercise will not be solvable in Kotlin.
+:::
 
 ### EvaluationFunction
-The *EvaluationFunction*-object contains information about the function call of the specific/programmed evaluator.
 
-The *EvaluationFunction*-object has 2 attributes: `file` and `name`.
-- **file**: A relative path to the source code in the `evaluation` folder of the exercise,
-  which contains the evaluation function.
-- **name**: The name of the evaluation function that must be called.
-  The default function name is `evaluate`.
-  
-  _**Important for a specific evaluator:**_
-  For a specific evaluator, this function expects only one argument `actual` which contains the return value.
-  
-  _**Important for a programmed evaluator:**_
-  For a programmed evaluator, this function has three arguments: `expected`, `actual` and `arguments`.
-  - `expected` contains the expected return value of the test suite.
-  - `actual` contains the actual return value.
-  - `arguments` contains a list of additional arguments for the evaluation function.
-  
-  _**Important:**_
-  Both the function for the specific evaluator, as the function for the programmed evaluator must return an object of
-  the type [EvaluationResult](https://github.com/dodona-edu/universal-judge/blob/4216ddd983add3bc05c61d47c09233093bff8808/tested/evaluators/__init__.py#L43).
-  This object is implemented foreach supported programming language.
+An `EvaluationFunction` object represents a function that can be called as an evaluator function.
 
-```json
-"EvaluationFunction": {
-  "title": "EvaluationFunction",
-  "type": "object",
-  "properties": {
-    "file": {
-      "title": "File",
-      "type": "string",
-      "format": "path"
-    },
-    "name": {
-      "title": "Name",
-      "type": "string"
+When used with a programmed evaluator, the function takes three arguments:
+
+- `expected`: the expected return value from the test suite
+- `actual`: the actual return value, produced by the submission
+- `arguments`: a list of additional arguments from the test suite
+
+It must return a [`EvaluationResult`](#evaluationresult).
+
+For example:
+
+:::: tabs
+::: tab Haskell
+
+```haskell
+{-# LANGUAGE ScopedTypeVariables #-}
+module Evaluator where
+
+import EvaluationUtils
+import Control.Exception
+
+evaluate_value :: String -> String -> [String] -> EvaluationResult
+evaluate_value expected actual arguments =
+    let correct = if actual == expected then True else False
+    in evaluationResult {
+        result = correct,
+        readableExpected = Just expected,
+        readableActual = Just actual,
+        messages = [message "Hallo"]
     }
-  },
-  "required": [
-    "file"
-  ]
-},
 ```
+
+:::
+::: tab Java
+
+```java
+import java.util.*;
+
+public class Evaluator {
+    public static EvaluationResult evaluateValue(Object expected, Object actual, List<?> arguments) {
+        return EvaluationResult.builder(expected.equals(expected))
+                .withReadableExpected(expected.toString())
+                .withReadableActual(actual != null ? actual.toString() : "")
+                .withMessage(new EvaluationResult.Message("Hallo"))
+                .build();
+    }
+}
+```
+
+:::
+::: tab JavaScript
+
+```javascript
+function evaluateValue(expected, actual, args) {
+  return {
+    "result": expected === actual,
+    "expected": expected,
+    "actual": actual,
+    "messages": [{ "description": "Hallo", "format": "text" }]
+  }
+}
+
+exports.evaluateValue = evaluateValue;
+```
+
+:::
+::: tab Kotlin
+
+```kotlin
+class Evaluator {
+    companion object {
+        @JvmStatic
+        fun evaluateValue(expected: Any, actual: Any?, arguments: List<Any?>?): EvaluationResult {
+            return EvaluationResult.Builder(
+                result = expected == actual,
+                readableExpected = expected.toString(),
+                readableActual = actual?.toString() ?: ""
+            )
+                .withMessage(EvaluationResult.Message("Hallo"))
+                .build()
+        }
+    }
+}
+```
+
+:::
+::: tab Python
+
+```python
+from evaluation_utils import EvaluationResult, Message
+
+
+def evaluate_value(expected, actual, args):
+    return EvaluationResult(expected == actual, expected, actual, [Message("Hallo")])
+```
+
+:::
+::::
+
+When used with a programming-language-specific evaluator, the function takes one argument:
+
+- `actual`: the actual return value, produced by the submission
+
+It must also return a [`EvaluationResult`](#evaluationresult).
+
+For example, the evaluator function for a programming-language-specific evaluator:
+
+:::: tabs
+::: tab C
+
+```c
+#include <string.h>
+#include <stdbool.h>
+
+#include "evaluation_result.h"
+
+EvaluationResult* evaluate(char* actual) {
+    bool result = !strcmp("correct", actual);
+    EvaluationResult* r = create_result(1);
+    r->result = result;
+    r->readableExpected = "correct";
+    r->readableActual = actual;
+    r->messages[0] = create_message("Hallo", NULL, NULL);
+    return r;
+}
+```
+
+:::
+::: tab Haskell
+
+```haskell
+{-# LANGUAGE ScopedTypeVariables #-}
+module Evaluator where
+
+import EvaluationUtils
+import Control.Exception
+
+evaluate :: String -> EvaluationResult
+evaluate value  =
+    let correct = if value == "correct" then True else False
+    in evaluationResult {
+        result = correct,
+        readableExpected = Just "correct",
+        readableActual = Just value,
+        messages = [message "Hallo"]
+    }
+```
+
+:::
+::: tab Java
+
+```java
+import java.util.*;
+
+public class Evaluator {
+    public static EvaluationResult evaluate(Object actual) {
+        var correct = "correct".equals(actual);
+        return EvaluationResult.builder(correct)
+                .withReadableExpected("correct")
+                .withReadableActual(actual != null ? actual.toString() : "")
+                .withMessage(new EvaluationResult.Message("Hallo"))
+                .build();
+    }
+}
+```
+
+:::
+::: tab JavaScript
+
+```javascript
+function evaluate(actual) {
+  const correct = actual === "correct";
+  return {
+    "result": correct,
+    "readable_expected": "correct",
+    "readable_actual": actual.toString(),
+    "messages": [{ "description": "Hallo", "format": "text" }]
+  }
+}
+
+exports.evaluate = evaluate;
+```
+
+:::
+::: tab Kotlin
+
+```kotlin
+class Evaluator {
+    companion object {
+        @JvmStatic
+        fun evaluate(actual: Any?): EvaluationResult {
+            return EvaluationResult.Builder(
+                result = "correct" == actual,
+                readableExpected = actual.toString(),
+                readableActual = actual?.toString() ?: ""
+            )
+                .withMessage(EvaluationResult.Message("Hallo"))
+                .build()
+        }
+    }
+}
+```
+
+:::
+::: tab Python
+
+```python
+from evaluation_utils import EvaluationResult, Message
+
+
+def evaluate(actual):
+    correct = actual == "correct"
+    return EvaluationResult(correct, "correct", actual, [Message("Hallo")])
+```
+
+:::
+::::
+
+#### `.file`
+
+The path name of the source code relative to the evaluation directory of the exercise.
+The source code must at least define the custom evaluator function.
+
+#### `.name`
+
+The name of the custom evaluator function, with a default value of `evaluate`.
+
+### EvaluationResult
+
+The result of an evaluator function.
+In most languages, TESTed provides utilities to create a correct return type.
+In other languages, you must return an object with the following attributes:
+
+- `result`: the result of the check
+    - `.enum`: the actual result (useful statuses include `compilation error`, `correct`, `wrong`, `internal error`).
+      Check the Dodona docs for more information on the status.
+    - `.human`: an optional human-readable description of the status.
+      This allows you to give more information.
+- `readable_expected`: a human-readable representation of the expected value
+- `readable_actual`: a human-readable representation of the actual value
+- `messages`: an optional list of additional messages to display
 
 ## Statements and expressions
-In this section we will discuss the statements and expressions of TESTed.
 
-### Datatypes TESTed
-TESTed has multiple datatypes that can be used.
-We can distinguish 3 different types of datatypes: [basic datatypes](#basic-datatypes),
-[advanced datatypes](#advanced-datatypes) and [the variable type](#variabletype).
+TESTed supports a restricted language to describe expressions and statements in a generic way.
+The language contains literal values (and their data types), variables, assignments, object construction and
+function/method calls.
 
-#### Basic datatypes
-The basic datatypes are an abstract datatype for a concept, like integers and not 8-bit integers.
-These datatypes will be generated as the default datatype in a programming language for a concept.
+### Assignment
 
-##### BasicNumericTypes
-There are two basic numeric datatypes in TESTed: `integer` and `real`.
-- **integer**: integers.
-- **real**: real numbers.
+Variable assignment is the only statement that is currently supported by TESTed.
+An assignment is represented by an object.
+
+For example, assigning the result of a function call to a variable called `codes01`:
 
 ```json
-"BasicNumericTypes": {
-  "title": "BasicNumericTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "integer",
-    "real"
-  ],
-  "type": "string"
-},
+{
+ "input": {
+  "type": "integer",
+  "variable": "codes01",
+  "expression": {
+   "type": "function",
+   "name": "echo",
+   "arguments": []
+  }
+ }
+}
 ```
 
-##### BasicStringTypes
-There are two basic string datatypes in TESTed: `text` and `any`.
-- **text**: text.
-- **any**: The datatype that represent any datatype.
-  
-  **Remark**: This datatype is normally not used in the test suite.
+#### `.variable`
+
+The name of the variable.
+Generally, safe characters are ASCII letters and numbers, as well as an underscore.
+Other characters may limit in which programming languages the test suite is usable.
+
+::: tip
+It is recommended to use `snake_case` for the variable name.
+This way, TESTed will transform it into the correct convention for each programming language.
+:::
+
+#### `.expression`
+
+The [expression](#expressions) that is assigned to the variable.
+
+#### `.type`
+
+The [data type](#data-types) of the variable.
+
+### Expressions
+
+TESTed currently supports three different kinds of expressions: [identifiers](#identifier)
+, [function calls](#function-call) and
+[literal values](#literal-values).
+
+#### Identifier
+
+An identifier is a string that represents a variable.
+
+For example, to use a previously defined variable:
 
 ```json
-"BasicStringTypes": {
-  "title": "BasicStringTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "text",
-    "any"
-  ],
-  "type": "string"
-},
+{
+ "input": {
+  "type": "integer",
+  "variable": "codes01",
+  "expression": "previously_defined_variable"
+ }
+}
 ```
 
-##### BasicBooleanTypes
-There exist one boolean datatype in TESTed: `boolean`.
+#### Function call
+
+A `FunctionCall` object represents a function call, a method call, a constructor or an object property
+
+For example, calling a top-level function:
 
 ```json
-"BasicBooleanTypes": {
-  "title": "BasicBooleanTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "boolean"
-  ],
-  "type": "string"
-},
+{
+ "input": {
+  "type": "function",
+  "name": "echo",
+  "arguments": [
+   {
+    "type": "text",
+    "data": "input-1"
+   }
+  ]
+ }
+}
 ```
 
-##### BasicObjectTypes
-There exists one object datatype in TESTed: `map`.
-This datatype represent a collection of key-value pairs.
+Calling the method `the_method` on an object instance called `some_object`:
 
 ```json
-"BasicObjectTypes": {
-  "title": "BasicObjectTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "map"
-  ],
-  "type": "string"
-},
+{
+ "input": {
+  "type": "function",
+  "namespace": "some_object",
+  "name": "the_method",
+  "arguments": [
+   {
+    "type": "text",
+    "data": "input-1"
+   }
+  ]
+ }
+}
 ```
 
-##### BasicNothingTypes
-There exists one 'nothing' datatype in TESTed: `nothing`.
-This datatype represent 'nothing'.
+Accessing the property `property` on an object instance called `some_object`:
 
 ```json
-"BasicNothingTypes": {
-  "title": "BasicNothingTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "nothing"
-  ],
-  "type": "string"
-},
+{
+ "input": {
+  "type": "property",
+  "namespace": "some_object",
+  "name": "the_method"
+ }
+}
 ```
 
-##### BasicSequenceTypes
-There exists two basic sequence datatypes in TESTed: `sequence` and `set`.
-- **sequence**: A ordered sequence of values.
-- **set**: An unordered collection of unique invariable values.
+##### `.type`
+
+Indicates the type of "function call".
+TESTed supports three kinds of function calls:
+
+- `function`: a function or method
+- `constructor`: an object constructor
+- `property`: an object property
+
+The name of the object is given as the `.namespace` attribute.
+Not providing a namespace means the global namespace will be used.
+For example, not providing a namespace for a property call will use global variables instead.
+
+##### `.namespace`
+
+The object or namespace on which the function, method or property should be called.
+Not providing a namespace means the global namespace will be used.
+For example, not providing a namespace for a property call will use global variables instead.
+
+##### `.arguments.*`
+
+An array of expressions or `NamedArguments` that are passed as arguments when calling the function, method or
+constructor.
+
+The result of any given expression is passed to the function as a positional argument.
+
+A named argument represents an argument that is passed to a specific function parameter, identified by its name, when
+calling a function.
+While in many programming languages, the order of named arguments is of no consequence, the order does matter in TESTed.
+Named arguments are converted to positional arguments for programming language that lack support for named arguments.
+Their position is determined by their position in the array of arguments.
+
+A `NamedArguments` object has two attributes:
+
+- `name`: The parameter name.
+- `value`: The value of the argument, which must be an [expression](#expressions).
+
+For example, a function call in which the first argument is positional, while the second argument is a named argument:
 
 ```json
-"BasicSequenceTypes": {
-  "title": "BasicSequenceTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "sequence",
-    "set"
-  ],
-  "type": "string"
-},
+{
+ "input": {
+  "type": "function",
+  "name": "echo",
+  "arguments": [
+   {
+    "type": "text",
+    "data": "input-1"
+   },
+   {
+    "name": "separator",
+    "value": {
+     "type": "text",
+     "data": "-"
+    }
+   }
+  ]
+ }
+}
 ```
 
-#### Advanced datatypes
-The advanced datatypes are a specific datatype for a concept, like 8-bit integers and not integers.
-These datatypes are a specific datatype in a programming language.
+#### Literal values
 
-##### AdvancedNumericTypes
-There are 13 advanced numeric datatypes in TESTed: `int8`, `uint8`, `int16`, `uint16`, `int32`, `uint32`,
-`int64`, `uint64`, `bigint`, `single_precision`, `double_precision`, `double_extended` and `fixed_precision`.
-- **int8**: 8-bit integers.
-- **uint8**: 8-bit natural numbers.
-- **int16**: 16-bit integers.
-- **uint16**: 16-bit natural numbers.
-- **int32**: 32-bit integers.
-- **uint32**: 32-bit natural numbers.
-- **int64**: 64-bit integers.
-- **uint64**: 64-bit natural numbers.
-- **bigint**: Unlimited integers.
-- **single_precision**: 32-bit floating-point numbers.
-- **double_precision**: 64-bit floating-point numbers.
-- **double_extended**: Unlimited floating-point numbers.
-- **fixed_precision**: Fixed-point numbers.
+Any value that has a [supported data type](#data-types) can be written as a literal.
+These are divided into six kinds of literal values, depending on how the value is encoded in JSON.
+
+The six kinds are [numbers](#numbers), [text](#strings),
+[booleans](#booleans), [sequences](#sequences), [dictionaries](#dictionaries) and ["nothing"](#nothing).
+
+Each literal value is represented by a JSON object with two properties:
+
+- `type`: the [data type](#data-types) of the value
+- `data`: the value, encoded in JSON
+
+##### Numbers
+
+Numbers are encoded as a numeric JSON value, or one of the following special string constants:
+
+- `nan`: special code for "Not a Number" (NaN)
+- `inf`: +∞
+- `-inf`: -∞
+
+For example, an integer would be:
 
 ```json
-"AdvancedNumericTypes": {
-  "title": "AdvancedNumericTypes",
-  "description": "The advanced numeric types. Programming configs should be implemented using\nthe C/C++ rules: the size of the types is a minimum. For example, Python's ints\nare arbitrary precision, which means Python supports all integer types.\nOn the other hand, C only supports up to 64 bits.",
-  "enum": [
-    "int8",
-    "uint8",
-    "int16",
-    "uint16",
-    "int32",
-    "uint32",
-    "int64",
-    "uint64",
-    "bigint",
-    "single_precision",
-    "double_precision",
-    "double_extended",
-    "fixed_precision"
-  ],
-  "type": "string"
-},
+{
+ "type": "integer",
+ "value": 10
+}
 ```
 
-##### AdvancedSequenceTypes
-There exists three advanced sequence datatypes in TESTed: `array`, `list` and `tuple`.
-- **array**: A dynamic sequence of a fixed size.
-- **list**: A dynamic sequence of a dynamic size.
-- **tuple**: A invariable sequence.
+Infinity would be represented as:
 
 ```json
-"AdvancedSequenceTypes": {
-  "title": "AdvancedSequenceTypes",
-  "description": "Advanced sequence types. The names of these types are kept as generic as\npossible, to accommodate as many types as possible.",
-  "enum": [
-    "array",
-    "list",
-    "tuple"
-  ],
-  "type": "string"
-},
+{
+ "type": "integer",
+ "value": "inf"
+}
 ```
 
-##### AdvancedStringTypes
-There exists one advanced string datatype in TESTed.
-This is the `char` datatype, which represents a single character.
+##### Strings
+
+Strings are encoded as a JSON string.
+
+For example:
 
 ```json
-"AdvancedStringTypes": {
-  "title": "AdvancedStringTypes",
-  "description": "An enumeration.",
-  "enum": [
-    "char"
-  ],
-  "type": "string"
-},
+{
+ "type": "text",
+ "value": "Hello World"
+}
 ```
 
-#### VariableType
+##### Booleans
+
+Booleans are encoded using JSON booleans.
+
+For example:
+
+```json
+{
+ "type": "boolean",
+ "value": true
+}
+```
+
+##### Sequences
+
+Sequences are encoded as a JSON list.
+Each element of the list is again an [expression](#expressions).
+
+For example, a set with one literal element:
+
+```json
+{
+ "type": "set",
+ "value": [
+  {
+   "type": "boolean",
+   "value": true
+  }
+ ]
+}
+```
+
+##### Dictionaries
+
+Objects are encoded using a list of key-value pairs.
+A key-value pair is an object with two properties:
+
+- `key`: an [expression](#expressions) representing the key
+- `value`: an [expression](#expressions) representing the value
+
+We cannot use a JSON object, since some programming languages support objects/maps/dicts where the keys are not just strings.
+For example, an object where the key is a list (`[5]`), and the value a boolean (`false`):
+
+```json
+{
+ "type": "map",
+ "value": [
+  {
+   "key": {
+    "type": "list",
+    "value": [
+     {
+      "type": "integer",
+      "value": 5
+     }
+    ]
+   },
+   "value": {
+    "type": "boolean",
+    "value": false
+   }
+  }
+ ]
+}
+```
+
+##### Nothing
+
+Nothing is represented as JSON `null`.
+
+For example:
+
+```json
+{
+ "type": "nothing",
+ "value": null
+}
+```
+
+### Data types
+
+TESTed supports three different kinds of data types: [basic data types](#basic-datatypes),
+[advanced data types](#advanced-datatypes) and [variable types](#variabletype).
+
+Also useful is the [list of data types mapped to their actual type](../types) for the different programming languages
+supported by TESTed.
+
+#### Basic types
+
+Basic types represent abstract data types such as integers, not specific implementations thereof like unsigned 8-bit
+integers.
+They are used as the default data type for a concept in a specific programming language,
+but each programming language can have multiple data types that map to the concept represented by a basic type.
+
+See [_Data type support in TESTed_](../types#basic-types) for a list of types.
+
+#### Advanced types
+
+Advanced types represent specific implementations of data types, like unsigned 8-bit integers.
+Each advanced type corresponds to at most one data type in a programming language,
+and some programming languages will not have support for specific implementations.
+
+See [_Data type support in TESTed_](../types#advanced-types) for a list of types.
+
+#### Custom types
+
+TESTed has limited support for using custom types.
+The "data" of this type will be outputted verbatim in the various programming languages.
+A custom value is indicated with the type `"custom"`.
+
+::: danger
+As custom types are outputted verbatim, it is difficult to use them while still keeping the test suite
+programming-language-independent.
+For that reason, we strongly discourage using them.
+:::
+
 The variable type must be used when you want to represent a value, that can't be represented with a TESTed datatypes.
 
 This object has two attributes: `data` and `type`.
+
 - **data**: The name of the datatype.
 - **type**: A string with constant value `custom`.
 
 ```json
 "VariableType": {
-  "title": "VariableType",
-  "type": "object",
-  "properties": {
-    "data": {
-      "title": "Data",
-      "type": "string"
-    },
-    "type": {
-      "title": "Type",
-      "const": "custom",
-      "type": "string"
-    }
-  },
-  "required": [
-    "data"
-  ]
+"title": "VariableType",
+"type": "object",
+"properties": {
+"data": {
+"title": "Data",
+"type": "string"
 },
-```
-
-### Assignment
-At this moment, TESTed only supports one statement, which is an assignment.
-
-An assignment has 3 attributes: `variable`, `expression` and `type`.
-- **variable**: The name of the variable.
-- **expression**: The [expression](#expressions) that must be assigned to the variable.
-- **type**: The [datatype](#datatypes-tested) of the variable.
-
-```json
-"Assignment": {
-  "title": "Assignment",
-  "type": "object",
-  "properties": {
-    "variable": {
-      "title": "Variable",
-      "type": "string"
-    },
-    "expression": {
-      "title": "Expression",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "$ref": "#/definitions/FunctionCall"
-        },
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/SequenceType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        },
-        {
-          "$ref": "#/definitions/NothingType"
-        }
-      ]
-    },
-    "type": {
-      "title": "Type",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/BasicNumericTypes"
-        },
-        {
-          "$ref": "#/definitions/BasicStringTypes"
-        },
-        {
-          "$ref": "#/definitions/BasicBooleanTypes"
-        },
-        {
-          "$ref": "#/definitions/BasicObjectTypes"
-        },
-        {
-          "$ref": "#/definitions/BasicNothingTypes"
-        },
-        {
-          "$ref": "#/definitions/BasicSequenceTypes"
-        },
-        {
-          "$ref": "#/definitions/AdvancedNumericTypes"
-        },
-        {
-          "$ref": "#/definitions/AdvancedSequenceTypes"
-        },
-        {
-          "$ref": "#/definitions/AdvancedStringTypes"
-        },
-        {
-          "$ref": "#/definitions/VariableType"
-        }
-      ]
-    }
-  },
-  "required": [
-    "variable",
-    "expression",
-    "type"
-  ]
+"type": {
+"title": "Type",
+"const": "custom",
+"type": "string"
+}
 },
-```
-
-### Expressions
-TESTed supports 3 different types of expressions: [Identifier](#identifier), [FunctionCall](#functioncall) and
-[values](#values).
-
-#### Identifier
-An identifier is a string that represents a variable.
-
-#### FunctionCall
-The *FunctionCall*-object represents a function call.
-
-The *FunctionCall*-object has 4 attributes: `type`, `name`, `namespace`, and `arguments`.
-- **type**: The type of the function: a normal function, a constructor or a property, see [FunctionType](#functiontype).
-- **name**: The name of the function.
-- **namespace**: The namespace of the function.
-  ::: warning Remark
-  When the namespace isn't given, the function is a global function.
-  When the namespace is given, the namespace will often be an object variable, but that will not always be the case.
-  :::
-- **arguments**: A list of [expressions](#expressions) and [NamedArguments](#namedarguments) that are the arguments for
-  the function calls.
-
-```json
-"FunctionCall": {
-  "title": "FunctionCall",
-  "type": "object",
-  "properties": {
-    "type": {
-      "$ref": "#/definitions/FunctionType"
-    },
-    "name": {
-      "title": "Name",
-      "type": "string"
-    },
-    "namespace": {
-      "title": "Namespace",
-      "type": "string"
-    },
-    "arguments": {
-      "title": "Arguments",
-      "default": [],
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "$ref": "#/definitions/FunctionCall"
-              },
-              {
-                "$ref": "#/definitions/NumberType"
-              },
-              {
-                "$ref": "#/definitions/StringType"
-              },
-              {
-                "$ref": "#/definitions/BooleanType"
-              },
-              {
-                "$ref": "#/definitions/SequenceType"
-              },
-              {
-                "$ref": "#/definitions/ObjectType"
-              },
-              {
-                "$ref": "#/definitions/NothingType"
-              }
-            ]
-          },
-          {
-            "$ref": "#/definitions/NamedArgument"
-          }
-        ]
-      }
-    }
-  },
-  "required": [
-    "type",
-    "name"
-  ]
-},
-```
-
-::: warning Remark
-When you want to test a function that has no return value (not the value [NothingType](#nothingtype), but
-`void` in Java by example),
-must the output channel be [EmptyChannel](#emptychannel) or [IgnoreChannel](#ignoredchannel).
-:::
-
-
-##### FunctionType
-TESTed has 3 function types: `function`, `constructor` and `property`.
-- **function**: A normal function call.
-- **constructor**: An object constructor call.
-- **property**: An object property.
-
-```json
-"FunctionType": {
-  "title": "FunctionType",
-  "description": "An enumeration.",
-  "enum": [
-    "function",
-    "constructor",
-    "property"
-  ],
-  "type": "string"
-},
-```
-
-##### NamedArguments
-The *NamedArgument*-object is used for the named arguments of a function call.
-
-The *NamedArguments*-object has 2 attributes: `name` and `value`.
-- **name**: The name of the argument.
-- **value**: The value of the argument, which must be an [expression](#expressions).
-
-```json
-"NamedArgument": {
-  "title": "NamedArgument",
-  "type": "object",
-  "properties": {
-    "name": {
-      "title": "Name",
-      "type": "string"
-    },
-    "value": {
-      "title": "Value",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "$ref": "#/definitions/FunctionCall"
-        },
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/SequenceType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        },
-        {
-          "$ref": "#/definitions/NothingType"
-        }
-      ]
-    }
-  },
-  "required": [
-    "name",
-    "value"
-  ]
-},
-```
-
-#### Values
-At this moment TESTed supports 6 different values: [numbers](#numbertype), [text](#stringtype),
-[booleans](#booleantype), [sequences](#sequencetype), [dictionaries](#objecttype) and ['nothing'](#nothingtype).
-
-##### NumberType
-The *NumberType*-object represents numeric values.
-
-The *NumberType*-object has 2 attributes: `type` and `data`.
-- **type**: The type of the numeric value,
-  see [BasicNumericTypes](#basicnumerictypes) and [AdvancedNumericTypes](#advancednumerictypes).
-- **data**: The numeric value or one of the following floating-point constants:
-  - `"nan"`: _Not-a-number_ value for floating point numbers.
-  - `"inf"`: _Positive infinity_ value for floating point numbers.
-  - `"-inf"`: _Negative infinity_ value for floating point numbers.
-
-```json
-"NumberType": {
-  "title": "NumberType",
-  "type": "object",
-  "properties": {
-    "type": {
-    "title": "Type",
-    "anyOf": [
-        {
-          "$ref": "#/definitions/BasicNumericTypes"
-        },
-        {
-          "$ref": "#/definitions/AdvancedNumericTypes"
-        }
-      ]
-    },
-    "data": {
-    "title": "Data",
-    "anyOf": [
-        {
-          "$ref": "#/definitions/SpecialNumbers"
-        },
-        {
-          "type": "number"
-        },
-        {
-          "type": "integer"
-        },
-        {
-          "type": "number"
-        }
-      ]
-    }
-  },
-  "required": [
-    "type",
-    "data"
-  ]
-},
-```
-
-##### StringType
-The *StringType*-object represents textual values.
-
-The *StringType*-object has 2 attributes: `type` and `data`.
-- **type**: The type of the textual value,
-  see [BasicStringTypes](#basicstringtypes) and [AdvancedStringTypes](#advancedstringtypes).
-- **data**: The textual value as string.
-
-```json
-"StringType": {
-  "title": "StringType",
-  "type": "object",
-  "properties": {
-    "type": {
-      "title": "Type",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/BasicStringTypes"
-        },
-        {
-          "$ref": "#/definitions/AdvancedStringTypes"
-        }
-      ]
-    },
-    "data": {
-      "title": "Data",
-      "type": "string"
-    }
-  },
-  "required": [
-    "type",
-    "data"
-  ]
-},
-```
-
-##### BooleanType
-The *BooleanType*-object represent a boolean value.
-
-The *BooleanType*-object has 2 attributes: `type` and `data`.
-- **type**: The `boolean` datatype, see [BasicBooleanTypes](#basicbooleantypes).
-- **data**: A boolean value `true` or `false`.
-
-```json
-"BooleanType": {
-  "title": "BooleanType",
-  "type": "object",
-  "properties": {
-    "type": {
-      "$ref": "#/definitions/BasicBooleanTypes"
-    },
-    "data": {
-      "title": "Data",
-      "type": "boolean"
-    }
-  },
-  "required": [
-    "type",
-    "data"
-  ]
-},
-```
-
-##### SequenceType
-The *SequenceType*-object represents a collection of values.
-
-The *SequenceType*-object has 2 attributes: `type` and `data`.
-- **type**: The type of the sequence,
-  see [BasicSequencetypes](#basicsequencetypes) and [AdvancedSequenceTypes](#advancedsequencetypes).
-- **data**: The list of [expression](#expressions) elements.
-
-```json
-"SequenceType": {
-  "title": "SequenceType",
-  "type": "object",
-  "properties": {
-    "type": {
-      "title": "Type",
-      "anyOf": [
-        {
-          "$ref": "#/definitions/BasicSequenceTypes"
-        },
-        {
-          "$ref": "#/definitions/AdvancedSequenceTypes"
-        }
-      ]
-    },
-    "data": {
-      "title": "Data",
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "$ref": "#/definitions/FunctionCall"
-          },
-          {
-            "$ref": "#/definitions/NumberType"
-          },
-          {
-            "$ref": "#/definitions/StringType"
-          },
-          {
-            "$ref": "#/definitions/BooleanType"
-          },
-          {
-            "$ref": "#/definitions/SequenceType"
-          },
-          {
-            "$ref": "#/definitions/ObjectType"
-          },
-          {
-            "$ref": "#/definitions/NothingType"
-          }
-        ]
-      }
-    }
-  },
-  "required": [
-    "type",
-    "data"
-  ]
-},
-```
-
-##### ObjectType
-The *ObjectType*-object represents a collection of key-value pairs.
-
-The *ObjectType*-object has 2 attributes: `type` and `data`.
-- **type**: The `map` datatype, see [BasicObjectTypes](#basicobjecttypes).
-- **data**: The list of the [key-value pairs](#objectkeyvaluepair).
-
-```json
-"ObjectType": {
-  "title": "ObjectType",
-  "type": "object",
-  "properties": {
-    "type": {
-      "$ref": "#/definitions/BasicObjectTypes"
-    },
-    "data": {
-      "title": "Data",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ObjectKeyValuePair"
-      }
-    }
-  },
-  "required": [
-    "type",
-    "data"
-  ]
-},
-```
-
-###### ObjectKeyValuePair
-The *ObjectKeyValuePair*-object represents a key-value pair.
-
-The *ObjectKeyValuePair*-object has 2 attributes: `key` and `value`.
-- **key**: The key, what must be an [expression](#expressions).
-- **value**: The value, what must also be an [expression](#expressions).
-
-```json
-"ObjectKeyValuePair": {
-  "title": "ObjectKeyValuePair",
-  "type": "object",
-  "properties": {
-    "key": {
-      "title": "Key",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "$ref": "#/definitions/FunctionCall"
-        },
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/SequenceType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        },
-        {
-          "$ref": "#/definitions/NothingType"
-        }
-      ]
-    },
-    "value": {
-      "title": "Value",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "$ref": "#/definitions/FunctionCall"
-        },
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/SequenceType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        },
-        {
-          "$ref": "#/definitions/NothingType"
-        }
-      ]
-    }
-  },
-  "required": [
-    "key",
-    "value"
-  ]
-},
-```
-
-##### NothingType
-The *NothingType*-object represents the 'nothing' value.
-
-The *NothingType*-object has 2 attributes: `type` and `data`.
-- **type**: The `nothing` datatype, see [BasicNothingTypes](#basicnothingtypes).
-- **data**: The constant value `null`.
-
-```json
-"NothingType": {
-  "title": "NothingType",
-  "type": "object",
-  "properties": {
-    "type": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BasicNothingTypes"
-        }
-      ]
-    },
-    "data": {
-      "title": "Data",
-      "const": null
-    }
-  }
+"required": [
+"data"
+]
 },
 ```

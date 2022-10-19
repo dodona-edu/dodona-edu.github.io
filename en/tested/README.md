@@ -6,16 +6,16 @@ sidebarDepth: 2
 
 # TESTed: one judge to rule them all
 
-TESTed is an *educational software testing framework* (a *judge*),
-which allows testing submissions for programming exercises based on a programming-language-independent test suite.
-This means that the requirements for submissions only need to be specified once,
-while you can still automatically test submissions in different programming languages.
-TESTed can be used as a standalone tool, but is also integrated into Dodona.
+TESTed is an *educational software testing framework* (also known as a *judge*) 
+to test submissions for programming exercises using a programming-language-independent test suite.
+It allows specifying software requirements (i.e. the tests) for an exercise once,
+while submissions in different programming languages can be tested automatically.
+TESTed can be used as a standalone command line tool,
+but it's also integrated as a judge into the online learning platform [Dodona](https://dodona.ugent.be).
 
-## When do you use TESTed?
+## When to use TESTed?
 
-In which circumstances can you use TESTed to create programming exercises?
-First, TESTed must support the programming language you want to use.
+The first requirement to using TESTed is that TESTed must support your target programming language(s).
 Currently, the following languages are supported:
 
 * Bash
@@ -26,56 +26,58 @@ Currently, the following languages are supported:
 * Kotlin
 * Python
 
-Because the programming exercises are programming-language-independent,
+Because programming exercises underpinned by TESTed are independent of any programming language,
 TESTed is best suited for the following kinds of exercises:
 
-- Exercises on concepts that are found in (almost) all programming languages.
-- Exercises where the focus lies on algorithms or other high-level concepts, not on the programming language itself.
+- Exercises on generic concepts that are found in (almost) all programming languages.
+- Exercises that focus on algorithms or high-level programming concepts, not on specific syntax or constructs of programming languages.
 
-TESTed is less suitable for exercises that focus on programming-language-specific concepts.
-For example, an exercise on C pointers won't work well with TESTed.
+TESTed is less suitable for exercises that focus on syntax or concepts for a specific programming language.
+For example, exercises on C pointers won't work well with TESTed.
 
-## Getting started with TESTed
+## Getting started
 
-The section after this one is a tutorial to create an exercise using TESTed within Dodona.
-If you want to use TESTed outside of Dodona, we recommend following the [tutorial in the repository](https://github.com/dodona-edu/universal-judge).
+The next section gives a short tutorial on designing programming exercises with TESTed for use in the online learning platform Dodona.
+If you want to use TESTed outside of Dodona, we recommend following [this tutorial](https://github.com/dodona-edu/universal-judge) instead.
 
-A number of references are also available:
+A number of technical specifications are also available:
 
-- [The configuration options](exercise-config)
-- [Format of the test suites](json)
-- [List of data types for programming languages](types)
+- [Configuration options](exercise-config)
+- [Test suite format](json)
+- [Data types for programming languages](types)
 
-If you want to work on TESTed itself, the following is useful:
+Useful guides if you want to work on TESTed itself:
 
-- The [installation instructions](https://github.com/dodona-edu/universal-judge) in the repository to run TESTed locally.
-- [Guide on adding a programming language](new-programming-language).
+- The [installation instructions](https://github.com/dodona-edu/universal-judge) to run TESTed locally.
+- A [guide on adding a programming language](new-programming-language).
 
-## Creating an exercise for TESTed
+## Designing exercises for Dodona
 
 ::: tip
-In this tutorial, we assume you'll use TESTed within Dodona.
-If that is not the case, we refer you to the [tutorial in the repository](https://github.com/dodona-edu/universal-judge).
+In this short tutorial, we assume you'll use TESTed within Dodona.
+If you want to use TESTed as a standalone tool,
+we refer you to the [tutorial in the repository](https://github.com/dodona-edu/universal-judge).
 :::
+
+### System requirements
 
 To follow this tutorial, you'll need the following on your system:
 
-- `git` - to get the exercises on Dodona. You can find more information in [chapter 1 of the book *Pro Git*](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), which explains how to install Git for various operating systems (Mac, Windows, Linux).
+- `git` - to push exercises to Dodona. You can find more information in [chapter 1 of the book *Pro Git*](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), which explains how to install Git for various operating systems (Mac, Windows, Linux).
 - a text editor (like Notepad++) to create and edit text files
 
-In this tutorial, we explain how to create a simple exercise with TESTed and make the exercise available in Dodona.
-The exercise we're creating is called "write".
-The problem statement is:
+We'll explain how to create a simple programming exercise that uses TESTed to provide automated feedback,
+and how to make the exercise available on Dodona.
+The exercise is called "echo" and has the following problem statement:
 
-> Write a function `write` that writes its argument to stdout.
-> The argument of the function will always be a string.
+> Define a function `echo` that outputs its string argument to stdout.
 
-A correct submission for this exercise in a number of programming languages is:
+Here are some correct submissions for this exercise in a couple of different programming languages:
 
 :::: tabs
 ::: tab Bash
 ```bash
-function write {
+function echo {
     echo "$1"
 }
 ```
@@ -84,20 +86,20 @@ function write {
 ```c
 #include <stdio.h>
 
-void write(char* what) {
+void echo(char* what) {
     printf("%s", what);
 }
 ```
 :::
 ::: tab Haskell
 ```haskell
-write = putStrLn
+echo = putStrLn
 ```
 :::
 ::: tab Java
 ```java
 class Submission {
-    public static void write(String what) {
+    public static void echo(String what) {
         System.out.println(what);
     }
 }
@@ -105,55 +107,56 @@ class Submission {
 :::
 ::: tab JavaScript
 ```javascript
-function write(what) {
+function echo(what) {
   console.log(what);
 }
 ```
 :::
 ::: tab Kotlin
 ```kotlin
-fun write(what: String) {
+fun echo(what: String) {
     println(what)
 }
 ```
 :::
 ::: tab Python
 ```python
-def write(argument):
+def echo(argument):
     print(argument)
 ```
 :::
 ::::
 
-These are the submissions we want to test with TESTed.
+We can use those solutions as the submissions we want to test with TESTed.
 
 ### 1. Git repository
 
 Dodona uses Git repositories to manage exercises.
-Follow the guide [_Creating a new exercise repo_](/en/guides/teachers/new-exercise-repo).
-Once you have followed this guide and created the repository, you can return to this tutorial.
+Follow the guide [_Creating a new exercise repo_](/en/guides/teachers/new-exercise-repo)
+and return to this tutorial as soon as your repository has been set up.
 
 ### 2. Folder structure
 
-We need to create the correct folder structure in the repository you just created.
-Create the following folders:
+Now we need to create the correct directory structure for Dodona exercises in the repository you just created.
+Create the following directories:
 
 ```
-├── write/          # Folder for the new exercise
+├── echo/          # Directory for the new exercise
 |   ├── evaluation/
 |   └── description/
 ```
 
-This is the Dodona folder structure; more information can be found in the [reference](/en/references/exercise-directory-structure).
+This is the Dodona directory structure for exercises.
+More information can be found in [_Exercise directory structure_](/en/references/exercise-directory-structure).
 
 ### 3. Configuration options
 
-To signal to Dodona we are creating an exercise, we must add a configuration file.
-This file contains some options and metadata used by Dodona.
+To inform Dodona we are creating an exercise, we must add a configuration file to the `echo` directory.
+This configuration file contains some options and metadata used by Dodona.
 
-Create a new file `config.json` in the folder `write`, with the following content:
+Create a new file `config.json` in the `echo` directory, with the following content:
 
-```json
+```json5
 {
   "description": {
     "names": {
@@ -162,41 +165,39 @@ Create a new file `config.json` in the folder `write`, with the following conten
     }
   },
   "evaluation": {
-    "plan_name": "testsuite.json"
+    "plan_name": "tests.json"
   },
   "programming_language": "python",
   "access": "private"
 }
 ```
 
-Four things happen here:
+This configuration file specifies, in order:
 
-1. We give a name to the exercise, in Dutch and in English.
-2. We give the location of the test suite (`testsuite.json`).
-   This is always relative to the folder `write/evaluation`.
-3. We set the default programming language to Python. While TESTed supports multiple programming languages, Dodona does not support this at the moment.
-4. We indicate it is a private exercise.
+1. An exercise name in Dutch and in English.
+2. The path name of the test suite (`tests.json`) relative to the `echo/evaluation` directory.
+3. Python as the default programming language. While TESTed supports multiple programming languages, 
+   Dodona currently supports only a single programming language per exercise.
+4. Private access to the exercise.
+   We use this default since this is a tutorial, but we encourage making exercises publicly available on Dodona. 
 
-### 4. Writing the problem statement
+See [_Exercise configuration_](/en/references/exercise-config) for more details on the configuration options for Dodona exercises.
+
+### 4. Problem statement
 
 The problem statement instructs students on how to solve the exercise.
-This is again a Dodona thing; there is nothing TESTed-specific.
-More information is thus again found in the [relevant manual](/en/references/exercise-description).
-
-To make things easier, we'll use the problem statement from above and add an example.
-Create a file `write/description/description.en.md` with the following content:
+We'll use the problem statement from above and add an example.
+Create a file `echo/description/description.en.md` with the following content:
 
 ````markdown
-Write a function `write` that writes its argument to stdout.
-
-The argument of the function will always be a string.
+Define a function `echo` that outputs its string argument to stdout.
 
 ### Example in Python
 
 ```pycon
->>> write("5");
+>>> echo("5");
 "5"
->>> write("OK");
+>>> echo("OK");
 "OK"
 ```
 ````
@@ -204,27 +205,32 @@ The argument of the function will always be a string.
 As a check, the file structure should now look like this:
 
 ```
-├── write/
+├── echo/
 |   ├── config.json
 |   ├── evaluation/
 |   ├── description/
 |   |   └── description.en.md
 ```
 
-### 5. Specifying the test suite
+This is again something that is specific for Dodona and has nothing to do with TESTed.
+See [_Exercise descriptions_](/en/references/exercise-description) for more information on how to describe problem statements for Dodona exercises.
 
-This is one of the most important parts of creating an exercise: specifying the test suite.
-This test suite contains all test cases that will be executed on the submission to check if the submission is correct.
+### 5. Test suite
 
-To keep this tutorial short, we only use one test case here, but a real test suite would contain more test cases.
+Specifying a test suite is the part of creating a Dodona exercise that is specific to a particular judge,
+so we’ll adhere to the TESTed specification for test suites in this tutorial.
+A test suite contains all test cases that will be executed on the submission to check if the submission is correct.
 
-Create a new file `evaluation/testsuite.json`:
+For brevity, we will only include a single test case in our test suite.
+But a real test suite would contain many more test cases.
+Create a new file `evaluation/tests.json`:
+
 
 ```json
 {
  "tabs": [
   {
-   "name": "Write",
+   "name": "Echo",
    "runs": [
     {
      "contexts": [
@@ -233,7 +239,7 @@ Create a new file `evaluation/testsuite.json`:
         {
          "input": {
           "type": "function",
-          "name": "write",
+          "name": "echo",
           "arguments": [
            {
             "type": "text",
@@ -258,18 +264,19 @@ Create a new file `evaluation/testsuite.json`:
 }
 ```
 
-This test suite defines a few things:
+This test suite specifies that:
 
-1. We have one tab, with the name _Write_.
-2. We define one test case in that tab.
-3. The test case calls the function `write` with one argument, the string `input-1`.
-   Conceptually, this is equivalent to `write("input-1")`.
-4. We expect `input-1` on stdout.
+1. All feedback is included in a single tab called _Echo_.
+2. The tab contains feedback on a single test case.
+3. The test case calls the function `echo` with a string argument `input-1`.
+   Conceptually, this is equivalent to calling `write("input-1")` in Python.
+4. The expected behavior of the test case is that the text `input-1` is generated on stdout.
+
 
 The file structure now looks like this:
 
 ```
-├── write/
+├── echo/
 |   ├── config.json
 |   ├── evaluation/
 |   |   └── testplan.json
@@ -277,20 +284,21 @@ The file structure now looks like this:
 |   |   └── description.en.md
 ```
 
-### 6. Add exercise to Dodona
+### 6. Add to Dodona
 
-Now we must commit the changes with `git`:
+Now we commit the new exercise with the following `git` commands:
+
 
 ```bash
 $ git add .
 $ git commit -m "My first exercise"
 ```
 
-Next, we must push the changes to our repository.
+Then we must push the changes in the repository to Dodona.
 
 ```bash
 $ git push
 ```
 
-The exercise is now done.
-You should be able to use the exercise on Dodona.
+The exercise is now fully configured and available on Dodona as a private exercise,
+ready to be included in the learning path of your courses.
