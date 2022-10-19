@@ -32,7 +32,7 @@ TESTed is best suited for the following kinds of exercises:
 - Exercises on generic concepts that are found in (almost) all programming languages.
 - Exercises that focus on algorithms or high-level programming concepts, not on specific syntax or constructs of programming languages.
 
-TESTed is less suitable for exercises that focus on syntax or concepts for a specific programming language.
+TESTed is thus less suitable for exercises that focus on syntax or concepts for a specific programming language.
 For example, exercises on C pointers won't work well with TESTed.
 
 ## Getting started
@@ -42,14 +42,14 @@ If you want to use TESTed outside of Dodona, we recommend following [this tutori
 
 A number of technical specifications are also available:
 
-- [Configuration options](exercise-config)
-- [Test suite format](json)
-- [Data types for programming languages](types)
+- [Configuration options](/en/tested/exercise-config)
+- [Test suite format](/en/tested/json)
+- [Data types for programming languages](/en/tested/types)
 
 Useful guides if you want to work on TESTed itself:
 
 - The [installation instructions](https://github.com/dodona-edu/universal-judge) to run TESTed locally.
-- A [guide on adding a programming language](new-programming-language).
+- A [guide on adding a programming language](/en/tested/new-programming-language).
 
 ## Designing exercises for Dodona
 
@@ -156,12 +156,12 @@ This configuration file contains some options and metadata used by Dodona.
 
 Create a new file `config.json` in the `echo` directory, with the following content:
 
-```json5
+```json
 {
   "description": {
     "names": {
-      "en": "Write",
-      "nl": "Schrijf"
+      "en": "Echo",
+      "nl": "Echo"
     }
   },
   "evaluation": {
@@ -176,12 +176,14 @@ This configuration file specifies, in order:
 
 1. An exercise name in Dutch and in English.
 2. The path name of the test suite (`tests.json`) relative to the `echo/evaluation` directory.
-3. Python as the default programming language. While TESTed supports multiple programming languages, 
+3. Python as the default programming language.
+   While TESTed supports multiple programming languages, 
    Dodona currently supports only a single programming language per exercise.
 4. Private access to the exercise.
    We use this default since this is a tutorial, but we encourage making exercises publicly available on Dodona. 
 
 See [_Exercise configuration_](/en/references/exercise-config) for more details on the configuration options for Dodona exercises.
+The [options specific to TESTed](/en/tested/exercise-config) can also be interesting.
 
 ### 4. Problem statement
 
@@ -218,7 +220,7 @@ See [_Exercise descriptions_](/en/references/exercise-description) for more info
 ### 5. Test suite
 
 Specifying a test suite is the part of creating a Dodona exercise that is specific to a particular judge,
-so we’ll adhere to the TESTed specification for test suites in this tutorial.
+so we must adhere to the TESTed specification for test suites.
 A test suite contains all test cases that will be executed on the submission to check if the submission is correct.
 
 For brevity, we will only include a single test case in our test suite.
@@ -279,7 +281,7 @@ The file structure now looks like this:
 ├── echo/
 |   ├── config.json
 |   ├── evaluation/
-|   |   └── testplan.json
+|   |   └── tests.json
 |   ├── description/
 |   |   └── description.en.md
 ```
@@ -294,7 +296,7 @@ $ git add .
 $ git commit -m "My first exercise"
 ```
 
-Then we must push the changes in the repository to Dodona.
+Then we must push the changes in the repository to Dodona:
 
 ```bash
 $ git push
