@@ -1,6 +1,6 @@
 ---
-title: TESTed judge
-description: "TESTed judge"
+title: TESTed-judge
+description: "De TESTed-judge"
 sidebarDepth: 2
 ---
 

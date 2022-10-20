@@ -61,7 +61,7 @@ module.exports = {
           '/nl/news/': getNewsSidebar('nl', 'Nieuws', 'Overzicht'),
           '/nl/guides/': getGuidesSidebar('nl', 'Handleidingen', 'Overzicht', 'Voor studenten', 'Voor leerkrachten'),
           '/nl/references/': getReferencesSidebar('nl', 'Referenties', 'Overzicht'),
-          '/nl/tested/': getTESTedSidebar('nl', 'TESTed judge', 'Overzicht', 'Referenties'),
+          '/nl/tested/': getTESTedSidebar('nl', 'TESTed-judge', 'Overzicht'),
           '/nl/': getGeneralSidebar()
         }
       },
@@ -79,7 +79,7 @@ module.exports = {
           '/en/news/': getNewsSidebar('en', 'News', 'Overview'),
           '/en/guides/': getGuidesSidebar('en', 'Guides', 'Overview', 'For students', 'For teachers'),
           '/en/references/': getReferencesSidebar('en', 'References', 'Overview'),
-          '/en/tested/': getTESTedSidebar('en', 'TESTed judge', 'Overview', 'References'),
+          '/en/tested/': getTESTedSidebar('en', 'TESTed judge', 'Overview'),
           '/en/': getGeneralSidebar()
         }
       },
@@ -225,7 +225,7 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
   ]
 }
 
-function getTESTedSidebar(lang, groupTitle, FirstItem, referenceItem) {
+function getTESTedSidebar(lang, groupTitle, FirstItem) {
   return [
     `/${lang}/news/`,
     `/${lang}/guides/`,
@@ -237,9 +237,9 @@ function getTESTedSidebar(lang, groupTitle, FirstItem, referenceItem) {
       children: [
         // These URLs should be stable, since they are published.
         ['', FirstItem],
+        'exercise-config/',
         'json/',
         'types/',
-        'exercise-config/',
         'new-programming-language/',
       ]
     }

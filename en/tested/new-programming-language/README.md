@@ -37,7 +37,7 @@ To follow the parts of this tutorial that focus on the C programming language,
 you also need to have a local installation of the `gcc` compiler (version 8.1 or up).
 
 ::: tip Windows users
-We recommend using the [Windows Subsystem for Linux](https://ubuntu.com/wsl) for development on Windows machines.
+We recommend using the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/) for development on Windows machines.
 While TESTed is itself written in Python and thus platform independent,
 dependencies for programming languages are not always available on Windows for each language.
 :::
@@ -110,8 +110,8 @@ the templates. Run the utility using the following command:
 ```
 
 Note that this command will only generate stub files for a new programming language.
-It will not modify core TESTed files, so you should not forget to register the new language in TESTed at a later stage (
-see [_Registration_](#register-the-language)).
+It will not modify core TESTed files, so you should not forget to register the new language in TESTed later 
+(see [_Registration_](#register-the-language)).
 
 We will now look at the steps you need to take to add support for the C programming language to TESTed.
 We assume the generation tool was not used, so in each step we will manually create the files.
@@ -122,8 +122,8 @@ If you did use the generation tool, skip the parts where the files are created.
 Before starting to add support for C, we first look briefly into what features of C we want to support:
 what language features can we support in TESTed and what TESTed features can we support in C?
 
-Of course, we want to support as much of the TESTed features as possible. However, there are some limitations,
-especially in the data type support.
+Of course, we want to support as much of the TESTed features as possible.
+However, there are some limitations, especially in regard to data type support.
 
 ### Unsupported basic types
 
@@ -369,7 +369,7 @@ The default implementation skips the compilation step.
 :::
 
 The first parameter of the `compilation` method takes a class with some configuration options,
-including all [exercise options](../exercise-config).
+including all [exercise options](/en/tested/exercise-config).
 For example, you could allow the exercise designer to choose what C version is used by TESTed (e.g. C99 instead of C11).
 However, the current implementation of the C language module only supports C11.
 

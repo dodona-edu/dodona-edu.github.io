@@ -1,9 +1,9 @@
 ---
 title: "[en] Nieuwe programmeertaal"
-description: "Toevoegen van een nieuwe programmeertaal aan TESTed"
+description: "Configureren van een nieuwe programmeertaal aan TESTed"
 ---
 
-# Configuratie van een programmeertaal
+# Nieuwe programmeertalen toevoegen
 
 ::: warning Enkel Engels
 Deze handleiding is enkel in het Engels beschikbaar.

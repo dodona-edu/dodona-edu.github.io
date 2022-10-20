@@ -17,23 +17,17 @@ It can also generate a JSON Schema to make the validation of test suites easier.
 The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) for TESTed contains a number of examples of test suites.
 
 The first section of this reference describes the structure of the test suite.
-A simple dot notation is used to indicate where the attribute is located in the hierarchical structure.
+A dot notation is used to indicate where the attribute is located in the hierarchical structure.
 A star (`*`) is used to indicate a list of objects.
 For example, `plan.tabs.*.runs.*.run` can roughly be converted to json like this:
 
 ```json5
-{
- // `plan`
- tabs: [
-  // `plan.tabs`
-  {
-   // `plan.tabs.*`
-   runs: [
-    // `plan.tabs.*.runs`
-    {
-     // `plan.tabs.*.runs.*` 
-     run: "example"
-     // `plan.tabs.*.runs.*.run`
+{                   // `plan`
+ tabs: [            // `plan.tabs`
+  {                 // `plan.tabs.*`
+   runs: [          // `plan.tabs.*.runs`
+    {               // `plan.tabs.*.runs.*` 
+     run: "example" // `plan.tabs.*.runs.*.run`
     }
    ]
   }
@@ -322,7 +316,7 @@ For most output types, this is the default value, meaning you don't need to spec
 
 An IgnoredChannel object describes that no output is expected on a specific file descriptor (e.g. stdout or stderr).
 Any output generated on the file descriptor will be ignored, and is considered correct by TESTed.
-In other words, if you do not want ouput, you should use [`EmptyChannel`](#emptychannel),
+In other words, if you do not want output, you should use [`EmptyChannel`](#emptychannel),
 while if you don't care about the output, you should use `IgnoredChannel`.
 The `EmptyChannel` is represented by a string constant `ignored`.
 
@@ -1112,9 +1106,8 @@ The [data type](#data-types) of the variable.
 
 ### Expressions
 
-TESTed currently supports three different kinds of expressions: [identifiers](#identifier)
-, [function calls](#function-call) and
-[literal values](#literal-values).
+TESTed currently supports three different kinds of expressions:
+[identifiers](#identifier), [function calls](#function-call) and [literal values](#literal-values).
 
 #### Identifier
 
@@ -1410,31 +1403,3 @@ As custom types are outputted verbatim, it is difficult to use them while still 
 programming-language-independent.
 For that reason, we strongly discourage using them.
 :::
-
-The variable type must be used when you want to represent a value, that can't be represented with a TESTed datatypes.
-
-This object has two attributes: `data` and `type`.
-
-- **data**: The name of the datatype.
-- **type**: A string with constant value `custom`.
-
-```json
-"VariableType": {
-"title": "VariableType",
-"type": "object",
-"properties": {
-"data": {
-"title": "Data",
-"type": "string"
-},
-"type": {
-"title": "Type",
-"const": "custom",
-"type": "string"
-}
-},
-"required": [
-"data"
-]
-},
-```

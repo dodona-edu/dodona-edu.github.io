@@ -7,21 +7,15 @@ description: "The various data types supported by TESTed"
 This reference gives an overview of all TESTed data types (basic and advanced)
 and how they map to the data types in the programming languages that are currently supported by TESTed.
 
-::: tip Up-to-date information
-The mapping between TESTed data types and their mapping to the different programming languages is automatically sourced from the language modules of TESTed.
-As such, this reference should contain the most up-to-date information on data type support.
-:::
-
 ## Basic types
 
 Basic types represent abstract data types such as integers,
 not specific implementations thereof like unsigned 8-bit integers.
 They are used as the default data type for a concept in a specific programming language,
-but each programming language can have multiple data types that map to the concept represented by a basic type.
+but each programming language can have multiple data types for one basic type.
 
 TESTed supports the following basic types:
 
-Numeric:
 - `integer`: an integer
 - `real`: a real number
 - `boolean`: a Boolean value
