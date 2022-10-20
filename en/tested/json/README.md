@@ -14,8 +14,7 @@ languages.
 The TESTed test suite format is formally specified
 by [this Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
 It can also generate a JSON Schema to make the validation of test suites easier.
-The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) of TESTed contains
-examples of JSON test suites and evaluators.
+The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) for TESTed contains a number of examples of test suites.
 
 The first section of this reference describes the structure of the test suite.
 A simple dot notation is used to indicate where the attribute is located in the hierarchical structure.
@@ -1378,11 +1377,10 @@ For example:
 
 ### Data types
 
-TESTed supports three different kinds of data types: [basic data types](#basic-datatypes),
-[advanced data types](#advanced-datatypes) and [variable types](#variabletype).
+TESTed supports three different kinds of data types: [basic data types](#basic-types),
+[advanced data types](#advanced-types) and [custom types](#custom-types).
 
-Also useful is the [list of data types mapped to their actual type](../types) for the different programming languages
-supported by TESTed.
+A complete list of all supported data types and their mapping to the different programming languages can be found [here](/en/tested/types).
 
 #### Basic types
 
@@ -1391,7 +1389,7 @@ integers.
 They are used as the default data type for a concept in a specific programming language,
 but each programming language can have multiple data types that map to the concept represented by a basic type.
 
-See [_Data type support in TESTed_](../types#basic-types) for a list of types.
+See [_Data type support in TESTed_](/en/tested/types#basic-types) for a list of types.
 
 #### Advanced types
 
@@ -1399,7 +1397,7 @@ Advanced types represent specific implementations of data types, like unsigned 8
 Each advanced type corresponds to at most one data type in a programming language,
 and some programming languages will not have support for specific implementations.
 
-See [_Data type support in TESTed_](../types#advanced-types) for a list of types.
+See [_Data type support in TESTed_](/en/tested/types#advanced-types) for a list of types.
 
 #### Custom types
 
