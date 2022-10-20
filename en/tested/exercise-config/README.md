@@ -1,17 +1,17 @@
 ---
 title: Exercise configuration options
-description: "Configuration options for exercises in TESTed"
+description: "Configuration options for exercises with TESTed"
 ---
 
 # Exercise configuration options
 
-In addition to the [general configuration options](../../references/exercise-config) for programming exercises in Dodona,
+In addition to the [general configuration options](/en/references/exercise-config) for programming exercises in Dodona,
 some specific options for TESTed can be used as well.
 
 ## Test suite
 
 The default location of a test suite for TESTed is a JSON file `plan.json` in the `evaluation` directory of the exercise.
-The optional `testplan` attribute in the `evaluation` block takes an alternative location as a path name relative to the evaluation directory.
+The optional `testplan` attribute in the `evaluation` block takes an alternative location as a path name relative to the `evaluation` directory.
 
 ```json
 {
@@ -21,11 +21,11 @@ The optional `testplan` attribute in the `evaluation` block takes an alternative
 }
 ```
 
-See [_Test suite format_](../json) for a detailed description of the test suite format for TESTed.
+See [_Test suite format_](/en/tested/json) for a detailed description of the test suite format for TESTed.
 
 ## General options
 
-The `evaluation` block can contain an `option` block with attributes that influence the general behaviour of TESTed.
+The `evaluation` block can contain an `option` object with attributes that influence the general behaviour of TESTed.
 We discuss each of these options below.
 
 ### `options.mode`
@@ -75,7 +75,7 @@ Here's an example that disables falling back to contextual compilation:
 
 ## Linters
 
-When [adding support for a new programming language to TESTed](../new-programming-language),
+When [adding support for a new programming language to TESTed](/en/tested/new-programming-language),
 it is also possible to configure a [linter](https://en.wikipedia.org/wiki/Lint_(software)) that TESTed will use for static code analysis when processing submission for that language.
 TESTed currently uses the following linters:
 
@@ -218,7 +218,7 @@ TESTed supports the following attributes for linting Kotlin submissions:
 - `ktlint_ruleset`: Path name of a JAR file with additional rules, relative to the `evaluation` directory of the exercise.
 - `ktlint_experimental`: Boolean value that indicates if `ktlint` should use experimental rules (`true`; default value) or not (`false`).
 
-Here's an example that configures a `ktlint` configuration file `ktlint_rules.jar`:
+Here's an example that shows some of these attributes in action:
 
 ```json
 {
@@ -264,7 +264,7 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
 
 ```json
 {
-  "access": "private",
+  "access": "public",
   "description": {
     "names": {
       "en": "My exercise",
@@ -273,7 +273,7 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
   },
   "evaluation": {
     "handler": "TESTed",
-    "plan_name": "plan.yaml",
+    "plan_name": "plan.json",
     "options": {
       "mode": "batch",
       "allow_fallback": true,
