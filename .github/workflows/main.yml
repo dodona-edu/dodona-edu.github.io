@@ -23,9 +23,10 @@ jobs:
         run: yarn build
 
       - name: Run HTMLProofer
-        uses: chabad360/htmlproofer@v1.1
+        uses: anishathalye/proof-html@v2
         with:
-          directory: "./.vuepress/dist"
-          # The directory to scan
-          arguments: |
-            --ignore_urls "/smartschool.be/" --enforce_https "false" --hydra '{"max_concurrency": 3}'
+          directory: ./.vuepress/dist
+          enforce_https: false
+          max_concurrency: 3
+          ignore_url_re: |
+            /smartschool.be/
