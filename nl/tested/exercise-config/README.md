@@ -1,16 +1,16 @@
 ---
-title: Configuratie-opties voor oefeningen
-description: "De configuratie-opties ondersteund door TESTed"
+title: Configuratieopties voor oefeningen
+description: "Configuratieopties voor oefeningen met TESTed"
 ---
 
-# Configuratie-opties voor oefeningen in TESTed
+# Configuratieopties voor oefeningen
 
-Naast de standaardopties van Dodona zijn er een aantal opties die eigen aan TESTed zijn.
+Naast de [algemene configuratieopties](/nl/references/exercise-config) voor oefeningen van Dodona, zijn er een aantal configuratie-opties voor TESTed.
 
 ## Testplan
 
-De enige verplichte optie is de naam van het testplan meegeven.
-Dit moet binnen het `evaluation`-blok:
+De standaardlocatie van een testplan voor TESTed is een JSON-bestand `plan.json` in de map `evaluation` van de oefening.
+Het optionele veld `testplan` in het `evaluation`-blok kan gebruikt worden om een alternatieve locatie in te stellen, relatief tegenover de map `evaluation`.
 
 ```json
 {
@@ -20,76 +20,27 @@ Dit moet binnen het `evaluation`-blok:
 }
 ```
 
-Een volledige beschrijving van het testplan is beschikbaar in de [handleiding (Engels)](/en/tested/json).
+Zie [_Formaat voor testplannen_](/nl/tested/json) voor een gedetailleerde beschrijving van het formaat voor testplannen voor TESTed.
 
-## General opties
+## Algemene opties
 
-Daarnaast kan je bepaalde delen van het gedrag van TESTed aanpassen door opties mee te geven in een `options`-blok.
-In de volgende paragrafen bespreken we de verschillende opties.
-Hun specificatie wordt vastgelegd in onderstaand [JSON Schema](https://json-schema.org/).
+Het `evaluation`-blok ondersteunt een `option`-object met velden die het gedrag van TESTed beïnvloeden.
+We overlopen deze opties hieronder.
 
-```json
-{
-  "title": "OptionsModel",
-  "$ref": "#/definitions/Options",
-  "definitions": {
-    "ExecutionMode": {
-      "title": "ExecutionMode",
-      "description": "An enumeration.",
-      "enum": [
-        "batch",
-        "context"
-      ],
-      "type": "string"
-    },
-    "Options": {
-      "title": "Options",
-      "type": "object",
-      "properties": {
-        "mode": {
-          "default": "batch",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ExecutionMode"
-            }
-          ]
-        },
-        "allow_fallback": {
-          "title": "Allow Fallback",
-          "default": true,
-          "type": "boolean"
-        },
-        "language": {
-          "title": "Language",
-          "default": {},
-          "type": "object",
-          "additionalProperties": {
-            "type": "object"
-          }
-        },
-        "linter": {
-          "title": "Linter",
-          "default": true,
-          "type": "boolean"
-        }
-      }
-    }
-  }
-}
-```
+### `options.mode`
 
-### Compilatiemodus
+Het veld `mode` geeft aan hoe testcode gegenereerd en uitgevoerd moeten worden (samen met de ingediende oplossing).
+Twee modi worden ondersteund:
 
-Het veld `mode` geeft aan hoe uitvoerbare bestanden (testbestanden en ingediende oplossingen) moeten gecompileerd moet worden.
-Daarvoor biedt TESTed twee mogelijkheden aan:
+* `batch` (standaard): Alle testcode van een tabblad wordt gegenereerd en gecompileerd in één compilatie-eenheid (batchcompilatie).
+* `context`: Testcode wordt gegenereerd en gecompileerd per context (contextuele compilatie).
 
-* `batch`: Alle uitvoerbare bestanden in één keer compileren.
-* `context`: Elk uitvoerbare bestanden afzonderlijk compileren (individuele compilatie).
+Het compilatieproces is sneller bij batchcompilatie dan met contextuele compilatie,
+maar kan falen als een ingediende oplossing niet aan alle vereisten van de oefening voldoet.
+Als een oefening bijvoorbeeld vereist dat twee functie geïmplementeerd worden, maar de ingediende oplossing implementeert er slechts één, zal dit bij oplossingen in Java leiden tot compilatiefouten.
+Zie het volgende veld voor een oplossing.
 
-Het voornaamste voordeel van de batchcompilatie is dat het sneller is dat de individuele compilatie.
-Standaard zal TESTed alle uitvoerbare bestanden in één keer compileren.
-
-Voorbeeld (individueel compileren):
+Hier is een voorbeeld dat contextuele compilatie gebruikt:
 
 ```json
 {
@@ -101,14 +52,13 @@ Voorbeeld (individueel compileren):
 }
 ```
 
-### Fallback voor compilatie
+### `options.allow_fallback`
 
-Bij `batch`-compilatie kan ingesteld worden dat TESTed mag teruggevallen op individuele compilatie als de `batch`-compilatie faalt.
-Dit kan bijvoorbeeld nuttig zijn als een oplossing nog niet alle functies heeft geïmplementeerd.
-Hiervoor gebruik je het veld `allow_fallback`.
-Standaard mag TESTed terugvallen op individuele compilatie als de `batch`-compilatie faalt.
+Als het Booleaanse veld `allow_fallback` op `true` staat (de standaardwaarde),
+zal TESTed automatisch contextuele compilatie gebruiken als de batchcompilatie faalt.
+Dit kan nuttig zijn om ingediende oplossingen te evalueren die niet alle vereisten implementeren.
 
-Voorbeeld (fallback voor compilatie uitgeschakeld):
+Hier is een voorbeeld dat het terugvallen op de contextuele compilatie uitschakelt:
 
 ```json
 {
@@ -123,8 +73,8 @@ Voorbeeld (fallback voor compilatie uitgeschakeld):
 
 ## Linters
 
-Bij de [configuratie van een programmeertaal voor TESTed](../new-programming-language)
-kan ook een [linter](https://en.wikipedia.org/wiki/Lint_(software)) geconfigureerd worden.
+Bij het [toevoegen van een nieuwe programmeertaal aan TESTed](/nl/tested/new-programming-language)
+is het ook mogelijk een [linter](https://en.wikipedia.org/wiki/Lint_(software)) toe te voegen, die TESTed gebruikt om statische code-analyze uit te voeren bij het beoordelen van een ingediende oplossing.
 Dit zijn de linters die TESTed op dit moment gebruikt:
 
 | Programmeertaal | Linter                                                 |
@@ -137,7 +87,9 @@ Dit zijn de linters die TESTed op dit moment gebruikt:
 | Kotlin          | [Ktlint](https://ktlint.github.io/)                    |
 | Python          | [Pylint](https://pylint.pycqa.org/en/latest/)          |
 
-Bij de configuratie van een oefening kan je in het veld `linter` globaal de linters uit- of inschakelen. Voorbeeld (alle linters uitschakelen):
+Het Booleaanse veld `options.linter` kan gebruikt worden om linters in (`true`) of uit (`false`) te schakelen voor een programmeeroefening,
+voor alle programmeertalen samen ofwel voor individuele talen.
+Het is een voorbeeld dat linters uitschakelt voor alle programmeertalen:
 
 ```json
 {
@@ -149,7 +101,7 @@ Bij de configuratie van een oefening kan je in het veld `linter` globaal de lint
 }
 ```
 
-De linters kunnen ook per programmeertaal in-/uitgeschakeld worden in de programmeertaal-specifieke opties. Voorbeeld (alleen linting voor JavaScript):
+Hier is een voorbeeld dat enkel de linter voor JavaScript inschakelt:
 
 ```json
 {
@@ -166,17 +118,17 @@ De linters kunnen ook per programmeertaal in-/uitgeschakeld worden in de program
 }
 ```
 
-## Programmeertaal-specifieke opties
+## Opties voor individuele programmeertalen
 
-Naast algemene configuratieopties, kunnen individuele programmeertalen ook eigen opties hebben.
-Onderstaande opties zijn momenteel beschikbaar.
+De modules voor de programmeertalen in TESTed kunnen eigen opties hebben.
+Hieronder is een overzicht van de opties voor elke programmeertaal die momenteel door TESTed ondersteund wordt.
 
 ### Bash
 
-Met de optie `shellcheck_config` kan je een Shellcheck-configuratiebestand meegeven, dat zal gebruikt worden om de linter in te stellen.
-Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
+In het veld `shellcheck_config` kan de locatie van een configuratiebestand voor Shellcheck gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in Bash.
+Hier is een voorbeeld dat het bestand `shellcheckrc` instelt als configuratiebestand voor Shellcheck:
 
-Voorbeeld (Shellcheck-configuratie):
 ```json
 {
   "evaluation": {
@@ -193,10 +145,10 @@ Voorbeeld (Shellcheck-configuratie):
 
 ### Haskell
 
-Met de optie `hlint_config` kan je een HLint-configuratiebestand meegeven, dat zal gebruikt worden om de linter in te stellen.
-Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
+In het veld `hlint_config` kan de locatie van een configuratiebestand voor HLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in Haskell.
+Hier is een voorbeeld dat het bestand `hlint.config.yaml` instelt als configuratiebestand voor HLint:
 
-Voorbeeld (HLint-configuratie):
 ```json
 {
   "evaluation": {
@@ -213,10 +165,10 @@ Voorbeeld (HLint-configuratie):
 
 ### Java
 
-Met de optie `checkstyle_config` kan je een Checkstyle-configuratiebestand meegeven, dat zal gebruikt worden om de linter in te stellen.
-Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
+In het veld `checkstyle_config` kan de locatie van een configuratiebestand voor Checkstyle gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in Java.
+Hier is een voorbeeld dat het bestand `java_style.xml` instelt als configuratiebestand voor Checkstyle:
 
-Voorbeeld (Checkstyle-configuratie):
 
 ```json
 {
@@ -234,10 +186,9 @@ Voorbeeld (Checkstyle-configuratie):
 
 ### JavaScript
 
-Met de optie `eslint_config` kan je een ESLint-configuratiebestand meegeven, dat zal gebruikt worden om de linter in te stellen.
-Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
-
-Voorbeeld (ESLint-configuratie):
+In het veld `eslint_config` kan de locatie van een configuratiebestand voor ESLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in JavaScript.
+Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebestand voor ESLint:
 
 ```json
 {
@@ -255,17 +206,14 @@ Voorbeeld (ESLint-configuratie):
 
 ### Kotlin
 
-Voor Kotlin zijn er een aantal opties voor de linter `ktlint`:
+TESTed ondersteunt volgende velden voor de linter bij Kotlin (`ktlint`):
 
-- `editorconfig`: Naam van een `.editorconfig`-bestand (zie <https://editorconfig.org/>) in de map `evaluation` van de oefening.
-- `disabled_rules_ktlint`: Lijst van regels die *ktlint* moeten negeren. Kan ook
-  ingesteld worden als een kommagescheiden string van regels.
-- `ktlint_ruleset`: Bestandsnaam van een JAR-bestand met extra regels. Dit
-  bestand moet in de map `evaluation` van de oefening geplaatst worden.
-- `ktlint_experimental`: Boolean die aangeeft of *ktlint* ook experimentele
-  regels moet gebruiken. Standaard zal *ktlint* experimentele regels gebruiken.
+- `editorconfig`: Locatie en naam van een `.editorconfig`-bestand (zie <https://editorconfig.org/>), relatief ten opzichte van de `evaluation`-map van de oefening.
+- `disabled_rules_ktlint`: Regels die _ktlint_ moeten negeren, ofwel als een lijst van strings, ofwel als één string die door komma's gescheiden wordt.
+- `ktlint_ruleset`: Locatie en naam van een JAR-bestand met extra regels, relatief ten opzichte van de `evaluation`-map van de oefening.
+- `ktlint_experimental`: Booleaanse waarde die aangeeft of `ktlint` ook experimentele regels moet gebruiken (`true`, de standaardwaarde) of niet (`false`).
 
-Voorbeeld (KTLint-configuratie):
+Hier is een voorbeeld dat het gebruik van een aantal van deze velden toont:
 
 ```json
 {
@@ -286,10 +234,9 @@ Voorbeeld (KTLint-configuratie):
 
 ### Python
 
-Met de optie `pylint_config` kan je een PyLint-configuratiebestand meegeven, dat zal gebruikt worden om de linter in te stellen.
-Dit bestand moet zich in de map `evaluation` van de oefening bevinden.
-
-Voorbeeld (PyLint-configuratie):
+In het veld `pylint_config` kan de locatie van een configuratiebestand voor PyLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in Python.
+Hier is een voorbeeld dat het bestand `pylint.rc` instelt als configuratiebestand voor PyLint:
 
 ```json
 {
@@ -307,11 +254,11 @@ Voorbeeld (PyLint-configuratie):
 
 ## Volledig voorbeeld
 
-Hieronder zie je een volledig configuratiebestand van een oefening (`config.json`):
+Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) voor een programmeeroefeningen voor Dodona dat gebruik maakt van TESTed voor automatische feedback:
 
 ```json
 {
-  "access": "private",
+  "access": "public",
   "description": {
     "names": {
       "en": "My exercise",
@@ -320,7 +267,7 @@ Hieronder zie je een volledig configuratiebestand van een oefening (`config.json
   },
   "evaluation": {
     "handler": "TESTed",
-    "plan_name": "plan.yaml",
+    "plan_name": "plan.json",
     "options": {
       "mode": "batch",
       "allow_fallback": true,

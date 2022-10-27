@@ -3,17 +3,29 @@ title: Ondersteuning gegevenstypes
 description: "De verschillende gegevenstypes ondersteund door TESTed"
 ---
 
-# Ondersteuning voor gegevenstypes in TESTed
+# Ondersteuning voor gegevenstypes
 
-::: tip Bijgewerkte informatie
-Deze data werden verzameld van de programmeertaalmodules in TESTed.
-Zij bevatten de meest recente informatie over de gegevenstypes.
-:::
-
-Deze referentiegids toont welke gegevenstypes in verschillende programmeertalen gebruikt worden en hoe ze overeenkomen met de gegevenstypes van TESTed.
+Deze referentie geeft een overzicht van alle gegevenstypes in TESTed (basistypes en geavanceerde types).
+Ze legt ook uit hoe de verschillende types zich vertalen naar de programmeertalen die momenteel door TESTed ondersteund worden.
 
 ## Basistypes
 
+Basistypes stellen abstracte gegevenstypes voor, zoals integers, maar niet specifieke implementaties ervan, zoals een _unsigned 8-bit integer_.
+Ze worden gebruikt als het standaardtype voor een concept in een programmeertaal, maar elke programmeertaal kan meerdere types hebben voor eenzelde basistype.
+
+TESTed supports the following basic types:
+
+- `integer`: een integer
+- `real`: een reëel getal number
+- `boolean`: een Booleaanse waarde
+- `text`: tekstuele gegevens (bv. strings)
+- `sequence`: een geordende reeks waarden
+- `set`: een ongeordende verzameling unieke waarden
+- `map`: een verzameling van sleutel-waardeparen
+- `nothing`: een voorstelling voor "niets", dus geen waarde
+- `any`: eender welk gegevenstype. **Opmerking**: u kunt dit niet gebruiken in testplannen. Het wordt enkel gebruikt om onbekende returnwaarden aan te duiden.
+
+Onderstaande tabel geeft een overzicht van alle basistypes die ondersteund worden door TESTed.
 In de eerste kolom staan de gegevenstypes van TESTed, gevolgd door een kolom voor elke programmeertaal.
 
 | TESTed   | Python  | JavaScript | Java          | Kotlin    | Haskell   | C        | Bash   |
@@ -32,8 +44,34 @@ In de eerste kolom staan de gegevenstypes van TESTed, gevolgd door een kolom voo
 
 ## Geavanceerde types
 
-De eerste kolom toont de naam van het geavanceerde type (onder de tabel staan een aantal definities van deze types).
-De tweede kolom toont wat het basistype van dit type is.
+Geavanceerde types stellen specifieke implementaties van gegevenstypes voor, zoals een _unsigned 8-bit integer_.
+Elk geavanceerd type komt overeen met hoogstens één type in een programmeertaal, en sommige programmeertalen hebben geen ondersteuning voor bepaalde types.
+
+Momenteel ondersteunt TESTed volgende types:
+
+- `int8`: 8-bit integers (signed)
+- `uint8`: 8-bit natuurlijke getallen (unsigned)
+- `int16`: 16-bit integers (signed)
+- `uint16`: 16-bit natuurlijke getallen (unsigned)
+- `int32`: 32-bit integers (signed)
+- `uint32`: 32-bit natuurlijke getallen (unsigned)
+- `int64`: 64-bit integers (signed)
+- `uint64`: 64-bit natuurlijke getallen (unsigned)
+- `bigint`: integers zonder onder- en bovengrens (signed)
+- `single_precision` - IEEE 754 enkele precisie zwevendekommagetal
+- `double_precision` - IEEE 754 dubbele precisie zwevendekommagetal
+- `double_extended` - IEEE 754 "double extended" precisie zwevendekommagetal
+- `fixed_precision` - vastekommagetal
+- `array`: een _mutable_ reeks met vaste grootte
+- `list`: een _mutable_ reeks met veranderlijke grootte
+- `tuple`: een _immutable_ reeks
+- `char`: één teken
+- `undefined`: gebruikt voor talen die een verschil hebben tussen `null` en `undefined`, zoals in JavaScript
+
+Onderstaande tabel geeft een overzicht van alle geavanceerde types die ondersteund worden door TESTed.
+De eerste kolom bevat alle geavanceerde types, de tweede kolom toont wat het basistype van dit type is.
+De andere kolommen tonen de overeenkomstige types in de verschillende programmeertalen.
+De uitleg over de gebruikte symbolen in deze kolommen staat onder de tabel.
 
 | TESTed           | Basic    | Python    | JavaScript  | Java         | Kotlin       | Haskell            | C                | Bash |
 |------------------|----------|-----------|-------------|--------------|--------------|--------------------|------------------|------|
@@ -49,35 +87,22 @@ De tweede kolom toont wat het basistype van dit type is.
 | single_precision | real     | +         | +           | `float`      | `Float`      | `Float`            | `float`          | -    |
 | double_precision | real     | +         | +           | `double`     | `Double`     | `Double`           | `double`         | -    |
 | double_extended  | real     | +         | +           | +            | +            | -                  | `double double`  | -    |
-| fixed_precision  | real     | `Decimal` | -           | `BigDecimal` | `BigDecimal` | -                  | -                | -    |
+| fixed_precision  | rational | `Decimal` | -           | `BigDecimal` | `BigDecimal` | -                  | -                | -    |
 | array            | sequence | +         | +           | `array`      | `Array`      | -                  | -                | -    |
 | list             | sequence | `List`    | +           | `List`       | `List`       | `[]`²              | -                | -    |
 | tuple            | sequence | `Tuple`   | +           | +            | +            | `()`¹              | -                | -    |
 | char             | text     | +         | +           | `char`       | `Char`       | `Char`             | `char`           | +    |
 | undefined        | nothing  | +         | `undefined` | +            | +            | +                  | +                | -    |
 
-¹ ingebouwd type voor tuples
+¹ ingebouwd type voor tuple  
+² ingebouwd type voor list
 
-Een "+" (plusteken) betekent dat de programmeertaal beperkte ondersteuning heeft (`reduced`).
-Dit betekent vaak dat er geen eigen type bestaat in de programmeertaal, maar dat oefeningen die het type gebruiken wel gemaakt kunnen worden in de taal.
-Een voorbeeld zijn tuples: heel wat talen hebben er geen eigen type voor, maar de oefeningen kunnen wel opgelost worden door het basistype (een `sequence`) te gebruiken.
-Een oefening die tuples gebruikt zal bijvoorbeeld in Java ook oplosbaar zijn, omdat lijsten aanvaard worden.
+Een plusteken (+) betekent dat de programmeertaal **beperkte ondersteuning** heeft voor het gegevenstype.
+Dit betekent vaak dat er geen eigen type bestaat in de programmeertaal, maar dat oefeningen die het type gebruiken wel opgelost kunnen worden in de taal, doordat TESTed terugvalt op het basistype.
+Laten we tuples als voorbeeld nemen.
+Veel programmeertalen hebben geen rechtstreekse ondersteuning voor types, maar oefeningen die ervan gebruik maken kunnen opgelost worden voor het basistype (`sequence`) te gebruiken.
+Een oefening met tuples kan in Java bijvoorbeeld opgelost worden door `List` te gebruiken.
 
-Een "-" (minteken) betekent dat de programmeertaal geen ondersteuning heeft (`unsupported`).
-Dit betekent dat een oefening die dergelijke types gebruikt niet oplosbaar zal zijn in de programmeertaal.
-Zo zal JavaScript geen `fixed_precision` ondersteunen, dus oefeningen die dat nodig hebben zullen niet opgelost kunnen worden in JavaScript.
-
-Dit zijn de definities van de types:
-
-- `intN` - signed integers, minstens `N` bits; bv. `int16` moest minstens 16 bits hebben
-- `uintN` - unsigned integers, minstens `N` bits
-- `bigint` - integers van arbitraire grootte
-- `single_precision` - IEEE 754 enkele precisie
-- `double_precision` - IEEE 754 dubbele precisie
-- `double_extended` - IEEE 754 dubbele extended precisie
-- `fixed_precision` - vastekommagetal
-- `array` - aaneengesloten stuk geheugen met vaste grootte voor elementen
-- `list` - geordende reeks elementen, waarbij dubbels toegelaten zijn
-- `tuple` - niet-wijzigbare lijst
-- `char` - een enkel teken
-- `undefined` - anders dan `null`, zoals in JavaScript
+Een minteken (-) betekent dat de programmeertaal **geen ondersteuning** heeft voor het type.
+Dit betekent dat oefeningen die dergelijke types gebruikt niet oplosbaar zullen zijn in die programmeertaal.
+Zo zal een oefening die vastekommagetallen gebruikt niet oplosbaar zijn in JavaScript.
