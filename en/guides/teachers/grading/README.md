@@ -112,9 +112,9 @@ Aan de rechterkant van de pagina vind je de navigatie en score-interface. Van bo
 
 * **Status van de student**: Hier zie je de status van de ingediende oplossingen voor alle oefeningen binnen deze reeks. Deze icoontjes zijn klikbaar en brengen je snel naar de corresponderende evaluatiepagina.
 
-::: tip Gebruik de demo modus voor anoniem verbeteren
+::: tip Gebruik de anonieme modus voor anoniem verbeteren
 
-Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op Dodona kan je hiervoor de demo modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
+Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op Dodona kan je hiervoor de anonieme modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
 
 :::
 
