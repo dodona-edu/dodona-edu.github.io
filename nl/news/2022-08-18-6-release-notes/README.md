@@ -32,3 +32,9 @@ Tussen versie 6.0 en 6.1 zijn er verschillende aanpassingen gedaan om het aanmel
 - Verschillende foutmeldingen werden opgelost.
 
 Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/4007).
+
+## Dodona 6.2 - 25/11/2022
+
+Dodona 6.2 bevat weinig zichtbare veranderingen voor gewone gebruikers. De grootste aanpassing is een functie om gemakkelijker scholen samen te voegen voor de Dodonabeheerders.
+
+Alle details over deze Dodona versie kan je vinden in onze [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/4192).

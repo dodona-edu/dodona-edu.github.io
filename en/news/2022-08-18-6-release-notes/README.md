@@ -32,3 +32,9 @@ In addition, over the past few weeks, we made many changes to improve the sign i
 - Several fixes for errors
 
 All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/4007).
+
+## Dodona 6.2 - 2022-11-25
+
+Dodona 6.2 contains few user-facing features. It's main addition is a better detection of similar institutions for the Dodona administrators.
+
+All details about this Dodona version can be found in the [GitHub release discussion](https://github.com/dodona-edu/dodona/discussions/4192).
