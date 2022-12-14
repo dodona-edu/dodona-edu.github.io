@@ -41,7 +41,7 @@ All details about this Dodona version can be found in the [GitHub release discus
 
 ## Dodona 6.3 - 2022-12-13
 
-Dodona 6.3  brings two big new UI changes!
+Dodona 6.3 brings two big new UI changes!
 
 ### Exercise filters
 Teachers can add their own exercises to Dodona for everyone to use. This way, we have collected over 11k exercises. The downside of this is that it became hard to find high quality exercises. Instead of limiting who could create exercises, Dodona 6.3 adds a few powerful filters.
