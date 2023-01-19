@@ -7,7 +7,7 @@ description: "De Programmeursleerling"
 
 > Leren programmeren in Python 3
 
-In [Dodona](../teachers/getting-started) vind je een **interactieve versie** van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck (Tilburg University). Dit boek is erop gericht om leerlingen uit het **secundair onderwijs** te leren programmeren in **Python 3**. We bieden zowel de [Nederlandstalige](https://dodona.ugent.be/nl/courses/293/) als [Engelstalige](https://dodona.ugent.be/nl/courses/293/) versie aan.
+In [Dodona](../teachers/getting-started/) vind je een **interactieve versie** van het boek [De Programmeursleerling](http://www.spronck.net/pythonbook/dutchindex.xhtml) van Pieter Spronck (Tilburg University). Dit boek is erop gericht om leerlingen uit het **secundair onderwijs** te leren programmeren in **Python 3**. We bieden zowel de [Nederlandstalige](https://dodona.ugent.be/nl/courses/293/) als [Engelstalige](https://dodona.ugent.be/nl/courses/293/) versie aan.
 
 ![De Programmeursleerling](./codersapprentice.png)
 
@@ -21,13 +21,13 @@ Wil je de cursus samen met een groep leerlingen gebruiken, dan raden we aan om e
 
 ![Een cursus kopiëren in Dodona](./course-copy-nl.png)
 
-Omdat je beheerder wordt van de gekopieerde cursus, kan je die zelf [inrichten](../teachers/getting-started) naar de noden van je doelgroep:
+Omdat je beheerder wordt van de gekopieerde cursus, kan je die zelf [inrichten](../teachers/getting-started/) naar de noden van je doelgroep:
 
 - het leerpad van de cursus aanpassen
   - hoofdstukken, secties en oefeningen herschikken, toevoegen, weglaten of voorlopig verbergen
   - [eigen oefeningen](../teachers/new-exercise-repo/) toevoegen en delen met collega's
-- [deadlines instellen](../teachers/getting-started#een-cursus-opstellen)
-- de [voortgang opvolgen](../teachers/getting-started#je-cursus-gebruiken) van leerlingen opvolgen
+- [deadlines instellen](../teachers/getting-started/#een-cursus-opstellen)
+- de [voortgang opvolgen](../teachers/getting-started/#je-cursus-gebruiken) van leerlingen opvolgen
 - online toetsen en examens organiseren
 - opmerkingen geven op de ingediende oplossingen van je leerlingen
 - collega's mee als cursusbeheerder aanduiden
@@ -36,4 +36,4 @@ Omdat je beheerder wordt van de gekopieerde cursus, kan je die zelf [inrichten](
 
 Om zelf [cursussen aan te maken](../teachers/getting-started/#een-cursus-aanmaken) (vanaf nul of door een bestaande cursus te kopiëren) of om zelf [oefeningen op te stellen](../teachers/new-exercise-repo/) heb je specifieke rechten nodig op Dodona. Deze rechten worden niet standaard aan een account toegekend, maar lesgevers krijgen ze op eenvoudig verzoek via een mail naar <dodona@ugent.be> of via het [contactformulier](https://dodona.ugent.be/nl/contact). Team Dodona verwerkt alle aanvragen zo snel mogelijk.
 
-Meer informatie om van start te gaan met Dodona kan je vinden in [deze handleiding](/nl/guides/teachers/getting-started).
+Meer informatie om van start te gaan met Dodona kan je vinden in [deze handleiding](../teachers/getting-started/).

@@ -100,7 +100,7 @@ Versleep de verplaatsknop aan de linkerkant van de oefeningen om de volgorde van
 
 ::: tip Belangrijk
 
-We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen, publiceren en delen van oefeningen wordt [hier](../new-exercise-repo) besproken.
+We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen, publiceren en delen van oefeningen wordt [hier](../new-exercise-repo/) besproken.
 
 :::
 
@@ -151,7 +151,7 @@ Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalue
 
 ## Oefeningenreeks evalueren
 
-Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback en punten te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](../grading).
+Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback en punten te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](../grading/).
 
 ## Oefeningenreeks oplossingen exporteren
 

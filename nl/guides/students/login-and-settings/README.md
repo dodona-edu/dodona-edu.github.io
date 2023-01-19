@@ -44,7 +44,7 @@ Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldi
 
 ::: tip Foutmelding?
 
-Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat niet alles loopt zoals verwacht. Om aan te melden gebruiken we namelijk de bestaande accounts van je onderwijsinstelling en koppelen we die via technieken als [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) en [OAuth](https://nl.wikipedia.org/wiki/OAuth). Soms loopt het hier mis omdat jouw school geen toestemming geeft voor deze koppeling. Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../getting-started#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
+Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat niet alles loopt zoals verwacht. Om aan te melden gebruiken we namelijk de bestaande accounts van je onderwijsinstelling en koppelen we die via technieken als [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) en [OAuth](https://nl.wikipedia.org/wiki/OAuth). Soms loopt het hier mis omdat jouw school geen toestemming geeft voor deze koppeling. Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../getting-started/#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
 :::
 
 ::: tip Meerdere accounts?
