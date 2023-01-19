@@ -20,7 +20,7 @@ You can also install the extension directly from the VS Code Marketplace. Surf t
 
 ## 3. Insert API token
 
-In the settings you have to paste the generated token. Click on the cogwheel <img src="./cogwheel.png" alt="cogwheel" width=30/> (icon in bottom left corner), Settings (`Ctrl+,`).
+In the settings you have to paste the generated token. Click on the cogwheel <img src="./cogwheel.png" alt="cogwheel" width=30 /> (icon in bottom left corner), Settings (`Ctrl+,`).
 
 ![Settings](./vs_code_settings.png)
 
