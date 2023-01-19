@@ -13,7 +13,7 @@ In [Dodona](../teachers/getting-started) vind je een **interactieve versie** van
 
 Voor je met de interactieve cursus aan de slag gaat, kan je best eerst [aanmelden op Dodona](../teachers/getting-started/#aanmelden). Door te registreren voor de cursus (dit is gratis) kan je verwerkte secties als gelezen markeren en kan je oplossingen indienen voor de programmeeroefeningen. Dodona zal onmiddellijk feedback geven op elke oplossing die je indient en je kan een [visuele debugger](http://www.pythontutor.com/) gebruiken om fouten in je code op te sporen. Zo kan je bij het verwerken van de leerstof ook je eigen voortgang opvolgen.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CGdVEJk1Y9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CGdVEJk1Y9s" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Hoe gebruik ik de cursus met de leerlingen van mijn klas?
 

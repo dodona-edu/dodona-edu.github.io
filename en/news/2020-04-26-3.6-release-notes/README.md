@@ -23,7 +23,7 @@ The creation of a reading activity is very similar to the way exercises are crea
 
 To showcase the abilities of content pages, we added [a complete Python programming course](https://dodona.ugent.be/en/courses/296/) aimed at secondary education. The course is an adapted version of [The Coder's Apprentice](http://www.spronck.net/pythonbook/index.xhtml) by Pieter Spronck of Tilburg University. More information on how to use this course can be found in [this guide](/en/guides/the-coders-apprentice/).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eAp-ftrZQDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eAp-ftrZQDE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Full list of changes
 
