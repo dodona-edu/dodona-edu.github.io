@@ -10,4 +10,4 @@ Op deze pagina vind je een overzicht van alle Dodona nieuwsberichten.
 
 ## Alle berichten
 
-<NewsIndex category="current" lang="nl"/>
+<NewsIndex lang="nl"/>
