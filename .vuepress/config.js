@@ -87,10 +87,21 @@ module.exports = {
   },
 
   /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
+   * Apply plugins, ref: https://v1.vuepress.vuejs.org/plugin/
    */
   plugins: [
-    'tabs',
+    [
+      'vuepress-plugin-tabs',
+      {
+        // Prevent multiple tabs with the same name having the same ID.
+        dedupeIds: true,
+        tabsAttributes: {
+          options: {
+            useUrlFragment: false
+          }
+        }
+      },
+    ],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     [
@@ -123,7 +134,7 @@ module.exports = {
       md.use(require('markdown-it-imsize'));
     }
   }
-}
+};
 
 function getGeneralSidebar() {
   return [
