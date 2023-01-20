@@ -3,7 +3,7 @@
     <li v-for="post in posts">
       <article>
         <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
-        <time>{{ formatDate(post.frontmatter.date) }}</time>
+        <time :datetime="post.frontmatter.date">{{ formatDate(post.frontmatter.date) }}</time>
       </article>
     </li>
   </ul>

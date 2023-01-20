@@ -8,4 +8,4 @@ sidebarDepth: 0
 On this page, you can find an overview of all Dodona news.
 
 ## All news
-<NewsIndex category="current" lang="en"/>
+<NewsIndex lang="en"/>

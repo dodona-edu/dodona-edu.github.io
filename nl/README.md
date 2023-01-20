@@ -37,4 +37,4 @@ Voor de Dodona webapplicatie kunt u terecht op [https://dodona.ugent.be](https:/
 </div>
 
 ## Recente berichten
-<NewsIndex category="current" lang="nl" limit="5" />
+<NewsIndex lang="nl" limit="5" />

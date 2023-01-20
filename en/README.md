@@ -37,4 +37,4 @@ For the Dodona web application, please go to [https://dodona.ugent.be](https://d
 </div>
 
 ## Latest messages
-<NewsIndex category="current" lang="en" limit="5" />
+<NewsIndex lang="en" limit="5" />

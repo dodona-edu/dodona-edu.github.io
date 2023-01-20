@@ -15,7 +15,7 @@ In [Dodona](/en/guides/teachers/getting-started) you'll find an **interactive ed
 
 It's a good idea to logon to Dodona first, before getting started with the interactive edition of the book. By registering for the course (which is free) you will be able to mark the sections you processed as read and to submit solutions for the programming assignments. Dodona immediately gives feedback on each submitted solution and you can use the [visual debugger](http://www.pythontutor.com/) to hunt for errors in your code. This way, you keep track of your own process while going through the learning material.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eAp-ftrZQDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eAp-ftrZQDE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How do I use the course with the students of my class?
 

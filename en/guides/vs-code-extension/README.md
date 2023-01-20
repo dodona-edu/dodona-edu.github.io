@@ -12,7 +12,7 @@ Before installing the extension, you need to create an API token on the Dodona w
 
 ## 2. Install the extension
 
-You can install the extension directly from VS Code. In the `Extensions` menu (<img src="./extensions-view-icon.png" alt="Extensions" width=30px; />), search for `Dodona` and click on the search result. Finally, click `Install`.
+You can install the extension directly from VS Code. In the `Extensions` menu (<img src="./extensions-view-icon.png" alt="Extensions" width=30 />), search for `Dodona` and click on the search result. Finally, click `Install`.
 
 ![settings](./vs_code_dodona_marketplace.png)
 
@@ -20,7 +20,7 @@ You can also install the extension directly from the VS Code Marketplace. Surf t
 
 ## 3. Insert API token
 
-In the settings you have to paste the generated token. Click on the cogwheel <img src="./cogwheel.png" alt="cogwheel" width=30px;/> (icon in bottom left corner), Settings (`Ctrl+,`).
+In the settings you have to paste the generated token. Click on the cogwheel <img src="./cogwheel.png" alt="cogwheel" width=30 /> (icon in bottom left corner), Settings (`Ctrl+,`).
 
 ![Settings](./vs_code_settings.png)
 
