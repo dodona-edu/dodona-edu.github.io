@@ -25,6 +25,7 @@ Currently, the following languages are supported:
 * JavaScript (NodeJS)
 * Kotlin
 * Python
+* C# (.NET)
 
 Because programming exercises underpinned by TESTed are independent of any programming language,
 TESTed is best suited for the following kinds of exercises:
@@ -123,6 +124,19 @@ fun echo(what: String) {
 ```python
 def echo(argument):
     print(argument)
+```
+:::
+::: tab C#
+```csharp
+using System;
+
+class Submission
+{
+    public static void Echo(string content)
+    {
+        Console.WriteLine(content);
+    }
+}
 ```
 :::
 ::::

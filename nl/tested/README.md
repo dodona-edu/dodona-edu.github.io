@@ -13,7 +13,6 @@ TESTed kan als afzonderlijk tool gebruikt worden, maar is ook geïntegreerd in d
 ## Wanneer gebruik je TESTed?
 
 In de eerste plaats moet TESTed de programmeertaal die u wilt gebruiken ondersteunen.
-Moment
 Momenteel zijn dat volgende programmeertalen:
 
 * Bash
@@ -23,6 +22,7 @@ Momenteel zijn dat volgende programmeertalen:
 * JavaScript (NodeJS)
 * Kotlin
 * Python
+* C# (.NET)
 
 Doordat de programmeeroefeningen die beoordeeld worden met TESTed programmeertaalonafhankelijk zijn, is TESTed het best geschikt voor volgende soorten oefeningen:
 
@@ -118,6 +118,19 @@ fun echo(wat: String) {
 ```python
 def echo(argument):
     print(argument)
+```
+:::
+::: tab C#
+```csharp
+using System;
+
+class Submission
+{
+    public static void Echo(string content)
+    {
+        Console.WriteLine(content);
+    }
+}
 ```
 :::
 ::::
