@@ -11,7 +11,7 @@ It is often written for for one specific programming language, or for a set of p
 Each `judge` has its own configuration options, we will provide a link to the relevant documentation for each `judge` below.
 These judge specific options should be provided in the `evaluation` directory of the [exercise configuration](/en/references/exercise-directory-structure).
 
-Advanced users can also create their own judge, see [this guide](/en/guides/creating-a-judge/).
+Advanced users can also create their own judge, see [this guide](/en/guides/creating-a-judge).
 
 
 Dodona currently supports the following judges:
@@ -36,7 +36,7 @@ Dodona currently supports the following judges:
 TESTED is a whitebox judge that can be used for multiple programming languages.
 It uses a simple custom test format, that is indpendent of the programming language.\
 **Programing languages:** Bash, C, C#, Haskell, Java, Javascript, Kotlin, Python\
-**Get started** [Documentation](/en/tested#designing-exercises-for-dodona), [examples](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
+**Get started** [Documentation](/en/references/tested#designing-exercises-for-dodona), [examples](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ### Python
