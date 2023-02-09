@@ -26,7 +26,7 @@ Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de progra
 
 ## Python
 Python/Pythia is de eerste judge die is gemaakt voor Dodona.
-Het is een python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
+Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
 **Programmeertalen:** Python\
 **Aan de slag** [Documentatie](/nl/references/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -81,7 +81,7 @@ De HTML judge beoordeelt zowel de HTML als de CSS code van een student, op basis
 **Gemaakt door:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Turtle
-De Turtle judge evalueert de uitvoer van een python turtle programma. Het berekent de overeenkomst tussen de uitvoer van de leerling en de modeloplossing. \
+De Turtle judge evalueert de uitvoer van een Python turtle programma. Het berekent de overeenkomst tussen de uitvoer van de leerling en de modeloplossing. \
 **Programmeertalen:** Python (Turtle)**
 **Aan de slag** [Documentatie] (https://github.com/dodona-edu/judge-turtle) \
 **Gemaakt door:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)

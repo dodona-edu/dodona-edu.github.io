@@ -81,7 +81,7 @@ The HTML judge evaluates both the HTML and CSS code of a student, based on a mod
 **Created by:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Turtle
-The Turtle judge evaluates the output of a python turtle program. It calculates the similarity between the output of the student and the model solution.\
+The Turtle judge evaluates the output of a Python turtle program. It calculates the similarity between the output of the student and the model solution.\
 **Programing languages:** Python (Turtle)\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-turtle) \
 **Created by:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
