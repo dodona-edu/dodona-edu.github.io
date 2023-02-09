@@ -68,9 +68,9 @@ Haskell is een judge die HUnit gebruikt om haskell-oefeningen te testen. \
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-haskell), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
-## Schema
+## Scheme
 Scheme is een judge die gebruikt kan worden voor oefeningen in de programmeertaal Scheme.\
-**Programmeertalen:** Schema\
+**Programmeertalen:** Scheme\
 **Aan de slag** Neem contact op met de makers voor meer informatie over deze judge.\
 **Gemaakt door:** [Mathijs Saey](mailto:mathijs.saey@vub.be)
 
