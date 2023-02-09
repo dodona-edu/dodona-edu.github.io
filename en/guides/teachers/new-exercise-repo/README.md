@@ -13,7 +13,7 @@ A first step is thus to create a git repository. You can easily do this on [gith
 
 ## 2. Add the repository to Dodona
 
-All staff on Dodona has a `Repositories` link in the sidebar of the Dodona website, which takes you to an [overview of the repositories](https://dodona.ugent.be/en/repositories/). To add a new repository, hit the big plus button on the top.
+All staff on Dodona has a `Repositories` link in the sidebar of the Dodona website, which takes you to an [overview of your repositories](https://dodona.ugent.be/en/repositories/). To add a new repository, hit the big plus button on the top.
 
 ![add repository](./add-repository.png)
 
@@ -40,3 +40,6 @@ The only thing left to do is adding this URL to GitHub. To do this, open your re
 ## 4. Create learning activities
 
 You are now ready to add exercises and reading activities to your repository. If all goes well, they should show up automatically on Dodona.
+
+To find out more about how to create exercises in your repository, checkout the [repository directory structure](/en/references/repository-directory-structure) reference.
+The specific format of the test for your exercises depends on your chosen judge. You can find on overview of all our supported judges, with links to their documentation, on the [judge overview](/en/references/judge/).

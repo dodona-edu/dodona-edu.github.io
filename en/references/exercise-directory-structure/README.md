@@ -23,7 +23,7 @@ Take a look at the [example exercises repository](https://github.com/dodona-edu/
 Inside the `description` directory, you can specify the following directories:
 - **An optional `media` directory**: this directory contains static files such as images used in the exercise description.
 - **An optional `boilerplate` directory**: this directory contains the files `boilerplate.en`, `boilerplate.nl`, and/or `boilerplate`. The contents of these files are loaded automatically in the submission text area of the users. You can use this to provide some starting code or structure to your students.
-- **An `evaluation` directory**: the content of this directory is made available to the judge and can, for example, contain files containing the test code.
+- **An `evaluation` directory**: the content of this directory is made available to the judge and can, for example, contain files containing the test code. Look at the documentation of the judge you are using to see what files are expected. You can find links to the documentation for each judge [here](/en/references/judges).
 - **An optional `workdir` directory**: The content of this directory is made available when running the judge and can, for example, contain data files needed during execution.
 - **An optional `solution` directory**: Files in this directory will be shown on the exercise info page as sample solutions. Multiple sample solutions are possible, but files with a name starting with *solution* will be sorted first.
 
