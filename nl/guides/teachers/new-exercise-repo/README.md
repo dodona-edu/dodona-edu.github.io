@@ -43,5 +43,5 @@ Deze URL moet je vervolgens toevoegen aan GitHub. Dit doe je door op GitHub naar
 
 Je bent nu helemaal klaar om oefeningen en lesmateriaal toe te voegen aan je repository. Als alles goed gaat, dan zouden ze automatisch moeten verschijnen op Dodona.
 
-Voor meer informatie over het maken van oefeningen in je repository, bekijk de [repository directory structure](/en/references/repository-directory-structure) referentie.
-Het specifieke formaat van de tests voor je oefeningen hangt af van je gekozen judge. Je vindt een overzicht van alle ondersteunde judges, met links naar hun documentatie, op de [judge overview](/en/references/judge/).
+Voor meer informatie over het maken van oefeningen in je repository, bekijk de [repository directory structure](/nl/references/repository-directory-structure) referentie.
+Het specifieke formaat van de tests voor je oefeningen hangt af van je gekozen judge. Je vindt een overzicht van alle ondersteunde judges, met links naar hun documentatie, op de [judge overview](/nl/references/judges).
