@@ -15,28 +15,28 @@ Gevorderde gebruikers kunnen ook hun eigen judge aanmaken, zie [deze gids](/nl/g
 
 
 Dodona ondersteunt momenteel de volgende judges:
-* [TESTed](/nl/references/judges#tested)
-* [Python](/nl/references/judges#python)
-* [R](/nl/references/judges#r)
-* [JUnit](/nl/references/judges#junit)
-* [C](/nl/references/judges#c)
-* [SQL](/nl/references/judges#sql)
-* [Prolog](/nl/references/judges#prolog)
-* [Haskell](/nl/references/judges#haskell)
-* [Scheme](/nl/references/judges#scheme)
-* [HTML](/nl/references/judges#html)
-* [Turtle](/nl/references/judges#turtle)
-* [Markdown](/nl/references/judges#markdown)
-* [Java](/nl/references/judges#java)
-* [JavaScript](/nl/references/judges#javascript)
-* [Csharp (Deprecated)](/nl/references/judges#csharp)
-* [Bash (Deprecated)](/nl/references/judges#bash)
+* [TESTed](#tested)
+* [Python](#python)
+* [R](#r)
+* [JUnit](#junit)
+* [C](#c)
+* [SQL](#sql)
+* [Prolog](#prolog)
+* [Haskell](#haskell)
+* [Scheme](#scheme)
+* [HTML](#html)
+* [Turtle](#turtle)
+* [Markdown](#markdown)
+* [JavaScript](#javascript)
+* [Bash](#bash)
+* [Csharp (Deprecated)](#csharp-(deprecated))
+* [Java (Deprecated)](#java-(deprecated)))
 
 ### TESTED
 TESTED is een whitebox judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.
 **Programmeertalen:** Bash, C, C#, Haskell, Java, Javascript, Kotlin, Python.
-**Aan de slag** [Documentatie](/nl/references/tested#ontwerp-oefeningen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
+**Aan de slag** [Documentatie](/nl/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
 ### Python
@@ -112,7 +112,7 @@ Het geeft wel de markdown code van een leerling weer en kan handig zijn om de ui
 ### Javascript
 Javascript is een judge die gebruikt kan worden voor oefeningen in de javascript programmeertaal.
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
-Als je je eigen javascript oefeningen wilt maken, raden we je aan om de [TESTed judge](/nl/references/judges#tested) te gebruiken.
+Als je je eigen javascript oefeningen wilt maken, raden we je aan om de [TESTed judge](#tested) te gebruiken.
 **Programmeertalen:** Javascript
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -120,14 +120,14 @@ Als je je eigen javascript oefeningen wilt maken, raden we je aan om de [TESTed 
 ### Bash
 Bash is een judge die gebruikt kan worden voor oefeningen op de bash terminal.
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
-Als u uw eigen bash-oefeningen wilt maken, raden we u aan in plaats daarvan de [TESTed judge](/nl/references/judges#tested) te gebruiken.
+Als u uw eigen bash-oefeningen wilt maken, raden we u aan in plaats daarvan de [TESTed judge](#tested) te gebruiken.
 **Programmeertalen:** Bash.
 **Aan de slag** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/bash), neem contact op met de makers voor meer informatie over deze judge. \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
-### Csharp (Afgeschreven)
+### Csharp (Deprecated)
 De Csharp judge is verouderd en mag alleen gebruikt worden voor oude oefeningen.
-Als u uw eigen C#-oefeningen wilt maken, raden we u aan in plaats daarvan de [TESTed judge](/nl/references/judges#tested) te gebruiken.\
+Als u uw eigen C#-oefeningen wilt maken, raden we u aan in plaats daarvan de [TESTed judge](#tested) te gebruiken.\
 **Programmeertalen:** C#
 **Aan de slag** [Voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -135,7 +135,7 @@ Als u uw eigen C#-oefeningen wilt maken, raden we u aan in plaats daarvan de [TE
 ### Java (Deprecated)
 De Java judge is een JUnit judge voor java8 oefeningen.
 Het is verouderd en mag alleen gebruikt worden voor oude oefeningen.
-Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [JUnit judge](/nl/references/judges#junit) te gebruiken.
+Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [JUnit judge](#junit) te gebruiken.
 **Programmeertalen:** Java
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java8), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/java) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)

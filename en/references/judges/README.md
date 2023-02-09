@@ -15,28 +15,28 @@ Advanced users can also create their own judge, see [this guide](/en/guides/crea
 
 
 Dodona currently supports the following judges:
- * [TESTed](/en/references/judges#tested)
- * [Python](/en/references/judges#python)
- * [R](/en/references/judges#r)
- * [JUnit](/en/references/judges#junit)
- * [C](/en/references/judges#c)
- * [SQL](/en/references/judges#sql)
- * [Prolog](/en/references/judges#prolog)
- * [Haskell](/en/references/judges#haskell)
- * [Scheme](/en/references/judges#scheme)
- * [HTML](/en/references/judges#html)
- * [Turtle](/en/references/judges#turtle)
- * [Markdown](/en/references/judges#markdown)
- * [Java](/en/references/judges#java)
- * [JavaScript](/en/references/judges#javascript)
- * [Csharp (Deprecated)](/en/references/judges#csharp)
- * [Bash (Deprecated)](/en/references/judges#bash)
+ * [TESTed](#tested)
+ * [Python](#python)
+ * [R](#r)
+ * [JUnit](#junit)
+ * [C](#c)
+ * [SQL](#sql)
+ * [Prolog](#prolog)
+ * [Haskell](#haskell)
+ * [Scheme](#scheme)
+ * [HTML](#html)
+ * [Turtle](#turtle)
+ * [Markdown](#markdown)
+ * [JavaScript](#javascript)
+ * [Bash](#bash)
+ * [Csharp (Deprecated)](#csharp-(deprecated))
+ * [Java (Deprecated)](#java-(deprecated)))
 
 ### TESTed
 TESTED is a whitebox judge that can be used for multiple programming languages.
 It uses a simple custom test format, that is indpendent of the programming language.\
 **Programing languages:** Bash, C, C#, Haskell, Java, Javascript, Kotlin, Python\
-**Get started** [Documentation](/en/references/tested#designing-exercises-for-dodona), [examples](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
+**Get started** [Documentation](/en/tested#designing-exercises-for-dodona), [examples](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ### Python
@@ -111,7 +111,7 @@ It does render the markdown code of a student and can be useful to manually eval
 ### Javascript
 Javascript is a judge that can be used for exercises on the javascript programming language.
 It is undocumented and has a lot of very usecase specific implementations.
-If you want to create your own javascript exercises, we recommend you to use the [TESTed judge](/en/references/judges#tested) instead.\
+If you want to create your own javascript exercises, we recommend you to use the [TESTed judge](#tested) instead.\
 **Programing languages:** Javascript\
 **Get started** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
@@ -119,14 +119,14 @@ If you want to create your own javascript exercises, we recommend you to use the
 ### Bash
 Bash is a judge that can be used for exercises on the bash terminal.
 It is undocumented and has a lot of very usecase specific implementations.
-If you want to create your own bash exercises, we recommend you to use the [TESTed judge](/en/references/judges#tested) instead.
+If you want to create your own bash exercises, we recommend you to use the [TESTed judge](#tested) instead.
 **Programing languages:** Bash\
 **Get started** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/bash), contact the creators to get more info about this judge. \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ### Csharp (Deprecated)
 The Csharp judge is deprecated and should only be used for legacy exercises.
-If you want to create your own C# exercises, we recommend you to use the [TESTed judge](/en/references/judges#tested) instead.\
+If you want to create your own C# exercises, we recommend you to use the [TESTed judge](#tested) instead.\
 **Programing languages:** C#\
 **Get started** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
@@ -134,7 +134,7 @@ If you want to create your own C# exercises, we recommend you to use the [TESTed
 ### Java (Deprecated)
 The Java judge is a JUnit judge for java8 exercises.
 It is deprecated and should only be used for legacy exercises.
-If you want to create your own Java exercises, we recommend you to use the [JUnit judge](/en/references/judges#junit) instead.\
+If you want to create your own Java exercises, we recommend you to use the [JUnit judge](#junit) instead.\
 **Programing languages:** Java\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-java8), [examples](https://github.com/dodona-edu/example-exercises/tree/master/java) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
