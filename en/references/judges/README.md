@@ -26,7 +26,7 @@ It uses a simple custom test format, that is indpendent of the programming langu
 
 ## Python
 Python/Pythia is the first judge that was created for Dodona.
-It is a python judge that allows simple input/output tests or more advanced doctests.\
+It is a Python judge that allows simple input/output tests or more advanced doctests.\
 **Programing languages:** Python\
 **Get started** [Documentation](/en/references/python-judge), [examples](https://github.com/dodona-edu/example-exercises/tree/master/python) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
