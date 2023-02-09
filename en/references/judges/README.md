@@ -119,7 +119,7 @@ If you want to create your own C# exercises, we recommend you to use the [TESTed
 ## JUnit (Deprecated)
 The JUnit judge is a judge for java8 exercises.
 It is deprecated and should only be used for legacy exercises.
-If you want to create your own Java exercises, we recommend you to use the [JUnit judge](#junit) instead.\
+If you want to create your own Java exercises, we recommend you to use the [Java judge](#java) instead.\
 **Programing languages:** Java\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-java8), [examples](https://github.com/dodona-edu/example-exercises/tree/master/java) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)

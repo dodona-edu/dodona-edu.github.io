@@ -119,7 +119,7 @@ Als u uw eigen C#-oefeningen wilt maken, raden we u aan in plaats daarvan de [TE
 ## JUnit (Deprecated)
 De JUnit judge is een JUnit judge voor java8 oefeningen.
 Het is verouderd en mag alleen gebruikt worden voor oude oefeningen.
-Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [JUnit judge](#junit) te gebruiken. \
+Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [Java judge](#java) te gebruiken. \
 **Programmeertalen:** Java \
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java8), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/java) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
