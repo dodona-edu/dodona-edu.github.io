@@ -17,6 +17,22 @@ Advanced users can also create their own judge, see [this guide](/en/guides/crea
 
 
 Dodona currently supports the following judges:
+ * [TESTed](/en/references/judges#tested)
+ * [Python](/en/references/judges#python)
+ * [R](/en/references/judges#r)
+ * [JUnit](/en/references/judges#junit)
+ * [C](/en/references/judges#c)
+ * [SQL](/en/references/judges#sql)
+ * [Prolog](/en/references/judges#prolog)
+ * [Haskell](/en/references/judges#haskell)
+ * [Scheme](/en/references/judges#scheme)
+ * [HTML](/en/references/judges#html)
+ * [Turtle](/en/references/judges#turtle)
+ * [Markdown](/en/references/judges#markdown)
+ * [Java](/en/references/judges#java)
+ * [JavaScript](/en/references/judges#javascript)
+ * [Csharp (Deprecated)](/en/references/judges#csharp)
+ * [Bash (Deprecated)](/en/references/judges#bash)
 
 ### TESTed
 TESTED is a whitebox judge that can be used for multiple programming languages.
