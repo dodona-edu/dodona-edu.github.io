@@ -37,8 +37,8 @@ R is een judge die gebruikt kan worden voor oefeningen in de programmeertaal R.\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-r), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/R) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
-## JUnit
-JUnit gebruikt het JUnit4-framework om tests op java-oefeningen uit te voeren.\
+## Java
+Java is judge die het JUnit4-framework gebruikt om tests op java-oefeningen uit te voeren.\
 **Programmeertalen:** Java\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java), [voorbeelden](https://github.com/dodona-edu/judge-java/tree/master/examples) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -116,8 +116,8 @@ Als u uw eigen C#-oefeningen wilt maken, raden we u aan in plaats daarvan de [TE
 **Aan de slag** [Voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
-## Java (Deprecated)
-De Java judge is een JUnit judge voor java8 oefeningen.
+## JUnit (Deprecated)
+De JUnit judge is een JUnit judge voor java8 oefeningen.
 Het is verouderd en mag alleen gebruikt worden voor oude oefeningen.
 Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [JUnit judge](#junit) te gebruiken. \
 **Programmeertalen:** Java \
