@@ -10,7 +10,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 ## Config file structure for exercises
 
 - **`type`**: Must be set to `exercise` for exercises. Defaults to `exercise` if not present.
-- **`programming_language`** (string): the programming language of the exercise, used for syntax highlighting and correct file extensions
+- **`programming_language`** (string): the programming language of the exercise, used for syntax highlighting and correct file extensions. The available programming languages can be found [here](https://dodona.ugent.be/en/programming_languages/).
 - **`access`** (`public` or `private`): determines who can use this exercise
   - `public`: any other teacher on Dodona can use this exercise
   - `private`: only teachers with explicit permission can use this exercise
@@ -19,7 +19,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
     - **`nl`**: the name of the exercise in Dutch
     - **`en`**: the name of the exercise in English
 - **`evaluation`**: the specification of the evaluation procedure
-  - **`handler`** (string, optional): the name of the judge that is used for evaluation. By default, Dodona uses the judge specified for the repository.
+  - **`handler`** (string, optional): the name of the judge that is used for evaluation. By default, Dodona uses the judge specified for the repository. An overview of the available judges can be found [here](/en/references/judges).
   - **`image`** (string, optional): the name of the docker image that is used for evaluation. By default, Dodona uses the image specified by the judge.
   - **`time_limit`** (integer, optional): the time in seconds before the evaluations times out. By default, the limit is 42 seconds.
   - **`memory_limit`** (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 100MB.
