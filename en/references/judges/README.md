@@ -55,6 +55,12 @@ The SQL judge supports both query evaluation (DML) and structural database build
 **Get started** [Documentation](https://github.com/dodona-edu/judge-sql), [examples](https://github.com/dodona-edu/example-exercises/tree/master/sql) \
 **Created by:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
+## Scheme
+Scheme is a judge that supports the `R5RS` variant of the scheme programming language. It uses a custom testframework [dunit](https://gitlab.soft.vub.ac.be/Structuur1/dodona-judge/-/tree/master/collects/dunit) to define the tests.\
+**Programing languages:** Scheme\
+**Get started** [Documentation](https://gitlab.soft.vub.ac.be/Structuur1/dodona-judge), [examples](https://gitlab.soft.vub.ac.be/Structuur1/dodona-judge/-/tree/master/example-exercises) \
+**Created by:** [Mathijs Saey](mailto:scpi@dinf.vub.ac.be)
+
 ## Prolog
 Prolog is a judge that can be used for exercises on the prolog programming language.
 It supports PLUnit, QuickCheck and simple input output tests.\
@@ -67,12 +73,6 @@ Haskell is a judge that uses HUnit to test haskell exercises. \
 **Programing languages:** Haskell\
 **Get started** [Github repo](https://github.com/dodona-edu/judge-haskell), [examples](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
-
-## Scheme
-Scheme is a judge that can be used for exercises on the scheme programming language.\
-**Programing languages:** Scheme\
-**Get started** Contact the creators to get more info about this judge.\
-**Created by:** [Mathijs Saey](mailto:mathijs.saey@vub.be)
 
 ## HTML
 The HTML judge evaluates both the HTML and CSS code of a student, based on a model solution or a checklist of criteria.\
