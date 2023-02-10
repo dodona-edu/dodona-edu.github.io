@@ -83,14 +83,14 @@ De HTML judge beoordeelt zowel de HTML als de CSS code van een student, op basis
 ## Turtle
 De Turtle judge evalueert de uitvoer van een Python turtle programma. Het berekent de overeenkomst tussen de uitvoer van de leerling en de modeloplossing. \
 **Programmeertalen:** Python (Turtle)**
-**Aan de slag** [Documentatie] (https://github.com/dodona-edu/judge-turtle) \
+**Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-turtle) \
 **Gemaakt door:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Markdown
 De markdown judge is geen echte judge omdat hij geen code evalueert.
 Het geeft wel de markdown code van een leerling weer en kan handig zijn om de uitvoer handmatig te evalueren in Dodona. \
 **Programmeertalen:** Markdown\
-**Aan de slag** [Documentatie] (https://github.com/dodona-edu/judge-markdown) \
+**Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-markdown) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Javascript
