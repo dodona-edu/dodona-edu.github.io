@@ -38,7 +38,7 @@ R is a judge that can be used for exercises on the R programming language.\
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Java
-The java judge uses the JUnit4 framework to run tests on java exercises.\
+The java judge uses the JUnit4 framework to run tests on Java exercises.\
 **Programing languages:** Java\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-java), [examples](https://github.com/dodona-edu/judge-java/tree/master/examples) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
@@ -69,7 +69,7 @@ It supports PLUnit, QuickCheck and simple input output tests.\
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Haskell
-Haskell is a judge that uses HUnit to test haskell exercises. \
+Haskell is a judge that uses HUnit to test Haskell exercises. \
 **Programing languages:** Haskell\
 **Get started** [Github repo](https://github.com/dodona-edu/judge-haskell), [examples](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
@@ -94,7 +94,7 @@ It does render the markdown code of a student and can be useful to manually eval
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Javascript
-Javascript is a judge that can be used for exercises on the javascript programming language.
+Javascript is a judge that can be used for exercises on the JavaScript programming language.
 It is undocumented and has a lot of very usecase specific implementations.
 If you want to create your own javascript exercises, we recommend you to use the [TESTed judge](#tested) instead.\
 **Programing languages:** Javascript\
@@ -117,7 +117,7 @@ If you want to create your own C# exercises, we recommend you to use the [TESTed
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ## JUnit (Deprecated)
-The JUnit judge is a judge for java8 exercises.
+The JUnit judge is a judge for Java 8 exercises.
 It is deprecated and should only be used for legacy exercises.
 If you want to create your own Java exercises, we recommend you to use the [Java judge](#java) instead.\
 **Programing languages:** Java\

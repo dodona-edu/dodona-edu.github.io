@@ -38,7 +38,7 @@ R is een judge die gebruikt kan worden voor oefeningen in de programmeertaal R.\
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Java
-Java is judge die het JUnit4-framework gebruikt om tests op java-oefeningen uit te voeren.\
+Java is judge die het JUnit4-framework gebruikt om tests op Java-oefeningen uit te voeren.\
 **Programmeertalen:** Java\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java), [voorbeelden](https://github.com/dodona-edu/judge-java/tree/master/examples) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -69,7 +69,7 @@ Het ondersteunt PLUnit, QuickCheck en eenvoudige input-outputtests.\
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Haskell
-Haskell is een judge die HUnit gebruikt om haskell-oefeningen te testen. \
+Haskell is een judge die HUnit gebruikt om Haskell-oefeningen te testen. \
 **Programmeertalen:** Haskell\
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-haskell), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -94,9 +94,9 @@ Het geeft wel de markdown code van een leerling weer en kan handig zijn om de ui
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Javascript
-Javascript is een judge die gebruikt kan worden voor oefeningen in de javascript programmeertaal.
+JavaScript is een judge die gebruikt kan worden voor oefeningen in de JavaScript programmeertaal.
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
-Als je je eigen javascript oefeningen wilt maken, raden we je aan om de [TESTed judge](#tested) te gebruiken.\
+Als je je eigen JavaScriptoefeningen wilt maken, raden we je aan om de [TESTed judge](#tested) te gebruiken.\
 **Programmeertalen:** Javascript\
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
@@ -117,7 +117,7 @@ Als u uw eigen C#-oefeningen wilt maken, raden we u aan in plaats daarvan de [TE
 **Gemaakt door:** [Team dodona](mailto:dodona@ugent.be)
 
 ## JUnit (Deprecated)
-De JUnit judge is een JUnit judge voor java8 oefeningen.
+De JUnit judge is een JUnit judge voor Java 8 oefeningen.
 Het is verouderd en mag alleen gebruikt worden voor oude oefeningen.
 Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [Java judge](#java) te gebruiken. \
 **Programmeertalen:** Java \
