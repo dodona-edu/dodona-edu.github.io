@@ -7,20 +7,20 @@ description: "Overview of all judges available on Dodona"
 
 This guide is written for teachers who are creating exercises for Dodona.
 
-Before you create an exercise, you should decide which `judge` you want to use.
-The `judge` is the program that will evaluate the submissions of students.
-It is often written for one specific programming language, or for a set of programming languages.
-Each `judge` has its own configuration options, we will provide a link to the relevant documentation for each `judge` below.
-These judge specific options should be provided in the `evaluation` directory of the [exercise configuration](/en/references/exercise-directory-structure).
+Before you create an exercise, you should decide which _judge_ you want to use.
+A judge is the program that will evaluate the submissions of students.
+It is often written for one specific programming language, but supporting a set of programming languages is also possible.
+Each judge has its own configuration options, we will provide a link to the relevant documentation for each judge below.
+These judge-specific options should be provided in the `evaluation` directory of the [exercise configuration](/en/references/exercise-directory-structure).
 
 Advanced users can also create their own judge, see [this guide](/en/guides/creating-a-judge).
 
 Dodona currently supports the following judges:
 
 ## TESTed
-TESTED is a whitebox judge that can be used for multiple programming languages.
-It uses a simple custom test format, that is indpendent of the programming language.\
-**Programing languages:** Bash, C, C#, Haskell, Java, Javascript, Kotlin, Python\
+TESTed is a whitebox judge that can be used for multiple programming languages.
+It uses a simple custom test format, that is independent of the programming language of the exercise.\
+**Programming languages:** Bash, C, C#, Haskell, Java, JavaScript, Kotlin, Python\
 **Get started** [Documentation](/en/tested#designing-exercises-for-dodona), [examples](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
@@ -62,7 +62,7 @@ Scheme is a judge that supports the `R5RS` variant of the scheme programming lan
 **Created by:** [Mathijs Saey](mailto:scpi@dinf.vub.ac.be)
 
 ## Prolog
-Prolog is a judge that can be used for exercises on the prolog programming language.
+Prolog is a judge that can be used for exercises on the Prolog programming language.
 It supports PLUnit, QuickCheck and simple input output tests.\
 **Programing languages:** Prolog\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-prolog), [examples](https://github.com/dodona-edu/example-exercises/tree/master/prolog) \
@@ -81,14 +81,14 @@ The HTML judge evaluates both the HTML and CSS code of a student, based on a mod
 **Created by:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Turtle
-The Turtle judge evaluates the output of a Python turtle program. It calculates the similarity between the output of the student and the model solution.\
+The Turtle judge evaluates the output of a Python Turtle program. It calculates the similarity between the output of the student and the model solution.\
 **Programing languages:** Python (Turtle)\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-turtle) \
 **Created by:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Markdown
 The markdown judge is not a real judge as it does not evaluate code.
-It does render the markdown code of a student and can be useful to manually evaluate the output in Dodona.\
+It does render the Markdown code of a student and can be useful to manually evaluate the output in Dodona.\
 **Programing languages:** Markdown\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-markdown) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
@@ -96,15 +96,15 @@ It does render the markdown code of a student and can be useful to manually eval
 ## Javascript
 Javascript is a judge that can be used for exercises on the JavaScript programming language.
 It is undocumented and has a lot of very usecase specific implementations.
-If you want to create your own javascript exercises, we recommend you to use the [TESTed judge](#tested) instead.\
-**Programing languages:** Javascript\
+If you want to create your own JavaScript exercises, we recommend you to use the [TESTed judge](#tested) instead.\
+**Programming languages:** JavaScript\
 **Get started** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
 
 ## Bash
 Bash is a judge that can be used for exercises on the bash terminal.
 It is undocumented and has a lot of very usecase specific implementations.
-If you want to create your own bash exercises, we recommend you to use the [TESTed judge](#tested) instead.
+If you want to create your own Bash exercises, we recommend you to use the [TESTed judge](#tested) instead.
 **Programing languages:** Bash\
 **Get started** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/bash), contact the creators to get more info about this judge. \
 **Created by:** [Team dodona](mailto:dodona@ugent.be)
