@@ -8,6 +8,8 @@ description: "Tutorial: creating a judge"
 This is an advanced guide aimed at developers. You will probably not need the info on this page. If you plan to create a judge, please contact us at <a href="mailto:dodona@ugent.be">dodona@ugent.be</a>.
 :::
 
+Before you create your own judge, please check if there is no [existing judge](/en/references/judges) that can be used for your exercises.
+
 For each judge in Dodona, there is one git repository. This git repository requires a [predefined structure](#_2-repository-structure) and [interface](#_3-judge-interface) to fit into Dodona. Once created, a judge should be [added to Dodona](#_1-adding-a-judge), so it can be used for exercises.
 
 ## 1. Adding a Judge

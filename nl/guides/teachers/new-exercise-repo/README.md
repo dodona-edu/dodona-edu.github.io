@@ -13,7 +13,7 @@ Een eerste stap is om een git repository aan te maken. Je kan dit eenvoudig doen
 
 ## 2. Je repository aan Dodona toevoegen
 
-Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link `Repositories` die je naar een [overzicht van alle repositories op Dodona](https://dodona.ugent.be/nl/repositories/) brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
+Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link `Repositories` die je naar een [overzicht van jouw repositories op Dodona](https://dodona.ugent.be/nl/repositories/) brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
 
 ![repository toevoegen](./add-repository.png)
 
@@ -42,3 +42,6 @@ Deze URL moet je vervolgens toevoegen aan GitHub. Dit doe je door op GitHub naar
 ## 4. Lesmateriaal aanmaken
 
 Je bent nu helemaal klaar om oefeningen en lesmateriaal toe te voegen aan je repository. Als alles goed gaat, dan zouden ze automatisch moeten verschijnen op Dodona.
+
+Voor meer informatie over het maken van oefeningen in je repository, bekijk de [repository directory structure](/nl/references/repository-directory-structure) referentie.
+Het specifieke formaat van de tests voor je oefeningen hangt af van je gekozen judge. Je vindt een overzicht van alle ondersteunde judges, met links naar hun documentatie, op de [judge overview](/nl/references/judges).

@@ -230,6 +230,7 @@ function getReferencesSidebar(lang, groupTitle, FirstItem) {
         'repository-directory-structure/',
         'exercise-directory-structure/',
         'python-judge/',
+        'judges/',
       ]
     },
     `/${lang}/tested/`

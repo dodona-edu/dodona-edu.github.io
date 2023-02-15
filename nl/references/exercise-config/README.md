@@ -10,7 +10,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 ## Configuratiebestandsstructuur voor oefeningen
 
 - **`type`**: Moet ingesteld worden op `exercise` voor oefeningen. De standaardwaarde indien afwezig is `exercise`.
-- **`programming_language`** (string): de programmeertaal van de oefening, wordt gebruikt voor *syntax highlighting* en om de juiste bestandsextensie te bepalen
+- **`programming_language`** (string): de programmeertaal van de oefening, wordt gebruikt voor *syntax highlighting* en om de juiste bestandsextensie te bepalen. Een overzicht van de mogelijke programmeertalen vind je [hier](https://dodona.ugent.be/nl/programming_languages/).
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiker
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
@@ -19,7 +19,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
     - **`nl`**: de naam van de oefening in het Nederlands
     - `en`: de naam van de oefening in het Engels
 - **`evaluation`**: de specificatie van de evaluatieprocedure
-  - **`handler`** (string, optioneel): de naam van de judge die gebruikt wordt voor de evaluatie. Standaard gebruik Dodona de judge die ingesteld is voor de repository.
+  - **`handler`** (string, optioneel): de naam van de judge die gebruikt wordt voor de evaluatie. Standaard gebruik Dodona de judge die ingesteld is voor de repository. Een overzicht van de mogelijke judges vind je [hier](/nl/references/judges).
   - **`image`** (string, optioneel): de naam van de docker image die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de image die ingesteld is voor de judge.
   - **`time_limit`** (integer, optioneel): de tijd in seconden waarna de evaluatie van een oefening stopgezet wordt. Standaard is dit 42 seconden
   - **`memory_limit`** (integer, optioneel): de hoeveelheid geheugen in bytes die gebruikt kan worden bij het uitvoeren van de evaluatie. Standaard is dit ingesteld op 100M.
