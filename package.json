@@ -16,7 +16,7 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.8",
     "@vuepress/plugin-google-analytics": "^1.9.8",
-    "@vuepress/plugin-medium-zoom": "^1.9.8",
+    "@vuepress/plugin-medium-zoom": "^1.9.9",
     "markdown-it-imsize": "^2.0.1",
     "prismjs": "^1.29.0",
     "vue-tabs-component": "^1.5.0",
