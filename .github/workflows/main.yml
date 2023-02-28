@@ -30,8 +30,5 @@ jobs:
           max_concurrency: 3
           # This check doesn't pick up the favicon in the public folder
           check_favicon: false
-          # Until Vuepress itself doesn't include invalid CSS anymore.
-          # See https://github.com/vuejs/vuepress/pull/3118
-          check_html: false
           ignore_url_re: |
             /smartschool.be/
