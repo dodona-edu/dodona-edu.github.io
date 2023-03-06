@@ -520,31 +520,34 @@ To support custom datatypes, you must use a `SpecificEvaluator`.
 
 ## Evaluators
 
-There are three ways of checking results in TESTed:
+There are two ways of checking test results in TESTed.
+Both involve implementing or using a "check function",
+which is the code that receives the results from the submission and must decide if it is correct or not.
 
-1. *Built-in checks*
-   These are programming-language-independent, and are the preferred way to use TESTed.
-2. *Programmed checks*
-   In this case, you, as the exercise author, provide an implementation of a function which will be called by TESTed
-   when checking the results.
-   You only have to implement this function once in one programming language.
-   TESTed takes care of translating the results between multiple programming languages.
-   This means these types of checks are still programming-language-independent.
-   A good example is checking non-deterministic behavior, such as randomness or dynamic results, e.g. when results are
-   dependent on the current date.
-3. *Language-specific checks*
-   Here, you need to provide the implementation of a function for each programming language the exercise needs to
-   support.
-   The downside is that the test suite is no longer programming-language-independent.
-   For example, if a new language is added to TESTed, your test suite will need updating.
-   However, this does allow you to test programming-language-specific aspects, such as custom datatypes.
+There are two ways to achieve this:
 
-Internally, these checks are implemented using evaluators.
-The *built-in checks* are implemented using "generic evaluators", which are the default for all output channels.
-This means you often don't need to specify them.
+1. The programming-language-independent way.
+   Here you only need one check function, regardless of the number of programming languages your exercise supports.
+   Internally, the test results will be serialized and deserialized by TESTed before calling the check function.
+   Some functions are built-in to TESTed and are ready to use.
+   These mainly cover basic tests, such as stdout, stderr, return values, etc.
+   In other cases, such as testing with randomness, you will need to implement the check function yourselves
+   (but only once, in a programming language of your choice).
+2. Using language-specific checks.
+   Here, you need to provide a check function in each programming language you want your exercise to support.
+   Since these are executed together with the submission,
+   they are not limited by the serialization process.
+   This means you can test programming-language-specific aspects, such as custom datatypes,
+   but you will need to provide a check function for every programming language.
 
-*Programmed checks* are achieved using the [`SpecificEvaluator`](#specificevaluator).
-*Language-specific checks* are implemented using the [`ProgrammedEvaluator`](#programmedevaluator).
+For the programming-language-independent way,
+you can either use one of the built-in check functions or provide your own.
+
+In a test suite, this translates to three kinds of evaluators:
+
+1. "Generic evaluators" for the built-in check functions.
+2. [`SpecificEvaluator`](#specificevaluator) for a custom check function using the programming-language-independent way.
+3. [`ProgrammedEvaluator`](#programmedevaluator) for custom check functions that are programming language specific.
 
 Each evaluator has an attribute `.type` with the internal type of the evaluator.
 Generic evaluators also have an attribute `.name` with the internal name of the evaluator.
