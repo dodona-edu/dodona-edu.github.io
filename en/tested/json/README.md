@@ -1,19 +1,27 @@
 ---
-title: Test suite format
+title: Advanced test suite reference
 description: "Create test suites for TESTed"
 sidebarDepth: 2
 ---
 
-# Test suite format
+# Advanced test suite reference
+
+:::tip Advanced test suites vs. DSL test suites
+This is the reference guide for advanced test suites, written in JSON.
+In most cases, you should prefer using the DSL test suites (written in YAML).
+
+This format is mostly useful if:
+- You generate the test suite programmatically. In this case, JSON might be easier than YAML to write.
+- You need to do something that is not supported by the DSL test suite format.
+:::
 
 In TESTed, a test suite specifies which test cases are executed against a submission.
 TESTed differs from other test frameworks in that its test suites are independent of any programming language.
-As a result, a single test suite is sufficient to check submissions for the same exercise in different programming
-languages.
+As a result,
+a single test suite is sufficient to check submissions for the same exercise in different programming languages.
 
-The TESTed test suite format is formally specified
-by [this Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
-It can also generate a JSON Schema to make the validation of test suites easier.
+[This Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py) formally specifies the TESTed test suite format.
+The module can also generate a JSON Schema to make the validation of test suites easier.
 The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) for TESTed contains a number of examples of test suites.
 
 The first section of this reference describes the structure of the test suite.
