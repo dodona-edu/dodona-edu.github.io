@@ -40,7 +40,7 @@ Als u TESTed wenst te gebruiken buiten Dodona, raden we aan [deze handleiding](h
 Een aantal technische specificaties zijn ook beschikbaar:
 
 - [Configuratie-opties](/nl/tested/exercise-config)
-- [Formaat voor testplannen](/nl/tested/json)
+- [Formaat voor geavanceerde testplannen (JSON)](/nl/tested/json) (niet aanbevolen voor algemeen gebruik)
 - [Gegevenstypes voor programmeertalen](/nl/tested/types)
 
 Nuttige handleidingen als u aan TESTed zelf wilt werken:
@@ -173,7 +173,7 @@ Maak een nieuw bestand `config.json` aan in de map `echo`, met volgende inhoud:
     }
   },
   "evaluation": {
-    "plan_name": "tests.json"
+    "plan_name": "tests.yaml"
   },
   "programming_language": "python",
   "access": "private"
@@ -183,7 +183,7 @@ Maak een nieuw bestand `config.json` aan in de map `echo`, met volgende inhoud:
 Dit configuratiebestand specifieert, in volgorde:
 
 1. Een naam voor de oefening in het Nederlands en het Engels.
-2. Het pad naar het testplan (`tests.json`), relatief ten opzichte van de map `echo/evaluation`.
+2. Het pad naar het testplan (`tests.yaml`), relatief ten opzichte van de map `echo/evaluation`.
 3. We stellen de standaardprogrammeetaal in op Python.
    Hoewel TESTed meerdere programmeertalen ondersteunt,
    is Dodona beperkt tot één programmeertaal per oefening.
@@ -234,52 +234,20 @@ Een testplan bevat alle testgevallen die uitgevoerd zullen worden op een oplossi
 
 Om deze handleiding kort te houden, beperken we ons tot een testplan met één enkel testgeval.
 In een echte oefening zou het testplan veel meer testgevallen bevatten.
-Maak een nieuw bestand `evaluation/tests.json` met volgende inhoud:
+Maak een nieuw bestand `evaluation/tests.yaml` met volgende inhoud:
 
-```json
-{
- "tabs": [
-  {
-   "name": "Echo",
-   "runs": [
-    {
-     "contexts": [
-      {
-       "testcases": [
-        {
-         "input": {
-          "type": "function",
-          "name": "echo",
-          "arguments": [
-           {
-            "type": "text",
-            "data": "input-1"
-           }
-          ]
-         },
-         "output": {
-          "stdout": {
-           "type": "text",
-           "data": "input-1"
-          }
-         }
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  }
- ]
-}
+```yaml
+- tab: "Echo"
+  testcases:
+     - expression: "echo('input-1')"
+       stdout: "input-1"
 ```
 
 Dit testplan definieert zegt:
 
 1. Alle feedback is verzameld in één tabblad met naam _Echo_.
 2. Het tabblad bevat feedback voor één testgeval.
-3. Het testgeval roept we de functie `echo` op met een string `input-1` als argument.
-   Conceptueel is dit equivalent met `echo("input-1")` uitvoeren in Python.
+3. Het testgeval roept we de functie `echo` op met een string `"input-1"` als argument.
 4. Het verwachte resultaat is dat de tekst `input-1` op stdout geschreven wordt.
 
 Nu ziet de bestandsstructuur er als volgt uit:
@@ -288,7 +256,7 @@ Nu ziet de bestandsstructuur er als volgt uit:
 ├── echo/
 |   ├── config.json
 |   ├── evaluation/
-|   |   └── tests.json
+|   |   └── tests.yaml
 |   ├── description/
 |   |   └── description.nl.md
 ```
