@@ -9,13 +9,12 @@ Naast de [algemene configuratieopties](/nl/references/exercise-config) voor oefe
 
 ## Testplan
 
-De standaardlocatie van een testplan voor TESTed is een JSON-bestand `plan.json` in de map `evaluation` van de oefening.
-Het optionele veld `testplan` in het `evaluation`-blok kan gebruikt worden om een alternatieve locatie in te stellen, relatief tegenover de map `evaluation`.
+Het veld `test_suite` in het `evaluation`-blok wordt gebruikt om de locatie van het testplan op te geven, relatief tegenover de map `evaluation`.
 
 ```json
 {
   "evaluation": {
-    "testplan": "plan.json"
+    "test_suite": "suite.yaml"
   }
 }
 ```

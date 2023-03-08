@@ -44,7 +44,8 @@ If you want to use TESTed outside of Dodona, we recommend following [this tutori
 A number of technical specifications are also available:
 
 - [Configuration options](/en/tested/exercise-config)
-- [Advanced (JSON) test suite format](/en/tested/json) (not recommended for general use)
+- [Reference for DSL test suites](/en/tested/dsl) (recommended)
+- [Reference for advanced test suites](/en/tested/json) (not recommended for general use)
 - [Data types for programming languages](/en/tested/types)
 
 Useful guides if you want to work on TESTed itself:
@@ -179,7 +180,7 @@ Create a new file `config.json` in the `echo` directory, with the following cont
     }
   },
   "evaluation": {
-    "plan_name": "tests.yaml"
+    "test_suite": "tests.yaml"
   },
   "programming_language": "python",
   "access": "private"

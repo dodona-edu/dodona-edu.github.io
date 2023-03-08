@@ -40,7 +40,8 @@ Als u TESTed wenst te gebruiken buiten Dodona, raden we aan [deze handleiding](h
 Een aantal technische specificaties zijn ook beschikbaar:
 
 - [Configuratie-opties](/nl/tested/exercise-config)
-- [Formaat voor geavanceerde testplannen (JSON)](/nl/tested/json) (niet aanbevolen voor algemeen gebruik)
+- [Referentie voor DSL-testplannen](/nl/tested/dsl) (aanbevolen)
+- [Referentie voor geavanceerde testplannen](/en/tested/json) (niet aanbevolen voor algemeen gebruik)
 - [Gegevenstypes voor programmeertalen](/nl/tested/types)
 
 Nuttige handleidingen als u aan TESTed zelf wilt werken:

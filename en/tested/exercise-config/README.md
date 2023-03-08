@@ -10,18 +10,17 @@ some specific options for TESTed can be used as well.
 
 ## Test suite
 
-The default location of a test suite for TESTed is a JSON file `plan.json` in the `evaluation` directory of the exercise.
-The optional `testplan` attribute in the `evaluation` block takes an alternative location as a path name relative to the `evaluation` directory.
+The `test_suite` attribute in the `evaluation` block takes the location of the test suite as a path name relative to the `evaluation` directory.
 
 ```json
 {
   "evaluation": {
-    "testplan": "plan.json"
+    "test_suite": "plan.yaml"
   }
 }
 ```
 
-See [_Test suite format_](/en/tested/json) for a detailed description of the test suite format for TESTed.
+See the reference documentation for the [DSL test suites](/en/tested/dsl) and the [advanced test suites](/en/tested/json) for a detailed description of the test suite formats.
 
 ## General options
 
@@ -273,7 +272,7 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
   },
   "evaluation": {
     "handler": "TESTed",
-    "plan_name": "plan.json",
+    "test_suite": "suite.yaml",
     "options": {
       "mode": "batch",
       "allow_fallback": true,

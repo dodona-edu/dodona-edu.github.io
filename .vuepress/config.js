@@ -250,6 +250,7 @@ function getTESTedSidebar(lang, groupTitle, FirstItem) {
         // These URLs should be stable, since they are published.
         ['', FirstItem],
         'exercise-config/',
+        'dsl/',
         'json/',
         'types/',
         'new-programming-language/',
