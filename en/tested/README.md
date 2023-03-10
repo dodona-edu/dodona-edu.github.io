@@ -44,7 +44,8 @@ If you want to use TESTed outside of Dodona, we recommend following [this tutori
 A number of technical specifications are also available:
 
 - [Configuration options](/en/tested/exercise-config)
-- [Test suite format](/en/tested/json)
+- [Reference for DSL test suites](/en/tested/dsl) (recommended)
+- [Reference for advanced test suites](/en/tested/json) (not recommended for general use)
 - [Data types for programming languages](/en/tested/types)
 
 Useful guides if you want to work on TESTed itself:
@@ -179,7 +180,7 @@ Create a new file `config.json` in the `echo` directory, with the following cont
     }
   },
   "evaluation": {
-    "plan_name": "tests.json"
+    "test_suite": "tests.yaml"
   },
   "programming_language": "python",
   "access": "private"
@@ -189,7 +190,7 @@ Create a new file `config.json` in the `echo` directory, with the following cont
 This configuration file specifies, in order:
 
 1. An exercise name in Dutch and in English.
-2. The path name of the test suite (`tests.json`) relative to the `echo/evaluation` directory.
+2. The path name of the test suite (`tests.yaml`) relative to the `echo/evaluation` directory.
 3. Python as the default programming language.
    While TESTed supports multiple programming languages, 
    Dodona currently supports only a single programming language per exercise.
@@ -239,53 +240,20 @@ A test suite contains all test cases that will be executed on the submission to 
 
 For brevity, we will only include a single test case in our test suite.
 But a real test suite would contain many more test cases.
-Create a new file `evaluation/tests.json`:
+Create a new file `evaluation/tests.yaml`:
 
-
-```json
-{
- "tabs": [
-  {
-   "name": "Echo",
-   "runs": [
-    {
-     "contexts": [
-      {
-       "testcases": [
-        {
-         "input": {
-          "type": "function",
-          "name": "echo",
-          "arguments": [
-           {
-            "type": "text",
-            "data": "input-1"
-           }
-          ]
-         },
-         "output": {
-          "stdout": {
-           "type": "text",
-           "data": "input-1"
-          }
-         }
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  }
- ]
-}
+```yaml
+- tab: "Echo"
+  testcases:
+     - expression: "echo('input-1')"
+       stdout: "input-1"
 ```
 
 This test suite specifies that:
 
 1. All feedback is included in a single tab called _Echo_.
 2. The tab contains feedback on a single test case.
-3. The test case calls the function `echo` with a string argument `input-1`.
-   Conceptually, this is equivalent to calling `write("input-1")` in Python.
+3. The test case calls the function `echo` with a string argument `"input-1"`.
 4. The expected behavior of the test case is that the text `input-1` is generated on stdout.
 
 
@@ -295,7 +263,7 @@ The file structure now looks like this:
 ├── echo/
 |   ├── config.json
 |   ├── evaluation/
-|   |   └── tests.json
+|   |   └── tests.yaml
 |   ├── description/
 |   |   └── description.en.md
 ```

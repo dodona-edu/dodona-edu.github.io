@@ -1,18 +1,20 @@
 ---
-title: "[en] Formaat voor testplannen"
-description: "Maak testplannen voor TESTed"
+title: "[en] Referentie voor geavanceerde testplannen"
+description: "Schrijf geavanceerde testplannen voor TESTed"
 ---
-# Formaat voor testplannen
+# Referentie voor geavanceerde testplannen
 
-::: warning Engelstalige referentie
-De volledige referentie is enkel beschikbaar in het Engels.
+:::warning Geavanceerde testplannen vs. DSL-testplannen
+Dit is de referentiegids voor geavanceerde testplannen, geschreven in JSON.
+In de meeste gevallen is het beter om de [DSL-testplannen](/nl/tested/dsl) (geschreven in YAML) te gebruiken.
+
+Het geavanceerde formaat kan nuttig zijn om:
+
+- Het testplan te genereren met code. In dat geval kan het makkelijker zijn om JSON te genereren dan YAML.
+- Iets te doen dat de DSL-testplannen niet ondersteunen.
+
+Merk ook op dat deze referentie enkel in het Engels beschikbaar is.
 [Ga naar de Engelstalige versie.](/en/tested/json)
 :::
 
-Een testplan voor TESTed legt vast welke testgevallen uitgevoerd worden op een ingediende oplossing.
-TESTed verschilt van andere judges doordat testplannen niet afhankelijk zijn van één bepaalde programmeertaal.
-Derhalve volstaat één testplan om ingediende oplossingen in verschillende programmeertalen van dezelfde oefening te evalueren.
-
-Het formaat voor testplannen voor TESTed is formeel vastgelegd door [deze Python-module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
-Deze module kan ook een _JSON Schema_ genereren om het valideren van testplannen makkelijker te maken.
-The [repository met de broncode](https://github.com/dodona-edu/universal-judge/tree/master/exercise) van TESTed bevat een aantal voorbeelden van testplannen.
+[Ga naar de Engelstalige versie.](/en/tested/json)

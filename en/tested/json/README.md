@@ -1,33 +1,45 @@
 ---
-title: Test suite format
-description: "Create test suites for TESTed"
+title: Reference for advanced test suites
+description: "Create advanced test suites for TESTed"
 sidebarDepth: 2
 ---
 
-# Test suite format
+# Advanced test suite reference
+
+:::warning Advanced test suites vs. DSL test suites
+This is the reference guide for advanced test suites, written in JSON.
+In most cases, you should prefer using the [DSL test suites](/en/tested/dsl) (written in YAML).
+
+This format is mostly useful if:
+- You generate the test suite programmatically. In this case, JSON might be easier than YAML to write.
+- You need to do something that is not supported by the DSL test suite format.
+:::
 
 In TESTed, a test suite specifies which test cases are executed against a submission.
 TESTed differs from other test frameworks in that its test suites are independent of any programming language.
-As a result, a single test suite is sufficient to check submissions for the same exercise in different programming
-languages.
+As a result,
+a single test suite is sufficient to check submissions for the same exercise in different programming languages.
 
-The TESTed test suite format is formally specified
-by [this Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testplan.py).
-It can also generate a JSON Schema to make the validation of test suites easier.
+[This Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testsuite.py) formally specifies the TESTed test suite format.
+The module can also generate a JSON Schema to make the validation of test suites easier.
 The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) for TESTed contains a number of examples of test suites.
 
 The first section of this reference describes the structure of the test suite.
 A dot notation is used to indicate where the attribute is located in the hierarchical structure.
 A star (`*`) is used to indicate a list of objects.
-For example, `plan.tabs.*.runs.*.run` can roughly be converted to json like this:
+For example, `.tabs.*.contexts.*.testcases.*.description` can roughly be converted to json like this:
 
 ```json5
-{                   // `plan`
- tabs: [            // `plan.tabs`
-  {                 // `plan.tabs.*`
-   runs: [          // `plan.tabs.*.runs`
-    {               // `plan.tabs.*.runs.*` 
-     run: "example" // `plan.tabs.*.runs.*.run`
+{                         // <root>
+ tabs: [                  // .tabs
+  {                       // .tabs.*
+   contexts: [            // .tabs.*.contexts
+    {                     // .tabs.*.contexts.*` 
+     testcases: [         // .tabs.*.contexts.*.testcases
+       {                  // .tabs.*.contexts.*.testcases.*
+         description: "1" // .tabs.*.contexts.*.testcases.*.description
+       }
+     ]
     }
    ]
   }
@@ -37,9 +49,9 @@ For example, `plan.tabs.*.runs.*.run` can roughly be converted to json like this
 
 In the sections after that, some aspects are discussed in more detail.
 
-## `plan`
+## `<root>`
 
-Top-level object of a test suite.
+Root object of a test suite.
 Since this object is not named in a test suite, we ignore it in all titles below.
 
 ### `.namespace`
@@ -51,8 +63,8 @@ The default namespace is `submission`.
 For example, Java submissions must include a class called `Submission`.
 
 :::tip Hint
-The namespace is best written in `snake_case`,
-which enables using the right style convention for each programming language.
+You should use `snake_case` for the namespace,
+as it enables using the right style convention for each programming language.
 :::
 
 ## `.tabs.*`
@@ -60,7 +72,7 @@ which enables using the right style convention for each programming language.
 A list of all tabs that will be executed.
 
 The tabs in a test suite correspond with the visual grouping of test cases into tabs on Dodona.
-A tab contains a list of the runs that must be executed.
+A tab contains a list of the contexts.
 
 ### `.name`
 
@@ -70,102 +82,11 @@ The name of the tab; displayed on Dodona.
 
 A boolean indicating if the tab must be hidden when all its test cases succeed.
 
-## `.tabs.*.runs.*`
+## `.tabs.*.contexts.*`
 
-This is a list of all runs (generated executables) that must be executed.
-
-A run is a generated executable
-that contains a collection of contexts and an optional test case that evaluates the submission.
-
-## `.tabs.*.runs.*.run`
-
-The test case that executes the submission.
-It will be visualized as a separate context on Dodona.
-
-### `.input`
-
-The run input contains all information that is necessary to evaluates the written program
-(`main`-call or the code itself) by the student.
-
-#### `.input.stdin`
-
-The content that is made available on standard input.
-This can either be an ([EmptyChannel](#emptychannel)) object,
-or a [TextData](#textdata) object providing the path name of a text file or a string containing the content.
-
-#### `.input.arguments`
-
-list of string arguments that are passed when executing the submission.
-
-#### `.input.main_call`
-
-A boolean indicating if the submission must be executed. By default, the submission will not be executed.
-
-### `.output`
-
-This object contains all the necessary information to evaluate the executed submission.
-
-#### `.output.stdout`
-
-The output channel for standard output.
-Possible output channels are:
-
-- [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
-  This is the default option.
-- [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
-- [TextOutputChannel](#textoutputchannel): Expected output on this channel.
-
-#### `.output.stderr`
-
-The output channel for standard error.
-Possible output channels are:
-
-- [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
-  This is the default option.
-- [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
-- [TextOutputChannel](#textoutputchannel): Expected output on this channel.
-
-#### `.output.file`
-
-The output channel for a file.
-Possible output channels are:
-
-- [IgnoredChannel](#ignoredchannel) (default): No output is expected on this channel, but generated output is ignored.
-- [FileOutputChannel](#fileoutputchannel): Expected output on this channel.
-
-_**Note:**_ TESTed currently supports at most one expected file for each execution of the submission.
-Additionally, there is currently no way to check that _no_ files were generated.
-
-#### `.output.exception`
-
-The output channel for an exception.
-The possible output channels are:
-
-- [EmptyChannel](#emptychannel) (default): No exception is expected.
-- [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
-- [ExceptionOutputChannel](#exceptionoutputchannel): Expected exception.
-
-#### `.output.exit_code`
-
-The output channel for the exit code upon termination of executing the submission.
-The exit code must be passed in the object [ExitCodeOutputChannel](#exitcodeoutputchannel).
-By default, the expected exit code is zero (0).
-
-### `.description`
-
-A description of the context as displayed by Dodona.
-When no description is given, it will be automatically generated by TESTed.
-
-### `.link_files.*`
-
-A list of files that must be linked in the feedback on Dodona (see [documentation for the contexts](#link-files-2)).
-
-## `.tabs.*.runs.*.contexts.*`
-
-A list of contexts that will be executed.
-A context is a list of dependent test cases that must be executed in succession.
-In addition to the test cases, a context can contain setup and teardown code,
-which is also described in a way that is independent of any programming language.
+A list of contexts to be executed.
+A context is a set of test cases that are executed together, and optionally depend on each other.
+For example, if you save the result of a function call in a variable and wish to use that variable later, these test cases must be in the same context.
 
 ### `.before`
 
@@ -208,22 +129,53 @@ The storage method of the content.
 Currently, the only value supported is `disk`, which is also the default value.
 This attribute is only included for legacy reasons and may become deprecated in the future.
 
-## `.tabs.*.runs.*.contexts.*.testcases.*`
+## `.tabs.*.contexts.*.testcases.*`
 
-A test case is a statement or an expression that must be executed and evaluated.
+A test case is a statement or an expression that will be executed and evaluated.
+Each context has at least one test case.
+The following two constraints apply:
+
+- Only the first test case may have a "main call", i.e. command line arguments or stdin.
+- Only the last test case may have a test for the program's exit code.
+
+Do note that the first and last test case may be the same one:
+if you only have one test case, it may be a main call and have a check for the exit code.
 
 ### `.input`
 
-A statement or expression (see [Statements and expressions](#statements-and-expressions)).
+The input for a test case can always be a statement or an expression
+(see [Statements and expressions](#statements-and-expressions)).
+
+However, if this is the first test case, the input may also be the "main" input, using the properties described below.
+If using the "main" input, at least one of the properties below is required.
+
+#### `.input.stdin`
+
+The content that is made available on standard input.
+This can either be an ([EmptyChannel](#emptychannel)) object,
+or a [TextData](#textdata) object providing the path name of a text file or a string containing the content.
+
+#### `.input.arguments`
+
+A list of string arguments that are passed when executing the submission.
+If left out, an empty list is used.
+
+#### `.input.main_call`
+
+If there is no `stdin` and there are no arguments,
+but you still want to have a "main" input, you can set this field to `True`.
 
 ### `.description`
 
-A description of the test case as displayed by Dodona.
-When no description is given, it will be automatically generated by TESTed.
+A description of the test case to be displayed by Dodona.
+When no description is given, it will be automatically generated by TESTed based on the input for this test case.
+In most cases, you will probably want to use the automatically generated description.
 
 ### `.output`
 
-An object that contains all the necessary information to evaluate a test case.
+The output object contains all tests for the given test case.
+
+Note that you can only use the test for the exit code if this is the last test case in the context.
 
 #### `.output.stdout`
 
@@ -241,7 +193,6 @@ The output channel for standard error.
 Possible output channels are:
 
 - [EmptyChannel](#emptychannel) (default): No output is expected on this channel.
-  This is the default option.
 - [IgnoredChannel](#ignoredchannel): No output is expected on this channel, but generated output is ignored.
 - [TextOutputChannel](#textoutputchannel): Expected output on this channel.
 
@@ -259,7 +210,7 @@ Additionally, there is currently no way to check that _no_ files were generated.
 #### `.output.exception`
 
 The output channel for an exception.
-The possible output channels are:
+The possible channels are:
 
 - [EmptyChannel](#emptychannel) (default): No exception is expected.
 - [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
@@ -268,11 +219,19 @@ The possible output channels are:
 #### `.output.result`
 
 The output channel for the result of an expression.
-The possible output channels are:
+The possible channels are:
 
 - [EmptyChannel](#emptychannel) (default): No result is expected.
 - [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
 - [ValueOutputChannel](#valueoutputchannel): The expected result of the expression.
+
+#### `.output.exit_code`
+
+The output channel for the exit code of the submission.
+The possible channels are:
+
+- [IgnoredChannel](#ignoredchannel) (default): Exit code is not checked.
+- [ExitCodeOutputChannel](#exitcodeoutputchannel): Allows you to specify the expected exit code.
 
 ## TextData
 
@@ -569,31 +528,34 @@ To support custom datatypes, you must use a `SpecificEvaluator`.
 
 ## Evaluators
 
-There are three ways of checking results in TESTed:
+There are two ways of checking test results in TESTed.
+Both involve implementing or using a "check function",
+which is the code that receives the results from the submission and must decide if it is correct or not.
 
-1. *Built-in checks*
-   These are programming-language-independent, and are the preferred way to use TESTed.
-2. *Programmed checks*
-   In this case, you, as the exercise author, provide an implementation of a function which will be called by TESTed
-   when checking the results.
-   You only have to implement this function once in one programming language.
-   TESTed takes care of translating the results between multiple programming languages.
-   This means these types of checks are still programming-language-independent.
-   A good example is checking non-deterministic behavior, such as randomness or dynamic results, e.g. when results are
-   dependent on the current date.
-3. *Language-specific checks*
-   Here, you need to provide the implementation of a function for each programming language the exercise needs to
-   support.
-   The downside is that the test suite is no longer programming-language-independent.
-   For example, if a new language is added to TESTed, your test suite will need updating.
-   However, this does allow you to test programming-language-specific aspects, such as custom datatypes.
+There are two ways to achieve this:
 
-Internally, these checks are implemented using evaluators.
-The *built-in checks* are implemented using "generic evaluators", which are the default for all output channels.
-This means you often don't need to specify them.
+1. The programming-language-independent way.
+   Here you only need one check function, regardless of the number of programming languages your exercise supports.
+   Internally, the test results will be serialized and deserialized by TESTed before calling the check function.
+   Some functions are built-in to TESTed and are ready to use.
+   These mainly cover basic tests, such as stdout, stderr, return values, etc.
+   In other cases, such as testing with randomness, you will need to implement the check function yourselves
+   (but only once, in a programming language of your choice).
+2. Using language-specific checks.
+   Here, you need to provide a check function in each programming language you want your exercise to support.
+   Since these are executed together with the submission,
+   they are not limited by the serialization process.
+   This means you can test programming-language-specific aspects, such as custom datatypes,
+   but you will need to provide a check function for every programming language.
 
-*Programmed checks* are achieved using the [`SpecificEvaluator`](#specificevaluator).
-*Language-specific checks* are implemented using the [`ProgrammedEvaluator`](#programmedevaluator).
+For the programming-language-independent way,
+you can either use one of the built-in check functions or provide your own.
+
+In a test suite, this translates to three kinds of evaluators:
+
+1. "Generic evaluators" for the built-in check functions.
+2. [`SpecificEvaluator`](#specificevaluator) for a custom check function using the programming-language-independent way.
+3. [`ProgrammedEvaluator`](#programmedevaluator) for custom check functions that are programming language specific.
 
 Each evaluator has an attribute `.type` with the internal type of the evaluator.
 Generic evaluators also have an attribute `.name` with the internal name of the evaluator.
