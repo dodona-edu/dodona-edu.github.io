@@ -11,7 +11,7 @@ For now, this page is only available in Dutch. Sorry!
 
 :::tip Belangrijk
 
-Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Contacteer ons op [dodona@ugent.be](mailto:dodona@ugent.be) of via het [contactformulier](https://dodona.ugent.be/nl/contact) en we geven je account zo snel mogelijk de nodige toegangsrechten.
+Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechten eenvoudig aanvragen door (na inloggen) [dit formulier](https://dodona.ugent.be/nl/rights_requests/new) in te vullen. We geven je account dan zo snel mogelijk de nodige toegangsrechten.
 
 :::
 
