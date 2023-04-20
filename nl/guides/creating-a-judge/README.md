@@ -85,11 +85,11 @@ The full output returns a single JSON at the end. You must ensure that this is e
 - An `Annotation` object consists of:
 
   - `row`, a zero-based index indicating the annotated line (start).
-  - An optional `column`, a zero-based index indicating the annotated character on `row`.
+  - An optional `column`, a zero-based index indicating the starting character to mark in the first `row`. When undefined all rows will be marked completely.
   - `text`, a string containing the annotation
   - `type`, the severity of the annotation, either `"info"`, `"warning"` or `"error"`.
-  - An optional `rows`, a zero-based index indicating the end of the annotation span.
-  - An optional `columns`, a zero-based index indicating the end of the annotation span.
+  - An optional `rows`, the amount rows that should be marked. This should be at least `1`. The default value is `1`.
+  - An optional `columns`, a zero-based index indicating the amount of characters to mark in the last `row`. The default value is `0`, which will put a marker before the `column` character.
 
 - A `Message` object is either a plain string or consists of:
 
