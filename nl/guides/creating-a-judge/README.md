@@ -89,7 +89,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - `text`, a string containing the annotation
   - `type`, the severity of the annotation, either `"info"`, `"warning"` or `"error"`.
   - An optional `rows`, the amount rows that should be marked. This should be at least `1`. The default value is `1`.
-  - An optional `columns`, a zero-based index indicating the amount of characters to mark in the last `row`. The default value is `0`, which will put a marker before the `column` character.
+  - An optional `columns`, the amount of characters to mark in the last `row`. The default value is `0`, which will put a marker before the `column` character.
 
 - A `Message` object is either a plain string or consists of:
 
