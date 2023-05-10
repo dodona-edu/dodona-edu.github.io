@@ -17,7 +17,7 @@ Some useful links that could be useful:
 
 - Implementations for all programming languages currently supported by TESTed, including C, are available at <https://github.com/dodona-edu/universal-judge/tree/master/tested/languages>.
 - The class definition, which you need to subclass: <https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/config.py>
-- Test exercises: <https://github.com/dodona-edu/universal-judge/tree/master/exercise>
+- Test exercises: <https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises>
 
 ## Installing and running TESTed
 
