@@ -22,7 +22,7 @@ Dodona ondersteunt momenteel de volgende judges:
 TESTed is een whitebox judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.\
 **Programmeertalen:** Bash, C, C#, Haskell, Java, JavaScript, Kotlin, Python\
-**Aan de slag** [Documentatie](/nl/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/exercise) \
+**Aan de slag** [Documentatie](/nl/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Python

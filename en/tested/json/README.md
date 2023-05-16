@@ -22,7 +22,7 @@ a single test suite is sufficient to check submissions for the same exercise in 
 
 [This Python module](https://github.com/dodona-edu/universal-judge/blob/master/tested/testsuite.py) formally specifies the TESTed test suite format.
 The module can also generate a JSON Schema to make the validation of test suites easier.
-The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/exercise) for TESTed contains a number of examples of test suites.
+The [source code repository](https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises) for TESTed contains a number of examples of test suites.
 
 The first section of this reference describes the structure of the test suite.
 A dot notation is used to indicate where the attribute is located in the hierarchical structure.
