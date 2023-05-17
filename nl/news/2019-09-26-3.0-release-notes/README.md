@@ -43,7 +43,7 @@ Voor een volledige lijst van veranderingen verwijzen we naar [onze GitHub releas
 *   icoon weergeven aan cursusbeheerders als visuele weergave van voortgang voor oefeningen in reeks uitgeschakeld is voor cursusgebruikers
 *   links verduidelijken in overzicht met ingediende oplossingen binnen cursus
 *   breedte behouden bij verslepen (_drag-and-drop_) van tabelrijen
-*   alle iconen omzetten naar [Material Design Icons](https://material.io/resources/icons/)
+*   alle iconen omzetten naar [Material Design Icons](https://fonts.google.com/icons)
 *   overzicht met alle ingediende oplossingen voor een bepaalde judge
 *   sneller filteren op onderwijsinstelling in overzicht van cursusgebruikers
 *   automatische e-mail versturen als _repository_ met foute configuratiebestanden aangemaakt wordt
