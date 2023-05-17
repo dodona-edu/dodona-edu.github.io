@@ -147,9 +147,9 @@ Als de judge binnen een testgeval rapporteert over individuele testen, dan worde
 
 ## Vragen stellen
 ![image](./student.ask_questions.png)
-Nadat je je oplossing hebt ingediend, kan je op twee manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de oranje cirkel klikken een vraag stellen bij een specifieke regel code.
+Nadat je je oplossing hebt ingediend, kan je op drie manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de roze cirkel klikken een vraag stellen bij een specifieke regel code. Je kan ook een stuk code selecteren en dan hierover vragen stellen.
 
-![image](./student.type_questions.png)
+![image](./student.ask_question.gif)
 
 Typ in het tekstvak de vraag die je aan de lesgever wil stellen. Je kan Markdown gebruiken om je tekst extra opmaak te geven. Klik als laatste op `Vraag stellen`.
 
@@ -163,3 +163,7 @@ Je kan met Markdown extra opmaak toevoegen door:
 
 Bekijk hier [alle mogelijkheden van Markdown](../../../references/exercise-description/#markdown).
 :::
+
+![img.png](./student.react.png)
+
+Daarnaast kan je ook reageren op een bestaande vraag van jezelf of op een opmerking van een lesgever. Klik hiervoor op `Reageer` onder de vraag of opmerking. Typ je reactie in het tekstvak en klik op `Reageer`.
