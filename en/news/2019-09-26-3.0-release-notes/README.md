@@ -43,7 +43,7 @@ For a full list of changes, we refer to [our GitHub release](https://github.com/
 *   display icon to course administrators if visual progress for exercises in series is disabled for course users
 *   clarify links in overview of all solutions submitted in a course
 *   fix width when dragging and dropping table rows
-*   convert all icons to [Material Design Icons](https://material.io/resources/icons/)
+*   convert all icons to [Material Design Icons](https://fonts.google.com/icons)
 *   add overview of solutions submitted for a specific judge
 *   faster filtering on educational institution in overview of course users
 *   send automatic email upon creation of repository with incorrect configuration files
