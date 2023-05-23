@@ -1,6 +1,7 @@
 ---
 title: Dodona VS Code extensie
 description: "De Dodona VS Code extensie"
+order: 4
 ---
 
 # Dodona VS Code extensie

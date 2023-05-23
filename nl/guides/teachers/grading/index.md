@@ -1,11 +1,12 @@
 ---
 title: Taken en toetsen verbeteren met Dodona
 description: "Tutorial: taken en toetsen verbeteren met Dodona"
+order: 6
 ---
 
 # Taken en toetsen verbeteren met Dodona
 
-> Sinds september 2021 heeft Dodona een verbetermodule. Ideaal om op een gestructureerde manier door de ingediende oplossingen te gaan en feedback en/of punten te geven.
+Sinds september 2021 heeft Dodona een verbetermodule. Ideaal om op een gestructureerde manier door de ingediende oplossingen te gaan en feedback en/of punten te geven.
 
 ## Een reeks evalueren
 

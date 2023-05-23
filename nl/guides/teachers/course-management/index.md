@@ -1,13 +1,12 @@
 ---
 title: "Cursusbeheer"
 description: "Tutorial: cursusbeheer"
+order: 3
 ---
 
 # Cursusbeheer
-> Op deze pagina vind je alle informatie over cursusbeheer op Dodona.
 
-**Inhoudsopgave**
-[[toc]]
+Op deze pagina vind je alle informatie over cursusbeheer op Dodona.
 
 Een cursus wordt opgebouwd als een leerpad met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden. Gebruikers kunnen zichzelf registreren voor een cursus. Er is altijd minstens één gebruiker die cursusbeheerder is, bijvoorbeeld de gebruiker die de cursus aanmaakte. Voor informatie over hoe je een nieuwe cursus aanmaakt, kan je [hier](../creating-a-course/) terecht.
 

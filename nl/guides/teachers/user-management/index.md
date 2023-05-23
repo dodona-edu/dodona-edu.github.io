@@ -1,13 +1,12 @@
 ---
 title: "Gebruikersbeheer"
 description: "Tutorial: gebruikersbeheer"
+order: 4
 ---
 
 # Gebruikersbeheer
-> Op deze pagina vind je alle informatie over gebruikersbeheer op Dodona.
 
-**Inhoudsopgave**
-[[toc]]
+Op deze pagina vind je alle informatie over gebruikersbeheer op Dodona.
 
 Als cursusbeheerder krijg je toegang tot de lijst van alle geregistreerde gebruikers in je cursus. Dit overzicht bereik je door te klikken op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Hierin zie je alle gebruikers die ooit voor de cursus geregistreerd geweest zijn of die ooit een registratieverzoek voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie de handleiding over [cursusbeheer](../course-management/).
 

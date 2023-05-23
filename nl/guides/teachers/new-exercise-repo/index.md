@@ -1,6 +1,7 @@
 ---
 title: Een nieuwe repository met oefeningen maken
 description: "Tutorial: een nieuwe repository met oefeningen maken"
+order: 7
 ---
 
 # Een nieuwe repository met oefeningen maken

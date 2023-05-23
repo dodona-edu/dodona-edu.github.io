@@ -1,11 +1,12 @@
 ---
 title: Van start met Dodona als student
 description: "Tutorial: van start met Dodona als student"
+order: 1
 ---
 
 # Van start met Dodona als student
 
-> Op deze pagina vind je alle informatie om vlot van start te gaan met Dodona als student.
+Op deze pagina vind je alle informatie om vlot van start te gaan met Dodona als student.
 
 ## Wat is Dodona?
 

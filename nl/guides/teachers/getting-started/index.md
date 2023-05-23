@@ -1,11 +1,12 @@
 ---
 title: Van start met Dodona als leerkracht
 description: "Tutorial: van start met Dodona als leerkracht"
+order: 1
 ---
 
 # Van start met Dodona als leerkracht
 
-> Alle informatie om vlot van start te gaan met Dodona als leerkracht.
+Alle informatie om vlot van start te gaan met Dodona als leerkracht.
 
 ## Wat is Dodona?
 

@@ -1,6 +1,7 @@
 ---
 title: Een API token aanmaken
 description: "Tutorial: een API token aanmaken"
+order: 6
 ---
 # Een API token aanmaken
 
@@ -20,6 +21,6 @@ Scroll naar het midden van de pagina en geef een naam in voor de te genereren to
 
 ## 3. Kopieer de token
 
-Kopieer de nieuw aangemaakte token en plak het in het aanmeldvenster van de [PyCharm plugin](../pycharm-plugin/README.md) of de [VS Code extensie](../vs-code-extension/README.md). Op Dodona kan je steeds een lijstje zien van al je actieve tokens. Uit veiligheidsoverwegingen kan je de token zelf niet zien. Je kan op elk moment een token verwijderen waardoor die niet meer zal werken.
+Kopieer de nieuw aangemaakte token en plak het in het aanmeldvenster van de [PyCharm plugin](../pycharm-plugin/index.md) of de [VS Code extensie](../vs-code-extension/README.md). Op Dodona kan je steeds een lijstje zien van al je actieve tokens. Uit veiligheidsoverwegingen kan je de token zelf niet zien. Je kan op elk moment een token verwijderen waardoor die niet meer zal werken.
 
 ![Token aangemaakt](./token-generated-nl.png)

@@ -1,0 +1,4 @@
+/* https://vitepress.dev/guide/extending-default-theme#customizing-css */
+:root {
+    --vp-c-brand: #1976d2;
+}

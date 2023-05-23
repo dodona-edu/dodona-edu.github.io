@@ -1,6 +1,5 @@
 ---
 title: Handleidingen
-sidebarDepth: 0
 ---
 # Handleidingen
 

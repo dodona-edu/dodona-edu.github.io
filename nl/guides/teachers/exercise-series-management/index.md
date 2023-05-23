@@ -1,12 +1,10 @@
 ---
 title: "Oefeningenreeksenbeheer"
 description: "Tutorial: oefeningenreeksenbeheer"
+order: 5
 ---
 
 # Oefeningenreeksenbeheer
-
-**Inhoudsopgave**
-[[toc]]
 
 Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillende oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen.
 

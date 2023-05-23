@@ -4,10 +4,8 @@ description: "Tutorial: cursussen op Dodona"
 ---
 
 # Cursussen op Dodona
-> Op deze pagina vind je alle informatie zodat je je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
 
-**Inhoudsopgave**
-[[toc]]
+Op deze pagina vind je alle informatie zodat je je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
 
 ## Wat is een cursus?
 

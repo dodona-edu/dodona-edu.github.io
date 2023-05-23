@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
-          node-version: 14.x
+          node-version: 18.x
           cache: yarn
 
       - name: Install dependencies
@@ -25,7 +25,7 @@ jobs:
       - name: Run HTMLProofer
         uses: anishathalye/proof-html@v2
         with:
-          directory: ./.vuepress/dist
+          directory: ./.vitepress/dist
           enforce_https: false
           max_concurrency: 3
           # This check doesn't pick up the favicon in the public folder

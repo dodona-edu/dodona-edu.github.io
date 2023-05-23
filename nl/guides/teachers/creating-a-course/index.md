@@ -1,6 +1,7 @@
 ---
 title: "Een nieuwe cursus aanmaken"
 description: "Tutorial: cursus aanmaken"
+order: 2
 ---
 
 # Een cursus aanmaken

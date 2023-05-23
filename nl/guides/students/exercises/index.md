@@ -4,10 +4,7 @@ description: "Tutorial: oefeningen oplossen"
 ---
 
 # Oefeningen oplossen
-> Alle informatie zodat je als student kan navigeren naar oefeningen of oplossingen, oplossingen kan indienen en feedback kan interpreteren.
-
-**Inhoudsopgave**
-[[toc]]
+Alle informatie zodat je als student kan navigeren naar oefeningen of oplossingen, oplossingen kan indienen en feedback kan interpreteren.
 
 ## Navigeren naar een oefening
 

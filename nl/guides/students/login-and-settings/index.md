@@ -4,10 +4,7 @@ description: "Tutorial: aanmelden en gebruikersinstellingen"
 ---
 
 # Aanmelden & gebruikersinstellingen
-> Op deze pagina vind je alle informatie zodat je als student een gebruikersaccount op Dodona kan aanmaken en die kan personaliseren.
-
-**Inhoudsopgave**
-[[toc]]
+Op deze pagina vind je alle informatie zodat je als student een gebruikersaccount op Dodona kan aanmaken en die kan personaliseren.
 
 ## Selecteren van de taal
 

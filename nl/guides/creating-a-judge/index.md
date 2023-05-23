@@ -1,6 +1,7 @@
 ---
 title: "[en] Creating a new judge"
 description: "Tutorial: creating a judge"
+order: 7
 ---
 # Creating a new Judge
 

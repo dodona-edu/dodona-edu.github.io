@@ -1,6 +1,7 @@
 ---
 title: De Programmeursleerling
 description: "De Programmeursleerling"
+order: 5
 ---
 
 # De Programmeursleerling
