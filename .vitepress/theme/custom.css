@@ -1,4 +1,10 @@
 /* https://vitepress.dev/guide/extending-default-theme#customizing-css */
+
 :root {
-    --vp-c-brand: #1976d2;
+    --vp-c-brand: #0061a6;
+}
+
+/* Using prefers-color-scheme does not work with the selector */
+.dark {
+    --vp-c-brand: #9ccaff;
 }
