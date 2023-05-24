@@ -1,5 +1,5 @@
 ---
-title: "[nl]Oefeningen oplossen"
+title: "Oefeningen oplossen"
 description: "Tutorial: oefeningen oplossen"
 ---
 
