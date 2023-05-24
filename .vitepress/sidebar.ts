@@ -12,13 +12,9 @@ export interface Options {
 type SortableSidebarItem = [number, DefaultTheme.SidebarItem];
 
 function sortSidebarItems(items: SortableSidebarItem[]): DefaultTheme.SidebarItem[] {
-  const el = items.sort((a, b) => {
-    console.log(a);
-    return a[0] - b[0] || a[1].text.localeCompare(b[1].text);
-  })
+  return items
+      .sort((a, b) => a[0] - b[0] || a[1].text.localeCompare(b[1].text))
       .map(i => i[1]);
-  console.log(el);
-  return el;
 }
 
 function getSidebarItems(directory: string, options: Options): SortableSidebarItem[] {
