@@ -25,8 +25,6 @@ export default defineConfig({
     // prev: false,
     // next: false,
 
-    i18nRouting: true,
-
     sidebar: {
       "/nl": getSidebar({ directory: "nl", overview: "Overzicht" }),
       "/en": getSidebar({ directory: "en", overview: "Overview" }),

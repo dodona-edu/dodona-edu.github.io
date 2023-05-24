@@ -17,10 +17,10 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.2.3",
+    "gray-matter": "^4.0.3",
     "markdown-it-imsize": "^2.0.1",
-    "vitepress": "^1.0.0-beta.1",
-    "gray-matter": "^4.0.3"
+    "resolve-accept-language": "^2.0.1",
+    "vitepress": "^1.0.0-beta.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
