@@ -26,10 +26,6 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
   const subitems = fs.readdirSync(directory);
 
   for (const subitemName of subitems) {
-    if (subitemName === "news") {
-      // Temp
-      continue;
-    }
     let subitem = directory + "/" + subitemName;
     if (fs.statSync(subitem).isDirectory()) {
       // If there is no index page, skip the directory.
