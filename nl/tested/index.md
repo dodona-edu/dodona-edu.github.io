@@ -1,7 +1,7 @@
 ---
 title: TESTed-judge
 description: "De TESTed-judge"
-sidebarDepth: 2
+outline: [2, 3]
 ---
 
 # TESTed: one judge to rule them all
@@ -70,59 +70,52 @@ De oefening heet "echo" en heeft de volgende opgave:
 
 Hier zijn een aantal correcte oplossingen voor deze oefeningen in een handvol programmeertalen:
 
-:::: tabs
-::: tab Bash
-```bash
+::: code-group
+
+```bash [Bash]
 function echo {
     echo "$1"
 }
 ```
-:::
-::: tab C
-```c
+
+```c [C]
 #include <stdio.h>
 
 void echo(char* wat) {
     printf("%s", wat);
 }
 ```
-:::
-::: tab Haskell
-```haskell
+
+```haskell [Haskell]
 echo = putStrLn
 ```
-:::
-::: tab Java
-```java
+
+```java [Java]
 class Submission {
     public static void echo(String wat) {
         System.out.println(wat);
     }
 }
 ```
-:::
-::: tab JavaScript
-```javascript
+
+```javascript [JavaScript]
 function echo(wat) {
   console.log(wat);
 }
 ```
-:::
-::: tab Kotlin
-```kotlin
+
+```kotlin [Kotlin]
 fun echo(wat: String) {
     println(wat)
 }
 ```
-:::
-::: tab Python
-```python
+
+```python [Python]
 def echo(argument):
     print(argument)
 ```
-:::
-::: tab C#
-```csharp
+
+```csharp [C#]
 using System;
 
 class Submission
@@ -133,8 +126,8 @@ class Submission
     }
 }
 ```
+
 :::
-::::
 
 Deze oplossingen willen we beoordelen met TESTed.
 

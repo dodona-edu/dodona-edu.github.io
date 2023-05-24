@@ -1,7 +1,7 @@
 ---
 title: TESTed judge
 description: "TESTed judge"
-sidebarDepth: 2
+outline: [2, 3]
 ---
 
 # TESTed: one judge to rule them all
@@ -76,59 +76,52 @@ The exercise is called "echo" and has the following problem statement:
 
 Here are some correct submissions for this exercise in a couple of different programming languages:
 
-:::: tabs
-::: tab Bash
-```bash
+::: code-group
+
+```bash [Bash]
 function echo {
     echo "$1"
 }
 ```
-:::
-::: tab C
-```c
+
+```c [C]
 #include <stdio.h>
 
 void echo(char* what) {
     printf("%s", what);
 }
 ```
-:::
-::: tab Haskell
-```haskell
+
+```haskell [Haskell]
 echo = putStrLn
 ```
-:::
-::: tab Java
-```java
+
+```java [Java]
 class Submission {
     public static void echo(String what) {
         System.out.println(what);
     }
 }
 ```
-:::
-::: tab JavaScript
-```javascript
+
+```javascript [JavaScript]
 function echo(what) {
   console.log(what);
 }
 ```
-:::
-::: tab Kotlin
-```kotlin
+
+```kotlin [Kotlin]
 fun echo(what: String) {
     println(what)
 }
 ```
-:::
-::: tab Python
-```python
+
+```python [Python]
 def echo(argument):
     print(argument)
 ```
-:::
-::: tab C#
-```csharp
+
+```csharp [C#]
 using System;
 
 class Submission
@@ -139,8 +132,8 @@ class Submission
     }
 }
 ```
+
 :::
-::::
 
 We can use those solutions as the submissions we want to test with TESTed.
 

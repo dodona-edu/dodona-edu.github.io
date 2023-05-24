@@ -789,10 +789,9 @@ It must return a [`EvaluationResult`](#evaluationresult).
 
 For example:
 
-:::: tabs
-::: tab Haskell
+::: code-group
 
-```haskell
+```haskell [Haskell]
 {-# LANGUAGE ScopedTypeVariables #-}
 module Evaluator where
 
@@ -810,10 +809,7 @@ evaluate_value expected actual arguments =
     }
 ```
 
-:::
-::: tab Java
-
-```java
+```java [Java]
 import java.util.*;
 
 public class Evaluator {
@@ -827,10 +823,7 @@ public class Evaluator {
 }
 ```
 
-:::
-::: tab JavaScript
-
-```javascript
+```javascript [JavaScript]
 function evaluateValue(expected, actual, args) {
   return {
     "result": expected === actual,
@@ -843,10 +836,7 @@ function evaluateValue(expected, actual, args) {
 exports.evaluateValue = evaluateValue;
 ```
 
-:::
-::: tab Kotlin
-
-```kotlin
+```kotlin [Kotlin]
 class Evaluator {
     companion object {
         @JvmStatic
@@ -863,10 +853,7 @@ class Evaluator {
 }
 ```
 
-:::
-::: tab Python
-
-```python
+```python [Python]
 from evaluation_utils import EvaluationResult, Message
 
 
@@ -875,7 +862,6 @@ def evaluate_value(expected, actual, args):
 ```
 
 :::
-::::
 
 When used with a programming-language-specific evaluator, the function takes one argument:
 
@@ -885,10 +871,9 @@ It must also return a [`EvaluationResult`](#evaluationresult).
 
 For example, the evaluator function for a programming-language-specific evaluator:
 
-:::: tabs
-::: tab C
+::: code-group
 
-```c
+```c [C]
 #include <string.h>
 #include <stdbool.h>
 
@@ -905,10 +890,7 @@ EvaluationResult* evaluate(char* actual) {
 }
 ```
 
-:::
-::: tab Haskell
-
-```haskell
+```haskell [Haskell]
 {-# LANGUAGE ScopedTypeVariables #-}
 module Evaluator where
 
@@ -926,10 +908,7 @@ evaluate value  =
     }
 ```
 
-:::
-::: tab Java
-
-```java
+```java [Java]
 import java.util.*;
 
 public class Evaluator {
@@ -944,10 +923,7 @@ public class Evaluator {
 }
 ```
 
-:::
-::: tab JavaScript
-
-```javascript
+```javascript [JavaScript]
 function evaluate(actual) {
   const correct = actual === "correct";
   return {
@@ -961,10 +937,7 @@ function evaluate(actual) {
 exports.evaluate = evaluate;
 ```
 
-:::
-::: tab Kotlin
-
-```kotlin
+```kotlin [Kotlin]
 class Evaluator {
     companion object {
         @JvmStatic
@@ -981,10 +954,7 @@ class Evaluator {
 }
 ```
 
-:::
-::: tab Python
-
-```python
+```python [Python]
 from evaluation_utils import EvaluationResult, Message
 
 
@@ -994,7 +964,6 @@ def evaluate(actual):
 ```
 
 :::
-::::
 
 #### `.file`
 
