@@ -1,6 +1,7 @@
 ---
 title: Configuratieopties voor oefeningen
 description: "Configuratieopties voor oefeningen met TESTed"
+order: 1
 ---
 
 # Configuratieopties voor oefeningen

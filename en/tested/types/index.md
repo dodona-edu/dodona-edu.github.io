@@ -1,6 +1,7 @@
 ---
 title: Data type support
 description: "The various data types supported by TESTed"
+order: 4
 ---
 # Data type support
 

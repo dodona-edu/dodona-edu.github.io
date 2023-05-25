@@ -1,7 +1,7 @@
 ---
 title: Reference for DSL test suites
 description: "Easily create test suites for TESTed"
-sidebarDepth: 2
+order: 2
 ---
 
 # DSL test suite reference

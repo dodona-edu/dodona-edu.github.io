@@ -1,7 +1,6 @@
 ---
 title: TESTed-judge
 description: "De TESTed-judge"
-outline: [2, 3]
 ---
 
 # TESTed: one judge to rule them all

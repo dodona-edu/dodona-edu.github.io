@@ -46,8 +46,6 @@ export default defineConfig({
     footer: {
       message: "Made by Team Dodona with ❤️"
     },
-
-    outline: [2, 3]
   },
 
   // Language-specific overrides and options
@@ -64,6 +62,7 @@ export default defineConfig({
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         outline: {
+          level: [2, 3],
           label: "Op deze pagina"
         },
         returnToTopLabel: "Terug omhoog",
@@ -81,7 +80,10 @@ export default defineConfig({
           { text: 'TESTed', link: '/en/tested/', activeMatch: "/en/tested/*" },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
-      }
+        outline: {
+          level: [2, 3],
+        }
+      },
     }
   },
 

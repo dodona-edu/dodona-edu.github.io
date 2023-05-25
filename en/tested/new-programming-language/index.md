@@ -1,6 +1,7 @@
 ---
 title: "Adding new programming languages"
 description: "Configuring a new programming language in TESTed"
+order: 5
 ---
 
 # Adding new programming languages

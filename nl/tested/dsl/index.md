@@ -1,7 +1,7 @@
 ---
 title: Referentie voor DSL-testplannen
 description: "Schrijf eenvoudig testplannen voor TESTed"
-sidebarDepth: 2
+order: 2
 ---
 
 # Referentie voor DSL-testplannen

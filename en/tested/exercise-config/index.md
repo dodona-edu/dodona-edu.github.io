@@ -1,6 +1,7 @@
 ---
 title: Exercise configuration options
 description: "Configuration options for exercises with TESTed"
+order: 1
 ---
 
 # Exercise configuration options

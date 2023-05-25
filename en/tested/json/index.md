@@ -1,7 +1,7 @@
 ---
 title: Reference for advanced test suites
 description: "Create advanced test suites for TESTed"
-sidebarDepth: 2
+order: 3
 ---
 
 # Advanced test suite reference
