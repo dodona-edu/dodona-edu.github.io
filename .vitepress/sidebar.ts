@@ -1,12 +1,12 @@
 import fs from "node:fs";
 // @ts-ignore
 import matter from 'gray-matter';
-import type {DefaultTheme} from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 export interface Options {
   directory: string;
   overview: string;
-  collapsed?: boolean;
+  uncollapsed?: string;
 }
 
 type SortableSidebarItem = [number, DefaultTheme.SidebarItem];
@@ -33,10 +33,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
       const data = matter.read(indexPage);
       const title = data.data.title ?? "";
       const order = data.data.order ?? Infinity;
-      const otherChildren = sortSidebarItems(getSidebarItems(subitem, {
-        ...options,
-        collapsed: true
-      }));
+      const otherChildren = sortSidebarItems(getSidebarItems(subitem, options));
 
       if (otherChildren.length === 0) {
         // There is one special case: a folder containing only an "index.md" file.
@@ -58,7 +55,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
         sidebarItems.push([order, {
           text: title,
           items: childItems.concat(otherChildren),
-          collapsed: options.collapsed
+          collapsed: subitem !== directory + "/" + (options?.uncollapsed ?? "")
         }]);
       }
     } else {
@@ -79,8 +76,6 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
 }
 
 export function getSidebar(options: Options): DefaultTheme.SidebarItem[] {
-  options.collapsed = options?.collapsed ?? false;
-
   const items = getSidebarItems(options.directory, options);
   return sortSidebarItems(items);
 }

@@ -26,8 +26,12 @@ export default defineConfig({
     // next: false,
 
     sidebar: {
-      "/nl": getSidebar({ directory: "nl", overview: "Overzicht" }),
-      "/en": getSidebar({ directory: "en", overview: "Overview" }),
+      "/nl/guides": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "guides" }),
+      "/nl/references": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "references" }),
+      "/nl/tested": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "tested" }),
+      "/en/guides": getSidebar({ directory: "en", overview: "Overview", uncollapsed: "guides" }),
+      "/en/references": getSidebar({ directory: "en", overview: "Overview", uncollapsed: "references" }),
+      "/en/tested": getSidebar({ directory: "en", overview: "Overview", uncollapsed: "tested" }),
     },
 
     search: {
@@ -73,7 +77,7 @@ export default defineConfig({
         nav: [
           { text: 'News', link: 'https://github.com/orgs/dodona-edu/discussions/categories/release-notes' },
           { text: 'Guides', link: '/en/guides/', activeMatch: "/en/guides/*" },
-          { text: 'References', link: '/en/references/',activeMatch: "/en/references/*" },
+          { text: 'References', link: '/en/references/', activeMatch: "/en/references/*" },
           { text: 'TESTed', link: '/en/tested/', activeMatch: "/en/tested/*" },
           { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
@@ -85,4 +89,4 @@ export default defineConfig({
   // socialLinks: [
   //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
   // ]
-})
+});
