@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 import packageInfo from '../package.json';
 import { getSidebar } from "./sidebar";
+import markdownItImsize from "markdown-it-imsize";
 
 
 // https://vitepress.dev/reference/site-config
@@ -17,6 +18,13 @@ export default defineConfig({
 
   // Redirect language-less pages to nl.
   rewrites: {},
+
+  markdown: {
+    config: (md) => {
+      // use more markdown-it plugins!
+      md.use(markdownItImsize)
+    }
+  },
 
   // Common theme options for all languages.
   // https://vitepress.dev/reference/default-theme-config
