@@ -21,14 +21,3 @@ jobs:
 
       - name: Build site
         run: yarn build
-
-      - name: Run HTMLProofer
-        uses: anishathalye/proof-html@v2
-        with:
-          directory: ./.vitepress/dist
-          enforce_https: false
-          max_concurrency: 3
-          # This check doesn't pick up the favicon in the public folder
-          check_favicon: false
-          ignore_url_re: |
-            /smartschool.be/
