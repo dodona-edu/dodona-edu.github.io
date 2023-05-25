@@ -8,7 +8,7 @@ export default defineConfig({
   title: "Dodona Docs",
   description: packageInfo.description,
   head: [
-    ['meta', { name: 'theme-color', content: '#1976d2' }],
+    ['meta', { name: 'theme-color', content: '#0061a6' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -21,9 +21,7 @@ export default defineConfig({
   // Common theme options for all languages.
   // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
-    // TODO: prevent previous/next links in all pages.
-    // prev: false,
-    // next: false,
+    logo: 'icon.png',
 
     sidebar: {
       "/nl/guides": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "guides" }),
@@ -46,6 +44,10 @@ export default defineConfig({
     footer: {
       message: "Made by Team Dodona with ❤️"
     },
+
+    // socialLinks: [
+    //   { icon: 'github', link: 'https://github.com/dodona-edu/dodona' }
+    // ]
   },
 
   // Language-specific overrides and options
@@ -55,11 +57,10 @@ export default defineConfig({
       label: 'Nederlands',
       themeConfig: {
         nav: [
-          { text: 'Nieuws', link: 'https://github.com/orgs/dodona-edu/discussions/categories/release-notes' },
+          { text: 'Nieuws', link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22' },
           { text: 'Handleidingen', link: '/nl/guides/', activeMatch: "/nl/guides/*" },
           { text: 'Referenties', link: '/nl/references/', activeMatch: "/nl/references/*" },
           { text: 'TESTed', link: '/nl/tested/', activeMatch: "/nl/tested/*" },
-          { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         outline: {
           level: [2, 3],
@@ -74,11 +75,10 @@ export default defineConfig({
       label: 'English',
       themeConfig: {
         nav: [
-          { text: 'News', link: 'https://github.com/orgs/dodona-edu/discussions/categories/release-notes' },
+          { text: 'News', link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22' },
           { text: 'Guides', link: '/en/guides/', activeMatch: "/en/guides/*" },
           { text: 'References', link: '/en/references/', activeMatch: "/en/references/*" },
           { text: 'TESTed', link: '/en/tested/', activeMatch: "/en/tested/*" },
-          { text: 'Dodona', link: 'https://dodona.ugent.be' }
         ],
         outline: {
           level: [2, 3],
@@ -86,9 +86,4 @@ export default defineConfig({
       },
     }
   },
-
-
-  // socialLinks: [
-  //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-  // ]
 });
