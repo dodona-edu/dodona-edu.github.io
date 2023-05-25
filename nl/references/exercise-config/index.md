@@ -1,6 +1,7 @@
 ---
 title: "Oefeningconfiguratie"
 description: "Oefeningconfiguratie op Dodona"
+order: 2
 ---
 
 # Oefeningconfiguratie

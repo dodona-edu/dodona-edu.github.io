@@ -1,6 +1,7 @@
 ---
 title: Exercise descriptions
 description: "Exercise description reference Dodona"
+order: 1
 ---
 
 # Exercise descriptions

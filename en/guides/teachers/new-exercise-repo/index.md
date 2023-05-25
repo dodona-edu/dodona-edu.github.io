@@ -1,6 +1,7 @@
 ---
 title: Creating a new exercise repo
 description: "Tutorial: creating a new exercise repo"
+order: 7
 ---
 
 # Creating a new exercise repository

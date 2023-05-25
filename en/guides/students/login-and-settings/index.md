@@ -1,6 +1,7 @@
 ---
 title: "[nl] Aanmelden & gebruikersinstellingen"
 description: "Tutorial: aanmelden en gebruikersinstellingen"
+order: 2
 ---
 
 ::: warning Sorry

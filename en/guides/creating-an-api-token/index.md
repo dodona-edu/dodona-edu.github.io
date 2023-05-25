@@ -1,6 +1,7 @@
 ---
 title: Creating an API token
 description: "Tutorial: creating an API token"
+order: 5
 ---
 # Creating an API token
 

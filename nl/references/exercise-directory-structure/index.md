@@ -1,6 +1,7 @@
 ---
 title: "Oefeningmap-structuur"
 description: "Oefeningmap-structuur Dodona"
+order: 3
 ---
 
 # Oefeningmap-structuur

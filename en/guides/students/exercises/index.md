@@ -1,6 +1,7 @@
 ---
 title: "[nl] Oefeningen oplossen"
 description: "Tutorial: oefeningen oplossen"
+order: 4
 ---
 
 ::: warning Sorry

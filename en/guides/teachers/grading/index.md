@@ -1,6 +1,7 @@
 ---
 title: "[nl] Taken en toetsen verbeteren met Dodona"
 description: "Tutorial: taken en toetsen verbeteren met Dodona"
+order: 6
 ---
 
 ::: warning Sorry

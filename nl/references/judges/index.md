@@ -1,6 +1,7 @@
 ---
 title: Judges
 description: "Overzicht van alle judges beschikbaar op Dodona"
+order: 6
 ---
 
 # Judges

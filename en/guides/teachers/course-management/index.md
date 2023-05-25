@@ -1,6 +1,7 @@
 ---
 title: "[nl] Cursusbeheer"
 description: "Tutorial: cursusbeheer"
+order: 3
 ---
 
 ::: warning Sorry

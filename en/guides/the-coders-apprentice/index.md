@@ -1,6 +1,7 @@
 ---
 title: "The Coder's Apprentice"
 description: "The Coder's Apprentice"
+order: 4
 ---
 
 # The Coder's Apprentice

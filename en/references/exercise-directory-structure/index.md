@@ -1,6 +1,7 @@
 ---
 title: Exercise directory structure
 description: "Exercise directory structure Dodona"
+order: 3
 ---
 
 # Exercise directory structure

@@ -1,6 +1,7 @@
 ---
 title: "[nl] Oefeningenreeksenbeheer"
 description: "Tutorial: oefeningenreeksenbeheer"
+order: 5
 ---
 
 ::: warning Sorry

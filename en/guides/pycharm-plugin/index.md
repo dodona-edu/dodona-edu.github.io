@@ -1,6 +1,7 @@
 ---
 title: Dodona PyCharm plugin
 description: "The Dodona PyCharm plugin"
+order: 3
 ---
 
 # Dodona PyCharm plugin

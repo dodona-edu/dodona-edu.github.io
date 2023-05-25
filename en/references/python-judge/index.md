@@ -1,6 +1,7 @@
 ---
 title: "[nl] Python judge"
 description: "Python judge"
+order: 5
 ---
 
 ::: warning Sorry

@@ -1,6 +1,7 @@
 ---
 title: "[nl] Cursussen op Dodona"
 description: "Tutorial: cursussen op Dodona"
+order: 3
 ---
 
 ::: warning Sorry

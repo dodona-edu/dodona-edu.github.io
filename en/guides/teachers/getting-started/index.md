@@ -1,6 +1,7 @@
 ---
 title: '[nl] Van start met Dodona als leerkracht'
 description: "Tutorial: van start met Dodona als leerkracht"
+order: 1
 ---
 
 ::: warning Sorry

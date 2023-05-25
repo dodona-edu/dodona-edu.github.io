@@ -1,6 +1,7 @@
 ---
 title: Oefeningbeschrijvingen
 description: "Referentie features te gebruiken in oefeningbeschrijvingen"
+order: 1
 ---
 
 # Oefeningbeschrijvingen

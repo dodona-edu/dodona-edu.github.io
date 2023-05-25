@@ -1,6 +1,7 @@
 ---
 title: Python judge
 description: "Python judge"
+order: 5
 ---
 
 # Python judge

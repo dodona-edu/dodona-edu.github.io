@@ -1,6 +1,7 @@
 ---
 title: Exercise config
 description: "Exercise config reference Dodona"
+order: 2
 ---
 
 # Exercise configuration
