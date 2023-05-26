@@ -40,7 +40,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
         // In that case, we don't use a subfolder and directly link to the file instead.
         sidebarItems.push([order, {
           text: title,
-          link: subitem + "/"
+          link: "/" + subitem + "/"
         }]);
       } else {
         // In this case, there are other files or subfolders in the folder.
@@ -49,7 +49,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
         if (!data.data.skipIndex) {
           childItems.push({
             text: options.overview,
-            link: subitem + "/"
+            link: "/" + subitem + "/"
           });
         }
         sidebarItems.push([order, {
@@ -67,7 +67,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
       const order = data.data.order ?? Infinity;
       sidebarItems.push([order, {
         text: title,
-        link: subitem
+        link: "/" + subitem
       }]);
     }
   }
