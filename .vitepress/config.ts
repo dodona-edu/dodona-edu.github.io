@@ -22,7 +22,7 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       // use more markdown-it plugins!
-      md.use(markdownItImsize)
+      md.use(markdownItImsize);
     }
   },
 
@@ -45,7 +45,50 @@ export default defineConfig({
       options: {
         apiKey: '60f1ac41f6f49d989a3b3c500aba3481',
         appId: 'GN7X16QWOE',
-        indexName: 'dodona-edu'
+        indexName: 'dodona-edu',
+        locales: {
+          nl: {
+            placeholder: 'Zoeken',
+            translations: {
+              button: {
+                buttonText: 'Zoeken',
+                buttonAriaLabel: 'Zoeken'
+              },
+              modal: {
+                searchBox: {
+                  resetButtonTitle: 'Zoekopdracht wissen',
+                  resetButtonAriaLabel: 'Zoekopdracht wissen',
+                  cancelButtonText: 'Annuleren',
+                  cancelButtonAriaLabel: 'Annuleren'
+                },
+                startScreen: {
+                  recentSearchesTitle: 'Zoekgeschiedenis',
+                  noRecentSearchesText: 'Geen zoekgeschiedenis',
+                  saveRecentSearchButtonTitle: 'Opslaan in zoekgeschiedenis',
+                  removeRecentSearchButtonTitle: 'Verwijderen uit zoekgeschiedenis',
+                  favoriteSearchesTitle: 'Favorieten',
+                  removeFavoriteSearchButtonTitle: 'Verwijderen uit favorieten'
+                },
+                errorScreen: {
+                  titleText: 'Kon geen resultaten ophalen',
+                  helpText: 'Controleer uw netwerkverbinding'
+                },
+                footer: {
+                  selectText: 'selecteren',
+                  navigateText: 'navigeren',
+                  closeText: 'sluiten',
+                  searchByText: 'Zoeken door'
+                },
+                noResultsScreen: {
+                  noResultsText: 'Geen resultaten voor',
+                  suggestedQueryText: 'Probeer te zoeken naar',
+                  reportMissingResultsText: 'Ontbreken er resultaten?',
+                  reportMissingResultsLinkText: 'Klik op Feedback'
+                }
+              }
+            }
+          }
+        }
       }
     },
 
@@ -65,7 +108,10 @@ export default defineConfig({
       label: 'Nederlands',
       themeConfig: {
         nav: [
-          { text: 'Nieuws', link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22' },
+          {
+            text: 'Nieuws',
+            link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22'
+          },
           { text: 'Handleidingen', link: '/nl/guides/', activeMatch: "/nl/guides/*" },
           { text: 'Referenties', link: '/nl/references/', activeMatch: "/nl/references/*" },
           { text: 'TESTed', link: '/nl/tested/', activeMatch: "/nl/tested/*" },
@@ -83,7 +129,10 @@ export default defineConfig({
       label: 'English',
       themeConfig: {
         nav: [
-          { text: 'News', link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22' },
+          {
+            text: 'News',
+            link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22'
+          },
           { text: 'Guides', link: '/en/guides/', activeMatch: "/en/guides/*" },
           { text: 'References', link: '/en/references/', activeMatch: "/en/references/*" },
           { text: 'TESTed', link: '/en/tested/', activeMatch: "/en/tested/*" },
