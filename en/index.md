@@ -7,6 +7,9 @@ hero:
   name: "Dodona Docs"
   text: "Learn to code for secondary and higher education"
   tagline: This web page contains documentation and information about the Dodona project.
+  image:
+    src: /home-image.png
+    alt: A decorative image for the homepage.
   actions:
     - theme: brand
       text: Wisselen naar het Nederlands

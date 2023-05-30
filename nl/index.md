@@ -7,6 +7,9 @@ hero:
   name: "Dodona Docs"
   text: "Leren programmeren voor secundair en hoger onderwijs"
   tagline: Deze website bevat documentatie en informatie over het Dodona-project.
+  image:
+    src: /home-image.png
+    alt: A decorative image for the homepage.
   actions:
     - theme: brand
       text: Switch to English
