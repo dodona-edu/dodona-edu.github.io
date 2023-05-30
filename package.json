@@ -1,28 +1,27 @@
 {
   "name": "dodona-docs",
   "version": "0.0.1",
-  "description": "Deze website bevat documentatie en informatie over het Dodona project.",
+  "description": "Deze website bevat documentatie en informatie over het Dodona-project.",
   "main": "index.js",
+  "type": "module",
   "authors": {
     "name": "Team Dodona",
     "email": "dodona@ugent.be"
   },
   "repository": "https://github.com/dodona-edu/dodona-edu.github.io",
   "scripts": {
-    "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.9",
-    "@vuepress/plugin-google-analytics": "^1.9.9",
-    "@vuepress/plugin-medium-zoom": "^1.9.9",
+    "@types/node": "^20.2.3",
+    "gray-matter": "^4.0.3",
     "markdown-it-imsize": "^2.0.1",
-    "prismjs": "^1.29.0",
-    "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.9.9",
-    "vuepress-plugin-mathjax": "^1.2.8",
-    "vuepress-plugin-redirect": "^1.2.5",
-    "vuepress-plugin-tabs": "^0.3.0"
-  }
+    "medium-zoom": "^1.0.8",
+    "resolve-accept-language": "^2.0.1",
+    "vitepress": "^1.0.0-beta.1"
+  },
+  "dependencies": {}
 }

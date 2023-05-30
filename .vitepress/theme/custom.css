@@ -1,0 +1,28 @@
+/* https://vitepress.dev/guide/extending-default-theme#customizing-css */
+
+:root {
+    --vp-c-brand: #0061a6;
+}
+
+/* Using prefers-color-scheme does not work with the selector */
+.dark {
+    --vp-c-brand: #9ccaff;
+}
+
+
+/*
+VitePress does not have a way of gloablly disabling prev/next.
+The alternative would be to add "prev: false" and "next: false" to every page.
+*/
+.prev-next {
+    display: none !important;
+}
+
+/* Medium zoom */
+.medium-zoom-overlay {
+    z-index: 20;
+}
+
+.medium-zoom-image {
+    z-index: 21;
+}
