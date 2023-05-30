@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Wisselen naar het Nederlands
-      link: /en
+      link: /nl
     - theme: alt
       text: Go to Dodona
       link: https://dodona.ugent.be
