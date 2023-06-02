@@ -24,7 +24,7 @@ features:
     link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
   - title: Handleidingen
     details: Handleidingen en info over hoe je Dodona kan gebruiken.
-    link: /nl/guides/
+    link: /nl/guides/general/getting-started/
   - title: Referenties
     details: Technische referentie over configuraties en mappenstructuren.
     link: /nl/references/

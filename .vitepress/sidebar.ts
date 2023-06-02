@@ -7,6 +7,7 @@ export interface Options {
   directory: string;
   overview: string;
   uncollapsed?: string;
+  topTitle ?: string;
 }
 
 type SortableSidebarItem = [number, DefaultTheme.SidebarItem];
@@ -77,5 +78,13 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
 
 export function getSidebar(options: Options): DefaultTheme.SidebarItem[] {
   const items = getSidebarItems(options.directory, options);
-  return sortSidebarItems(items);
+  const sortedItems = sortSidebarItems(items);
+  if (options.topTitle) {
+    return [{
+      text: options.topTitle,
+      items: sortedItems
+    }]
+  } else {
+    return sortedItems;
+  }
 }

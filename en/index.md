@@ -24,7 +24,7 @@ features:
     link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
   - title: Guides
     details: Manuals on getting things done with Dodona.
-    link: /en/guides/
+    link: /en/guides/general/getting-started/
   - title: References
     details: Technical references on config files and directory structures.
     link: /en/references/

@@ -1,5 +1,5 @@
 ---
 title: For students
 skipIndex: true
-order: 1
+order: 2
 ---
