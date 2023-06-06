@@ -1,5 +1,5 @@
 ---
 title: Voor studenten
 skipIndex: true
-order: 1
+order: 2
 ---

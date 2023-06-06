@@ -14,4 +14,4 @@ Here you can find up-to-date descriptions of the Dodona config files and directo
 * [Judges](judges)
 
 ## In Dutch
-* [Python judge](python-judge)
+* [Python judge](judges/python-judge)

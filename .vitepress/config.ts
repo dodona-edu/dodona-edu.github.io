@@ -16,9 +16,6 @@ export default defineConfig({
 
   lastUpdated: false,
 
-  // Redirect language-less pages to nl.
-  rewrites: {},
-
   markdown: {
     config: (md) => {
       // use more markdown-it plugins!
@@ -32,12 +29,10 @@ export default defineConfig({
     logo: 'icon.png',
 
     sidebar: {
-      "/nl/guides": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "guides" }),
-      "/nl/references": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "references" }),
-      "/nl/tested": getSidebar({ directory: "nl", overview: "Overzicht", uncollapsed: "tested" }),
-      "/en/guides": getSidebar({ directory: "en", overview: "Overview", uncollapsed: "guides" }),
-      "/en/references": getSidebar({ directory: "en", overview: "Overview", uncollapsed: "references" }),
-      "/en/tested": getSidebar({ directory: "en", overview: "Overview", uncollapsed: "tested" }),
+      "/nl/guides": getSidebar({ directory: "nl/guides", overview: "Overzicht" }),
+      "/nl/references": getSidebar({ topTitle: "Referenties", directory: "nl/references", overview: "Overzicht" }),
+      "/en/guides": getSidebar({ directory: "en/guides", overview: "Overview" }),
+      "/en/references": getSidebar({ topTitle: "References", directory: "en/references", overview: "Overview" }),
     },
 
     search: {
@@ -112,9 +107,8 @@ export default defineConfig({
             text: 'Nieuws',
             link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22'
           },
-          { text: 'Handleidingen', link: '/nl/guides/', activeMatch: "/nl/guides/*" },
-          { text: 'Referenties', link: '/nl/references/', activeMatch: "/nl/references/*" },
-          { text: 'TESTed', link: '/nl/tested/', activeMatch: "/nl/tested/*" },
+          { text: 'Handleidingen', link: '/nl/guides/general/getting-started/', activeMatch: "/nl/guides/*" },
+          { text: 'Referenties', link: '/nl/references/', activeMatch: "/nl/references/*" }
         ],
         outline: {
           level: [2, 3],
@@ -133,9 +127,8 @@ export default defineConfig({
             text: 'News',
             link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22'
           },
-          { text: 'Guides', link: '/en/guides/', activeMatch: "/en/guides/*" },
+          { text: 'Guides', link: '/en/guides/general/getting-started/', activeMatch: "/en/guides/*" },
           { text: 'References', link: '/en/references/', activeMatch: "/en/references/*" },
-          { text: 'TESTed', link: '/en/tested/', activeMatch: "/en/tested/*" },
         ],
         outline: {
           level: [2, 3],

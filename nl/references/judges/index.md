@@ -1,5 +1,5 @@
 ---
-title: Judges
+title: Alle judges
 description: "Overzicht van alle judges beschikbaar op Dodona"
 order: 6
 ---
@@ -15,7 +15,7 @@ Elke judge heeft zijn eigen configuratie-opties.
 We geven hieronder een link naar de relevante documentatie voor elke judge.
 Deze judge specifieke opties moeten worden voorzien in de map `evaluation` van de [oefening-specifieke configuratie](/nl/references/exercise-directory-structure).
 
-Gevorderde gebruikers kunnen ook hun eigen judge aanmaken, zie [deze gids](/nl/guides/creating-a-judge).
+Gevorderde gebruikers kunnen ook hun eigen judge aanmaken, zie [deze gids](/nl/references/judges/creating-a-judge).
 
 Dodona ondersteunt momenteel de volgende judges:
 
@@ -23,14 +23,14 @@ Dodona ondersteunt momenteel de volgende judges:
 TESTed is een whitebox judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.\
 **Programmeertalen:** Bash, C, C#, Haskell, Java, JavaScript, Kotlin, Python\
-**Aan de slag** [Documentatie](/nl/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises) \
+**Aan de slag** [Documentatie](/nl/references/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Python
 Python/Pythia is de eerste judge die is gemaakt voor Dodona.
 Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
 **Programmeertalen:** Python\
-**Aan de slag** [Documentatie](/nl/references/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
+**Aan de slag** [Documentatie](/nl/references/judges/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## R

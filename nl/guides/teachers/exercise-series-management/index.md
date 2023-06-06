@@ -58,7 +58,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
   Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te klikken. Dit kan je bijvoorbeeld doen als je per ongeluk de link kenbaar hebt gemaakt aan iemand die ze niet zou mogen zijn. Hou er wel rekening mee dat de oude link niet meer zal werken van zodra je een nieuwe genereert.
   ![reekslink vernieuwen](./staff.series_hidden_link_reset.png)
 
-* `Beschrijving`: een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in de cursus. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](../../../references/exercise-description/#markdown).
+* `Beschrijving`: een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in de cursus. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/references/exercise-description/#markdown).
 
 * **Geavanceerde instellingen**:
 
@@ -94,7 +94,7 @@ Versleep de verplaatsknop aan de linkerkant van de oefeningen om de volgorde van
 
 ::: tip Belangrijk
 
-We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen, publiceren en delen van oefeningen wordt [hier](../new-exercise-repo/) besproken.
+We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen, publiceren en delen van oefeningen wordt [hier](/nl/guides/exercises/new-exercise-repo) besproken.
 
 :::
 
@@ -145,7 +145,7 @@ Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalue
 
 ## Oefeningenreeks evalueren
 
-Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback en punten te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](../grading/).
+Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback en punten te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](/nl/guides/teachers/grading).
 
 ## Oefeningenreeks oplossingen exporteren
 

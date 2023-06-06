@@ -8,16 +8,37 @@
 import path from 'node:path';
 import { Dirent, readdirSync } from "node:fs";
 
+function internationalizedRedirects(originals): Record<string, string> {
+    const resultingUrls = {};
+    for (const [url, redirect] of Object.entries(originals)) {
+        resultingUrls[url] = redirect;
+        resultingUrls[`en/${url}`] = `en/${redirect}`;
+        resultingUrls[`nl/${url}`] = `nl/${redirect}`;
+    }
+    return resultingUrls;
+}
+
 
 // Custom redirects.
-const redirects = {
+const redirects = internationalizedRedirects({
     'guides/getting-started': 'guides/teachers/getting-started',
-    'nl/guides/getting-started': 'nl/guides/teachers/getting-started',
-    'en/guides/getting-started': 'en/guides/teachers/getting-started',
     'ufora': 'guides/teachers/ufora',
-    'nl/ufora': 'nl/guides/teachers/ufora',
-    'en/ufora': 'en/guides/teachers/ufora'
-};
+
+    // Backwards compatability to not break existing URls.
+    // Especially important for published URLs.
+    'tested': 'references/tested',
+    'tested/json': 'references/tested/json',
+    'tested/dsl': 'references/tested/dsl',
+    'tested/new-programming-language': 'references/tested/new-programming-language',
+    'tested/exercise-config': 'references/tested/exercise-config',
+    'tested/types': 'references/tested/types',
+    'guides/teachers/new-exercise-repo': 'guides/exercises/new-exercise-repo',
+    'guides/creating-an-api-token': 'guides/general/creating-an-api-token',
+    'guides/creating-a-judge': 'references/judges/creating-a-judge',
+    'references/python-judge': 'references/judges/python-judge',
+    'guides/the-coders-apprentice': 'guides/general/the-coders-apprentice',
+    'guides': 'guides/general/getting-started'
+});
 
 
 function recursiveReadMd(directory: string): string[] {

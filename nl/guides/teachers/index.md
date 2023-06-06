@@ -1,5 +1,5 @@
 ---
 title: Voor leerkrachten
 skipIndex: true
-order: 2
+order: 3
 ---
