@@ -28,4 +28,7 @@ features:
   - title: References
     details: Technical references on config files and directory structures.
     link: /en/references/
+  - title: FAQ
+    details: Answers to frequently asked questions.
+    link: /en/faq/
 ---

@@ -28,4 +28,7 @@ features:
   - title: Referenties
     details: Technische referentie over configuraties en mappenstructuren.
     link: /nl/references/
+  - title: FAQ
+    details: Antwoorden op vaak gestelde vragen.
+    link: /nl/faq/
 ---

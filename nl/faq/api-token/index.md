@@ -1,5 +1,5 @@
 ---
-title: What is an API token and how do I create one?
+title: Wat is een API token en hoe maak ik er een aan?
 ---
 
 Test
