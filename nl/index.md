@@ -19,9 +19,6 @@ hero:
       link: https://dodona.ugent.be
 
 features:
-  - title: Nieuws
-    details: Release notes en het laatste nieuws over Dodona.
-    link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
   - title: Handleidingen
     details: Handleidingen en info over hoe je Dodona kan gebruiken.
     link: /nl/guides/general/getting-started/
@@ -31,4 +28,8 @@ features:
   - title: FAQ
     details: Antwoorden op vaak gestelde vragen.
     link: /nl/faq/
+  - title: Nieuws
+    details: Release notes en het laatste nieuws over Dodona.
+    link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
+    linkText: Bekijk op GitHub
 ---
