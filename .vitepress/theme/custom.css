@@ -1,12 +1,24 @@
 /* https://vitepress.dev/guide/extending-default-theme#customizing-css */
 
 :root {
-    --vp-c-brand: #0061a6;
+    --vp-c-brand: #0061A6;
+    --vp-c-brand-light: #1E95F2;
+    --vp-c-brand-lighter: #9CCAFF;
+    --vp-c-brand-dark: #00497F;
+    --vp-c-brand-darker: #00325A;
 }
 
 /* Using prefers-color-scheme does not work with the selector */
 .dark {
-    --vp-c-brand: #9ccaff;
+    --vp-c-brand: #9CCAFF;
+    --vp-c-brand-light: #E8F1FF;
+    --vp-c-brand-lighter: #FCFCFF;
+    --vp-c-brand-dark: #00497F;
+    --vp-c-brand-darker: #00325A;
+
+    /* Override the colour of button text because our background is light */
+    --vp-button-brand-text: var(--vp-c-black);
+    --docsearch-hit-active-color: var(--vp-c-black);
 }
 
 /* Medium zoom */
