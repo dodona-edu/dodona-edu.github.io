@@ -9,7 +9,7 @@ order: 3
 If you're programming in [Visual Studio Code](https://code.visualstudio.com/), you can make use of the Dodona extension to easily submit your solutions.
 
 ## 1. Create an API token
-Before installing the extension, you need to create an API token on the Dodona website. Using such token, VS Code can submit solution on your behalf without needing your password. To create an API token, follow [this guide](/en/guides/general/creating-an-api-token). Keep the created token nearby because you'll need it in a few minutes when you use the extension for the first time.
+Before installing the extension, you need to create an API token on the Dodona website. Using such token, VS Code can submit solution on your behalf without needing your password. To create an API token, follow [this guide](/en/faq/api-tokens/#how-do-i-create-an-api-token). Keep the created token nearby because you'll need it in a few minutes when you use the extension for the first time.
 
 ## 2. Install the extension
 
@@ -53,4 +53,3 @@ After a few seconds, you should see a popup in the bottom right corner containin
 
 ![correct solution](./vs_code_correct_view_results.png)
 ![incorrect solution](./vs_code_incorrect_view_results.png)
-

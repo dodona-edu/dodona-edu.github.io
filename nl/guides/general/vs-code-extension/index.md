@@ -10,7 +10,7 @@ Als je programmeert in [Visual Studio Code](https://code.visualstudio.com/) dan 
 
 ## 1. Een API token aanmaken
 
-Voor je de extensie kan installeren moet je eerst een API token aanmaken op de Dodona website. Via zo'n token kan VS Code in jouw naam indienen zonder dat je je wachtwoord moet delen. Om een token aan te maken volg je [dit stappenplan](/nl/guides/general/creating-an-api-token). Hou het aangemaakte token bij, je zal het straks eenmalig in de extensie moeten invoeren.
+Voor je de extensie kan installeren moet je eerst een API token aanmaken op de Dodona website. Via zo'n token kan VS Code in jouw naam indienen zonder dat je je wachtwoord moet delen. Om een token aan te maken volg je [dit stappenplan](/nl/faq/api-tokens/#hoe-maak-ik-een-api-token-aan). Hou het aangemaakte token bij, je zal het straks eenmalig in de extensie moeten invoeren.
 
 ## 2. De extensie installeren
 
@@ -57,4 +57,3 @@ Na enkele seconden zou het resultaat rechtsonder je editor moeten verschijnen. A
 
 ![correct solution](./vs_code_correct_view_results.png)
 ![incorrect solution](./vs_code_incorrect_view_results.png)
-

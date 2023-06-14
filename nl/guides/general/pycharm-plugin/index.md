@@ -6,10 +6,10 @@ order: 3
 
 # Dodona PyCharm plugin
 
-Als je programmeert in een IDE van JetBrains, zoals bijvoorbeeld [PyCharm](https://www.jetbrains.com/pycharm/), dan kan je gebruik maken van de Dodona plugin om eenvoudig en snel in te dienen. 
+Als je programmeert in een IDE van JetBrains, zoals bijvoorbeeld [PyCharm](https://www.jetbrains.com/pycharm/), dan kan je gebruik maken van de Dodona plugin om eenvoudig en snel in te dienen.
 
 ## 1. Een API token aanmaken
-Voor je de plugin kan installeren moet je eerst een API token aanmaken op de Dodona website. Via zo'n token kan PyCharm in jouw naam indienen zonder dat je je wachtwoord moet delen. Om een token aan te maken volg je [dit stappenplan](/nl/guides/general/creating-an-api-token). Hou het aangemaakte token bij, je zal het straks eenmalig in de plugin moeten invoeren.
+Voor je de plugin kan installeren moet je eerst een API token aanmaken op de Dodona website. Via zo'n token kan PyCharm in jouw naam indienen zonder dat je je wachtwoord moet delen. Om een token aan te maken volg je [dit stappenplan](/nl/faq/api-tokens/#hoe-maak-ik-een-api-token-aan). Hou het aangemaakte token bij, je zal het straks eenmalig in de plugin moeten invoeren.
 
 ## 2. De plugin installeren
 

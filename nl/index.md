@@ -25,6 +25,9 @@ features:
   - title: Referenties
     details: Technische referentie over configuraties en mappenstructuren.
     link: /nl/references/
+  - title: FAQ
+    details: Antwoorden op vaak gestelde vragen.
+    link: /nl/faq/
   - title: Nieuws
     details: Release notes en het laatste nieuws over Dodona.
     link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22

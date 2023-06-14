@@ -33,11 +33,12 @@ const redirects = internationalizedRedirects({
     'tested/exercise-config': 'references/tested/exercise-config',
     'tested/types': 'references/tested/types',
     'guides/teachers/new-exercise-repo': 'guides/exercises/new-exercise-repo',
-    'guides/creating-an-api-token': 'guides/general/creating-an-api-token',
+    'guides/creating-an-api-token': 'faq/api-tokens',
     'guides/creating-a-judge': 'references/judges/creating-a-judge',
     'references/python-judge': 'references/judges/python-judge',
     'guides/the-coders-apprentice': 'guides/general/the-coders-apprentice',
-    'guides': 'guides/general/getting-started'
+    'guides': 'guides/general/getting-started',
+    'guides/general/creating-an-api-token': 'faq/api-tokens'
 });
 
 
