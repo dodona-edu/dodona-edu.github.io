@@ -91,6 +91,11 @@ export default defineConfig({
       message: "Made by Team Dodona with ❤️"
     },
 
+    docFooter: {
+      prev: false,
+      next: false
+    }
+
     // socialLinks: [
     //   { icon: 'github', link: 'https://github.com/dodona-edu/dodona' }
     // ]
