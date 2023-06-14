@@ -19,13 +19,14 @@ hero:
       link: https://dodona.ugent.be
 
 features:
-  - title: News
-    details: Release notes and the latest news on Dodona.
-    link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
   - title: Guides
     details: Manuals on getting things done with Dodona.
     link: /en/guides/general/getting-started/
   - title: References
     details: Technical references on config files and directory structures.
     link: /en/references/
+  - title: News
+    details: Release notes and the latest news on Dodona.
+    link: https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22
+    linkText: View on GitHub
 ---
