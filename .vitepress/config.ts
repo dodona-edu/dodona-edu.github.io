@@ -29,8 +29,10 @@ export default defineConfig({
     logo: 'icon.png',
 
     sidebar: {
+      "/nl/faq": getSidebar({ topTitle: "FAQ", directory: "nl/faq", overview: "FAQ" }),
       "/nl/guides": getSidebar({ directory: "nl/guides", overview: "Overzicht" }),
       "/nl/references": getSidebar({ topTitle: "Referenties", directory: "nl/references", overview: "Overzicht" }),
+      "/en/faq": getSidebar({ topTitle: "FAQ", directory: "en/faq", overview: "FAQ" }),
       "/en/guides": getSidebar({ directory: "en/guides", overview: "Overview" }),
       "/en/references": getSidebar({ topTitle: "References", directory: "en/references", overview: "Overview" }),
     },
@@ -112,6 +114,7 @@ export default defineConfig({
             text: 'Nieuws',
             link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22'
           },
+          { text: 'FAQ', link: '/nl/faq/', activeMatch: "/nl/faq/*" },
           { text: 'Handleidingen', link: '/nl/guides/general/getting-started/', activeMatch: "/nl/guides/*" },
           { text: 'Referenties', link: '/nl/references/', activeMatch: "/nl/references/*" }
         ],
@@ -132,6 +135,7 @@ export default defineConfig({
             text: 'News',
             link: 'https://github.com/orgs/dodona-edu/discussions?discussions_q=category%3AAnnouncements+category%3A%22Release+notes%22'
           },
+          { text: 'FAQ', link: '/en/faq/', activeMatch: "/en/faq/*" },
           { text: 'Guides', link: '/en/guides/general/getting-started/', activeMatch: "/en/guides/*" },
           { text: 'References', link: '/en/references/', activeMatch: "/en/references/*" },
         ],
