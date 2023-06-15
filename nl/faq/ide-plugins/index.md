@@ -10,7 +10,7 @@ title: IDE plugins
 
 Een IDE-plugin voor Dodona is een tool die de functies van Dodona integreert in de IDE van je voorkeur. Hoewel je met Dodona direct code kunt schrijven in de online editor, geven de meeste professionele programmeurs de voorkeur aan een IDE (Integrated Development Environment) om te coderen. IDE's bieden een robuuste set tools voor het schrijven, debuggen en uitvoeren van code die de productiviteit en kwaliteit van de code aanzienlijk kunnen verbeteren.
 
-Met de Dodona IDE plugins kun je je code eenvoudig overzetten van je IDE naar Dodona. Dit betekent dat je je code kunt schrijven en testen in een omgeving waar je vertrouwd mee bent en deze vervolgens direct naar Dodona kunt sturen voor evaluatie en feedback. Op dit moment ondersteunt Dodona plugins voor populaire [JetBrains IDE's zoals PyCharm](#hoe-installeer-ik-de-pycharm-plugin) en ook voor [Visual Studio Code](#hoe-installeer-ik-de-vs-code-extension).
+Met de Dodona IDE plugins kun je je code eenvoudig overzetten van je IDE naar Dodona. Dit betekent dat je je code kunt schrijven en testen in een omgeving waar je vertrouwd mee bent en deze vervolgens direct naar Dodona kunt sturen voor evaluatie en feedback. Op dit moment ondersteunt Dodona plugins voor populaire [JetBrains IDE's zoals PyCharm](#hoe-installeer-ik-de-pycharm-plugin) en ook voor [Visual Studio Code](#hoe-installeer-ik-de-vs-code-extensie).
 
 Door deze plugins te gebruiken, kun je het beste van twee werelden combineren: de geavanceerde functies van je favoriete IDE en de leer- en evaluatiehulpmiddelen van Dodona.
 
