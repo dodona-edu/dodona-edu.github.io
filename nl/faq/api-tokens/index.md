@@ -8,7 +8,7 @@ title: API tokens
 
 ## Wat is een API token?
 
-Een API token is een unieke identificatiecode waarmee externe applicaties namens jouw account met Dodona kunnen communiceren zonder jouw wachtwoord nodig te hebben. Het fungeert als een authenticatiesleutel die deze applicaties kunnen gebruiken om acties namens jou uit te voeren. Je kunt bijvoorbeeld een API-token gebruiken om de [Dodona-plugin voor JetBrains IDE's](/nl/guides/general/pycharm-plugin/) toegang te geven tot jouw Dodona-account.
+Een API token is een unieke identificatiecode waarmee externe applicaties namens jouw account met Dodona kunnen communiceren zonder jouw wachtwoord nodig te hebben. Het fungeert als een authenticatiesleutel die deze applicaties kunnen gebruiken om acties namens jou uit te voeren. Je kunt bijvoorbeeld een API-token gebruiken om de [Dodona-plugin voor JetBrains IDE's](/nl/faq/ide-plugins/) toegang te geven tot jouw Dodona-account.
 
 ## Hoe maak ik een API token aan?
 

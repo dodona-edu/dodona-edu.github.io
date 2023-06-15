@@ -38,7 +38,11 @@ const redirects = internationalizedRedirects({
     'references/python-judge': 'references/judges/python-judge',
     'guides/the-coders-apprentice': 'guides/general/the-coders-apprentice',
     'guides': 'guides/general/getting-started',
-    'guides/general/creating-an-api-token': 'faq/api-tokens'
+
+    // redirects after setting up the faq pages
+    'guides/general/creating-an-api-token': 'faq/api-tokens',
+    'guides/general/pycharm-plugin': 'faq/ide-plugins',
+    'guides/general/vs-code-extension': 'faq/ide-plugins'
 });
 
 
