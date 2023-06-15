@@ -8,7 +8,7 @@ title: API tokens
 
 ## What is an API token?
 
-An API token is a unique identifier that allows external applications to interact with your account on a platform without needing your password. It acts as an authentication key that these applications can use to perform actions on your behalf. For example, you can use an API token to authorise the [Dodona plugin for JetBrains IDEs](/en/guides/general/pycharm-plugin/) to access your Dodona account.
+An API token is a unique identifier that allows external applications to interact with your account on a platform without needing your password. It acts as an authentication key that these applications can use to perform actions on your behalf. For example, you can use an API token to authorise the [Dodona plugin for JetBrains IDEs](/en/faq/ide-plugins/#how-do-i-install-the-pycharm-plugin) to access your Dodona account.
 
 ## How do I create an API token?
 
