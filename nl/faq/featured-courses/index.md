@@ -50,7 +50,7 @@ De cursus is alleen beschikbaar in het [Nederlands](https://dodona.ugent.be/nl/c
 
 ---
 
-### R Basis
+### R Basics
 
 **R Basics** is een interactieve cursus waarin je een basis in R opbouwt en de basis leert om met data om te gaan. De cursus is gebaseerd op het eerste deel van het e-book [Introduction to Data Science](https://rafalab.github.io/dsbook/) van Prof. Rafael Irizarry, Department of Data Sciences aan het Dana-Farber Cancer Institute en Department of Biostatistics Harvard School of Public Health.
 
@@ -58,7 +58,7 @@ De cursus is alleen beschikbaar in het [Engels](https://dodona.ugent.be/nl/cours
 
 ---
 
-### R Gegevensverkenning en -visualisatie
+### R Data Exploration and Visualisation
 
 **R Data Exploration and Visualisation** is een interactieve cursus waarin je de basisprincipes van datavisualisatie leert en hoe je die kunt toepassen met ggplot2. De cursus is gebaseerd op het tweede deel van het e-book [Introduction to Data Science](https://rafalab.github.io/dsbook/) van Prof. Rafael Irizarry, Department of Data Sciences aan het Dana-Farber Cancer Institute en Department of Biostatistics Harvard School of Public Health.
 
