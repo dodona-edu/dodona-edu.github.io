@@ -36,13 +36,14 @@ const redirects = internationalizedRedirects({
     'guides/creating-an-api-token': 'faq/api-tokens',
     'guides/creating-a-judge': 'references/judges/creating-a-judge',
     'references/python-judge': 'references/judges/python-judge',
-    'guides/the-coders-apprentice': 'guides/general/the-coders-apprentice',
+    'guides/the-coders-apprentice': 'guides/general/featured-courses',
     'guides': 'guides/general/getting-started',
 
     // redirects after setting up the faq pages
     'guides/general/creating-an-api-token': 'faq/api-tokens',
     'guides/general/pycharm-plugin': 'faq/ide-plugins',
-    'guides/general/vs-code-extension': 'faq/ide-plugins'
+    'guides/general/vs-code-extension': 'faq/ide-plugins',
+    'guides/general/the-coders-apprentice': 'faq/featured-courses'
 });
 
 

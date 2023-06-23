@@ -16,3 +16,9 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe kan ik de PyCharm-plugin gebruiken?](./ide-plugins/#hoe-kan-ik-de-pycharm-plugin-gebruiken)
 - [Hoe installeer ik de VS Code-extensie?](./ide-plugins/#hoe-installeer-ik-de-vs-code-extensie)
 - [Hoe kan ik de VS Code-extensie gebruiken?](./ide-plugins/#hoe-kan-ik-de-vs-code-extensie-gebruiken)
+
+## Uitgelichte cursussen
+- [Wat is een uitgelichte cursus?](./featured-courses/#wat-is-een-uitgelichte-cursus)
+- [Ik heb een cursus gemaakt, hoe kan ik deze laten uitlichten?](./featured-courses/#ik-heb-een-cursus-gemaakt-hoe-kan-ik-deze-laten-uitlichten)
+- [Hoe kan ik een uitgelichte cursus gebruiken?](./featured-courses/#hoe-kan-ik-een-uitgelichte-cursus-gebruiken)
+- [Welke uitgelichte cursussen zijn er beschikbaar?](./featured-courses/#welke-uitgelichte-cursussen-zijn-er-beschikbaar)

@@ -9,6 +9,13 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [What is an API token?](./api-tokens/#what-is-an-api-token)
 - [How do I create an API token?](./api-tokens/#how-do-i-create-an-api-token)
 
+## Featured courses
+- [What is a featured courses?](./featured-courses/#what-is-a-featured-course)
+- [I made a course, how can I get it featured?](./featured-courses/#i-made-a-course-how-can-i-get-it-featured)
+- [How can I use a featured course?](./featured-courses/#how-can-i-use-a-featured-course)
+- [Which featured courses are available?](./featured-courses/#which-featured-courses-are-available)
+
+
 ## IDE plugins
 - [What is an IDE plugin?](./ide-plugins/#what-is-an-ide-plugin)
 - [How do I install the PyCharm plugin?](./ide-plugins/#how-do-i-install-the-pycharm-plugin)
