@@ -25,12 +25,12 @@ As a teacher, we recommend that you make a copy of the featured course and use i
 ![Copy a course in Dodona](./course-copy-en.png)
 
 ::: tip
-Can't see 'Copy course' button? You probably don't have the rights to copy a course. Fill out the [rights request form](https://dodona.ugent.be/en/rights_requests/new/) to request the necessary rights and we'll get back to you as soon as possible.
+Can't see the 'Copy this course' button? You probably don't have the rights to copy a course. Fill out the [rights request form](https://dodona.ugent.be/en/rights_requests/new/) to request the necessary rights and we'll get back to you as soon as possible.
 :::
 
 ## Which featured courses are available?
 
-An up to date list of featured courses can be found on the [featured courses page](https://dodona.ugent.be/en/courses/?tab=featured) of Dodona. At the moment, we only have featured courses for R and Python.
+An up-to-date list of featured courses can be found on the [featured courses page](https://dodona.ugent.be/en/courses/?tab=featured) of Dodona. At the moment, we only have featured courses for R and Python.
 
 ### The Coder's Apprentice
 

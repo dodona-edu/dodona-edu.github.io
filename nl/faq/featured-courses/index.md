@@ -25,7 +25,7 @@ Als lesgever raden we je aan om een kopie te maken van de cursus en deze te gebr
 ![Een cursus kopiëren in Dodona](./course-copy-nl.png)
 
 ::: tip
-Zie je de knop 'Cursus kopiëren' niet? Waarschijnlijk heb je niet de nodige rechten om een cursus te kopiëren. Vul het [aanvraagformulier voor lesgevers](https://dodona.ugent.be/nl/rights_requests/new/) in om de benodigde rechten aan te vragen en we nemen zo snel mogelijk contact met je op.
+Zie je de knop 'Deze cursus kopiëren' niet? Waarschijnlijk heb je niet de nodige rechten om een cursus te kopiëren. Vul het [aanvraagformulier voor lesgevers](https://dodona.ugent.be/nl/rights_requests/new/) in om de benodigde rechten aan te vragen en we nemen zo snel mogelijk contact met je op.
 :::
 
 ## Welke uitgelichte cursussen zijn er beschikbaar?
