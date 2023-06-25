@@ -9,6 +9,7 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 ## API tokens
 - [Wat is een API token?](./api-tokens/#wat-is-een-api-token)
 - [Hoe maak ik een API token aan?](./api-tokens/#hoe-maak-ik-een-api-token-aan)
+- [Hoe kan ik de Dodona API gebruiken?](./api-tokens/#hoe-kan-ik-de-dodona-api-gebruiken)
 
 ## IDE plugins
 - [Wat is een IDE plugin?](./ide-plugins/#wat-is-een-ide-plugin)
