@@ -50,7 +50,7 @@ In Python, this would look like:
 #!/usr/bin/python3
 # Name: Get submissions
 # By Robbert Gurdeep Singh
-################################################################################
+######################################################################
 TOKEN = "TOKEN HERE"
 
 
@@ -62,9 +62,7 @@ headers = {
     "Authorization" : TOKEN
 }
 
-conn.request("GET",
-    "/nl/submissions.json",
-    headers=headers)
+conn.request("GET", "/en/submissions.json", headers=headers)
 res = conn.getresponse()
 print(res.status, res.reason)
 data = res.read()

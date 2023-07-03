@@ -44,13 +44,13 @@ curl \
   "https://dodona.ugent.be/nl/submissions.json"
 ```
 
-In Python, ziet dit er als volgt uit:
+In Python ziet dit er als volgt uit:
 
 ```python
 #!/usr/bin/python3
 # Name: Get submissions
 # By Robbert Gurdeep Singh
-################################################################################
+######################################################################
 TOKEN = "TOKEN HERE"
 
 
@@ -62,9 +62,7 @@ headers = {
     "Authorization" : TOKEN
 }
 
-conn.request("GET",
-    "/nl/submissions.json",
-    headers=headers)
+conn.request("GET", "/nl/submissions.json", headers=headers)
 res = conn.getresponse()
 print(res.status, res.reason)
 data = res.read()
