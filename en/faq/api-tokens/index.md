@@ -1,5 +1,5 @@
 ---
-title: API tokens
+title: API and API tokens
 ---
 
 # FAQ: API tokens
@@ -26,3 +26,46 @@ Follow the steps below to create an API token on Dodona:
 ::: tip
 Please note that for security reasons you will not be able to view the tokens on Dodona after creation. However, you can see a list of all your active tokens. You can delete a token at any time and it will stop working immediately.
 :::
+
+## How can I use the Dodona API?
+
+::: warning
+If you want to build an application, tool or plugin that uses the Dodona API, please contact us at [dodona@ugent.be](mailto:dodona@ugent.be) so we can help you out. This will also allow us to notify you if we make any changes to the API.
+:::
+
+Many of the actions you can perform on Dodona can also be done through the API. Unfortunately, we do not have a complete documentation of the API yet. The easiest way to check if a certain action is possible through the API is to add `.json` to the end of the URL. For example, if you want to get a list of all the featured courses on Dodona, you can go to [dodona.ugent.be/courses.json?tab=featured](https://dodona.ugent.be/courses.json?tab=featured). This will return a JSON object with all the featured courses on Dodona.
+
+For endpoints where you need to be signed in, you can use an [API token](#what-is-an-api-token) to authenticate. You can do this by adding the token to an `Authorization` header with your request:
+
+```bash
+curl \
+  -H "Authorization: {YOUR TOKEN}" \
+  -H "Accept: application/json" \
+  "https://dodona.ugent.be/nl/submissions.json"
+```
+
+In Python, this would look like:
+
+```python
+#!/usr/bin/python3
+# Name: Get submissions
+# By Robbert Gurdeep Singh
+######################################################################
+TOKEN = "TOKEN HERE"
+
+
+import http.client
+conn = http.client.HTTPSConnection("dodona.ugent.be")
+headers = {
+    "Content-type": "application/json",
+    "Accept": "application/json",
+    "Authorization" : TOKEN
+}
+
+conn.request("GET", "/en/submissions.json", headers=headers)
+res = conn.getresponse()
+print(res.status, res.reason)
+data = res.read()
+conn.close()
+print(data)
+```
