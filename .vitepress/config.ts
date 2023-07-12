@@ -28,6 +28,8 @@ export default defineConfig({
   themeConfig: {
     logo: 'icon.png',
 
+    externalLinkIcon: true,
+
     sidebar: {
       "/nl/faq": getSidebar({ topTitle: "FAQ", directory: "nl/faq", overview: "FAQ" }),
       "/nl/guides": getSidebar({ directory: "nl/guides", overview: "Overzicht" }),
@@ -96,11 +98,12 @@ export default defineConfig({
     docFooter: {
       prev: false,
       next: false
-    }
+    },
 
-    // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/dodona-edu/dodona' }
-    // ]
+    socialLinks: [
+      { icon: 'twitter', link: 'https://twitter.com/dodona_edu' },
+      { icon: 'github', link: 'https://github.com/dodona-edu/dodona' }
+    ]
   },
 
   // Language-specific overrides and options
