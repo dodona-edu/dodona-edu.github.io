@@ -28,6 +28,8 @@ export default defineConfig({
   themeConfig: {
     logo: 'icon.png',
 
+    externalLinkIcon: true,
+
     sidebar: {
       "/nl/faq": getSidebar({ topTitle: "FAQ", directory: "nl/faq", overview: "FAQ" }),
       "/nl/guides": getSidebar({ directory: "nl/guides", overview: "Overzicht" }),
