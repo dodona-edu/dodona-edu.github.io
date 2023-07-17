@@ -609,10 +609,10 @@ preact@^10.0.0:
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.15.0.tgz#14bae0afe3547ca9d45d22fda2a4266462d31cf3"
   integrity sha512-nZSa8M2R2m1n7nJSBlzDpxRJaIsejrTO1vlFbdpFvyC8qM1iU+On2y0otfoUm6SRB5o0lF0CKDFxg6grEFU0iQ==
 
-resolve-accept-language@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-2.0.8.tgz#5fee8ffc86727e23955b0b994274f1d1e8d7cd61"
-  integrity sha512-e7Ed44CN1SjpGLHIJZdH/+CBoth0VGkv/vR3gPNcY2tQFVkciNwbrhg4t1jqasguSDXhGyeY+uxj/jzfbQ9qow==
+resolve-accept-language@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-2.0.9.tgz#1b35351495c2cb54cdfc2639519698b7d7b2fa98"
+  integrity sha512-x81bg2eqdS2UvB19txeVjhnSVz2gp+W9WyWBdh1wfH/r6tFPFMsjYRc2qKgBA/ek4F7XWi8Gw+ZGK+YxA3dj+Q==
 
 rollup@^3.25.2:
   version "3.26.2"
