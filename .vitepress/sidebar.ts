@@ -32,7 +32,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
         continue;
       }
       const data = matter.read(indexPage);
-      const title = data.data.title ?? "";
+      const title = data.data.sidebarTitle ?? data.data.title ?? "";
       const order = data.data.order ?? Infinity;
       const otherChildren = sortSidebarItems(getSidebarItems(subitem, options));
 
@@ -64,7 +64,7 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
         continue;
       }
       const data = matter.read(subitem);
-      const title = data.data.title ?? "";
+      const title = data.data.sidebarTitle ?? data.data.title ?? "";
       const order = data.data.order ?? Infinity;
       sidebarItems.push([order, {
         text: title,
