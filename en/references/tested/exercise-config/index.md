@@ -25,7 +25,7 @@ See the reference documentation for the [DSL test suites](/en/references/tested/
 
 ## General options
 
-The `evaluation` block can contain an `option` object with attributes that influence the general behaviour of TESTed.
+The `evaluation` block can contain an `options` object with attributes that influence the general behaviour of TESTed.
 We discuss each of these options below.
 
 ### `options.mode`
@@ -39,7 +39,7 @@ Two modes are supported:
 The compilation process is faster with batch compilation than with contextual compilation,
 but may fail if a submission does not implement all requirements of the exercise.
 For example, if an exercise requires a student to implement two functions,
-but a submission only implements one function, this will result in a compilation error for Java submissions.
+but a submission only implements a single function, this will result in a compilation error for Java submissions.
 See the next attribute for a workaround.
 
 Here's an example that uses contextual compilation:
@@ -76,7 +76,7 @@ Here's an example that disables falling back to contextual compilation:
 ## Linters
 
 When [adding support for a new programming language to TESTed](/en/references/tested/new-programming-language),
-it is also possible to configure a [linter](https://en.wikipedia.org/wiki/Lint_(software)) that TESTed will use for static code analysis when processing submission for that language.
+it is possible to configure a [linter](https://en.wikipedia.org/wiki/Lint_(software)) that TESTed will use for static code analysis when processing submission for that language.
 TESTed currently uses the following linters:
 
 | Language   | Linter                                                 |
