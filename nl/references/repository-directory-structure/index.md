@@ -19,7 +19,7 @@ Dodona negeert andere bestanden en mappen. Je kan dus zorgeloos andere bestanden
 ## Voorbeeld van een geldige repository-structuur
 
 ::: tip Voorbeelden
-Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.ugent.be/en/courses/358/) om een voorbeeld te vinden een geldige repository-structuur gebruikt.
+Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden een geldige repository-structuur gebruikt.
 :::
 
 ```

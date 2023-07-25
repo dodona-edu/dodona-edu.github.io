@@ -11,7 +11,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 ## Config file structure for exercises
 
 - **`type`**: Must be set to `exercise` for exercises. Defaults to `exercise` if not present.
-- **`programming_language`** (string): the programming language of the exercise, used for syntax highlighting and correct file extensions. The available programming languages can be found [here](https://dodona.ugent.be/en/programming_languages/).
+- **`programming_language`** (string): the programming language of the exercise, used for syntax highlighting and correct file extensions. The available programming languages can be found [here](https://dodona.be/en/programming_languages/).
 - **`access`** (`public` or `private`): determines who can use this exercise
   - `public`: any other teacher on Dodona can use this exercise
   - `private`: only teachers with explicit permission can use this exercise

@@ -66,7 +66,7 @@ Volg deze stappen om de Dodona VS Code extensie te gebruiken:
 1. **Start een nieuwe oefening:** Om VS Code te laten weten aan welke oefening je werkt, moet je de Dodona URL van de oefening toevoegen als eerste regel van je oplossingsbestand. Zorg ervoor dat je deze URL markeert als commentaar. In JavaScript zou het er bijvoorbeeld zo uitzien
 
     ```javascript
-    // https://dodona.ugent.be/nl/activities/1545120484/
+    // https://dodona.be/nl/activities/1545120484/
 
     function echo(i) {
         return i;

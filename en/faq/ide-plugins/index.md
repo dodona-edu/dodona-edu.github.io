@@ -67,7 +67,7 @@ To use the Dodona VS Code extension, follow these steps:
 1. **Start a new exercise:** In order for VS Code to know which exercise to submit your solution to, you need to add the Dodona URL of the exercise to the first line of your solution file. Make sure you mark this URL as a comment. For example, in JavaScript it would look like this
 
     ```javascript
-    // https://dodona.ugent.be/nl/activities/1545120484/
+    // https://dodona.be/nl/activities/1545120484/
 
     function echo(i) {
         return i;

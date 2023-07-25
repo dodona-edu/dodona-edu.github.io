@@ -45,13 +45,13 @@ Links en afbeeldingen zijn iets complexer om toe te voegen. Ze bestaan uit twee 
 Dit is een zin waarbij [deze woorden](https://google.com) linken naar Google.
 Hieronder staat het Dodona logo afgebeeld.
 
-![Dodona logo](https://dodona.ugent.be/icon.png)
+![Dodona logo](https://dodona.be/icon.png)
 ```
 
 Dit is een zin waarbij [deze woorden](https://google.com) linken naar Google.
 Hieronder staat het Dodona logo afgebeeld.
 
-![Dodona logo](https://dodona.ugent.be/icon.png)
+![Dodona logo](https://dodona.be/icon.png)
 
 ### Opsommingen
 

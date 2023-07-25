@@ -45,16 +45,16 @@ Hyperlinks and images are a little more complex. They consist out of two parts o
 In this sentence, [these words](https://google.com) link to Google.
 Below you can see the Dodona logo.
 
-![Dodona logo](https://dodona.ugent.be/icon.png)
+![Dodona logo](https://dodona.be/icon.png)
 ```
 This results in: In this sentence, [these words](https://google.com) link to Google.
 Below you can see the Dodona logo.
 
-![Dodona logo](https://dodona.ugent.be/icon.png)
+![Dodona logo](https://dodona.be/icon.png)
 
 ### Lists
 
-Lists are very simple in Markdown. Depending if you want a numbered or normal list, simply prepend your lines with `1. ` or `* `. 
+Lists are very simple in Markdown. Depending if you want a numbered or normal list, simply prepend your lines with `1. ` or `* `.
 
 ```markdown
 1. item 1
@@ -222,7 +222,7 @@ To display mathematical symbols and formulas inline, wrap them with a double dol
 Some text with symbol $$a$$ and a formula $$x^2$$.
 ```
 
-### Standout formulas 
+### Standout formulas
 Markdown and HTML use a different syntax to display formulas on their own line.
 
 When using HTML, wrap the formula with `\[` and `\]`:
@@ -234,7 +234,7 @@ The solution can be found with the following formula: \[a^2 = b^2 + c^2\]
 When using Markdown, use the double dollar syntax but put everything a new line:
 
 ```html
-The solution can be found with the following formula: 
+The solution can be found with the following formula:
 $$
 a^2 = b^2 + c^2
 $$

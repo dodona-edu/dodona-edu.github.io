@@ -12,11 +12,11 @@ For now, this page is only available in Dutch. Sorry!
 
 :::tip Belangrijk
 
-Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechten eenvoudig aanvragen door (na inloggen) [dit formulier](https://dodona.ugent.be/nl/rights_requests/new) in te vullen. We geven je account dan zo snel mogelijk de nodige toegangsrechten.
+Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechten eenvoudig aanvragen door (na inloggen) [dit formulier](https://dodona.be/nl/rights_requests/new) in te vullen. We geven je account dan zo snel mogelijk de nodige toegangsrechten.
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.ugent.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `MEER CURSUSSEN...`.
+Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `MEER CURSUSSEN...`.
 
 ![create course](./staff.courses_new_link.png)
 

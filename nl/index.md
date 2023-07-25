@@ -16,7 +16,7 @@ hero:
       link: /en
     - theme: alt
       text: Dodona bezoeken
-      link: https://dodona.ugent.be
+      link: https://dodona.be
 
 features:
   - title: Handleidingen

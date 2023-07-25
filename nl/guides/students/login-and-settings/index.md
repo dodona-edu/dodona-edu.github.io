@@ -12,7 +12,7 @@ Je kan Dodona gebruiken in het Nederlands of het Engels. Gebruik hiervoor het ta
 
 ![image](./choose_language.png)
 
-Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](https://dodona.ugent.be/profile). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
+Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](https://dodona.be/profile). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
 
 ::: tip Wordt alles vertaald?
 
@@ -36,7 +36,7 @@ Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aa
 
 ::: warning Jouw data op Dodona
 
-Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldingsprocedure expliciet jouw toestemming voor het doorsturen van enkele [persoonsgegevens](https://dodona.ugent.be/nl/data/) naar Dodona. Vaak hoef je deze toestemming slechts één keer te geven op elke computer waarmee je aanmeldt. Dodona gebruikt deze persoonsgegevens enkel voor intern beheer van je gebruikersprofiel en wisselt deze informatie nooit uit met externe partijen.
+Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldingsprocedure expliciet jouw toestemming voor het doorsturen van enkele [persoonsgegevens](https://dodona.be/nl/data/) naar Dodona. Vaak hoef je deze toestemming slechts één keer te geven op elke computer waarmee je aanmeldt. Dodona gebruikt deze persoonsgegevens enkel voor intern beheer van je gebruikersprofiel en wisselt deze informatie nooit uit met externe partijen.
 :::
 
 ::: tip Foutmelding?

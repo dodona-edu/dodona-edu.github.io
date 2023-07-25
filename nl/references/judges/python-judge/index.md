@@ -12,7 +12,7 @@ Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke bas
 -   De [**`DoctestJudge`**](#doctest-judge) klasse implementeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
 
 ::: tip Voorbeelden
-Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.ugent.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze judges gebruikt.
+Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze judges gebruikt.
 :::
 
 De hiërarchie van de judge klassen die binnen het Python project ontwikkeld
@@ -119,7 +119,7 @@ In het volgende voorbeeld wordt er per lijn een andere toegelaten floating point
 
 #### Voorbeeld 1
 
-Bij opgave [Dierenriem](https://dodona.ugent.be/nl/exercises/1178427390/) schrijft de ingezonden code voor een datum (op 2 regels) het juiste sterrenbeeld uit (op 1 regel). We gebruiken `block count: multi` om meerdere testen te kunnen definiëren in één bestand.
+Bij opgave [Dierenriem](https://dodona.be/nl/exercises/1178427390/) schrijft de ingezonden code voor een datum (op 2 regels) het juiste sterrenbeeld uit (op 1 regel). We gebruiken `block count: multi` om meerdere testen te kunnen definiëren in één bestand.
 
 Input bestand (`0.in`):
 
@@ -148,7 +148,7 @@ Output bestand (`0.out`):
 
 #### Voorbeeld 2
 
-Bij opgave [Delers](https://dodona.ugent.be/nl/exercises/1581119193/) moeten voor een gegeven getal alle delers uitgeschreven worden. Opnieuw kan hier gebruik gemaakt worden van `block count: multi`. Deze keer wordt de verwachte uitvoer beëindigd door een lege regel (`output block size: ends with`).
+Bij opgave [Delers](https://dodona.be/nl/exercises/1581119193/) moeten voor een gegeven getal alle delers uitgeschreven worden. Opnieuw kan hier gebruik gemaakt worden van `block count: multi`. Deze keer wordt de verwachte uitvoer beëindigd door een lege regel (`output block size: ends with`).
 
 Input bestand (`0.in`):
 

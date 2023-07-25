@@ -20,7 +20,7 @@ Oefeningen op Dodona kunnen ofwel voorkomen in een cursus, ofwel daarbuiten.
 
 - Oefeningen die tot een cursus behoren, kan je vinden door de pagina van een cursus te bezoeken.
     ![image](./student.course_exercise_selection.png)
-- Oefeningen die niet tot een cursus behoren, kan je vinden door het [activiteitenoverzicht](https://dodona.ugent.be/nl/activities/) te bezoeken dat een lijst bevat van alle oefeningen.
+- Oefeningen die niet tot een cursus behoren, kan je vinden door het [activiteitenoverzicht](https://dodona.be/nl/activities/) te bezoeken dat een lijst bevat van alle oefeningen.
 
 ::: tip Tip
 Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je het laatst oplossingen voor ingediend hebt over alle cursussen heen. Zo kan je op een snelle manier een oefening waar je recent op hebt gewerkt selecteren door op de naam van de oefening te klikken.
