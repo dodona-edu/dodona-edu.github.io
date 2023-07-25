@@ -5,12 +5,12 @@ description: "TESTed judge"
 
 # TESTed: one judge to rule them all
 
-TESTed is an *educational software testing framework* (also known as a *judge*) 
+TESTed is an *educational software testing framework* (also known as a *judge*)
 to test submissions for programming exercises using a programming-language-independent test suite.
 It allows specifying software requirements (i.e. the tests) for an exercise once,
 while submissions in different programming languages can be tested automatically.
 TESTed can be used as a standalone command line tool,
-but it's also integrated as a judge into the online learning platform [Dodona](https://dodona.ugent.be).
+but it's also integrated as a judge into the online learning platform [Dodona](https://dodona.be).
 
 ## When to use TESTed?
 
@@ -184,10 +184,10 @@ This configuration file specifies, in order:
 1. An exercise name in Dutch and in English.
 2. The path name of the test suite (`tests.yaml`) relative to the `echo/evaluation` directory.
 3. Python as the default programming language.
-   While TESTed supports multiple programming languages, 
+   While TESTed supports multiple programming languages,
    Dodona currently supports only a single programming language per exercise.
 4. Private access to the exercise.
-   We use this default since this is a tutorial, but we encourage making exercises publicly available on Dodona. 
+   We use this default since this is a tutorial, but we encourage making exercises publicly available on Dodona.
 
 See [_Exercise configuration_](/en/references/exercise-config) for more details on the configuration options for Dodona exercises.
 The [options specific to TESTed](/en/references/tested/exercise-config) can also be interesting.

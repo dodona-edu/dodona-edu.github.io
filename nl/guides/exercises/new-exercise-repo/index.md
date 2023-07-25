@@ -14,7 +14,7 @@ Een eerste stap is om een git repository aan te maken. Je kan dit eenvoudig doen
 
 ## 2. Je repository aan Dodona toevoegen
 
-Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link `Repositories` die je naar een [overzicht van jouw repositories op Dodona](https://dodona.ugent.be/nl/repositories/) brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
+Als je lesgeversrechten op Dodona hebt, dan verschijnt in de linker navigatiebalk een link `Repositories` die je naar een [overzicht van jouw repositories op Dodona](https://dodona.be/nl/repositories/) brengt. Om een nieuwe repository toe te voegen, klik je op de grote plus-knop bovenaan de pagina.
 
 ![repository toevoegen](./add-repository.png)
 

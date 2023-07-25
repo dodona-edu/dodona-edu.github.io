@@ -19,7 +19,7 @@ Dodona ignores other files and directories. You can thus freely create additiona
 ## Example of a valid repository structure
 
 ::: tip Examples
-Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.ugent.be/en/courses/358/) to see some examples of a valid repository structure.
+Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.be/en/courses/358/) to see some examples of a valid repository structure.
 :::
 
 ```

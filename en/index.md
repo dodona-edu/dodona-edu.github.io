@@ -16,7 +16,7 @@ hero:
       link: /nl
     - theme: alt
       text: Go to Dodona
-      link: https://dodona.ugent.be
+      link: https://dodona.be
 
 features:
   - title: Guides

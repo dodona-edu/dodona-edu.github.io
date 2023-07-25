@@ -14,7 +14,7 @@ A first step is thus to create a git repository. You can easily do this on [gith
 
 ## 2. Add the repository to Dodona
 
-All staff on Dodona has a `Repositories` link in the sidebar of the Dodona website, which takes you to an [overview of your repositories](https://dodona.ugent.be/en/repositories/). To add a new repository, hit the big plus button on the top.
+All staff on Dodona has a `Repositories` link in the sidebar of the Dodona website, which takes you to an [overview of your repositories](https://dodona.be/en/repositories/). To add a new repository, hit the big plus button on the top.
 
 ![add repository](./add-repository.png)
 

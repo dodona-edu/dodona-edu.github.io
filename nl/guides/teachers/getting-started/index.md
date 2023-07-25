@@ -26,19 +26,19 @@ Sommige scholen bieden zowel inloggen via Smartschool als via Office 365 of G Su
 Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:dodona@ugent.be"> dodona@ugent.be</a>.
 :::
 
-Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeperkt oefeningen indienen. Wil je als lesgever zelf een cursus aanmaken of oefeningen opstellen, dan heb je extra rechten nodig. Gebruik het [aanvraagformulier](https://dodona.ugent.be/nl/rights_requests/new) op Dodona en we geven je zo snel mogelijk de nodige rechten.
+Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeperkt oefeningen indienen. Wil je als lesgever zelf een cursus aanmaken of oefeningen opstellen, dan heb je extra rechten nodig. Gebruik het [aanvraagformulier](https://dodona.be/nl/rights_requests/new) op Dodona en we geven je zo snel mogelijk de nodige rechten.
 
 ## Een cursus aanmaken
 
-Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop `CURSUS AANMAKEN` te klikken in het [cursusoverzicht](https://dodona.ugent.be/nl/courses/).
+Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop `CURSUS AANMAKEN` te klikken in het [cursusoverzicht](https://dodona.be/nl/courses/).
 
 ![cursus aanmaken](./cursus-aanmaken.png)
 
 Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud van een bestaande cursus over te nemen en aan te passen. Om inspiratie op te doen kan je een kijkje nemen in volgende bestaande cursussen:
 
 - **[De Programmeursleerling](/nl/guides/general/the-coders-apprentice)**: een cursus programmeren in Python die gebaseerd is op het boek De Programmeursleerling van Pieter Spronck.
-- **[Informatica](https://dodona.ugent.be/nl/courses/164/)**: een cursus programmeren in Python die gegeven wordt aan het vijfde jaar Wiskunde-Wetenschappen-Informatica van het [Sint-Paulusschool Campus College](https://www.sintpaulus.eu/) in Waregem. De cursus en een groot deel van de oefeningen werd opgesteld door [Dominiek Vandewalle](mailto:dominiek.vandewalle@sgsintpaulus.eu).
-- **[Programmeren](https://dodona.ugent.be/nl/courses/88/)**: een cursus programmeren in Python die gegeven wordt door prof. Peter Dawyndt aan de faculteit Wetenschappen van de Universiteit Gent.
+- **[Informatica](https://dodona.be/nl/courses/164/)**: een cursus programmeren in Python die gegeven wordt aan het vijfde jaar Wiskunde-Wetenschappen-Informatica van het [Sint-Paulusschool Campus College](https://www.sintpaulus.eu/) in Waregem. De cursus en een groot deel van de oefeningen werd opgesteld door [Dominiek Vandewalle](mailto:dominiek.vandewalle@sgsintpaulus.eu).
+- **[Programmeren](https://dodona.be/nl/courses/88/)**: een cursus programmeren in Python die gegeven wordt door prof. Peter Dawyndt aan de faculteit Wetenschappen van de Universiteit Gent.
 
 
 ## Een cursus opstellen

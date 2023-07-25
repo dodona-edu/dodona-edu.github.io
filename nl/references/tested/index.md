@@ -7,7 +7,7 @@ description: "De TESTed-judge"
 
 TESTed is een *educational software testing framework* (ook bekend als een *judge*) dat toelaat om oplossingen voor programmeeroefeningen te beoordelen op basis van een programmeertaalonafhankelijk testplan.
 Het laat om de softwarevereisten (d.w.z. de testen) voor een oefening één keer op te stellen, terwijl oplossingen in verschillende programmeertalen beoordeeld kunnen worden.
-TESTed kan als afzonderlijk tool gebruikt worden, maar is ook geïntegreerd in de elektronische leeromgeving [Dodona](https://dodona.ugent.be).
+TESTed kan als afzonderlijk tool gebruikt worden, maar is ook geïntegreerd in de elektronische leeromgeving [Dodona](https://dodona.be).
 
 ## Wanneer gebruik je TESTed?
 
@@ -199,7 +199,7 @@ Schrijf een functie `echo` die steeds haar argument naar standaarduitvoer schrij
 ### Voorbeeld in Python
 
 ```pycon
->>> echo("5"); 
+>>> echo("5");
 "5"
 >>> echo("OK");
 "OK"
