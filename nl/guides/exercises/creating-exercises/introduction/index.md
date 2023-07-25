@@ -20,7 +20,7 @@ Doordat deze handleiding alle stappen overloopt, is deze handleiding voornamelij
 De handleiding maakt dan ook een aantal keuzes:
 
 - We stellen een Python-oefening op.
-- We gebruiken _Visual Studio Code for the Web_ als tekstverwerker. Deze tekstverwerker draait in de browser, waardoor er geen bijkomende installatie nodig.
+- We gebruiken _Visual Studio Code for the Web_ als tekstverwerker. Deze tekstverwerker draait in de browser, waardoor er geen bijkomende installatie nodig is.
 - We gebruiken de _template repository_ om te starten met het opstellen van een oefening.
 
 Deze handleiding bestaat uit een aantal hoofdstukken.
