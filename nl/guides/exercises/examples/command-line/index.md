@@ -1,5 +1,6 @@
 ---
 title: Oefening op commandoregel
+sidebarTitle: Commandoregel
 order: 4
 ---
 

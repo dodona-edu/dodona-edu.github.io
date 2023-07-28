@@ -1,5 +1,6 @@
 ---
 title: Oefening met klassen
+sidebarTitle: Klassen
 order: 3
 ---
 

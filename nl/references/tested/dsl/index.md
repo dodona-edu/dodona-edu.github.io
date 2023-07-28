@@ -208,7 +208,7 @@ expression: "a_function_name('hello')"
 
 Aangezien de syntaxis van Python voor een aantal zaken van TESTed geen aparte syntaxis heeft, zijn er aantal conventies:
 
-- Functieoproepen vier naam begint met een hoofdletters worden beschouwd als
+- Functieoproepen wier naam begint met een hoofdletters worden beschouwd als
   _constructors_, bijvoorbeeld `Constructor(56)`.
 - Identifiers die volledig in hoofdletters geschreven zijn worden beschouwd als globale constanten, bijvoorbeeld `VERY_LONG_NAME`.
 - Het casten van waarden gebeurt op de gebruikelijke manier van Python. Het casten van een getal naar `int64` wordt bijvoorbeeld `int64(56)`.

@@ -1,5 +1,6 @@
 ---
 title: Oefening met invoer-uitvoer
+sidebarTitle: "Invoer-uitvoer"
 order: 1
 ---
 

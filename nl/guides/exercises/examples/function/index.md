@@ -1,5 +1,6 @@
 ---
 title: Oefening met functies
+sidebarTitle: Functies
 order: 2
 ---
 
