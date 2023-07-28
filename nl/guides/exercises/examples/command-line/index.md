@@ -1,13 +1,14 @@
 ---
-title: Oefening met klassen
-order: 3
+title: Oefening op commandoregel
+order: 4
 ---
 
-# Oefening met klassen
+# Oefening op de commandoregel
 
-In deze handleiding stellen we een oefening op die gebruik maakt van klassen.
+In deze handleiding stellen we een oefening op die gebruik maakt argumenten op de commandoregel.
 
-We zullen een klasse `Counter` implementeren, waarin we een getal kunnen tellen.
+We zullen een programma implementeren dat een aantal getallen binnenkrijgt als argumenten op de commandoregel.
+Het programma moet vervolgens de som van deze getallen uitschrijven op stdout.
 
 We gaan er in deze handleiding van uit dat je al een werkende oefeningenrepository hebt.
 Is dat niet het geval, volg dan eerst de handleiding [_Oefeningen opstellen_](/nl/guides/exercises/creating-exercises/introduction/).
@@ -17,7 +18,7 @@ Is dat niet het geval, volg dan eerst de handleiding [_Oefeningen opstellen_](/n
 Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenrepository.
 Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
 
-Maak dus eerst een nieuwe map voor de oefening, die we `counter` zullen noemen.
+Maak dus eerst een nieuwe map voor de oefening, die we `sum` zullen noemen.
 Maak daarna, in deze nieuwe map, nog twee mappen:
 - `description`: de map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
@@ -26,7 +27,7 @@ Hierna moet je repository er als volgt uitzien:
 
 ```
 repository/
-└── counter/
+└── sum/
    ├── evaluation/
    ├── description/
    └── solution/
@@ -43,8 +44,8 @@ Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
 {
   "description": {
     "names": {
-      "en": "Counter",
-      "nl": "Teller"
+      "en": "Sum of numbers",
+      "nl": "Som van getallen"
     }
   },
   "evaluation": {
@@ -66,7 +67,7 @@ Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
 ```
 repository/
-└── counter/
+└── sum/
    ├── evaluation/
    ├── description/
    ├── solution/
@@ -81,29 +82,21 @@ Dit krijgen leerlingen en studenten te zien wanneer ze de oefening willen oploss
 Maak een bestand `description.nl.md` aan in de map `description` van de oefening, met volgende inhoud:
 
 ````markdown
-Schrijf een klasse `Counter`, waarmee we een telling kunnen doen.
+Schrijf een programma `sum` dat de som van een reeks getallen uitschrijft op `stdout`.
+Deze getallen worden als argumenten aan het programma meegegeven.
 
-Als een instantie van de klasse aangemaakt wordt,
-kan de beginwaarde meegegeven worden aan de constructor.
-De standaardwaarde is 0.
-
-Daarnaast moet de klasse de volgende methoden ondersteunen:
-
-- Een methode `tel()` die de telling met één verhoogt. 
-  De klasse moet zichzelf teruggeven.
-- Een methode `rapporteer()` die de huidige telling schrijft naar `stdout`.
+Als een van de argumenten geen geheel getal is, moet een foutboodschap uitgeschreven worden op `stderr`: `invalid arguments`.
+In dat geval moet de exitcode van het programma ook `1` zijn.
 
 ### Voorbeeld
 
 ```bash
->>> teller = Counter(5)
->>> teller.rapporteer()
-5
->>> teller.tel()
->>> teller.rapporteer()
-6
->>> teller.tel().tel().tel().tel().rapporteer()
-10
+$ ./sum -1 -23 72 84 -38 -61 49 45
+127
+$ ./sum
+0
+$ ./sum spam eggs beacon
+invalid arguments
 ```
 ````
 
@@ -117,16 +110,18 @@ Leerlingen kunnen deze voorbeeldoplossing niet zien (tenzij je repository publie
 Maak een bestand `solution.py` aan in de map `solution` met volgende inhoud:
 
 ```python
-class Counter:
-    def __int__(self, beginwaarde=0):
-        self.teller = beginwaarde
-    
-    def tel(self):
-        self.teller += 1
-        return self
-    
-    def rapporteer(self):
-        print(self.teller)
+import sys
+
+som = 0
+
+for getal in sys.argv[1:]:
+    try:
+        som += int(getal)
+    except ValueError:
+        sys.stderr.write("invalid arguments")
+        exit(1)
+
+print(som)
 
 ```
 
@@ -134,7 +129,7 @@ Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
 
 ```
 repository/
-└── counter/
+└── sum/
    ├── evaluation/
    ├── description/
    |  └── description.nl.md
@@ -152,26 +147,22 @@ Om dit kort te houden, beperken we ons testplan tot een aantal testen.
 Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
 
 ```yaml
-- tab: "Counter"
+- tab: "sum"
   testcases:
-  - statement: "teller = Counter(5)"
-  - statement: "teller.rapporteer()"
-    stdout: "5"
-  - expression: "teller.tel()"
-  - statement: "teller.rapporteer()"
-    stdout: "6"
-  - statement: "teller.tel().tel().tel().tel().rapporteer()"
-    stdout: "10"
+  - arguments: ["-1", "-23", "72", "84", "-38", "-61", "49", "45"]
+    stdout: "127"
+  - arguments: []
+    stdout: "0"
+  - arguments: ["spam", "eggs", "bacon"]
+    stderr: "invalid arguments"
+    exit_code: 1
 ```
-
-In dit testplan maken we één tabblad, met daarin een aantal testen.
-Dit zijn dezelfde testen als in het voorbeeldje uit de opgave.
 
 Hierna ziet de repository er als volgt uit:
 
 ```
 repository/
-└── counter/
+└── sum/
    ├── evaluation/
    |  └── suite.yaml
    ├── description/

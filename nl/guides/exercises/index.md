@@ -7,21 +7,21 @@ order: 4
 
 Elke lesgever kan eigen oefeningen maken voor Dodona, of bestaande oefeningen aanpassen.
 
-## Kant-en-klare tutorials
+## Kant-en-klare tutorial
 
-Hieronder zijn een aantal handleidingen voor verschillende soorten oefeningen, die het hele proces uitleggen van A tot Z.
-Na het volgen van een dezer handleidingen heb je een werkende oefening.
-We raden deze handleidingen dan ook aan voor zij die geen ervaring hebben met oefeningen opstellen.
+Als je nog nooit een oefening gemaakt hebt voor Dodona, raden we aan om te beginnen met onze [tutorial die het opstellen van een oefening uitlegt van a tot z](/nl/guides/exercises/creating-exercises/introduction).
 
-We zijn deze handleidingen momenteel aan het schrijven, waardoor ze nog niet beschikbaar zijn.
+## Soorten oefeningen
 
-[//]: # (- Oefening met input-output: een oefening waarbij er invoer gelezen wordt en een resultaat uitgeschreven wordt)
+We hebben ook voorbeelden van vier veelvoorkomende soorten oefeningen:
 
-[//]: # (- Oefening met functies: hier moet een functie geschreven worden die een resultaat als returnwaarde geeft)
+- [Oefening met input-output](/nl/guides/exercises/examples/input-output): een oefening waarbij er invoer gelezen wordt en een resultaat uitgeschreven wordt
+- [Oefening met functies](/nl/guides/exercises/examples/function): hier moet een functie geschreven worden die een returnwaarde geeft
+- [Oefening met klassen](/nl/guides/exercises/examples/class): hier moet een klassen geschreven worden
+- [Oefening met argumenten](/nl/guides/exercises/examples/command-line): hier moet een programma geschreven worden dat argumenten aanvaard
 
-[//]: # (- Oefening met klassen: hier moet een klassen geschreven worden)
-
-[//]: # (- Oefening met argumenten: hier moet een programma geschreven worden dat argumenten aanvaard)
+Deze tutorials gaan ervan uit dat je al een repository hebt met oefeningen.
+Als dat niet het geval is, volg je best eerst de [kant-en-klare tutorial](/nl/guides/exercises/creating-exercises/introduction).
 
 ## Referenties
 
