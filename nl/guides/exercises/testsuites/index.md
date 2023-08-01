@@ -79,13 +79,12 @@ Daarom is het mogelijk om de contexten weg te laten:
 
 Een testplan wordt geschreven in YAML.
 Dit is een intuïtief formaat, waarvoor er in veel tekstverwerkers ondersteuning is.
-Een goede tutorial is X.
+Een goed overzicht is op [deze pagina](https://quickref.me/yaml.html) te vinden.
+Je favoriete zoekmachine vindt er ongetwijfeld nog veel meer.
 
-Als jouw tekstverwerker JSON Schema ondersteunt, kan je deze toevoegen om validatie en automatische aanvulling in de testplannen te krijgen: gebruik dit JSON Schema.
-Gebruik je VS Code, kan je ook onze extensie gebruiken.
+Als jouw tekstverwerker JSON Schema ondersteunt, kan je deze toevoegen om validatie en automatische aanvulling in de testplannen te krijgen: gebruik dit [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json).
+Gebruik je VS Code, kan je ook onze [extensie](https://marketplace.visualstudio.com/items?itemName=dodona.dodona-exercise-plugin) gebruiken.
 Die zal vanzelf JSON Schema configureren.
-
-TODO: link naar goede tutorial, schema en extensie.
 
 ## Functieoproepen en returnwaarden
 
