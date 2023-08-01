@@ -23,6 +23,12 @@ We hebben ook voorbeelden van vier veelvoorkomende soorten oefeningen:
 Deze tutorials gaan ervan uit dat je al een repository hebt met oefeningen.
 Als dat niet het geval is, volg je best eerst de [kant-en-klare tutorial](/nl/guides/exercises/creating-exercises/introduction).
 
+## Testplannen
+
+Als je met de aanbevolen judge werkt, hebben we volgende bijkomende documentatie:
+
+- [Testplannen voor oefeningen](/nl/guides/exercises/testsuites): uitleg over de testplannen en de verschillende functies die er bestaan.
+
 ## Referenties
 
 Naast de handleidingen hebben we ook een aantal referentiewerken die nuttig kunnen zijn:
