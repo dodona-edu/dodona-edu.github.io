@@ -13,7 +13,7 @@ In dit hoofdstuk overlopen en configureren we alle programma's en tools die nodi
 
 ::: info Online werken
 Merk op dat we er in deze handleiding voor kiezen om met _VS Code for the Web_ te werken, een versie van VS Code die in de browser draait.
-Als je lokaal aan uw oefeningen wilt werken, kan je deze gids volgen: TODO.
+In de toekomst voorzien we ook een handleiding om lokaal te werken.
 :::
 
 ## Browser

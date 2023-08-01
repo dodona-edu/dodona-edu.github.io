@@ -8,7 +8,7 @@ next: true
 
 # Oefeningen opstellen: opgave en testplan schrijven
 
-Als je in de vorige stap van de handleiding de _template repository_ gebruikt hebt, bevat je repository al een oefening.
+Als je in de vorige stap van de handleiding de _template repository_ gebruikt hebt, bevat je repository al een oefening (de _Echofunctie_).
 Hier zullen we nu zelf nog een oefening toevoegen.
 De bestaande oefening kan uiteraard als voorbeeld dienen.
 
