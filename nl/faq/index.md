@@ -5,6 +5,13 @@ title: Frequently Asked Questions
 
 In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebruik van Dodona. Of je nu een leerling bent die probeert te begrijpen hoe je door de lessen moet navigeren, een docent die een nieuwe cursus opzet of gewoon nieuwsgierig bent naar bepaalde functies, wij hebben het voor je geregeld. Om een specifieke pagina te vinden, is onze zoekfunctie in de navigatiebalk bovenaan erg krachtig. Als je het antwoord op je vraag niet kunt vinden, aarzel dan niet om contact op te nemen met [ons ondersteuningsteam](https://dodona.be/nl/contact).
 
+## Accounts en instellingen
+- [Hoe werken accounts op Dodona?](./accounts/#hoe-werken-accounts-op-dodona)
+- [Ik werk op verschillende scholen, hoe werkt dit?](./accounts/#ik-werk-op-verschillende-scholen-hoe-werkt-dit)
+- [Ik krijg een foutmelding over gekoppelde accounts wanneer ik probeer in te loggen, wat moet ik doen?](./accounts/#ik-krijg-een-foutmelding-over-gekoppelde-accounts-wanneer-ik-probeer-in-te-loggen-wat-moet-ik-doen)
+- [Ik heb een cursus gemaakt voor mijn studenten, maar slechts een aantal van hen kan deze zien. Wat is er aan de hand?](./accounts/#ik-heb-een-cursus-gemaakt-voor-mijn-studenten-maar-slechts-een-aantal-van-hen-kan-deze-zien-wat-is-er-aan-de-hand)
+- [Mijn naam of e-mailadres is verkeerd, hoe kan ik het veranderen?](./accounts/#mijn-naam-of-e-mailadres-is-verkeerd-hoe-kan-ik-het-veranderen)
+- [Ik krijg een waarschuwing dat mijn tijdzone verkeerd is, wat moet ik doen?](./accounts/#ik-krijg-een-waarschuwing-dat-mijn-tijdzone-verkeerd-is-wat-moet-ik-doen)
 
 ## API en API tokens
 - [Wat is een API token?](./api-tokens/#wat-is-een-api-token)
