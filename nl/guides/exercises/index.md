@@ -29,6 +29,11 @@ Als je met de aanbevolen judge werkt, hebben we volgende bijkomende documentatie
 
 - [Testplannen voor oefeningen](/nl/guides/exercises/testsuites): uitleg over de testplannen en de verschillende functies die er bestaan.
 
+## Voorbeelden
+
+In onze [repository met voorbeelden](https://github.com/dodona-edu/example-exercises) vind je allerlei volledig uitgewerkte oefeningen die als voorbeeld kunnen dienen.
+Deze repository bevat wel voorbeelden voor alle judges, dus kies de juiste oefeningen om te bekijken.
+
 ## Referenties
 
 Naast de handleidingen hebben we ook een aantal referentiewerken die nuttig kunnen zijn:

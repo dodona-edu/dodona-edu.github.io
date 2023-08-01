@@ -1,3 +1,5 @@
+Het resultaat van deze handleiding (de volledige oefening) kan je ook vinden in onze [repository met voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/tested/function/).
+
 ## 1. Structuur
 
 Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenrepository.
