@@ -5,6 +5,14 @@ title: Frequently Asked Questions
 
 In this FAQ section you will find answers to the most frequently asked questions about using Dodona. Whether you're a student trying to understand how to navigate through lessons, a teacher setting up a new course, or just curious about certain features, we've got you covered. To find a specific page, our search function in the top navigation bar is really powerful. If you can't find the answer to your question, don't hesitate to contact [our support team](https://dodona.be/en/contact).
 
+## Accounts and settings
+- [How do accounts work on Dodona?](./accounts/#how-do-accounts-work-on-dodona)
+- [I work in several schools, how does this work?](./accounts/#i-work-in-several-schools-how-does-this-work)
+- [I get an error about linked accounts when I try to sign in, what should I do?](./accounts/#i-get-an-error-about-linked-accounts-when-i-try-to-sign-in-what-should-i-do)
+- [I have created a course for my students, but only some of them can see it. What is going on?](./accounts/#i-have-created-a-course-for-my-students-but-only-some-of-them-can-see-it-what-is-going-on)
+- [My name or email is wrong, how can I change it?](./accounts/#my-name-or-email-is-wrong-how-can-i-change-it)
+- [I get a warning that my time zone is wrong, what should I do?](./accounts/#i-get-a-warning-that-my-time-zone-is-wrong-what-should-i-do)
+
 ## API and API tokens
 - [What is an API token?](./api-tokens/#what-is-an-api-token)
 - [How do I create an API token?](./api-tokens/#how-do-i-create-an-api-token)
