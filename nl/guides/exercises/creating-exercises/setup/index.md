@@ -42,7 +42,7 @@ Ga naar <https://github.com/signup> om een account te maken, of gebruik je besta
 
 Als volgende stap moet je je persoonlijke kopie van het sjabloon maken:
 
-1. Ga naar <https://github.com/dodona-edu/exercise-template>.
+1. Ga naar <https://github.com/dodona-edu/exercise-template-repository>.
 2. Klik op de knop _Use this template_.
 3. Kies vervolgens de eerste optie: _Create new repository_.
    ![Template repo](./use-template-repo.png)
