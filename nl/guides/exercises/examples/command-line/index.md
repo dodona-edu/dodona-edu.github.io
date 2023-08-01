@@ -23,6 +23,7 @@ Maak dus eerst een nieuwe map voor de oefening, die we `sum` zullen noemen.
 Maak daarna, in deze nieuwe map, nog twee mappen:
 - `description`: de map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
+- `solution`: map waarin een voorbeeldoplossing komt
 
 Hierna moet je repository er als volgt uitzien:
 
