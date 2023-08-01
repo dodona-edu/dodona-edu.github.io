@@ -109,5 +109,5 @@ Om deze te openen:
 
 1. Ga naar de pagina van je repository op GitHub (als die nog open staat, des te beter).
 2. Druk op <kbd>.</kbd> op je toetsenbord (op azerty-toetsenborden is dit <kbd>Shift</kbd>+<kbd>.</kbd>).
-3. Na het opstarten zal er rechts onderaan een melding verschijnen over het installeren van de aanbevolen extensies.
-   Doe dit.
+3. Na het opstarten moet je even wachten, waarna er rechts onderaan een melding zal verschijnen over het installeren van de aanbevolen extensies.
+   Aanvaard deze suggestie.
