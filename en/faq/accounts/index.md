@@ -8,7 +8,7 @@ title: Accounts
 
 ## How do accounts work on Dodona?
 
-Accounts on Dodona are automatically created when you log in for the first time. You can login with your institutional account (e.g. UGent, Smartschool, ...) or with a personal account (e.g. Google, Microsoft, ...). If you use an institutional account, your account is automatically linked to your school or university.
+Accounts on Dodona are automatically created when you log in for the first time. You can log in with your institutional account (e.g. UGent, Smartschool, ...) or with a personal account (e.g. Google, Microsoft, ...). If you use an institutional account, your account is automatically linked to your school or university.
 
 It is not possible to manually create an account on Dodona with a username and password.
 
@@ -18,9 +18,9 @@ Your account on Dodona is linked to the way you log in. For example, if you have
 
 ## I get an error about linked accounts when I try to sign in, what should I do?
 
-Your Dodona account is linked to the way you login. However, some schools use more than one way to log in. For example, they have both Smartschool and Microsoft 365. To prevent students from these schools from ending up with multiple accounts on Dodona, we can (manually) link multiple sign-in methods to a single school.
+Your Dodona account is linked to the way you log in. However, some schools use more than one way to log in. For example, they have both Smartschool and Microsoft 365. To prevent students from these schools from ending up with multiple accounts on Dodona, we can (manually) link multiple sign-in methods to a single school.
 
-When you sign in for the first time, we will check if your school already has an account with the same name or email that used a different login method. If this is the case, we will try to link the two accounts. To do this you will need to confirm your identity using the original sign-in method.
+When you sign in for the first time, we will check if your school already has an account with the same name or email that used a different login method. If this is the case, we will try to link the two accounts. To do this, you will need to confirm your identity using the original sign-in method.
 
 ## I have created a course for my students, but only some of them can see it. What is going on?
 
@@ -32,7 +32,7 @@ If you limit the visibility of your course to a specific school, only students f
 
 ## My name or email is wrong, how can I change it?
 
-Dodona automatically gets your name and email from the login provider (e.g. Smartschool) when you login. If you want to change your name or email, you should change it in Smartschool (or your other login provider). The next time you log in, Dodona will automatically update your name and email.
+Dodona automatically gets your name and email from the login provider (e.g. Smartschool) when you log in. If you want to change your name or email, you should change it in Smartschool (or your other login provider). The next time you log in, Dodona will automatically update your name and email.
 
 ## I get a warning that my time zone is wrong, what should I do?
 

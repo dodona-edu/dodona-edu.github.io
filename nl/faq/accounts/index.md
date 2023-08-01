@@ -32,8 +32,8 @@ Als je de zichtbaarheid van je cursus beperkt tot een bepaalde school, kunnen al
 
 ## Mijn naam of e-mailadres is verkeerd, hoe kan ik het veranderen?
 
-Dodona krijgt automatisch je naam en e-mailadres van de aanmeldingsprovider (bijv. Smartschool) wanneer je inlogt. Als je je naam of e-mailadres wilt wijzigen, moet je dit in Smartschool (of je andere inlogprovider) doen. De volgende keer dat je inlogt, zal Dodona automatisch je naam en e-mailadres bijwerken.
+Dodona krijgt automatisch je naam en e-mailadres van de inlogprovider (bv. Smartschool) wanneer je inlogt. Als je je naam of e-mailadres wilt wijzigen, moet je dit in Smartschool (of je andere inlogprovider) doen. De volgende keer dat je inlogt, zal Dodona automatisch je naam en e-mailadres bijwerken.
 
 ## Ik krijg een waarschuwing dat mijn tijdzone verkeerd is, wat moet ik doen?
 
-Alle deadlines op Dodona worden weergegeven in je lokale tijd. Hiervoor moet Dodona een tijdzone aan je account koppelen. Als we detecteren dat de tijdzone van uw browser afwijkt van de tijdzone van je account, geven we een waarschuwing. Je kunt je tijdzone wijzigen in je [Accountinstellingen] (https://dodona.ugent.be/en/profile).
+Alle deadlines op Dodona worden weergegeven in je lokale tijd. Hiervoor moet Dodona een tijdzone aan je account koppelen. Als we detecteren dat de tijdzone van je browser afwijkt van de tijdzone van je account, geven we een waarschuwing. Je kunt je tijdzone wijzigen in je [Accountinstellingen] (https://dodona.ugent.be/en/profile).
