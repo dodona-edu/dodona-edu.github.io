@@ -50,9 +50,6 @@ Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
       "nl": "Som van getallen"
     }
   },
-  "evaluation": {
-    "test_suite": "suite.yaml"
-  }
   "programming_language": "python",
   "access": "private"
 }
@@ -92,7 +89,7 @@ In dat geval moet de exitcode van het programma ook `1` zijn.
 
 ### Voorbeeld
 
-```bash
+```console
 $ ./sum -1 -23 72 84 -38 -61 49 45
 127
 $ ./sum
@@ -121,7 +118,7 @@ for getal in sys.argv[1:]:
         som += int(getal)
     except ValueError:
         sys.stderr.write("invalid arguments")
-        exit(1)
+        sys.exit(1)
 
 print(som)
 

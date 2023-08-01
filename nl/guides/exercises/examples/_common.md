@@ -69,7 +69,7 @@ Deze functie moet het kleinste geval van die twee teruggeven.
 
 ### Voorbeeld
 
-```bash
+```console?lang=python&prompt=>>>
 >>> minimum(5, 6)
 5
 ```
@@ -85,7 +85,7 @@ Leerlingen kunnen deze voorbeeldoplossing niet zien (tenzij je repository publie
 Maak een bestand `solution.py` aan in de map `solution` met volgende inhoud:
 
 ```python
-def minimum(a, b)
+def minimum(a, b):
     if a < b:
         return a
     else:
@@ -116,18 +116,18 @@ In een echte oefening wil je waarschijnlijk meer testgevallen voorzien.
 Maak een bestand `suite.yaml` aan in de map `evaluation` van de oefening, met volgende inhoud:
 
 ```yaml
-tab: "minimum"
-testcase:
-  - expression: "minimum(5, 6)"
-    return: 5
-  - expression: "minimum(1.2, 1.96)"
-    return: 1.2
-  - expression: "minimum(1000000000, -5)"
-    return: -5
-  - expression: "minimum(-5, -6)"
-    return: -6
-  - expression: "minimum(6, 6)"
-    return: 6
+- tab: "minimum"
+  testcases:
+    - expression: "minimum(5, 6)"
+      return: 5
+    - expression: "minimum(1.2, 1.96)"
+      return: 1.2
+    - expression: "minimum(1000000000, -5)"
+      return: -5
+    - expression: "minimum(-5, -6)"
+      return: -6
+    - expression: "minimum(6, 6)"
+      return: 6
 ```
 
 In dit testplan gebeuren een aantal dingen:

@@ -50,9 +50,6 @@ Maak het bestand `config.json` in de map `hello-world` met de volgende inhoud:
       "nl": "Hello World"
     }
   },
-  "evaluation": {
-    "test_suite": "suite.yaml"
-  }
   "programming_language": "python",
   "access": "private"
 }
@@ -84,19 +81,17 @@ Dit krijgen leerlingen en studenten te zien wanneer ze de oefening willen oploss
 Maak een bestand `description.nl.md` aan in de map `description` van de oefening, met volgende inhoud:
 
 ````markdown
-Schrijf een Python-programma dat de naam van de gebruikt vraagt
+Schrijf een Python-programma dat de naam van de gebruiker vraagt
 en vervolgens de gebruiker begroet met de zin `Hallo, [NAAM]!`,
 waarbij `[NAAM]` de naam van de gebruiker is.
 
 Het programma moet de naam dus inlezen van standaardinvoer (stdin)
 en de begroeting uitschrijven naar standaarduitvoer (stdout).
-Het zinnetje dat de naam vraagt is vrij te kiezen.
 
 ### Voorbeeld
 
-```bash
->>> $ pyton programma.py
-Wat is je naam?
+```console
+$ python programma.py
 Jan
 Hallo, Jan!
 ```
@@ -112,7 +107,7 @@ Leerlingen kunnen deze voorbeeldoplossing niet zien (tenzij je repository publie
 Maak een bestand `solution.py` aan in de map `solution` met volgende inhoud:
 
 ```python
-naam = input("Wat is je naam?")
+naam = input()
 print(f"Hallo, {naam}!")
 ```
 
@@ -157,8 +152,6 @@ Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
     stdout: 'Hallo, "wereld"!'
   - stdin: "    "
     stdout: "Hallo,     !"
-  - stdin: "leuk\nje\nte\nzien"
-    stdout: "Hallo, leuk\nje\nte\nzien!"
 ```
 
 Een testplan wordt geschreven in YAML, en moet ook voldoen aan een bepaalde structuur.

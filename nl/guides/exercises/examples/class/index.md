@@ -49,9 +49,6 @@ Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
       "nl": "Teller"
     }
   },
-  "evaluation": {
-    "test_suite": "suite.yaml"
-  }
   "programming_language": "python",
   "access": "private"
 }
@@ -91,20 +88,20 @@ De standaardwaarde is 0.
 
 Daarnaast moet de klasse de volgende methoden ondersteunen:
 
-- Een methode `tel()` die de telling met één verhoogt. 
-  De klasse moet zichzelf teruggeven.
-- Een methode `rapporteer()` die de huidige telling schrijft naar `stdout`.
+- Een methode `count()` die de telling met één verhoogt.
+  De methode moet de eigen instantie teruggeven.
+- Een methode `report()` die de huidige telling schrijft naar `stdout`.
 
 ### Voorbeeld
 
-```bash
->>> teller = Counter(5)
->>> teller.rapporteer()
+```console?lang=python&prompt=>>>
+>>> counter = Counter(5)
+>>> counter.report()
 5
->>> teller.tel()
->>> teller.rapporteer()
+>>> counter.count()
+>>> counter.report()
 6
->>> teller.tel().tel().tel().tel().rapporteer()
+>>> counter.count().count().count().count().report()
 10
 ```
 ````
@@ -120,14 +117,14 @@ Maak een bestand `solution.py` aan in de map `solution` met volgende inhoud:
 
 ```python
 class Counter:
-    def __int__(self, beginwaarde=0):
+    def __init__(self, beginwaarde=0):
         self.teller = beginwaarde
     
-    def tel(self):
+    def count(self):
         self.teller += 1
         return self
     
-    def rapporteer(self):
+    def report(self):
         print(self.teller)
 
 ```
@@ -155,15 +152,16 @@ Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
 
 ```yaml
 - tab: "Counter"
-  testcases:
-  - statement: "teller = Counter(5)"
-  - statement: "teller.rapporteer()"
-    stdout: "5"
-  - expression: "teller.tel()"
-  - statement: "teller.rapporteer()"
-    stdout: "6"
-  - statement: "teller.tel().tel().tel().tel().rapporteer()"
-    stdout: "10"
+  contexts:
+    - testcases:
+        - statement: "counter = Counter(5)"
+        - statement: "counter.report()"
+          stdout: "5"
+        - expression: "counter.count()"
+        - statement: "counter.report()"
+          stdout: "6"
+        - statement: "counter.count().count().count().count().report()"
+          stdout: "10"
 ```
 
 In dit testplan maken we één tabblad, met daarin een aantal testen.
