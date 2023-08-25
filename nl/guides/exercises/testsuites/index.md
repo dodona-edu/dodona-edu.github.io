@@ -38,18 +38,18 @@ Een voorbeeld van een testplan met alle niveaus is:
   contexts:
     - testcases:
         - expression: 'echo("hello")'
-          return: "hello"
+          return: !v "hello"
     - testcases:
         - expression: 'echo("world")'
-          return: "world"
+          return: !v "world"
 - tab: "Tabblad 2"
   contexts:
     - testcases:
         - expression: 'echo("4")'
-          return: "4"
+          return: !v "4"
     - testcases:
         - expression: 'echo("2")'
-          return: "2"
+          return: !v "2"
 ```
 
 In dit testplan zijn twee analoge tabbladen.
@@ -64,15 +64,15 @@ Daarom is het mogelijk om de contexten weg te laten:
 - tab: "Tabblad 1"
   testcases:
     - expression: 'echo("hello")'
-      return: "hello"
+      return: !v "hello"
     - expression: 'echo("world")'
-      return: "world"
+      return: !v "world"
 - tab: "Tabblad 2"
   testcases:
     - expression: 'echo("4")'
-      return: "4"
+      return: !v "4"
     - expression: 'echo("2")'
-      return: "2"
+      return: !v "2"
 ```
 
 ## Formaat
@@ -98,17 +98,32 @@ Een testgeval met een aantal functieoproepen is:
 
 Voor returnwaarden zijn er twee opties:
 
-1. Eenvoudige waarden kunnen rechtstreeks in YAML voorgesteld worden. In het voorbeeld hierboven is het getal `1` de returnwaarde, en kan dit dus rechtstreeks in YAML genoteerd worden.
-2. Een geavanceerde modus, die ook de Python-syntaxis gebruikt.
+1. Als je een string als returnwaarde opgeeft, gaan we ervan uit dat die string ook de Python-syntaxis gebruikt.
+2. Als je iets anders dan een string (of object) opgeeft, interpreteren we het als een YAML-waarde. Met de tag `!v` of `!value` kan je ook een string laten interpreteren als een YAML-waarde.
 
-Een voorbeeld van een geavanceerde returnwaarde is:
+Een voorbeeld van een returnwaarde (hier een verzameling getallen) is:
 
 ```yaml
 - expression: 'unique(1, 1, 2, 3)'
-  return_raw: "set([1, 2, 3])"
+  return: "set([1, 2, 3])"
 ```
 
-In dit voorbeeld is de returnwaarde een verzameling (een _set_).
+Een returnwaarde met een YAML-waarde:
+
+```yaml
+- expression: 'unique(1, 1, 2, 3)'
+  return: 5.5
+```
+
+Om een string als returnwaarde te hebben zijn er dus twee mogelijkheden:
+
+```yaml
+- expression: 'echo("hello")'
+  return: !v "hallo"  # Een gewone string met als tag !v
+- expression: 'echo("hello")'
+  return: "'hallo'"  # Een string in Python-syntaxis
+```
+
 
 ## Variabelen (assignments)
 
@@ -155,7 +170,6 @@ Noemenswaardige weglatingen zijn alle soorten van functie- of klassendefinities,
 
 Voor een overzichtstabel van de ondersteunde datatypes en hun vertaling in de verschillende programmeertalen, verwijzen we naar de [referentiegids](/nl/references/tested/types).
 
-
 ## Eigen checkfunctie (eigen orakelfunctie)
 
 Soms zijn de ingebouwde controles niet voldoende, zoals bij functies die niet-deterministisch zijn.
@@ -166,7 +180,7 @@ Als we dat in een testplan willen schrijven, wordt dat:
 - tab: "Vandaag"
   testcases:
     - expression: 'vandaag()'
-      return: "??????"  # Wat moet er hier komen?
+      return: !v "??????"  # Wat moet er hier komen?
 ```
 
 De oplossing daarvoor is een eigen orakelfunctie schrijven.
@@ -261,5 +275,86 @@ Het is niet verplicht om argumenten te gebruiken:
   testcases:
   - stdin: "Jan"
     expression: "greet()"
-    return: "Hello, Jan."
+    return: !v "Hello, Jan."
+```
+
+## Taalspecifieke expressies en statements
+
+In bepaalde gevallen wil je iets doen waarvoor er in TESTed nog geen ondersteuning is.
+Een voorbeeld is het gebruik van lambda's in Python (of Java), of het gebruik van operatoren.
+
+In dat geval is het mogelijk om taalspecifieke expressies en statements te schrijven.
+In onderstaande voorbeeld wordt een functie opgeroepen met als argument de som van twee getallen.
+
+
+```yaml
+- tab: "My tab"
+  testcases:
+  - expression:
+      c: "to_string(1+1)"
+      haskell: "Submission.toString (1+1)"
+      runhaskell: "Submission.toString (1+1)"
+      java: "Submission.toString(1+1)"
+      javascript: "submission.toString(1+1)"
+      kotlin: "toString(1+1)"
+      python: "submission.to_string(1+1)"
+      csharp: "Submission.toString(1+1)"
+    return: !v "2"
+```
+
+::: warning
+Bij het gebruik van taalspecifieke expressies en statements ben je zelf verantwoordelijk om de juiste prefix van functies te gebruiken (de `(S|s)ubmission` in het voorbeeld).
+Bovendien zullen expressies niet werken bij functies met returnwaarde `void`.
+
+Meer informatie en discussie op <https://github.com/dodona-edu/universal-judge/issues/423>
+:::
+
+Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de expressies en statements ook globaal instellen:
+
+
+```yaml
+- tab: "My tab"
+  language: "java"
+  testcases:
+  - expression: "Submission.toString(1+1)"
+    return: !v "2"
+```
+
+## Bestanden koppelen aan expressies
+
+Bij het opstellen van een oefening op bestanden raden we de volgende werkwijze aan:
+
+1. Plaats de bestanden die je wilt gebruiken tijdens de evaluatie in de map `workdir/` in de oefeningenmap.
+2. Geef de naam van het bestand als parameter mee tijdens een functieoproep of als argument bij het uitvoeren.
+3. Link de oefeningen aan de bestandsnaam in het testplan. Hierdoor kunnen studenten in de feedback klikken op de naam van het bestand en dit bestand downloaden.
+
+Om dat laatste te doen, is het nodig om de bestanden ook in de map `description/media/` van de oefeningenmap te steken.
+In het testplan geef je vervolgens het attribuut `files` mee:
+
+```yaml
+- tab: "Voorbeeld met bestanden"
+  testcases:
+  - expression: "lees_het_bestand('bestand.txt')"
+    return: !v "Dit is de inhoud van het bestand"
+    files:
+      - name: "bestand.txt"
+        url: "media/bestand.txt"
+```
+
+De structuur van de oefeningenmap zal er dus als volgt uitzien:
+
+```
+repository/  # De repo met oefeningen
+└── example/ # De eigenlijke oefening
+   ├── evaluation/
+   |  └── suite.yaml
+   ├── description/
+   |  ├── media/
+   |  |   └── bestand.txt  # Het bestand om te linken
+   |  └── description.nl.md
+   ├── solution/
+   |  └── solution.py
+   ├── workdir/
+   |  └── bestand.txt  # Het bestand om te evalueren
+   └── config.json
 ```
