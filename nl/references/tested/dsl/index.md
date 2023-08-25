@@ -39,6 +39,7 @@ Dat object heeft drie attributen:
 - `tabs`*: een lijst van [tab](#tabs)-objecten
 - `namespace`: de "namespace" voor de code van de ingediende oplossing, zoals de klassennaam in Java.
 - `config`: de globale [configuratieopties](#configuratieopties)
+- `language`: de [programmeertaal van de expressies en statements](#taalspecifieke-expressies-en-statements). Als dit attribuut niet op `"tested"` staat, zullen alle expressies en statements (uitgezonderd returnwaarden) een programmeertaalspecifieke expressie of statement zijn.
 
 ### Tabs
 
@@ -86,8 +87,7 @@ als er maar een testgeval is, kan het zowel de _main call_ als de test voor de e
 Testgevallen zijn de bouwstenen van een testplannen, en bevatten de invoer en de verwachte uitvoer (de _testen_).
 Binnen dezelfde context zijn de volgende beperkingen van toepassing:
 
-- Enkel het eerste testgeval mag de "_main
-  call_" bevatten, bijvoorbeeld met argumenten voor de commandoregel of standaardinvoer.
+- Enkel het eerste testgeval mag de _main call_ bevatten, bijvoorbeeld met argumenten voor de commandoregel of standaardinvoer.
 - Enkel het laatste testgeval met de test bevatten voor de exitcode.
 
 Merk op dat het eerste en laatste testgeval wel hetzelfde testgeval kunnen zijn:
@@ -101,36 +101,37 @@ Een testgeval-object kan de volgende attributen hebben:
 Daarnaast kan een testgeval ook de attributen die hieronder beschreven worden hebben, maar merk op:
 
 - Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden.
-- De attributen `return` en `return_raw` kunnen niet tegelijk gebruikt worden, want er kan slechts één returnwaarde per expressie zijn.
-- De attributen `return`/`return_raw` vereisen ofwel het attribuut `expression` ofwel `statement`.
+- Het attribuut `return` werkt enkel met een `expression`.
 
 #### `stdin`
 
 De gegevens voor [standaardinvoer](https://nl.wikipedia.org/wiki/Standaardstromen).
 
 Als dit attribuut gebruikt wordt, kunnen `expression` en `statement` niet meer gebruikt worden als invoer,
-noch kunnen `return` of `return_raw` als test gebruikt worden.
+noch kan `return` als test gebruikt worden.
 
 #### `arguments`
 
 Een lijst van strings die als argumenten via de [commandoregel](https://nl.wikipedia.org/wiki/Command-line-interface) aan het programma doorgegeven worden.
 
 Als dit attribuut gebruikt wordt, kunnen `expression` en `statement` niet meer gebruikt worden als invoer,
-noch kunnen `return` of `return_raw` als test gebruikt worden.
-
-#### `main_call`
-
-Een optioneel attribuut dat op `true` gezet kan worden als er een _main call_ moet zijn zonder stdin of argumenten.
-
-Als dit attribuut gebruikt wordt, kunnen `expression` en `statement` niet meer gebruikt worden als invoer,
-noch kunnen `return` of `return_raw` als test gebruikt worden.
+noch kan `return` als test gebruikt worden.
 
 #### `expression` / `statement`
 
-Bevat de te evalueren expressie of het uit te voeren statement in dit testgeval.
-Deze attributen zijn synoniemen.
+Deze attributen kunnen twee waarden aannemen: een string of een object.
 
+Bij een string bevat het de te evalueren expressie of het uit te voeren statement in dit testgeval.
+Bij een statement wordt de eventuele returnwaarde genegeerd, bij een expressie niet.
 Expressies en statements gebruiken de syntaxis van Python, met een aantal beperkingen, die we [hier](#expressies-en-statements) beschrijven.
+
+Is de waarde een object, dan moet het een object zijn met als sleutel een programmeertaal en als waarde een [taalspecifieke expressie of statement](#taalspecifieke-expressies-en-statements).
+
+```yaml
+return:
+  python: "submission.the_function()"
+  java: "Submission.theFunction()"
+```
 
 #### `stdout` / `stderr`
 
@@ -148,17 +149,17 @@ Specifieert het verwachte bericht van een verwachte uitzondering of fout (een _e
 Merk op dat TESTed momenteel niet kan oordelen over het soort of type van de fout.
 Het is bijvoorbeeld niet mogelijk om te controleren of een _assertion error_ gebruikt is.
 
-#### `return` / `return_raw`
+#### `return`
 
 Specifieert de verwachte returnwaarde.
-In de meeste gevallen is het beter om `return` te gebruiken, waarbij de verwachte waarde als een YAML-waarde genoteerd wordt (string, getal, boolean, enz.).
-Voor meer geavanceerde waarden is gebruik van `return_raw` mogelijk,
-dat toelaat om dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements),
-met de beperking dat alleen waarden toegelaten zijn.
-Een returnwaarde kan bijvoorbeeld geen funtieoproep zijn.
 
-Zoals al vermeld zijn deze attributen enkel toegelaten als `expression` of `statement` als invoer voor het testgeval gebruikt is.
-De attributen `return` en `return_raw` kunnen ook niet tegelijk gebruikt worden.
+Afhankelijk van de waarde wordt dit attribuut als volgt geïnterpreteerd:
+
+- Als het een _untagged_ string is, gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
+- Als het een _untagged_ object is, wordt het gezien als de geavanceerde uitvoer voor een orakel.
+- Als het een andere waarde is, wordt het geïnterpreteerd als een YAML-waarde.
+
+Met de tags `!v` of `!value` kunnen strings ook gezien worden als YAML-waarden.
 
 #### `exit_code`
 
@@ -227,6 +228,46 @@ Volgende zaken worden ondersteund:
 - Refereren naar variabelen, zoals `the_function(some_variable)`.
 
 Noemenswaardige weglatingen zijn alle soorten van functie- of klassendefinities, alsook alle operatoren.
+
+## Taalspecifieke expressies en statements
+
+Als taalspecifieke expressies of statements gebruikt worden (hetzij door globaal de taal in te stellen, hetzij door een object te gebruiken bij een attribuut `expression` of `statement`), zal de string letterlijk in de testcode geplakt worden.
+
+Dit heeft als voordeel dat alle taalfaciliteiten van de programmeertaal gebruikt kunnen worden.
+Anderzijds zorgt dit ervoor dat een oefening niet meer programmeertaalonafhankelijk is, moet je zelf de juiste namespace gebruiken en zal dit niet werken bij functies met returntype `void`.
+
+Aangezien TESTed geen analyse van deze strings kan doen, is het nodig om zelf de `namespace` te gebruiken.
+Dit is de naam van de ingediende oplossing of klasse (instelbaar met het attribuut [`namespace`](#top-van-het-testplan)).
+Deze naam is programeertaalafhankelijk:
+
+```yaml
+- tab: "My tab"
+  testcases:
+  - expression:
+      c: "to_string(1+1)"
+      haskell: "Submission.toString (1+1)"
+      runhaskell: "Submission.toString (1+1)"
+      java: "Submission.toString(1+1)"
+      javascript: "submission.toString(1+1)"
+      kotlin: "toString(1+1)"
+      python: "submission.to_string(1+1)"
+      csharp: "Submission.toString(1+1)"
+    return: "2"
+```
+
+
+## Ondersteunde tags
+
+TESTed ondersteunt de volgende standaardtypes:
+
+- `!!set` om een verzameling te definiëren.
+
+Daarnaast ondersteunt TESTed ook:
+
+- `!v` of `!value` om bij een returnwaarde duidelijk te maken dat het om een YAML-waarde gaat, geen Python-syntaxis.
+
+Tot slot kan ook de naam van elk [TESTed-type](/nl/references/tested/types) gebruikt worden als tag.
+
 
 ## Spiekbriefje voor YAML
 
@@ -319,6 +360,14 @@ Dit is equivalent aan:
 description: "Hello World"
 ```
 
+### Tags
+
+YAML ondersteunt tags om waarden een ander type te geven:
+
+```yaml
+!!set [1, 2, 3]
+```
+
 ## Volledig voorbeeld
 
 Hieronder staat een testplan waar alle opties gebruikt worden:
@@ -342,7 +391,7 @@ Hieronder staat een testplan waar alle opties gebruikt worden:
         # Een functieoproep waarbij de waarde gecast wordt naar "uint8".
         - statement: 'echo(uint8(5))'
           # De verwachte returnwaarde wordt ook gecast naar "uint8".
-          return_raw: "uint8(5)"
+          return: "uint8(5)"
 
 # Een tweede tab in hetzelfde testplan.
 - tab: "Exception"

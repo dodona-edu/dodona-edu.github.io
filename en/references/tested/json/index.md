@@ -310,10 +310,10 @@ For example, if you require an error with the message `"Error"`:
 ```
 
 Since evaluating anything more than the exception message requires programming-language-specific code,
-TESTed supports the concept of "evaluators".
+TESTed supports the concept of "oracles".
 This is a function you can write,
 which will be called by TESTed to evaluate whether a thrown exception is the correct one.
-See the attribute documentation below or the [Evaluators section](#evaluators) for more information.
+See the attribute documentation below or the [Oracles section](#oracles) for more information.
 
 For example, requiring a `assertion` exception, in an exercise supporting `Python`, `Java` and `Haskell`:
 
@@ -324,9 +324,9 @@ For example, requiring a `assertion` exception, in an exercise supporting `Pytho
    "exception": {
     "message": "Some assertions went wrong"
    },
-   "evaluator": {
+   "oracle": {
     "type": "specific",
-    "evaluators": {
+    "functions": {
      "python": {
       "file": "evaluator.py"
      },
@@ -347,14 +347,14 @@ For example, requiring a `assertion` exception, in an exercise supporting `Pytho
 
 An object representing an expected error message.
 
-#### `.evaluator`
+#### `.oracle`
 
-The evaluator to use to determine whether the exception is valid or not.
-TESTed currently supports the following two evaluators:
+The oracle to use to determine whether the exception is valid or not.
+TESTed currently supports the following two oracles:
 
-- [GenericExceptionEvaluator](#genericexceptionevaluator) (default): Built-in evaluator for exceptions.
-  **Note:** Only the error message (not the exception type) is evaluated with the built-in evaluator.
-- [SpecificEvaluator](#specificevaluator): An evaluator in the programming language of the submission.
+- [GenericExceptionOracle](#genericexceptionoracle) (default): Built-in oracle for exceptions.
+  **Note:** Only the error message (not the exception type) is evaluated with the built-in oracle.
+- [SpecificOracle](#specificoracle): An oracle in the programming language of the submission.
 
 ### ExitCodeOutputChannel
 
@@ -412,13 +412,13 @@ A relative path to a text file in the `workdir` that contains the expected outpu
 
 A relative path where a text file is expectedly generated upon execution of the submission.
 
-#### `.evaluator`
+#### `.oracle`
 
-An evaluator used to evaluate the generated text file.
-TESTed currently supports the following two evaluators:
+An oracle used to evaluate the generated text file.
+TESTed currently supports the following two oracles:
 
-- [GenericTextEvaluator](#generictextevaluator)(default): Built-in evaluator for text and text files.
-- [ProgrammedEvaluator](#programmedevaluator): A custom evaluator.
+- [GenericTextOracle](#generictextoracle)(default): Built-in oracle for text and text files.
+- [ProgrammedOracle](#programmedoracle): A custom oracle.
 
 ### TextOutputChannel
 
@@ -464,13 +464,13 @@ that contains the textual data.
 Similar to the `.data` attribute of the [`TextData` object](#textdata).
 A string.
 
-#### `.evaluator`
+#### `.oracle`
 
-An evaluator used to evaluate the generated text.
-TESTed currently supports the following two evaluators:
+An oracle used to evaluate the generated text.
+TESTed currently supports the following two oracles:
 
-- [GenericTextEvaluator](#generictextevaluator)(default): Built-in evaluator for text and text files.
-- [ProgrammedEvaluator](#programmedevaluator): A custom evaluator.
+- [GenericTextOracle](#generictextoracle)(default): Built-in oracle for text and text files.
+- [ProgrammedOracle](#programmedoracle): A custom oracle.
 
 ### ValueOutputChannel
 
@@ -509,24 +509,24 @@ See [Statements and expressions](#statements-and-expressions) to learn how value
 The expected value must be a literal value, and can not be a function call or a variable.
 :::
 
-#### `.evaluator`
+#### `.oracle`
 
-An evaluator used to evaluate the generated value.
-TESTed currently supports the following three evaluators:
+An oracle used to evaluate the generated value.
+TESTed currently supports the following three oracles:
 
-- [GenericValueEvaluator](#genericvalueevaluator) (default): Built-in evaluator that compares the generated value with
+- [GenericValueOracle](#genericvalueoracle) (default): Built-in oracle that compares the generated value with
   the expected value.
-- [ProgrammedEvaluator](#programmedevaluator): A custom evaluator that is independent of the programming language of the
+- [ProgrammedOracle](#programmedoracle): A custom oracle that is independent of the programming language of the
   submission.
-- [SpecificEvaluator](#specificevaluator): A custom evaluator that depends on the programming language of the
+- [SpecificOracle](#specificoracle): A custom oracle that depends on the programming language of the
   submission.
 
 ::: warning
-The first two evaluators only support datatypes that are also [supported by TESTed](#data-types).
-To support custom datatypes, you must use a `SpecificEvaluator`.
+The first two oracle only support datatypes that are also [supported by TESTed](#data-types).
+To support custom datatypes, you must use a `SpecificOracle`.
 :::
 
-## Evaluators
+## Oracles
 
 There are two ways of checking test results in TESTed.
 Both involve implementing or using a "check function",
@@ -551,26 +551,26 @@ There are two ways to achieve this:
 For the programming-language-independent way,
 you can either use one of the built-in check functions or provide your own.
 
-In a test suite, this translates to three kinds of evaluators:
+In a test suite, this translates to three kinds of oracles:
 
-1. "Generic evaluators" for the built-in check functions.
-2. [`SpecificEvaluator`](#specificevaluator) for a custom check function using the programming-language-independent way.
-3. [`ProgrammedEvaluator`](#programmedevaluator) for custom check functions that are programming language specific.
+1. "Generic oracles" for the built-in check functions.
+2. [`SpecificOracle`](#specificoracle) for a custom check function using the programming-language-independent way.
+3. [`ProgrammedOracle`](#programmedoracle) for custom check functions that are programming language specific.
 
-Each evaluator has an attribute `.type` with the internal type of the evaluator.
-Generic evaluators also have an attribute `.name` with the internal name of the evaluator.
+Each oracle has an attribute `.type` with the internal type of the oracle.
+Generic oracles also have an attribute `.name` with the internal name of the oracle.
 
-### GenericExceptionEvaluator
+### GenericExceptionOracle
 
-A `GenericExceptionEvaluator` object contains all the necessary information to use the built-in evaluator for
+A `GenericExceptionOracle` object contains all the necessary information to use the built-in oracle for
 exceptions.
 
 :::warning
-This evaluator only evaluates error messages.
+This oracle only evaluates error messages.
 It does not take into account exception types because of their programming language dependencies.
 :::
 
-For example, an [`ExceptionOutputChannel`](#exceptionoutputchannel) with the generic evaluator:
+For example, an [`ExceptionOutputChannel`](#exceptionoutputchannel) with the generic oracle:
 
 ```json
 {
@@ -579,7 +579,7 @@ For example, an [`ExceptionOutputChannel`](#exceptionoutputchannel) with the gen
    "exception": {
     "message": "Valid exceptions"
    },
-   "evaluator": {
+   "oracle": {
     "type": "builtin",
     "name": "exception"
    }
@@ -588,7 +588,7 @@ For example, an [`ExceptionOutputChannel`](#exceptionoutputchannel) with the gen
 }
 ```
 
-Note that you never have to actually specify the example above, since the generic evaluator is the default value.
+Note that you never have to actually specify the example above, since the generic oracle is the default value.
 
 #### `.type`
 
@@ -600,19 +600,19 @@ A string with constant value `exception`.
 
 #### `.options`
 
-The *GenericExceptionEvaluator* does not support any options at the moment.
+The *GenericExceptionOracle* does not support any options at the moment.
 
-### GenericValueEvaluator
+### GenericValueOracle
 
-A `GenericValueEvaluator` object contains all the necessary information to use the built-in evaluator for values.
+A `GenericValueOracle` object contains all the necessary information to use the built-in oracle for values.
 
-For example, a [`ValueOutputChannel`](#valueoutputchannel) with the generic evaluator:
+For example, a [`ValueOutputChannel`](#valueoutputchannel) with the generic oracle:
 
 ```json
 {
  "output": {
   "result": {
-   "evaluator": {
+   "oracle": {
     "type": "builtin",
     "name": "value"
    },
@@ -644,11 +644,11 @@ A string with constant value `value`.
 
 #### `.options`
 
-The *GenericValueEvaluator* does not support any options at the moment.
+The *GenericValuePracle* does not support any options at the moment.
 
-### GenericTextEvaluator
+### GenericTextOracle
 
-A `GenericTextEvaluator` object contains all the necessary information to use the built-in evaluator for textual data.
+A `GenericTextOracle` object contains all the necessary information to use the built-in oracle for textual data.
 
 #### `.type`
 
@@ -669,21 +669,21 @@ The following options can be used to adjust the matching behaviour:
 - `applyRounding`: Apply rounding when comparing text as floats.
 - `roundTo`: Precision of floating points when rounding numbers. Mandatory option when rounding is applied.
 
-### ProgrammedEvaluator
+### ProgrammedOracle
 
-A `ProgrammedEvaluator` object contains all the necessary information to use a custom evaluator for values that works
+A `ProgrammedOracle` object contains all the necessary information to use a custom oracle for values that works
 independent of the programming language of the submission.
 
 ::: tip Hint
-For performance reasons, we strongly recommend implementing custom evaluators in Python if this is an option.
-If the programmed evaluator is implemented in Python, it is executed in the same process as TESTed and no language
+For performance reasons, we strongly recommend implementing custom oracles in Python if this is an option.
+If the programmed oracle is implemented in Python, it is executed in the same process as TESTed and no language
 barriers need to be crossed.
 
-Context switching between the TESTed core and a programmed evaluator comes with an overhead for starting new processes,
+Context switching between the TESTed core and a programmed oracle comes with an overhead for starting new processes,
 compilation, and serializing and deserializing values and function calls.
 :::
 
-For example, using a programmed evaluator for the return value:
+For example, using a programmed oracle for the return value:
 
 ```json
 {
@@ -693,7 +693,7 @@ For example, using a programmed evaluator for the return value:
     "type": "text",
     "data": "input-3"
    },
-   "evaluator": {
+   "oracle": {
     "type": "programmed",
     "function": {
      "file": "evaluator.py",
@@ -724,20 +724,20 @@ An [`EvaluationFunction`](#evaluationfunction) object that represents the custom
 A list of arguments that are passed when calling the evaluation function (see [EvaluationFunction](#evaluationfunction)
 and [Statements and expressions](#statements-and-expressions)).
 
-### SpecificEvaluator
+### SpecificOracle
 
-A `SpecificEvaluator` object contains all the necessary information to use a custom evaluator for values that depends on
+A `SpecificOracle` object contains all the necessary information to use a custom oracle for values that depends on
 the specific programming language of the submission.
 
-For example, using a specific evaluator for the return value:
+For example, using a specific oracle for the return value:
 
 ```json
 {
  "output": {
   "result": {
-   "evaluator": {
+   "oracle": {
     "type": "specific",
-    "evaluators": {
+    "functions": {
      "python": {
       "file": "evaluator.py"
      },
@@ -764,22 +764,22 @@ For example, using a specific evaluator for the return value:
 
 A string with constant value `specific`.
 
-#### `.evaluators`
+#### `.functions`
 
 An object mapping programming languages onto a [`EvaluationFunction`](#evaluationfunction) object that represents the
 custom evaluation function for that programming language.
 The keys of the objects are strings, e.g. `"python"` or `"java"`.
 
 ::: danger
-A submission can not be evaluated if there is no evaluator function associated with its programming language.
+A submission can not be evaluated if there is no oracle function associated with its programming language.
 For example, in the fragment above, the exercise will not be solvable in Kotlin.
 :::
 
 ### EvaluationFunction
 
-An `EvaluationFunction` object represents a function that can be called as an evaluator function.
+An `EvaluationFunction` object represents a function that can be called as an oracle function.
 
-When used with a programmed evaluator, the function takes three arguments:
+When used with a programmed oracle, the function takes three arguments:
 
 - `expected`: the expected return value from the test suite
 - `actual`: the actual return value, produced by the submission
@@ -863,13 +863,13 @@ def evaluate_value(expected, actual, args):
 
 :::
 
-When used with a programming-language-specific evaluator, the function takes one argument:
+When used with a programming-language-specific oracle, the function takes one argument:
 
 - `actual`: the actual return value, produced by the submission
 
 It must also return a [`EvaluationResult`](#evaluationresult).
 
-For example, the evaluator function for a programming-language-specific evaluator:
+For example, the oracle function for a programming-language-specific oracle:
 
 ::: code-group
 
@@ -968,15 +968,15 @@ def evaluate(actual):
 #### `.file`
 
 The path name of the source code relative to the evaluation directory of the exercise.
-The source code must at least define the custom evaluator function.
+The source code must at least define the custom oracle function.
 
 #### `.name`
 
-The name of the custom evaluator function, with a default value of `evaluate`.
+The name of the custom oracle function, with a default value of `evaluate`.
 
 ### EvaluationResult
 
-The result of an evaluator function.
+The result of an oracle function.
 In most languages, TESTed provides utilities to create a correct return type.
 In other languages, you must return an object with the following attributes:
 
