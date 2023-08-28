@@ -38,6 +38,7 @@ The root object contains three attributes:
 - `tabs`*: a list of [tab](#tabs) objects
 - `namespace`: the "namespace" for the code of the submission, such as the class name in Java.
 - `config`: the global [configuration options](#configuration-options)
+- `language`: the [language of the expressions and statements](#language-specific-expressions-and-statements). If this attribute is not set to `"tested"`, all expressions and statements (except for return values) will be programming-language-specific expressions or statements.
 
 ### Tabs
 
@@ -97,33 +98,36 @@ A test case can have the following attributes:
 Additionally, a test case can have all attributes described below, but do note:
 
 - A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive.
-- The attributes `return` and `return_raw` are mutually exclusive, as an expression can only have one result.
-- The attributes `return`/`return_raw` require either the attribute `expression` or `statement`.
+- The attribute `return` requires the attribute `expression`.
 
 #### `stdin`
 
 The data to provide to the [standard input](https://en.wikipedia.org/wiki/Standard_streams#Standard_input_(stdin)).
 
-If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` or `return_raw` as tests.
+If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` as tests.
 
 #### `arguments`
 
 A list of strings to pass to the program as the [command line arguments](https://en.wikipedia.org/wiki/Command-line_interface#Arguments).
 
-If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` or `return_raw` as tests.
-
-#### `main_call`
-
-An optional attribute you can set to `true` if you want a main call without stdin and without arguments.
-
-If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` or `return_raw` as tests.
+If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` as tests.
 
 #### `expression` / `statement`
 
-Contains the expression to evaluate or statement to execute during this test case.
-These attributes are synonyms.
+This attribute can take two values: a string or an object.
+
+A string contains the expression to evaluate or statement to execute during this test case.
+For a statement, in contrast to for an expression, all return values are ignored if there are any.
 
 Expressions and statements use the Python syntax, with some restrictions, which are detailed [here](#expressions-and-statements).
+
+If the value is an object, it must be a mapping of programming language to a [language-specific expressions or statement](#language-specific-expressions-and-statements).
+
+```yaml
+return:
+  python: "submission.the_function()"
+  java: "Submission.theFunction()"
+```
 
 #### `stdout` / `stderr`
 
@@ -141,15 +145,17 @@ Specifies the expected message of an expected exception.
 Note that TESTed currently does not allow checking the exception type or class.
 For example, you cannot check that an assertion error or exception happened.
 
-#### `return` / `return_raw`
+#### `return`
 
 Specifies the expected return value.
-In most cases, you can use `return`, in which case the expected return value is encoded into a YAML value (string, number, boolean, etc.).
-However, sometimes you need more advanced representations, in which case `return_raw` allows you to use the same Python syntax as for the [expressions and statements](#expressions-and-statements), with the restriction that you can only use values.
-For example, a return value cannot be a function call.
 
-As mentioned before, these attributes are only allowed if you also specified a `expression`/`statement` as input for the test case.
-You can also not have both `return` and `return_raw` at the same time.
+Depening on the value, this attribute is interpreted as:
+
+- If an untagged string, the string uses the same Python syntax as for [expressions and statements](#expressions-and-statements).
+- If it is an untagged object, it is seen as the advanced output for an oracle.
+- If it is another value, it is interpreted as a YAML value.
+
+With the tags `!v` or `!values`, you can mark strings or objects as also being YAML values.
 
 #### `exit_code`
 
@@ -214,6 +220,46 @@ The following is supported:
 - Referencing variables, such as `the_function(some_variable)`.
 
 Notably, absent are any type of function or class definitions and all operators.
+
+## Language-specific expressions and statements
+
+If language-specific expressions or statements are used (either by setting the language globally or by using an object to an attribute `expression` or `statement`), the string will be used literally in the test code.
+
+This has the advantage that all language features of the programming language can be used.
+On the other hand, this causes exercises to no longer be programming language independent.
+You have to use the correct namespace yourself, and it will not work for functions with return type `void`.
+
+Since TESTed cannot analyse these strings, it is necessary to use the `namespace` yourself.
+This is the name of the submitted solution or class (configurable with the attribute [`namespace`](#root-of-the-test-suite)).
+This name is programming language dependent:
+
+```yaml
+- tab: "My tab"
+  testcases:
+  - expression:
+      c: "to_string(1+1)"
+      haskell: "Submission.toString (1+1)"
+      runhaskell: "Submission.toString (1+1)"
+      java: "Submission.toString(1+1)"
+      javascript: "submission.toString(1+1)"
+      kotlin: "toString(1+1)"
+      python: "submission.to_string(1+1)"
+      csharp: "Submission.toString(1+1)"
+    return: "2"
+```
+
+## Supported tags
+
+TESTed supports the following standard types:
+
+- `!!set` to denote a set.
+
+TESTed also supports:
+
+- `!v` or `!value` to mark a return value as a YAML value.
+
+Finally, all [TESTed types](/en/references/tested/types) can also be used as tags.
+
 
 ## YAML cheat sheet
 
@@ -304,6 +350,14 @@ This is equivalent to writing:
 
 ```yaml
 description: "Hello World"
+```
+
+### Tags
+
+YAML supports tags to give values another type:
+
+```yaml
+!!set [1, 2, 3]
 ```
 
 ## Full example
