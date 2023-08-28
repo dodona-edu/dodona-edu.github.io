@@ -20,7 +20,7 @@ jobs:
         - 3300:3300
         options: --health-cmd "mysqladmin ping -h localhost" --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Ruby
         uses: actions/setup-ruby@v1
         with:
