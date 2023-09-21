@@ -192,12 +192,13 @@ In het testplan wordt dit dan:
 - tab: "Vandaag"
   testcases:
     - expression: 'vandaag()'
-      return_raw:
+      return:
         value: "'27-08-2023'"
-        evaluator: "custom"
+        oracle: "custom_check"
         language: "python"
         file: "test.py"
         name: "evaluate_test"
+        arguments: [5, 6]
 ```
 
 We specifiëren dat er een bestand `test.py` is, waarin een functie `evaluate_test` bestaat.
@@ -210,17 +211,16 @@ Bijvoorbeeld:
 from evaluation_utils import EvaluationResult, Message
 from datetime import datetime
 
-def evaluate_test(expected, actual, args):
+def evaluate_test(expected, actual, five, six):
     # expected is de waarde uit "value" uit het testplan
     # actual is de returnwaarde van de functie uit de ingediende oplossing
-    # args is een optionele lijst van argumenten uit het testplan.
-    #      Hier is die lijst leeg.
+    # de overige argumenten zijn hetzelfde als de `arguments` uit het testplan
     today = datetime.today().strftime('%d-%m-%Y')
     return EvaluationResult(
-      today == actual,  # Boolean of dat het resultaat juist is
-      today,  # De "verwachte waarde" om te tonen op Dodona
-      actual,  # De eigenlijke waarde uit de oplossing om te tonen op Dodona
-      [Message("Hallo")]  # Optionale lijst van berichten om te tonen op Dodona
+      result=today == actual,  # Boolean of dat het resultaat juist is
+      dsl_expected=repr(today),  # De "verwachte waarde" om te tonen op Dodona
+      dsl_actual=repr(actual),  # De eigenlijke waarde uit de oplossing om te tonen op Dodona
+      messages=[Message("Hallo")]  # Optionale lijst van berichten om te tonen op Dodona
     )
 ```
 
@@ -231,6 +231,21 @@ We geven vervolgens een `EvaluationResult` terug met vier parameters:
 2. De verwachte waarde om te tonen op Dodona. We overschijven hier de verwachte waarde uit het testplan met de datum van vandaag.
 3. De eigenlijke waarde om te tonen op Dodona. We geven hier de eigenlijke waarde gewoon door.
 4. Een optionele lijst van berichten. Deze berichten worden ook getoond op Dodona en kunnen gebruikt worden om bijkomende feedback of uitleg aan de studenten te geven.
+
+Ook `stderr` en `stdout` kunnen een eigen checkfunctie gebruiken.
+Hiervoor wordt dezelfde notatie gebruikt, maar met `data` in plaats van `value`:
+
+```yaml
+- tab: "Vandaag"
+  testcases:
+    - stdin: '1 + 1'
+      stdout:
+        data: "2"
+        oracle: "custom_check"
+        language: "python"
+        file: "test.py"
+        name: "evaluate_stdout"
+```
 
 ## Argumenten, invoer en exitcode
 
