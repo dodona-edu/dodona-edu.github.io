@@ -1,6 +1,6 @@
 ---
 title: "Questions and comments"
-description: "Tutorial: Answering questions and commenting on code"
+description: "Guide: Answering questions and commenting on code"
 order: 8
 ---
 
@@ -22,13 +22,13 @@ Clicking on the questions opens the submission that the question was asked on.
 You can choose to reply to the question, which will mark the question as answered and sends the student a notification.
 You can also directly mark a question as answered. This is often useful if you know the student has already solved the question in another way. Eg. the student has submitted an other solution where the problem is fixed, or you have replied to the question outside of the Dodona framework.
 
-> Note comments support markdown formatting, so you can use bold, italics, lists, ... You can checkout all markdown features in [this reference](/en/references/exercise-description/#markdown).
+> Note: comments support markdown formatting, so you can use bold, italics, lists, ... You can checkout all markdown features in [this reference](/en/references/exercise-description/#markdown).
 
 # Commenting on code
 
 As a teacher, you can also comment on the code of your students. This can be useful to give feedback on their solution, or to point out a mistake.
 
-> If you want to go through the submissions of all your students and provide feedback, it can be useful to [create an evaluation](/en/guides/teachers/grading/).
+> If you want to go through the submissions of all your students and provide feedback, it can be useful to [create an evaluation](/en/guides/teachers/grading).
 
 You can either use the `Add global comment` button to add a general comment about the submission, or you can select a piece of code and click the `Add comment` button to add a comment about that specific piece of code.
 ![add comment](./add-comment.png)
@@ -44,7 +44,7 @@ While writing or editing a comment, you can check `save comment`. This will allo
 You can also save an existing comment by clicking `save comment` in the comment menu.
 ![Save existing comment](save-comment.png)
 
-Once you have saved one ore more comments, you get a search field when writing new comments. Select the desired comment from the list to reuse it. You can still edit the comment before posting it.
+Once you have saved one or more comments, you get a search field when writing new comments. Select the desired comment from the list to reuse it. You can still edit the comment before posting it.
 ![Reuse comment](./reuse-annotations.png)
 
 # Managing saved comments

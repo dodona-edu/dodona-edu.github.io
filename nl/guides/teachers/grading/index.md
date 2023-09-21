@@ -98,7 +98,7 @@ In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Al
 
 Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de deadline van een student voor een bepaalde oefening te zien.
 
-Aan de linkerkant zie je de status van de testen en de ingediende code. Op de code kan feedback worden toegevoegd aan een bepaalde regel door op het regelnummer te klikken. Voor algemene feedback klik je op "Globale opmerking toevoegen".
+Aan de linkerkant zie je de status van de testen en de ingediende code. Op de code kan feedback worden toegevoegd aan een bepaalde regel door op het regelnummer te klikken. Voor algemene feedback klik je op "Globale opmerking toevoegen". Meer info over het toevoegen en hergebruiken van opmerkingen vind je in [deze tuturial](/nl/guides/teachers/annotations/#opmerkingen-geven).
 
 **Merk op**: de feedback die je hier geeft is niet automatisch zichtbaar voor de studenten. Feedback binnen een evaluatie moet je steeds vrijgeven via de knop "Feedback vrijgeven" op het evaluatieoverzicht.
 
