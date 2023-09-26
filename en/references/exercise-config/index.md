@@ -15,6 +15,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 - **`access`** (`public` or `private`): determines who can use this exercise
   - `public`: any other teacher on Dodona can use this exercise
   - `private`: only teachers with explicit permission can use this exercise
+- **`draft`** (boolean, optional): set to `true` if this exercise is still a draft. This optional setting is `false` by default. It will automatically be updated to true for new exercises.
 - **`description`** (object): the specification of the description of the exercise
   - **`names`** (object): the name of the exercise
     - **`nl`**: the name of the exercise in Dutch
@@ -36,6 +37,7 @@ The structure for a reading activity is identical to that of an exercise. There 
 - **`access`** (`public` or `private`): determines who can use this exercise
   - `public`: any other teacher on Dodona can use this exercise
   - `private`: only teachers with explicit permission can use this exercise
+- **`draft`** (boolean, optional): set to `true` if this exercise is still a draft. This optional setting is `false` by default. It will automatically be updated to true for new activities.
 - **`description`** (object): the specification of the description of the exercise
   - **`names`** (object): the name of the exercise
     - **`nl`**: the name of the exercise in Dutch
@@ -52,6 +54,7 @@ The structure for a reading activity is identical to that of an exercise. There 
   "type": "exercise",
   "programming_language": "python",
   "access": "public",
+  "draft": true,
   "description": {
     "names": {
       "nl": "Voorbeeld oefening",
@@ -81,7 +84,8 @@ The structure for a reading activity is identical to that of an exercise. There 
     }
   },
   "type": "content",
-  "access": "public",
+  "access": "private",
+  "draft": "true",
   "labels": ["test", "intro"]
 }
 ```
