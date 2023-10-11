@@ -163,6 +163,77 @@ Specifies the expected exit code of the program.
 
 Note that only the last test case of a context can have this attribute, although the last test case can also be the first test case if needed.
 
+### Custom check function (oracles)
+
+The following attributes can have a custom check function: `return`, `stdout` and `stderr`.
+
+An object for a custom check function has the following attributes:
+
+- `oracle`: the type of check function. Currently, this can be `custom_check` or `builtin`. `builtin` uses the built-in oracle.
+- `value` (with `return`) or `data` (with `stdout`/`stderr`): the expected value
+- `file`: the name of the file containing the custom check function (relative to the `evaluation` folder)
+- `name`: the name of the check function (in snake case)
+- `language`: the programming language of the check function. `python` is the best choice due to performance reasons.
+- `arguments`: a list of [values](#expressions-and-statements) that are arguments to the check function
+
+For a return value:
+
+```yaml
+return:
+  value: "'27-08-2023'"
+  oracle: "custom_check"
+  language: "python"
+  file: "test.py"
+  name: "evaluate_test"
+  arguments: [5, 6]
+```
+
+The check function must have the following signature:
+
+```python
+def check_function(expected, generated, *) -> EvaluationResult
+```
+
+- The first argument is the expected value (from the `value`/`data` attribute from the test suite).
+- The second argument is the generated value.
+- The other arguments are the same as the `arguments` attribute from the test suite.
+
+The return value is a class of the type `EvaluationResult` (or a struct or object, depending on the programming language).
+The constructor of this class has the following parameters:
+
+1. `result`: A boolean indicating if the generated value is correct or not.
+2. `readable_expected`, optional: The expected value to show on Dodona.
+3. `readable_actual`, optional: The generated value to show on Dodona.
+4. `messages`, optional: A list of messages (`Message`s or strings).
+5. `dsl_expected`, optional: The expected value as [string value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
+6. `dsl_actual`, optional: The generated value as [strong value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
+
+In most cases, and especially when preparing programming language-independent exercises, it is better to use `dsl_expected` and `dsl_actual`:
+otherwise the check function itself is responsible for displaying the expected and actual value in the correct programming language.
+
+The list of messages must be strings or `Message`s.
+A `Message` has the following attributes:
+
+1. `description`: the message to show.
+2. `format`: the format of the message, like `text`, `code` or `html`.
+3. `permission`: who can see the message: `staff`, `student` or `zeus`.
+
+For Python, this becomes:
+
+```python
+def evaluate_test(expected, actual):
+    return EvaluationResult(
+      result=True,
+      dsl_expected=repr("hallo"),
+      dsl_actual=repr("hallo"),
+      messages=[Message(
+        description="Hallo",
+        format="html",
+        permission="staff"
+      )]
+    )
+```
+
 ### Files
 
 Some parameters or other strings are a name of a file.
