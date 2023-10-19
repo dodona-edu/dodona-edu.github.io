@@ -124,7 +124,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
 
 - A `DebugData` object is used to run the python tutor that gives students a debug interface. Currently it is only relevant for python. It consists of:
   - `statements`, a string containing the extra code to be executed in the python tutor, to mimic this testcase.
-  - `input`, a string containing the input to be given to the python tutor, to mimic this testcase.
+  - `stdin`, a string containing the input to be given to the python tutor, to mimic this testcase.
 
 ![judge-output-reflection](./judge-output.png)
 
