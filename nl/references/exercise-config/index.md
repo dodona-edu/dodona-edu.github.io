@@ -51,7 +51,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
 {
   "type": "exercise",
   "programming_language": "python",
-  "access": "public",
+  "access": "private",
   "description": {
     "names": {
       "nl": "Voorbeeld oefening",
@@ -81,7 +81,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     }
   },
   "type": "content",
-  "access": "public",
+  "access": "private",
   "labels": ["test", "intro"]
 }
 ```

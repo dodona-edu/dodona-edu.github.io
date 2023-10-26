@@ -51,7 +51,7 @@ The structure for a reading activity is identical to that of an exercise. There 
 {
   "type": "exercise",
   "programming_language": "python",
-  "access": "public",
+  "access": "private",
   "description": {
     "names": {
       "nl": "Voorbeeld oefening",
@@ -81,7 +81,7 @@ The structure for a reading activity is identical to that of an exercise. There 
     }
   },
   "type": "content",
-  "access": "public",
+  "access": "private",
   "labels": ["test", "intro"]
 }
 ```
