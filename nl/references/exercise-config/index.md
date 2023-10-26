@@ -15,7 +15,6 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiker
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
-- **`draft`** (boolean, optioneel): zet op `true` zolang de oefening nog niet klaar is om te publiceren. Standaard staat deze waarde op `false`. Deze waarde wordt automatisch op `true` gezet voor nieuwe oefeningen.
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
   - **`names`** (object): de naam van de oefening
     - **`nl`**: de naam van de oefening in het Nederlands
@@ -37,7 +36,6 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiker
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
-- **`draft`** (boolean, optioneel): zet op `true` zolang de oefening nog niet klaar is om te publiceren. Standaard staat deze waarde op `false`. Deze waarde wordt automatisch op `true` gezet voor nieuwe oefeningen.
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
   - **`names`** (object): de naam van de oefening
     - **`nl`**: de naam van de oefening in het Nederlands
@@ -54,7 +52,6 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
   "type": "exercise",
   "programming_language": "python",
   "access": "private",
-  "draft": true,
   "description": {
     "names": {
       "nl": "Voorbeeld oefening",
@@ -85,7 +82,6 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
   },
   "type": "content",
   "access": "private",
-  "draft": "true",
   "labels": ["test", "intro"]
 }
 ```

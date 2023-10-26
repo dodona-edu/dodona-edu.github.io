@@ -7,9 +7,9 @@ title: Activities
 [[toc]]
 
 ## What is a draft activity?
-A draft activity is an activity where the draft flag (boolean) is set to true. This boolean is tracked in both the [exercise config file](/en/references/exercise-config) as well as the database. For all new exercises, the draft state is automatically set to true (similar to the key that is added to the internals). For existing exercises, the draft flag is set to false in the database, but this value isn't added to the config file.
+Every newly added activity is considered a draft activity until they are published.
 
-The idea is that an activity stays in draft mode until its creator greenlights it manually using the Dodona UI or the config file.
+The idea is that an activity stays in draft mode until its creator greenlights it manually using the Dodona UI.
 
 ## What is the effect of a draft activity?
 The concept of draft activities serves several goals.

@@ -7,9 +7,9 @@ title: Activiteiten
 [[toc]]
 
 ## Wat is een conceptactiviteit?
-Een concept activiteit is een activiteit waarvan de 'draft' vlag (boolean) op true staat. Deze boolean wordt zowel bijgehouden in het [configuratiebestand van de oefening](/nl/references/exercise-config) als in de database. Voor alle nieuwe oefeningen wordt de conceptstatus automatisch op true gezet (vergelijkbaar met de sleutel die aan de interne gegevens wordt toegevoegd). Voor bestaande oefeningen wordt de conceptvlag op false gezet in de database, maar deze waarde wordt niet toegevoegd aan het configuratiebestand.
+Elke nieuw toegevoegde activiteit wordt beschouwd als een conceptactiviteit totdat deze wordt gepubliceerd.
 
-Het idee is dat een activiteit in conceptmodus blijft totdat de maker deze handmatig goedkeurt met behulp van Dodona of rechtstreeks het configuratiebestand aanpast.
+Het idee is dat een activiteit in conceptmodus blijft totdat de maker deze handmatig goedkeurt met behulp van Dodona.
 
 ## Wat is het doel van concept activiteiten?
 Concept activiteiten dienen verschillende doelen.
