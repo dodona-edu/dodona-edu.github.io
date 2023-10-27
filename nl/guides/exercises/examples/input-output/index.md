@@ -165,6 +165,29 @@ In het voorbeeld hierboven maken we één tabblad met als naam "Testen", en defi
 - Test 6 heeft een naam die enkel uit spaties bestaan.
 - Test 7 heeft een naam met _escaped newlines_.
 
+::: info Invoer met meerdere regels
+In het voorbeeldje gebruiken we nu telkens één regel invoer.
+Soms heb je ook meerdere regels invoer nodig.
+Dat kan als volgt:
+
+```yaml
+- stdin: |-
+    Dit is regel één
+    Hier is nog een regel
+    Een laatste regel
+```
+We hebber er hier voor gekozen om de YAML-syntaxis voor meerdere regels te gebruiken.
+Als alternatief kunnen we ook expliciet newlines plaatsen:
+
+```yaml
+- stdin: "Dit is regel één\nHier is nog een regel\nEen laatste regel"
+```
+
+Een goede bron van informatie over de opties voor meerdere regels in YAML is <https://yaml-multiline.info/>.
+In de meeste gevallen volstaat bovenstaande manier.
+:::
+
+
 Elk nieuw testgeval begint met een liggend streepje: dit is in YAML de manier om een nieuw object te beginnen (je ziet dat ons tabblad ook een object is).
 We maken dus een tabblad-object, waarin we een lijst van testgeval-objecten steken.
 

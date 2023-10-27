@@ -167,6 +167,76 @@ Specifieert de verwachte exitcode van het programma.
 
 Enkel het laatste testgeval in een context kan dit attribuut hebben, maar het laatste testgeval kan ook het eerste zijn als er maar één testgeval is.
 
+### Eigen checkfuncties (orakels)
+
+De volgende attributen kunnen een eigen checkfunctie gebruiken: `return`, `stdout` en `stderr`.
+
+Een object voor een checkfunctie bestaat uit de volgende attributen:
+
+- `oracle`: het soort checkfunctie. Momenteel kan dit enkel `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde checkfuncties.
+- `value` (bij `return`) of `data` (bij `stdout`/`stderr`): de verwachte waarde
+- `file`: de naam van het bestand waarin de checkfunctie zit (relatief ten opzichte van de map `evaluation`)
+- `name`: de naam van de checkfunctie (in snake case)
+- `language`: de programmeertaal waarin de checkfunctie geschreven is. `python` is hier de beste keuze door performantieredenen.
+- `arguments`: een lijst van [waarden](#expressies-en-statements) die als argumenten aan de checkfunctie gegeven worden
+
+Voor een returnwaarde:
+
+```yaml
+return:
+  value: "'27-08-2023'"
+  oracle: "custom_check"
+  language: "python"
+  file: "test.py"
+  name: "evaluate_test"
+  arguments: [5, 6]
+```
+
+De checkfunctie moet de volgende signatuur hebben:
+
+```python
+def checkfunctie(verwacht, gegenereerd, *) -> EvaluationResult
+```
+
+- Het eerste argument bevat de verwachte waarde (van het attribuut `value`/`data` uit het testplan).
+- Het tweede argument bevat de gegenereerde waarde.
+- De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
+
+De returnwaarde is een klasse van het type `EvaluationResult` (of een struct of object, afhankelijk van de programmeertaal).
+De constructor van deze klasse heeft zes mogelijke parameters:
+
+1. `result`: Een boolean die aangeeft of de waarde uit de oplossing juist is of niet.
+2. `readable_expected`, optioneel: De verwachte waarde om te tonen op Dodona.
+3. `readable_actual`, optioneel: De gegenereerde waarde om te tonen op Dodona.
+4. `messages`, optioneel: Een lijst van berichten (`Message`s of strings). Deze berichten worden ook getoond op Dodona en kunnen gebruikt worden om bijkomende feedback of uitleg aan de studenten te geven.
+5. `dsl_expected`, optioneel: De verwachte waarde als [stringwaarde](#expressies-en-statements). TESTed zal dit omzetten naar de programmeertaal van de oplossing bij het tonen op Dodona.
+6. `dsl_actual`, optioneel: De eigenlijke waarde als [stringwaarde](#expressies-en-statements). TESTed zal dit omzetten naar de programmeertaal van de oplossing bij het tonen op Dodona.
+
+In de meeste gevallen, en zeker bij het opstellen van programmeertaalonafhankelijke oefeningen, is het beter om `dsl_expected` en `dsl_actual` te gebruiken: anders is de checkfunctie zelf verantwoordelijk om de verwachte en eigenlijke waarde in de juiste programmeertaal te tonen.
+
+De lijst van berichten moet een lijst van strings of `Message`s zijn.
+Een `Message` heeft de volgende waarden:
+
+1. `description`: het bericht om te tonen.
+2. `format`: het formaat van het bericht, zoals `text`, `code` en `html`.
+3. `permission`: wie het bericht kan zien: `staff`, `student` of `zeus`.
+
+Concreet in Python wordt dit:
+
+```python
+def evaluate_test(expected, actual):
+    return EvaluationResult(
+      result=True,
+      dsl_expected=repr("hallo"),
+      dsl_actual=repr("hallo"),
+      messages=[Message(
+        description="Hallo",
+        format="html",
+        permission="staff"
+      )]
+    )
+```
+
 ### Bestanden
 
 Soms zijn parameters of andere strings de naam van een bestand.
