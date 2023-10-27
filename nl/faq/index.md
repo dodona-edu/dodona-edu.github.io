@@ -30,3 +30,17 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Ik heb een cursus gemaakt, hoe kan ik deze laten uitlichten?](./featured-courses/#ik-heb-een-cursus-gemaakt-hoe-kan-ik-deze-laten-uitlichten)
 - [Hoe kan ik een uitgelichte cursus gebruiken?](./featured-courses/#hoe-kan-ik-een-uitgelichte-cursus-gebruiken)
 - [Welke uitgelichte cursussen zijn er beschikbaar?](./featured-courses/#welke-uitgelichte-cursussen-zijn-er-beschikbaar)
+
+## Vragen en opmerkingen
+- [Hoe kan ik een vraag stellen over mijn code?](./annotations/#hoe-kan-ik-een-vraag-stellen-over-mijn-code)
+- [Hoe weet ik of mijn vraag beantwoord is?](./annotations/#hoe-weet-ik-of-mijn-vraag-beantwoord-is)
+- [Hoe kan ik vragen voor studenten inschakelen/uitschakelen?](./annotations/#hoe-kan-ik-vragen-voor-studenten-inschakelen-uitschakelen)
+- [Hoe weet ik of er open vragen zijn?](./annotations/#hoe-weet-ik-of-er-open-vragen-zijn)
+- [Hoe kan ik een vraag beantwoorden?](./annotations/#hoe-kan-ik-een-vraag-beantwoorden)
+- [Hoe kan ik opmerkingen geven op een oplossing van een student?](./annotations/#hoe-kan-ik-opmerkingen-geven-op-een-oplossing-van-een-student)
+- [Hoe kan ik opmerkingen opslaan en hergebruiken?](./annotations/#hoe-kan-ik-opmerkingen-opslaan-en-hergebruiken)
+- [Waarom vind ik mijn opgeslagen opmerkingen niet terug?](./annotations/#waarom-vind-ik-mijn-opgeslagen-opmerkingen-niet-terug)
+
+## Activiteiten
+- [Wat is een conceptactiviteit?](./activities/#wat-is-een-conceptactiviteit)
+- [Wat is het doel van conceptactiviteiten?](./activities/#wat-is-het-doel-van-concept-activiteiten)
