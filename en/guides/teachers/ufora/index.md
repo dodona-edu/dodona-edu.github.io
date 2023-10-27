@@ -1,7 +1,7 @@
 ---
 title: Dodona and Ufora
 description: "Tutorial: Dodona and Ufora"
-order: 9
+order: 8
 ---
 
 # Dodona and Ufora
