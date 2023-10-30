@@ -21,10 +21,10 @@ Dodona ondersteunt momenteel de volgende judges:
 
 ## TESTed
 Deze judge wordt aanbevolen door het Dodona-team.
-TESTed is een whitebox judge die voor meerdere programmeertalen gebruikt kan worden.
+TESTed is een judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.\
 **Programmeertalen:** Bash, C, C#, Haskell, Java, JavaScript, Kotlin, Python\
-**Aan de slag** [Documentatie](/nl/references/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises) \
+**Aan de slag** [Documentatie](/nl/guides/exercises/), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/tested) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## R
@@ -90,40 +90,64 @@ Het geeft wel de markdown code van een leerling weer en kan handig zijn om de ui
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Python
+
+::: warning Opmerking
+We raden af om nieuwe oefeningen te maken voor deze judge.
+Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Python-oefeningen.
+:::
+
 Python/Pythia is de eerste judge die is gemaakt voor Dodona.
-Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.
-De judge is verouderd en mag alleen gebruikt worden voor oude oefeningen. We raden aan om de [TESTed judge](#tested) te gebruiken voor nieuwe Python-oefeningen.\
+Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
 **Programmeertalen:** Python\
 **Aan de slag** [Documentatie](/nl/references/judges/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Javascript
+
+::: warning Opmerking
+We raden af om nieuwe oefeningen te maken voor deze judge.
+Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Javascript-oefeningen.
+:::
+
 JavaScript is een judge die gebruikt kan worden voor oefeningen in de programmeertaal JavaScript.
-Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
-Als je je eigen JavaScriptoefeningen wilt maken, raden we je aan om de [TESTed-judge](#tested) te gebruiken.\
+Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.\
 **Programmeertalen:** Javascript\
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Bash
+
+::: warning Opmerking
+We raden af om nieuwe oefeningen te maken voor deze judge.
+Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Bash-oefeningen.
+:::
+
 Bash is een judge die gebruikt kan worden voor oefeningen op de Bash terminal.
-Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
-Als je je eigen Bash-oefeningen wilt maken, raden we aan in plaats daarvan de [TESTed-judge](#tested) te gebruiken.\
+Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.\
 **Programmeertalen:** Bash\
 **Aan de slag** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/bash), neem contact op met de makers voor meer informatie over deze judge. \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Csharp (Deprecated)
-De Csharp-judge is verouderd en mag alleen gebruikt worden voor oude oefeningen.
-Als je je eigen C#-oefeningen wilt maken, raden we aan in plaats daarvan de [TESTed judge](#tested) te gebruiken.\
+
+::: warning Verouderd
+Maak geen nieuwe oefeningen voor deze judge.
+Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe C#-oefeningen.
+:::
+
+Csharp is een judge die gebruikt kan worden voor oefeningen in C#.\
 **Programmeertalen:** C# \
 **Aan de slag** [Voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## JUnit (Deprecated)
-De JUnit-judge gebruikt het JUnit-framework  voor oefeningen in de programmeertaal Java 8.
-Het is verouderd en mag alleen gebruikt worden voor oude oefeningen.
-Als je je eigen Java-oefeningen wilt maken, raden we je aan om in plaats daarvan de [Java-judge](#java) te gebruiken. \
+
+::: warning Verouderd
+Maak geen nieuwe oefeningen voor deze judge.
+Gebruik in plaats daarvan de [Java-judge](#java).
+:::
+
+De JUnit-judge gebruikt het JUnit-framework voor oefeningen in de programmeertaal Java 8.\
 **Programmeertalen:** Java \
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java8), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/java) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
