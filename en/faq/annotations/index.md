@@ -8,7 +8,9 @@ title: Questions and comments
 
 ## How can I ask a question about my code? <Badge type="tip" text="student" />
 
-> Note: this feature is only available if your teacher has enabled it.
+::: tip Note
+This feature is only available if your teacher has enabled it.
+:::
 
 ![image](./student.ask_questions.png)
 After you have submitted your solution, you can ask a question in three ways. At the top of the submitted code, you can ask a general question by clicking on `Ask a question about your code`. In addition, you can click on the pink circle to the left of the line number to ask a question about a specific line of code. You can also select a piece of code and then ask questions about it using the same button.
@@ -57,7 +59,7 @@ You will also see a notification in the top navigation bar of your course. Click
 
 ![img.png](./course_question_list.png)
 
-If you want to see al open question accross all your courses, you can go to the `questions` page in the navigation sidebar of Dodona.
+If you want to see al open question across all your courses, you can go to the `questions` page in the navigation sidebar of Dodona.
 
 ![img.png](./questions_index_page.png)
 
@@ -66,11 +68,11 @@ If you want to see al open question accross all your courses, you can go to the 
 ![Question on code](./question-on-code.png)
 
 You can choose to type a reply to the question by clicking the input field. While typing, the question will be marked as in progress, to notify other teachers someone is already working on it.
-Finishing the reply will mark the question as answered and sends the student a notification.
+Finishing the reply will mark the question as answered and send the student a notification.
 
-You can also directly mark a question as answered. This is often useful if you know the student has already solved the question in another way. Eg. the student has submitted an other solution where the problem is fixed, or you have replied to the question outside of the Dodona framework.
+You can also directly mark a question as answered. This is often useful if you know the student has already solved the question in another way. For example, if the student has submitted another solution where the problem is fixed, or if you have replied to the question outside of Dodona.
 
-> Note: comments support markdown formatting, so you can use bold, italics, lists, ... You can checkout all markdown features in [this reference](/en/references/exercise-description/#markdown).
+> Note: comments support Markdown formatting, so you can use bold, italics, lists, ... You can check out all Markdown features in [this reference](/en/references/exercise-description/#markdown).
 
 ## How can I comment on a students' submission? <Badge type="tip" text="teacher" />
 
@@ -82,7 +84,7 @@ You can either use the `Add global comment` button to add a general comment abou
 
 ![add comment](./add-comment.png)
 
-> Note comments support markdown formatting, so you can use bold, italics, lists, ... You can checkout all markdown features in [this reference](/en/references/exercise-description/#markdown).
+> Note: comments support Markdown formatting, so you can use bold, italics, lists, ... You can check out all Markdown features in [this reference](/en/references/exercise-description/#markdown).
 
 
 ## How can I save and reuse comments? <Badge type="tip" text="teacher" />

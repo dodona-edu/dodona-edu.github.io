@@ -8,7 +8,9 @@ title: Vragen en opmerkingen
 
 ## Hoe kan ik vragen stellen over mijn code? <Badge type="tip" text="student" />
 
-> Opmerking: deze functionaliteit is enkel beschikbaar als je lesgever dit heeft ingeschakeld.
+::: tip Opmerking
+Deze functionaliteit is enkel beschikbaar als je lesgever dit heeft ingeschakeld.
+:::
 
 ![image](./student.ask_questions.png)
 Nadat je je oplossing hebt ingediend, kan je op drie manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de roze cirkel klikken een vraag stellen bij een specifieke regel code. Je kan ook een stuk code selecteren en dan hierover vragen stellen via diezelfde knop.
@@ -68,7 +70,7 @@ Als je alle open vragen over al je cursussen wil zien, kan je naar de pagina `vr
 Je kan een antwoord typen op de vraag door op het invoerveld te klikken. Terwijl je typt, zal de vraag gemarkeerd worden als in behandeling, om andere lesgevers te verwittigen dat iemand er al mee bezig is.
 Wanneer je jouw antwoord afwerkt, zal de vraag gemarkeerd worden als beantwoord en krijgt de student een melding.
 
-Je kan ook direct een vraag markeren als beantwoord. Dit is vaak handig als je weet dat de student de vraag al opgelost heeft op een andere manier. Bijvoorbeeld de student heeft een andere oplossing ingediend waar het probleem opgelost is, of je hebt de vraag beantwoord buiten het Dodona platform.
+Je kan ook direct een vraag markeren als beantwoord. Dit is vaak handig als je weet dat de student de vraag al opgelost heeft op een andere manier. Bijvoorbeeld als de student een andere oplossing ingediend heeft waar het probleem opgelost is, of als je de vraag beantwoord hebt buiten Dodona.
 
 ## Hoe kan ik opmerkingen geven op een oplossing van een student? <Badge type="tip" text="lesgever" />
 
@@ -76,10 +78,10 @@ Als lesgever kan je ook opmerkingen geven op de code van je studenten. Dit kan h
 
 > Als je alle oplossingen van je studenten wil overlopen en feedback wil geven, kan het handig zijn om [een evaluatie aan te maken](/nl/guides/teachers/grading).
 
-Je kan een algemene opmerking toevoegen door op de `Globale opmerking toevoegen` knop te klikken. Je kan ook een stuk code selecteren en op de `Voeg opmerking toe` knop klikken om een opmerking toe te voegen over dat specifieke stuk code.
+Je kan een algemene opmerking toevoegen door op de knop `Globale opmerking toevoegen` te klikken. Je kan ook een stuk code selecteren en op de knop `Voeg opmerking toe` klikken om een opmerking toe te voegen over dat specifieke stuk code.
 
 ![add comment](./add-comment.png)
-> Ter zijde: opmerkingen ondersteunen markdown, dus je kan gebruik maken van vet, cursief, lijsten, ... Je kan alle markdown features bekijken in [deze referentie](/nl/references/exercise-description/#markdown).
+> Terzijde: opmerkingen ondersteunen Markdown, dus je kan gebruik maken van vet, cursief, lijsten, ... Je kan alle Markdown features bekijken in [deze referentie](/nl/references/exercise-description/#markdown).
 
 ## Hoe kan ik opmerkingen opslaan en hergebruiken? <Badge type="tip" text="lesgever" />
 Studenten maken vaak dezelfde fouten, of hebben gelijkaardige vragen. Om te vermijden dat je dezelfde opmerkingen steeds opnieuw moet schrijven, kan je opmerkingen hergebruiken.
@@ -100,7 +102,7 @@ Eenmaal je een of meerdere opmerkingen hebt opgeslagen, krijg je een zoekveld te
 
 Opgeslagen opmerkingen worden gegroepeerd per oefening, cursus en gebruiker. Dit betekent dat je een opmerking kan opslaan voor een oefening, en deze opmerking kan hergebruiken in alle oplossingen van die oefening. 
 
-Als je een opmerking wil hergebruiken in een andere oefening, zal je deze opnieuw moeten opslaan. We onderzoeken momenteel of hoe we dit kunnen verbeteren.
+Als je een opmerking wil hergebruiken in een andere oefening, zal je deze opnieuw moeten opslaan. We onderzoeken momenteel hoe we dit kunnen verbeteren.
 
 Je kan een overzicht van al je opgeslagen opmerkingen voor een bepaalde oefening vinden door op de link onder het zoekveld te klikken.
 
