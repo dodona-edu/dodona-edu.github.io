@@ -51,7 +51,7 @@ The `run` executable should output JSON to _stdout_, which will be interpreted b
 
 #### Full output
 
-The complete format description can be found on <!-- TODO --> [the wiki](<https://github.com/dodona-edu/dodona/wiki/Judge-output-format-(proposal)>) and is specified through a [JSON schema](https://github.com/dodona-edu/dodona/tree/main/public/schemas). A more concise format can be found below. (Note: all items are rendered in the order used below; all list-type keys are optional, defaulting to the empty list as value)
+The complete format description is specified through a [JSON schema](https://github.com/dodona-edu/dodona/tree/main/public/schemas). A more concise format can be found below. (Note: all items are rendered in the order used below; all list-type keys are optional, defaulting to the empty list as value)
 
 The full output returns a single JSON at the end. You must ensure that this is emitted before the docker runs out of time or memory.
 
@@ -122,9 +122,9 @@ The full output returns a single JSON at the end. You must ensure that this is e
     - `"internal error"`, the judge exited with a non-zero status code.
     - `"unknown"`, something went wrong.
 
-- A `DebugData` object is used to run the python tutor that gives students a debug interface. Currently it is only relevant for python. It consists of:
-  - `statements`, a string containing the extra code to be executed in the python tutor, to mimic this testcase.
-  - `stdin`, a string containing the input to be given to the python tutor, to mimic this testcase.
+- A `DebugData` object is used to run the Python Tutor that gives students a debug interface. Currently it is only relevant for Python. It consists of:
+  - `statements`, a string containing the extra code to be executed in the Python Tutor, to mimic this testcase.
+  - `stdin`, a string containing the input to be given to the Python Tutor, to mimic this testcase.
 
 ![judge-output-reflection](./judge-output.png)
 
