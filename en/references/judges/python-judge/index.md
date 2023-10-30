@@ -5,8 +5,10 @@ order: 5
 ---
 
 ::: warning
-This judge has been deprecated and should only be used for legacy exercises.
-If you want to create your own Python exercises, we recommend you to use the [TESTed judge](/nl/references/judges/#tested) instead.
+We do not recommend this judge for new exercises.
+This judge is no longer actively developed.
+
+Use [TESTed](/en/guides/exercises/) to create new Python exercises instead.
 :::
 
 ::: warning Sorry
