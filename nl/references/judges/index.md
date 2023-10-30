@@ -20,17 +20,11 @@ Gevorderde gebruikers kunnen ook hun eigen judge aanmaken, zie [deze gids](/nl/r
 Dodona ondersteunt momenteel de volgende judges:
 
 ## TESTed
+Deze judge wordt aanbevolen door het Dodona-team.
 TESTed is een whitebox judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.\
 **Programmeertalen:** Bash, C, C#, Haskell, Java, JavaScript, Kotlin, Python\
 **Aan de slag** [Documentatie](/nl/references/tested#oefeningen-ontwerpen-voor-dodona), [voorbeelden](https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
-
-## Python
-Python/Pythia is de eerste judge die is gemaakt voor Dodona.
-Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
-**Programmeertalen:** Python\
-**Aan de slag** [Documentatie](/nl/references/judges/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## R
@@ -93,6 +87,14 @@ De Markdown-judge is geen echte judge omdat hij geen code evalueert.
 Het geeft wel de markdown code van een leerling weer en kan handig zijn om de uitvoer handmatig te evalueren in Dodona. \
 **Programmeertalen:** Markdown\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-markdown) \
+**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+
+## Python
+Python/Pythia is de eerste judge die is gemaakt voor Dodona.
+Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.
+De judge is verouderd en mag alleen gebruikt worden voor oude oefeningen. We raden aan om de [TESTed judge](#tested) te gebruiken voor nieuwe Python-oefeningen.\
+**Programmeertalen:** Python\
+**Aan de slag** [Documentatie](/nl/references/judges/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
 **Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
 
 ## Javascript

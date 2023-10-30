@@ -4,6 +4,10 @@ description: "Python judge"
 order: 5
 ---
 
+::: warning
+Deze judge is verouderd en wordt niet meer actief ontwikkeld. Gebruik de [TESTed judge](/nl/references/judges/#tested) om nieuwe oefeningen te maken.
+:::
+
 # Python judge
 
 Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:

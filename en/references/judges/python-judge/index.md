@@ -4,6 +4,11 @@ description: "Python judge"
 order: 5
 ---
 
+::: warning
+This judge has been deprecated and should only be used for legacy exercises.
+If you want to create your own Python exercises, we recommend you to use the [TESTed judge](/nl/references/judges/#tested) instead.
+:::
+
 ::: warning Sorry
 For now, this page is only available in Dutch. Sorry!
 :::
