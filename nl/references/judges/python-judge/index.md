@@ -4,8 +4,11 @@ description: "Python judge"
 order: 5
 ---
 
-::: warning
-Deze judge is verouderd en wordt niet meer actief ontwikkeld. Gebruik de [TESTed judge](/nl/references/judges/#tested) om nieuwe oefeningen te maken.
+::: warning Opmerking
+We raden af om nieuwe oefeningen te maken voor deze judge.
+Deze judge wordt niet meer actief ontwikkeld.
+
+Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) om nieuwe Python-oefeningen te maken.
 :::
 
 # Python judge
