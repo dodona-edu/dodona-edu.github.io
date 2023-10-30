@@ -295,6 +295,13 @@ Het is niet verplicht om argumenten te gebruiken:
 
 ## Taalspecifieke expressies en statements
 
+::: warning Geavanceerde materie
+Taalspecifieke expressies en statements heb je voor de meeste oefeningen niet nodig.
+
+Als je toch denkt taalspecifieke expressies en statements nodig te hebben, dan horen we graag waarom: aarzel niet om ons een [e-mail te sturen](mailto:dodona@ugent.be?subject=Taalspecifieke%20expressies) om je gebruik te melden.
+Zo kunnen we TESTed misschien uitbreiden met nieuwe functionaliteit, of jouw specifieke use-case gemakkelijker maken.
+:::
+
 In bepaalde gevallen wil je iets doen waarvoor er in TESTed nog geen ondersteuning is.
 Een voorbeeld is het gebruik van lambda's in Python (of Java), of het gebruik van operatoren.
 
@@ -317,7 +324,7 @@ In onderstaande voorbeeld wordt een functie opgeroepen met als argument de som v
     return: !v "2"
 ```
 
-::: warning
+::: info Merk op
 Bij het gebruik van taalspecifieke expressies en statements ben je zelf verantwoordelijk om de juiste prefix van functies te gebruiken (de `(S|s)ubmission` in het voorbeeld).
 Bovendien zullen expressies niet werken bij functies met returnwaarde `void`.
 
