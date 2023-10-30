@@ -92,7 +92,7 @@ Tijdens het schrijven of bewerken van een opmerking kan je `opmerking opslaan` a
 
 Je kan ook een bestaande opmerking opslaan door op `opmerking opslaan` te klikken in het menu van de opmerking.
 
-![Save existing comment](save-comment.png)
+![Save existing comment](save-comment-edit.png)
 
 Eenmaal je een of meerdere opmerkingen hebt opgeslagen, krijg je een zoekveld te zien wanneer je een nieuwe opmerking schrijft. Selecteer de gewenste opmerking uit de lijst om deze te hergebruiken. Je kan de opmerking nog steeds bewerken voor je deze post.
 
