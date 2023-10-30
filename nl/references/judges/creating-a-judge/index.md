@@ -51,7 +51,7 @@ The `run` executable should output JSON to _stdout_, which will be interpreted b
 
 #### Full output
 
-The complete format description can be found on <!-- TODO --> [the wiki](<https://github.com/dodona-edu/dodona/wiki/Judge-output-format-(proposal)>) and is specified through a [JSON schema](https://github.com/dodona-edu/dodona/tree/develop/public/schemas). A more concise format can be found below. (Note: all items are rendered in the order used below; all list-type keys are optional, defaulting to the empty list as value)
+The complete format description is specified through a [JSON schema](https://github.com/dodona-edu/dodona/tree/main/public/schemas). A more concise format can be found below. (Note: all items are rendered in the order used below; all list-type keys are optional, defaulting to the empty list as value)
 
 The full output returns a single JSON at the end. You must ensure that this is emitted before the docker runs out of time or memory.
 
@@ -77,6 +77,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - An optional `description`, a `Message` object (probably a statement formatted as `code`).
   - `tests`, a list of `Test` objects.
   - `messages`, a list of message objects.
+  - `data`, an optional `DebugData` object.
 - A `Test` object (used, e.g. to test either the returned and printed output of a statement) consists of:
   - An optional `description`, a `Message` object.
   - `accepted`, a boolean indicating whether this test is considered correct. `true` results in only showing the `generated` string, `false` results in showing a "diff" between the `generated` and `expected` strings.
@@ -120,6 +121,10 @@ The full output returns a single JSON at the end. You must ensure that this is e
     - `"running"`, the judge/tests are currently executing.
     - `"internal error"`, the judge exited with a non-zero status code.
     - `"unknown"`, something went wrong.
+
+- A `DebugData` object is used to run the Python Tutor that gives students a debug interface. Currently it is only relevant for Python. It consists of:
+  - `statements`, a string containing the extra code to be executed in the Python Tutor, to mimic this testcase.
+  - `stdin`, a string containing the input to be given to the Python Tutor, to mimic this testcase.
 
 ![judge-output-reflection](./judge-output.png)
 
