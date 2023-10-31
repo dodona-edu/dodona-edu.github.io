@@ -31,3 +31,17 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How can I use the PyCharm plugin?](./ide-plugins/#how-can-i-use-the-pycharm-plugin)
 - [How do I install the VS Code extension?](./ide-plugins/#how-do-i-install-the-vs-code-extension)
 - [How can I use the VS Code extension?](./ide-plugins/#how-can-i-use-the-vs-code-extension)
+
+## Questions and comments
+- [How can I ask a question about my code?](./annotations/#how-can-i-ask-a-question-about-my-code)
+- [How do I know if my question has been answered?](./annotations/#how-do-i-know-if-my-question-has-been-answered)
+- [How can I enable/disable student questions?](./annotations/#how-can-i-enable-disable-student-questions)
+- [How do I know if there are any open questions?](./annotations/#how-do-i-know-if-there-are-any-open-questions)
+- [How can I reply to a question from a student?](./annotations/#how-can-i-reply-to-a-question-from-a-student)
+- [How can I comment on a students' submission?](./annotations/#how-can-i-comment-on-a-students-submission)
+- [How can I save and reuse comments?](./annotations/#how-can-i-save-and-reuse-comments)
+- [Why can't I find my saved comments?](./annotations/#why-cant-i-find-my-saved-comments)
+
+## Activities
+- [What is a draft activity?](./activities/#what-is-a-draft-activity)
+- [What is the effect of a draft activity?](./activities/#what-is-the-effect-of-a-draft-activity)
