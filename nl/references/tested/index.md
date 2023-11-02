@@ -5,6 +5,10 @@ description: "De TESTed-judge"
 
 # TESTed: one judge to rule them all
 
+::: tip
+Dit is de uitgebreide documentatie voor de TESTed-judge. Een handleiding die gericht is op leerkrachten die voor het eerst een oefening opstellen is beschikbaar in [deze handleiding](/nl/guides/exercises/).
+:::
+
 TESTed is een *educational software testing framework* (ook bekend als een *judge*) dat toelaat om oplossingen voor programmeeroefeningen te beoordelen op basis van een programmeertaalonafhankelijk testplan.
 Het laat om de softwarevereisten (d.w.z. de testen) voor een oefening één keer op te stellen, terwijl oplossingen in verschillende programmeertalen beoordeeld kunnen worden.
 TESTed kan als afzonderlijk tool gebruikt worden, maar is ook geïntegreerd in de elektronische leeromgeving [Dodona](https://dodona.be).

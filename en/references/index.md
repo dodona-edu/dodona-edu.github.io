@@ -12,6 +12,7 @@ Here you can find up-to-date descriptions of the Dodona config files and directo
 * [Repository directory structure](repository-directory-structure)
 * [Exercise directory structure](exercise-directory-structure)
 * [Judges](judges)
+* [TESTed](tested)
 
 ## In Dutch
 * [Python judge](judges/python-judge)
