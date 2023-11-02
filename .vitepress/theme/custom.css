@@ -29,3 +29,15 @@
 .medium-zoom-image {
     z-index: 21;
 }
+
+.table-of-contents .VPBadge {
+    display: none;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
