@@ -25,6 +25,10 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe installeer ik de VS Code-extensie?](./ide-plugins/#hoe-installeer-ik-de-vs-code-extensie)
 - [Hoe kan ik de VS Code-extensie gebruiken?](./ide-plugins/#hoe-kan-ik-de-vs-code-extensie-gebruiken)
 
+## Oefeningen en leesactiviteiten
+- [Wat is een concept?](./activities/#wat-is-een-conceptactiviteit)
+- [Hoe maak ik nieuwe oefeningen aan?](./activities/#hoe-maak-ik-nieuwe-oefeningen-aan)
+
 ## Uitgelichte cursussen
 - [Wat is een uitgelichte cursus?](./featured-courses/#wat-is-een-uitgelichte-cursus)
 - [Ik heb een cursus gemaakt, hoe kan ik deze laten uitlichten?](./featured-courses/#ik-heb-een-cursus-gemaakt-hoe-kan-ik-deze-laten-uitlichten)
@@ -40,7 +44,3 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe kan ik opmerkingen geven op een oplossing van een student?](./annotations/#hoe-kan-ik-opmerkingen-geven-op-een-oplossing-van-een-student)
 - [Hoe kan ik opmerkingen opslaan en hergebruiken?](./annotations/#hoe-kan-ik-opmerkingen-opslaan-en-hergebruiken)
 - [Waarom vind ik mijn opgeslagen opmerkingen niet terug?](./annotations/#waarom-vind-ik-mijn-opgeslagen-opmerkingen-niet-terug)
-
-## Activiteiten
-- [Wat is een conceptactiviteit?](./activities/#wat-is-een-conceptactiviteit)
-- [Wat is het doel van conceptactiviteiten?](./activities/#wat-is-het-doel-van-concept-activiteiten)

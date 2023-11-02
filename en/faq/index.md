@@ -18,12 +18,15 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How do I create an API token?](./api-tokens/#how-do-i-create-an-api-token)
 - [How can I use the Dodona API?](./api-tokens/#how-can-i-use-the-dodona-api)
 
+## Exercises and reading activities
+- [What is a draft activity?](./activities/#what-is-a-draft-activity)
+- [How do I create new exercises?](./activities/#how-do-i-create-new-exercises)
+
 ## Featured courses
 - [What is a featured courses?](./featured-courses/#what-is-a-featured-course)
 - [I made a course, how can I get it featured?](./featured-courses/#i-made-a-course-how-can-i-get-it-featured)
 - [How can I use a featured course?](./featured-courses/#how-can-i-use-a-featured-course)
 - [Which featured courses are available?](./featured-courses/#which-featured-courses-are-available)
-
 
 ## IDE plugins
 - [What is an IDE plugin?](./ide-plugins/#what-is-an-ide-plugin)
@@ -41,7 +44,3 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How can I comment on a students' submission?](./annotations/#how-can-i-comment-on-a-students-submission)
 - [How can I save and reuse comments?](./annotations/#how-can-i-save-and-reuse-comments)
 - [Why can't I find my saved comments?](./annotations/#why-cant-i-find-my-saved-comments)
-
-## Activities
-- [What is a draft activity?](./activities/#what-is-a-draft-activity)
-- [What is the effect of a draft activity?](./activities/#what-is-the-effect-of-a-draft-activity)
