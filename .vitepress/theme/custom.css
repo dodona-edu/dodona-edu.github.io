@@ -41,3 +41,7 @@
 .table-of-contents a:hover {
     text-decoration: underline;
 }
+
+.table-of-contents ul ul {
+    display: none;
+}
