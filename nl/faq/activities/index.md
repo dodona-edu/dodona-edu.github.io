@@ -1,24 +1,15 @@
 ---
-title: Activiteiten
+title: Oefeningen en leesactiviteiten
 ---
 
-# FAQ: Activiteiten
+# FAQ: Oefeningen en leesactiviteiten
 
 [[toc]]
 
-## Wat is een conceptactiviteit?
-Elke nieuw toegevoegde activiteit wordt beschouwd als een conceptactiviteit totdat deze wordt gepubliceerd.
+## Wat is een concept? <Badge type="tip" text="lesgever" />
+Een concept is een oefening of leesactiviteit die nog niet is gepubliceerd. Concepten zijn alleen zichtbaar voor de eigenaars van de repository en cursusbeheerders en worden gebruikt om oefeningen te maken en te testen voordat ze worden gepubliceerd. Als je een nieuwe oefening aan Dodona toevoegt, dan zal die automatisch in conceptmodus staan tot je ze publiceert.
 
-Het idee is dat een activiteit in conceptmodus blijft totdat de maker deze handmatig goedkeurt met behulp van Dodona.
+Op de startpagina van Dodona kan je al jouw concepten terugvinden. Zo krijg je een overzicht van alle oefeningen die je nog aan het opstellen bent. Eenmaal de oefening klaar is, kan je ze publiceren. Navigeer hiervoor naar de oefening en klik bovenaan de pagina "Publiceren".
 
-## Wat is het doel van concept activiteiten?
-Concept activiteiten dienen verschillende doelen.
-
-### Verwarring vermijden
-Concept activiteiten zijn alleen zichtbaar voor repository-eigenaren en cursusbeheerders voor cursussen met de activiteit. Dit voorkomt dat er meerdere kopieën van onze voorbeeldoefeningen in de centrale database aanwezig zijn.
-
-### Minder valspositieve foutmeldingen
-De Dodona-beheerders worden op de hoogte gebracht van interne fouten tijdens de uitvoering van een oplossing. Wanneer een lesgever een nieuwe oefening maakt en experimenteert met het toevoegen van tests, komen deze fouten vaak voor. Hierdoor negeren de Dodona-beheerders deze berichten vaak, waardoor echte problemen onopgemerkt blijven. Wanneer een oefening nog in conceptmodus is, krijgen de Dodona-beheerders geen melding van interne fouten.
-
-### Verbeterde vindbaarheid
-Wanneer je een nieuwe oefening aan Dodona toevoegt, is het niet altijd gemakkelijk om die oefening te vinden en zelf te proberen. Alle jouw conceptoefeningen staan op de startpagina vermeld, waardoor deze gemakkelijker te vinden zijn.
+## Hoe maak ik nieuwe oefeningen aan? <Badge type="tip" text="lesgever" />
+Als lesgever kan je gebruikmaken van de honderden oefeningen die in Dodona aanwezig zijn, maar je kan ook zelf nieuwe oefeningen aanmaken. Je kan hiervoor [dit stappenplan](/nl/guides/exercises/creating-exercises/introduction) volgen.

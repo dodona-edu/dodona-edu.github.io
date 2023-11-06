@@ -3,6 +3,11 @@ title: "[nl] Python judge"
 description: "Python judge"
 order: 5
 ---
+::: warning Sorry
+For now, this page is only available in Dutch. Sorry!
+:::
+
+# Python judge
 
 ::: warning
 We do not recommend this judge for new exercises.
@@ -11,11 +16,6 @@ This judge is no longer actively developed.
 Use [TESTed](/en/guides/exercises/) to create new Python exercises instead.
 :::
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
-
-# Python judge
 
 Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
 

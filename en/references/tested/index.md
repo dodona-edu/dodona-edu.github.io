@@ -5,6 +5,10 @@ description: "TESTed judge"
 
 # TESTed: one judge to rule them all
 
+::: tip
+This is the extended documentation for the TESTed judge. A guide aimed at teachers who are creating an exercise for the first time is available in [this guide](/en/guides/exercises/).
+:::
+
 TESTed is an *educational software testing framework* (also known as a *judge*)
 to test submissions for programming exercises using a programming-language-independent test suite.
 It allows specifying software requirements (i.e. the tests) for an exercise once,
