@@ -10,6 +10,10 @@ On this page you can find an overview of all judges that are available on Dodona
 
 Most judges only support one programming language, but there are also judges like [TESTed](#TESTed) that support multiple programming languages.
 
+::: tip Recommended judge
+If you're trying to decide which judge to use for your exercises, we strongly recommend taking a look at [TESTed](#tested) first.
+:::
+
 ## C
 C is a judge that uses the GTester framework to run tests on C exercises.\
 **Programming languages:** C\

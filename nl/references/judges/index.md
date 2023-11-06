@@ -10,6 +10,10 @@ Op deze pagina vind je een overzicht van alle judges die beschikbaar zijn op Dod
 
 De meeste judges ondersteunen maar één programmeertaal, maar er zijn ook judges zoals [TESTed](#TESTed) die meerdere programmeertalen ondersteunen.
 
+::: tip Aanbevolen judge
+Als je twijfelt over welke judge je best gebruikt voor je oefeningen, dan raden we sterk aan om eerst de [TESTed](#tested) judge te bekijken.
+:::
+
 ## C
 C is een judge die het GTester-framework gebruikt om testen uit te voeren op C-oefeningen.\
 **Programmeertalen:** C\
