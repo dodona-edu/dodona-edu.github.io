@@ -55,6 +55,29 @@ Als volgende stap moet je je persoonlijke kopie van het sjabloon maken:
 Nu heb je een repository waarin je je oefeningen zal opslaan.
 Laat de pagina open staan, je zal haar nog nodig hebben.
 
+### Dodona toegang geven tot je repository
+
+Voor je je nieuwe repository aan Dodona kan toevoegen, moet je ervoor zorgen dat Dodona lees- en schrijfrechten heeft op je repository.
+
+De makkelijkste manier om dit te doen (op github.com) is de gebruiker [dodona-server](https://github.com/dodona-server) toegang te geven tot je repository:
+
+1. Ga naar het tabblad _Settings_ in je repository.
+2. Klik in de navigatie links op het onderdeel _Collaborators_. Dit staat normaliter redelijk bovenaan.
+3. Klik op de centrale groene knop _Add people_.
+4. Typ `dodona-server` in het zoekveld dat verschijnt en kies de juiste gebruiker (ook te herkennen aan het blauwe Dodona-logo).
+5. Klik op de groene knop _Add dodona-server to this repository_.
+
+
+![GitHub-gebruiker toevoegen](./add-dodona-server.png)
+
+GitHub zal dan een uitnodiging sturen die Team Dodona moet aanvaarden.
+Eens de uitnodiging aanvaard is, kan je verder gaan met de volgende stappen.
+
+::: warning Manueel werk
+Een lid van Team Dodona moet de uitnodiging van GitHub manueel aanvaarden.
+Daardoor kan het soms even duren eer dat gebeurt.
+:::
+
 ### Repository toevoegen aan Dodona
 
 Eens je lesgeversrechten op Dodona hebt, kan je je repository toevoegen aan Dodona.
