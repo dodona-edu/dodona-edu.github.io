@@ -17,7 +17,7 @@ Follow the steps below to create an API token on Dodona:
 1. **Go to your profile page**: Navigate to your profile page by clicking on the appropriate link in the drop down menu. You can also go directly to [dodona.be/profile](https://dodona.be/en/profile).
   ![My Profile](./my-profile.png)
 
-2. **Generate a new token**: Once you're on your profile page, scroll to the middle of the page and click the '+' button to generate a new token. You will need to enter a description for your token (e.g. "pycharm"). This description will help you identify the purpose of the token in the future.
+2. **Generate a new token**: Once you're on your profile page, scroll to the middle of the page and click the `+` button to generate a new token. You will need to enter a description for your token (e.g. "pycharm"). This description will help you identify the purpose of the token in the future.
   ![Create a token](./create-new-token.png)
 
 3. **Copy the token**: Once the token is generated, copy and paste it into the authentication dialog of the application you want to authorise, e.g. the PyCharm plugin or the VS Code extension.
