@@ -12,7 +12,7 @@ Nu je een oefening hebt die je kan gebruiken op Dodona, zijn er tal van dingen d
 Hieronder enkele suggesties voor volgende stappen:
 
 - [Maak een cursus aan](/nl/guides/teachers/creating-a-course/).
-- [Gebruik je oefening in een cursus](/nl/guides/teachers/exercise-series-management/).
+- [Gebruik je oefening in een oefeningenreeks van een cursus](/nl/guides/teachers/exercise-series-management/).
 - Maak nog andere soorten oefeningen.
 - Maak [leesactiviteiten](/nl/references/exercise-config/) met extra informatie of kleine stukken theorie.
 

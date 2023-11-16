@@ -36,4 +36,4 @@ Dodona krijgt automatisch je naam en e-mailadres van de inlogprovider (bv. Smart
 
 ## Ik krijg een waarschuwing dat mijn tijdzone verkeerd is, wat moet ik doen?
 
-Alle deadlines op Dodona worden weergegeven in je lokale tijd. Hiervoor moet Dodona een tijdzone aan je account koppelen. Als we detecteren dat de tijdzone van je browser afwijkt van de tijdzone van je account, geven we een waarschuwing. Je kunt je tijdzone wijzigen in je [Accountinstellingen] (https://dodona.ugent.be/en/profile).
+Alle deadlines op Dodona worden weergegeven in je lokale tijd. Hiervoor moet Dodona een tijdzone aan je account koppelen. Als we detecteren dat de tijdzone van je browser afwijkt van de tijdzone van je account, geven we een waarschuwing. Je kunt je tijdzone wijzigen in je [accountinstellingen](https://dodona.ugent.be/en/profile).

@@ -14,7 +14,8 @@ De bestaande oefening kan uiteraard als voorbeeld dienen.
 
 ::: info Bestanden en mappen maken
 1. Selecteer de map waarin je het bestand of de map wil aanmaken.
-2. Typ de naam van het bestand (inclusief extensie) of map
+2. Gebruik de icoontjes bovenaan om een bestand of map aan te maken. Rechtsklikken op de map en kiezen voor `New File...` of `New Folder...` kan ook.
+2. Typ de naam van het bestand (inclusief extensie) of map. Kies bij voorkeur een naam zonder spaties.
 3. Bevestig met <kbd>Enter</kbd>.
 :::
 
@@ -28,9 +29,9 @@ Doe dit als volgt:
 ![commit window](./commit.png)
 
 1. Klik aan de linkerkant op het icoontje voor _Source Control_.
-2. Klik bovenaan de lijst met wijzigingen op de knop met "+" om alle bestanden klaar te zetten (_Stage All Changes_).
+2. Klik bovenaan de lijst met wijzigingen op de knop met `+` om alle bestanden klaar te zetten (_Stage All Changes_).
 3. Kies bovenaan een _commit message_. Hierin beschrijf je wat je gedaan hebt, zoals "Voeg mijn eerste oefening toe".
-4. Klik op de knop _Commit & Push_.
+4. Klik op de knop `Commit & Push`.
 
 Als alles goed gegaan is, werd dit venster leeg.
 

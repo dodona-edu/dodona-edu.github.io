@@ -26,7 +26,7 @@ Volg de onderstaande stappen om de Dodona plugin voor PyCharm te installeren:
 
 2. **Installeer de plugin**: De Dodona plugin kan direct vanuit PyCharm worden geïnstalleerd. Open het menu 'Bestand' en klik op 'Settings...'.
   ![Open het voorkeurenmenu](./pc-settings.png)
-  Selecteer in het menu 'Plugins' de tab 'Marketplace' en zoek naar Dodona. Klik ten slotte op 'Installeren' en 'Opnieuw opstarten'.
+  Selecteer in het menu 'Plugins' de tab 'Marketplace' en zoek naar Dodona. Klik ten slotte op 'Install' en 'Restart'.
   ![De plugin installeren](./pc-install.png)
   Je kunt de plugin ook rechtstreeks vanaf de JetBrains website installeren. Ga gewoon naar https://plugins.jetbrains.com/plugin/11166-dodona en klik op de blauwe 'Get' knop.
 
@@ -56,7 +56,7 @@ Zo installeer je de Dodona-extensie voor Visual Studio Code:
   ![instellingen](./vs-market.png)
   Je kunt de extensie ook rechtstreeks vanuit de VS Code Marketplace installeren. Ga naar de [Dodona plugin pagina](https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode) en klik op de groene 'Install' knop.
 
-3. **API token invoeren**: Na het installeren van de extensie moet je het API-token invoeren dat je eerder hebt aangemaakt. Klik hiervoor op het tandwielpictogram linksonder in VS Code en selecteer 'Settings' (of gebruik de sneltoets `Ctrl+,`). Klik vervolgens op 'Extensions' en selecteer 'Dodona'. Plak het API-token dat je hebt gemaakt in het tekstvak.
+3. **API token invoeren**: Na het installeren van de extensie moet je het API-token invoeren dat je eerder hebt aangemaakt. Klik hiervoor op het tandwielpictogram linksonder in VS Code en selecteer 'Settings' (of gebruik de sneltoets <kbd>Ctrl</kbd>+<kbd>,</kbd>). Klik vervolgens op 'Extensions' en selecteer 'Dodona'. Plak het API-token dat je hebt gemaakt in het tekstvak.
   ![API-token](./vs-token.png)
 
 ## Hoe kan ik de VS Code extensie gebruiken?
@@ -72,9 +72,9 @@ Volg deze stappen om de Dodona VS Code extensie te gebruiken:
         return i;
     }
     ```
-   Verwijder deze regel niet, want VS Code gebruikt hem om je oplossing naar de juiste oefening te sturen. Als je op `ctrl` (of `cmd` op een Mac) drukt terwijl je op de URL klikt, wordt de beschrijving van de oefening in een nieuw browservenster geopend.
+   Verwijder deze regel niet, want VS Code gebruikt hem om je oplossing naar de juiste oefening te sturen. Als je op <kbd>ctrl</kbd> (of <kbd>cmd</kbd> op een Mac) drukt terwijl je op de URL klikt, wordt de beschrijving van de oefening in een nieuw browservenster geopend.
 
-2. **Stuur je oplossing in:** Als je de oefening hebt opgelost, kun je je oplossing eenvoudig insturen met het 'Submit to Dodona' commando. Je kunt dit doen door het opdrachtenpalet te openen met `Ctrl-Shift-P`, (een deel van) `Submit to Dodona` in te typen en op `Enter` te drukken. Je kunt ook een snelkoppeling maken voor dit commando. Deze opdracht stuurt je code naar Dodona en activeert een automatische test.
+2. **Stuur je oplossing in:** Als je de oefening hebt opgelost, kun je je oplossing eenvoudig insturen met het 'Submit to Dodona' commando. Je kunt dit doen door het opdrachtenpalet te openen met <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, (een deel van) `Submit to Dodona` in te typen en op <kbd>Enter</kbd> te drukken. Je kunt ook een snelkoppeling maken voor dit commando. Deze opdracht stuurt je code naar Dodona en activeert een automatische test.
   ![Submit](./vs-submit.png)
 
 3. **Controleer het resultaat:** Na een paar seconden zou er rechtsonder een popup moeten verschijnen met het resultaat van je oplossing. Als je op de knop 'View results' klikt, wordt het resultaat in een nieuw browservenster geopend. Je kunt je oplossing zo vaak als je wilt insturen door hetzelfde commando te herhalen.
