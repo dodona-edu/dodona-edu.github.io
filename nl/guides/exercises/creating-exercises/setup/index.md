@@ -134,3 +134,9 @@ Om deze te openen:
 2. Druk op <kbd>.</kbd> op je toetsenbord (op azerty-toetsenborden is dit <kbd>Shift</kbd>+<kbd>.</kbd>).
 3. Na het opstarten moet je even wachten, waarna er rechts onderaan een melding zal verschijnen over het installeren van de aanbevolen extensies.
    Aanvaard deze suggestie.
+
+![visual-studio-code-for-the-web](./visual-studio-code-for-the-web.png)
+
+In de linkerkolom is zichtbaar wat er in de repository zit. In de template zijn er aparte mappen voorzien voor oefeningen (_exercises_) en leesactiviteiten (_reading-activities_). Bovenaan de kolom zijn er knoppen voorzien om eigen bestanden of mappen aan te maken. 
+
+
