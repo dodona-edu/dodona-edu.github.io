@@ -37,13 +37,13 @@ You can also respond to an existing question from yourself or to a comment from 
 
 ## How do I know if my question has been answered? <Badge type="tip" text="student" />
 
-When a teacher answers your question, you will receive a notifications in Dodona. This notification will redirect you to the page where you asked the question.
+When a teacher answers your question, you will receive a notification in Dodona. This notification will redirect you to the page where you asked the question.
 
 ![image](./comment_on_code.png)
 
 ## How can I enable/disable student questions? <Badge type="tip" text="teacher" />
 
-Use the pencil in the top navigation bar of your course to go to the `edit` page. Here you can enable or disable student questions by checking or unchecking the box `Allow students to ask questions`.
+Use the pencil in the top navigation bar of your course to go to the `Edit` page. Here you can enable or disable student questions by checking or unchecking the box `Allow students to ask questions`.
 
 ![img.png](./ask_questions_toggle.png)
 
@@ -59,7 +59,7 @@ You will also see a notification in the top navigation bar of your course. Click
 
 ![img.png](./course_question_list.png)
 
-If you want to see al open question across all your courses, you can go to the `questions` page in the navigation sidebar of Dodona.
+If you want to see al open question across all your courses, you can go to the `Questions` page in the navigation sidebar of Dodona.
 
 ![img.png](./questions_index_page.png)
 
@@ -91,11 +91,11 @@ You can either use the `Add global comment` button to add a general comment abou
 
 Students often make the same mistakes, or have similar questions. To avoid having to write the same comment over and over again, you can reuse comments.
 
-While writing or editing a comment, you can check `save comment`. This will allow you to add a title for this comment, which should help you find the comment for future use.
+While writing or editing a comment, you can check `Save comment`. This will allow you to add a title for this comment, which should help you find the comment for future use.
 
 ![Save comment while writing](./save-comment-edit.png)
 
-You can also save an existing comment by clicking `save comment` in the comment menu.
+You can also save an existing comment by clicking `Save comment` in the comment menu.
 
 ![Save existing comment](save-comment.png)
 

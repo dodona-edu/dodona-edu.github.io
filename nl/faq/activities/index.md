@@ -13,3 +13,9 @@ Op de startpagina van Dodona kan je al jouw concepten terugvinden onder _Ongepub
 
 ## Hoe maak ik nieuwe oefeningen aan? <Badge type="tip" text="lesgever" />
 Als lesgever kan je gebruikmaken van de honderden oefeningen die in Dodona aanwezig zijn, maar je kan ook zelf nieuwe oefeningen aanmaken. Je kan hiervoor [dit stappenplan](/nl/guides/exercises/creating-exercises/introduction) volgen.
+
+## Wat is het verschil tussen een cursus en een repository? <Badge type="tip" text="teacher" />
+In Dodona is een "oefeningen _repository_" een verzameling oefeningen en leesactiviteiten die beheerd worden in een gelinkte GitHub repository.
+Deze oefeningen kunnen dan gebruikt worden in meerdere "cursussen".
+
+Een "cursus" in Dodona is opnieuw een verzameling oefeningen en leesactiviteiten gestructureerd in reeksen. Hier kan je bijvoorbeeld oefeningen structureren volgens een gewenst leerpad. Cursussen worden volledig beheerd binnen Dodona. Een cursus kan oefeningen van verschillende oefeningen repositories bevatten. Bij een cursus horen ook de ingeschreven studenten. In een cursus kan je deze studenten opvolgen, evaluaties maken, vragen beantwoorden, etc...

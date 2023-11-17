@@ -13,3 +13,9 @@ On the home page of Dodona, you can find all your drafts under _Draft exercises_
 
 ## How do I create new exercises? <Badge type="tip" text="teacher" />
 As a teacher, you can use the hundreds of exercises that are available in Dodona, but you can also create new exercises yourself. You can follow [this guide](/en/guides/exercises/creating-exercises/introduction) for this.
+
+## What is the difference between a course and a repository? <Badge type="tip" text="teacher" />
+In Dodona, an "exercises repository" is a collection of exercises and reading activities managed in a linked GitHub repository.
+These exercises can then be used in multiple "courses".
+
+A "course" in Dodona is again a collection of exercises and reading activities structured in sequences. Here you can, for example, structure exercises according to a desired learning path. Courses are fully managed within Dodona. A course can contain exercises from different exercise repositories. A course also includes enrolled students. In a course, you can monitor these students, make evaluations, answer questions, etc...
