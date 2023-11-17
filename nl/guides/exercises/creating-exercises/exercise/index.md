@@ -31,7 +31,7 @@ Doe dit als volgt:
 1. Klik aan de linkerkant op het icoontje voor _Source Control_.
 2. Klik bovenaan de lijst met wijzigingen op de knop met `+` om alle bestanden klaar te zetten (_Stage All Changes_).
 3. Kies bovenaan een _commit message_. Hierin beschrijf je wat je gedaan hebt, zoals "Voeg mijn eerste oefening toe".
-4. Klik op de knop `Commit & Push`.
+4. Klik op de knop `Commit & Push`. Als je een pop-up krijgt, kies je voor `Sync (Push & Pull)`.
 
 Als alles goed gegaan is, werd dit venster leeg.
 

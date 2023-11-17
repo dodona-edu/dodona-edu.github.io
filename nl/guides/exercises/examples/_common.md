@@ -6,8 +6,8 @@ Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenreposi
 Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
 
 Maak dus eerst een nieuwe map voor de oefening, die we `minimum` zullen noemen.
-Maak daarna, in deze nieuwe map, nog twee mappen:
-- `description`: de map waarin de opgave komt
+Maak daarna, in deze nieuwe map, nog drie mappen:
+- `description`: map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
 - `solution`: map waarin een voorbeeldoplossing komt
 
@@ -110,7 +110,7 @@ repository/
 ## 4. Een testplan maken
 
 We willen dat deze oefening automatisch getest wordt.
-Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
+Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren. Als alle testgevallen geslaagd zijn, is de indiening van de student volgens Dodona correct.
 
 In dit geval houden we het testplan kort, met slechts een beperkt aantal testgevallen.
 In een echte oefening wil je waarschijnlijk meer testgevallen voorzien.

@@ -22,8 +22,8 @@ Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenreposi
 Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
 
 Maak dus eerst een nieuwe map voor de oefening, die we `hello-world` zullen noemen.
-Maak daarna, in deze nieuwe map, nog twee mappen:
-- `description`: de map waarin de opgave komt
+Maak daarna, in deze nieuwe map, nog drie mappen:
+- `description`: map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
 - `solution`: map waarin een voorbeeldoplossing komt
 
@@ -59,10 +59,9 @@ Maak het bestand `config.json` in de map `hello-world` met de volgende inhoud:
 
 In dit bestand worden drie dingen gespecifieerd:
 
-- De naam van de oefening zoals getoond door Dodona in het Nederlands en in het Engels (in dit geval zijn beide namen hetzelfde).
-- We stellen de naam van het testplan in (later meer hierover). Dit is een bestand relatief ten opzicht van de map `evaluation`.
-- De programmeertaal van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- Het toegangsniveau: hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- De **namen** (_names_) van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
+- De **programmeertaal** (_programming_language_) van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- Het **toegangsniveau** (_access_): hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
@@ -87,7 +86,7 @@ Schrijf een Python-programma dat de naam van de gebruiker vraagt
 en vervolgens de gebruiker begroet met de zin `Hallo, [NAAM]!`,
 waarbij `[NAAM]` de naam van de gebruiker is.
 
-Het programma moet de naam dus inlezen van standaardinvoer (stdin)
+Het programma moet de naam dus inlezen van standaardinvoer (_stdin_)
 en de begroeting uitschrijven naar standaarduitvoer (stdout).
 
 ### Voorbeeld
@@ -99,7 +98,7 @@ Hallo, Jan!
 ```
 ````
 
-De `nl` in de naam van de opgave kan je vervangen door `en` als je ook een Engelstalige opgave wilt maken.
+Als je ook een Engelstalige opgave wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
 De opgave zelf wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
 
 We voegen ook direct een voorbeeldoplossing toe.
@@ -129,14 +128,13 @@ repository/
 ## 4. Een testplan maken
 
 We willen dat deze oefening automatisch getest wordt.
-Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
+Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren. Als alle testgevallen geslaagd zijn, is de indiening van de student volgens Dodona correct.
 
 Deze oefening heeft natuurlijk een aantal voor de hand liggende testen, waarbij verschillende namen geprobeerd worden.
 Ook kunnen we eens een naam met cijfers of speciale tekens invullen.
 Nog een leuke naam is om een naam met dubbelen en enkele aanhalingstekens te proberen.
-Ook een naam met _escaped newlines_ kunnen we proberen.
 
-Om dit kort te houden, beperken we ons testplan tot zeven testen.
+Om dit kort te houden, beperken we ons testplan tot zes testen.
 Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
 
 ```yaml
@@ -157,13 +155,12 @@ Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
 ```
 
 Een testplan wordt geschreven in YAML, en moet ook voldoen aan een bepaalde structuur.
-In het voorbeeld hierboven maken we één tabblad met als naam "Testen", en definiëren zeven testen in dat tabblad:
+In het voorbeeld hierboven maken we één tabblad met als naam "Testen", en definiëren zes testen in dat tabblad:
 - Testen 1 en 2 gebruiken twee namen.
 - Test 3 gebruikt cijfers en leestekens.
 - Test 4 gebruikt enkele aanhalingstekens.
 - Test 5 gebruikt dubbele aanhalingstekens.
 - Test 6 heeft een naam die enkel uit spaties bestaan.
-- Test 7 heeft een naam met _escaped newlines_.
 
 ::: info Invoer met meerdere regels
 In het voorbeeldje gebruiken we nu telkens één regel invoer.

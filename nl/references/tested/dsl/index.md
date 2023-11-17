@@ -135,7 +135,7 @@ return:
 
 #### `stdout` / `stderr`
 
-Specifieert het verwachte resultaat op respectievelijk standaarduitvoer (stdout) en standaardfout (stderr).
+Specifieert het verwachte resultaat op respectievelijk standaarduitvoer (_stdout_) en standaardfout (_stderr_).
 
 De waarde van het attribuut is ofwel een string (dat dan het verwachte resultaat is), of een object voor meer complexe situaties.
 Het object heeft volgende attributen:
@@ -253,8 +253,8 @@ Een configuratie-object op tabniveau gebruiken zal er bijvoorbeeld voor zorgen d
 
 Een configuratie-object kan volgende attributen hebben:
 
-- `stdout`: de [configuratieopties](#testopties) voor standaarduitvoer (stdout)
-- `stderr`: de [configuratieopties](#testopties) voor standaardfout (stderr)
+- `stdout`: de [configuratieopties](#testopties) voor standaarduitvoer (_stdout_)
+- `stderr`: de [configuratieopties](#testopties) voor standaardfout (_stderr_)
 - `return`: de [configuratieopties](#testopties) voor de verwachte returnwaarde
 
 ### Testopties

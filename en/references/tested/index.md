@@ -75,7 +75,7 @@ We'll explain how to create a simple programming exercise that uses TESTed to pr
 and how to make the exercise available on Dodona.
 The exercise is called "echo" and has the following problem statement:
 
-> Define a function `echo` that outputs its string argument to stdout.
+> Define a function `echo` that outputs its string argument to _stdout_.
 
 Here are some correct submissions for this exercise in a couple of different programming languages:
 
@@ -203,7 +203,7 @@ We'll use the problem statement from above and add an example.
 Create a file `echo/description/description.en.md` with the following content:
 
 ````markdown
-Define a function `echo` that outputs its string argument to stdout.
+Define a function `echo` that outputs its string argument to _stdout_.
 
 ### Example in Python
 
@@ -250,7 +250,7 @@ This test suite specifies that:
 1. All feedback is included in a single tab called _Echo_.
 2. The tab contains feedback on a single test case.
 3. The test case calls the function `echo` with a string argument `"input-1"`.
-4. The expected behavior of the test case is that the text `input-1` is generated on stdout.
+4. The expected behavior of the test case is that the text `input-1` is generated on _stdout_.
 
 
 The file structure now looks like this:

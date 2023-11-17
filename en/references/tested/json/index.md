@@ -135,7 +135,7 @@ A test case is a statement or an expression that will be executed and evaluated.
 Each context has at least one test case.
 The following two constraints apply:
 
-- Only the first test case may have a "main call", i.e. command line arguments or stdin.
+- Only the first test case may have a "main call", i.e. command line arguments or _stdin_.
 - Only the last test case may have a test for the program's exit code.
 
 Do note that the first and last test case may be the same one:
@@ -255,7 +255,7 @@ Here's an overview of all output channels currently supported by TESTed:
 
 ### EmptyChannel
 
-An `EmptyChannel` describes that no output is expected on a specific file descriptor (e.g. stdout or stderr).
+An `EmptyChannel` describes that no output is expected on a specific file descriptor (e.g. _stdout_ or _stderr_).
 Any output generated will be considered as incorrect by TESTed.
 The `EmptyChannel` is represented by a string constant `none`.
 
@@ -273,7 +273,7 @@ For most output types, this is the default value, meaning you don't need to spec
 
 ### IgnoredChannel
 
-An IgnoredChannel object describes that no output is expected on a specific file descriptor (e.g. stdout or stderr).
+An IgnoredChannel object describes that no output is expected on a specific file descriptor (e.g. _stdout_ or _stderr_).
 Any output generated on the file descriptor will be ignored, and is considered correct by TESTed.
 In other words, if you do not want output, you should use [`EmptyChannel`](#emptychannel),
 while if you don't care about the output, you should use `IgnoredChannel`.
@@ -422,8 +422,8 @@ TESTed currently supports the following two oracles:
 
 ### TextOutputChannel
 
-A `TextOutputChannel` object represents text that is expected to be generated on an output channel (e.g. stdout or
-stderr).
+A `TextOutputChannel` object represents text that is expected to be generated on an output channel (e.g. _stdout_ or
+_stderr_).
 
 For example, if the text `"Hello world"` must be written to `stdout`:
 
