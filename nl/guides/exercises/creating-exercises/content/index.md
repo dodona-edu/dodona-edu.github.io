@@ -7,7 +7,7 @@ next: true
 ---
 
 
-# Oefeningen opstellen: opgave en testplan schrijven
+# Oefeningen opstellen: leesactiviteit
 
 Als je in de vorige stap van de handleiding de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
 Hier zullen we nu zelf nog een leesactiviteit toevoegen. Dit is handig om extra informatie of kleine stukken theorie te integreren in je leerpad.
@@ -97,12 +97,12 @@ Maak een bestand `description.nl.md` aan in de map `description` van de leesacti
 
 ## Tekstopmaak
 
-Dit is een voorbeeldzin met woorden in *cursief*, **vet**, en met variabel `result` in functie `geef_oplossing()`.
+Dit is een voorbeeldzin met woorden in *cursief*, **vet** en met variabel `result` in functie `geef_oplossing()`.
 
 ## Links en afbeeldingen
 
-Dit is een zin waarbij [deze woorden](https://docs.dodona.be/nl/) linken naar de Dodona handleiding.
-Hieronder staat het Dodona logo afgebeeld met een link.
+Dit is een zin waarbij [deze woorden](https://docs.dodona.be/nl/references/exercise-description/) linken naar de Dodona handleiding over Markdown.
+Hieronder staat het Dodona logo afgebeeld via een link.
 
 ![Dodona logo](https://dodona.be/icon.png)
 
@@ -116,24 +116,25 @@ Er wordt rechtstreeks verwezen naar het logo van de UGent in de `media` map.
 2. R
 3. Java
 
-* item 1
-* item 2
-* item 3
+### Soorten ingenieurs
 
+* Handelsingenieur
+* Industrieel ingenieur (ing.)
+* Burgerlijk ingenieur (ir.)
+* Bio-ingenieur
 
-## Math snippets
+## Wiskundige formules
 
-Wat tekst met symbool $$a$$ en een formule $$x^2$$.
+Bereken de lengte van de schuine zijde van een driehoek $$c$$ met de formule $$c^2 = a^2 + b^2$$.
 
 De oplossing kan gevonden worden met de volgende formule:
 $$
-a^2 = b^2 + c^2
+c = \sqrt{a^2 + b^2}
 $$
 
-## Code snippets
+## Codefragmenten
 
 In je oplossing, kan je deze code gebruiken: `print("text")`{:.language-python}.
-
 
 ```console?lang=python&prompt=>>>
 >>> echo("Hello")
@@ -142,22 +143,22 @@ Hello
 Other side
 ```
 
-```javascript
-let a = 5;
-let b = 42;
+```python
+naam = input()
+print(f"Hallo, {naam}!")
 ```
 
 ## Callouts
 
 {: .callout.callout-success}
-> #### Hallo
+> #### Opgelet
 > Dit is een belangrijk bericht.
 
 ## Quotes
 
-Dit is geen quote
+Dit is geen quote.
 
-> Dit is een quote
+> Dit is een quote.
 ````
 
 Als je ook Engelstalige inhoud wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
