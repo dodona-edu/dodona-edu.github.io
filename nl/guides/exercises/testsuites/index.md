@@ -27,9 +27,9 @@ In de [referentiegids](/nl/references/tested/dsl) staat het volledige formaat vo
 
 Een testplan bestaat uit een hiërarchie van drie niveaus:
 
-1. _Tabbladen_, die ook als apart tabblad getoond worden op Dodona.
-2. _Contexten_, die een onafhankelijke eenheid van testgevallen voorstellen.
-3. _Testgevallen_, die één test en zijn resultaten bevatten.
+1. **Tabbladen** (_tab_), die ook als apart tabblad getoond worden op Dodona.
+2. **Contexten** (_contexts_), die een onafhankelijke eenheid van testgevallen voorstellen.
+3. **Testgevallen** (_testcases_), die één test en zijn resultaten bevatten.
 
 Een voorbeeld van een testplan met alle niveaus is:
 
@@ -52,9 +52,9 @@ Een voorbeeld van een testplan met alle niveaus is:
           return: !v "2"
 ```
 
-In dit testplan zijn twee analoge tabbladen.
+In dit testplan zijn er twee gelijkaardige tabbladen.
 Elk tabblad bevat twee contexten, die elk één testgeval hebben.
-Elk testgeval roept de functie `echo` op met een andere parameter en bepaalt ook de verwachte returnwaarde.
+Elk testgeval roept de functie `echo` op met een andere parameter en bepaalt ook de verwachte returnwaarde (_return_).
 Elk testgeval zit in een eigen context omdat elke functieoproep onafhankelijk van elkaar is.
 
 Een context met één testgeval komt veel voor.
@@ -149,7 +149,7 @@ Hoewel de Python-syntaxis gebruikt wordt, wijken de conventies in een testplan s
 Een testplan gebruikt de Python-syntaxis, maar is geen Python.
 De gebruikte conventies zijn:
 
-- Functieoproepen wier naam begint met een hoofdletters worden beschouwd als
+- Functieoproepen waarvan de naam begint met een hoofdletter worden beschouwd als
   _constructors_, bijvoorbeeld `Constructor(56)`.
 - Identifiers die volledig in hoofdletters geschreven zijn worden beschouwd als globale constanten, bijvoorbeeld `VERY_LONG_NAME`.
 - Het casten van waarden gebeurt op de gebruikelijke manier van Python. Het casten van een getal naar `int64` wordt bijvoorbeeld `int64(56)`. Er is wel geen ondersteuning voor Python-constructors. Een verzameling moet je noteren als `set([1, 2, 3, 5])`, niet als `set(1, 2, 3, 5)`.
@@ -227,10 +227,10 @@ def evaluate_test(expected, actual, five, six):
 Wat we doen in deze functie is de datum van vandaag berekenen.
 We geven vervolgens een `EvaluationResult` terug met vier parameters:
 
-1. Een eerste boolean die aangeeft of de waarde uit de oplossing juist is of niet. In dit geval vergelijken we die gewoon met de datum van vandaag.
-2. De verwachte waarde om te tonen op Dodona. We overschijven hier de verwachte waarde uit het testplan met de datum van vandaag.
-3. De eigenlijke waarde om te tonen op Dodona. We geven hier de eigenlijke waarde gewoon door.
-4. Een optionele lijst van berichten. Deze berichten worden ook getoond op Dodona en kunnen gebruikt worden om bijkomende feedback of uitleg aan de studenten te geven.
+1. `result`: Een eerste boolean die aangeeft of de waarde uit de oplossing juist is of niet. In dit geval vergelijken we die gewoon met de datum van vandaag.
+2. `dsl_expected`: De verwachte waarde om te tonen op Dodona. We overschijven hier de verwachte waarde uit het testplan met de datum van vandaag.
+3. `dsl_actual`: De eigenlijke waarde om te tonen op Dodona. We geven hier de eigenlijke waarde gewoon door.
+4. `messages`: Een optionele lijst van berichten. Deze berichten worden ook getoond op Dodona en kunnen gebruikt worden om bijkomende feedback of uitleg aan de studenten te geven.
 
 Ook `stderr` en `stdout` kunnen een eigen checkfunctie gebruiken.
 Hiervoor wordt dezelfde notatie gebruikt, maar met `data` in plaats van `value`:
