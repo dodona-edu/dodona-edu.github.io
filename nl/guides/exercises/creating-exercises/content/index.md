@@ -13,6 +13,10 @@ Als je in de vorige stap van de handleiding de _template repository_ gebruikt he
 Hier zullen we nu zelf nog een leesactiviteit toevoegen. Dit is handig om extra informatie of kleine stukken theorie te integreren in je leerpad.
 De bestaande leesactiviteit kan uiteraard als voorbeeld dienen.
 
+{: .callout.callout-success}
+> #### Een leesactiviteit lijkt goed op een oefening
+> De structuur en `config.json` voor een leesactiviteit zijn identiek aan deze van een oefening. Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en alles die specifiek voor oefeningen is, mag achterwege gelaten worden.
+
 ## 1. Structuur
 
 Elke leesactiviteit in Dodona komt overeen met een bepaalde map in de repository.
@@ -70,17 +74,17 @@ repository/
 ## 3. Afbeelding of bestand toevoegen
 
 Om een afbeelding toe te voegen heb je twee opties.
-Ofwel verwijs je naar een afbeelding die in de media map staat ofwel verwijs je naar de afbeelding via een link.
+Ofwel verwijs je naar een afbeelding die in de `media` map staat, ofwel verwijs je naar de afbeelding via een link.
 In het voorbeeld komen straks beide manieren aan bod.
 
 Download onderstaande afbeelding met het logo van de UGent. Dit is een [directe link](https://styleguide.ugent.be/files/uploads/logo_UGent_NL_RGB_2400_kleur_witbg.png). Rechtsklik op de afbeelding en kies voor `Afbeelding opslaan...`.
 
 ![UGent logo](logo_UGent.png)
 
-Rechtsklik op de `media` map in VS Code web en kies voor `Upload...`.
+Rechtsklik op de `media` map in VS Code web en klik op `Upload...`.
 Selecteer de afbeelding van op je computer en klik op `Openen`.
 
-Verwijzen naar de afbeelding kan met deze markdown code (zie volgende stap): \
+Verwijzen naar de afbeelding kan met deze markdown code (zie volgende stap). Het start met een uitroepingsteken (`!`) en tussen de vierkante haken mag je een beschrijving geven van wat er op de afbeelding staat. Tussen de ronde haken staat het pad naar de afbeelding.: \
 `![UGent logo](media/logo_UGent.png)`
 
 ## 4. Inhoud
@@ -166,13 +170,14 @@ repository/
 └── markdown_demo/
    ├── description/
    |  ├── media/
+   |  |  └── logo_UGent.png
    |  └── description.nl.md
    └── config.json
 ```
 
 ## 5. Wijzigingen opslaan
 
-Vergeet niet om je wijzigingen te committen, anders gaan ze verloren!
+Vergeet niet om je wijzigingen te _committen_, anders gaan ze verloren!
 
 Een voorbeeld van hoe je dit kan doen vind je [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).
 
