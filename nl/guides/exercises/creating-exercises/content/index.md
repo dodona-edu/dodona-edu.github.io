@@ -1,6 +1,6 @@
 ---
-title: "Oefeningen opstellen: leesactiviteit maken"
-sidebarTitle: Leesactiviteit maken
+title: "Oefeningen opstellen: leesactiviteit"
+sidebarTitle: Leesactiviteit
 order: 4
 prev: true
 next: true
@@ -10,7 +10,7 @@ next: true
 # Oefeningen opstellen: opgave en testplan schrijven
 
 Als je in de vorige stap van de handleiding de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
-Hier zullen we nu zelf nog een leesactiviteit toevoegen.
+Hier zullen we nu zelf nog een leesactiviteit toevoegen. Dit is handig om extra informatie of kleine stukken theorie te integreren in je leerpad.
 De bestaande leesactiviteit kan uiteraard als voorbeeld dienen.
 
 ## 1. Structuur
@@ -55,7 +55,7 @@ In dit bestand worden drie dingen gespecifieerd:
 
 - `names`: De **namen** van de leesactiviteit zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
 - `acces`: Het **toegangsniveau** is hier _private_. We kiezen voor een private leesactiviteit omdat dit maar een handleiding is, maar we moedigen aan om je leesactiviteiten publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit publieke leesactiviteiten op Dodona).
-- `type`: Moet ingesteld worden op `content` voor leesactiviteiten.
+- `type`: Moet ingesteld worden op `content` voor leesactiviteiten. De standaardwaarde indien afwezig is `exercise`.
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
@@ -71,7 +71,7 @@ repository/
 
 Om een afbeelding toe te voegen heb je twee opties.
 Ofwel verwijs je naar een afbeelding die in de media map staat ofwel verwijs je naar de afbeelding via een link.
-In dit voorbeeld komen beide manieren aan bod.
+In het voorbeeld komen straks beide manieren aan bod.
 
 Download onderstaande afbeelding met het logo van de UGent. Dit is een [directe link](https://styleguide.ugent.be/files/uploads/logo_UGent_NL_RGB_2400_kleur_witbg.png). Rechtsklik op de afbeelding en kies voor `Afbeelding opslaan...`.
 
@@ -80,55 +80,55 @@ Download onderstaande afbeelding met het logo van de UGent. Dit is een [directe 
 Rechtsklik op de `media` map in VS Code web en kies voor `Upload...`.
 Selecteer de afbeelding van op je computer en klik op `Openen`.
 
-Verwijzen naar de afbeelding kan met deze markdown code `![UGent logo](logo_UGent.png)` (zie volgende stap).
+Verwijzen naar de afbeelding kan met deze markdown code (zie volgende stap): \
+`![UGent logo](media/logo_UGent.png)`
 
 ## 4. Inhoud
 
 De volgende stap is de inhoud van de leesactiviteit.
-Maak een bestand `description.en.md` aan in de map `description` van de leesactiviteit, met volgende inhoud:
+Maak een bestand `description.nl.md` aan in de map `description` van de leesactiviteit, met volgende inhoud:
 
 ````markdown
 # Markdown demo
 
-## Text formatting
+## Tekstopmaak
 
-This is an example with words in *italics*, **bold**, and ~~striked through~~ and with a variable `a` in function `returnSolution()`.
+Dit is een voorbeeldzin met woorden in *cursief*, **vet**, en met variabel `result` in functie `geef_oplossing()`.
 
-## Hyperlinks and images
+## Links en afbeeldingen
 
-In this sentence, [these words](https://google.com) link to Google.
-Below you can see the Dodona logo.
+Dit is een zin waarbij [deze woorden](https://docs.dodona.be/nl/) linken naar de Dodona handleiding.
+Hieronder staat het Dodona logo afgebeeld met een link.
 
 ![Dodona logo](https://dodona.be/icon.png)
 
-![UGent logo](logo_UGent.png)
+Er wordt rechtstreeks verwezen naar het logo van de UGent in de `media` map.
 
-### Lists
+![UGent logo](media/logo_UGent.png)
 
-1. item 1
-2. item 2
-3. item 3
+### Populairste programmeertalen op Dodona
+
+1. Python
+2. R
+3. Java
 
 * item 1
 * item 2
 * item 3
 
-## Images
-
-[Show image](https://dodona.be/icon.png)
 
 ## Math snippets
 
-Some text with symbol $$a$$ and a formula $$x^2$$.
+Wat tekst met symbool $$a$$ en een formule $$x^2$$.
 
-The solution can be found with the following formula:
+De oplossing kan gevonden worden met de volgende formule:
 $$
 a^2 = b^2 + c^2
 $$
 
 ## Code snippets
 
-In your solution, use can use some code `print("text")`{:.language-python}.
+In je oplossing, kan je deze code gebruiken: `print("text")`{:.language-python}.
 
 
 ```console?lang=python&prompt=>>>
@@ -138,20 +138,25 @@ Hello
 Other side
 ```
 
+```javascript
+let a = 5;
+let b = 42;
+```
+
 ## Callouts
 
 {: .callout.callout-success}
-> #### Hello
-> This is an important message.
+> #### Hallo
+> Dit is een belangrijk bericht.
 
 ## Quotes
 
-Text that is not a quote
+Dit is geen quote
 
-> Text that is a quote
+> Dit is een quote
 ````
 
-Als je ook Nederlandstalige inhoud wilt maken, gebruik je de naam `description.nl.md` voor het tweede bestand.
+Als je ook Engelstalige inhoud wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
 De inhoud wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
 
 Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
