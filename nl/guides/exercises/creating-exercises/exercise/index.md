@@ -37,7 +37,7 @@ Als alles goed gegaan is, werd dit venster leeg.
 
 ## 6. Oefening testen
 
-De oefening die je daarnet gemaakt hebt, kan je terugvinden in  [jouw oefeningenrepository](https://dodona.be/nl/repositories/) op Dodona. Test de oefening. Is alles naar wens? Dan kan je bovenaan de oefening publiceren (_Deze oefening publiceren_). Je oefening is nu klaar om te gebruiken op Dodona!
+De oefening die je daarnet gemaakt hebt, kan je terugvinden in [jouw oefeningenrepository](https://dodona.be/nl/repositories/) op Dodona. Test de oefening. Is alles naar wens? Dan kan je bovenaan de oefening publiceren (_Deze oefening publiceren_). Je oefening is nu klaar om te gebruiken op Dodona!
 
 ![Minimum oefening](./minimum.png)
 
