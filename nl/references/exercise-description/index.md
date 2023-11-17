@@ -257,10 +257,10 @@ Als je HTML gebruikt, plaats dan `<code>` en `</code>` rond je code.
 Gebruik de variabele <code>someVariable</code> in je oplossing.
 ```
 
-Als je Markdown gebruikt, plaats dan *backticks* (\`) rond je code.
+Als je Markdown gebruikt, plaats dan *backticks* (\`) rond je code. Je kan zelfs ook de de syntax highlighting van de programmeertaal toevoegen met `{:.language-python}` bijvoorbeeld.
 
 ```markdown
-Gebruik de variabele `someVariable` in je oplossing.
+Gebruik de variabele `someVariable` in je oplossing. Gebruik de verkorte notatie `result += 1`{:.language-python}.
 ```
 
 ### Blokken code
@@ -305,6 +305,15 @@ Als je Markdown gebruikt, dan kan Dodona automatisch de code opmaken als je aang
     ```javascript
     let a = 5;
     let b = 42;
+    ```
+
+Syntax highlighting voor het Python doctest formaat kan je op deze manier bekomen:
+
+    ```console?lang=python&prompt=>>>
+    >>> echo("Hello world!")
+    "Hello world!"
+    >>> echo(5)
+    5
     ```
 
 ## Callouts

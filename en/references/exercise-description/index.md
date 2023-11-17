@@ -252,10 +252,10 @@ When using HTML, wrap your code with `<code>` and `</code>`:
 In your solution, you can use variable <code>someVariable</code>.
 ```
 
-In Markdown, wrap your code with backticks (\`):
+In Markdown, wrap your code with backticks (\`). You can even add the programming language's syntax highlighting with `{:.language-python}` for example.
 
 ```markdown
-In your solution, use can use variable `someVariable`.
+In your solution, use can use variable `someVariable`. Use the abbreviated notation `result += 1`{:.language-python}.
 ```
 
 ### Code blocks
@@ -300,6 +300,14 @@ Using Markdown, Dodona can automatically add syntax highlighting if you provide 
     ```javascript
     let a = 5;
     let b = 42;
+    ```
+Syntax highlighting for the Python doctest format can be obtained this way:
+
+    ```console?lang=python&prompt=>>>
+    >>> echo("Hello world!")
+    "Hello world!"
+    >>> echo(5)
+    5
     ```
 
 ## Callouts
