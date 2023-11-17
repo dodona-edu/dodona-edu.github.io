@@ -249,13 +249,13 @@ You can easily render code fragments in a monospaced font with syntax highlighti
 When using HTML, wrap your code with `<code>` and `</code>`:
 
 ```html
-In your solution, you can use variable <code>someVariable</code>.
+In your solution, you can use variable <code>some_variable</code>.
 ```
 
 In Markdown, wrap your code with backticks (\`). You can even add the programming language's syntax highlighting with `{:.language-python}` for example.
 
 ```markdown
-In your solution, use can use variable `someVariable`. Use the abbreviated notation `result += 1`{:.language-python}.
+In your solution, use can use variable `some_variable`. Use the abbreviated notation `result += 1`{:.language-python}.
 ```
 
 ### Code blocks

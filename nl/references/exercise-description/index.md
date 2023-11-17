@@ -254,13 +254,13 @@ Je kan op Dodona heel eenvoudig codefragmenten tonen in een *monospaced* lettert
 Als je HTML gebruikt, plaats dan `<code>` en `</code>` rond je code.
 
 ```html
-Gebruik de variabele <code>someVariable</code> in je oplossing.
+Gebruik de variabele <code>some_variable</code> in je oplossing.
 ```
 
 Als je Markdown gebruikt, plaats dan *backticks* (\`) rond je code. Je kan zelfs ook de de syntax highlighting van de programmeertaal toevoegen met `{:.language-python}` bijvoorbeeld.
 
 ```markdown
-Gebruik de variabele `someVariable` in je oplossing. Gebruik de verkorte notatie `result += 1`{:.language-python}.
+Gebruik de variabele `some_variable` in je oplossing. Gebruik de verkorte notatie `result += 1`{:.language-python}.
 ```
 
 ### Blokken code

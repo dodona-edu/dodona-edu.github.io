@@ -27,9 +27,9 @@ In de [referentiegids](/nl/references/tested/dsl) staat het volledige formaat vo
 
 Een testplan bestaat uit een hiërarchie van drie niveaus:
 
-1. **Tabbladen** (_tab_), die ook als apart tabblad getoond worden op Dodona.
-2. **Contexten** (_contexts_), die een onafhankelijke eenheid van testgevallen voorstellen.
-3. **Testgevallen** (_testcases_), die één test en zijn resultaten bevatten.
+1. `tab`: **Tabbladen**, die ook als apart tabblad getoond worden op Dodona.
+2. `contexts`: **Contexten**, die een onafhankelijke eenheid van testgevallen voorstellen.
+3. `testcases`: **Testgevallen**, die één test en zijn resultaten bevatten.
 
 Een voorbeeld van een testplan met alle niveaus is:
 
