@@ -80,7 +80,7 @@ Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de progra
 
 ## Turtle
 De Turtle-judge evalueert de uitvoer van een Python Turtle programma. Het berekent de overeenkomst tussen de uitvoer van de leerling en de modeloplossing. \
-**Programmeertalen:** Python (Turtle)**
+**Programmeertalen:** Python (Turtle)\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-turtle) \
 **Gemaakt door:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 

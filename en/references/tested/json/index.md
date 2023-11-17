@@ -644,7 +644,7 @@ A string with constant value `value`.
 
 #### `.options`
 
-The *GenericValuePracle* does not support any options at the moment.
+The *GenericValueOracle* does not support any options at the moment.
 
 ### GenericTextOracle
 

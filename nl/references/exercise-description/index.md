@@ -156,7 +156,7 @@ Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde g
 
 ### Zichtbaarheid in donkere modus
 
-Als je een aparte afbeelding wil gebruiken voor lichte modus en donkere modus (bv. met een andere achtergrondkleur), dan kan je de `light-only` of `dark-only` klassen toevoegen aan een afbeelding. De `light-only` klasse zal de afbeelding enkel tonen in lichte modus terwijl de `dark-only` class de afbeelding enkel zal tonen in donkere modus. Deze klassen werken ook voor andere HMTL-elementen.
+Als je een aparte afbeelding wil gebruiken voor lichte modus en donkere modus (bv. met een andere achtergrondkleur), dan kan je de `light-only` of `dark-only` klassen toevoegen aan een afbeelding. De `light-only` klasse zal de afbeelding enkel tonen in lichte modus terwijl de `dark-only` class de afbeelding enkel zal tonen in donkere modus. Deze klassen werken ook voor andere HTML-elementen.
 
 ```html
 <img src="dark-image.jpg" class="dark-only" />

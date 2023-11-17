@@ -10,7 +10,6 @@ next: true
 
 In dit hoofdstuk overlopen en configureren we alle programma's en tools die nodig zijn om een oefening op te stellen.
 
-
 ::: info Online werken
 Merk op dat we er in deze handleiding voor kiezen om met _VS Code for the Web_ te werken, een versie van VS Code die in de browser draait.
 In de toekomst voorzien we ook een handleiding om lokaal te werken.
@@ -43,13 +42,13 @@ Ga naar <https://github.com/signup> om een account te maken, of gebruik je besta
 Als volgende stap moet je je persoonlijke kopie van het sjabloon maken:
 
 1. Ga naar <https://github.com/dodona-edu/exercise-template-repository>.
-2. Klik op de knop _Use this template_.
-3. Kies vervolgens de eerste optie: _Create new repository_.
+2. Klik op de knop `Use this template`.
+3. Kies vervolgens de eerste optie: `Create new repository`.
    ![Template repo](./use-template-repo.png)
 4. Vul de details voor de nieuwe repository in:
    1. Kies een naam voor de repository.
    2. Kies de toegang tot de repository. _Public_ betekent dat iedereen aan de oefeningen kan, dus we raden _Private_ aan.
-   3. Klik op _Create repository_
+   3. Klik op `Create repository`
    ![New repo details](./new-repo-details.png)
 
 Nu heb je een repository waarin je je oefeningen zal opslaan.
@@ -61,12 +60,11 @@ Voor je je nieuwe repository aan Dodona kan toevoegen, moet je ervoor zorgen dat
 
 De makkelijkste manier om dit te doen (op github.com) is de gebruiker [dodona-server](https://github.com/dodona-server) toegang te geven tot je repository:
 
-1. Ga naar het tabblad _Settings_ in je repository.
-2. Klik in de navigatie links op het onderdeel _Collaborators_. Dit staat normaliter redelijk bovenaan.
-3. Klik op de centrale groene knop _Add people_.
-4. Typ `dodona-server` in het zoekveld dat verschijnt en kies de juiste gebruiker (ook te herkennen aan het blauwe Dodona-logo).
-5. Klik op de groene knop _Add dodona-server to this repository_.
-
+1. Ga naar het tabblad `Settings` in je repository.
+2. Klik in de navigatie links op het onderdeel `Collaborators`. Dit staat normaliter redelijk bovenaan.
+3. Klik op de centrale groene knop `Add people`.
+4. Typ _dodona-server_ in het zoekveld dat verschijnt en kies de juiste gebruiker (ook te herkennen aan het blauwe Dodona-logo).
+5. Klik op de groene knop `Add dodona-server to this repository`.
 
 ![GitHub-gebruiker toevoegen](./add-dodona-server.png)
 
@@ -81,7 +79,7 @@ Daardoor kan het soms even duren eer dat gebeurt.
 ### Repository toevoegen aan Dodona
 
 Eens je lesgeversrechten op Dodona hebt, kan je je repository toevoegen aan Dodona.
-Ga daarvoor eerst naar <https://dodona.ugent.be/nl/repositories/> en klik op de lichtroze knop met een plusteken (+) in.
+Ga daarvoor eerst naar <https://dodona.ugent.be/nl/repositories/> en klik op de lichtroze knop met een plusteken (`+`) in.
 
 ![New repo Dodona](./add-repository.png)
 
@@ -91,8 +89,8 @@ Vul vervolgens de details van de repository in:
 2. **Clone URL**: hiervoor moet je terug naar GitHub.
    ![Clone URL](./clone-url.png)
    1. Ga naar je repository die je hierboven gemaakt hebt.
-   2. Klik op de groene knop _Code_.
-   3. Onder de hoofding _Clone_ zijn 3 tabbladen. Klik op het tabblad _SSH_.
+   2. Klik op de groene knop `Code`.
+   3. Onder de hoofding _Clone_ zijn 3 tabbladen. Klik op het tabblad `SSH`.
    4. Kopieer de URL die verschijnt, ofwel manueel ofwel door op de knop naast de URL te klikken.
    5. Plak deze URL in het veld _Clone URL_ bij Dodona.
 3. **Standaard judge**: kies hier "TESTed".
@@ -111,11 +109,11 @@ Deze URL zou zichtbaar moeten zijn nadat je je repository aan Dodona hebt toegev
 Deze URL moet je vervolgens toevoegen aan GitHub:
 
 1. Ga naar je repository op GitHub.
-2. Klik op het tabblad _Settings_.
-3. Kies in de zijbalk de optie _Webhooks_ (die staat ergens halverwege).
-4. Klik linksboven op de knop _Add webhook_.
+2. Klik op het tabblad `Settings`.
+3. Kies in de zijbalk de optie `Webhooks` (die staat ergens halverwege).
+4. Klik linksboven op de knop `Add webhook`.
 5. Plak de URL van Dodona in het veld met als titel **Payload URL**.
-6. Klik onderaan op de groene knop _Add webhook_.
+6. Klik onderaan op de groene knop `Add webhook`.
 
 ![github webhook](./github-webhook.png)
 
@@ -134,3 +132,7 @@ Om deze te openen:
 2. Druk op <kbd>.</kbd> op je toetsenbord (op azerty-toetsenborden is dit <kbd>Shift</kbd>+<kbd>.</kbd>).
 3. Na het opstarten moet je even wachten, waarna er rechts onderaan een melding zal verschijnen over het installeren van de aanbevolen extensies.
    Aanvaard deze suggestie.
+
+![visual-studio-code-for-the-web](./visual-studio-code-for-the-web.png)
+
+In de linkerkolom is zichtbaar wat er in de repository zit. In de template zijn er aparte mappen voorzien voor oefeningen (_exercises_) en leesactiviteiten (_reading-activities_). Bovenaan de kolom zijn er knoppen voorzien om eigen bestanden of mappen aan te maken.  

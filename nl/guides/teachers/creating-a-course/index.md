@@ -16,7 +16,7 @@ Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aa
 
 ![create course](./staff.courses_new_link.png)
 
-Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus en kopieer je de inhoud, ofwel maak je een volledige nieuwe cursus aan. Klik op een van de twee knoppen om je keuze te maken. Als je er voor kiest om met een lege cursus te beginnen kan je direct naar de [sectie over cursuseigenschappen](#cursuseigenschappen) gaan
+Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds **bestaande cursus** en kopieer je de inhoud, ofwel maak je een **volledige nieuwe cursus** aan. Klik op een van de twee knoppen om je keuze te maken. Als je er voor kiest om met een lege cursus te beginnen kan je direct naar de [sectie over cursuseigenschappen](#cursuseigenschappen) gaan
 
 ![new course menu](./staff.course_new_options.png)
 

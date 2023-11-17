@@ -57,7 +57,7 @@ Here's how to install the Dodona extension for Visual Studio Code:
   ![settings](./vs-market.png)
   Alternatively, you can install the extension directly from the VS Code Marketplace. Just go to the [Dodona plugin page](https://marketplace.visualstudio.com/items?itemName=thepieterdc.dodona-plugin-vscode) and click the green `Install` button.
 
-3. **Insert API token**: After installing the extension, you need to insert the API token you created earlier. To do this, click on the gear icon in the bottom left corner of VS Code and select 'Settings' (or use the shortcut `Ctrl+,`). Then click on 'Extensions' and select 'Dodona'. Paste the API token you have created into the text box.
+3. **Insert API token**: After installing the extension, you need to insert the API token you created earlier. To do this, click on the gear icon in the bottom left corner of VS Code and select 'Settings' (or use the shortcut <kbd>Ctrl</kbd>+<kbd>,</kbd>). Then click on 'Extensions' and select 'Dodona'. Paste the API token you have created into the text box.
   ![API token](./vs-token.png)
 
 ## How can I use the VS Code extension?
@@ -73,9 +73,9 @@ To use the Dodona VS Code extension, follow these steps:
         return i;
     }
     ```
-   Do not remove this line as VS Code uses it to send you to the correct exercise. If you press `ctrl` (or `cmd` on a Mac) while clicking on the URL, the exercise description will open in a new browser window.
+   Do not remove this line as VS Code uses it to send you to the correct exercise. If you press <kbd>ctrl</kbd> (or <kbd>cmd</kbd> on a Mac) while clicking on the URL, the exercise description will open in a new browser window.
 
-2. **Submit your solution:** Once you've solved the exercise, you can easily submit your solution by using the 'Submit to Dodona' command. You can do this by opening the command palette with `Ctrl-Shift-P`, typing (part of) `Submit to Dodona` and pressing `Enter`. You can also create a shortcut for this command. This command will submit your code to Dodona and trigger an automatic test.
+2. **Submit your solution:** Once you've solved the exercise, you can easily submit your solution by using the 'Submit to Dodona' command. You can do this by opening the command palette with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, typing (part of) `Submit to Dodona` and pressing <kbd>Enter</kbd>. You can also create a shortcut for this command. This command will submit your code to Dodona and trigger an automatic test.
   ![Submit](./vs-submit.png)
 
 3. **Check the result:** After a few seconds, a popup should appear in the bottom right corner showing the result of your submission. Clicking the 'View results' button will open the result in a new browser window. You can submit your solution as many times as you like by repeating the same command.

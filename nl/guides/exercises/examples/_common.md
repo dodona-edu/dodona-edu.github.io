@@ -26,7 +26,7 @@ repository/
 Dodona eist voor elke oefeningen ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
-Maak het bestand `config.json` in de map `hello-world` met de volgende inhoud:
+Maak het bestand `config.json` in de map `minimum` met de volgende inhoud:
 
 ```json
 {
@@ -43,9 +43,9 @@ Maak het bestand `config.json` in de map `hello-world` met de volgende inhoud:
 
 In dit bestand worden drie dingen gespecifieerd:
 
-- De naam van de oefening zoals getoond door Dodona in het Nederlands en in het Engels (in dit geval zijn beide namen hetzelfde).
-- De programmeertaal van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- Het toegangsniveau: hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- De **naam** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
+- De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- Het **toegangsniveau**: hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
@@ -77,7 +77,7 @@ Deze functie moet het kleinste geval van die twee teruggeven.
 ```
 ````
 
-De `nl` in de naam van de opgave kan je vervangen door `en` als je ook een Engelstalige opgave wilt maken.
+Als je ook een Engelstalige opgave wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
 De opgave zelf wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
 
 We voegen ook direct een voorbeeldoplossing toe.
@@ -134,7 +134,7 @@ Maak een bestand `suite.yaml` aan in de map `evaluation` van de oefening, met vo
 
 In dit testplan gebeuren een aantal dingen:
 
-- De tabbladen vanop Dodona reflecteren zich ook in het testplan.
+- De tabbladen vanop Dodona komen overeen met het testplan.
   Alle testgevallen zitten hier in één tabblad, met als naam "minimum".
 - Er zijn 5 testgevallen.
 - Voor elk testgeval definiëren we een expressie: wat er uitgevoerd moet worden.

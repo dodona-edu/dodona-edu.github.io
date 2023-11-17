@@ -149,7 +149,7 @@ For example, you cannot check that an assertion error or exception happened.
 
 Specifies the expected return value.
 
-Depening on the value, this attribute is interpreted as:
+Depending on the value, this attribute is interpreted as:
 
 - If an untagged string, the string uses the same Python syntax as for [expressions and statements](#expressions-and-statements).
 - If it is an untagged object, it is seen as the advanced output for an oracle.
