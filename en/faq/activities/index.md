@@ -18,4 +18,9 @@ As a teacher, you can use the hundreds of exercises that are available in Dodona
 In Dodona, an "exercises repository" is a collection of exercises and reading activities managed in a linked GitHub repository.
 These exercises can then be used in multiple "courses".
 
-A "course" in Dodona is again a collection of exercises and reading activities structured in sequences. Here you can, for example, structure exercises according to a desired learning path. Courses are fully managed within Dodona. A course can contain exercises from different exercise repositories. A course also includes enrolled students. In a course, you can monitor these students, make evaluations, answer questions, etc...
+A "course" in Dodona is again a collection of exercises and reading activities structured in sequences.
+Here you can, for example, structure exercises according to a desired learning path.
+Courses are fully managed within Dodona.
+A course can contain exercises from different exercise repositories.
+A course also includes enrolled students.
+In a course, you can monitor these students, make evaluations, answer questions, etc...
