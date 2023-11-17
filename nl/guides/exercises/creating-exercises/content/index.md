@@ -1,0 +1,176 @@
+---
+title: "Oefeningen opstellen: leesactiviteit maken"
+sidebarTitle: Leesactiviteit maken
+order: 4
+prev: true
+next: true
+---
+
+
+# Oefeningen opstellen: opgave en testplan schrijven
+
+Als je in de vorige stap van de handleiding de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
+Hier zullen we nu zelf nog een leesactiviteit toevoegen.
+De bestaande leesactiviteit kan uiteraard als voorbeeld dienen.
+
+## 1. Structuur
+
+Elke leesactiviteit in Dodona komt overeen met een bepaalde map in de repository.
+Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
+
+Maak dus eerst een nieuwe map voor de oefening, die we `markdown_demo` zullen noemen.
+Maak daarna, in deze nieuwe map, de map `description` aan waarin de leesactiviteit komt.
+Maak daarna de map `media` aan in de map `description` waarin de afbeeldingen en andere bestanden komen.
+
+De map voor deze leesactiviteit moet er als volgt uitzien:
+
+```
+repository/
+└── markdown_demo/
+   └── description/
+      └── media/
+```
+
+## 2. Configuratie
+
+Dodona eist voor elke leesactiviteiten ook een [configuratiebestand](/nl/references/exercise-config).
+Dit bestand bevat metadata, die door Dodona gebruikt worden.
+
+Maak het bestand `config.json` in de map `markdown_demo` met de volgende inhoud:
+
+```json
+{
+  "description": {
+    "names": {
+      "en": "Markdown demo",
+      "nl": "Markdown demo"
+    }
+  },
+  "access": "private",
+  "type": "content"
+}
+```
+
+In dit bestand worden drie dingen gespecifieerd:
+
+- `names`: De **namen** van de leesactiviteit zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
+- `acces`: Het **toegangsniveau** is hier _private_. We kiezen voor een private leesactiviteit omdat dit maar een handleiding is, maar we moedigen aan om je leesactiviteiten publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit publieke leesactiviteiten op Dodona).
+- `type`: Moet ingesteld worden op `content` voor leesactiviteiten.
+
+Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
+
+```
+repository/
+└── markdown_demo/
+   ├── description/
+   |  └── media/
+   └── config.json
+```
+
+## 3. Afbeelding of bestand toevoegen
+
+Om een afbeelding toe te voegen heb je twee opties.
+Ofwel verwijs je naar een afbeelding die in de media map staat ofwel verwijs je naar de afbeelding via een link.
+In dit voorbeeld komen beide manieren aan bod.
+
+Download onderstaande afbeelding met het logo van de UGent. Dit is een [directe link](https://styleguide.ugent.be/files/uploads/logo_UGent_NL_RGB_2400_kleur_witbg.png). Rechtsklik op de afbeelding en kies voor `Afbeelding opslaan...`.
+
+![UGent logo](logo_UGent.png)
+
+Rechtsklik op de `media` map in VS Code web en kies voor `Upload...`.
+Selecteer de afbeelding van op je computer en klik op `Openen`.
+
+Verwijzen naar de afbeelding kan met deze markdown code `![UGent logo](logo_UGent.png)` (zie volgende stap).
+
+## 4. Inhoud
+
+De volgende stap is de inhoud van de leesactiviteit.
+Maak een bestand `description.en.md` aan in de map `description` van de leesactiviteit, met volgende inhoud:
+
+````markdown
+# Markdown demo
+
+## Text formatting
+
+This is an example with words in *italics*, **bold**, and ~~striked through~~ and with a variable `a` in function `returnSolution()`.
+
+## Hyperlinks and images
+
+In this sentence, [these words](https://google.com) link to Google.
+Below you can see the Dodona logo.
+
+![Dodona logo](https://dodona.be/icon.png)
+
+![UGent logo](logo_UGent.png)
+
+### Lists
+
+1. item 1
+2. item 2
+3. item 3
+
+* item 1
+* item 2
+* item 3
+
+## Images
+
+[Show image](https://dodona.be/icon.png)
+
+## Math snippets
+
+Some text with symbol $$a$$ and a formula $$x^2$$.
+
+The solution can be found with the following formula:
+$$
+a^2 = b^2 + c^2
+$$
+
+## Code snippets
+
+In your solution, use can use some code `print("text")`{:.language-python}.
+
+
+```console?lang=python&prompt=>>>
+>>> echo("Hello")
+Hello
+>>> echo("Other side")
+Other side
+```
+
+## Callouts
+
+{: .callout.callout-success}
+> #### Hello
+> This is an important message.
+
+## Quotes
+
+Text that is not a quote
+
+> Text that is a quote
+````
+
+Als je ook Nederlandstalige inhoud wilt maken, gebruik je de naam `description.nl.md` voor het tweede bestand.
+De inhoud wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
+
+Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
+
+```
+repository/
+└── markdown_demo/
+   ├── description/
+   |  ├── media/
+   |  └── description.nl.md
+   └── config.json
+```
+
+## 5. Wijzigingen opslaan
+
+Vergeet niet om je wijzigingen te committen, anders gaan ze verloren!
+
+Een voorbeeld van hoe je dit kan doen vind je [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).
+
+## 6. Leesactiviteit controleren
+
+De leesactiviteit die je daarnet gemaakt hebt, kan je terugvinden in [jouw repository](https://dodona.be/nl/repositories/) op Dodona. Controleer de leesactiviteit. Is alles naar wens? Dan kan je bovenaan de leesactiviteit publiceren (_Deze oefening publiceren_). Je leesactiviteit is nu klaar om te gebruiken op Dodona!

@@ -1,7 +1,7 @@
 ---
 title: "Oefeningen opstellen: volgende stappen"
 sidebarTitle: Volgende stappen
-order: 4
+order: 5
 prev: true
 next: false
 ---
