@@ -18,4 +18,8 @@ Als lesgever kan je gebruikmaken van de honderden oefeningen die in Dodona aanwe
 In Dodona is een "oefeningen _repository_" een verzameling oefeningen en leesactiviteiten die beheerd worden in een gelinkte GitHub repository.
 Deze oefeningen kunnen dan gebruikt worden in meerdere "cursussen".
 
-Een "cursus" in Dodona is opnieuw een verzameling oefeningen en leesactiviteiten gestructureerd in reeksen. Hier kan je bijvoorbeeld oefeningen structureren volgens een gewenst leerpad. Cursussen worden volledig beheerd binnen Dodona. Een cursus kan oefeningen van verschillende oefeningen repositories bevatten. Bij een cursus horen ook de ingeschreven studenten. In een cursus kan je deze studenten opvolgen, evaluaties maken, vragen beantwoorden, etc...
+Een "cursus" in Dodona is opnieuw een verzameling oefeningen en leesactiviteiten gestructureerd in reeksen. Hier kan je bijvoorbeeld oefeningen structureren volgens een gewenst leerpad.
+Cursussen worden volledig beheerd binnen Dodona.
+Een cursus kan oefeningen van verschillende oefeningen repositories bevatten.
+Bij een cursus horen ook de ingeschreven studenten.
+In een cursus kan je deze studenten opvolgen, evaluaties maken, vragen beantwoorden, etc...

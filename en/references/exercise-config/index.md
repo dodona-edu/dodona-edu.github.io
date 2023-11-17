@@ -30,7 +30,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 
 ## Config file structure for reading activities
 
-The structure for a reading activity is identical to that of an exercise. There are 2 big differences: the value of `type` must be set to `content` and keys that are not relevant for exercises can be omitted. The format of the description is also identical.
+The structure for a reading activity is identical to that of an exercise. There are two big differences: the value of `type` must be set to `content` and keys that are not relevant for exercises can be omitted. The format of the description is also identical.
 
 - **`type`**: Must be set to `content` for reading activities
 - **`access`** (`public` or `private`): determines who can use this exercise
