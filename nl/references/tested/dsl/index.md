@@ -153,13 +153,13 @@ Het is bijvoorbeeld niet mogelijk om te controleren of een _assertion error_ geb
 
 Specifieert de verwachte returnwaarde.
 
-Afhankelijk van de waarde wordt dit attribuut als volgt geïnterpreteerd:
+Standaard wordt de returnwaarde beschouwd als een YAML-waarde.
+Een string in het testplan zal dus ook een string worden in de testcode.
 
-- Als het een _untagged_ string is, gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
-- Als het een _untagged_ object is, wordt het gezien als de geavanceerde uitvoer voor een orakel.
-- Als het een andere waarde is, wordt het geïnterpreteerd als een YAML-waarde.
+Voor geavanceerde returnwaarden zijn er twee opties:
 
-Met de tags `!v` of `!value` kunnen strings ook gezien worden als YAML-waarden.
+- Een string met de tag `!expression` gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
+- Een object met de tag `!oracle` is het object voor een eigen orakel.
 
 #### `exit_code`
 
@@ -328,15 +328,13 @@ Deze naam is programeertaalafhankelijk:
 
 ## Ondersteunde tags
 
-TESTed ondersteunt de volgende standaardtypes:
+TESTed ondersteunt de volgende standaardtypes van YAML:
 
 - `!!set` om een verzameling te definiëren.
 
-Daarnaast ondersteunt TESTed ook:
-
-- `!v` of `!value` om bij een returnwaarde duidelijk te maken dat het om een YAML-waarde gaat, geen Python-syntaxis.
-
 Tot slot kan ook de naam van elk [TESTed-type](/nl/references/tested/types) gebruikt worden als tag.
+Voorbeelden zijn `!int64` of `!double`.
+Merk op dat eigen types één uitroepteken gebruiken, terwijl standaardtypes er twee gebruiken.
 
 
 ## Spiekbriefje voor YAML

@@ -149,13 +149,13 @@ For example, you cannot check that an assertion error or exception happened.
 
 Specifies the expected return value.
 
-Depending on the value, this attribute is interpreted as:
+By default, this attribute is interpreted as a YAML value.
+For example, a YAML string will result in a literal string value.
 
-- If an untagged string, the string uses the same Python syntax as for [expressions and statements](#expressions-and-statements).
-- If it is an untagged object, it is seen as the advanced output for an oracle.
-- If it is another value, it is interpreted as a YAML value.
+If you need more advanced return values, there are two options:
 
-With the tags `!v` or `!values`, you can mark strings or objects as also being YAML values.
+- string tagged as `!expression` use the same Python syntax as for [expressions and statements](#expressions-and-statements)
+- objects tagged as `!oracle` denote the return value oracle (see below)
 
 #### `exit_code`
 
@@ -321,15 +321,13 @@ This name is programming language dependent:
 
 ## Supported tags
 
-TESTed supports the following standard types:
+TESTed supports the following standard YAML types:
 
 - `!!set` to denote a set.
 
-TESTed also supports:
-
-- `!v` or `!value` to mark a return value as a YAML value.
-
 Finally, all [TESTed types](/en/references/tested/types) can also be used as tags.
+For example `!int64` or `!double`.
+Note that custom types use one exclamation mark, while standard types use two.
 
 
 ## YAML cheat sheet
