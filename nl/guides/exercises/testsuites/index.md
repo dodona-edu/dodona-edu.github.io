@@ -38,18 +38,18 @@ Een voorbeeld van een testplan met alle niveaus is:
   contexts:
     - testcases:
         - expression: 'echo("hello")'
-          return: !v "hello"
+          return: "hello"
     - testcases:
         - expression: 'echo("world")'
-          return: !v "world"
+          return: "world"
 - tab: "Tabblad 2"
   contexts:
     - testcases:
         - expression: 'echo("4")'
-          return: !v "4"
+          return: "4"
     - testcases:
         - expression: 'echo("2")'
-          return: !v "2"
+          return: "2"
 ```
 
 In dit testplan zijn twee analoge tabbladen.
@@ -64,15 +64,15 @@ Daarom is het mogelijk om de contexten weg te laten:
 - tab: "Tabblad 1"
   testcases:
     - expression: 'echo("hello")'
-      return: !v "hello"
+      return: "hello"
     - expression: 'echo("world")'
-      return: !v "world"
+      return: "world"
 - tab: "Tabblad 2"
   testcases:
     - expression: 'echo("4")'
-      return: !v "4"
+      return: "4"
     - expression: 'echo("2")'
-      return: !v "2"
+      return: "2"
 ```
 
 ## Formaat
@@ -96,12 +96,15 @@ Een testgeval met een aantal functieoproepen is:
   return: 1
 ```
 
-Voor returnwaarden zijn er twee opties:
+Een returnwaarde wordt geïnterpreteerd als een YAML-waarde.
+Een string is een string, een getal wordt een getal, enzovoort.
 
-1. Als je een string als returnwaarde opgeeft, gaan we ervan uit dat die string ook de Python-syntaxis gebruikt.
-2. Als je iets anders dan een string (of object) opgeeft, interpreteren we het als een YAML-waarde. Met de tag `!v` of `!value` kan je ook een string laten interpreteren als een YAML-waarde.
+Als je geavanceerde returnwaarden nodig hebt, zijn er twee opties:
 
-Een voorbeeld van een returnwaarde (hier een verzameling getallen) is:
+- Een string met de tag `!expression` betekent dat de string de Python-syntaxis kan gebruiken.
+- Een object met de tag `!oracle` wordt als een [eigen orakel](#eigen-checkfunctie-eigen-orakelfunctie) gezien.
+
+Een voorbeeld van een geavanceerde returnwaarde (hier een verzameling getallen) is:
 
 ```yaml
 - expression: 'unique(1, 1, 2, 3)'
@@ -119,9 +122,9 @@ Om een string als returnwaarde te hebben zijn er dus twee mogelijkheden:
 
 ```yaml
 - expression: 'echo("hello")'
-  return: !v "hallo"  # Een gewone string met als tag !v
+  return: "hallo"  # Een gewone string
 - expression: 'echo("hello")'
-  return: "'hallo'"  # Een string in Python-syntaxis
+  return: !expression "'hallo'"  # Een string in Python-syntaxis
 ```
 
 
@@ -180,7 +183,7 @@ Als we dat in een testplan willen schrijven, wordt dat:
 - tab: "Vandaag"
   testcases:
     - expression: 'vandaag()'
-      return: !v "??????"  # Wat moet er hier komen?
+      return: "??????"  # Wat moet er hier komen?
 ```
 
 De oplossing daarvoor is een eigen orakelfunctie schrijven.
@@ -192,7 +195,7 @@ In het testplan wordt dit dan:
 - tab: "Vandaag"
   testcases:
     - expression: 'vandaag()'
-      return:
+      return: !oracle
         value: "'27-08-2023'"
         oracle: "custom_check"
         language: "python"
@@ -290,7 +293,7 @@ Het is niet verplicht om argumenten te gebruiken:
   testcases:
   - stdin: "Jan"
     expression: "greet()"
-    return: !v "Hello, Jan."
+    return: "Hello, Jan."
 ```
 
 ## Taalspecifieke expressies en statements
@@ -321,7 +324,7 @@ In onderstaande voorbeeld wordt een functie opgeroepen met als argument de som v
       kotlin: "toString(1+1)"
       python: "submission.to_string(1+1)"
       csharp: "Submission.toString(1+1)"
-    return: !v "2"
+    return: "2"
 ```
 
 ::: info Merk op
@@ -339,7 +342,7 @@ Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de ex
   language: "java"
   testcases:
   - expression: "Submission.toString(1+1)"
-    return: !v "2"
+    return: "2"
 ```
 
 ## Bestanden koppelen aan expressies
@@ -357,7 +360,7 @@ In het testplan geef je vervolgens het attribuut `files` mee:
 - tab: "Voorbeeld met bestanden"
   testcases:
   - expression: "lees_het_bestand('bestand.txt')"
-    return: !v "Dit is de inhoud van het bestand"
+    return: "Dit is de inhoud van het bestand"
     files:
       - name: "bestand.txt"
         url: "media/bestand.txt"
