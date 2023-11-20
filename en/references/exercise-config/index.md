@@ -97,7 +97,6 @@ The structure for a reading activity is identical to that of an exercise. There 
     "memory_limit": 100000000
   },
   "programming_language": "python",
-  "author": "Firstname Lastname <firstname_lastname@ugent.be>",
-  "contact": "firstname_lastname@ugent.be"
+  "contact": "Firstname Lastname <firstname_lastname@ugent.be>"
 }
 ```

@@ -97,7 +97,6 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     "memory_limit": 100000000
   },
   "programming_language": "python",
-  "author": "Firstname Lastname <firstname_lastname@ugent.be>",
-  "contact": "firstname_lastname@ugent.be"
+  "contact": "Firstname Lastname <firstname_lastname@ugent.be>"
 }
 ```
