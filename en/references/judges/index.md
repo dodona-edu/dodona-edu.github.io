@@ -6,7 +6,7 @@ order: 6
 
 # Judges
 
-On this page you can find an overview of all judges that are available on Dodona. A judge is a piece of software that is responsible for testing the solutions of students and writing the results in a format that Dodona understands.
+On [this page](https://dodona.be/en/judges/) you can find an overview of all judges that are available on Dodona. A judge is a piece of software that is responsible for testing the solutions of students and writing the results in a format that Dodona understands.
 
 Most judges only support one programming language, but there are also judges like [TESTed](#TESTed) that support multiple programming languages.
 

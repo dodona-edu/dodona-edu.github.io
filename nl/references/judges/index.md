@@ -6,7 +6,7 @@ order: 6
 
 # Judges
 
-Op deze pagina vind je een overzicht van alle judges die beschikbaar zijn op Dodona. Een judge is een stukje software dat verantwoordelijk is om de oplossingen van studenten te testen en de resultaten hiervan weg te schrijven in een formaat dat Dodona begrijpt.
+Op [deze pagina](https://dodona.be/nl/judges/) vind je een overzicht van alle judges die beschikbaar zijn op Dodona. Een judge is een stukje software dat verantwoordelijk is om de oplossingen van studenten te testen en de resultaten hiervan weg te schrijven in een formaat dat Dodona begrijpt.
 
 De meeste judges ondersteunen maar één programmeertaal, maar er zijn ook judges zoals [TESTed](#TESTed) die meerdere programmeertalen ondersteunen.
 
