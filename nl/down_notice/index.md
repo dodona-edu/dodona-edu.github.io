@@ -1,5 +1,5 @@
-# Dodona is currently unavailable
+# Dodona is available again
 
-Due to a UGent wide issue, dodona is currently unavailable. We are working on a solution.
+All issues are resolved.
 
-You can follow up the status of the incident at <a href="https://helpdesk.ugent.be/nieuws/index.php?id=478">the UGent helpdesk</a> or our <a href="https://twitter.com/DodonaEdu">X account</a>.
+Go to [Dodona](https://dodona.be).
