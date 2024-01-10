@@ -2,4 +2,4 @@
 
 All issues are resolved.
 
-Go to [Dodona](dodona.be).
+Go to [Dodona](https://dodona.be).
