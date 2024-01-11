@@ -76,7 +76,7 @@ repository/
 ## 3. Afbeeldingen of bestanden toevoegen
 
 Om een afbeelding toe te voegen heb je twee opties.
-Ofwel verwijs je naar een afbeelding die in de `media` map staat, ofwel verwijs je naar de afbeelding via een link.
+Ofwel verwijs je naar een afbeelding die in de map `media` staat, ofwel verwijs je naar de afbeelding via een link.
 In het voorbeeld komen straks beide manieren aan bod.
 
 Download onderstaande afbeelding met het logo van de UGent. Dit is een [directe link](https://styleguide.ugent.be/files/uploads/logo_UGent_NL_RGB_2400_kleur_witbg.png). Rechtsklik op de afbeelding en kies voor `Afbeelding opslaan...`.
