@@ -166,7 +166,7 @@ Dit is geen quote.
 ````
 
 Als je ook Engelstalige inhoud wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
-De inhoud wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
+De inhoud van leesactiviteiten wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
 
 Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
 
