@@ -110,7 +110,7 @@ Hieronder staat het Dodona-logo afgebeeld via een link.
 
 ![Dodona logo](https://dodona.be/icon.png)
 
-Er wordt rechtstreeks verwezen naar het logo van de UGent in de `media` map.
+Er wordt rechtstreeks verwezen naar het logo van de UGent in de map `media`.
 
 ![UGent logo](media/logo_UGent.png)
 
