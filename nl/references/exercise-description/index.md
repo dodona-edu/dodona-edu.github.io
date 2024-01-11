@@ -261,7 +261,7 @@ Als je Markdown gebruikt, plaats dan *backticks* (\`) rond je code. Je kan ook d
 
 ```markdown
 Gebruik de variabele `some_variable` in je oplossing.
- Gebruik de verkorte notatie `result += 1`{:.language-python}.
+Gebruik de verkorte notatie `result += 1`{:.language-python}.
 ```
 
 ### Blokken code
