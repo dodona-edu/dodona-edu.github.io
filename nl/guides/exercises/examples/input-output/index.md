@@ -61,7 +61,7 @@ In dit bestand worden drie dingen gespecifieerd:
 
 - `names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
 - `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- `acces`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
