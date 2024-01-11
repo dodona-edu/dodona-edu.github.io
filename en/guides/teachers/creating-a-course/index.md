@@ -16,7 +16,7 @@ Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechte
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `CURSUS AANMAKEN` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `MEER CURSUSSEN...`.
+Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Cursus aanmaken` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen...`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -83,7 +83,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
   Als je de registratieprocedure aanpast, dan blijven bestaande registraties voor de cursus gelden en blijven registratieverzoeken voor de cursus openstaan. Je moet zelf de bestaande registratiestatus van cursusgebruikers aanpassen.
   :::
 
-Eenmaal alles naar wens is ingesteld klik je op de knop `CURSUS AANMAKEN` om je cursus definitief aan te maken.
+Eenmaal alles naar wens is ingesteld klik je op de knop `Cursus aanmaken` om je cursus definitief aan te maken.
 
 Na het aanmaken van de nieuwe cursus navigeer je automatisch naar de cursuspagina, waar je kunt vaststellen dat je automatisch geregistreerd bent als cursusgebruiker en dat je aangeduid bent als cursusbeheerder.
 

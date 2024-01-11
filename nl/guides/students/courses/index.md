@@ -17,7 +17,7 @@ Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die c
 
 ### Hoe vind je een cursus?
 
-Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `MEER CURSUSSEN...` of op `VERKEN CURSUSSEN` te klikken.
+Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `Meer cursussen...` of op `Verken cursussen` te klikken.
 
 ![image](./student.explore_courses.png)
 
@@ -29,13 +29,13 @@ Dit zal je naar een [overzicht van alle cursussen](https://dodona.be/nl/courses/
 
 Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd bent, dan zie je bovenaan de cursuspagina een paneel dat aangeeft of en hoe je je voor de cursus kan registreren. Hierbij zijn er drie mogelijkheden afhankelijk van hoe de cursus geconfigureerd werd:
 
--   De cursus werkt met een **open registratieprocedure**, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `REGISTREREN` om je voor de cursus te registreren.
+-   De cursus werkt met een **open registratieprocedure**, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `Registreren` om je voor de cursus te registreren.
 
     ![image](./register.png)
 
 <h1 id="registratieverzoek"/>
 
--   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `REGISTRATIEVERZOEK INDIENEN` om een registratieverzoek voor de cursus in te dienen.
+-   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `Registratieverzoek indienen` om een registratieverzoek voor de cursus in te dienen.
 
     ![image](./moderated_register.png)
 
@@ -119,7 +119,7 @@ Als je **na het verstrijken van de deadline** van een oefeningenreeks een oploss
 
 ## Uitschrijven uit een cursus
 
-Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `UITSCHRIJVEN` (of `REGISTRATIEVERZOEK ANNULEREN`) waarmee je je kunt uitschrijven uit de cursus.
+Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `Uitschrijven` (of `Registratieverzoek annuleren`) waarmee je je kunt uitschrijven uit de cursus.
 
 ![image](./student.unregister.png)
 

@@ -30,7 +30,7 @@ Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeper
 
 ## Een cursus aanmaken
 
-Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop `CURSUS AANMAKEN` te klikken in het [cursusoverzicht](https://dodona.be/nl/courses/).
+Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop `Cursus aanmaken` te klikken in het [cursusoverzicht](https://dodona.be/nl/courses/).
 
 ![cursus aanmaken](./cursus-aanmaken.png)
 
@@ -43,7 +43,7 @@ Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud va
 
 ## Een cursus opstellen
 
-Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebruiken om oefeningen te groeperen. Om een nieuwe oefeningenreeks aan te maken, klik je op de `REEKSEN BEHEREN` knop op je cursuspagina en vervolgens op `REEKS AANMAKEN`. Je krijgt dan onderstaand formulier te zien.
+Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebruiken om oefeningen te groeperen. Om een nieuwe oefeningenreeks aan te maken, klik je op de `Reeksen beheren` knop op je cursuspagina en vervolgens op `Reeks aanmaken`. Je krijgt dan onderstaand formulier te zien.
 
 ![reeks-aanmaken](./reeks-aanmaken.png)
 

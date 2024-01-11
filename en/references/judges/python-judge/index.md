@@ -313,7 +313,7 @@ Er zijn nog meer standaard processors, maar deze zijn nogal specifiek. Ze worden
 
 ### Outputprocessors definiëren
 
-Om een eigen ouput processor te definiëren introduceren we de `DEFINITION` tag. Deze tag laat toe om wat dan ook te definiëren in de scope van de doctest.
+Om een eigen output processor te definiëren introduceren we de `DEFINITION` tag. Deze tag laat toe om wat dan ook te definiëren in de scope van de doctest.
 
 ```python
 >>> my_new_function() #doctest: STDOUT

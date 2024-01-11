@@ -8,7 +8,7 @@ order: 1
 
 > Dodona ondersteunt oefeningbeschrijvingen en leesactiviteiten in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
 
-De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een tekst editor hebben, terwijl leesactiviteiten een `MARKEER ALS GELEZEN` knop hebben.
+De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een tekst editor hebben, terwijl leesactiviteiten een `Markeer als gelezen` knop hebben.
 
 ## Markdown
 
