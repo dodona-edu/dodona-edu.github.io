@@ -106,7 +106,7 @@ Dit is een voorbeeldzin met woorden in *cursief*, **vet** en met variabel `resul
 ## Links en afbeeldingen
 
 Dit is een zin waarbij [deze woorden](https://docs.dodona.be/nl/references/exercise-description/) linken naar de Dodona-handleiding over Markdown.
-Hieronder staat het Dodona logo afgebeeld via een link.
+Hieronder staat het Dodona-logo afgebeeld via een link.
 
 ![Dodona logo](https://dodona.be/icon.png)
 
