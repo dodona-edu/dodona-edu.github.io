@@ -28,6 +28,7 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 ## Oefeningen en leesactiviteiten
 - [Wat is een concept?](./activities/#wat-is-een-conceptactiviteit)
 - [Hoe maak ik nieuwe oefeningen aan?](./activities/#hoe-maak-ik-nieuwe-oefeningen-aan)
+- [Wat is het verschil tussen een cursus en een repository?](./activities/#wat-is-het-verschil-tussen-een-cursus-en-een-repository?)
 
 ## Uitgelichte cursussen
 - [Wat is een uitgelichte cursus?](./featured-courses/#wat-is-een-uitgelichte-cursus)
