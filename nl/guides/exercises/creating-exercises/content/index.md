@@ -73,7 +73,7 @@ repository/
    └── config.json
 ```
 
-## 3. Afbeelding of bestand toevoegen
+## 3. Afbeeldingen of bestanden toevoegen
 
 Om een afbeelding toe te voegen heb je twee opties.
 Ofwel verwijs je naar een afbeelding die in de `media` map staat, ofwel verwijs je naar de afbeelding via een link.
