@@ -83,7 +83,7 @@ Download onderstaande afbeelding met het logo van de UGent. Dit is een [directe 
 
 ![UGent logo](logo_UGent.png)
 
-Rechtsklik op de `media` map in VS Code web en klik op `Upload...`.
+Rechtsklik op de map `media` in VS Code web en klik op `Upload...`.
 Selecteer de afbeelding van op je computer en klik op `Openen`.
 
 Verwijzen naar de afbeelding kan met deze markdown code (zie volgende stap). Het start met een uitroepingsteken (`!`) en tussen de vierkante haken mag je een beschrijving geven van wat er op de afbeelding staat. Tussen de ronde haken staat het pad naar de afbeelding.: \
