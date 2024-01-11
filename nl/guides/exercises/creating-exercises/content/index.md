@@ -89,7 +89,7 @@ Selecteer de afbeelding van op je computer en klik op `Openen`.
 Verwijzen naar de afbeelding als volgt.
 De code start met een uitroepingsteken (`!`) en tussen de vierkante haken zet je een beschrijving van de afbeelding.
 Tussen de ronde haken staat het pad naar de afbeelding.
-`![UGent logo](media/logo_UGent.png)`
+`![Logo van de UGent](media/logo_UGent.png)`
 
 ## 4. Inhoud
 
