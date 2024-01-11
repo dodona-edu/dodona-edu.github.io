@@ -308,7 +308,7 @@ Als je Markdown gebruikt, dan kan Dodona automatisch de code opmaken als je aang
     let b = 42;
     ```
 
-Syntax highlighting voor het Python doctest formaat kan je op deze manier bekomen:
+_Syntax highlighting_ voor interactieve sessies, zoals doctests in Python, kan je op deze manier bekomen:
 
     ```console?lang=python&prompt=>>>
     >>> echo("Hello world!")
