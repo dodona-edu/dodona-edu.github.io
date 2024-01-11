@@ -20,6 +20,6 @@ Deze oefeningen kunnen dan gebruikt worden in meerdere "cursussen".
 
 Een "cursus" in Dodona is opnieuw een verzameling oefeningen en leesactiviteiten gestructureerd in reeksen. Hier kan je bijvoorbeeld oefeningen structureren volgens een gewenst leerpad.
 Cursussen worden volledig beheerd binnen Dodona.
-Een cursus kan oefeningen van verschillende oefeningen repositories bevatten.
+Een cursus kan oefeningen van verschillende oefeningenrepository's bevatten.
 Bij een cursus horen ook de ingeschreven studenten.
 In een cursus kan je deze studenten opvolgen, evaluaties maken, vragen beantwoorden, etc...
