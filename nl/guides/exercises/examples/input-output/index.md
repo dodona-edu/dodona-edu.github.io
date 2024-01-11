@@ -128,7 +128,8 @@ repository/
 ## 4. Een testplan maken
 
 We willen dat deze oefening automatisch getest wordt.
-Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren. Als alle testgevallen geslaagd zijn, is de indiening van de student volgens Dodona correct.
+Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
+Als alle testgevallen geslaagd zijn, is de indiening van de student volgens Dodona correct.
 
 Deze oefening heeft natuurlijk een aantal voor de hand liggende testen, waarbij verschillende namen geprobeerd worden.
 Ook kunnen we eens een naam met cijfers of speciale tekens invullen.
