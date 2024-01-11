@@ -14,10 +14,10 @@ Hier zullen we nu zelf nog een leesactiviteit toevoegen.
 Dit is handig om extra informatie of kleine stukken theorie te integreren in je leerpad.
 De bestaande leesactiviteit kan uiteraard als voorbeeld dienen.
 
-{: .callout.callout-success}
-> #### Een leesactiviteit lijkt goed op een oefening
-> De structuur en `config.json` voor een leesactiviteit zijn identiek aan deze van een oefening.
-> Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en alles die specifiek voor oefeningen is, mag achterwege gelaten worden.
+::: info Analoog aan een oefening
+De structuur en `config.json` voor een leesactiviteit zijn identiek aan deze van een oefening.
+Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en alles die specifiek voor oefeningen is, mag achterwege gelaten worden.
+:::
 
 ## 1. Structuur
 
