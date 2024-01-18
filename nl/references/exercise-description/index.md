@@ -12,7 +12,7 @@ order: 1
 Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je in [dit overzicht](https://kramdown.gettalong.org/quickref.html) vinden.
 :::
 
-De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een tekst editor hebben, terwijl leesactiviteiten een `Markeer als gelezen` knop hebben.
+De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een teksteditor hebben, terwijl leesactiviteiten een knop `Markeer als gelezen` hebben.
 
 ## Markdown
 
