@@ -21,7 +21,6 @@ In this FAQ section you will find answers to the most frequently asked questions
 ## Exercises and reading activities
 - [What is a draft activity?](./activities/#what-is-a-draft-activity)
 - [How do I create new exercises?](./activities/#how-do-i-create-new-exercises)
-- [What is the difference between a course and a repository?](./activities/what-is-the-difference-between-a-course-and-a-repository)
 
 ## Featured courses
 - [What is a featured courses?](./featured-courses/#what-is-a-featured-course)
