@@ -8,8 +8,8 @@ order: 1
 
 > Dodona supports exercise descriptions and reading activities in HTML and Markdown with several additional features such as support for mathematical formulas.
 
-::: tip Kramdown
-Dodona uses [kramdown](https://kramdown.gettalong.org) to render Markdown, which supports a lot of extensions to the standard Markdown. Advanced users can find in [this overview](https://kramdown.gettalong.org/quickref.html) more explanation on how this advanced formatting works.
+::: tip Kramdown <Badge type="warning" text="advanced" />
+Dodona uses [kramdown](https://kramdown.gettalong.org) to render Markdown, which supports a lot of extensions to the standard Markdown. Advanced users can find in [this overview](https://kramdown.gettalong.org/quickref.html) more explanation on how this formatting works.
 :::
 
 These features are available for both exercises and reading activities. They are rendered in exactly the same way. The only difference is that exercises have a text editor at the bottom of the exercise description, where a reading activity has a `Mark as read` button.

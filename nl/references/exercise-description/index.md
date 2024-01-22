@@ -8,8 +8,8 @@ order: 1
 
 > Dodona ondersteunt oefeningbeschrijvingen en leesactiviteiten in HTML en Markdown met verschillende extra features zoals ondersteuning voor wiskundige formules.
 
-::: tip Kramdown
-Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Gevorderde gebruikers kunnen in [dit overzicht](https://kramdown.gettalong.org/quickref.html) meer uitleg vinden over hoe deze geavanceerde formattering werkt.
+::: tip Kramdown <Badge type="warning" text="geavanceerd" />
+Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Gevorderde gebruikers kunnen in [dit overzicht](https://kramdown.gettalong.org/quickref.html) meer uitleg vinden over hoe deze formattering werkt.
 :::
 
 De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een teksteditor hebben, terwijl leesactiviteiten een knop `Markeer als gelezen` hebben.
