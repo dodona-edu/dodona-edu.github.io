@@ -1,7 +1,7 @@
 ---
 title: Oefening met invoer-uitvoer
 sidebarTitle: "Invoer-uitvoer"
-order: 1
+order: 2
 ---
 
 # Oefening met invoer en uitvoer

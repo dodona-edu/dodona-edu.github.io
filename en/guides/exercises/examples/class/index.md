@@ -1,7 +1,7 @@
 ---
 title: Exercises with classes
 sidebarTitle: Classes
-order: 3
+order: 4
 ---
 
 This guide is not yet available in English.

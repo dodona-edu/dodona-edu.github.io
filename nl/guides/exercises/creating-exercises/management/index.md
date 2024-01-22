@@ -1,7 +1,7 @@
 ---
 title: "Oefeningen opstellen: volgende stappen"
 sidebarTitle: Volgende stappen
-order: 5
+order: 4
 prev: true
 next: false
 ---
@@ -13,6 +13,7 @@ Hieronder enkele suggesties voor volgende stappen:
 
 - [Maak een cursus aan](/nl/guides/teachers/creating-a-course/).
 - [Gebruik je oefening in een oefeningenreeks van een cursus](/nl/guides/teachers/exercise-series-management/).
+- Maak [leesactiviteiten](/nl/guides/exercises/examples/content/) met extra informatie of kleine stukken theorie.
 - Maak nog andere soorten oefeningen.
 
 Veel plezier met het gebruik van Dodona!

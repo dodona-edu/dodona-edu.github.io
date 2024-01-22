@@ -1,15 +1,13 @@
 ---
-title: "Oefeningen opstellen: leesactiviteit"
+title: "Leesactiviteit"
 sidebarTitle: Leesactiviteit
-order: 4
-prev: true
-next: true
+order: 1
 ---
 
 
 # Oefeningen opstellen: leesactiviteit
 
-Als je in de vorige stap van de handleiding de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
+Als je in de [handleiding](/nl/guides/exercises/creating-exercises/introduction/) de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
 Hier zullen we nu zelf nog een leesactiviteit toevoegen.
 Dit is handig om extra informatie of kleine stukken theorie te integreren in je leerpad.
 De bestaande leesactiviteit kan uiteraard als voorbeeld dienen.

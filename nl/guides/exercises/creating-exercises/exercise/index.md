@@ -1,7 +1,7 @@
 ---
 title: "Oefeningen opstellen: opgave en testplan schrijven"
 sidebarTitle: Opgave en testplan
-order: 3
+order: 2
 prev: true
 next: true
 ---

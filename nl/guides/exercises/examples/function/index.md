@@ -1,7 +1,7 @@
 ---
 title: Oefening met functies
 sidebarTitle: Functies
-order: 2
+order: 3
 ---
 
 # Oefening met functies

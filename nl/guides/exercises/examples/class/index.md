@@ -1,7 +1,7 @@
 ---
 title: Oefening met klassen
 sidebarTitle: Klassen
-order: 3
+order: 4
 ---
 
 # Oefening met klassen
