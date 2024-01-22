@@ -368,4 +368,11 @@ Om een spoiler te gebruiken, maak je een `details` element aan met daarin een `s
 </details>
 ```
 
-Merk op dat je geen Markdown kan gebruiken in een spoiler. Als je toch wat opmaak wil toevoegen, kan je HTML gebruiken.
+Merk op dat je geen Markdown kan gebruiken in een html tag zoals `<details>`. Indien je Markdown wil gebruiken, moet je `markdown="1"` toevoegen aan de tag.
+
+```html
+<details markdown="1">
+    <summary>Toggle me!</summary>
+    Peek a **boo**!
+</details>
+```

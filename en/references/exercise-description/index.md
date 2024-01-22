@@ -363,4 +363,11 @@ To use a spoiler, create a `details` element, containing a `summary` element and
 </details>
 ```
 
-Note that you can't use Markdown inside a spoiler. If you want to add some formatting, you can use HTML.
+Note that you can't use Markdown inside a HTML tag like this. If you want to use Markdown inside a spoiler, you can use the following syntax:
+
+```html
+<details markdown="1">
+    <summary>Toggle me!</summary>
+    Peek a **boo**!
+</details>
+```
