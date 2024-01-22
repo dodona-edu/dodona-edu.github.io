@@ -317,7 +317,7 @@ Using Markdown, Dodona can automatically add syntax highlighting if you provide 
     let a = 5;
     let b = 42;
     ```
-Syntax highlighting for the Python doctest format can be obtained this way:
+Python doctests aren't properly highlighted by default. As a workaround, you can set the language to `console?lang=python&prompt=>>>`:
 
     ```console?lang=python&prompt=>>>
     >>> echo("Hello world!")
