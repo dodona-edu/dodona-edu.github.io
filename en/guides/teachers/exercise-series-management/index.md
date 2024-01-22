@@ -129,7 +129,7 @@ Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren o
 
  ![scoresheet](./staff.scoresheet.png)
 
-  Klik op de naam van een cursusgebruiker om naar de overzichtpagina van de gebruiker te navigeren.
+  Klik op de naam van een cursusgebruiker om naar de overzichtspagina van de gebruiker te navigeren.
 
   Klik op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
 

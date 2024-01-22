@@ -42,9 +42,9 @@ Dodona biedt een interactieve versie van dit boek, beschikbaar in zowel het [Ned
 
 ---
 
-### Python-oefeningen bij Youtube-video's UHasselt
+### Python-oefeningen bij YouTube-video's UHasselt
 
-**Python-oefeningen bij Youtube videoreeks UHasselt** is een inleidende Python-cursus die een reeks [YouTube-video's](https://www.youtube.com/playlist?list=PL2iW_rkiCt7UqxL47lGkBaTgApj_QHJ0K) combineert met oefeningen op Dodona. De cursus is gemaakt door Dirk Peeters.
+**Python-oefeningen bij YouTube videoreeks UHasselt** is een inleidende Python-cursus die een reeks [YouTube-video's](https://www.youtube.com/playlist?list=PL2iW_rkiCt7UqxL47lGkBaTgApj_QHJ0K) combineert met oefeningen op Dodona. De cursus is gemaakt door Dirk Peeters.
 
 De cursus is alleen beschikbaar in het [Nederlands](https://dodona.be/nl/courses/290/).
 

@@ -58,8 +58,8 @@ The course is only available in [English](https://dodona.be/en/courses/345/).
 
 ---
 
-### Python-oefeningen bij Youtube videoreeks UHasselt
+### Python-oefeningen bij YouTube videoreeks UHasselt
 
-**Python-oefeningen bij Youtube videoreeks UHasselt** is an introductory Python course that combines a series of [YouTube videos](https://www.youtube.com/playlist?list=PL2iW_rkiCt7UqxL47lGkBaTgApj_QHJ0K) with exercises on Dodona. The course was created by Dirk Peeters.
+**Python-oefeningen bij YouTube videoreeks UHasselt** is an introductory Python course that combines a series of [YouTube videos](https://www.youtube.com/playlist?list=PL2iW_rkiCt7UqxL47lGkBaTgApj_QHJ0K) with exercises on Dodona. The course was created by Dirk Peeters.
 
 The course is only available in [Dutch](https://dodona.be/nl/courses/290/).

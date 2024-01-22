@@ -65,6 +65,6 @@ Afhankelijk van de ingestelde [registratieprocedure](../creating-a-course/#cursu
   Deze gebruiker kan je terug inschrijven voor de cursus door te klikken op ![register](../../../../images/staff_registration_icons/register.png)
 
 ## Studenten opvolgen
-Om de voortgang van een individuele student op te volgen is er een overzichtpagina per student voorzien. Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op de naam van een student te klikken. Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.
+Om de voortgang van een individuele student op te volgen is er een overzichtspagina per student voorzien. Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op de naam van een student te klikken. Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.
 
 ![cursusoverzicht](./staff.user_course_overview.png)
