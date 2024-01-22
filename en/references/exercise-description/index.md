@@ -346,3 +346,21 @@ In Markdown, prefix each line with a `>`:
 ```markdown
 > This is a quote.
 ```
+
+## Spoilers
+
+To hide a part of your exercise description, you can use a spoiler. This will result in an element like this:
+
+![img.png](spoiler_closed.png)
+![img.png](spoiler_open.png)
+
+To use a spoiler, create a `details` element, containing a `summary` element and some content.
+
+```html
+<details>
+    <summary>Toggle me!</summary>
+    Peek a boo!
+</details>
+```
+
+Note that you can't use Markdown inside a spoiler. If you want to add some formatting, you can use HTML.
