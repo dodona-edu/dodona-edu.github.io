@@ -23,6 +23,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  VITE_EXTRA_EXTENSIONS: pub
+
 jobs:
   # Build job
   build:
