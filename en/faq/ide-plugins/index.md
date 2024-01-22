@@ -42,7 +42,7 @@ After successfully installing the Dodona plugin for PyCharm, you can follow thes
 
 2. **Submit your solution**: After solving the exercise, you can submit your solution directly from PyCharm. Look for a blue check mark in the top right corner of the interface.
   ![submit to dodona](./pc-check-mark.png)
-  Clicking this button will submit your code to Dodona and trigger an automatic check. Shortly after submission, you should see a popup in the bottom right corner showing the result of your submission.
+  Clicking this button will submit your code to Dodona and trigger an automatic check. Shortly after submission, you should see a pop-up in the bottom right corner showing the result of your submission.
   ![correct solution](./pc-correct.png)
   If you want to see more details about the result, click on the 'more details' link to open the result in a new browser version. If you would like to resubmit, simply click on the blue check mark again. Remember, you can submit your solution as many times as you like.
 
@@ -78,5 +78,5 @@ To use the Dodona VS Code extension, follow these steps:
 2. **Submit your solution:** Once you've solved the exercise, you can easily submit your solution by using the 'Submit to Dodona' command. You can do this by opening the command palette with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, typing (part of) `Submit to Dodona` and pressing <kbd>Enter</kbd>. You can also create a shortcut for this command. This command will submit your code to Dodona and trigger an automatic test.
   ![Submit](./vs-submit.png)
 
-3. **Check the result:** After a few seconds, a popup should appear in the bottom right corner showing the result of your submission. Clicking the 'View results' button will open the result in a new browser window. You can submit your solution as many times as you like by repeating the same command.
+3. **Check the result:** After a few seconds, a pop-up should appear in the bottom right corner showing the result of your submission. Clicking the 'View results' button will open the result in a new browser window. You can submit your solution as many times as you like by repeating the same command.
   ![correct solution](./vs-correct.png)

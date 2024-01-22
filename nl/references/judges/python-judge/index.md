@@ -468,7 +468,7 @@ languages)" and None
 
 ### Bestanden
 
-Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een popup. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gebruikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
+Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een pop-up. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gebruikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
 
 -   Ingebed
 

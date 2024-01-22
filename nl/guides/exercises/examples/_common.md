@@ -111,7 +111,7 @@ repository/
 
 We willen dat deze oefening automatisch getest wordt.
 Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
-Als alle testgevallen geslaagd zijn, is de indiening van de student volgens Dodona correct.
+Als alle testgevallen geslaagd zijn, is de ingediende oplossing van de student volgens Dodona correct.
 
 In dit geval houden we het testplan kort, met slechts een beperkt aantal testgevallen.
 In een echte oefening wil je waarschijnlijk meer testgevallen voorzien.
