@@ -2,6 +2,9 @@ name: CI
 
 on: [push]
 
+env:
+  VITE_EXTRA_EXTENSIONS: pub
+
 jobs:
   jekyll:
     name: Build site
