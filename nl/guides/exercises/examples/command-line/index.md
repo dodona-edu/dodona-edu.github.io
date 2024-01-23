@@ -1,15 +1,15 @@
 ---
 title: Oefening op commandoregel
 sidebarTitle: Commandoregel
-order: 4
+order: 5
 ---
 
 # Oefening op de commandoregel
 
-In deze handleiding stellen we een oefening op die gebruik maakt argumenten op de commandoregel.
+In deze handleiding stellen we een oefening op die gebruik maakt van argumenten op de commandoregel.
 
 We zullen een programma implementeren dat een aantal getallen binnenkrijgt als argumenten op de commandoregel.
-Het programma moet vervolgens de som van deze getallen uitschrijven op stdout.
+Het programma moet vervolgens de som van deze getallen uitschrijven op _stdout_.
 
 We gaan er in deze handleiding van uit dat je al een werkende oefeningenrepository hebt.
 Is dat niet het geval, volg dan eerst de handleiding [_Oefeningen opstellen_](/nl/guides/exercises/creating-exercises/introduction/).
@@ -22,8 +22,8 @@ Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenreposi
 Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
 
 Maak dus eerst een nieuwe map voor de oefening, die we `sum` zullen noemen.
-Maak daarna, in deze nieuwe map, nog twee mappen:
-- `description`: de map waarin de opgave komt
+Maak daarna, in deze nieuwe map, nog drie mappen:
+- `description`: map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
 - `solution`: map waarin een voorbeeldoplossing komt
 
@@ -42,7 +42,7 @@ repository/
 Dodona eist voor elke oefeningen ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
-Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
+Maak het bestand `config.json` in de map `sum` met de volgende inhoud:
 
 ```json
 {
@@ -59,10 +59,9 @@ Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
 
 In dit bestand worden drie dingen gespecifieerd:
 
-- De naam van de oefening zoals getoond door Dodona in het Nederlands en in het Engels.
-- We stellen de naam van het testplan in (later meer hierover). Dit is een bestand relatief ten opzicht van de map `evaluation`.
-- De programmeertaal van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- Het toegangsniveau: hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- `names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_).
+- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
@@ -101,7 +100,7 @@ invalid arguments
 ```
 ````
 
-De `nl` in de naam van de opgave kan je vervangen door `en` als je ook een Engelstalige opgave wilt maken.
+Als je ook een Engelstalige opgave wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
 De opgave zelf wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
 
 We voegen ook direct een voorbeeldoplossing toe.
@@ -143,6 +142,7 @@ repository/
 
 We willen dat deze oefening automatisch getest wordt.
 Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
+Als alle testgevallen geslaagd zijn, is de ingediende oplossing van de student volgens Dodona correct.
 
 Om dit kort te houden, beperken we ons testplan tot een aantal testen.
 Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
@@ -175,6 +175,6 @@ repository/
 
 ## 5. Wijzigingen opslaan
 
-Vergeet niet om je wijzigingen te committen, anders gaan ze verloren!
+Vergeet niet om je wijzigingen te _committen_, anders gaan ze verloren!
 
-Een voorbeeld van hoe je dit kan doen vind je in [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).
+Een voorbeeld van hoe je dit kan doen vind je [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).

@@ -39,7 +39,7 @@ Using the ctrl button (or command on a Mac) on your keyboard, you can select one
 
 ## 4. Select 'Open as external resource'
 
-After clicking on the `confirm` button, the dialog closes and the chosen exercises should appear on Ufora. **Watch out!** You're not done yet. By default, Ufora will open links to Dodona in a small inline window. You can easily fix this:
+After clicking on the `Confirm` button, the dialog closes and the chosen exercises should appear on Ufora. **Watch out!** You're not done yet. By default, Ufora will open links to Dodona in a small inline window. You can easily fix this:
 - Click on the arrow next to the exercise name
 - Click on `Edit Properties In-place`
 - Select the `Open as External Resource` checkbox

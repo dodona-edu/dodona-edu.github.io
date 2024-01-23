@@ -13,8 +13,8 @@ Hieronder enkele suggesties voor volgende stappen:
 
 - [Maak een cursus aan](/nl/guides/teachers/creating-a-course/).
 - [Gebruik je oefening in een oefeningenreeks van een cursus](/nl/guides/teachers/exercise-series-management/).
+- Maak [leesactiviteiten](/nl/guides/exercises/examples/content/) met extra informatie of kleine stukken theorie.
 - Maak nog andere soorten oefeningen.
-- Maak [leesactiviteiten](/nl/references/exercise-config/) met extra informatie of kleine stukken theorie.
 
 Veel plezier met het gebruik van Dodona!
 Zoals steeds, als je vragen hebt of iets is niet duidelijk, aarzel dan niet om [ons te contacteren](https://dodona.be/nl/contact/).

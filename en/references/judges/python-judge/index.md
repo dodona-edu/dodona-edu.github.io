@@ -313,7 +313,7 @@ Er zijn nog meer standaard processors, maar deze zijn nogal specifiek. Ze worden
 
 ### Outputprocessors definiëren
 
-Om een eigen ouput processor te definiëren introduceren we de `DEFINITION` tag. Deze tag laat toe om wat dan ook te definiëren in de scope van de doctest.
+Om een eigen output processor te definiëren introduceren we de `DEFINITION` tag. Deze tag laat toe om wat dan ook te definiëren in de scope van de doctest.
 
 ```python
 >>> my_new_function() #doctest: STDOUT
@@ -465,7 +465,7 @@ languages)" and None
 
 ### Bestanden
 
-Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een popup. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gebruikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
+Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een pop-up. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gebruikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
 
 -   Ingebed
 
@@ -483,7 +483,7 @@ Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bes
 -   Open bestaand bestand
 
     Deze vorm zorgt voor bestaande bestanden. Zo kan de inhoud gelinkt worden aan
-    de popup.
+    de pop-up.
 
     ``` xml
     <FILE name="text.txt" src="/temp/text.txt" />

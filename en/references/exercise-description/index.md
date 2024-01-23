@@ -8,7 +8,11 @@ order: 1
 
 > Dodona supports exercise descriptions and reading activities in HTML and Markdown with several additional features such as support for mathematical formulas.
 
-These features are available for both exercises and reading activities. They are rendered in exactly the same way. The only difference is that exercises have a text editor at the bottom of the exercise description, where a reading activity has a `MARK AS READ` button.
+::: tip Kramdown <Badge type="warning" text="advanced" />
+Dodona uses [kramdown](https://kramdown.gettalong.org) to render Markdown, which supports a lot of extensions to the standard Markdown. Advanced users can find in [this overview](https://kramdown.gettalong.org/quickref.html) more explanation on how this formatting works.
+:::
+
+These features are available for both exercises and reading activities. They are rendered in exactly the same way. The only difference is that exercises have a text editor at the bottom of the exercise description, where a reading activity has a `Mark as read` button.
 
 ## Markdown
 
@@ -79,6 +83,18 @@ Which results in:
 ## Images
 
 To use images in your description, be sure to put the images in the `description/media/` [directory](/en/references/exercise-directory-structure) of your exercise.
+
+### Set size
+
+It is possible to set the size of the image using both HTML and kramdown.
+
+```html
+<img src="https://dodona.be/icon.png" alt="Dodona logo" width="25%">
+```
+
+```markdown
+![Dodona logo](https://dodona.be/icon.png){:width="25%"}
+```
 
 ### Lightboxes
 
@@ -249,13 +265,13 @@ You can easily render code fragments in a monospaced font with syntax highlighti
 When using HTML, wrap your code with `<code>` and `</code>`:
 
 ```html
-In your solution, you can use variable <code>someVariable</code>.
+In your solution, you can use variable <code>some_variable</code>.
 ```
 
-In Markdown, wrap your code with backticks (\`):
+In Markdown, wrap your code with backticks (\`). You can even add the programming language's syntax highlighting with `{:.language-python}` for example.
 
 ```markdown
-In your solution, use can use variable `someVariable`.
+In your solution, use can use variable `some_variable`. Use the abbreviated notation `result += 1`{:.language-python}.
 ```
 
 ### Code blocks
@@ -300,6 +316,14 @@ Using Markdown, Dodona can automatically add syntax highlighting if you provide 
     ```javascript
     let a = 5;
     let b = 42;
+    ```
+Python doctests aren't properly highlighted by default. As a workaround, you can set the language to `console?lang=python&prompt=>>>`:
+
+    ```console?lang=python&prompt=>>>
+    >>> echo("Hello world!")
+    "Hello world!"
+    >>> echo(5)
+    5
     ```
 
 ## Callouts

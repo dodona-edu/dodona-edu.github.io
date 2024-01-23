@@ -13,3 +13,4 @@ Op de startpagina van Dodona kan je al jouw concepten terugvinden onder _Ongepub
 
 ## Hoe maak ik nieuwe oefeningen aan? <Badge type="tip" text="lesgever" />
 Als lesgever kan je gebruikmaken van de honderden oefeningen die in Dodona aanwezig zijn, maar je kan ook zelf nieuwe oefeningen aanmaken. Je kan hiervoor [dit stappenplan](/nl/guides/exercises/creating-exercises/introduction) volgen.
+

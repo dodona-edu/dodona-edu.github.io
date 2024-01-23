@@ -22,7 +22,7 @@ Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cu
 
 Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../creating-a-course/#cursuseigenschappen).
 
-Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen op te slaan. Alternatief kan je ook op de `AANPASSEN` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
+Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen op te slaan. Alternatief kan je ook op de `Aanpassen` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
 
 ![image](./staff.course_after_edit.png)
 
@@ -49,7 +49,7 @@ Als je klikt op het filter-icoontje voor de naam van een student of oefening, da
 Deze oplossingen kan je ook op andere manieren bereiken:
 
 * Een overzicht van de oplossingen voor een **specifieke oefening** vind je door op de cursuspagina op het pijltje rechts van een oefening te klikken.
-* Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `OPLOSSINGEN` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
+* Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `Oplossingen` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
 In het oplossingenoverzicht vindt je rechts van de filterbalk een knop met 3 puntjes. In het menu vindt je enkele acties en filter:
 

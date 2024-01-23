@@ -42,7 +42,7 @@ Nadat je de Dodona-plugin voor PyCharm met succes hebt geïnstalleerd, kun je de
 
 2. **Stuur je oplossing in**: Nadat je de oefening hebt opgelost, kun je je oplossing direct vanuit PyCharm indienen. Zoek hiervoor een blauw vinkje in de rechterbovenhoek van de interface.
   ![submit to dodona](./pc-check-mark.png)
-  Als je op deze knop klikt, wordt je code verzonden naar Dodona en automatisch gecontroleerd. Kort na het indienen zou je rechtsonder een popup moeten zien met het resultaat van je indiening.
+  Als je op deze knop klikt, wordt je code verzonden naar Dodona en automatisch gecontroleerd. Kort na het indienen zou je rechtsonder een pop-up moeten zien met het resultaat van je ingediende oplossing.
   ![juiste oplossing](./pc-correct.png)
   Als je meer details over het resultaat wilt zien, klik dan op de link 'more details' om het resultaat in een nieuwe browserversie te openen. Als je opnieuw wilt indienen, klik je gewoon weer op het blauwe vinkje. Onthoud dat je zo vaak kan indienen als je wil.
 
@@ -77,5 +77,5 @@ Volg deze stappen om de Dodona VS Code extensie te gebruiken:
 2. **Stuur je oplossing in:** Als je de oefening hebt opgelost, kun je je oplossing eenvoudig insturen met het 'Submit to Dodona' commando. Je kunt dit doen door het opdrachtenpalet te openen met <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, (een deel van) `Submit to Dodona` in te typen en op <kbd>Enter</kbd> te drukken. Je kunt ook een snelkoppeling maken voor dit commando. Deze opdracht stuurt je code naar Dodona en activeert een automatische test.
   ![Submit](./vs-submit.png)
 
-3. **Controleer het resultaat:** Na een paar seconden zou er rechtsonder een popup moeten verschijnen met het resultaat van je oplossing. Als je op de knop 'View results' klikt, wordt het resultaat in een nieuw browservenster geopend. Je kunt je oplossing zo vaak als je wilt insturen door hetzelfde commando te herhalen.
+3. **Controleer het resultaat:** Na een paar seconden zou er rechtsonder een pop-up moeten verschijnen met het resultaat van je oplossing. Als je op de knop 'View results' klikt, wordt het resultaat in een nieuw browservenster geopend. Je kunt je oplossing zo vaak als je wilt insturen door hetzelfde commando te herhalen.
   ![juiste oplossing](./vs-correct.png)

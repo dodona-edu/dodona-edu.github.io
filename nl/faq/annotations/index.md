@@ -59,7 +59,7 @@ Je zal ook een melding zien in de bovenste navigatiebalk van je cursus. Klik op 
 
 ![img.png](./course_question_list.png)
 
-Als je alle open vragen over al je cursussen wil zien, kan je naar de pagina `vragen` gaan in de linkse navigatiebalk van Dodona.
+Als je alle open vragen over al je cursussen wil zien, kan je naar de pagina `Vragen` gaan in de linkse navigatiebalk van Dodona.
 
 ![img.png](./questions_index_page.png)
 
@@ -86,11 +86,11 @@ Je kan een algemene opmerking toevoegen door op de knop `Globale opmerking toevo
 ## Hoe kan ik opmerkingen opslaan en hergebruiken? <Badge type="tip" text="lesgever" />
 Studenten maken vaak dezelfde fouten, of hebben gelijkaardige vragen. Om te vermijden dat je dezelfde opmerkingen steeds opnieuw moet schrijven, kan je opmerkingen hergebruiken.
 
-Tijdens het schrijven of bewerken van een opmerking kan je `opmerking opslaan` aanvinken. Dit zal je toelaten om een titel toe te voegen aan de opmerking, wat je zal helpen om de opmerking in de toekomst terug te vinden.
+Tijdens het schrijven of bewerken van een opmerking kan je `Sla opmerking op` aanvinken. Dit zal je toelaten om een titel toe te voegen aan de opmerking, wat je zal helpen om de opmerking in de toekomst terug te vinden.
 
 ![Save comment while writing](./save-comment-edit.png)
 
-Je kan ook een bestaande opmerking opslaan door op `opmerking opslaan` te klikken in het menu van de opmerking.
+Je kan ook een bestaande opmerking opslaan door op `Opmerking opslaan` te klikken in het menu van de opmerking.
 
 ![Save existing comment](save-comment-edit.png)
 

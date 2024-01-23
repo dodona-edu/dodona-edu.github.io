@@ -1,7 +1,7 @@
 ---
 title: Oefening met functies
 sidebarTitle: Functies
-order: 2
+order: 3
 ---
 
 # Oefening met functies
@@ -18,6 +18,6 @@ Is dat niet het geval, volg dan eerst de handleiding [_Oefeningen opstellen_](/n
 
 ## 5. Wijzigingen opslaan
 
-Vergeet niet om je wijzigingen te committen, anders gaan ze verloren!
+Vergeet niet om je wijzigingen te _committen_, anders gaan ze verloren!
 
-Een voorbeeld van hoe je dit kan doen vind je in [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).
+Een voorbeeld van hoe je dit kan doen vind je [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).

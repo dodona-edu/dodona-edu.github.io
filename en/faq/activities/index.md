@@ -13,3 +13,4 @@ On the home page of Dodona, you can find all your drafts under _Draft exercises_
 
 ## How do I create new exercises? <Badge type="tip" text="teacher" />
 As a teacher, you can use the hundreds of exercises that are available in Dodona, but you can also create new exercises yourself. You can follow [this guide](/en/guides/exercises/creating-exercises/introduction) for this.
+

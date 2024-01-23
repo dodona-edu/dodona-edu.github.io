@@ -1,7 +1,7 @@
 ---
 title: Oefening met klassen
 sidebarTitle: Klassen
-order: 3
+order: 4
 ---
 
 # Oefening met klassen
@@ -21,8 +21,8 @@ Elke oefening in Dodona komt overeen met een bepaalde map in de oefeningenreposi
 Die map heeft een [vaste structuur](/nl/references/exercise-directory-structure), die we nu zullen maken.
 
 Maak dus eerst een nieuwe map voor de oefening, die we `counter` zullen noemen.
-Maak daarna, in deze nieuwe map, nog twee mappen:
-- `description`: de map waarin de opgave komt
+Maak daarna, in deze nieuwe map, nog drie mappen:
+- `description`: map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
 - `solution`: map waarin een voorbeeldoplossing komt
 
@@ -58,10 +58,9 @@ Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
 
 In dit bestand worden drie dingen gespecifieerd:
 
-- De naam van de oefening zoals getoond door Dodona in het Nederlands en in het Engels.
-- We stellen de naam van het testplan in (later meer hierover). Dit is een bestand relatief ten opzicht van de map `evaluation`.
-- De programmeertaal van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- Het toegangsniveau: hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- `names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_).
+- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- `acces`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
@@ -108,7 +107,7 @@ Daarnaast moet de klasse de volgende methoden ondersteunen:
 ```
 ````
 
-De `nl` in de naam van de opgave kan je vervangen door `en` als je ook een Engelstalige opgave wilt maken.
+Als je ook een Engelstalige opgave wilt maken, gebruik je de naam `description.en.md` voor het tweede bestand.
 De opgave zelf wordt geschreven in Markdown, een redelijk eenvoudig opmaakformaat. Meer informatie over Markdown is [hier](/nl/references/exercise-description) te vinden.
 
 We voegen ook direct een voorbeeldoplossing toe.
@@ -147,7 +146,7 @@ repository/
 ## 4. Een testplan maken
 
 We willen dat deze oefening automatisch getest wordt.
-Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren.
+Hiervoor moeten we een testplan schrijven, waarin we Dodona vertellen welke testen we allemaal willen uitvoeren. Als alle testgevallen geslaagd zijn, is de ingediende oplossing van de student volgens Dodona correct.
 
 Om dit kort te houden, beperken we ons testplan tot een aantal testen.
 Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
@@ -159,7 +158,7 @@ Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
         - statement: "counter = Counter(5)"
         - statement: "counter.report()"
           stdout: "5"
-        - expression: "counter.count()"
+        - statement: "counter.count()"
         - statement: "counter.report()"
           stdout: "6"
         - statement: "counter.count().count().count().count().report()"
@@ -185,6 +184,6 @@ repository/
 
 ## 5. Wijzigingen opslaan
 
-Vergeet niet om je wijzigingen te committen, anders gaan ze verloren!
+Vergeet niet om je wijzigingen te _committen_, anders gaan ze verloren!
 
-Een voorbeeld van hoe je dit kan doen vind je in [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).
+Een voorbeeld van hoe je dit kan doen vind je [hier](/nl/guides/exercises/creating-exercises/exercise/#_5-wijzigingen-opslaan).

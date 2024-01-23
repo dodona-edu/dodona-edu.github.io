@@ -245,7 +245,7 @@ Dit testplan definieert zegt:
 1. Alle feedback is verzameld in één tabblad met naam _Echo_.
 2. Het tabblad bevat feedback voor één testgeval.
 3. Het testgeval roept we de functie `echo` op met een string `"input-1"` als argument.
-4. Het verwachte resultaat is dat de tekst `input-1` op stdout geschreven wordt.
+4. Het verwachte resultaat is dat de tekst `input-1` op _stdout_ geschreven wordt.
 
 Nu ziet de bestandsstructuur er als volgt uit:
 

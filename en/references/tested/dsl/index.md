@@ -73,7 +73,7 @@ In most cases, it is fine to leave the description empty.
 Each context must have at least one test case.
 Since each context is executed separately, the following two constraints apply:
 
-- Only the first test case may have a "main call", i.e. command line arguments or stdin.
+- Only the first test case may have a "main call", i.e. command line arguments or _stdin_.
 - Only the last test case may have a test for the program's exit code.
 
 Do note that the first and last test case may be the same one:
@@ -84,7 +84,7 @@ if you only have one test case, it may be a main call and have a check for the e
 Test cases are the building blocks of a test suite, and contain some input and the expected outputs (the _tests_).
 Within each context, the following constraints apply to test cases:
 
-- Only the first test case may have a "main call", i.e. command line arguments or stdin.
+- Only the first test case may have a "main call", i.e. command line arguments or _stdin_.
 - Only the last test case may have a test for the program's exit code.
 
 Do note that the first and last test case may be the same one:

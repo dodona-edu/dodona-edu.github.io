@@ -43,7 +43,7 @@ Als volgende stap moet je je persoonlijke kopie van het sjabloon maken:
 
 1. Ga naar <https://github.com/dodona-edu/exercise-template-repository>.
 2. Klik op de knop `Use this template`.
-3. Kies vervolgens de eerste optie: `Create new repository`.
+3. Kies vervolgens de eerste optie: `Create a new repository`.
    ![Template repo](./use-template-repo.png)
 4. Vul de details voor de nieuwe repository in:
    1. Kies een naam voor de repository.

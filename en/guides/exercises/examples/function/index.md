@@ -1,7 +1,7 @@
 ---
 title: Exercise with functions
 sidebarTitle: Functions
-order: 2
+order: 3
 ---
 
 This guide is not yet available in English.
