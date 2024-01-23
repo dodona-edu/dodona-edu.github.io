@@ -377,3 +377,28 @@ Als je Markdown gebruikt, plaats een `>` teken aan het begin van elke regel van 
 ```markdown
 > Dit is een quote
 ```
+
+## Spoilers
+
+Om een deel van je oefeningbeschrijving te verbergen, kan je een spoiler gebruiken. Dit zal resulteren in een element zoals dit:
+
+![img.png](spoiler_closed.png)
+![img.png](spoiler_open.png)
+
+Om een spoiler te gebruiken, maak je een `details` element aan met daarin een `summary` element en wat inhoud.
+
+```html
+<details>
+    <summary>Toggle me!</summary>
+    Peek a boo!
+</details>
+```
+
+Merk op dat je standaard geen Markdown kan gebruiken binnenin html tags. Indien je Markdown wil gebruiken, moet je `markdown="1"` toevoegen aan de tag:
+
+```html
+<details markdown="1">
+    <summary>Toggle me!</summary>
+    Peek a **boo**!
+</details>
+```
