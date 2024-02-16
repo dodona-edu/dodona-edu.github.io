@@ -26,6 +26,17 @@ Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf e
 
 ## Cursus kopiëren
 
+::: tip Snel kopiëren
+
+Als je een bestaande cursus snel wil kopiëren kan dat door onderstaande stappen te volgen.
+* Navigeer naar de cursus die je wil kopiëren.
+* Klik op de drie verticale puntjes `⋮` rechtsonder de bovenste kaart van de cursus.
+* Kies voor `Deze cursus kopiëren`.
+
+![fast copy course](./staff.course_fast_copy.png)
+
+:::
+
 Als je gekozen hebt om een bestaande cursus te kopiëren, dan krijg je een lijst van alle zichtbare cursussen op Dodona te zien. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Via de link-knop aan de rechterkant van de tabel open je de betreffende cursus in een nieuw venster. Zo kan je snel controleren of dit de juiste cursus is. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
 ![choose existing course](./staff.course_new_copy_course_options.png)
