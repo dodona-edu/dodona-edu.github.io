@@ -159,7 +159,7 @@ Een string in het testplan zal dus ook een string worden in de testcode.
 Voor geavanceerde returnwaarden zijn er twee opties:
 
 - Een string met de tag `!expression` gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
-- Een object met de tag `!oracle` is het object voor een eigen orakel.
+- Een object met de tag `!oracle` is het object voor een eigen orakel (een eigen checkfunctie) (zie [hieronder](#eigen-checkfuncties-orakels)).
 
 #### `exit_code`
 
@@ -173,8 +173,8 @@ De volgende attributen kunnen een eigen checkfunctie gebruiken: `return`, `stdou
 
 Een object voor een checkfunctie bestaat uit de volgende attributen:
 
-- `oracle`: het soort checkfunctie. Momenteel kan dit enkel `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde checkfuncties.
-- `value` (bij `return`) of `data` (bij `stdout`/`stderr`): de verwachte waarde
+- `oracle`: het soort checkfunctie. Momenteel kan dit enkel `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde checkfuncties. Voor `custom_check` moet het ouder object (het `return`, `stdout` of `stderr` erboven) de tag `!oracle` hebben
+- `value` (bij `return`) of `data` (bij `stdout`/`stderr`): de verwachte waarde (voor geavanceerde waarden zie `!expression` [hierboven](#return))
 - `file`: de naam van het bestand waarin de checkfunctie zit (relatief ten opzichte van de map `evaluation`)
 - `name`: de naam van de checkfunctie (in snake case)
 - `language`: de programmeertaal waarin de checkfunctie geschreven is. `python` is hier de beste keuze door performantieredenen.
@@ -183,8 +183,8 @@ Een object voor een checkfunctie bestaat uit de volgende attributen:
 Voor een returnwaarde:
 
 ```yaml
-return:
-  value: "'27-08-2023'"
+return: !oracle
+  value: "27-08-2023"
   oracle: "custom_check"
   language: "python"
   file: "test.py"
@@ -195,12 +195,18 @@ return:
 De checkfunctie moet de volgende signatuur hebben:
 
 ```python
-def checkfunctie(verwacht, gegenereerd, *) -> EvaluationResult
+def checkfunctie(orakel_context, *) -> EvaluationResult
 ```
 
-- Het eerste argument bevat de verwachte waarde (van het attribuut `value`/`data` uit het testplan).
-- Het tweede argument bevat de gegenereerde waarde.
-- De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
+Deze `orakel_context` is een object met de volgende atributen:
+- `expected`: de verwachte waarde van het orakel zoals gedfiniëerd door de sleutel `value` op het orakel object (in het bovenstaande voorbeeld zou de verwachte waarde de string `27-08-2023` zijn)
+- `actual`: de waarde die het programma effectie genereerde (zij het door de return-waarde van een `expression` of de output op de relevante stream in het geval van een `stdout`/`stderr`)
+- `execution_directory`: een string van het pad van de folder waarin de uitvoering effectief plaatsvond
+- `evaluation_directory`: eem string van het pad van de folder de evaluation folder van de oefening (die het testplan file bevat)
+- `programming_language`: een string van de gebruikte progameertaal
+- `natural_language`: een string van de natuurlijke taal van de gebruiker die de oefening uitvoerde
+
+De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
 
 De returnwaarde is een klasse van het type `EvaluationResult` (of een struct of object, afhankelijk van de programmeertaal).
 De constructor van deze klasse heeft zes mogelijke parameters:
@@ -224,7 +230,7 @@ Een `Message` heeft de volgende waarden:
 Concreet in Python wordt dit:
 
 ```python
-def evaluate_test(expected, actual):
+def evaluate_test(orakel_context):
     return EvaluationResult(
       result=True,
       dsl_expected=repr("hallo"),
