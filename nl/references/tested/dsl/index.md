@@ -195,10 +195,12 @@ return: !oracle
 De checkfunctie moet de volgende signatuur hebben:
 
 ```python
+from evaluation_utils import EvaluationResult
+
 def checkfunctie(orakel_context, *) -> EvaluationResult
 ```
 
-Deze `orakel_context` is een object met de volgende atributen:
+Deze `orakel_context` is een object van type `ConvertedOracleContext` van de module `evaluation_utils`. Een object van dit type heeft de volgende atributen:
 - `expected`: de verwachte waarde van het orakel zoals gedfiniëerd door de sleutel `value` op het orakel object (in het bovenstaande voorbeeld zou de verwachte waarde de string `27-08-2023` zijn)
 - `actual`: de waarde die het programma effectie genereerde (zij het door de return-waarde van een `expression` of de output op de relevante stream in het geval van een `stdout`/`stderr`)
 - `execution_directory`: een string van het pad van de folder waarin de uitvoering effectief plaatsvond
@@ -208,7 +210,7 @@ Deze `orakel_context` is een object met de volgende atributen:
 
 De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
 
-De returnwaarde is een klasse van het type `EvaluationResult` (of een struct of object, afhankelijk van de programmeertaal).
+De returnwaarde is een klasse van het type `EvaluationResult` (of een struct of object, afhankelijk van de programmeertaal) van de module `evaluation_utils`.
 De constructor van deze klasse heeft zes mogelijke parameters:
 
 1. `result`: Een boolean die aangeeft of de waarde uit de oplossing juist is of niet.
@@ -221,7 +223,7 @@ De constructor van deze klasse heeft zes mogelijke parameters:
 In de meeste gevallen, en zeker bij het opstellen van programmeertaalonafhankelijke oefeningen, is het beter om `dsl_expected` en `dsl_actual` te gebruiken: anders is de checkfunctie zelf verantwoordelijk om de verwachte en eigenlijke waarde in de juiste programmeertaal te tonen.
 
 De lijst van berichten moet een lijst van strings of `Message`s zijn.
-Een `Message` heeft de volgende waarden:
+Een `Message` is een klasse van de module `evaluation_utils` en heeft de volgende waarden:
 
 1. `description`: het bericht om te tonen.
 2. `format`: het formaat van het bericht, zoals `text`, `code` en `html`.
@@ -230,6 +232,8 @@ Een `Message` heeft de volgende waarden:
 Concreet in Python wordt dit:
 
 ```python
+from evaluation_utils import EvaluationResult, Message
+
 def evaluate_test(orakel_context):
     return EvaluationResult(
       result=True,
