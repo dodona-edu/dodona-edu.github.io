@@ -102,7 +102,7 @@ Een string is een string, een getal wordt een getal, enzovoort.
 Als je geavanceerde returnwaarden nodig hebt, zijn er twee opties:
 
 - Een string met de tag `!expression` betekent dat de string de Python-syntaxis kan gebruiken.
-- Een object met de tag `!oracle` wordt als een [eigen orakel](#eigen-checkfunctie-eigen-orakelfunctie) gezien.
+- Een object met de tag `!oracle` wordt als een [eigen orakel](#eigen-orakelfunctie-custom-check) gezien.
 
 Een voorbeeld van een geavanceerde returnwaarde (hier een verzameling getallen) is:
 
@@ -130,7 +130,7 @@ Om een string als returnwaarde te hebben zijn er dus twee mogelijkheden:
 
 ## Variabelen (assignments)
 
-Je kan ook assignments (of variabeletoekeningen) gebruiken.
+Je kan ook assignments (het toekennen van een waarde aan een variabele) gebruiken.
 Een voorbeeld is:
 
 ```yaml
@@ -173,7 +173,7 @@ Noemenswaardige weglatingen zijn alle soorten van functie- of klassendefinities,
 
 Voor een overzichtstabel van de ondersteunde datatypes en hun vertaling in de verschillende programmeertalen, verwijzen we naar de [referentiegids](/nl/references/tested/types).
 
-## Eigen checkfunctie (eigen orakelfunctie)
+## Eigen orakelfunctie (custom check)
 
 Soms zijn de ingebouwde controles niet voldoende, zoals bij functies die niet-deterministisch zijn.
 Stel, als voorbeeld, dat leerlingen een functie moeten schrijven die de huidige datum uitschrijft.
@@ -196,43 +196,60 @@ In het testplan wordt dit dan:
   testcases:
     - expression: 'vandaag()'
       return: !oracle
-        value: "'27-08-2023'"
+        # Het soort orakel, hier altijd "custom_check"
         oracle: "custom_check"
-        language: "python"
+        # De verwachte waarde
+        value: "'27-08-2023'"
+        # De naam van het bestand 
         file: "test.py"
+        # De naam van de orakelfunctie
         name: "evaluate_test"
+        # Een lijst van bijkomende argumenten voor de orakelfunctie
         arguments: [5, 6]
 ```
 
-We specifiëren dat er een bestand `test.py` is, waarin een functie `evaluate_test` bestaat.
-Deze functie schrijf je best altijd in Python, en moet voldoen aan een bepaalde structuur.
-
-Bijvoorbeeld:
+We leggen vast dat er een bestand `test.py` is, waarin een functie `evaluate_test` (de orakelfunctie) bestaat.
+Deze orakelfunctie schrijf je altijd in Python, ongeacht de programmeertaal waarin de oefening opgelost kan worden.
+De orakelfunctie voldoet aan een bepaalde signatuur, zoals:
 
 ```python
 # We importeren wat hulpklassen uit TESTed.
 from evaluation_utils import EvaluationResult, Message
 from datetime import datetime
 
-def evaluate_test(expected, actual, five, six):
-    # expected is de waarde uit "value" uit het testplan
-    # actual is de returnwaarde van de functie uit de ingediende oplossing
-    # de overige argumenten zijn hetzelfde als de `arguments` uit het testplan
+# De orakelfunctie heeft altijd minstens één argument:
+# - de "context", een object met wat metadata (zie hieronder)
+# - de overige argumenten zijn die uit het testplan
+#   (de getallen 5 en 6 in dit geval)
+def evaluate_test(context, five, six):
     today = datetime.today().strftime('%d-%m-%Y')
     return EvaluationResult(
-      result=today == actual,  # Boolean of dat het resultaat juist is
-      dsl_expected=repr(today),  # De "verwachte waarde" om te tonen op Dodona
-      dsl_actual=repr(actual),  # De eigenlijke waarde uit de oplossing om te tonen op Dodona
-      messages=[Message("Hallo")]  # Optionale lijst van berichten om te tonen op Dodona
+      # Boolean of dat het resultaat juist is
+      result=today == context.actual,
+      # De "verwachte waarde" om te tonen op Dodona
+      dsl_expected=repr(today),
+      # De eigenlijke waarde uit de oplossing om te tonen op Dodona
+      dsl_actual=repr(context.actual),
+      # Optionale lijst van berichten om te tonen op Dodona
+      messages=[Message("Hallo")]
     )
 ```
 
 Wat we doen in deze functie is de datum van vandaag berekenen.
+
+Het eerste argument van de functie is altijd een object met de volgende velden:
+- `expected`: de verwachte waarde van het orakel zoals gedefinieerd door de sleutel `value` in het testplan
+- `actual`: de waarde gegeneerd door de oplossing van de student
+- `execution_directory`: het pad van de map waarin de oplossing beoordeeld is
+- `evaluation_directory`: het pad van de map `evaluation` uit de oefening (waar dus het testplan in zit)
+- `programming_language`: de programmeertaal van de oplossing van de student
+- `natural_language`: de natuurlijke taal van de student die de oplossing indiende
+
 We geven vervolgens een `EvaluationResult` terug met vier parameters:
 
-1. `result`: Een eerste boolean die aangeeft of de waarde uit de oplossing juist is of niet. In dit geval vergelijken we die gewoon met de datum van vandaag.
-2. `dsl_expected`: De verwachte waarde om te tonen op Dodona. We overschijven hier de verwachte waarde uit het testplan met de datum van vandaag.
-3. `dsl_actual`: De eigenlijke waarde om te tonen op Dodona. We geven hier de eigenlijke waarde gewoon door.
+1. `result`: Een boolean die aangeeft of de waarde uit de oplossing juist is of niet. In dit geval vergelijken we die gewoon met de datum van vandaag.
+2. `dsl_expected`: De verwachte waarde om te tonen op Dodona. We overschrijven hier de verwachte waarde uit het testplan met de datum van vandaag. Dit gebruikt de Python-syntaxis.
+3. `dsl_actual`: De eigenlijke waarde om te tonen op Dodona. We geven hier de eigenlijke waarde gewoon door. Dit gebruikt de Python-syntaxis.
 4. `messages`: Een optionele lijst van berichten. Deze berichten worden ook getoond op Dodona en kunnen gebruikt worden om bijkomende feedback of uitleg aan de studenten te geven.
 
 Ook `stderr` en `stdout` kunnen een eigen checkfunctie gebruiken.
@@ -245,7 +262,6 @@ Hiervoor wordt dezelfde notatie gebruikt, maar met `data` in plaats van `value`:
       stdout:
         data: "2"
         oracle: "custom_check"
-        language: "python"
         file: "test.py"
         name: "evaluate_stdout"
 ```
