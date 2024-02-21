@@ -159,7 +159,7 @@ Een string in het testplan zal dus ook een string worden in de testcode.
 Voor geavanceerde returnwaarden zijn er twee opties:
 
 - Een string met de tag `!expression` gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
-- Een object met de tag `!oracle` is het object voor een eigen orakel.
+- Een object met de tag `!oracle` is het object voor een eigen orakel (een eigen checkfunctie) (zie [hieronder](#eigen-checkfuncties-orakels)).
 
 #### `exit_code`
 
@@ -167,42 +167,51 @@ Specifieert de verwachte exitcode van het programma.
 
 Enkel het laatste testgeval in een context kan dit attribuut hebben, maar het laatste testgeval kan ook het eerste zijn als er maar één testgeval is.
 
-### Eigen checkfuncties (orakels)
+### Eigen orakelfunctie (custom check)
 
-De volgende attributen kunnen een eigen checkfunctie gebruiken: `return`, `stdout` en `stderr`.
+De volgende attributen kunnen een eigen orakelfunctie gebruiken: `return`, `stdout` en `stderr`.
 
-Een object voor een checkfunctie bestaat uit de volgende attributen:
+Een object voor een orakelfunctie bestaat uit de volgende attributen:
 
-- `oracle`: het soort checkfunctie. Momenteel kan dit enkel `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde checkfuncties.
-- `value` (bij `return`) of `data` (bij `stdout`/`stderr`): de verwachte waarde
-- `file`: de naam van het bestand waarin de checkfunctie zit (relatief ten opzichte van de map `evaluation`)
-- `name`: de naam van de checkfunctie (in snake case)
-- `language`: de programmeertaal waarin de checkfunctie geschreven is. `python` is hier de beste keuze door performantieredenen.
-- `arguments`: een lijst van [waarden](#expressies-en-statements) die als argumenten aan de checkfunctie gegeven worden
+- `oracle`: het soort orakelfunctie. Momenteel kan dit enkel `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde orakelfuncties. Voor `custom_check` moet het ouder object (het `return`, `stdout` of `stderr` erboven) de tag `!oracle` hebben
+- `value` (bij `return`) of `data` (bij `stdout`/`stderr`): de verwachte waarde (voor geavanceerde waarden zie `!expression` [hierboven](#return))
+- `file`: de naam van het bestand waarin de orakelfunctie zit (relatief ten opzichte van de map `evaluation`)
+- `name`: de naam van de orakelfunctie (in snake case)
+- `arguments`: een lijst van [waarden](#expressies-en-statements) die als argumenten aan de orakelfunctie gegeven worden
 
 Voor een returnwaarde:
 
 ```yaml
-return:
-  value: "'27-08-2023'"
+return: !oracle
+  value: "27-08-2023"
   oracle: "custom_check"
-  language: "python"
   file: "test.py"
   name: "evaluate_test"
   arguments: [5, 6]
 ```
 
-De checkfunctie moet de volgende signatuur hebben:
+De orakelfunctie moet de volgende signatuur hebben:
 
 ```python
-def checkfunctie(verwacht, gegenereerd, *) -> EvaluationResult
+from evaluation_utils import EvaluationResult, ConvertedOracleContext
+
+def orakelfunctie(context: ConvertedOracleContext, *) -> EvaluationResult
 ```
 
-- Het eerste argument bevat de verwachte waarde (van het attribuut `value`/`data` uit het testplan).
-- Het tweede argument bevat de gegenereerde waarde.
-- De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
+Het eerste argument van de orakelfunctie is altijd een `ConvertedOracleContext`.
+Dit object bevat een aantal velden:
 
-De returnwaarde is een klasse van het type `EvaluationResult` (of een struct of object, afhankelijk van de programmeertaal).
+- `expected`: de verwachte waarde van het orakel zoals gedefinieerd door de sleutel `value` in het testplan
+- `actual`: de waarde gegeneerd door de oplossing van de student
+- `execution_directory`: het pad van de map waarin de oplossing beoordeeld is
+- `evaluation_directory`: het pad van de map `evaluation` uit de oefening (waar dus het testplan in zit)
+- `programming_language`: de programmeertaal van de oplossing van de student
+- `natural_language`: de natuurlijke taal van de student die de oplossing indiende
+
+De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
+In het voorbeeld zou de orakelfunctie dus drie argumenten hebben: de context en de twee getallen uit het testplan.
+
+De returnwaarde is een klasse van het type `EvaluationResult` van de module `evaluation_utils`.
 De constructor van deze klasse heeft zes mogelijke parameters:
 
 1. `result`: Een boolean die aangeeft of de waarde uit de oplossing juist is of niet.
@@ -215,16 +224,18 @@ De constructor van deze klasse heeft zes mogelijke parameters:
 In de meeste gevallen, en zeker bij het opstellen van programmeertaalonafhankelijke oefeningen, is het beter om `dsl_expected` en `dsl_actual` te gebruiken: anders is de checkfunctie zelf verantwoordelijk om de verwachte en eigenlijke waarde in de juiste programmeertaal te tonen.
 
 De lijst van berichten moet een lijst van strings of `Message`s zijn.
-Een `Message` heeft de volgende waarden:
+Een `Message` is een klasse van de module `evaluation_utils` en heeft de volgende waarden:
 
 1. `description`: het bericht om te tonen.
 2. `format`: het formaat van het bericht, zoals `text`, `code` en `html`.
 3. `permission`: wie het bericht kan zien: `staff`, `student` of `zeus`.
 
-Concreet in Python wordt dit:
+Concreet wordt dit:
 
 ```python
-def evaluate_test(expected, actual):
+from evaluation_utils import EvaluationResult, Message
+
+def evaluate_test(context):
     return EvaluationResult(
       result=True,
       dsl_expected=repr("hallo"),
@@ -335,6 +346,14 @@ TESTed ondersteunt de volgende standaardtypes van YAML:
 Tot slot kan ook de naam van elk [TESTed-type](/nl/references/tested/types) gebruikt worden als tag.
 Voorbeelden zijn `!int64` of `!double`.
 Merk op dat eigen types één uitroepteken gebruiken, terwijl standaardtypes er twee gebruiken.
+
+## Regeleindes voor tekstuele resultaten
+
+Voor het resultaat bij `stdout` en `stderr` volgt TESTed deze conventie: ofwel moet de tekst leeg zijn, ofwel moet de tekst eindigen met een regeleinde.
+TESTed zal deze conventie afdwingen: als de tekst in het tesplan niet eindigt met een regeleinde zal TESTed een regeleinde toevoegen.
+
+Dit is dezelfde conventie als in POSIX, en wordt ook toegepast in veel programmeertalen.
+Zo zal `print` in Python standaard een regeleinde toevoegen.
 
 
 ## Spiekbriefje voor YAML
