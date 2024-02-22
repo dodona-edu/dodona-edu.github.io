@@ -14,4 +14,4 @@ Dodona experienced difficulties connecting to the network.
 
 The issue was UGent-wide and related to Belnet. More information can be found on the [Belnet status page](https://status.belnet.be/incidents/129).
 
-Dodona is working again but it is unclear if the root cause has been resolved.
+Dodona is working again. The issue has been resolved by Belnet.
