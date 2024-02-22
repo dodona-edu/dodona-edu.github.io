@@ -1,5 +1,5 @@
-# Dodona is available again
+# Dodona is momenteel onbeschikbaar
 
-All issues are resolved.
+Door een onverwacht probleem is Dodona momenteel onbeschikbaar. We werken hard om het probleem zo snel mogelijk op te lossen. Onze excuses voor het ongemak.
 
-Go to [Dodona](https://dodona.be).
+[Probeer opnieuw](https://dodona.be) over enkele minuten.

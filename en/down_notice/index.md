@@ -1,5 +1,5 @@
-# Dodona is available again
+# Dodona is currently unavailable
 
-All issues are resolved.
+Due to an unexpected issue Dodona is currently unavailable. We are working hard to resolve the issue as soon as possible. We apologize for the inconvenience.
 
-Go to [Dodona](https://dodona.be).
+[Retry](https://dodona.be) in a few minutes.
