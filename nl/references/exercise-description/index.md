@@ -402,3 +402,21 @@ Merk op dat je standaard geen Markdown kan gebruiken binnenin html tags. Indien 
     Peek a **boo**!
 </details>
 ```
+
+## Diagrammen
+
+Dodona ondersteunt het gebruik van diagrammen in je oefeningbeschrijvingen. Hiervoor gebruiken we de [mermaid](https://mermaid.js.org/intro/) syntax.
+
+Een eenvoudige flowchart kan als volgt worden gemaakt:
+
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+Dit resulteert in het volgende diagram:
+![graph](simple_graph.svg =200x)
+
+[Mermaid](https://mermaid.js.org/intro/) ondersteunt nog veel meer soorten diagrammen, zoals sequence diagrams, class diagrams, gantt charts, ...

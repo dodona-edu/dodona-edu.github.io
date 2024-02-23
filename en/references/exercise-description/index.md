@@ -395,3 +395,25 @@ Note that by default, you can't use Markdown inside an HTML tag. If you want to 
     Peek a **boo**!
 </details>
 ```
+
+## Graphs
+
+Dodona supports the use of graphs in the exercise description. You can use the [mermaid](https://mermaid.js.org/intro/) syntax to create diagrams.
+
+A simple flowchart example:
+
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+
+Results in the following graph:
+
+![graph](simple_graph.svg =200x)
+
+Using [mermaid](https://mermaid.js.org/intro/) you can also draw sequence diagrams, class diagrams, gantt diagrams, ...
+
+
