@@ -10,7 +10,7 @@ Alle informatie om vlot van start te gaan met Dodona als leerkracht.
 
 ## Wat is Dodona?
 
-Dodona is een online oefenplatform om te leren programmeren. De webapplicatie werd ontwikkeld aan de Universiteit Gent om practica aan grote groepen studenten te ondersteunen. Dodona focust daarom in de eerste plaats op het automatisch testen en geven van feedback op ingediende oplossingen van programmeeroefeningen. Op dit moment ondersteunt Dodona de programmeertalen Python, JavaScript, Java, Kotlin, C#, bash, Prolog, Haskell en R.
+Dodona is een online oefenplatform om te leren programmeren. De webapplicatie werd ontwikkeld aan de Universiteit Gent om practica aan grote groepen studenten te ondersteunen. Dodona focust daarom in de eerste plaats op het automatisch testen en geven van feedback op ingediende oplossingen van programmeeroefeningen. Op dit moment ondersteunt Dodona onder andere de programmeertalen Python, JavaScript, Java, Kotlin, C#, bash, Prolog, Haskell en R.
 
 Op Dodona kunnen lesgevers een eigen cursus aanmaken, opgebouwd uit verschillende oefeningenreeksen. Ze kunnen hiervoor beroep doen op bestaande cursussen en oefeningen, maar kunnen er ook voor kiezen om zelf aan de slag te gaan en eigen oefeningen en lesmateriaal op te stellen. Dankzij de ingebouwde *learning analytics* en datavisualisaties is het bovendien eenvoudig om de voortgang van studenten te meten.
 
@@ -34,12 +34,7 @@ Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken d
 
 ![cursus aanmaken](./cursus-aanmaken.png)
 
-Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud van een bestaande cursus over te nemen en aan te passen. Om inspiratie op te doen kan je een kijkje nemen in volgende bestaande cursussen:
-
-- **[De Programmeursleerling](/nl/guides/general/the-coders-apprentice)**: een cursus programmeren in Python die gebaseerd is op het boek De Programmeursleerling van Pieter Spronck.
-- **[Informatica](https://dodona.be/nl/courses/164/)**: een cursus programmeren in Python die gegeven wordt aan het vijfde jaar Wiskunde-Wetenschappen-Informatica van het [Sint-Paulusschool Campus College](https://www.sintpaulus.eu/) in Waregem. De cursus en een groot deel van de oefeningen werd opgesteld door [Dominiek Vandewalle](mailto:dominiek.vandewalle@sgsintpaulus.eu).
-- **[Programmeren](https://dodona.be/nl/courses/88/)**: een cursus programmeren in Python die gegeven wordt door prof. Peter Dawyndt aan de faculteit Wetenschappen van de Universiteit Gent.
-
+Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud van een bestaande cursus over te nemen en aan te passen. Om inspiratie op te doen kan je een kijkje nemen in onze [uitgelichte cursussen](https://dodona.be/nl/courses/?tab=featured).
 
 ## Een cursus opstellen
 
@@ -62,7 +57,7 @@ Bij het selecteren van oefeningen kun je meer info over een oefening bekijken do
 
 ![oefening-infopagina](./oefening-infopagina.png)
 
-De handleiding om zelf oefeningen op te stellen volgt binnenkort. Een eerste aanzet vind je op [deze pagina](/nl/guides/exercises/new-exercise-repo/).
+In [deze handleiding](/nl/guides/exercises/creating-exercises) vind je alle info over hoe je zelf oefeningen aanmaakt.
 
 ## Je cursus gebruiken
 
