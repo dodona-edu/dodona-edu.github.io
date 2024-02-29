@@ -61,7 +61,7 @@ Bij het selecteren van oefeningen kun je meer info over een oefening bekijken do
 
 ![oefening-infopagina](./oefening-infopagina.png)
 
-In [deze handleiding](/nl/guides/exercises/creating-exercises) vind je alle info over hoe je zelf oefeningen aanmaakt.
+In [deze handleiding](/en/guides/exercises/creating-exercises) vind je alle info over hoe je zelf oefeningen aanmaakt.
 
 ## Je cursus gebruiken
 
