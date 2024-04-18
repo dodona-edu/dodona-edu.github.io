@@ -158,9 +158,9 @@ Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeni
 
 Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `Volgende stap` om verder te gaan.
 
-Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per reeks gegroepeerd moeten worden en welke studenten meegerekend moeten worden.
+Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per oefening gegroepeerd moeten worden en welke studenten meegerekend moeten worden.
 
 ![export opties](./staff.series_export_options.png)
 
-Klik op `Start export` om de download te starten. Je komt op de exportpagina die je zal verwittigen als je export klaar is. Meestal is dit binnen enkele seconden al het geval.
+Klik op `Downloaden` om de download te starten. Op dat moment worden alle ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
 ![export gestart](./staff.series_export_started.png)
