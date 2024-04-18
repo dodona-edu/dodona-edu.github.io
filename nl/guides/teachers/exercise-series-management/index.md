@@ -162,5 +162,5 @@ Vervolgens kan je verschillende opties aanvinken die de inhoud van de export be√
 
 ![export opties](./staff.series_export_options.png)
 
-Klik op `Downloaden` om de download te starten. Op dat moment worden alle indieningen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
+Klik op `Downloaden` om de download te starten. Op dat moment worden alle ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
 ![export gestart](./staff.series_export_started.png)
