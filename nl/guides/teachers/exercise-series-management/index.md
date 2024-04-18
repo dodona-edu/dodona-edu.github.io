@@ -112,7 +112,7 @@ Het kan handig zijn om reeksen in een cursus een bepaalde volgorde te geven, om 
 
 ## Het reeks-menu
 
-Dit menu bevat een aantal handige acties die cursusbeheerders kunnen uitvoeren op een reeks. Je kan dit menu openen door te klikken op de drie bolletjes in de rechterbovenhoek van een reeks. Naast bewerken en verwijderen zijn er nog enkele mogelijkheden:
+Onderaan de reeks vind je enkele handige acties die cursusbeheerders kunnen uitvoeren op de reeks. De belangrijkste acties zijn `Reeks evalueren`, `Statusoverzicht`, de andere acties vind je door op de drie bolletjes te klikken.
 
 ![reeks acties](./staff.series_actions_menu.png)
 
