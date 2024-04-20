@@ -12,7 +12,7 @@ Sinds september 2021 heeft Dodona een verbetermodule. Ideaal om op een gestructu
 
 Het verbeteren van oefeningen gebeurt steeds per reeks. Als je een taak, toets of examen later wil verbeteren, dan maak je hier dus best een aparte reeks voor aan.
 
-In het reeksmenu vind je een knop om een nieuwe evaluatie voor die reeks aan te maken. Eenmaal aangemaakt kan je via dezelfde weg de evaluatie terugvinden.
+Rechts onderaan de reeks vind je een knop om een nieuwe evaluatie voor die reeks aan te maken. Eenmaal aangemaakt kan je via dezelfde weg de evaluatie terugvinden.
 
 ![reeks evalueren](./reeks-evalueren.png)
 
