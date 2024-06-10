@@ -31,5 +31,5 @@ Er zijn verschillende hulpmiddelen voor het gebruiken van testplannen:
 - Niet gevonden wat je zocht in de handleidingen of referenties?
 - Onzeker hoe je een testplan voor een bepaalde oefening best aanpakt?
 
-Aarzel dan niet om ons te [ons te contacteren](https://dodona.be/nl/contact/).
+Aarzel dan niet om [ons te contacteren](https://dodona.be/nl/contact/).
 We horen graag alle vragen of suggesties.
