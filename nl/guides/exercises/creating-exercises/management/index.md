@@ -17,4 +17,19 @@ Hieronder enkele suggesties voor volgende stappen:
 - Maak nog andere soorten oefeningen.
 
 Veel plezier met het gebruik van Dodona!
-Zoals steeds, als je vragen hebt of iets is niet duidelijk, aarzel dan niet om [ons te contacteren](https://dodona.be/nl/contact/).
+
+##  Meer over testplannen
+
+Er zijn verschillende hulpmiddelen voor het gebruiken van testplannen:
+
+- Kijk eens in de [handleiding met veelvoorkomende scenario's](/nl/guides/exercises/testsuites). Vaak staat daar al in wat je wilt doen.
+- Op zoek naar meer informatie over een specifiek onderdeel? Kijk dan in de [referentie voor de testplannen](/nl/references/tested/dsl). Dit is een overzicht van alle mogelijke opties.
+
+## Nog meer vragen?
+
+- Heb je het gevoel dat er een stap ontbreekt of niet duidelijk is in de handleiding?
+- Niet gevonden wat je zocht in de handleidingen of referenties?
+- Onzeker hoe je een testplan voor een bepaalde oefening best aanpakt?
+
+Aarzel dan niet om ons te [ons te contacteren](https://dodona.be/nl/contact/).
+We horen graag alle vragen of suggesties.
