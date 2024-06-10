@@ -471,12 +471,12 @@ Hieronder staat een testplan waar alle opties gebruikt worden:
         # Een assignment van de variable "data".
         - statement: 'data = ["list\nline", "file.txt"]'
           # Functieoproep waarbij de variabele gebruikt wordt.
-        - statement: 'function(data, 0.5)'
+        - expression: 'function(data, 0.5)'
           # Verwachte returnwaarde van die functie.
           return: [ 0, 0 ]
     - testcases:
         # Een functieoproep waarbij de waarde gecast wordt naar "uint8".
-        - statement: 'echo(uint8(5))'
+        - expression: 'echo(uint8(5))'
           # De verwachte returnwaarde wordt ook gecast naar "uint8".
           return: "uint8(5)"
 
