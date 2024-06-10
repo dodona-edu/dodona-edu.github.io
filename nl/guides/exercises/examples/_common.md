@@ -14,7 +14,7 @@ Maak daarna, in deze nieuwe map, nog drie mappen:
 De map voor deze oefening moet er als volgt uitzien:
 
 ```
-repository/
+exercises/
 └── minimum/
    ├── evaluation/
    ├── description/
@@ -56,7 +56,7 @@ In dit bestand worden een aantal dingen gespecifieerd:
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
 ```
-repository/
+exercises/
 └── minimum/
    ├── evaluation/
    ├── description/
@@ -103,7 +103,7 @@ def minimum(a, b):
 Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
 
 ```
-repository/
+exercises/
 └── minimum/
    ├── evaluation/
    ├── description/
@@ -152,7 +152,7 @@ In dit testplan gebeuren een aantal dingen:
 Finaal ziet de bestandsstructuur er dus als volgt uit:
 
 ```
-repository/
+exercises/
 └── minimum/
    ├── evaluation/
    |  └── suite.yaml 
