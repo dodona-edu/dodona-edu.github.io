@@ -6,14 +6,17 @@ order: 2
 
 # Referentie voor DSL-testplannen
 
+::: tip
+Dit is een referentiegids, voor geavanceerde gebruikers.
+We hebben ook een [reeks handleidingen](/nl/guides/exercises) die uitleggen hoe je oefeningen maakt.
+:::
+
 Een testplan voor TESTed legt vast welke testgevallen uitgevoerd worden op een ingediende oplossing.
 TESTed verschilt van andere judges doordat testplannen niet afhankelijk zijn van één bepaalde programmeertaal.
 Derhalve volstaat één testplan om ingediende oplossingen in verschillende programmeertalen van dezelfde oefening te evalueren.
 
 Naast het [geavanceerde formaat](/nl/references/tested/json) voor testplannen hebben we ook een kleine domeinspecifieke taal (_domain-specific language_, DSL) ontwikkeld om het schrijven van testplannen makkelijker te maken.
 Dit document is de referentiegids voor het formaat van DSL-testplannen en bevat alle opties en mogelijkheden.
-
-[//]: # (We hebben ook een reeks tutorials waar we uitleggen hoe een bepaalde soort oefening opgesteld moet worden.)
 
 DSL-testplannen worden geschreven in YAML.
 Een JSON Schema van het formaat is beschikbaar in de repository van TESTed.
