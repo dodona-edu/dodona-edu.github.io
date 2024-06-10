@@ -96,6 +96,17 @@ Vul vervolgens de details van de repository in:
 3. **Standaard judge**: kies hier "TESTed".
 4. Klik op de roze knop bovenaan met een vinkje in.
 
+::: tip Wees gerust
+Krijg je bij het kopiëren van de URL een waarschuwing zoals hieronder?
+Dat is geen probleem: je kan deze probleemloos negeren.
+
+![ssh warning](./github-ssh.png)
+
+Deze waarschuwing betekent dat je geen SSH-sleutels in je account hebt.
+Om te werken met Dodona heb je die ook niet nodig.
+Meer informatie over SSH kan je vinden in de GitHub-handleiding [_About SSH_](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh).
+:::
+
 ### Webhook instellen
 
 Dodona zal vervolgens je repository ophalen en verwerken.

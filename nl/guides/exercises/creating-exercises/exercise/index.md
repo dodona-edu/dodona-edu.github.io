@@ -37,7 +37,29 @@ Als alles goed gegaan is, werd dit venster leeg.
 
 ## 6. Oefening testen
 
-De oefening die je daarnet gemaakt hebt, kan je terugvinden in [jouw oefeningenrepository](https://dodona.be/nl/repositories/) op Dodona. Test de oefening. Is alles naar wens? Dan kan je bovenaan de oefening publiceren (_Deze oefening publiceren_). Je oefening is nu klaar om te gebruiken op Dodona!
+De oefening die je daarnet gemaakt hebt, kan je terugvinden in [jouw oefeningenrepository](https://dodona.be/nl/repositories/) op Dodona.
+Je nieuwe oefening is nu beschikbaar als _concept_ op Dodona.
+
+Vooraleer je een oefening kan publiceren (uit concept halen), controleert Dodona of aan drie voorwaarden voldaan is:
+
+- De oefening moet een geldig configuratiebestand hebben. 
+- De oefening moet een naam en een beschrijving hebben. 
+- Je moet minstens één correcte oplossing indienen.
+
+Als je deze handleiding gevolgd hebt, zijn aan de eerste twee voorwaarden al voldaan.
+Je moet enkel nog een juiste oplossing indienen, die we al gemaakt hebben.
+Om dit te doen klik je bovenaan de menubalk op het informatie-icoontje:
+
+![Voorbeeldoplossing](./sample-solution.png)
+
+Vervolgens kies je de voorbeeldoplossing die je wilt indienen (hier is er maar een: `solution.py), waarna je op de knop _Deze oplossing indienen_ klikt.
+Dit zal de oefeningenpagina openen met de voorbeeldoplossing ingeladen.
+Je moet enkel nog op indienen klikken.
+
+![Voorbeeldoplossing kiezen](./dodona-submit.png)
+
+Eens de oplossing juist gerekend is, zal je de oefening kunnen publiceren door op _Deze oefening publiceren_ te klikken.
+Je oefening is nu klaar om te gebruiken op Dodona!
 
 ![Minimum oefening](./minimum.png)
 

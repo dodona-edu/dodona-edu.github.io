@@ -460,12 +460,12 @@ YAML supports tags to give values another type:
         # An assignment of the variable data.
         - statement: 'data = ["list\nline", "file.txt"]'
           # Function call that uses the variable.
-        - statement: 'function(data, 0.5)'
+        - expression: 'function(data, 0.5)'
           # Expected return value of the function.
           return: [ 0, 0 ]
     - testcases:
         # A function call where the value is cast to "uint8".
-        - statement: 'echo(uint8(5))'
+        - expression: 'echo(uint8(5))'
           # The expected return value is also cast to "uint8".
           return_raw: "uint8(5)"
 
