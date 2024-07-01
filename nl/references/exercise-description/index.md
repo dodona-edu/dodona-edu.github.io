@@ -174,14 +174,18 @@ Naast afbeeldingen kan je ook tabellen en andere elementen in een gecentreerde g
 
 Als je een aparte afbeelding wil gebruiken voor lichte modus en donkere modus (bv. met een andere achtergrondkleur), dan kan je de `light-only` of `dark-only` klassen toevoegen aan een afbeelding. De `light-only` klasse zal de afbeelding enkel tonen in lichte modus terwijl de `dark-only` class de afbeelding enkel zal tonen in donkere modus. Deze klassen werken ook voor andere HTML-elementen.
 
+Je kan een afbeelding ook inverteren in dark mode door de `dark-invert` klasse toe te voegen.
+
 ```html
 <img src="dark-image.jpg" class="dark-only" />
 <img src="light-image.jpg" class="light-only" />
+<img src="invertable-image.jpg" class="dark-invert" />
 ```
 
 ```markdown
 [Show image](dark-image.jpg){: .dark-only}
 [Show image](light-image.jpg){: .light-only}
+[Show image](invertable-image.jpg){: .dark-invert}
 ```
 
 ---
