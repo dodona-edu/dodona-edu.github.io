@@ -1,11 +1,11 @@
 ---
 title: "Leesactiviteit"
 sidebarTitle: Leesactiviteit
-order: 1
+order: 6
 ---
 
 
-# Oefeningen opstellen: leesactiviteit
+# Leesactiviteit
 
 Als je in de [handleiding](/nl/guides/exercises/creating-exercises/introduction/) de _template repository_ gebruikt hebt, bevat je repository al een oefening en leesactiviteit.
 Hier zullen we nu zelf nog een leesactiviteit toevoegen.
