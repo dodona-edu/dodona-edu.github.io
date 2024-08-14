@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter, useData } from 'vitepress';
-import resolveAcceptLanguage from 'resolve-accept-language';
+import { resolveAcceptLanguage } from 'resolve-accept-language';
 import { onMounted } from 'vue';
 
 const { params } = useData();
