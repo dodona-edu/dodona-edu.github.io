@@ -382,7 +382,7 @@ The expected exit code as an integer.
 
 ### FileOutputChannel
 
-A `FileOutputChannel` object represents a file that is created upon executing the submission.
+A `FileOutputChannel` is used to represent a file created upon executing the submission.
 
 ::: warning
 Currently, these are some known limitations for testing file creation:
@@ -391,14 +391,14 @@ Currently, these are some known limitations for testing file creation:
 - Only text files are supported (no binary files).
   :::
 
-For example, if the generated file `gen.txt` must be identical to a sample file `expected.txt`:
+For example, if a generated file `generated-by-submission.txt` must be identical to a sample file `correct-sample-file.txt`:
 
 ```json
 {
  "output": {
   "file": {
-   "expected_path": "gen.txt",
-   "actual_path": "expected.txt"
+   "expected_path": "correct-sample-file.txt",
+   "actual_path": "generated-by-submission.txt"
   }
  }
 }
@@ -406,11 +406,15 @@ For example, if the generated file `gen.txt` must be identical to a sample file 
 
 #### `.expected_path`
 
-A relative path to a text file in the `workdir` that contains the expected output.
+A path to the file containing the expected output.
+The path is relative to the `evaluation` directory.
 
 #### `.actual_path`
 
-A relative path where a text file is expectedly generated upon execution of the submission.
+A path to the location where the submission must create a file.
+The path is relative to the submission.
+For example, `./subfolder/some-file.txt` requires the submission to create a file called `some-file.txt` in a folder called `subfolder`, in the current working directory.
+
 
 #### `.oracle`
 
