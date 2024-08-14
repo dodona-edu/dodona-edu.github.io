@@ -1,7 +1,7 @@
 ---
 title: Oefening op commandoregel
 sidebarTitle: Commandoregel
-order: 5
+order: 4
 ---
 
 # Oefening op de commandoregel
