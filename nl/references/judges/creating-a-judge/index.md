@@ -130,7 +130,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
 
 #### Partial output
 
-The partial output consists of multiple smaller JSON objects, validated by [this JSON schema](https://github.com/dodona-edu/dodona/tree/develop/public/schemas/partial_output.json). Each JSON object describes part of the judgement. An example judgement can be found below.
+The partial output consists of multiple smaller JSON objects, validated by [this JSON schema](https://github.com/dodona-edu/dodona/tree/main/public/schemas/partial_output.json). Each JSON object describes part of the judgement. An example judgement can be found below.
 
 Because the format is split up in smaller commands, it can be parsed partially (hence the name). This implies a judge killed by the time limit or memory limit might still have judged the exercise partially.
 
