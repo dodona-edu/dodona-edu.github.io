@@ -790,10 +790,10 @@ preact@^10.0.0:
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.15.0.tgz#14bae0afe3547ca9d45d22fda2a4266462d31cf3"
   integrity sha512-nZSa8M2R2m1n7nJSBlzDpxRJaIsejrTO1vlFbdpFvyC8qM1iU+On2y0otfoUm6SRB5o0lF0CKDFxg6grEFU0iQ==
 
-resolve-accept-language@^3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.1.7.tgz#a5af12da20e29adb65a05034ae52e625458589ab"
-  integrity sha512-zpz/xjzNXAKoKbQqwNvbRj11TObn+le8P8SFQv3kzBGvdrsI7UVGK8C8mauUrm6SGv/+atlouJRlE/W3a/flGA==
+resolve-accept-language@^3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.1.8.tgz#c42f8d55ef5b941896624dba1c2a11500bf1c81d"
+  integrity sha512-DGFxmsDUmHO6l73kkGqQNSsdk1RpbxIuHSqFhrlBH+5DZiumiHV2uVkKwIBQhRvQHV1tBl00vtZQhV1o4NHgXQ==
 
 rfdc@^1.4.1:
   version "1.4.1"
