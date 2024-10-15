@@ -105,11 +105,15 @@ Once you have saved one or more comments, you get a search field when writing ne
 
 ## Why can't I find my saved comments? <Badge type="tip" text="teacher" />
 
-Saved comments are scoped by course and by exercise. This way we are sure we only suggest relevant comments and the number of saved comments remains manageable.
+Saved comments are scoped by course and by exercise by default. This way we are sure we only suggest relevant comments and the number of saved comments remains manageable.
 
-Unfortunately, this means that you can't reuse comments from one exercise in another exercise. This will probably be changed in the future to give teachers more flexibility.
+If you want to reuse a comment across your whole course, or even across multiple courses, you can edit the saved comment and remove the course and/or exercise limitations. This way the comment will be suggested in all exercises of all your courses.
+![edit_saved_comment.png](edit_saved_comment.png)
 
-You can find an overview of all your saved comments for a certain exercise by clicking the link underneath the search field.
+To edit a saved comment, click on the saved comment icon on an annotation wich reuses the comment. This will open the saved comment and clicking the pencil icon will allow you to edit the comment.
+![saved_comment_link.png](saved_comment_link.png)
 
+You can find an overview of all your saved comments for a certain exercise by clicking the link underneath the search field. Or by clicking on 'saved comments' in the sidebar menu.
+From here you can also edit or delete saved comments.
 ![Link to saved comments](./link-to-saved-comments.png)
 ![Saved comments](./saved-comments-list.png)
