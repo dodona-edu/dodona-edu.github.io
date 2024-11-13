@@ -137,7 +137,7 @@ Because the format is split up in smaller commands, it can be parsed partially (
 ```json
     { "command": "start-judgement" }
     { "command": "append-message", "message": "will be added to the judgement" }
-    { "command": "annotate", "row": 3, "column": 4, "text": "some info on the fourth line, fifth column of the source" }
+    { "command": "annotate-code", "row": 3, "column": 4, "text": "some info on the fourth line, fifth column of the source" }
     { "command": "start-tab", "title": "Tab One" }
     { "command": "start-context" }
     { "command": "start-testcase", "description": "case 1" }
