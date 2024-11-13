@@ -100,11 +100,18 @@ Eenmaal je een of meerdere opmerkingen hebt opgeslagen, krijg je een zoekveld te
 
 ## Waarom vind ik mijn opgeslagen opmerkingen niet terug? <Badge type="tip" text="lesgever" />
 
-Opgeslagen opmerkingen worden gegroepeerd per oefening, cursus en gebruiker. Dit betekent dat je een opmerking kan opslaan voor een oefening, en deze opmerking kan hergebruiken in alle oplossingen van die oefening. 
+Opgeslagen opmerkingen zijn standaard beperkt tot een cursus en een oefening. Op deze manier zorgen we ervoor dat we alleen relevante opmerkingen voorstellen en blijft het aantal opgeslagen opmerkingen beheersbaar.
 
-Als je een opmerking wil hergebruiken in een andere oefening, zal je deze opnieuw moeten opslaan. We onderzoeken momenteel hoe we dit kunnen verbeteren.
+Als je een opmerking in je hele cursus of zelfs in meerdere cursussen wilt hergebruiken, kun je de opgeslagen opmerking bewerken en de beperkingen op cursus en/of oefening verwijderen. Op deze manier wordt de opmerking voorgesteld in alle oefeningen van al je cursussen.
 
-Je kan een overzicht van al je opgeslagen opmerkingen voor een bepaalde oefening vinden door op de link onder het zoekveld te klikken.
+![edit_saved_comment.png](edit_saved_comment.png)
+
+Om een opgeslagen opmerking te bewerken, klik je op het icoon van de opgeslagen opmerking in een annotatie die de opmerking hergebruikt. Dit opent de opgeslagen opmerking en door op het potloodicoon te klikken kun je de opmerking bewerken.
+
+![saved_comment_link.png](saved_comment_link.png)
+
+Je kunt een overzicht van al je opgeslagen opmerkingen voor een bepaalde oefening vinden door op de link onder het zoekveld te klikken. Of door op 'opgeslagen opmerkingen' in het zijbalkmenu te klikken.
+Vanaf hier kun je ook opgeslagen opmerkingen bewerken of verwijderen.
 
 ![Link to saved comments](./link-to-saved-comments.png)
 ![Saved comments](./saved-comments-list.png)
