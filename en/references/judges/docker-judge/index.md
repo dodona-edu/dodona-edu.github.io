@@ -6,9 +6,9 @@ order: 7
 # Docker judge
 
 The Docker judge has 4 main functions.
-Firstly it uses dodona-containerfile-evaluator, a custom utility, to check the usage of certain Docker instruction e.g. USER and WORKDIR.
-Secondly it uses Hadolint to annotate the code and optionally fail the solution if it errors out.
-Thirdly it uses kaniko to build the image from the Dockerfile.
+Firstly it uses [dodona-containerfile-evaluator](https://github.com/Bond-009/dodona-containerfile-evaluator), a custom utility, to check the usage of certain Docker instruction e.g. USER and WORKDIR.
+Secondly it uses [Hadolint](https://github.com/hadolint/hadolint) to annotate the code and optionally fail the solution if it errors out.
+Thirdly it uses [kaniko](https://github.com/GoogleContainerTools/kaniko) to build the image from the Dockerfile.
 Lastly the judge checks the existence of files and directories in the created image.
 
 ## Configuring Hadolint
