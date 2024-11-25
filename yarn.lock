@@ -986,10 +986,10 @@ regex@^4.3.2:
   resolved "https://registry.yarnpkg.com/regex/-/regex-4.3.3.tgz#8cda73ccbdfa7c5691881d02f9bb142dba9daa6a"
   integrity sha512-r/AadFO7owAq1QJVeZ/nq9jNS1vyZt+6t1p/E59B56Rn2GCya+gr1KSyOzNL/er+r+B7phv5jG2xU2Nz1YkmJg==
 
-resolve-accept-language@^3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.1.8.tgz#c42f8d55ef5b941896624dba1c2a11500bf1c81d"
-  integrity sha512-DGFxmsDUmHO6l73kkGqQNSsdk1RpbxIuHSqFhrlBH+5DZiumiHV2uVkKwIBQhRvQHV1tBl00vtZQhV1o4NHgXQ==
+resolve-accept-language@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.1.9.tgz#3027ca27fe2a6327b92210130e0aaa7a54d528ed"
+  integrity sha512-LCc6JBDJFz72XEv8qgyiv0Sze1DixQ/eikDdbEc4sJGVR1yEVutgczL+q4Kzo0rGSBslEaQqC7eqbz+HAkNTPg==
 
 rfdc@^1.4.1:
   version "1.4.1"
