@@ -50,7 +50,7 @@ It's also possible to check if the `USER` or `WORKDIR` instructions are used wit
 This file also contains a `files` property that is a JSON array of JSON objects.
 Each object contains a `path` property with the desired location in the resulting image.
 The object represents either a file or a directory, this is specified by the `type` property.
-Additionally object representing files can also contain a `compare` or `regex` property.
+Additionally objects representing files can also contain a `compare` or `regex` property.
 `compare` should be the name of a file inside of the `workdir` with which the file at `path` should be compared with.
 `regex` contains a ("extended") "regular expression that should match on the content of the file at `path`.
 
