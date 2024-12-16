@@ -47,6 +47,7 @@ For more configuration options can be found in the [Hadolint README](https://git
 The judge is configured by specifying a `judge.json` configuration file inside of the `evaluation` directory.
 Using this file it's possible to verify the base image, the `from` object requires the `image` to contain the image name, optionally a `tag` or `hash` property can be added to check the used tag or digest.
 It's also possible to check if the `USER` or `WORKDIR` instructions are used with the desired arguments.
+Another feature is the ability to check if the comments contain certain strings using the `comments` array.
 This file also contains a `files` property that is a JSON array of JSON objects.
 Each object contains a `path` property with the desired location in the resulting image.
 The object represents either a file or a directory, this is specified by the `type` property.
@@ -62,6 +63,7 @@ Additionally objects representing files can also contain a `compare` or `regex` 
   },
   "user": "runner",
   "workdir": "/course",
+  "comments": [ "docker run" ],
   "files": [
     { "type": "directory", "path": "/course" },
     { "type": "file", "path": "/environment.yml", "compare": "environment.yml" },
@@ -70,3 +72,17 @@ Additionally objects representing files can also contain a `compare` or `regex` 
   ]
 }
 ```
+
+## Limitations
+Due to the design of the judge it isn't possible to test the existence of files if no `COPY`, `RUN` or `ADD` instructions are present in the final stage.
+For example, if the following solution is submitted, a test for the existence of the file `/etc/os-release` which is present in the alpine base image will fail.
+```docker
+FROM alpine:3.21
+
+USER runner
+
+WORKDIR /home/runner
+
+LABEL org.opencontainers.image.title="test"
+```
+But once you add one of the instructions that can modify the filesystem this same test will succeed.
