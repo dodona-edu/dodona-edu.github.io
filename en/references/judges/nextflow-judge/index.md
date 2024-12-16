@@ -6,7 +6,11 @@ order: 7
 # Nextflow judge
 
 The Nextflow judge annotates the submitted code using CodeNarc, executes the submitted script and optionally checks the existence of directories and files.
-A couple of bioinformatics tools are installed in the judge container by default, namely FastQC, MultiQC and Trimmomatic.
+The following bioinformatics tools are available by default:
+* FastQC
+* MultiQC
+* Trimmomatic.
+
 Also available are Perl and Python3.
 
 ## Configuration
@@ -28,6 +32,8 @@ The object contains a `path` property which contains the expected location of th
 Additionally object representing files can also contain a `compare` or `regex` property.
 `compare` should be the name of a file inside of the `workdir` with which the file at `path` should be compared with.
 `regex` contains a ("extended") "regular expression that should match on the content of the file at `path`.
+
+An example `judge.json`:
 ```json
 [
     { "type": "directory", "path": "work" },
@@ -41,5 +47,4 @@ Additionally object representing files can also contain a `compare` or `regex` p
 ```
 
 ### Scripts
-Due to limited available resources inside of the Dodona judge container it isn't always possible to run the tools required for an exercises.
-To get around this a dummy script can be created that emulates the required tool, this script should be placed inside of the `resources/bin` directory of the exercise.
+Due to limited resources available to the judge, it isn't always possible to run the tools required for an exercise.To work around this limitation, I suggest you create a dummy script that emulates the behaviour of the required tool, this script should be placed inside of the `resources/bin` directory of the exercise.
