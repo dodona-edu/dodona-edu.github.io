@@ -5,11 +5,46 @@ order: 7
 ---
 # Docker judge
 
-The Docker judge has 4 main functions.
-Firstly it uses [dodona-containerfile-evaluator](https://github.com/Bond-009/dodona-containerfile-evaluator), a custom utility, to check the usage of certain Docker instruction e.g. USER and WORKDIR.
-Secondly it uses [Hadolint](https://github.com/hadolint/hadolint) to annotate the code and optionally fail the solution if it errors out.
-Thirdly it uses [kaniko](https://github.com/GoogleContainerTools/kaniko) to build the image from the Dockerfile.
-Lastly the judge checks the existence of files and directories in the created image.
+The Docker judge has 4 main functions:
+1. Check usage of Docker instructions like `USER` or `WORKDIR` using [dodona-containerfile-evaluator](https://github.com/Bond-009/dodona-containerfile-evaluator).
+2. Static analysis (linting) using [Hadolint](https://github.com/hadolint/hadolint) to annotate the code and optionally fail the solution if it contains errors.
+3. Build the submitted Dockerfile using [kaniko](https://github.com/GoogleContainerTools/kaniko).
+4. Check the existence and/or contents of files and directories in the image that is build from the submitted Dockerfile.
+
+Items 1 and 2 above are configurable.
+
+
+## Configuring Docker instructions
+
+Create a file called `judge.json` inside of the `evaluation` directory.
+Using this file it's possible to verify the base image, the `from` object requires the `image` to contain the image name, optionally a `tag` or `hash` property can be added to check the used tag or digest.
+It's also possible to check if the `USER` or `WORKDIR` instructions are used with the desired arguments.
+Another feature is the ability to check if the comments contain certain strings using the `comments` array.
+This file also contains a `files` property that is a JSON array of JSON objects.
+Each object contains a `path` property with the desired location in the resulting image.
+The object represents either a file or a directory, this is specified by the `type` property.
+Additionally objects representing files can also contain a `compare` or `regex` property.
+`compare` should be the name of a file inside of the `workdir` with which the file at `path` should be compared with.
+`regex` contains a ("extended") "regular expression that should match on the content of the file at `path`.
+
+An example `judge.json`:
+```json
+{
+  "from": {
+    "image": "alpine",
+    "tag": "3:20"
+  },
+  "user": "runner",
+  "workdir": "/course",
+  "comments": [ "docker run" ],
+  "files": [
+    { "type": "directory", "path": "/course" },
+    { "type": "file", "path": "/environment.yml", "compare": "environment.yml" },
+    { "type": "directory", "path": "/usr/miniconda3/envs/pipeline-tools-1.0.0" },
+    { "type": "file", "path": "/etc/os-release", "regex": "^ID=\"ubuntu\"$" }
+  ]
+}
+```
 
 ## Configuring Hadolint
 
@@ -41,37 +76,6 @@ ignored:
 `ignored` is a list or rules that should be ignored.
 For more configuration options can be found in the [Hadolint README](https://github.com/hadolint/hadolint#configure)
 
-
-## Judge configuration
-
-The judge is configured by specifying a `judge.json` configuration file inside of the `evaluation` directory.
-Using this file it's possible to verify the base image, the `from` object requires the `image` to contain the image name, optionally a `tag` or `hash` property can be added to check the used tag or digest.
-It's also possible to check if the `USER` or `WORKDIR` instructions are used with the desired arguments.
-Another feature is the ability to check if the comments contain certain strings using the `comments` array.
-This file also contains a `files` property that is a JSON array of JSON objects.
-Each object contains a `path` property with the desired location in the resulting image.
-The object represents either a file or a directory, this is specified by the `type` property.
-Additionally objects representing files can also contain a `compare` or `regex` property.
-`compare` should be the name of a file inside of the `workdir` with which the file at `path` should be compared with.
-`regex` contains a ("extended") "regular expression that should match on the content of the file at `path`.
-
-```json
-{
-  "from": {
-    "image": "alpine",
-    "tag": "3:20"
-  },
-  "user": "runner",
-  "workdir": "/course",
-  "comments": [ "docker run" ],
-  "files": [
-    { "type": "directory", "path": "/course" },
-    { "type": "file", "path": "/environment.yml", "compare": "environment.yml" },
-    { "type": "directory", "path": "/usr/miniconda3/envs/pipeline-tools-1.0.0" },
-    { "type": "file", "path": "/etc/os-release", "regex": "^ID=\"ubuntu\"$" }
-  ]
-}
-```
 
 ## Limitations
 Due to the design of the judge it isn't possible to test the existence of files if no `COPY`, `RUN` or `ADD` instructions are present in the final stage.
