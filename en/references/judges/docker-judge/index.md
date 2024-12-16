@@ -74,7 +74,7 @@ ignored:
 `label-schema` is a dictionary where the key is the label name and the value of a label can be either of `text`, `url`, `semver`, `hash`, `rfc3339`, `spdx` or `email`.
 `override` is used to override the severity of rules, valid severities are the same as for `failure-threshold`.
 `ignored` is a list or rules that should be ignored.
-For more configuration options can be found in the [Hadolint README](https://github.com/hadolint/hadolint#configure)
+More configuration options can be found in the [Hadolint README](https://github.com/hadolint/hadolint#configure)
 
 
 ## Limitations
