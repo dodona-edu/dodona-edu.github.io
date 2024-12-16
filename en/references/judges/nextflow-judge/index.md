@@ -29,9 +29,6 @@ Passing extra argument to Nextflow can be accomplished by modifying the exercise
 A `judge.json` configuration file inside of the `evaluation` directory that contains a JSON array of JSON objects.
 Each object represents either a file or a directory, this is specified by the `type` property.
 The object contains a `path` property which contains the expected location of the file/directory.
-Additionally object representing files can also contain a `compare` or `regex` property.
-`compare` should be the name of a file inside of the `workdir` with which the file at `path` should be compared with.
-`regex` contains a ("extended") "regular expression that should match on the content of the file at `path`.
 
 An example `judge.json`:
 ```json
@@ -47,4 +44,4 @@ An example `judge.json`:
 ```
 
 ### Scripts
-Due to limited resources available to the judge, it isn't always possible to run the tools required for an exercise.To work around this limitation, I suggest you create a dummy script that emulates the behaviour of the required tool, this script should be placed inside of the `resources/bin` directory of the exercise.
+Due to limited resources available to the judge, it isn't always possible to run the tools required for an exercise. To work around this limitation, I suggest you create a dummy script that emulates the behaviour of the required tool, this script should be placed inside of the `resources/bin` directory of the exercise.
