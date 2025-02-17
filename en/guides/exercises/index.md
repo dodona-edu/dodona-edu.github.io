@@ -3,25 +3,36 @@ title: Creating exercises
 order: 4
 ---
 
-# Creating exercises
+# Creating Exercises
 
-Every teacher can create exercises for use with Dodona, or modify existing exercises.
+Every instructor can create their own exercises for Dodona.
 
-## Ready-to-go tutorials
+## Comprehensive Tutorial
 
-Below are a few tutorials for different types of exercises, that will explain the whole process from A to Z.
-After following one of these tutorials, you will have a working exercise.
-We recommend these tutorials for those without experience with creating exercises.
+If you have never created an exercise for Dodona before, we recommend starting with our [tutorial that explains how to create an exercise from A to Z](/en/guides/exercises/creating-exercises/introduction).
 
-We are currently writing said tutorials, which means they are not available yet.
+## Types of Exercises
 
-[//]: # (- Oefening met input-output: een oefening waarbij er invoer gelezen wordt en een resultaat uitgeschreven wordt)
+We also have examples of four common types of exercises:
 
-[//]: # (- Oefening met functies: hier moet een functie geschreven worden die een resultaat als returnwaarde geeft)
+- [Input-Output Exercise](/en/guides/exercises/examples/input-output): an exercise where input is read and a result is output
+- [Function Exercise](/en/guides/exercises/examples/function): here, a function must be written that returns a value
+- [Class Exercise](/en/guides/exercises/examples/class): here, a class must be written
+- [Argument Exercise](/en/guides/exercises/examples/command-line): here, a program must be written that accepts arguments
 
-[//]: # (- Oefening met klassen: hier moet een klassen geschreven worden)
+These tutorials assume that you already have a repository with exercises.
+If not, it is best to follow the [comprehensive tutorial](/en/guides/exercises/creating-exercises/introduction) first.
 
-[//]: # (- Oefening met argumenten: hier moet een programma geschreven worden dat argumenten aanvaard)
+## Test suites
+
+If you are working with the recommended judge, we have the following additional documentation:
+
+- [Test suites for exercises](/en/guides/exercises/testsuites): explanation of the test suites and the different functions that exist.
+
+## Examples
+
+In our [example repository](https://github.com/dodona-edu/example-exercises), you will find various fully developed exercises that can serve as examples.
+This repository contains examples for all judges, so choose the appropriate exercises to view.
 
 ## References
 

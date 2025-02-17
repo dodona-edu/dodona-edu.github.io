@@ -5,7 +5,7 @@ order: 4
 
 # Oefeningen opstellen
 
-Elke lesgever kan eigen oefeningen maken voor Dodona, of bestaande oefeningen aanpassen.
+Elke lesgever kan eigen oefeningen maken voor Dodona.
 
 ## Kant-en-klare tutorial
 
