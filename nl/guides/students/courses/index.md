@@ -33,7 +33,6 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
     ![image](./register.png)
 
-<h1 id="registratieverzoek"/>
 
 -   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `Registratieverzoek indienen` om een registratieverzoek voor de cursus in te dienen.
 
@@ -43,7 +42,7 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
     ![image](./moderated_waiting.png)
 
--   De cursus werkt met een **gesloten registratieprocedure**, wat betekent dat je geen [registratieverzoek](#registratieverzoek) kunt indienen voor de cursus. De lesgever laat dus niet toe dat je jezelf kan registreren.
+-   De cursus werkt met een **gesloten registratieprocedure**, wat betekent dat je geen registratieverzoek kunt indienen voor de cursus. De lesgever laat dus niet toe dat je jezelf kan registreren.
 
     ![image](./closed_registration.png)
 

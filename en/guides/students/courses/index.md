@@ -1,133 +1,124 @@
 ---
-title: "[nl] Cursussen op Dodona"
-description: "Tutorial: cursussen op Dodona"
+title: "Courses on Dodona"
+description: "Tutorial: courses on Dodona"
 order: 3
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
+# Courses on Dodona
 
-# Cursussen op Dodona
-> Op deze pagina vind je alle informatie zodat je je als student kan registreren en uitschrijven voor een cursus, kan navigeren naar een cursus en de indienstatus kan interpreteren.
+On this page, you will find all the information you need to register and unsubscribe from a course as a student, navigate to a course, and interpret the submission status.
 
-**Inhoudsopgave**
-[[toc]]
+## What is a Course?
 
-## Wat is een cursus?
+A course on Dodona is a learning path with [exercises](../exercises/#navigating-to-an-exercise) that are bundled into exercise series. If you are registered for a course, you can submit [solutions](../exercises/#submitting-a-solution) for the exercises within the course.
 
-Een cursus op Dodona is een leerpad met [oefeningen](../exercises/#navigeren-naar-een-oefening) die gebundeld worden in oefeningenreeksen. Als je voor een cursus geregistreerd bent dan kan je binnen de cursus [oplossingen indienen](../exercises/#indienen-van-een-oplossing) voor de oefeningen.
+## Registering for a Course
 
-## Registreren voor een cursus
+To submit solutions for exercises in a course, you must be registered for that course.
 
-Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die cursus geregistreerd zijn.
+### How to Find a Course
 
-### Hoe vind je een cursus?
-
-Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `Meer cursussen...` of op `Verken cursussen` te klikken.
+First, you need to find the course you want to register for. You can do this by clicking on `More courses...` or `Explore courses` on your homepage.
 
 ![image](./student.explore_courses.png)
 
-Dit zal je naar een [overzicht van alle cursussen](https://dodona.be/nl/courses/) brengen. Je krijgt er een of meerdere tabs te zien waar je de zoekbalk kan gebruiken om op basis van een cursusnaam, een naam van een lesgever, de naam van je onderwijsinstelling of een academiejaar de juiste cursus kan vinden.
+This will take you to an [overview of all courses](https://dodona.be/en/courses/). You will see one or more tabs where you can use the search bar to find the right course based on a course name, instructor name, educational institution name, or academic year.
 
 ![image](./student.courses.png)
 
-### Hoe registreer je?
+### How to Register
 
-Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd bent, dan zie je bovenaan de cursuspagina een paneel dat aangeeft of en hoe je je voor de cursus kan registreren. Hierbij zijn er drie mogelijkheden afhankelijk van hoe de cursus geconfigureerd werd:
+When you navigate to the course you searched for and are not yet registered, you will see a panel at the top of the course page indicating whether and how you can register for the course. There are three possibilities depending on how the course is configured:
 
--   De cursus werkt met een **open registratieprocedure**, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `Registreren` om je voor de cursus te registreren.
+- The course uses an **open registration procedure**, which means anyone can register for the course without explicit approval from a course administrator. Click the `Register` button to register for the course.
 
-    ![image](./register.png)
+  ![image](./register.png)
 
-<h1 id="registratieverzoek"/>
+- The course uses a **moderated registration procedure**, which means you can submit a **registration request** that must then be approved or rejected by a course administrator. Only when your registration request is approved will you be effectively registered for the course. Click the ` Request registration` button to submit a registration request for the course.
 
--   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `Registratieverzoek indienen` om een registratieverzoek voor de cursus in te dienen.
+  ![image](./moderated_register.png)
 
-    ![image](./moderated_register.png)
+  As long as your registration request has not been approved or rejected by a course administrator, the message `Your registration is pending` will appear in the panel at the top of the course page, and the course will be listed in the `Pending` panel in the right column of your homepage.
 
-    Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de cursuspagina de boodschap `Je staat op de wachtlijst.` en wordt de cursus opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina.
+  ![image](./moderated_waiting.png)
 
-    ![image](./moderated_waiting.png)
+- The course uses a **closed registration procedure**, which means you cannot submit a registration request for the course. The instructor does not allow self-registration.
 
--   De cursus werkt met een **gesloten registratieprocedure**, wat betekent dat je geen [registratieverzoek](#registratieverzoek) kunt indienen voor de cursus. De lesgever laat dus niet toe dat je jezelf kan registreren.
+  ![image](./closed_registration.png)
 
-    ![image](./closed_registration.png)
+After you have registered, the course will be displayed on your personalized homepage.
 
-Nadat je geregistreerd bent, wordt de cursus getoond op je gepersonaliseerde startpagina.
+In addition to the option to navigate to a course yourself and complete the registration procedure on the course page, it is also possible that you will receive a registration link from a course administrator (e.g., via email from an instructor). By clicking on the registration link, the registration procedure for a specific course will be initiated, and you will not need to navigate to the course yourself.
 
-Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina de registratieprocedure te doorlopen, is het ook mogelijk dat je een registratielink ontvangt van een cursusbeheerder (bijvoorbeeld per e-mail van een lesgever). Door op de registratielink te klikken, wordt de registratieprocedure opgestart voor een specifieke cursus en hoef je dus zelf niet meer naar de cursus te navigeren.
+## Course Components
 
-## Cursuscomponenten
-
-Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder kan je verschillende oefeningenreeksen zien die elk bestaan uit een of meerdere oefeningen.
+A course consists of various components. At the top of the course page, you will see the description of a course. Below that, you can see different exercise series, each consisting of one or more exercises.
 
 ![image](./student.deadline_series_warning.png)
 
 ::: tip Tip
 
-Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de navigatiebalk. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je terug naar de cursuspagina.
+When working within a course, the name of the course appears next to `Dodona` on the left side of the navigation bar. By clicking on the course name in the navigation bar, you will navigate back to the course page.
 
 ![image](./student.breadcrumb_course.png)
 :::
 
-### Oefeningenreeksen
+### Exercise Series
 
-Een oefeningenreeks bestaat uit een beschrijving, een aantal oefeningen en eventueel een **deadline** die ingesteld werd door de cursusbeheerder. Indien er een deadline is ingesteld, dan wordt die weergegeven onder de naam van de oefeningenreeks. Bij weergave van de deadline wordt rekening gehouden met de tijdzone uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
+An exercise series consists of a description, a number of exercises, and possibly a **deadline** set by the course administrator. If a deadline is set, it will be displayed under the name of the exercise series. When displaying the deadline, the time zone from your [user profile](../login-and-settings/#setting-your-personal-preferences) is taken into account. Deadlines are displayed in green if they have not yet expired and in red if they have already expired.
 
-Als een reeks een deadline heeft, dan worden enkel ingediende oplossingen van voor dat tijdstip in rekening gebracht. Na de deadline kan je dus nog steeds indienen, maar ze tellen mogelijks niet mee voor een eventuele evaluatie. Meer details hierover kan je vinden bij de sectie [indienstatus](#indienstatus).
+If a series has a deadline, only submitted solutions from before that time will be considered. After the deadline, you can still submit, but they may not count towards any evaluation. More details can be found in the section on [submission status](#submissionstatus).
 
-Onder de naam van een oefeningenreeks staat optioneel een beschrijving, met daaronder een oplijsting van alle oefeningen uit de reeks. De lijst toont voor elke oefening je indienstatus en eventueel de voortgang van de groep. Vóór elke oefening in de lijst staat ook een icoontje dat overeenkomt met je indienstatus voor de oefening.
+Under the name of an exercise series, there is optionally a description, followed by a list of all exercises in the series. The list shows your submission status for each exercise and possibly the progress of the group. Before each exercise in the list, there is also an icon corresponding to your submission status for the exercise.
 
-::: tip Dezelfde oefening in meerdere cursussen/oefeningenreeksen
-Dezelfde oefening kan voorkomen in meerdere cursussen. Je indienstatus voor de oefening wordt hierbij niet overgenomen. Je moet dus de oefening binnen elke cursus afzonderlijk indienen.
+::: tip Same Exercise in Multiple Courses/Exercise Series
+The same exercise can appear in multiple courses. Your submission status for the exercise will not be transferred. You must submit the exercise separately within each course.
 
-Dezelfde oefening kan ook voorkomen in meerdere oefeningenreeksen van eenzelfde cursus. Hier worden je ingediende oplossingen wel in rekening genomen bij alle voorkomens van de oefening. Afhankelijk van de ingestelde deadlines van de reeksen kan de indienstatus wel verschillen. Bij een reeks met een deadline worden namelijk enkel oplossingen die voor de deadline werden ingediend meegeteld.
+The same exercise can also appear in multiple exercise series of the same course. Here, your submitted solutions will be considered for all occurrences of the exercise. Depending on the set deadlines of the series, the submission status may differ. In a series with a deadline, only solutions submitted before the deadline will be counted.
 :::
 
-In het menu van een oefeningenreeks vind je de volgende opties:
+In the menu of an exercise series, you will find the following options:
 
-- `Alle opgaven en leesactiviteiten bekijken`: Toont een overzicht waarin de namen en beschrijvingen van alle oefeningen uit de oefeningenreeks netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+- `Show all learning activity descriptions`: Displays an overview where the names and descriptions of all exercises from the exercise series are neatly listed. Under each description, you will also see your [submission status](#submissionstatus) for the exercise. If you click on the submission status, you will navigate to the solution used to determine the submission status (if you have effectively submitted a solution based on which the submission status could be determined).
 
-- `Mijn oplossingen exporteren`: Downloadt een ZIP-bestand dat voor elke oefening uit de oefeningenreeks de oplossing bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+- `Export my submissions`: Downloads a ZIP file containing the submission for each exercise in the exercise series that was used to determine your [submission status](#submissionstatus) for the exercise (if you have effectively submitted a solution based on which the submission status could be determined).
 
-### Indienstatus
+### Submission Status
 
-Je indienstatus voor een oefening uit een oefeningenreeks wordt bepaald **op basis van de oplossing die je als laatste in de cursus hebt ingediend voor de oefening**. Als er een deadline werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat overeenkomt met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+Your submission status for an exercise from an exercise series is determined **based on the solution you last submitted in the course for the exercise**. If a deadline was set for the exercise series, this is the last submitted solution before the deadline. In the exercise series, you will also see an **icon** corresponding to your submission status for the exercise before each exercise. If you click on your submission status for an exercise in an exercise series, you will navigate to the solution used to determine the submission status (if you have effectively submitted a solution based on which the submission status could be determined).
 
-Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vóór het verstrijken van de deadline:
+Possible displays of your submission status if no deadline is set or before the deadline expires:
 
-  | indienstatus | icoontje | weergegeven als je |
-  | --- | --- | --- |
-  | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) |
-  | `verkeerd` | ![image](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
-  | `correct` | ![image](../../../../images/course_exercise_status_icons/correct.png) (![image](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
+| Submission Status | Icon                                                                                                                                                 | Displayed if you                                                      |
+  | --- |------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| `not solved` |                                                                                                                                                      | have not submitted a solution (before the deadline)                   |
+| `incorrect` | ![image](../../../../images/course_exercise_status_icons/wrong.png)                                                                                  | the last solution you submitted was incorrect                         |
+| `correct` | ![image](../../../../images/course_exercise_status_icons/correct.png) ![image](../../../../images/course_exercise_status_icons/before_deadline.png) | the last solution you submitted was correct <br/> before the deadline |
 
-Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
+Possible displays of your submission status after the deadline has expired:
 
-  |indienstatus | icoontje | weergegeven als je |
-  |-------------|----------|--------------------|
-  | `correct` (groen) | ![image](../../../../images/course_exercise_status_icons/before_deadline.png) | laatst ingediende oplossing vóór de deadline correct is|
-  | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | geen oplossingen hebt ingediend|
-  | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
-  | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
+| Submission Status | Icon | Displayed if you                                       |
+  | --- | --- |--------------------------------------------------------|
+| `correct` (green) | ![image](../../../../images/course_exercise_status_icons/before_deadline.png) | the last submitted solution before the deadline is correct |
+| `deadline missed` (red) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | have not submitted any solutions                       |
+| `deadline missed` (red) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | your last submitted solution is not correct            |
+| `deadline missed` (red) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | submitted a correct solution after the deadline    |
 
-::: tip Laatst ingediende oplossing vóór deadline telt
+::: tip Last Submitted Solution Before Deadline Counts
 
-Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit de oefeningenreeks, dan kan je indienstatus voor de oefening nog wijzigen omdat die indienstatus altijd gebaseerd is op je laatst ingediende oplossing vóór de deadline. Het is dus je eigen verantwoordelijkheid om ervoor te zorgen dat je laatst ingediende oplossing vóór de deadline ook je meest correcte oplossing is. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
+If you submit a solution for an exercise from an exercise series **before the deadline expires**, your submission status for the exercise can still change because that submission status is always based on your last submitted solution before the deadline. It is your responsibility to ensure that your last submitted solution before the deadline is also your most correct solution. You can optionally select a previous solution and resubmit it.
 
-Dodona toont een **waarschuwingssymbool** naast je indienstatus van een oefening in een oefeningenreeks en in de lijst met recente op je startpagina als je laatst ingediende oplossing voor de oefening vóór de deadline van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
+Dodona displays a **warning symbol** next to your submission status for an exercise in an exercise series and in the list of recent submissions on your homepage if your last submitted solution for the exercise before the deadline of the exercise series has a status that is worse than the status of a solution for the exercise that you submitted before. You can optionally select a previous solution and resubmit it.
 
 ![image](./student.deadline_series_warning.png)
 
-Als je **na het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit een oefeningenreeks, dan zal je indienstatus voor de oefening in de oefeningenreeks daardoor nooit wijzigen. Je indienstatus voor een oefening in een oefeningenreeks wordt immers bepaald op basis van je laatst ingediende oplossing vóór de deadline.
+If you submit a solution for an exercise from an exercise series **after the deadline expires**, your submission status for the exercise in the exercise series will never change as a result. Your submission status for an exercise in an exercise series is determined based on your last submitted solution before the deadline.
 :::
 
+## Unsubscribing from a Course
 
-## Uitschrijven uit een cursus
-
-Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `Uitschrijven` (of `Registratieverzoek annuleren`) waarmee je je kunt uitschrijven uit de cursus.
+If you navigate to a course for which you are [registered](#registering-for-a-course) or for which you still have a registration request open, you will see a `Unregister` button (or `Withdraw registration request`) below the course description on the course page, which you can use to unsubscribe from the course.
 
 ![image](./student.unregister.png)
 
-Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Cursussen` in het hamburger menu aan de linkerkant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.
+This will remove the course card from the left side of your homepage, and the course will no longer be listed on your [profile page](../login-and-settings/#setting-your-personal-preferences). If the course was listed under `Courses` in the hamburger menu on the left side of the navigation bar, the course will also be removed from that list. If the course was listed in the `Pending` panel in the right column of your homepage, the course will also be removed from that list.
