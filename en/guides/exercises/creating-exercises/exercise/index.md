@@ -8,7 +8,7 @@ next: true
 
 # Creating Exercises: Writing the Assignment and Test Suite
 
-If you used the _template repository_ in the previous step of the guide, your repository already contains an exercise (_EchoFunction_).  
+If you used the _template repository_ in the previous step of the guide, your repository already contains an exercise (_EchoFunction_).
 Now, we will add another exercise ourselves.
 The existing exercise can, of course, serve as an example.
 
@@ -23,7 +23,7 @@ The existing exercise can, of course, serve as an example.
 
 ## 5. Saving Changes
 
-Now that the exercise is ready, we need to save the changes to the repository (that means _committing_ the changes in the repo).  
+Now that the exercise is ready, we need to save the changes to the repository (that means _committing_ the changes in the repo).
 Do this as follows:
 
 ![commit window](./commit.png)
@@ -37,7 +37,7 @@ If everything went well, this window should now be empty.
 
 ## 6. Testing the Exercise
 
-The exercise you just created can be found in [your exercise repository](https://dodona.be/nl/repositories/) on Dodona.  
+The exercise you just created can be found in [your exercise repository](https://dodona.be/nl/repositories/) on Dodona.
 Your new exercise is now available as a _concept_ on Dodona.
 
 Before you can publish an exercise (removing it from concept status), Dodona checks whether three conditions are met:
@@ -46,19 +46,19 @@ Before you can publish an exercise (removing it from concept status), Dodona che
 - The exercise must have a name and description.
 - You must submit at least one correct solution.
 
-If you followed this guide, the first two conditions are already met.  
-You only need to submit a correct solution, which we have already created.  
+If you followed this guide, the first two conditions are already met.
+You only need to submit a correct solution, which we have already created.
 To do this, click on the info icon in the top menu bar:
 
 ![Sample Solution](./sample-solution.png)
 
-Next, select the sample solution you want to submit (in this case, there is only one: `solution.py`), then click the _Submit this solution_ button.  
-This will open the exercise page with the sample solution preloaded.  
+Next, select the sample solution you want to submit (in this case, there is only one: `solution.py`), then click the _Submit this solution_ button.
+This will open the exercise page with the sample solution preloaded.
 All you need to do is click submit.
 
 ![Select Sample Solution](./dodona-submit.png)
 
-Once the solution is marked as correct, you will be able to publish the exercise by clicking _Publish this exercise_.  
+Once the solution is marked as correct, you will be able to publish the exercise by clicking _Publish this exercise_.
 Your exercise is now ready to use on Dodona!
 
 ![Minimum Exercise](./minimum.png)

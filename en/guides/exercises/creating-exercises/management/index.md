@@ -8,7 +8,7 @@ next: false
 
 # Creating Exercises: Next Steps
 
-Now that you have an exercise that can be used on Dodona, there are many additional things you can do.  
+Now that you have an exercise that can be used on Dodona, there are many additional things you can do.
 Here are some suggestions for your next steps:
 
 - [Create a course](/en/guides/teachers/creating-a-course/).
@@ -31,5 +31,5 @@ There are various resources available for working with test suites:
 - Couldn’t find what you were looking for in the guides or references?
 - Unsure about the best way to create a test plan for a specific exercise?
 
-Don't hesitate to [contact us](https://dodona.be/en/contact/).  
+Don't hesitate to [contact us](https://dodona.be/en/contact/).
 We’d love to hear your questions or suggestions!

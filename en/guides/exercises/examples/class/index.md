@@ -10,17 +10,17 @@ In this guide, we will create an exercise that makes use of classes.
 
 We will implement a `Counter` class that allows us to keep track of a count.
 
-This guide assumes that you already have a working exercise repository.  
+This guide assumes that you already have a working exercise repository.
 If that is not the case, first follow the guide [_Creating Exercises_](/en/guides/exercises/creating-exercises/introduction/).
 
 The final result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/class/).
 
 ## 1. Structure
 
-Every exercise in Dodona corresponds to a specific directory in the exercise repository.  
+Every exercise in Dodona corresponds to a specific directory in the exercise repository.
 That directory follows a [fixed structure](/en/references/exercise-directory-structure), which we will now create.
 
-First, create a new directory for the exercise, which we will call `counter`.  
+First, create a new directory for the exercise, which we will call `counter`.
 Then, inside this new directory, create three additional subdirectories:
 
 - `description`: contains the exercise assignment
@@ -39,7 +39,7 @@ repository/
 
 ## 2. Configuration
 
-Dodona requires every exercise to have a [configuration file](/en/references/exercise-config).  
+Dodona requires every exercise to have a [configuration file](/en/references/exercise-config).
 This file contains metadata that Dodona uses.
 
 Create a file `config.json` inside the `counter` directory with the following content:
@@ -82,7 +82,7 @@ repository/
 
 ## 3. Exercise assignment and sample solution
 
-The next step is writing the exercise assignment.  
+The next step is writing the exercise assignment.
 This is what students will see when they try to solve the exercise, explaining what they need to do.
 
 Create a file `description.en.md` inside the `description` directory with the following content:
@@ -113,12 +113,12 @@ The class should also support the following methods:
 ```
 ````
 
-If you also want a Dutch version, create a file named `description.nl.md` for the Dutch assignment.  
-The assignment itself is written in Markdown, a fairly simple formatting language.  
+If you also want a Dutch version, create a file named `description.nl.md` for the Dutch assignment.
+The assignment itself is written in Markdown, a fairly simple formatting language.
 More information on Markdown can be found [here](/en/references/exercise-description).
 
-We will also add a sample solution.  
-This is not required, but it is often useful to have.  
+We will also add a sample solution.
+This is not required, but it is often useful to have.
 Students cannot see this sample solution (unless your repository is public).
 
 Create a file `solution.py` inside the `solution` directory with the following content:
@@ -127,11 +127,11 @@ Create a file `solution.py` inside the `solution` directory with the following c
 class Counter:
     def __init__(self, start_value=0):
         self.count = start_value
-    
+
     def count(self):
         self.count += 1
         return self
-    
+
     def report(self):
         print(self.count)
 
@@ -152,11 +152,11 @@ repository/
 
 ## 4. Creating a test suite
 
-We want this exercise to be automatically graded.  
-To achieve this, we need to write a test suite, which tells Dodona what tests should be performed.  
+We want this exercise to be automatically graded.
+To achieve this, we need to write a test suite, which tells Dodona what tests should be performed.
 If all test cases pass, Dodona considers the student’s submission to be correct.
 
-To keep this brief, we will limit our test suite to a few tests.  
+To keep this brief, we will limit our test suite to a few tests.
 Create a file `suite.yaml` inside the `evaluation` directory with the following content:
 
 ```yaml
@@ -173,7 +173,7 @@ Create a file `suite.yaml` inside the `evaluation` directory with the following 
           stdout: "10"
 ```
 
-In this test suite, we create one tab with a set of test cases.  
+In this test suite, we create one tab with a set of test cases.
 These are the same tests as in the example from the exercise assignment.
 
 After adding the test suite, your repository should look like this:
