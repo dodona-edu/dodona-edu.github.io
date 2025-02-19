@@ -62,7 +62,7 @@ Eenmaal je bent aangemeld, dan verandert de neutrale landingspagina in een geper
 
 Als dit de eerste keer is dat je aanmeldt op Dodona, dan ben je uiteraard nog voor geen enkele cursus geregistreerd en heb je nog geen enkele oplossing ingediend. Daardoor ziet je startpagina er op dit moment nog vrij kaal uit. Hoe je je kan registreren voor een cursus vind je op [deze pagina](../courses/#registreren-voor-een-cursus).
 
-## Instellen van persoonlijke voorkeuren
+## Setting your personal preferences
 
 Kies voor `Mijn profiel` in het gebruikersmenu aan de rechterkant van de navigatiebalk om naar je profielpagina te navigeren.
 

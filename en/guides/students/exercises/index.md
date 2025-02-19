@@ -14,7 +14,7 @@ For now, this page is only available in Dutch. Sorry!
 **Inhoudsopgave**
 [[toc]]
 
-## Navigeren naar een oefening
+## Navigating to an exercise
 
 Oefeningen op Dodona kunnen ofwel voorkomen in een cursus, ofwel daarbuiten.
 
