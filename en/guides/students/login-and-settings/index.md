@@ -1,199 +1,79 @@
 ---
-title: "[nl] Aanmelden & gebruikersinstellingen"
-description: "Tutorial: aanmelden en gebruikersinstellingen"
+title: "Signing Up & User Settings"
+description: "Tutorial: signing up and user settings"
 order: 2
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
 
-# Aanmelden & gebruikersinstellingen
-> Op deze pagina vind je alle informatie zodat je als student een gebruikersaccount op Dodona kan aanmaken en die kan personaliseren.
+# Signing Up & User Settings
+On this page, you will find all the information you need to create and personalize a user account on Dodona as a student.
 
-**Inhoudsopgave**
-[[toc]]
+## Selecting the Language
 
-## Selecteren van de taal
-
-Je kan Dodona gebruiken in het Nederlands of het Engels. Gebruik hiervoor het taalmenu aan de rechterkant van de navigatiebalk (bovenaan elke pagina).
+You can use Dodona in English or Dutch. Use the language menu on the right side of the navigation bar (at the top of every page) for this purpose.
 
 ![image](./choose_language.png)
 
-Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](https://dodona.be/profile). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
+If you select a language while logged in, it will also be set as your preferred language in your [user profile](https://dodona.be/profile). This way, your preferred language will be automatically selected upon login.
 
-::: tip Wordt alles vertaald?
+::: tip Is Everything Translated?
 
-De vaste componenten van Dodona (menubalken, cursusstructuur, mededelingen, ...) worden altijd weergegeven in de geselecteerde taal.
+The fixed components of Dodona (menu bars, course structure, notifications, etc.) are always displayed in the selected language.
 
-De naam en beschrijving van een [cursus](../courses/) worden weergegeven in de taal zoals de lesgever ze heeft ingegeven. Deze worden niet aangepast aan je taalvoorkeuren.
+The name and description of a [course](../courses/) are displayed in the language as entered by the instructor. These are not adapted to your language preferences.
 
-De naam en beschrijving van een [oefening](../exercises/#navigeren-naar-een-oefening) worden steeds in je voorkeurstaal weergegeven indien beschikbaar. Niet alle oefeningen zijn namelijk in beide talen beschikbaar.
+The name and description of an [exercise](../exercises/#navigating-to-an-exercise) are always displayed in your preferred language if available. Not all exercises are available in both languages.
 
 :::
 
-## Aanmelden
+## Signing Up
 
-Om je aan te melden op dodona klik je ofwel op `Aanmelden` aan de rechterkant van de navigatiebalk, ofwel navigeer je naar de landingspagina en klik je op de knop `Aanmelden` centraal op de pagina.
+To sign up for Dodona, either click on `Sign in` on the right side of the navigation bar or navigate to the landing page and click the `Sign in` button in the center of the page.
 
 ![image](./login.png)
 
-Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
+You can sign up for Dodona by selecting your educational institution on the sign-up page. Secondary school students can log in with their Smartschool, Office365, or G-Suite account. If this is your first time signing up for Dodona, a new user account will be automatically created based on the personal information provided by your external educational or research institution.
 
 ![image](./sign_in.png)
 
-::: warning Jouw data op Dodona
+::: warning Your Data on Dodona
 
-Sommige onderwijs- of onderzoeksinstellingen vragen op het einde van de aanmeldingsprocedure expliciet jouw toestemming voor het doorsturen van enkele [persoonsgegevens](https://dodona.be/nl/data/) naar Dodona. Vaak hoef je deze toestemming slechts één keer te geven op elke computer waarmee je aanmeldt. Dodona gebruikt deze persoonsgegevens enkel voor intern beheer van je gebruikersprofiel en wisselt deze informatie nooit uit met externe partijen.
+Some educational or research institutions explicitly ask for your consent to share some [personal data](https://dodona.be/en/data/) with Dodona at the end of the sign-up procedure. Often, you only need to give this consent once on each computer you use to sign up. Dodona uses this personal data solely for internal management of your user profile and never shares this information with external parties.
 :::
 
-::: tip Foutmelding?
+::: tip Error Message?
 
-Als nog niemand van jouw school eerder aanmeldde op Dodona, dan kan het zijn dat niet alles loopt zoals verwacht. Om aan te melden gebruiken we namelijk de bestaande accounts van je onderwijsinstelling en koppelen we die via technieken als [SAML](https://nl.wikipedia.org/wiki/Security_Assertion_Markup_Language) en [OAuth](https://nl.wikipedia.org/wiki/OAuth). Soms loopt het hier mis omdat jouw school geen toestemming geeft voor deze koppeling. Vraag een ICT-beheerder of lesgever van je onderwijs- of onderzoeksinstelling om [contact](../getting-started/#contact-opnemen) met ons op te nemen als je graag alle gebruikersaccounts van je instelling toegang wilt geven tot Dodona. Deze dienstverlening is gratis.
+If no one from your school has signed up for Dodona before, things might not go as expected. To sign up, we use the existing accounts from your educational institution and link them using techniques such as [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) and [OAuth](https://en.wikipedia.org/wiki/OAuth). Sometimes, this process fails because your school does not grant permission for this link. Ask an ICT administrator or instructor from your educational or research institution to [contact us](../getting-started/#contact-us) if you want to give all user accounts from your institution access to Dodona.
 :::
 
-::: tip Meerdere accounts?
+::: tip Multiple Accounts?
 
-Als je beschikt over gebruikersaccounts bij verschillende externe onderwijs- of onderzoeksinstellingen, dan corresponderen deze elk met een afzonderlijke gebruikersaccount op Dodona. Gebruik dus steeds dezelfde account om aan te melden.
+If you have user accounts with different educational or research institutions, each corresponds to a separate user account on Dodona. Always use the same account to sign up.
 :::
 
-Eenmaal je bent aangemeld, dan verandert de neutrale landingspagina in een gepersonaliseerde startpagina met een overzicht van alle [cursussen](../courses/) waarvoor je geregistreerd bent, hun oefeningenreeksen met nakende deadlines en je voortgang bij het indienen van oplossingen voor [oefeningen](../exercises/). Je kunt steeds terugkeren naar de landingspagina door op `Dodona` te klikken linksboven elke pagina.
+Once you are logged in, the neutral landing page transforms into a personalized homepage with an overview of all [courses](../courses/) you are registered for, their exercise series with upcoming deadlines, and your progress in submitting solutions for [exercises](../exercises/). You can always return to the landing page by clicking on `Dodona` at the top left of any page.
 
+If this is your first time signing up for Dodona, you are obviously not registered for any courses yet and have not submitted any solutions. Therefore, your homepage looks quite empty at the moment. You can find out how to register for a course on [this page](../courses/#registering-for-a-course).
 
-Als dit de eerste keer is dat je aanmeldt op Dodona, dan ben je uiteraard nog voor geen enkele cursus geregistreerd en heb je nog geen enkele oplossing ingediend. Daardoor ziet je startpagina er op dit moment nog vrij kaal uit. Hoe je je kan registreren voor een cursus vind je op [deze pagina](../courses/#registreren-voor-een-cursus).
+## Setting Your Personal Preferences
 
-## Setting your personal preferences
+Select `My Profile` in the user menu on the right side of the navigation bar to navigate to your profile page.
 
-Kies voor `Mijn profiel` in het gebruikersmenu aan de rechterkant van de navigatiebalk om naar je profielpagina te navigeren.
-
-Op de profielpagina staan je persoonsgegevens (voornaam, familienaam, gebruikersnaam en e-mailadres) en enkele persoonlijke voorkeuren ([taal](#selecteren-van-de-taal) en tijdzone) die samen je gebruikersprofiel vormen.
+On the profile page, you will find your personal information (first name, last name, username, and email address) and some personal preferences ([language](#selecting-the-language) and time zone) that together form your user profile.
 
 ![image](./student.user_menu_my_profile.png)
 
-Klik op de bewerkknop in de rechterbenedenhoek van je profielpagina om je gebruikersprofiel te bewerken. Je persoonsgegevens zoals naam en e-mailadres kan je zelf niet aanpassen. Deze worden namelijk automatisch aangepast op basis van de gegevens die tijdens het aanmelden door je externe onderwijs- of onderzoeksinstelling naar Dodona worden doorgestuurd.
+Click the edit button in the bottom right corner of your profile page to edit your user profile. You cannot modify your personal information such as your name and email address. These are automatically updated based on the data provided by your external educational or research institution during sign-up.
 
 ![image](./student.edit_profile.png)
 
-Wat je wel kan aanpassen is de **tijdzone** die gebruikt wordt voor het weergeven van alle tijdsaanduidingen op het platform (bijvoorbeeld het tijdstip waarop je een oplossing hebt ingediend of de deadline voor een oefeningenreeks).
+What you can modify is the **time zone** used for displaying all time indications on the platform (e.g., the time you submitted a solution or the deadline for an exercise series).
 
 ![image](./student.edit_timezone.png)
 
-Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedetecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
+If the time zone in your user profile does not match the local time zone detected by your browser, you will see a notification at the top of every page indicating that all time indications on the platform do not match the local time zone.
 
 ![image](./student.wrong_timezone.png)
 
-Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
+You can only remove this notification by setting the time zone in your user profile to the local time zone. Note that the notification contains a link that allows you to navigate directly to your profile page.
 
-
-<!--
-    ---
-    title: Sign-in and user settings
-    description: "Tutorial: sign-in and user settings"
-    ---
-
-    ## Selecting a language
-
-    In Dodona, you have two **languages** to choose from, Dutch and English. To change your language use the **language menu** on the right side of the **navigation bar** (which can be found at the top of each page).
-
-    ![image](./choose_language.en.png)
-
-    If you select a [language]() while you are logged in, it will be set as your preferred language in your [user settings]().
-
-    ::: details Note
-
-    The language used for fixed components of Dodona (menubar, course structure, notifications, ...) are shown is fully controlled by the platform. These components are always shown in the selected [language]().
-
-    The name and description of a [course]() are fixed, as are names and descriptions of [exercise series]() within a course. These components do not depend on the selected [language](). The language of these components falls entirely under the control of the course administrators that created the course.
-
-    The name and description of an [exercise]() depend on the selected [language](). If a translation of the name and description was provided in the selected language when creating the exercise, theses components of the exercise will also be displayed in that language.
-
-    The language of feedback on a submitted solution for an exercise is completely under the control of the judge with which the exercise is associated. The judge can make the language of this feedback depend on the language selected at the time the solution is submitted.
-    :::
-
-    ## Sign-in
-
-    To be able to sign-in you need a user account on Dodona. In the associated user profile, you can set your personal preferences on your user profile to personalize your experience. All the actions you perform &mdash; like registering for a course or submitting a solution &mdash; are linked with your user account.
-
-    ::: tip Important
-
-    Sign-in on Dodona can be done by selecting your educational institution on the login page. As a High School student, you can also use your Smartschool, Office 365, or G Suite account provided by your school.
-
-    :::
-
-    Press on `Sign in` on the right side of the navigation bar or navigate to the homepage and press on `Sign in` that can be found in the center of the homepage.
-
-    ![image](./login.en.png)
-
-
-    ::: tip
-
-    You can only log in if you aren't already logged in. You can see that you are logged out if you can see the `Sign in` button on the right side of the [navigation bar](). If you are logged in, the name of your account can be seen at the same place. This is the [user menu]().
-    :::
-
-    Select your educational or research institution on the login page. If you are a High School student you can select the Smartschool, Office 365, or G Suite options. After selecting your preferred login, follow the specified log in procedure.
-
-    ![image](./institution.en.png)
-
-    ::: tip Important
-
-    A few educational or research institutions explicitly ask for your permission to send some personal data to Dodona. Mostly you only need to give these permissions once per computer you use to log in. Dodona uses the personal data only for the internal management of your user profile and never exchanges this information with third parties.
-    :::
-
-    ::: details Note
-
-    The authentication of user accounts from external educational or research institutions, Dodona supports both [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) and [OAuth](https://en.wikipedia.org/wiki/OAuth). Ask an IT administrator or teacher from your educational or research institution to contact us if you would like to give access to all the user accounts of your institution to Dodona. This service is free.
-    :::
-
-    If this is the first time you log in on Dodona, a new user account will automatically be created using the personal data sent by your external educational or research institution. In the user profile of this user account, you can set personal preferences for the language and time zone used by Dodona.
-
-    ::: tip Important
-
-    If you have user accounts from different educational or research institutions, each one will correspond to a separate user account on Dodona.
-    :::
-
-    ::: tip
-
-    If you want to change to another user account than the one you are currently logged in with, then you need to log out and log in with the other user account.
-    :::
-
-    If you are logged in the **user menu** with your user name will be visible on the right side of the navigation bar. The user menu is at the place where the `Sign in` button was before you logged in.
-
-    ![image](./student.user_menu.en.png)
-
-    When logged in the homepage will change to a personalized page with an overview of all the courses for which you are registered, their exercise series with a deadline, and your progress on submitting solutions for the exercises. This makes it easy to recognize if you are logged in or not.
-
-    ::: tip
-
-    You can navigate to your homepage or to the neutral homepage (if you aren't logged in) from any page by clicking on the `Dodona` button on the left side of the navigation bar.
-    ![image](./student.navigate_to_homepage.en.png)
-    :::
-
-    If this is your first time you log in on Dodona you won't be registered in any courses and you won't have any submitted solutions. Because of this your homepage will seem a bit empty.
-
-    ![image](./student.homepage.en.png)
-
-    ## Setting your personal preferences
-
-    Choose `My profile` in the [user menu]() on the right side of the [navigation bar](#selecteren-van-de-taal) to navigate to your **profilepage**.
-
-    On your profile page, you can see your **personal data** (first name, family name, user name, and e-mail address) and a few **personal preferences** that together form your profile page. Dodona uses the user profile to personalize your user experience.
-
-    ![image](./student.user_menu_my_profile.en.png)
-
-    Press on the edit button on the upper right corner of your profile page to edit your user profile. You can't edit your personal data. It gets automatically changed based on the personal data sent to Dodona by the external educational or research institution that was used during the login.
-
-    ![image](./student.edit_profile.en.png)
-
-    In your user profile, you can set the timezone that should be used for all the time indications on the platform (for example the time at which your solution was submitted or the deadline for a series of exercises).
-
-    ![image](./student.edit_timezone.en.png)
-
-    ::: tip
-
-    If the timezone of your user profile doesn't match with the local timezone as the timezone detected by your browser, then you will get a notification indicating that all time indications on the platform do not correspond to the local timezone.
-
-    ![image](./student.wrong_timezone.en.png)
-
-    You can only remove this notification by setting the timezone in your user profile to the local timezone. Notice that the notification contains a link that will directly send you to your profile page.
-    :::
--->
