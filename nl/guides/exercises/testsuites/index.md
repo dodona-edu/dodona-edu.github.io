@@ -108,7 +108,7 @@ Een voorbeeld van een geavanceerde returnwaarde (hier een verzameling getallen) 
 
 ```yaml
 - expression: 'unique(1, 1, 2, 3)'
-  return: "set([1, 2, 3])"
+  return: !expression "set([1, 2, 3])"
 ```
 
 Een returnwaarde met een YAML-waarde:
