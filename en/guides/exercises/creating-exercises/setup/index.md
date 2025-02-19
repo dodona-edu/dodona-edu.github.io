@@ -18,7 +18,7 @@ In the future, we will also provide a guide for working locally.
 ## Browser
 
 Since you are reading this guide, you probably already have a browser installed.
-However, make sure you are using a recent version of Chrome, Firefox, or Safari—these are the three browsers supported by Dodona.
+However, make sure you are using a recent version of Chrome, Firefox, or Safari; these are the three browsers supported by Dodona.
 
 ## Teacher Permissions on Dodona
 
@@ -109,7 +109,7 @@ For more information about SSH, see GitHub's [_About SSH_](https://docs.github.c
 
 Dodona will now fetch and process your repository.
 Since this needs to happen every time you update an exercise, Dodona must be notified when changes occur.
-We do this by setting up a _webhook_—a unique URL that ensures Dodona reprocesses your repository whenever changes are made.
+We do this by setting up a _webhook_; a unique URL that ensures Dodona reprocesses your repository whenever changes are made.
 This URL should be visible after adding your repository to Dodona.
 
 ![Webhook URL](./webhook-url.png)

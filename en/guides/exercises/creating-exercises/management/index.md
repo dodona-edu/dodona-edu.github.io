@@ -16,13 +16,13 @@ Here are some suggestions for your next steps:
 - Create [reading activities](/en/guides/exercises/examples/content/) with extra information or small pieces of theory.
 - Develop other types of exercises.
 
-Enjoy using Dodona!
+Have fun using Dodona!
 
 ## More About Test Suites
 
 There are various resources available for working with test suites:
 
-- Check out the [guide with common scenarios](/en/guides/exercises/testsuites). Often, what you need is already covered there.
+- Check out the [guide with common scenarios](/en/guides/exercises/testsuites); it probably has what you're looking for
 - Looking for more details on a specific aspect? Take a look at the [test suite reference](/en/references/tested/dsl), which provides an overview of all possible options.
 
 ## Still Have Questions?

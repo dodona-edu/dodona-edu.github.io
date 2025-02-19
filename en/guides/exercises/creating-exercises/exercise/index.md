@@ -17,7 +17,7 @@ The existing exercise can, of course, serve as an example.
 2. Use the icons at the top to create a file or folder. You can also right-click on the folder and choose `New File...` or `New Folder...`.
 3. Type the name of the file (including the extension) or folder. Preferably, choose a name without spaces.
 4. Confirm with <kbd>Enter</kbd>.
-   :::
+:::
 
 <!--@include: ../../examples/_common.md-->
 
