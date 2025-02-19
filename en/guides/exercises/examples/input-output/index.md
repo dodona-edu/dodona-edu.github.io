@@ -145,18 +145,18 @@ Create a file called `suite.yaml` in the `evaluation` directory with the followi
 ```yaml
 - tab: "Tests"
   testcases:
-  - stdin: "Jan"
-    stdout: "Hallo, Jan!"
-  - stdin: "Piet"
-    stdout: "Hallo, Piet!"
+  - stdin: "John"
+    stdout: "Hello, John!"
+  - stdin: "Sophie"
+    stdout: "Hello, Sophie!"
   - stdin: "5236-hello!"
-    stdout: "Hallo, 5236-hello!!"
+    stdout: "Hello, 5236-hello!!"
   - stdin: "'world'"
-    stdout: "Hallo, 'world'!"
+    stdout: "Hello, 'world'!"
   - stdin: '"world"'
-    stdout: 'Hallo, "world"!'
+    stdout: 'Hello, "world"!'
   - stdin: "    "
-    stdout: "Hallo,     !"
+    stdout: "Hello,     !"
 ```
 
 A test suite is written in YAML and must follow a specific structure.
