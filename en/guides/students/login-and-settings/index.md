@@ -38,7 +38,7 @@ You can sign in to Dodona by selecting your educational institution on the sign-
 
 ::: warning Your Data on Dodona
 
-Some educational or research institutions explicitly ask for your consent to share some [personal data](https://dodona.be/en/data/) with Dodona at the end of the sign-up procedure. Often, you only need to give this consent once on each computer you use to sign up. Dodona uses this personal data solely for internal management of your user profile and never shares this information with external parties.
+Some educational or research institutions explicitly ask for your consent to share some [personal data](https://dodona.be/en/data/) with Dodona during the sign in procedure. Often, you only need to give this consent once on each computer you use to sign up. Dodona uses this personal data solely for internal management of your user profile and never shares this information with external parties.
 :::
 
 ::: tip Error Message?
@@ -48,7 +48,7 @@ If no one from your school has signed up for Dodona before, things might not go 
 
 ::: tip Multiple Accounts?
 
-If you have user accounts with different educational or research institutions, each corresponds to a separate user account on Dodona. Always use the same account to sign up.
+If you have user accounts with different educational or research institutions, each corresponds to a separate user account on Dodona. Always use the same account to sign in.
 :::
 
 Once you are logged in, the neutral landing page transforms into a personalized homepage with an overview of all [courses](../courses/) you are registered for, their exercise series with upcoming deadlines, and your progress in submitting solutions for [exercises](../exercises/). You can always return to the landing page by clicking on `Dodona` at the top left of any page.
@@ -63,7 +63,7 @@ On the profile page, you will find your personal information (first name, last n
 
 ![image](./student.user_menu_my_profile.png)
 
-Click the edit button in the bottom right corner of your profile page to edit your user profile. You cannot modify your personal information such as your name and email address. These are automatically updated based on the data provided by your external educational or research institution during sign-up.
+Click the edit button in the bottom right corner of your profile page to edit your user profile. You cannot modify your personal information such as your name and email address. These are automatically updated based on the data provided by your external educational or research institution when signing in.
 
 ![image](./student.edit_profile.png)
 
