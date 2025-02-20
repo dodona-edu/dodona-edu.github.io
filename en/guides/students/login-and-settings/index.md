@@ -32,7 +32,7 @@ To sign up for Dodona, either click on `Sign in` on the right side of the naviga
 
 ![image](./login.png)
 
-You can sign up for Dodona by selecting your educational institution on the sign-up page. Secondary school students can log in with their Smartschool, Office365, or G-Suite account. If this is your first time signing up for Dodona, a new user account will be automatically created based on the personal information provided by your external educational or research institution.
+You can sign in to Dodona by selecting your educational institution on the sign-in page. Secondary school students can log in with their Smartschool, Microsoft 365, or Google Workspace account. If this is your first time signing in to Dodona, a new user account will be automatically created based on the personal information provided by your external educational or research institution.
 
 ![image](./sign_in.png)
 
