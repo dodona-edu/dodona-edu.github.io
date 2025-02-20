@@ -38,7 +38,7 @@ You can sign in to Dodona by selecting your educational institution on the sign-
 
 ::: warning Your Data on Dodona
 
-Some educational or research institutions explicitly ask for your consent to share some [personal data](https://dodona.be/en/data/) with Dodona during the sign in procedure. Often, you only need to give this consent once on each computer you use to sign up. Dodona uses this personal data solely for internal management of your user profile and never shares this information with external parties.
+Some educational or research institutions explicitly ask for your consent to share some [personal data](https://dodona.be/en/data/) with Dodona during the sign-in procedure. Often, you only need to give this consent once on each computer you use to sign up. Dodona uses this personal data solely for internal management of your user profile and never shares this information with external parties.
 :::
 
 ::: tip Error Message?
