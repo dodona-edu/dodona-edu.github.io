@@ -13,7 +13,7 @@ Exercises on Dodona can either be part of a course or standalone.
 
 - Exercises that belong to a course can be found by visiting the course page.
   ![image](./student.course_exercise_selection.png)
-- Exercises that do not belong to a course can be found by visiting the [activity overview](https://dodona.be/nl/activities/), which contains a list of all exercises.
+- Exercises that do not belong to a course can be found by visiting the [activity overview](https://dodona.be/en/activities/), which contains a list of all exercises.
 
 ::: tip Tip
 On your homepage, you can find a list of the five most recent exercises you submitted solutions for across all courses. This way, you can quickly select an exercise you recently worked on by clicking on the exercise name.
