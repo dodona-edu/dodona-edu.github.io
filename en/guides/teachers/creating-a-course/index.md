@@ -45,7 +45,7 @@ Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De r
 
 ![choose existing course extra](./staff.course_new_copy.png)
 
-## Cursuseigenschappen
+## Course properties
 
 Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, instellen. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
 

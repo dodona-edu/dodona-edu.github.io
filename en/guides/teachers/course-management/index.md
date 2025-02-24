@@ -1,64 +1,60 @@
 ---
-title: "[nl] Cursusbeheer"
-description: "Tutorial: cursusbeheer"
+title: "Course management"
+description: "Tutorial: course management"
 order: 3
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
+# Course Management
+On this page, you will find all the information about course management on Dodona.
 
-# Cursusbeheer
-> Op deze pagina vind je alle informatie over cursusbeheer op Dodona.
+A course is structured as a learning path with exercises that are bundled into exercise series. The sequence of exercise series implies a possible order in which the exercises can be solved. Users can register themselves for a course. There is always at least one user who is the course administrator, for example, the user who created the course. For information on how to create a new course, you can go [here](../creating-a-course/).
 
-**Inhoudsopgave**
-[[toc]]
+## Administrative Rights
 
-Een cursus wordt opgebouwd als een leerpad met oefeningen die gebundeld worden in oefeningenreeksen. De opeenvolging van oefeningenreeksen impliceert een mogelijke volgorde waarin de oefeningen kunnen opgelost worden. Gebruikers kunnen zichzelf registreren voor een cursus. Er is altijd minstens één gebruiker die cursusbeheerder is, bijvoorbeeld de gebruiker die de cursus aanmaakte. Voor informatie over hoe je een nieuwe cursus aanmaakt, kan je [hier](../creating-a-course/) terecht.
+Course administrators have special rights within a course. They can modify the course as they wish and track the progress of the students enrolled in the course. The user who creates the course is automatically appointed as the course administrator. They can, in turn, appoint other additional course administrators from among the users enrolled in the course.
 
-## Beheersrechten
+## Edit Course
 
-Cursusbeheerders hebben binnen een cursus speciale rechten. Ze kunnen de cursus aanpassen naar hun wens en de voortgang van de studenten die voor de cursus zijn ingeschreven opvolgen. De gebruiker die de cursus aanmaakt wordt standaard aangesteld tot cursusbeheerder. Hij kan op zijn beurt andere extra cursusbeheerder aanstellen onder de gebruikers die voor de cursus zijn ingeschreven.
+To edit the properties of an existing course, navigate to the course page and click on the edit icon at the top.
 
-## Cursus bewerken
+![edit course button](./staff.course_edit_button.png)
 
-Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cursuspagina en klik je op het bewerken-icoontje bovenaan.
+You will be taken to a page where you can adjust the name, teacher, description, academic year, language, programming language, visibility, and registration procedure. For more details about the specific properties, you can go to [this page](../creating-a-course/#course-properties).
 
-![cursus bewerken knop](./staff.course_edit_button.png)
-
-Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../creating-a-course/#cursuseigenschappen).
-
-Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen op te slaan. Alternatief kan je ook op de `Aanpassen` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
+After making changes, click the finish button in the upper right corner of the panel to save the new course properties. Alternatively, you can also click `Update` at the bottom of the panel. Then you will automatically navigate back to the course page where the new course properties will immediately take effect.
 
 ![image](./staff.course_after_edit.png)
 
-## Een cursus opbouwen
+## Building a Course
 
-Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`. Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management/).
+As a course administrator, you can outline a learning path for the course. The learning path is displayed on the course page under the heading `Exercise Series`. You can add exercise series to the learning path, to which you can link exercises. For more explanation about what you can do, see [managing exercise series](../exercise-series-management/).
 
-## Cursusgebruikers beheren
+## Managing Course Users
 
-Om een overzicht te krijgen van de gebruikers in een cursus, klik je op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Voor meer informatie over welke acties je daar kan uitvoeren, kan je de handleiding over [gebruikersbeheer](../user-management/) raadplegen.
+To get an overview of the users in a course, click on the user icon in the navigation bar at the top of the course page. For more information about the actions you can perform there, you can consult the guide on [user management](../user-management/).
 
-## Navigeren naar oplossingen
+## Navigating to Submissions
 
-Als cursusbeheerder kan je alles opvolgen wat binnen je cursus gebeurt. Om een overzicht te krijgen van alle oplossingen die door de studenten werden ingediend klik je op `Ingediende oplossingen` bovenaan de cursuspagina of op het icoontje in de navigatiebalk.
-![cursus oplossingen link](./staff.course_submissions_link.png)
+As a course administrator, you can track everything that happens within your course. To get an overview of all solutions submitted by the students, click on `Submitted Solutions` at the top of the course page or on the icon in the navigation bar.
+![course solutions link](./staff.course_submissions_link.png)
 
-Het overzicht bevat heel wat informatie per inzending, zoals de naam van de gebruiker en de naam van de oefening, inclusief filters voor deze waarden. Ook de status, het tijdstip en een link naar de inzending zijn aanwezig.
+The overview contains a lot of information per submission, such as the name of the user and the name of the exercise, including filters for these values. The status, timestamp, and a link to the submission are also present.
 ![filter submissions](./staff.course_submissions_filter.png)
 
-Als je klikt op het filter-icoontje voor de naam van een student of oefening, dan zal de lijst inzendingen gefilterd worden en enkel oplossingen tonen voor die specifieke gebruiker of oefening.
+If you click on the filter icon for the name of a student or exercise, the list of submissions will be filtered to show only solutions for that specific user or exercise.
 
 ![filtered submissions](./staff.course_submissions_filtered.png)
 
-Deze oplossingen kan je ook op andere manieren bereiken:
+You can also access these submissions in other ways:
 
-* Een overzicht van de oplossingen voor een **specifieke oefening** vind je door op de cursuspagina op het pijltje rechts van een oefening te klikken.
-* Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `Oplossingen` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
+* An overview of the submissions for a **specific exercise** can be found by clicking on the arrow to the right of an exercise on the course page.
+* An overview of the submissions for a **specific user** can be found by clicking on `Solutions` on the [course page of that user](../user-management/#tracking-students).
 
-In het oplossingenoverzicht vindt je rechts van de filterbalk een knop met 3 puntjes. In het menu vindt je enkele acties en filter:
+In the submissions overview, you will find a button `Retest solutions` at the top right. This button allows you to [retest](../exercise-series-management/#retest-solutions) all solutions in the overview.
+You'll also see a button to `Detect plagiarism` next to it on the submissions overview for a specific exercise. This will export the latest submission for each student to our plagiarism detection tool [dolos](https://dolos.ugent.be/).
 
-* `Meest recente correcte oplossing per gebruiker`: Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
+![detect plagiarism](./staff.course_submissions_plagiarism.png)
 
-* `Oplossingen hertesten` (actie): [Hertest](../exercise-series-management/#oplossing-hertesten) alle oplossingen uit het overzicht.
+![dolos](./staff.dolos.png)
+
+You can also filter for the `Most recent submissions per user` by clicking on the three dots to the right of the filter bar. Here you'll also find the option to `automaticaly reload submissions` every 5 seconds, which can be useful when you want to follow the progress of your students in real-time.
