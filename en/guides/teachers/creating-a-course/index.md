@@ -1,101 +1,102 @@
 ---
-title: "[nl] Een nieuwe cursus aanmaken"
-description: "Tutorial: cursus aanmaken"
+title: "Creating a course"
+description: "Tutorial: creating a course"
 order: 2
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
+# Creating a Course
 
-# Een cursus aanmaken
+:::tip Important
 
-:::tip Belangrijk
-
-Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechten eenvoudig aanvragen door (na inloggen) [dit formulier](https://dodona.be/nl/rights_requests/new) in te vullen. We geven je account dan zo snel mogelijk de nodige toegangsrechten.
+You need extra rights to create a course. You can easily request these rights by filling out [this form](https://dodona.be/en/rights_requests/new) after logging in. We will grant your account the necessary access rights as soon as possible.
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Cursus aanmaken` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen...`.
+If you have the necessary rights on Dodona, you can easily create a course yourself. You do this by clicking on the `Create course` button in the upper right corner of the [course overview](https://dodona.be/en/courses). From the landing page, you can reach this overview by clicking on `More courses...`.
 
 ![create course](./staff.courses_new_link.png)
 
-Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds bestaande cursus en kopieer je de inhoud, ofwel maak je een volledige nieuwe cursus aan. Klik op een van de twee knoppen om je keuze te maken. Als je er voor kiest om met een lege cursus te beginnen kan je direct naar de [sectie over cursuseigenschappen](#cursuseigenschappen) gaan
+To create a new course, there are two options. Either you start from an existing course and copy the content, or you create a completely new course. Click on one of the two buttons to make your choice. If you choose to start with an empty course, you can go directly to the [section on course properties](#course-properties).
 
 ![new course menu](./staff.course_new_options.png)
 
-## Cursus kopiëren
+## Copy Course
 
-::: tip Snel kopiëren
+::: tip Quick Copy
 
-Als je een bestaande cursus snel wil kopiëren kan dat door onderstaande stappen te volgen.
-* Navigeer naar de cursus die je wil kopiëren.
-* Klik op de drie verticale puntjes `⋮` rechtsonder de bovenste kaart van de cursus.
-* Kies voor `Deze cursus kopiëren`.
+If you want to quickly copy an existing course, follow these steps:
+* Navigate to the course you want to copy.
+* Click on the three vertical dots `⋮` in the bottom right corner of the top card of the course.
+* Choose `Copy this course`.
 
 ![fast copy course](./staff.course_fast_copy.png)
 
 :::
 
-Als je gekozen hebt om een bestaande cursus te kopiëren, dan krijg je een lijst van alle zichtbare cursussen op Dodona te zien. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Via de link-knop aan de rechterkant van de tabel open je de betreffende cursus in een nieuw venster. Zo kan je snel controleren of dit de juiste cursus is. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
+If you have chosen to copy an existing course, you will see a list of all visible courses on Dodona. You can filter using the search bar to quickly find the desired course. Click the link button on the right side of the table to open the respective course in a new window. This way, you can quickly check if this is the correct course. Click the circle in the left column to confirm your choice.
 
 ![choose existing course](./staff.course_new_copy_course_options.png)
 
-Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De reeksstructuur inclusief beschrijvingen worden altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de cursusbeheerders wil overnemen. Vervolgens kan je er ook voor kiezen om de gekopieerde reeksen standaard allemaal op verborgen te zetten. Dit is zeer handig als je nog niet de volledige cursus wil vrijgeven aan je studenten.
+Next, you need to specify which elements of the course you want to copy. The series structure, including descriptions, is always copied. You can then choose whether to copy the exercises, deadlines, and course administrators. You can also choose to set all copied series to hidden by default. This is very useful if you do not want to release the entire course to your students yet.
 
 ![choose existing course extra](./staff.course_new_copy.png)
 
-## Course properties
+## Course Properties
 
-Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, instellen. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
+Finally, you need to set a few things about the course itself, such as the name and instructor. These are pre-filled with the values of the copied course if that option was chosen. The following properties can be set:
 
 ![image](./staff.course_new_empty.png)
 
-* `Naam`: een naam voor de cursus. Verschillende cursussen kunnen dezelfde naam hebben, maar het is echter aangeraden om cursussen zoveel mogelijk een unieke naam te geven.
+* `Name`: a name for the course. Different courses can have the same name, but it is advisable to give courses a unique name whenever possible.
 
-* `Lesgevers`: de naam of namen van de lesgevers van de cursus.
+* `Teacher`: the name or names of the instructors of the course.
 
-* `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden. Gebruik het formaat `jjjj-jjjj` om ervoor te zorgen dat de cursus correct gesorteerd wordt op de startpagina en in het cursusoverzicht.
+* `Academic Year`: the academic year in which the course is offered. Use the format `yyyy-yyyy` to ensure that the course is correctly sorted on the homepage and in the course overview.
 
-* `Onderwijsinstelling`: een onderwijsinstelling selecteren kan gebruikers helpen om je cursus te vinden en kan ook gebruikt worden om de zichtbaarheid van en registraties voor deze cursus te beperken.
+* `Institution`: selecting an educational institution can help users find your course and can also be used to limit the visibility and registrations for this course.
 
-* `Beschrijving`: optioneel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
+* `Language`: the language in which the course is given. This is optional and only used to help users find courses in their preferred language.
 
+* `Programming Language`: the programming language that is used in the course. This is optional and only used to help users find courses in their preferred programming language.
 
-### Toegangsrechten
+* `Description`: an optional piece that is displayed at the top of the course page. For formatting the description, you can use [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona uses [kramdown](https://kramdown.gettalong.org) for rendering Markdown, which supports many extensions of the standard Markdown. For more explanation on how this formatting works, you can go [here](/en/references/exercise-description/).
 
+### Access Rights
 
-* `Voor wie is deze cursus zichtbaar`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
+* `Who can see this course`: this determines whether non-registered users can see the course. The following values can be set for this property:
 
-  * `Iedereen`: de cursus is voor alle gebruikers **zichtbaar** in de lijst van beschikbare cursussen. Ze kunnen ook naar de cursuspagina navigeren, alle zichtbare inhoud bekijken en zich daar eventueel voor de cursus registreren.
+  * `Everyone`: the course is **visible** to all users in the list of available courses. They can also navigate to the course page, view all visible content, and possibly register for the course there.
 
-  * `Enkel gebruikers van de ingestelde onderwijsinstelling`: de cursus is enkel toegankelijk voor gebruikers van de ingestelde onderwijsinstelling (zie `Onderwijsinstelling` hierboven) en een directe link (zie volgend item).
+  * `Only users of the configured institution`: the course is only accessible to users of the set educational institution (see `Educational Institution` above) and a direct link (see next item).
 
-  * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het publieke cursusoverzicht. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken.
+  * `Only registered users`: only registered users can see the course in the courses overview. There is an icon to indicate to course members that other users cannot see the course on the course page itself. Only registered users can navigate to this page. Other users can only register for the course if they use a direct registration link.
 
-* `Toegangslink`: bij het aanmaken van een cursus wordt automatisch een toegangslink gegenereerd als afschermingsmechanisme van verborgen cursussen. Zonder deze link kunnen niet-geregistreerde gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Je vindt deze toegangslink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de toegangslink om de toegangslink naar het klembord te kopiëren.
+* `Access Link`: when creating a course, an access link is automatically generated as a shielding mechanism for hidden courses. Without this link, non-registered users cannot see the course page of a hidden course and therefore cannot register there. You can find this access link on the course edit page. Click the copy button next to the access link to copy the access link to the clipboard.
 
-  ![toegangslink](./staff.course_hidden_registration_link.png)
+  ![access link](./staff.course_hidden_registration_link.png)
 
-  De toegangslink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.
+  The access link has the advantage that users do not have to search for the course themselves in the course overview and that they immediately receive a request to register for the course if they have not already done so. As a course administrator, you are responsible for sharing the registration link only with non-registered users who are allowed to register for a hidden course.
 
-* `Wie kan zich registreren voor deze cursus`: deze eigenschap bepaalt of en hoe gebruikers zich voor de cursus kunnen registreren. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
+* `Who can register for this course`: this property determines whether and how users can register for the course. The following values can be set for this property:
 
-  * `Iedereen`: gebruikers kunnen zich vrij voor de cursus registreren zonder expliciete goedkeuring van een cursusbeheerder. De cursus staat dus **open** voor iedereen.
+  * `Everyone`: users can freely register for the course without explicit approval from a course administrator. The course is therefore **open** to everyone.
 
-  * `Enkel gebruikers van {jouw_onderwijsinstelling}`: enkel gebruikers van je eigen onderwijsinstelling kunnen zich voor deze cursus registreren.
+  * `Everyone that belongs to an institution`: users can register for the course if they belong to an educational institution. The registrations are therefore **closed** to users who have logged in using a personal account and thus do not belong to an educational institution.
 
-  * `Niemand`: gebruikers kunnen zich niet zelf voor de cursus registreren. De registraties zijn dus **gesloten**.
+  * `Only users of the configured institution`: only users of your own educational institution can register for this course.
 
-* Standaard verloopt de goedkeuring van de registratie **automatisch**. Er is ook een optie om het registratieproces **gemodereerd** te laten verlopen. Gebruikers kunnen dan een registratieverzoek indienen voor de cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft goedgekeurd.
+  * `Nobody`: users cannot register themselves for the course. The registrations are therefore **closed**.
 
-  ::: tip Belangrijk
+* By default, the approval of the registration is **automatic**. There is also an option to make the registration process **moderated**. Users can then submit a registration request for the course but are only registered once a course administrator has approved their registration request.
 
-  Als je de registratieprocedure aanpast, dan blijven bestaande registraties voor de cursus gelden en blijven registratieverzoeken voor de cursus openstaan. Je moet zelf de bestaande registratiestatus van cursusgebruikers aanpassen.
+  ::: tip Important
+
+  If you adjust the registration procedure, existing registrations for the course remain valid, and registration requests for the course remain open. You must adjust the existing registration status of course users yourself.
+
   :::
 
-Eenmaal alles naar wens is ingesteld klik je op de knop `Cursus aanmaken` om je cursus definitief aan te maken.
+Once everything is set to your liking, click the `Create Course` button to finalize your course creation.
 
-Na het aanmaken van de nieuwe cursus navigeer je automatisch naar de cursuspagina, waar je kunt vaststellen dat je automatisch geregistreerd bent als cursusgebruiker en dat je aangeduid bent als cursusbeheerder.
+After creating the new course, you will automatically navigate to the course page, where you can see that you are automatically registered as a course user and that you are designated as a course administrator.
 
-![cursus aangemaakt](./staff.course_created.png)
+![course created](./staff.course_created.png)
