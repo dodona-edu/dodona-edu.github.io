@@ -137,7 +137,7 @@ Onderaan de reeks vind je enkele handige acties die cursusbeheerders kunnen uitv
 
 * `Oplossingen hertesten`: deze actie hertest alle oplossingen die cursusgebruikers ingediend hebben voor oefeningen van de oefeningenreeks. Dit kan nuttig zijn als je bijvoorbeeld een aantal testen hebt toegevoegd of aangepast en je de al ingediende oplossingen opnieuw wil testen. In de volgende sectie wordt uitgelegd hoe je een enkele oplossing kan herevalueren.
 
-## Oplossing hertesten
+## Retest solutions
 
 Bij het hertesten van een oplossing worden alle testen opnieuw uitgevoerd zonder dat de oplossing opnieuw moet ingediend worden. Op die manier blijft het originele tijdstip van indienen behouden. Als de configuratie van de oefening aangepast werd sinds de vorige beoordeling van de oplossing, dan kan de status van de oplossing wijzigen door het herevalueren. Klik op de herhaalknop in de rechterbovenhoek van de feedbackpagina van een oplossing van een gebruiker om die oplossing te herevalueren.
 
