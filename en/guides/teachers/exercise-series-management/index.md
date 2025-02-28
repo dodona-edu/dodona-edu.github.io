@@ -1,173 +1,220 @@
 ---
-title: "[nl] Oefeningenreeksenbeheer"
-description: "Tutorial: oefeningenreeksenbeheer"
+title: "Exercise series management"
+description: "Tutorial: Exercise series management"
 order: 5
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
+# Exercise series management
 
-# Oefeningenreeksenbeheer
+The learning path of a course consists of various exercise series, each containing different exercises.
+Course administrators can create, edit, delete, and reorder these series.
 
-**Inhoudsopgave**
-[[toc]]
+## Create an exercise series
 
-Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillende oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen.
+A course administrator can create an unlimited number of exercise series within your course.
+To do this, first navigate to the course page and then click `Manage Series`.
 
-## Oefeningenreeks aanmaken
+![manage series](./staff.course_manage_series_button.png)
 
-Een cursusbeheerder kan onbeperkt oefeningenreeksen binnen je cursus aanmaken. Je doet dit door eerst naar de cursuspagina van de cursus te navigeren en vervolgens `Reeksen beheren` aan te klikken.
+On this page, you will find the `Create Series` button in the top right corner.
 
-![reeksen beheren](./staff.course_manage_series_button.png)
+![create series](./staff.course_new_series_button.png)
 
-Op deze pagina vind je rechtsboven de knop `Reeks aanmaken`.
-
-![reeks aanmaken](./staff.course_new_series_button.png)
-
-Je komt op een formulier terecht waarin je de volgende eigenschappen van de reeks kan instellen:
+You will be directed to a form where you can set the following properties of the series:
 
 ![series form](./staff.series_new.png)
 
-* `Naam`: De naam van de oefeningenreeks. Binnen een cursus kunnen verschillende oefeningenreeksen dezelfde naam hebben, maar het is aangeraden om alle oefeningenreeksen een unieke naam te geven.
+* `Name`: The name of the exercise series. 
+  Within a course, different exercise series can have the same name, but it is advisable to give each exercise series a unique name.
 
-* `Deadline`: Een optionele deadline die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor oefeningen van deze oefeningenreeks. Studenten kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks en blijven daar nog steeds een beoordeling en feedback voor ontvangen. Er wordt met deze oplossingen echter geen rekening meer gehouden bij het bepalen van hun indienstatus voor oefeningen uit de oefeningenreeks.
+* `Deadline`: An optional deadline that indicates until when solutions submitted for exercises in this series will be considered. 
+  Students can continue to submit solutions for exercises in the series after the deadline and will still receive feedback.
+  However, these submissions will not be considered in determining their submission status for the exercises in the series.
 
+  ::: tip Important
 
-  ::: tip Belangrijk
-
-  De indienstatus voor studenten wordt steeds dynamisch berekend op basis van de deadline. Als de deadline wordt aangepast, dan kan het dus zijn dat de indienstatus voor een bepaalde oefening wordt aangepast. Hou hier dus rekening mee als je de deadline instelt op een vroeger tijdstip.
+  The submission status for students is always dynamically calculated based on the deadline.
+  If the deadline is adjusted, the submission status for a particular exercise may change.
+  Keep this in mind if you set the deadline to an earlier time.
   :::
 
-  Klik op het invulveld of klik op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de tijdzone die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
+  Click on the input field or the calendar button to set the date and time of the deadline. 
+  Select the deadline in the time zone set in your user profile.
+  Other users will see the deadline in the time zone set in their user profile.
 
   ![image](./staff.series_calendar_open.png)
 
-  Klik op de verwijderknop om een ingestelde deadline te wissen.
+  Click the delete button to remove a set deadline.
 
   ![image](./staff.series_calendar_clear.png)
 
-* `Zichtbaarheid`: dit bepaalt of gebruikers de oefeningenreeks kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
+* `Description`: An optional description that users see when viewing the exercise series in the course.
+  You can use [Markdown](/en/references/exercise-description/#markdown) to format the description.
 
-  * `Open`: alle gebruikers zien de oefeningenreeks op de cursuspagina.
+* `Visibility`: This determines whether users can see the exercise series. The following values can be set for this property:
 
-  * `Verborgen`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks niet kunnen zien. Je kan gebruikers toegang geven tot deze reeks door hun de specifieke geheime link (zie hieronder) van deze reeks door te sturen.
+  * `Visible for everyone`: All users see the exercise series on the course page.
 
-  * `Gesloten`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks daar niet kunnen zien.
+  * `Only vissible via secret link`: Only course administrators see the exercise series on the course page. 
+    There is a clear message indicating that other users cannot see the exercise series.
+    You can give users access to this series by sending them the specific secret link (see below) of this series.
 
-  ![reeks verborgen informatie](./staff.course_series_info_message.png)
+  * `Hidden for students`: Only course administrators see the exercise series on the course page.
+    There is a clear message indicating that other users cannot see the exercise series there.
 
-* `Geheime link`: bij het aanmaken van een verborgen oefeningenreeks wordt automatisch een geheime link gegenereerd om toegang te geven tot deze reeks. Zonder deze link kunnen gebruikers een verborgen oefeningenreeks niet zien.
+  * `Visible for students after start time`: The exercise series is not visible to students until the start time you specify. 
+    You can set the start time in the same way as the deadline.
 
-  De geheime link voor een oefeningenreeks kan je onderaan de bewerk-pagina voor die reeks vinden.
-  ![verborgen reeks link](./staff.series_hidden_link.png)
+  ![series hidden info](./staff.course_series_info_message.png)
 
-  Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te klikken. Dit kan je bijvoorbeeld doen als je per ongeluk de link kenbaar hebt gemaakt aan iemand die ze niet zou mogen zijn. Hou er wel rekening mee dat de oude link niet meer zal werken van zodra je een nieuwe genereert.
-  ![reekslink vernieuwen](./staff.series_hidden_link_reset.png)
+* `Secret Link`: When creating a series that is only vissible via secret link, a secret link is automatically generated to provide access to this series. 
+  Without this link, users cannot see this exercise series.
 
-* `Beschrijving`: een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in de cursus. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/en/references/exercise-description/#markdown).
+  You can find the secret link for an exercise series at the bottom of the edit page for that series.
+  ![hidden series link](./staff.series_hidden_link.png)
 
-* **Geavanceerde instellingen**:
+  You can easily generate a new secret link by clicking the renew button.
+  This can be useful if you accidentally shared the link with someone who should not have it.
+  Note that the old link will no longer work once you generate a new one.
+  ![renew series link](./staff.series_hidden_link_reset.png)
 
-  * `Verberg de "Voortgang groep" visualisatie voor studenten`: Bij een oefening wordt de voortgang van alle gebruikers in de cursus getoond. Hierin kan je zien hoeveel studenten een oefening reeds hebben begonnen of afgewerkt. Deze visualisatie is een meerwaarde voor studenten, maar je wil ze misschien uitschakelen voor examens.
+* **Advanced settings**:
 
-  * `Verberg leeractiviteiten`: Als de leeractiviteiten verborgen zijn, dan zal enkel de beschrijving van deze reeks getoond worden. Je kan deze instelling gebruiken om bijvoorbeeld de leerstof van de reeks vooraf beschikbaar te stellen, zonder de oefeningen en leesactiviteiten al vrij te geven.
+  * `Hide the "Class progress" visualization for students`: For an exercise, the progress of all users in the course is shown.
+    This visualization can be valuable for students, but you might want to disable it for exams.
 
-Om de reeks aan te maken klik je op de afwerkknop in de rechterbovenhoek van het paneel `Reeks aanmaken`. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
+  * `Hide learning activities`: If the learning activities are hidden, only the description of this series will be shown.
+    You can use this setting to, for example, make the course material of the series available in advance without releasing the exercises and reading activities.
 
-![reeks aanmaken](./staff.series_new_submit.png)
+  * `Number learning activities`: If this setting is active, each exercise and reading activity is given a sequential number, starting with 1.
+    This number is displayed in titles and listings and can make it easier to communicate about these activities.
 
-Na het aanmaken van de reeks kom je op de bewerkingspagina terecht. Je kunt nu oefeningen aan de reeks toevoegen.
+To create the series, click the completion button in the top right corner of the `Create Series` panel. The new exercise series will be added to your course.
 
-## Oefeningenreeks bewerken
+![create series](./staff.series_new_submit.png)
 
-Op de bewerking-pagina van een oefeningenreeks zie je een uitgebreide versie van het reeks-aanmakenpaneel waarin je naast het instellen van eigenschappen ook oefeningen kunt koppelen aan de oefeningenreeks. Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te klikken van de reeks in het Reeksen beheren-paneel of door `Reeks bewerken` te kiezen in het reeks-actiemenu.
+After creating the series, you will be directed to the editing page. You can now add exercises to the series.
 
-![reeks bewerken](./staff.series_edit.png)
+## Edit an exercise series
 
-Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Klik op de toevoegknop (`+`) aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
+On the editing page of an exercise series, you will see an extended version of the series creation panel
+where you can not only set properties but also link exercises to the series.
+You can access this page in three ways: automatically after creating a new series,
+by clicking the edit icon of the series in the Manage series panel, or by choosing `Edit series` in the series action menu.
 
-![reeks oefening toevoegen](./staff.series_add_exercise.png)
+![edit series](./staff.series_edit.png)
 
-Via de zoekbalk kan je bestaande oefeningen filteren op naam, beschikbare vertalingen, programmeertaal, labels, repository of type.
+At the bottom of the page, you will find the activities that already belong to this series and possible activities to add.
+Click the add button (`+`) on the right side of an exercise to add it to the exercise series.
 
-Onder de hoofding `Oefeningen en leesactiviteiten in deze reeks` kan je aan de rechterkant van een oefening op de verwijderknop klikken om de oefening uit de oefeningenreeks te verwijderen.
+![add exercise to series](./staff.series_add_exercise.png)
 
-![reeks oefening verwijderen](./staff.series_remove_exercise.png)
+Using the search bar and filters, you can filter existing exercises by name, available translations, programming language, labels, repository, or type.
 
-Versleep de verplaatsknop aan de linkerkant van de oefeningen om de volgorde van de oefeningen aan te passen. De volgorde waarin de oefeningen onder de hoofding `Oefeningen en leesactiviteiten in deze reeks` gerangschikt worden, is immers ook de volgorde waarin de oefeningen weergegeven worden in de oefeningenreeks.
+Under the heading `Exercises and reading activities in this series`, you can click the delete button on the right side of an exercise to remove it from the exercise series.
 
-![oefening verplaatsen](./staff.series_move_exercise.png)
+![remove exercise from series](./staff.series_remove_exercise.png)
 
-::: tip Belangrijk
+Drag the move button on the left side of the exercises to change the order of the exercises.
+The order in which the exercises are listed under the heading `Exercises and reading activities in this series` is also the order in which the exercises are displayed in the exercise series.
 
-We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen, publiceren en delen van oefeningen wordt [hier](/en/guides/exercises/new-exercise-repo) besproken.
+![move exercise](./staff.series_move_exercise.png)
+
+::: tip Important
+
+We assume here that the exercises to be linked to the exercise series are already available in Dodona.
+The creation, publication, and sharing of exercises are discussed [here](/en/guides/exercises/creating-exercises/introduction).
 
 :::
 
-Klik op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de reeks-eigenschappen. Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
+Click the completion button in the top right corner of the panel to save the edits.
+This only applies to the series properties.
+Edits to the exercises within the series are automatically saved immediately.
 
-![reeks bewerken opslaan](./staff.series_edit_submit.png)
+![save series edits](./staff.series_edit_submit.png)
 
-## Oefeningenreeks beheren
+## Manage an exercise series
 
-Uiteraard is het mogelijk om een reeks te verwijderen uit een cursus. De actie vind je analoog aan het bewerken in het reeksen-beheren menu of in het reeks-actiesmenu.
+Of course, it is possible to delete a series from a course.
+You can find this action in the series management menu or in the series action menu, similar to editing.
 
-![reeks verwijderen](./staff.series_delete.png)
+![delete series](./staff.series_delete.png)
 
-Het kan handig zijn om reeksen in een cursus een bepaalde volgorde te geven, om ze bijvoorbeeld te sorteren volgens moeilijkheidsgraad. Standaard zullen ze gesorteerd worden in omgekeerd chronologische volgorde op basis van wanneer je ze toevoegt. Zo moeten studenten minder scrollen als ze een reeks willen maken. In het reeksen-beherenpaneel kan je in de tabel van de reeds toegevoegde reeksen ze verslepen via het icoontje aan de linkerkant.
+It can be useful to give series in a course a specific order, for example, to sort them by difficulty.
+By default, they will be sorted in reverse chronological order based on when you add them.
+This way, students will always find the most recent series at the top, and thus have to scroll less to find the latest exercises.
+In the series management panel, you can reorder the series by dragging the hamburger icon on the left side.
 
-## Het reeks-menu
+## The series menu
 
-Onderaan de reeks vind je enkele handige acties die cursusbeheerders kunnen uitvoeren op de reeks. De belangrijkste acties zijn `Reeks evalueren`, `Statusoverzicht`, de andere acties vind je door op de drie bolletjes te klikken.
+At the bottom of the series, you will find some useful actions that course administrators can perform on the series.
+The main actions are `Evaluate series` and `Series scoresheet`; other actions can be found by clicking on the three dots.
 
-![reeks acties](./staff.series_actions_menu.png)
+![series actions](./staff.series_actions_menu.png)
 
-* `Reeks evalueren`: deze actie stelt je in staat om op een gestructureerde manier door de ingediende oplossingen van deze reeks te bladeren, bijvoorbeeld om ze te [evalueren](#oefeningenreeks-evalueren) of verbeteren.
+* `Evaluate series`: This action allows you to browse through the submitted solutions of this series in a structured way, for example,
+  to [evaluate](#evaluate-exercise-series) or improve them.
 
-* `Statusoverzicht`: toont een handig overzicht met de indienstatus van alle cursusgebruikers voor alle oefeningen uit de oefeningenreeks. De indienstatus wordt in het overzicht weergegeven met de gebruikelijke icoontjes.
+* `Series scoresheet`: Shows a handy overview of the submission status of all course users for all exercises in the exercise series.
+  The submission status is displayed in the overview with the usual icons.
 
- ![scoresheet](./staff.scoresheet.png)
+  ![scoresheet](./staff.scoresheet.png)
+  
+  Click on the name of a course user to navigate to the user's overview page.
+  
+  Click on the icon of a submission status to navigate to the solution used to determine the submission status
+  (if the course user has indeed submitted a solution based on which the submission status could be determined).
+  You can also filter by students who have started at least one activity and search by name or student labels in this overview.
 
-  Klik op de naam van een cursusgebruiker om naar de overzichtspagina van de gebruiker te navigeren.
+* `Export student submissions`: This action allows you to [export](#export-exercise-series-solutions) the submitted solutions of students for the exercises in the series as a zip file.
 
-  Klik op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn en zoeken op naam.
+* `Retest submissions`: This action retests all solutions that course users have submitted for exercises in the exercise series.
+  This can be useful if, for example, you have added or modified a number of tests and want to retest the already submitted solutions.
+  The following section explains how to re-evaluate a single solution.
 
-* `Oplossingen van studenten exporteren`: deze actie stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te [exporteren](#oefeningenreeks-oplossingen-exporteren) als zip-bestand.
+## Retest submissions
 
-* `Oplossingen hertesten`: deze actie hertest alle oplossingen die cursusgebruikers ingediend hebben voor oefeningen van de oefeningenreeks. Dit kan nuttig zijn als je bijvoorbeeld een aantal testen hebt toegevoegd of aangepast en je de al ingediende oplossingen opnieuw wil testen. In de volgende sectie wordt uitgelegd hoe je een enkele oplossing kan herevalueren.
+When retesting a submission, all tests are rerun without the solution having to be resubmitted.
+This way, the original submission time is preserved.
+If the configuration of the exercise has been modified since the last evaluation of the solution, the status of the solution may change due to the re-evaluation.
+Click the repeat button in the top right corner of the feedback page of a user's submission to re-evaluate that solution.
 
-## Retest solutions
+![evaluate feedback](./staff.feedback_evaluate.png)
 
-Bij het hertesten van een oplossing worden alle testen opnieuw uitgevoerd zonder dat de oplossing opnieuw moet ingediend worden. Op die manier blijft het originele tijdstip van indienen behouden. Als de configuratie van de oefening aangepast werd sinds de vorige beoordeling van de oplossing, dan kan de status van de oplossing wijzigen door het herevalueren. Klik op de herhaalknop in de rechterbovenhoek van de feedbackpagina van een oplossing van een gebruiker om die oplossing te herevalueren.
+::: tip Important
 
-![feedback evalueren](./staff.feedback_evaluate.png)
+When re-evaluating, solutions receive a lower priority in the queue than newly submitted solutions.
+This way, the evaluation of solutions that users submit experiences minimal delay, but re-evaluation may take longer.
 
-::: tip Belangrijk
-
-Bij het herevalueren krijgen oplossingen een lagere prioriteit in de wachtrij dan oplossingen die nieuw ingediend worden. Op die manier ondervindt het beoordelen van oplossingen die gebruikers indienen minimale vertraging, maar kan het herevalueren wel langer duren.
-
-Gebruikers krijgen geen melding van het platform als hun oplossingen geherevalueerd worden. Als je beslist om oplossingen te herevalueren, is het belangrijk om gebruikers te informeren dat er zowel wijzigingen kunnen zijn van de status van oplossingen die ze vroeger ingediend hebben als van hun indienstatus voor oefeningen in de oefeningenreeksen van de cursus.
+Users do not receive a notification from the platform when their solutions are re-evaluated.
+If you decide to re-evaluate solutions, it is important to inform users that there may be changes to the status of solutions they submitted earlier,
+as well as their submission status for exercises in the exercise series of the course.
 :::
 
-## Oefeningenreeks evalueren
+## Evaluate exercise series
 
-Correcte testresultaten zijn geen garantie voor goede code. Daarom biedt Dodona ook ondersteuning om de oplossingen manueel te evalueren en hen van feedback en punten te voorzien. Meer informatie hierover kan je vinden in [deze handleiding](/en/guides/teachers/grading).
+Correct test results are no guarantee of good code.
+Therefore, Dodona also provides support to manually evaluate the solutions and provide them with feedback and grades.
+More information about this can be found in [this guide](/en/guides/teachers/grading).
 
-## Oefeningenreeks oplossingen exporteren
+## Export exercise series submissions
 
-In het actiemenu van een reeks kan je als lesgever ook kiezen om de ingezonden code van je studenten te exporteren als een zip-bestand. Dit is bijvoorbeeld handig als je liever op papier verbetert en de code wil afdrukken.
+In the action menu of a series, you as a teacher can also choose to export the submitted code of your students as a zip file.
+This can be useful if you prefer to grade on paper and want to print the code.
 
-![reeks exporteren](./staff.series_export_action.png)
+![export series](./staff.series_export_action.png)
 
-Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst.
-![oefeningen kiezen](./staff.series_export_exercise_choice.png)
+This will take you to an export page where you will first be asked to select the exercises in the series for which you want to export the submissions.
+![choose exercises](./staff.series_export_exercise_choice.png)
 
-Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `Volgende stap` om verder te gaan.
+If you want to download all of them, select the checkbox in the table header. Then click `Next step` to continue.
 
-Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per oefening gegroepeerd moeten worden en welke studenten meegerekend moeten worden.
+Next, you can check various options that affect the content of the export.
+You can obtain a summary csv, choose whether you want all solutions or only the latest ones, whether the deadline should be considered,
+whether the files should be grouped per student or per exercise, and which students should be included.
 
-![export opties](./staff.series_export_options.png)
+![export options](./staff.series_export_options.png)
 
-Klik op `Downloaden` om de download te starten. Op dat moment worden alle ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
-![export gestart](./staff.series_export_started.png)
+Click `Start export` to start the download. 
+At that moment, all submitted solutions will be zipped, which may take a moment. Then the download will start automatically.
+![export started](./staff.series_export_started.png)
