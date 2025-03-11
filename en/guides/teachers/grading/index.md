@@ -115,7 +115,7 @@ Each of the icons is clickable and takes you to the corresponding solution of th
 
 ### Grade Overview
 
-If you chose to give points, the grade overview will also be visible.
+If you chose to add scores, the grade overview will also be visible.
 Similar to the detailed overview, a box is provided per student per exercise in this table.
 Each box displays the score you gave to the corresponding solution.
 If no points have been entered for a solution, you will see a dash.
