@@ -1,122 +1,159 @@
 ---
-title: "[nl] Taken en toetsen verbeteren met Dodona"
-description: "Tutorial: taken en toetsen verbeteren met Dodona"
+title: "Grading Assignments and Tests with Dodona"
+description: "Tutorial: Grading Assignments and Tests with Dodona"
 order: 6
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
+# Grading Assignments and Tests with Dodona
+
+Dodona has a grading module, which is ideal for reviewing submitted solutions in a structured way and providing feedback and/or points.
+
+## Evaluating a Series
+
+Grading exercises is always done per series.
+If you want to grade a task, test, or exam later, it's best to create a separate series for it.
+
+At the bottom right of the series, you will find a button to create a new evaluation for that series.
+Once created, you can find the evaluation again via the same button.
+
+![evaluate series](./staff.evaluate_series.png)
+
+## Configuring Your Evaluation
+
+Before you can start grading, you need to configure the evaluation.
+For example, you need to select which students to include and whether you want to set a score distribution per exercise.
+You will be guided through the different steps during creation.
+
+### Choosing a Deadline
+
+The first choice you need to make is which deadline to use.
+For each student, the last submitted solution before the chosen time will be selected.
+
+If a series had a set deadline, it will be automatically adopted, but you can adjust it here if necessary.
+
+A deadline can only be in the past and cannot be changed after making your choice.
+
+![choose deadline](./staff.choose_deadline.png)
+
+### Selecting Students
+
+In a second step, choose which students should be included in the evaluation.
+You can select students individually or use the default configurations:
+all students enrolled in the course or all students who submitted at least one of the exercises.
+
+Even if you used one of the default configurations, you can still manually adjust the student list.
+
+The student list is easily filterable via the search box at the top of the list and also provides a concise overview of who submitted which exercises correctly.
+
+![select users](./staff.select_users.png)
+
+### Adding Scores?
+
+In the next step, decide whether you want to add a scoring scheme to your evaluation.
+If you choose not to add scores, you can still go through the submitted solutions in a structured way during the evaluation and manually add feedback to their solutions.
+
+![Give points?](./staff.give_points.png)
+
+### Creating a Scoring Scheme
+
+If you chose to add grades, you can configure the score distribution in the last step.
+You can add one or more score components per exercise.
+Based on the different partial scores, a total per exercise and for the entire evaluation is automatically calculated.
+
+By clicking on `Add score items`, a table editor opens.
+
+![add score items](./staff.add_score_items.png)
+
+This table editor works similar to a spreadsheet program, such as Excel.
+You can easily copy and paste data, and you can insert or remove rows.
+
+![adjust score components](./staff.score_items.png)
+
+When adding a score item, you can set the following:
+* **name**: the name of the score item, typically one word
+* **description** (optional): a short description of the score item
+* **maximum score**: how many points you want to assign to this item, accurate to a quarter point
+* **visibility**: after completing the evaluation, you can release all feedback and grades to the students. You have the option to hide certain partial scores from them.
+
+## The Evaluation Overview
+
+Now that you have configured the evaluation, you will arrive at the evaluation overview page.
+This page consists of several parts.
+
+### Evaluation Progress
+
+At the top, you will find an overview of the current state of the evaluation.
+For each exercise, a bar indicates the percentage of solutions that have already been reviewed.
+Click the `Evaluate` button to start grading the next unreviewed solution for that exercise.
+
+Students who did not submit any solution for a particular exercise are automatically marked as completed.
+Therefore, it may happen that the progress bars are already partially colored after creating the evaluation.
+
+![evaluation progress](./staff.evaluation_progress.png)
+
+::: tip
+Before you start grading, you might want to check for plagiarism.
+Clicking on `Detect plagiarism` will open a new tab with our plagiarism detection tool [dolos](https://dolos.ugent.be/).
+Here you can easily see if students have submitted suspiciously similar solutions for a given exercise.
 :::
 
-# Taken en toetsen verbeteren met Dodona
+### Detailed Overview
 
-> Sinds september 2021 heeft Dodona een verbetermodule. Ideaal om op een gestructureerde manier door de ingediende oplossingen te gaan en feedback en/of punten te geven.
+Below the summary, you will find the detailed overview.
+This table contains a box for each student for each exercise.
+Each box contains an icon with a colored stripe.
 
-## Een reeks evalueren
+The colored stripe indicates the Dodona status of the corresponding solution.
+A green stripe means all tests passed, a red stripe means there was at least one error, and a gray stripe means nothing was submitted.
 
-Het verbeteren van oefeningen gebeurt steeds per reeks. Als je een taak, toets of examen later wil verbeteren, dan maak je hier dus best een aparte reeks voor aan.
+A light gray icon with a checkmark means that the corresponding solution has already been graded.
+A dark gray speech bubble indicates that feedback or grades need to be filled in here.
 
-Rechts onderaan de reeks vind je een knop om een nieuwe evaluatie voor die reeks aan te maken. Eenmaal aangemaakt kan je via dezelfde weg de evaluatie terugvinden.
+Each of the icons is clickable and takes you to the corresponding solution of that student for that exercise.
 
-![reeks evalueren](./reeks-evalueren.png)
+![evaluation overview](./staff.evaluation_overview.png)
 
-## Je evaluatie configureren
+### Grade Overview
 
-Voor je kan beginnen met verbeteren moet je eerst de evaluatie configureren. Je moet bijvoorbeeld selecteren welke studenten je wil opnemen en of je een puntenverdeling per oefening wil instellen. Bij het aanmaken wordt je door de verschillende stappen gegidst.
+If you chose to add scores, the grade overview will also be visible.
+Similar to the detailed overview, a box is provided per student per exercise in this table.
+Each box displays the score you gave to the corresponding solution.
+If no points have been entered for a solution, you will see a dash.
+Here too, each score is clickable and takes you to the corresponding solution.
 
-### Een deadline kiezen
+The total score per student and the average for each exercise are automatically calculated.
 
-Een eerste keuze die je moet maken is welke deadline je wil gebruiken. Voor elke student zal de laatst ingediende oplossing voor het gekozen tijdstip geselecteerd worden.
+In the upper right corner of the score overview, a download button is visible.
+If you click here, a CSV file with the scores will be downloaded.
+You can easily open this file in, for example, Excel.
 
-Als een reeks een deadline had ingesteld dan wordt deze automatisch overgenomen, maar je kan ze hier eventueel wel aanpassen.
+![evaluation points](./staff.evaluation_grades.png)
 
-Een deadline kan enkel in het verleden liggen en na het maken van je keuze kan ze niet meer worden aangepast.
+## Evaluating a Solution
 
-![deadline kiezen](./deadline-kiezen.png)
+On the evaluation page, you will always see the last submitted solution for the deadline of a student for a particular exercise.
 
-### Studenten selecteren
+![give points](./staff.give_grades.png)
 
-In een tweede stap kies je welke studenten opgenomen moeten worden in de evaluatie. Je kan studenten individueel selecteren, of gebruik maken van de standaardconfiguraties: alle studenten die zich inschreven in de cursus, of alle studenten die minstens voor 1 van de oefeningen iets hebben ingediend.
+On the left side, you will see the status of the tests and the submitted code.
+Feedback can be added to a specific line of code by clicking on the line number.
+For general feedback, click on `Add global comment`
+More information about adding and reusing comments can be found in [this FAQ](/en/faq/annotations#how-can-i-comment-on-a-students-submission).
 
-Als je gebruik maakte van een van de standaardconfiguraties kan je nog steeds de studentenlijst manueel aanpassen.
+**Note**: The feedback you give here is not automatically visible to the students.
+Feedback within an evaluation must always be released via the `Release Feedback` button on the evaluation overview.
 
-De studentenlijst is eenvoudig filterbaar via het zoekvak bovenaan de lijst en geeft tevens een beknopt overzicht van wie welke oefeningen correct indiende.
+On the right side of the page, you will find the navigation and scoring interface.
+From top to bottom, you will see the following elements:
+* **Next**: via this button, you quickly move to the next student for the same exercise.
+* **Schoring scheme**: Here you will see all score items for this exercise. You can give a score for each of the components. Your points are automatically kept up to date as you enter them, and the total score is always up to date. If all partial scores have been entered, a checkmark will appear under **Total**. Via the thumbs up and down, you can quickly enter a 0 or the maximum score for a component.
+* **Progress for this exercise**: This is the same progress indicator as on the overview page. The bar indicates how far you are in the grading process for this exercise.
+* **Student Status**: Here you will see the status of the submitted solutions for all exercises within this series. These icons are clickable and quickly take you to the corresponding evaluation page.
 
-![gebruikers selecteren](./gebruikers-selecteren.png)
+::: tip Use anonymous mode for anonymous grading
 
-### Punten geven?
-
-In de volgende stap beslis je of je punten wil koppelen aan je evaluatie. Als je er voor kiest om geen punten te geven, dan kan je tijdens het evalueren op een gestructureerde manier door de ingediende oplossingen van de studenten stappen en manueel feedback aan hun oplossingen toevoegen.
-
-![Wil je punten geven?](./punten-geven.png)
-
-### Een puntenverdeling opstellen
-
-Als je er voor gekozen hebt om punten te geven, dan kan je in de laatste stap de puntenverdeling configureren. Je kan per oefening een of meerdere scoreonderdelen toevoegen. Op basis van de verschillende deelpunten wordt automatisch een totaal per oefening en voor de volledige evaluatie berekend.
-
-Via het menu rechtsboven kan je scoreonderdelen aan alle oefeningen tegelijk toevoegen.
-
-Als je een scoreonderdeel toevoegt, dan kan je volgende dingen instellen:
-* **naam**: de naam van het scoreonderdeel, typisch 1 woord
-* **beschrijving** (optioneel): een korte beschrijving van het scoreonderdeel
-* **maximumscore**: hoeveel punten je aan dit onderdeel wil toekennen, tot op een kwart punt nauwkeurig
-* **zichtbaarheid**: nadat je de evaluatie hebt afgerond kan je alle feedback en punten vrijgeven aan de studenten. Je hebt hierbij de keuze om bepaalde deelpunten voor hen te verbergen.
-
-![scoreonderdelen aanpassen](./score-items.png)
-
-## Het evaluatieoverzicht
-
-Nu je de evaluatie geconfigureerd hebt, kom je op de overzichtspagina van de evaluatie terecht. Deze pagina bestaat uit verschillende onderdelen.
-
-### Evaluatievoortgang
-
-Bovenaan vind je een overzicht van de huidige toestand van de evaluatie. Per oefening geeft een balkje weer welk percentage van de oplossingen al is bekeken. Via het pijltje rechts ervan kan je snel verder gaan met verbeteren en spring je naar een onbekeken oplossing.
-
-Studenten die voor een bepaalde oefening geen enkele oplossing indienden worden automatisch als afgewerkt gemarkeerd. Op die manier kan het dus voorkomen dat de voortgangsbalkjes al deels zijn gekleurd na het aanmaken van de evaluatie.
-
-![evaluatie voortgang](./evaluatie-voortgang.png)
-
-### Detailoverzicht
-
-Onder de samenvatting vind je het detailoverzicht. Deze tabel bevat een vakje voor elke student voor elke oefening. In elk vakje staat een icoontje met een gekleurd streepje.
-
-Het gekleurd streepje geeft de dodona-status van de corresponderende oplossing weer. Bij een groen streepje slaagde alle testen, bij een rood streepje was er minstens een fout, bij een grijs streepje werd niets ingediend.
-
-Een lichtgrijs icoontje met een vinkje in wil zeggen dat de corresponderende oplossing al verbeterd werd. Een donkergrijze tekstballon geeft aan dat hier feedback of punten moeten ingevuld worden.
-
-Elk van de icoontjes is aanklikbaar en brengt je naar de corresponderende oplossing van die student voor die oefening.
-
-![evaluatie overzicht](./evaluatie-overzicht.png)
-
-### Puntenoverzicht
-
-Als je er voor gekozen hebt om punten te geven, dan is het puntenoverzicht ook zichtbaar. Analoog aan het detailoverzicht is in deze tabel ook een vakje per student per oefening voorzien. In elke vakje wordt de score weergegeven die je aan de corresponderende oplossing gaf. Indien nog geen punten voor een oplossing werden ingegeven, dan krijg je een streepje te zien. Indien nog niet voor alle scoreonderdelen een punt werd ingegeven, dan wordt de score in het lichtgrijs afgebeeld. Ook hier is elke score aanklikbaar en kom je zo bij de corresponderende oplossing terecht.
-
-De totaalscore per student en het gemiddelde voor elke oefening worden automatisch berekend.
-
-In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Als je hier op klikt, dan wordt een csv-bestand met de punten gedownload. Dit bestand kan je eenvoudig open in bijvoorbeeld Excel.
-
-![evaluatie punten](./evaluatie-punten.png)
-
-## Een oplossing evalueren
-
-Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de deadline van een student voor een bepaalde oefening te zien.
-
-Aan de linkerkant zie je de status van de testen en de ingediende code. Op de code kan feedback worden toegevoegd aan een bepaalde regel door op het regelnummer te klikken. Voor algemene feedback klik je op "Globale opmerking toevoegen". Meer info over het toevoegen en hergebruiken van opmerkingen vind je in [deze faq](/en/faq/annotations#how-can-i-comment-on-a-students-submission).
-
-**Merk op**: de feedback die je hier geeft is niet automatisch zichtbaar voor de studenten. Feedback binnen een evaluatie moet je steeds vrijgeven via de knop "Feedback vrijgeven" op het evaluatieoverzicht.
-
-Aan de rechterkant van de pagina vind je de navigatie en score-interface. Van boven naar onder zie je volgende elementen:
-* **Volgende**: via deze knop ga je snel naar de volgende student voor dezelfde oefening.
-* **Punten geven**: Hier zie je alle score-items voor deze oefening. Je kan een score geven voor elk van de onderdelen. Je punten worden automatische bijgehouden als je ze intikt en ook de totaalscore is zo steeds up-to-date. Als alle deelscores zijn ingegeven, dan verschijnt een vinkje onder **Totaal**: Via het duimpje omhoog en omlaag kan je snel een 0 of de maximumscore op een onderdeel invullen.
-* **Voortgang voor deze oefening**: Dit is dezelfde voortgangsindicator als op de overzichtspagina. Het balkje geeft weer hoe ver je staat in het verbeterproces voor deze oefening.
-
-* **Status van de student**: Hier zie je de status van de ingediende oplossingen voor alle oefeningen binnen deze reeks. Deze icoontjes zijn klikbaar en brengen je snel naar de corresponderende evaluatiepagina.
-
-::: tip Gebruik de anonieme modus voor anoniem verbeteren
-
-Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op Dodona kan je hiervoor de anonieme modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
+To grade as objectively as possible, it is sometimes better not to see the name of the student in question.
+On Dodona, you can enable anonymous mode for this by clicking on your name at the top right of the page.
+This will anonymize the names of the students.
 
 :::
-
-![punten geven](./evalueren.png)
