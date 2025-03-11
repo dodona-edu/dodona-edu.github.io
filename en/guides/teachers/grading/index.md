@@ -21,7 +21,7 @@ Once created, you can find the evaluation again via the same button.
 ## Configuring Your Evaluation
 
 Before you can start grading, you need to configure the evaluation.
-For example, you need to select which students to include and whether you want to set a points distribution per exercise.
+For example, you need to select which students to include and whether you want to set a score distribution per exercise.
 You will be guided through the different steps during creation.
 
 ### Choosing a Deadline
@@ -73,7 +73,7 @@ When adding a score item, you can set the following:
 * **name**: the name of the score item, typically one word
 * **description** (optional): a short description of the score item
 * **maximum score**: how many points you want to assign to this item, accurate to a quarter point
-* **visibility**: after completing the evaluation, you can release all feedback and points to the students. You have the option to hide certain partial points from them.
+* **visibility**: after completing the evaluation, you can release all feedback and grades to the students. You have the option to hide certain partial scores from them.
 
 ## The Evaluation Overview
 
@@ -107,7 +107,7 @@ The colored stripe indicates the Dodona status of the corresponding solution.
 A green stripe means all tests passed, a red stripe means there was at least one error, and a gray stripe means nothing was submitted.
 
 A light gray icon with a checkmark means that the corresponding solution has already been graded.
-A dark gray speech bubble indicates that feedback or points need to be filled in here.
+A dark gray speech bubble indicates that feedback or grades need to be filled in here.
 
 Each of the icons is clickable and takes you to the corresponding solution of that student for that exercise.
 
