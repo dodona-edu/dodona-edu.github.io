@@ -58,7 +58,7 @@ If you choose not to add scores, you can still go through the submitted solution
 
 If you chose to add grades, you can configure the score distribution in the last step.
 You can add one or more score components per exercise.
-Based on the different partial points, a total per exercise and for the entire evaluation is automatically calculated.
+Based on the different partial scores, a total per exercise and for the entire evaluation is automatically calculated.
 
 By clicking on `Add score items`, a table editor opens.
 
