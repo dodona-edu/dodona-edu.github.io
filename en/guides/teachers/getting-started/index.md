@@ -19,7 +19,7 @@ On Dodona, teachers can create their own course, built from different exercise s
 They can use existing courses and exercises or choose to create their own exercises and teaching materials.
 Thanks to the built-in *learning analytics* and data visualizations, it is also easy to measure students' progress.
 
-## Logging In
+## Signing In
 
 You can log in to Dodona using your school's Smartschool, Microsoft 365, or Google Workspace account.
 Dodona then receives your name, email address, and school name from the chosen login system.
