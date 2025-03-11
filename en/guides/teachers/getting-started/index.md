@@ -21,7 +21,7 @@ Thanks to the built-in *learning analytics* and data visualizations, it is also 
 
 ## Signing In
 
-You can log in to Dodona using your school's Smartschool, Microsoft 365, or Google Workspace account.
+You can sign in to Dodona using your school's Microsoft 365, or Google Workspace account.
 Dodona then receives your name, email address, and school name from the chosen login system.
 Based on this information, we can identify you and automatically create a Dodona account the first time you log in.
 Your password is never sent to us.
