@@ -23,7 +23,7 @@ Thanks to the built-in *learning analytics* and data visualizations, it is also 
 
 You can sign in to Dodona using your school's Microsoft 365, or Google Workspace account.
 Dodona then receives your name, email address, and school name from the chosen login system.
-Based on this information, we can identify you and automatically create a Dodona account the first time you log in.
+Based on this information, we can identify you and automatically create a Dodona account the first time you sign in.
 Your password is never sent to us.
 
 ::: tip Multiple login systems?
