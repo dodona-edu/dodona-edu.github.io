@@ -28,7 +28,7 @@ Your password is never sent to us.
 
 ::: tip Multiple login systems?
 Some schools use multiple identity providers.
-Since your Dodona account is linked to the login system used, you will have two different Dodona accounts if you log in via Smartschool first and then via Microsoft 365.
+Since your Dodona account is linked to the sign-in system used, you will have two different Dodona accounts if you sign in via Google first and then via Microsoft 365 next.
 
 To prevent issues, we can limit the login options for your school.
 Contact us at <a href="mailto:dodona@ugent.be">dodona@ugent.be</a> for this.
