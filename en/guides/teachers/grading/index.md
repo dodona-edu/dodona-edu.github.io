@@ -47,7 +47,7 @@ The student list is easily filterable via the search box at the top of the list 
 
 ![select users](./staff.select_users.png)
 
-### Giving Points?
+### Adding Scores?
 
 In the next step, decide whether you want to add a scoring scheme to your evaluation.
 If you choose not to give points, you can still go through the submitted solutions in a structured way during the evaluation and manually add feedback to their solutions.
