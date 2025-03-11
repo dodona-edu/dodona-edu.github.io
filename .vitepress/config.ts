@@ -101,7 +101,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://x.com/DodonaEdu' },
+      { icon: 'x', link: 'https://x.com/DodonaEdu' },
+      { icon: 'bluesky', link: 'https://bsky.app/profile/dodona.be' },
       { icon: 'github', link: 'https://github.com/dodona-edu' }
     ]
   },
