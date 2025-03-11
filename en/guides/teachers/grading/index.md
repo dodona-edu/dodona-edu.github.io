@@ -124,7 +124,7 @@ Here too, each score is clickable and takes you to the corresponding solution.
 The total score per student and the average for each exercise are automatically calculated.
 
 In the upper right corner of the score overview, a download button is visible.
-If you click here, a CSV file with the points will be downloaded.
+If you click here, a CSV file with the scores will be downloaded.
 You can easily open this file in, for example, Excel.
 
 ![evaluation points](./staff.evaluation_grades.png)
