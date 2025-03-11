@@ -1,76 +1,91 @@
 ---
-title: "[nl] Gebruikersbeheer"
-description: "Tutorial: gebruikersbeheer"
+title: "User Management"
+description: "Tutorial: User Management"
 order: 4
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
+# User Management
 
-# Gebruikersbeheer
-> Op deze pagina vind je alle informatie over gebruikersbeheer op Dodona.
+On this page, you will find all the information about user management on Dodona.
 
-**Inhoudsopgave**
-[[toc]]
+As a course manager, you get access to the list of all registered users in your course.
+You can access this overview by clicking on the user icon in the navigation bar at the top of the course page.
+Here, you will see all users who have ever registered for the course or submitted a registration request.
+You can view their course overview page, view their solutions, adjust their registration status, and change their management rights.
+Management rights determine what a user can do within a course.
+For more information, see the guide on [course management](../course-management/).
 
-Als cursusbeheerder krijg je toegang tot de lijst van alle geregistreerde gebruikers in je cursus. Dit overzicht bereik je door te klikken op het gebruikersicoontje in de navigatiebalk bovenaan de cursuspagina. Hierin zie je alle gebruikers die ooit voor de cursus geregistreerd geweest zijn of die ooit een registratieverzoek voor de cursus ingediend hebben. Je kunt hun cursusoverzichtspagina bekijken, hun oplossingen bekijken, hun registratiestatus aanpassen en hun beheersrechten wijzigen. De beheersrechten geven aan wat een gebruiker mag doen binnenin een cursus. Voor meer informatie hierover, zie de handleiding over [cursusbeheer](../course-management/).
+## User Overview
 
-
-## Gebruikersoverzicht
-
-Als lesgever navigeer je naar het gebruikersoverzicht van je cursus door naar je cursus te navigeren en vervolgens op `Geregistreerde gebruikers` te klikken in de cursusbeschrijving. Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
+As a teacher, navigate to the user overview of your course by going to your course and then clicking on `Registered users` in the course description.
+You can also click on the user icon in the navigation bar.
 
 ![admin menu users](./staff.course_users.png)
 
-In het gebruikersoverzicht worden de gebruikersnaam, de naam, het e-mailadres en [voortgangsstatus](#voortgangsstatus) opgelijst uit het gebruikersprofiel van alle gebruikers van jouw cursus. Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker toegewezen werden.
+In the user overview, the username, name, email address, and [progress](#progress) of all course users are listed.
+For each teacher and administrator, an icon corresponding to the management rights assigned to the user is displayed next to their name.
 
-![gebruikers](./staff.users.png)
+![users](./staff.users.png)
 
-### Gebruiker zoeken
+### Search for Users
 
-Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifieke gebruikers op basis van een gebruikersnaam, een naam, een e-mailadres of gebruikerslabel. Verschillende filters kunnen tegelijkertijd actief zijn.
+Use the search bar at the top of the user overview to search for specific users based on a username, name, email address, or user label.
+Multiple filters can be active simultaneously.
 
-![gefilterde lijst](./staff.users_filtered.png)
+![filtered list](./staff.users_filtered.png)
 
-### Voortgangsstatus
-De voortgangsstatus van een gebruiker wordt weergegeven door een vooruitgangsbalkje. Het groen-ingekleurde deel stelt het aandeel oefeningen in de cursus voor waarvoor de gebruiker een **correcte** oplossing voor heeft ingediend. Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog **niet correct** heeft opgelost. Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog **niet aan begonnen** is.
+### Progress
 
-![statistics](./user_progress_statistics.png)
+The progress of a user is indicated by a progress bar.
+The green part represents the proportion of exercises in the course for which the user has submitted a **correct** solution.
+The red part represents the proportion of exercises for which the user has submitted solutions but has not yet solved **correctly**.
+The gray part represents the exercises that the user has not yet **started**.
 
-### Cursusbeheerders aanduiden
+![statistics](./staff.user_progress_statistics.png)
 
-Elke cursus heeft minstens 1 cursusbeheerder. Als cursusbeheerder kan je zelf andere ingeschreven gebruikers promoveren tot cursusbeheerder. Dit kan je doen door naast die gebruiker op het icoontje met een baret te klikken:
+### Designating Course Managers
 
-![beheersrechten bewerken](./staff.users_edit_permissions.png)
+Each course has at least 1 course manager.
+As a course manager, you can promote other registered users to course manager.
+You can do this by clicking on the icon with a cap next to that user:
 
-Je kan de cursusbeheerders herkennen aan het icoontje in de linkermarge.
+![edit permissions](./staff.users_edit_permissions.png)
 
-![beheerder in gebruikersoverzicht](./staff.course_users_admin.png)
+You can recognize the course managers by the icon in the left margin.
 
-::: tip Belangrijk
+![admin in user overview](./staff.course_users_admin.png)
 
-Een cursusbeheerder die zich uitschrijft uit een cursus verliest zijn status van cursusbeheerder. Je kan ook steeds jezelf degraderen tot student.
+::: tip Important
 
-Om ervoor te zorgen dat een cursus altijd minstens één cursusbeheerder heeft, kan de laatste cursusbeheerder zich niet uitschrijven en kan hij zichzelf ook niet degraderen tot student.
+A course manager who unsubscribes from a course loses their course manager status.
+You can also always demote yourself to a student.
 
-Na het aanmaken van een cursus kan een lesgever zich uitschrijven als hij minstens 1 andere cursusbeheerder heeft aangeduid. Hij kan door andere cursusbeheerders ook gedegradeerd worden tot cursusgebruiker zonder beheersrechten voor de cursus.
+To ensure that a course always has at least one course manager, the last course manager cannot unsubscribe and cannot demote themselves to a student.
+
+After creating a course, a teacher can unsubscribe if they have designated at least 1 other course manager.
+They can also be demoted by other course managers to a course user without management rights for the course.
 :::
 
-### Registratieverzoeken afhandelen
+### Handling Registration Requests
 
-Afhankelijk van de ingestelde [registratieprocedure](../creating-a-course/#cursuseigenschappen) van een cursus zal je bij de gebruikerslijst meerdere tabbladen zien. Elke tab biedt andere acties aan om de registratiestatus van de bijhorende gebruiker aan te passen.
+Depending on the set [registration procedure](../creating-a-course/#course-properties) of a course, you will see multiple tabs in the user list.
+Each tab offers different actions to adjust the registration status of the corresponding user.
 
-* `Geregistreerd`: alle cursusgebruikers die momenteel geregistreerd zijn.
-  Door te klikken op ![unregister](../../../../images/staff_registration_icons/unregister.png) schrijf je de gebruiker uit de cursus.
+* `Registered`: all course users who are currently registered.
+  By clicking on the blue _garbage bin_ icon, you unsubscribe the user from the course.
 
-* `Op de wachtlijst`: alle cursusgebruikers waarvoor er nog een registratieverzoek openstaat dat wacht op afhandeling door een cursusbeheerder.
-  Door te klikken op ![approve](../../../../images/staff_registration_icons/approve.png) keur je het registratieverzoek goed. Afkeuren doe je door te klikken op ![decline](../../../../images/staff_registration_icons/decline.png). Deze tab is enkel zichtbaar als de cursus werkt met gemodereerde inschrijving.
+* `Waiting List`: all course users for whom there is still an open registration request awaiting handling by a course manager.
+  By clicking on green button with the _checkmark_ icon, you approve the registration request. You can reject it by clicking on red button with the _garbage bin_ icon.
+  This tab is only visible if the course uses moderated registration.
 
-* `Uitgeschreven`: alle cursusgebruikers die ooit geregistreerd waren, maar die ondertussen uitgeschreven zijn.
-  Deze gebruiker kan je terug inschrijven voor de cursus door te klikken op ![register](../../../../images/staff_registration_icons/register.png)
+* `Unsubscribed`: all course users who were once registered but have since unsubscribed.
+  You can re-register this user for the course by clicking on blue icon of a _user with a plus sign_.
 
-## Tracking students
-Om de voortgang van een individuele student op te volgen is er een overzichtspagina per student voorzien. Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op de naam van een student te klikken. Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus. Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.
+## Tracking Students
 
-![cursusoverzicht](./staff.user_course_overview.png)
+To track the progress of an individual student, there is an overview page per student.
+You can view this page by clicking on a student's name in the user overview of a course.
+On this page, you will get an overview of a user's progress within the course.
+In addition to some statistics, you can also view the status for each exercise and series within the course for this student.
+
+![course overview](./staff.user_course_overview.png)
