@@ -27,7 +27,7 @@ Based on this information, we can identify you and automatically create a Dodona
 Your password is never sent to us.
 
 ::: tip Multiple login systems?
-Some schools offer login via both Smartschool and Microsoft 365 or Google Workspace.
+Some schools use multiple identity providers.
 Since your Dodona account is linked to the login system used, you will have two different Dodona accounts if you log in via Smartschool first and then via Microsoft 365.
 
 To prevent issues, we can limit the login options for your school.
