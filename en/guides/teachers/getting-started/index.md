@@ -1,74 +1,93 @@
 ---
-title: '[nl] Van start met Dodona als leerkracht'
-description: "Tutorial: van start met Dodona als leerkracht"
+title: 'Getting Started with Dodona as a Teacher'
+description: "Tutorial: Getting Started with Dodona as a Teacher"
 order: 1
 ---
 
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
+# Getting Started with Dodona as a Teacher
+
+All the information to get started smoothly with Dodona as a teacher.
+
+## What is Dodona?
+
+Dodona is an online exercise platform for learning to code.
+The web application was developed at Ghent University to support practical exercises for large groups of students.
+Dodona therefore primarily focuses on the automatic testing and feedback of submitted solutions to programming exercises.
+Currently, Dodona supports programming languages such as Python, JavaScript, Java, Kotlin, C#, bash, Prolog, Haskell, SQL, and R.
+
+On Dodona, teachers can create their own course, built from different exercise series.
+They can use existing courses and exercises or choose to create their own exercises and teaching materials.
+Thanks to the built-in *learning analytics* and data visualizations, it is also easy to measure students' progress.
+
+## Signing In
+
+You can sign in to Dodona using your school's Microsoft 365, or Google Workspace account.
+Dodona then receives your name, email address, and school name from the chosen login system.
+Based on this information, we can identify you and automatically create a Dodona account the first time you sign in.
+Your password is never sent to us.
+
+::: tip Multiple login systems?
+Some schools use multiple identity providers.
+Since your Dodona account is linked to the sign-in system used, you will have two different Dodona accounts if you sign in via Google first and then via Microsoft 365 next.
+
+To prevent issues, we can limit the sign-in options for your school.
+Contact us at <a href="mailto:dodona@ugent.be">dodona@ugent.be</a> for this.
 :::
 
-# Van start met Dodona als leerkracht
+A standard Dodona account can freely enroll in courses and submit exercises without limitations.
+If you want to create a course or set up exercises as a teacher, you will need additional rights.
+Use the [request form](https://dodona.be/en/rights_requests/new) on Dodona, and we will grant you the necessary rights as soon as possible.
 
-Alle informatie om vlot van start te gaan met Dodona als leerkracht.
+## Creating a Course
 
-## Wat is Dodona?
+Once we have activated your teacher rights, you can create a course by clicking the `Create Course` button in the [course overview](https://dodona.be/en/courses/).
 
-Dodona is een online oefenplatform om te leren programmeren. De webapplicatie werd ontwikkeld aan de Universiteit Gent om practica aan grote groepen studenten te ondersteunen. Dodona focust daarom in de eerste plaats op het automatisch testen en geven van feedback op ingediende oplossingen van programmeeroefeningen. Op dit moment ondersteunt Dodona onder andere de programmeertalen Python, JavaScript, Java, Kotlin, C#, bash, Prolog, Haskell, sql en R.
+![create course](./staff.courses_new_link.png)
 
-Op Dodona kunnen lesgevers een eigen cursus aanmaken, opgebouwd uit verschillende oefeningenreeksen. Ze kunnen hiervoor beroep doen op bestaande cursussen en oefeningen, maar kunnen er ook voor kiezen om zelf aan de slag te gaan en eigen oefeningen en lesmateriaal op te stellen. Dankzij de ingebouwde *learning analytics* en datavisualisaties is het bovendien eenvoudig om de voortgang van studenten te meten.
+You can then choose to start from an empty course or to copy and modify the content of an existing course.
+For inspiration, you can browse our [featured courses](https://dodona.be/en/courses/?tab=featured).
 
-Dodona wordt gratis aangeboden voor educatieve doeleinden.
+We give more details about creating a course in this [guide](/en/guides/teachers/creating-a-course).
 
-## Aanmelden
+## Setting Up a Course
 
-Aanmelden op Dodona kan via de Smartschool, Microsoft 365 of Google workspace account van je school. Dodona krijgt vervolgens je naam, e-mailadres, en naam van je school doorgestuurd van het gekozen loginsysteem. Op basis hiervan kunnen we je identificeren en maken we automatisch een Dodona-account aan de eerste keer dat je aanmeldt. Je wachtwoord wordt op geen enkel moment naar ons doorgestuurd.
+A course on Dodona consists of different exercise series that you can use to group exercises.
+To create a new exercise series, click the `Manage Series` button on your course page and then `Create Series`.
+You will see the following form:
 
-::: tip Meerdere inlogsystemen?
-Sommige scholen bieden zowel inloggen via Smartschool als via Microsoft 365 of Google workspace aan. Omdat je Dodona-account gekoppeld is aan het gebruikte inlogsysteem, zal je twee verschillende Dodona-accounts hebben als je bijvoorbeeld eerst via Smartschool aanmeldt en vervolgens via Microsoft 365.
+![create series](./staff.series_new.png)
 
-Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:dodona@ugent.be"> dodona@ugent.be</a>.
-:::
+Each exercise series consists of a title and a description that you can use to refer to teaching materials, for example.
+In addition to regular text, you can also use the [Markdown format](/en/references/exercise-description/#markdown) to add extra formatting.
+You can also specify an optional deadline and set the visibility of the series.
 
-Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeperkt oefeningen indienen. Wil je als lesgever zelf een cursus aanmaken of oefeningen opstellen, dan heb je extra rechten nodig. Gebruik het [aanvraagformulier](https://dodona.be/nl/rights_requests/new) op Dodona en we geven je zo snel mogelijk de nodige rechten.
+After creating a series, you can add exercises and reading activities.
+You can choose from all exercises and activities available to you in Dodona.
+Using the search field, you can easily filter the list of exercises. 
 
-## Een cursus aanmaken
+![add exercise](./staff.series_add_exercise.png)
 
-Eenmaal we je lesgeversrechten hebben geactiveerd kan zelf een cursus aanmaken door op de knop `Cursus aanmaken` te klikken in het [cursusoverzicht](https://dodona.be/nl/courses/).
+When selecting exercises, you can view more information about an exercise by going to the info page.
+Here you will find sample solutions, available languages, settings, additional explanations, and the author's contact details.
 
-![cursus aanmaken](./cursus-aanmaken.png)
+![exercise info page](./staff.exercise_info_page.png)
 
-Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud van een bestaande cursus over te nemen en aan te passen. Om inspiratie op te doen kan je een kijkje nemen in onze [uitgelichte cursussen](https://dodona.be/nl/courses/?tab=featured).
+In our guide on [exercise series management](/en/guides/teachers/exercise-series-management), you will find more information on how to manage exercise series.
 
-## Een cursus opstellen
+If you'd like to create your own exercises, we have a guide for that too.
+In [this guide](/en/guides/exercises/creating-exercises), you will find all the information on how to create exercises for Dodona.
 
-Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebruiken om oefeningen te groeperen. Om een nieuwe oefeningenreeks aan te maken, klik je op de `Reeksen beheren` knop op je cursuspagina en vervolgens op `Reeks aanmaken`. Je krijgt dan onderstaand formulier te zien.
+## Using Your Course
 
-![reeks-aanmaken](./reeks-aanmaken.png)
+Once you have set up your course, you can use it in your class.
+Students should easily find your course in the list once signed in, or you can share the course link with them.
+You can easily follow along with your students' progress using our built-in analytics.
 
-Elke oefeningenreeks bestaat uit een titel en een beschrijving die je kan gebruiken om bijvoorbeeld te verwijzen naar lesmateriaal. Naast gewone tekst kan je hier ook het [Markdownformaat](/nl/references/exercise-description/#markdown) gebruiken om extra opmaak toe te voegen. Daarnaast kan je ook een eventuele deadline opgeven.
+![course page](./staff.course_overview.png)
 
-Voor elke oefeningenreeks kan je de zichtbaarheid instellen:
-- **Open**: Dit is de standaard instelling. De reeks is gewoon zichtbaar op je cursuspagina.
-- **Gesloten**: De reeks zal voor studenten niet zichtbaar zijn op de cursuspagina. Je kan deze instelling bijvoorbeeld gebruiken om reeksen voor te bereiden die je nog niet wil vrijgeven aan de studenten.
-- **Verborgen**: De reeks zal voor studenten niet zichtbaar zijn op de cursuspagina, maar je kan ze wel toegang geven via een speciale link die je te zien krijgt na het aanmaken van de reeks.
-
-Nadat je een reeks hebt aangemaakt, kan je oefeningen en leesactiviteiten toevoegen. Je kan hiervoor kiezen uit alle oefeningen en activiteiten die voor jou beschikbaar zijn in Dodona. Via het zoekveld kan je eenvoudig de lijst van oefeningen filteren. Hieronder zie je bijvoorbeeld dat enkel de Python oefeningen met het label "middelbaar" worden weergegeven.
-
-![oefening-toevoegen](./oefening-toevoegen.png)
-
-Bij het selecteren van oefeningen kun je meer info over een oefening bekijken door naar de infopagina te gaan. Hier vindt je voorbeeldoplossingen, beschikbare talen, instellingen, extra uitleg en contactgegevens van de auteur.
-
-![oefening-infopagina](./oefening-infopagina.png)
-
-In [deze handleiding](/en/guides/exercises/creating-exercises) vind je alle info over hoe je zelf oefeningen aanmaakt.
-
-## Je cursus gebruiken
-
-Eenmaal je je cursus hebt opgesteld, kan je ze gebruiken in je les. Je zorgt er best voor dat je leerlingen voor de juiste cursus zijn ingeschreven door een directe link naar de cursus op bijvoorbeeld Smartschool te plaatsen. Via het gebruikersmenu van je cursus kan je opvolgen wie al ingeschreven is.
-
-![cursus-gebruikers](./cursus-gebruikers.png)
-
-Als je in deze gebruikerslijst op de naam van een leerling klikt, dan krijg je de voortgang van die student te zien.
-
-![reeks-voortgang](./reeks-voortgang.png)
+Dodona also allows you to provide feedback, grade exercises, and answer questions.
+The following guides explain all the possibilities in detail:
+- [Course management](/en/guides/teachers/course-management)
+- [User management](/en/guides/teachers/user-management)
+- [Grading tasks and tests](/en/guides/teachers/grading)
+- [Answering questions](/en/faq/annotations)
