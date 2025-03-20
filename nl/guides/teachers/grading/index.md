@@ -110,7 +110,7 @@ In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Al
 
 Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de deadline van een student voor een bepaalde oefening te zien.
 
-![cijfers geven](./n;.staff.give_grades.png)
+![cijfers geven](./nl.staff.give_grades.png)
 
 Aan de linkerkant zie je de status van de tests en de ingediende code.
 Feedback kan worden toegevoegd aan een specifieke regel code door op het regelnummer te klikken.
