@@ -66,23 +66,35 @@ Nu je de evaluatie geconfigureerd hebt, kom je op de overzichtspagina van de eva
 
 ### Evaluatievoortgang
 
-Bovenaan vind je een overzicht van de huidige toestand van de evaluatie. Per oefening geeft een balkje weer welk percentage van de oplossingen al is bekeken. Via het pijltje rechts ervan kan je snel verder gaan met verbeteren en spring je naar een onbekeken oplossing.
+Bovenaan vind je een overzicht van de huidige toestand van de evaluatie.
+Voor elke oefening geeft een balk het percentage oplossingen aan dat al is beoordeeld.
+Klik op de `Evalueren`-knop om de volgende niet-beoordeelde oplossing voor die oefening te beoordelen.
 
-Studenten die voor een bepaalde oefening geen enkele oplossing indienden worden automatisch als afgewerkt gemarkeerd. Op die manier kan het dus voorkomen dat de voortgangsbalkjes al deels zijn gekleurd na het aanmaken van de evaluatie.
+Studenten die geen oplossing hebben ingediend voor een bepaalde oefening, worden automatisch als voltooid gemarkeerd.
+Daarom kan het voorkomen dat de voortgangsbalken al gedeeltelijk gekleurd zijn na het aanmaken van de evaluatie.
 
-![evaluatie voortgang](./evaluatie-voortgang.png)
+![evaluatievoortgang](./nl.staff.evaluation_progress.png)
+
+::: tip
+Voordat je begint met beoordelen, wil je misschien controleren op plagiaat.
+Door op `Plagiaat detecteren` te klikken, opent een nieuw tabblad met ons plagiaatdetectietool [dolos](https://dolos.ugent.be/).
+Hier kun je gemakkelijk zien of studenten verdacht vergelijkbare oplossingen hebben ingediend voor een bepaalde oefening.
+:::
 
 ### Detailoverzicht
 
-Onder de samenvatting vind je het detailoverzicht. Deze tabel bevat een vakje voor elke student voor elke oefening. In elk vakje staat een icoontje met een gekleurd streepje.
+Onder de samenvatting vind je het gedetailleerde overzicht.
+Deze tabel bevat een icoon voor elke student voor elke oefening.
 
-Het gekleurd streepje geeft de dodona-status van de corresponderende oplossing weer. Bij een groen streepje slaagde alle testen, bij een rood streepje was er minstens een fout, bij een grijs streepje werd niets ingediend.
+Een blauw icoon met een vinkje betekent dat de overeenkomstige oplossing al is beoordeeld.
+Een grijs tekstballonnetje geeft aan dat hier feedback of cijfers moeten worden ingevuld.
 
-Een lichtgrijs icoontje met een vinkje in wil zeggen dat de corresponderende oplossing al verbeterd werd. Een donkergrijze tekstballon geeft aan dat hier feedback of punten moeten ingevuld worden.
+In de onderste rechterhoek van elk icoon vind je het statusicoon van de laatste ingediende oplossing van de student voor die oefening.
+Als de student geen oplossing heeft ingediend, zie je een cirkel met een streepje.
 
-Elk van de icoontjes is aanklikbaar en brengt je naar de corresponderende oplossing van die student voor die oefening.
+Door over de iconen te hoveren, wordt hun betekenis uitgelegd. Elk van de iconen is klikbaar en brengt je naar de overeenkomstige oplossing van die student voor die oefening.
 
-![evaluatie overzicht](./evaluatie-overzicht.png)
+![evaluatieoverzicht](./nl.staff.evaluation_overview.png)
 
 ### Puntenoverzicht
 
@@ -98,15 +110,20 @@ In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Al
 
 Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de deadline van een student voor een bepaalde oefening te zien.
 
-Aan de linkerkant zie je de status van de testen en de ingediende code. Op de code kan feedback worden toegevoegd aan een bepaalde regel door op het regelnummer te klikken. Voor algemene feedback klik je op "Globale opmerking toevoegen". Meer info over het toevoegen en hergebruiken van opmerkingen vind je in [deze faq](/nl/faq/annotations#hoe-kan-ik-opmerkingen-geven-op-een-oplossing-van-een-student).
+![cijfers geven](./nl.staff.give_grades.png)
 
-**Merk op**: de feedback die je hier geeft is niet automatisch zichtbaar voor de studenten. Feedback binnen een evaluatie moet je steeds vrijgeven via de knop "Feedback vrijgeven" op het evaluatieoverzicht.
+Aan de linkerkant zie je de status van de tests en de ingediende code.
+Feedback kan worden toegevoegd aan een specifieke regel code door op het regelnummer te klikken.
+Voor algemene feedback klik je op `Globale opmerking toevoegen`.
+Meer informatie over het toevoegen en hergebruiken van opmerkingen vind je in [deze FAQ](/nl/faq/annotations#hoe-kan-ik-opmerkingen-geven-op-een-oplossing-van-een-student).
+
+**Merk op**: De feedback die je hier geeft, is niet automatisch zichtbaar voor de studenten.
+Feedback binnen een evaluatie moet altijd worden vrijgegeven via de `Feedback vrijgeven`-knop op het evaluatieoverzicht.
 
 Aan de rechterkant van de pagina vind je de navigatie en score-interface. Van boven naar onder zie je volgende elementen:
 * **Volgende**: via deze knop ga je snel naar de volgende student voor dezelfde oefening.
 * **Punten geven**: Hier zie je alle score-items voor deze oefening. Je kan een score geven voor elk van de onderdelen. Je punten worden automatische bijgehouden als je ze intikt en ook de totaalscore is zo steeds up-to-date. Als alle deelscores zijn ingegeven, dan verschijnt een vinkje onder **Totaal**: Via het duimpje omhoog en omlaag kan je snel een 0 of de maximumscore op een onderdeel invullen.
 * **Voortgang voor deze oefening**: Dit is dezelfde voortgangsindicator als op de overzichtspagina. Het balkje geeft weer hoe ver je staat in het verbeterproces voor deze oefening.
-
 * **Status van de student**: Hier zie je de status van de ingediende oplossingen voor alle oefeningen binnen deze reeks. Deze icoontjes zijn klikbaar en brengen je snel naar de corresponderende evaluatiepagina.
 
 ::: tip Gebruik de anonieme modus voor anoniem verbeteren
@@ -114,5 +131,3 @@ Aan de rechterkant van de pagina vind je de navigatie en score-interface. Van bo
 Om zo objectief mogelijk te verbeteren is het soms beter om de naam van de student in kwestie niet te zien. Op Dodona kan je hiervoor de anonieme modus inschakelen door rechtsboven op de pagina op je naam te klikken. Hierdoor worden de namen van de studenten geanonimiseerd.
 
 :::
-
-![punten geven](./evalueren.png)

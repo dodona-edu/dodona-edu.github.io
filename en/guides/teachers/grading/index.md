@@ -100,16 +100,15 @@ Here you can easily see if students have submitted suspiciously similar solution
 ### Detailed Overview
 
 Below the summary, you will find the detailed overview.
-This table contains a box for each student for each exercise.
-Each box contains an icon with a colored stripe.
+This table contains an icon for each student for each exercise.
 
-The colored stripe indicates the Dodona status of the corresponding solution.
-A green stripe means all tests passed, a red stripe means there was at least one error, and a gray stripe means nothing was submitted.
+A blue icon with a checkmark means that the corresponding solution has already been graded.
+A gray speech bubble indicates that feedback or grades need to be filled in here.
 
-A light gray icon with a checkmark means that the corresponding solution has already been graded.
-A dark gray speech bubble indicates that feedback or grades need to be filled in here.
+In the bottom right corner of each icon, you will find the status icon of the latest students submission for that exercise.
+If the student has not submitted a solution, you will see a circle with a dash.
 
-Each of the icons is clickable and takes you to the corresponding solution of that student for that exercise.
+Hovering over the icons will explain their meaning. Each of the icons is clickable and takes you to the corresponding solution of that student for that exercise.
 
 ![evaluation overview](./staff.evaluation_overview.png)
 
