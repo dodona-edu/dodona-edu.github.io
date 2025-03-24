@@ -1048,10 +1048,10 @@ regex@^5.1.1:
   dependencies:
     regex-utilities "^2.3.0"
 
-resolve-accept-language@^3.1.10:
-  version "3.1.10"
-  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.1.10.tgz#ea81e510f2d73809cf6e450aefdf1219f9e9c09f"
-  integrity sha512-+x55sryG8Nijgjg1grEuIY6olgO11ZG+jAd2TcbUzZdr13HzrnRtgn67+Xhjm3KefBt7HZPp3Zmd6Tc+BCuL8A==
+resolve-accept-language@^3.1.11:
+  version "3.1.11"
+  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.1.11.tgz#681b532342691bbe53b7baa435d5f017a57cc0d7"
+  integrity sha512-7YVsTu6c9i/8nm8JUwIa/YGmSf02lhaPQAa+G3baisj/v09/8gEJIF1aRO0bqVy/dQugYJJfqeyxrGBepg/RcQ==
 
 rfdc@^1.4.1:
   version "1.4.1"
