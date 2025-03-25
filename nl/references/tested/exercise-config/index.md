@@ -81,6 +81,7 @@ Dit zijn de linters die TESTed op dit moment gebruikt:
 |-----------------|--------------------------------------------------------|
 | Bash            | [Shellcheck](https://www.shellcheck.net/)              |
 | C               | [Cppcheck](http://cppcheck.sourceforge.net/)           |
+| C++             | [Cppcheck](http://cppcheck.sourceforge.net/)           |
 | Haskell         | [HLint](https://github.com/ndmitchell/hlint)           |
 | Java            | [Checkstyle](https://github.com/checkstyle/checkstyle) |
 | JavaScript      | [ESLint](https://eslint.org/)                          |

@@ -9,7 +9,7 @@ To verify whether a submitted solution is correct, Dodona uses test suites.
 This test suite contains a series of test cases that ensure you are reasonably certain whether a solution is correct or not.
 
 In this guide, we briefly discuss the structure, followed by the various possibilities.
-Here we use TESTed: the recommended way to create exercises for **Python**, **JavaScript**, **Java**, **Kotlin**, **C**, **C#**, **Haskell**, and **Bash**.
+Here we use TESTed: the recommended way to create exercises for **Python**, **JavaScript**, **Typescript**, **Java**, **Kotlin**, **C**, **C#**, **C++**, **Haskell**, and **Bash**.
 If you want to do something that TESTed cannot do or you want to use a different programming language, first look at the [overview of all judges](/en/references/judges).
 
 This guide contains more advanced concepts.
@@ -325,6 +325,7 @@ In the following example, a function is called with the sum of two numbers as an
   testcases:
   - expression:
       c: "to_string(1+1)"
+      cpp: "to_string(1+1)"
       haskell: "Submission.toString (1+1)"
       runhaskell: "Submission.toString (1+1)"
       java: "Submission.toString(1+1)"

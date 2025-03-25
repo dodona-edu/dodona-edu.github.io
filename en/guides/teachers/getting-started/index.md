@@ -13,7 +13,7 @@ All the information to get started smoothly with Dodona as a teacher.
 Dodona is an online exercise platform for learning to code.
 The web application was developed at Ghent University to support practical exercises for large groups of students.
 Dodona therefore primarily focuses on the automatic testing and feedback of submitted solutions to programming exercises.
-Currently, Dodona supports programming languages such as Python, JavaScript, Java, Kotlin, C#, bash, Prolog, Haskell, SQL, and R.
+Currently, Dodona supports programming languages such as Python, JavaScript, Java, Kotlin, C#, C++, bash, Prolog, Haskell, SQL, and R.
 
 On Dodona, teachers can create their own course, built from different exercise series.
 They can use existing courses and exercises or choose to create their own exercises and teaching materials.

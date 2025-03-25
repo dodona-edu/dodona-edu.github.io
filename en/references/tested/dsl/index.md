@@ -320,6 +320,7 @@ This name is programming language dependent:
   testcases:
   - expression:
       c: "to_string(1+1)"
+      cpp: "to_string(1+1)"
       haskell: "Submission.toString (1+1)"
       runhaskell: "Submission.toString (1+1)"
       java: "Submission.toString(1+1)"
