@@ -23,6 +23,7 @@ Currently, the following languages are supported:
 
 * Bash
 * C (gcc)
+* C++ (g++)
 * Haskell (ghc)
 * Java
 * JavaScript (NodeJS)
@@ -92,6 +93,14 @@ function echo {
 
 void echo(char* what) {
     printf("%s", what);
+}
+```
+
+```cpp [C++]
+#include <iostream>
+
+void echo(std::string what) {
+    std::cout << what;
 }
 ```
 

@@ -89,6 +89,14 @@ void echo(char* wat) {
 }
 ```
 
+```cpp [C++]
+#include <iostream>
+
+void echo(std::string wat) {
+    std::cout << wat;
+}
+```
+
 ```haskell [Haskell]
 echo = putStrLn
 ```

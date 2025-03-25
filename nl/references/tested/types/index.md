@@ -29,16 +29,16 @@ TESTed supports the following basic types:
 Onderstaande tabel geeft een overzicht van alle basistypes die ondersteund worden door TESTed.
 In de eerste kolom staan de gegevenstypes van TESTed, gevolgd door een kolom voor elke programmeertaal.
 
-| TESTed   | Python  | JavaScript | Java          | Kotlin    | Haskell   | C        | Bash   |
-|----------|---------|------------|---------------|-----------|-----------|----------|--------|
-| integer  | `int`   | `number`   | `int`/`long`¹ | `Int`     | `Int`     | `int`    | -      |
-| real     | `float` | `number`   | `double`      | `Double`  | `Double`  | `double` | -      |
-| boolean  | `bool`  | `boolean`  | `boolean`     | `Boolean` | `Bool`    | `bool`   | -      |
-| text     | `str`   | `String`   | `String`      | `String`  | `String`  | `char*`  | `text` |
-| sequence | `list`  | `array`    | `List`        | `List`    | `[]`²     | -        | -      |
-| set      | `set`   | `Set`      | `Set`         | `Set`     | -         | -        | -      |
-| map      | `dict`  | `object`   | `Map`         | `Map`     | -         | -        | -      |
-| nothing  | `None`  | `null`     | `null`        | `null`    | `Nothing` | `void`   | -      |
+| TESTed   | Python  | JavaScript | Java          | Kotlin    | Haskell   | C        | Bash   | C++             |
+|----------|---------|------------|---------------|-----------|-----------|----------|--------|-----------------|
+| integer  | `int`   | `number`   | `int`/`long`¹ | `Int`     | `Int`     | `int`    | -      | `std::intmax_t` |
+| real     | `float` | `number`   | `double`      | `Double`  | `Double`  | `double` | -      | `double`        |
+| boolean  | `bool`  | `boolean`  | `boolean`     | `Boolean` | `Bool`    | `bool`   | -      | `bool`          |
+| text     | `str`   | `String`   | `String`      | `String`  | `String`  | `char*`  | `text` | `std::string`   |
+| sequence | `list`  | `array`    | `List`        | `List`    | `[]`²     | -        | -      | `std::vector`   |
+| set      | `set`   | `Set`      | `Set`         | `Set`     | -         | -        | -      | `std::set`      |
+| map      | `dict`  | `object`   | `Map`         | `Map`     | -         | -        | -      | `std::map`      |
+| nothing  | `None`  | `null`     | `null`        | `null`    | `Nothing` | `void`   | -      | `void`          |
 
 ¹ afhankelijk van de waarde  
 ² het ingebouwde type voor lijsten
@@ -74,26 +74,26 @@ De eerste kolom bevat alle geavanceerde types, de tweede kolom toont wat het bas
 De andere kolommen tonen de overeenkomstige types in de verschillende programmeertalen.
 De uitleg over de gebruikte symbolen in deze kolommen staat onder de tabel.
 
-| TESTed           | Basic    | Python    | JavaScript  | Java         | Kotlin       | Haskell            | C                | Bash |
-|------------------|----------|-----------|-------------|--------------|--------------|--------------------|------------------|------|
-| int8             | integer  | +         | +           | `byte`       | `Byte`       | `Data.Int.Int8`    | +                | -    |
-| uint8            | integer  | +         | +           | +            | `UByte`      | `Data.Word.Word8`  | +                | -    |
-| int16            | integer  | +         | +           | `short`      | `Short`      | `Data.Int.Int16`   | `short`          | -    |
-| uint16           | integer  | +         | +           | +            | `UShort`     | `Data.Word.Word16` | `unsigned short` | -    |
-| int32            | integer  | +         | +           | `int`        | `Int`        | `Data.Int.Int32`   | `int`            | -    |
-| uint32           | integer  | +         | +           | +            | `UInt`       | `Data.Word.Word32` | `unsigned int`   | -    |
-| int64            | integer  | +         | +           | `long`       | `Long`       | `Data.Int.Int64`   | `long`           | -    |
-| uint64           | integer  | +         | +           | +            | `ULong`      | `Data.Word.Word64` | `unsigned long`  | -    |
-| bigint           | integer  | `int`     | `BigInt`    | `BigInteger` | `BigInteger` | `Integer`          | -                | -    |
-| single_precision | real     | +         | +           | `float`      | `Float`      | `Float`            | `float`          | -    |
-| double_precision | real     | +         | +           | `double`     | `Double`     | `Double`           | `double`         | -    |
-| double_extended  | real     | +         | +           | +            | +            | -                  | `double double`  | -    |
-| fixed_precision  | rational | `Decimal` | -           | `BigDecimal` | `BigDecimal` | -                  | -                | -    |
-| array            | sequence | +         | +           | `array`      | `Array`      | -                  | -                | -    |
-| list             | sequence | `List`    | +           | `List`       | `List`       | `[]`²              | -                | -    |
-| tuple            | sequence | `Tuple`   | +           | +            | +            | `()`¹              | -                | -    |
-| char             | text     | +         | +           | `char`       | `Char`       | `Char`             | `char`           | +    |
-| undefined        | nothing  | +         | `undefined` | +            | +            | +                  | +                | -    |
+| TESTed           | Basic    | Python    | JavaScript  | Java         | Kotlin       | Haskell            | C                | Bash | C++             |
+|------------------|----------|-----------|-------------|--------------|--------------|--------------------|------------------|------|-----------------|
+| int8             | integer  | +         | +           | `byte`       | `Byte`       | `Data.Int.Int8`    | +                | -    | `std::int8_t`   |
+| uint8            | integer  | +         | +           | +            | `UByte`      | `Data.Word.Word8`  | +                | -    | `std::uint8_t`  |
+| int16            | integer  | +         | +           | `short`      | `Short`      | `Data.Int.Int16`   | `short`          | -    | `std::int16_t`  |
+| uint16           | integer  | +         | +           | +            | `UShort`     | `Data.Word.Word16` | `unsigned short` | -    | `std::uint16_t` |
+| int32            | integer  | +         | +           | `int`        | `Int`        | `Data.Int.Int32`   | `int`            | -    | `std::int32_t`  |
+| uint32           | integer  | +         | +           | +            | `UInt`       | `Data.Word.Word32` | `unsigned int`   | -    | `std::uint32_t` |
+| int64            | integer  | +         | +           | `long`       | `Long`       | `Data.Int.Int64`   | `long`           | -    | `std::int64_t`  |
+| uint64           | integer  | +         | +           | +            | `ULong`      | `Data.Word.Word64` | `unsigned long`  | -    | `std::uint64_t` |
+| bigint           | integer  | `int`     | `BigInt`    | `BigInteger` | `BigInteger` | `Integer`          | -                | -    | `std::intmax_t` |
+| single_precision | real     | +         | +           | `float`      | `Float`      | `Float`            | `float`          | -    | `float`         |
+| double_precision | real     | +         | +           | `double`     | `Double`     | `Double`           | `double`         | -    | `double`        |
+| double_extended  | real     | +         | +           | +            | +            | -                  | `double double`  | -    | `long double`   |
+| fixed_precision  | rational | `Decimal` | -           | `BigDecimal` | `BigDecimal` | -                  | -                | -    | -               |
+| array            | sequence | +         | +           | `array`      | `Array`      | -                  | -                | -    | `std::vector`   |
+| list             | sequence | `List`    | +           | `List`       | `List`       | `[]`²              | -                | -    | `std::list`     |
+| tuple            | sequence | `Tuple`   | +           | +            | +            | `()`¹              | -                | -    | `std::tuple`    |
+| char             | text     | +         | +           | `char`       | `Char`       | `Char`             | `char`           | +    | `char`          |
+| undefined        | nothing  | +         | `undefined` | +            | +            | +                  | +                | -    | +               |
 
 ¹ ingebouwd type voor tuple  
 ² ingebouwd type voor list
