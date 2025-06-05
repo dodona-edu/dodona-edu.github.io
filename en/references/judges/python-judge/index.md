@@ -274,7 +274,7 @@ Om de vergelijking van de output aan te passen wordt de `OUTPUTPROCESSOR` tag ge
 0.002
 >>> 0.001 # precisie wordt op 5 ingesteld, dus incorrect
 <OUTPUTPROCESSOR>
-DefaultProcessor(expected_type=float, precision=5)
+OutputProcessor(expected_type=float, precision=5)
 </OUTPUTPROCESSOR>
 0.002
 ```
@@ -286,7 +286,7 @@ Merk op dat alle outputprocessors *sticky* gemaakt kunnen worden. Het zou vervel
 0.002
 >>> 0.001 # zet precision op 6 en houd dit zo, dus dit zal falen
 <OUTPUTPROCESSOR sticky="sticky">
-DefaultProcessor(expected_type=float, precision=6)
+OutputProcessor(expected_type=float, precision=6)
 </OUTPUTPROCESSOR>
 0.002
 >>> 0.003 # dit zal nog steeds falen
@@ -329,7 +329,7 @@ Dit voorbeeld zou uiteraard verwarrend zijn voor studenten, aangezien zij de def
 -   `BasicProcessor`: Zowel het verwerken van standaard uitvoer (`process_stdout`) en de returnwaarde (`process_return`) zetten de status van het block op \"WA\" (*wrong answer*).
 -   `OutputComparator(BasicProcessor)`: Overschrijft `process_stdout` en zet de status op \"AC\" (*answer correct*) als de verwachte en de gegenereerde uitvoer gelijk zijn (met het vergelijken van strings). Voegt ook de verwachte en de gegenereerde output toe aan het block zodat ze met een diff kunnen getoond worden in de feedbacktabel.
 -   `TypedContentChecker(BasicProcessor)`: Overschrijft `process_return` en zet de status op \"AC\" als het type en de waarden van de verwachte return en de gegenereerde return gelijk zijn. Voegt ook de verwachte en de gegenereerde return toe aan het block na ze te annoteren zodat ze in de feedbacktabel getoond kunnen worden.
--   `DefaultProcessor(OutputComparator, TypedContentChecker)`: Erft over van de vorige twee output processoren en combineert hun functionaliteit: `process_stdout` roept `OutputComparator.process_stdout` op en `process_return` roept `TypedContentChecker.process_return` op.
+-   `OutputProcessor(OutputComparator, TypedContentChecker)`: Erft over van de vorige twee output processoren en combineert hun functionaliteit: `process_stdout` roept `OutputComparator.process_stdout` op en `process_return` roept `TypedContentChecker.process_return` op.
 
 ```python
 >>> print('hello') #doctest: STDOUT
@@ -358,7 +358,7 @@ class FriendlyTypedContentChecker(TypedContentChecker):
 'hello'
 >>> print('hello') or 'hello'
 <DEFINITION>
-class FriendlyProcessor(DefaultProcessor):
+class FriendlyProcessor(OutputProcessor):
     def process_stdout(self, block, expected_output, generated_output, **kwargs):
         retval = super().process_stdout(self, block, expected_output, generated_output, **kwargs)
         if block.status == 'AC':
@@ -381,7 +381,7 @@ hello
 Enkele opmerkingen:
 
 -   Als de inhoud met een eigen methode vergeleken moet worden kan de `content_check=False` parameter doorgegeven worden aan `super().process_return`. De functie zal dan enkel bepalen of de types overeen komen (en de block status instellen op \"AC\" of \"WA\"). Als de types niet overeenkwamen zal het block ook al annotaties bevatten. Als de types wel overeenkwamen moeten `setExpectedReturn` en `setGeneratedReturn` opgeroepen worden met geannoteerde string als de returns getoond moeten worden. Het is echter ook mogelijk om bijvoorbeeld de feedback te limiteren tot een bericht berekend uit de returns.
--   Gebruik enkel de functionaliteit die je nodig hebt. Als er geen printing verwacht wordt, overschrijf dan `TypedContentChecker`. Elke onverwacht standaard uitvoer zal dan opgevangen worden en juist aan de gebruiker getoond worden. Met de `DefaultProcessor` zou er nog steeds een diff getoond worden, maar de \"onverwachte output\" boodschap zou niet getoond worden.
+-   Gebruik enkel de functionaliteit die je nodig hebt. Als er geen printing verwacht wordt, overschrijf dan `TypedContentChecker`. Elke onverwacht standaard uitvoer zal dan opgevangen worden en juist aan de gebruiker getoond worden. Met de `OutputProcessor` zou er nog steeds een diff getoond worden, maar de \"onverwachte output\" boodschap zou niet getoond worden.
 -   Vergeet niet terug te geven of het antwoord geaccepteerd wordt of niet. `continueUponWrongAnswer` hangt hier van af.
 -   Zet de verwacht/gegenereerd paren met `Feedbacktable.setOutputPair(channel, exp, gen)`, waarbij `channel` een van `return`, `stderr` en `stdout` is. Voeg berichten toe aan elk paar met `Feedbacktable.addOutputMessage(channel, message, ...)`.
 
