@@ -24,7 +24,7 @@ const redirects = internationalizedRedirects({
     'guides/getting-started': 'guides/teachers/getting-started',
     'ufora': 'guides/teachers/ufora',
 
-    // Backwards compatability to not break existing URls.
+    // Backwards compatibility to not break existing URLs.
     // Especially important for published URLs.
     'tested': 'references/tested',
     'tested/json': 'references/tested/json',

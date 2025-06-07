@@ -51,7 +51,7 @@ Deze oplossingen kan je ook op andere manieren bereiken:
 * Een overzicht van de oplossingen voor een **specifieke oefening** vind je door op de cursuspagina op het pijltje rechts van een oefening te klikken.
 * Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `Oplossingen` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
-In het oplossingenoverzicht vindt je rechts van de filterbalk een knop met 3 puntjes. In het menu vindt je enkele acties en filter:
+In het oplossingenoverzicht vind je rechts van de filterbalk een knop met 3 puntjes. In het menu vind je enkele acties en filter:
 
 * `Meest recente correcte oplossing per gebruiker`: Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
 

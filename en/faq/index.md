@@ -23,7 +23,7 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How do I create new exercises?](./activities/#how-do-i-create-new-exercises)
 
 ## Featured courses
-- [What is a featured courses?](./featured-courses/#what-is-a-featured-course)
+- [What is a featured course?](./featured-courses/#what-is-a-featured-course)
 - [I made a course, how can I get it featured?](./featured-courses/#i-made-a-course-how-can-i-get-it-featured)
 - [How can I use a featured course?](./featured-courses/#how-can-i-use-a-featured-course)
 - [Which featured courses are available?](./featured-courses/#which-featured-courses-are-available)

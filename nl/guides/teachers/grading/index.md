@@ -18,7 +18,7 @@ Rechts onderaan de reeks vind je een knop om een nieuwe evaluatie voor die reeks
 
 ## Je evaluatie configureren
 
-Voor je kan beginnen met verbeteren moet je eerst de evaluatie configureren. Je moet bijvoorbeeld selecteren welke studenten je wil opnemen en of je een puntenverdeling per oefening wil instellen. Bij het aanmaken wordt je door de verschillende stappen gegidst.
+Voor je kan beginnen met verbeteren moet je eerst de evaluatie configureren. Je moet bijvoorbeeld selecteren welke studenten je wil opnemen en of je een puntenverdeling per oefening wil instellen. Bij het aanmaken word je door de verschillende stappen gegidst.
 
 ### Een deadline kiezen
 

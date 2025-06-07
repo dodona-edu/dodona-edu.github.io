@@ -36,4 +36,4 @@ Dodona automatically gets your name and email from the login provider (e.g. Smar
 
 ## I get a warning that my time zone is wrong, what should I do?
 
-All deadlines on Dodona are displayed in your local time. To do this, Dodona needs to associate a time zone with your account. If we detect that the timezone of your browser is different from the timezone of your account, we will show a warning. You can change your timezone in your [Account Settings] (https://dodona.ugent.be/en/profile).
+All deadlines on Dodona are displayed in your local time. To do this, Dodona needs to associate a time zone with your account. If we detect that the timezone of your browser is different from the timezone of your account, we will show a warning. You can change your timezone in your [Account Settings](https://dodona.ugent.be/en/profile).
