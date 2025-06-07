@@ -37,7 +37,7 @@ If everything went well, this window should now be empty.
 
 ## 6. Testing the Exercise
 
-The exercise you just created can be found in [your exercise repository](https://dodona.be/nl/repositories/) on Dodona.
+The exercise you just created can be found in [your exercise repository](https://dodona.be/en/repositories/) on Dodona.
 Your new exercise is now available as a _concept_ on Dodona.
 
 Before you can publish an exercise (removing it from concept status), Dodona checks whether three conditions are met:

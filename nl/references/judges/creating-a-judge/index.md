@@ -106,7 +106,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - `permission`, a string specifying the visibility of this message. The permission can be any of
     - `"student"`, which makes the message visible for everyone;
     - `"staff"`, which makes the message visible only for staff members (e.g. for judge debug output);
-    - `"zeus"`, which make is visible only for almighty Zeus (e.g. for application debug output);
+    - `"zeus"`, which makes it visible only for almighty Zeus (e.g. for application debug output);
 
 - A `Status` string indicates the status of the submission. They can be separated in two categories
   - Available for output by the judge:

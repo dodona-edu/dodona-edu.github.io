@@ -16,5 +16,5 @@ At the moment, Dodona supports more than 20 programming languages, including Pyt
 
 Depending on your role, we have a specific guide for you:
 
-- [Getting started for students](/nl/guides/students/getting-started)
-- [Getting started for teachers](/nl/guides/teachers/getting-started)
+- [Getting started for students](/en/guides/students/getting-started)
+- [Getting started for teachers](/en/guides/teachers/getting-started)

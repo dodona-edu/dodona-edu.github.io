@@ -53,7 +53,7 @@ Nadat je een reeks hebt aangemaakt, kan je oefeningen en leesactiviteiten toevoe
 
 ![oefening-toevoegen](./oefening-toevoegen.png)
 
-Bij het selecteren van oefeningen kun je meer info over een oefening bekijken door naar de infopagina te gaan. Hier vindt je voorbeeldoplossingen, beschikbare talen, instellingen, extra uitleg en contactgegevens van de auteur.
+Bij het selecteren van oefeningen kun je meer info over een oefening bekijken door naar de infopagina te gaan. Hier vind je voorbeeldoplossingen, beschikbare talen, instellingen, extra uitleg en contactgegevens van de auteur.
 
 ![oefening-infopagina](./oefening-infopagina.png)
 

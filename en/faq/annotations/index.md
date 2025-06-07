@@ -59,7 +59,7 @@ You will also see a notification in the top navigation bar of your course. Click
 
 ![img.png](./course_question_list.png)
 
-If you want to see al open question across all your courses, you can go to the `Questions` page in the navigation sidebar of Dodona.
+If you want to see all open questions across all your courses, you can go to the `Questions` page in the navigation sidebar of Dodona.
 
 ![img.png](./questions_index_page.png)
 
@@ -110,7 +110,7 @@ Saved comments are scoped by course and by exercise by default. This way we are 
 If you want to reuse a comment across your whole course, or even across multiple courses, you can edit the saved comment and remove the course and/or exercise limitations. This way the comment will be suggested in all exercises of all your courses.
 ![edit_saved_comment.png](edit_saved_comment.png)
 
-To edit a saved comment, click on the saved comment icon on an annotation wich reuses the comment. This will open the saved comment and clicking the pencil icon will allow you to edit the comment.
+To edit a saved comment, click on the saved comment icon on an annotation which reuses the comment. This will open the saved comment and clicking the pencil icon will allow you to edit the comment.
 ![saved_comment_link.png](saved_comment_link.png)
 
 You can find an overview of all your saved comments for a certain exercise by clicking the link underneath the search field. Or by clicking on 'saved comments' in the sidebar menu.

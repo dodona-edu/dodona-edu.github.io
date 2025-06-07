@@ -58,7 +58,7 @@ De normale werking van de judge bestaat per geüploade testcase uit een aantal s
 - Per blok wordt uitvoer gegenereerd aan de hand van de ingediende code en de invoer uit het blok.
 - De verwachte en gegenereerde uitvoer per blok worden met elkaar vergeleken.
 
-Als er fouten (of runtime-errors/time limit exceeded) tegengekomen worden stopt de judge daar en wordt feedback teruggegeven (in de vorm van een tabel met aangeduide verschillen tussen verwachte en gegenereerde uitvoer). Als daarentegen alle blokken correct waren, wordt ook nog eens voor de volledige input gekeken of de gegeneerde output overeenkomt met de verwachte uitvoer en wordt daarna feedback teruggegeven over deze laatste vergelijking.
+Als er fouten (of runtime-errors/time limit exceeded) tegengekomen worden stopt de judge daar en wordt feedback teruggegeven (in de vorm van een tabel met aangeduide verschillen tussen verwachte en gegenereerde uitvoer). Als daarentegen alle blokken correct waren, wordt ook nog eens voor de volledige input gekeken of de gegenereerde output overeenkomt met de verwachte uitvoer en wordt daarna feedback teruggegeven over deze laatste vergelijking.
 
 De default werking van de judge kan veranderd worden aan de hand van een aantal parameters. Deze moeten onderaan toegevoegd worden aan het bestand met verwachte uitvoer na één enkele regel die enkel bestaat uit koppeltekens (minstens 3).
 
@@ -225,7 +225,7 @@ Standaard zal de doctest judge enkel returnwaarden vergelijken. Met de parameter
 >>> # Het volgende is correct:
 >>> my_print(5) #doctest: +STDOUT
 5
->>> # Als we de 'STDOUT' optievlag toevoegen zal er gecontroleerd worden dat None terugegeven worden.
+>>> # Als we de 'STDOUT' optievlag toevoegen zal er gecontroleerd worden dat None teruggegeven worden.
 >>> # Als we zowel de prints als de returnwaarde willen voegen we ze beide expliciet toe:
 >>> my_print(5) #doctest: +STDOUT, +RETURN
 5
