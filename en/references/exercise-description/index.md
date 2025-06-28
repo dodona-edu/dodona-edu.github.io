@@ -127,6 +127,8 @@ A caption set using the `alt` attribute:
 <img src="image.jpg" alt="image description that will also be used as lightbox caption" />
 ```
 
+If you are using `figure` tags for your images, captions set using `figcaption` will be hidden automatically. If you want to show them, add the `show-caption` class to the containing `figure`.
+
 ##### Markdown
 
 A caption set using the `data-caption` attribute using Markdown:

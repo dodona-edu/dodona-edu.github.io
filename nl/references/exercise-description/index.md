@@ -126,6 +126,8 @@ Een onderschrift dat ingesteld wordt met het `alt` attribuut.
 <img src="image.jpg" alt="beschrijving van de afbeelding dat ook zal gebruikt worden als onderschrift in de lightbox." />
 ```
 
+Als je `figure` tags gebruikt voor afbeeldingen, dan zullen onderschriften die met een `figcaption` werden ingesteld automatisch verborgen worden. Als je ze toch wil weergeven, voeg dan de `show-caption` klasse toe aan het bovenliggende `figure` element.
+
 ##### Markdown
 
 Een onderschrift dat ingesteld wordt met het `data-caption` attribuut in Markdown.
