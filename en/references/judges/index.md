@@ -20,6 +20,12 @@ C is a judge that uses the GTester framework to run tests on C exercises.\
 **Get started** [Documentation](https://github.com/mvdcamme/C-Judge), [examples](https://github.com/mvdcamme/C-Judge/tree/master/example_exercises) \
 **Created by:** [Maarten Vandercammen](mailto:mvdcamme@vub.ac.be)
 
+## Docker
+Docker is a judge that uses dodona-containerfile-evaluator, Hadolint, and Kaniko to evaluate Dockerfile exercises.
+**Programming languages**: Dockerfile
+**Get started** [Git repo](https://github.com/dodona-edu/judge-docker), [examples](https://github.com/Bond-009/dodona-docker-exercises) \
+**Created by:** [Lode Willems](mailto:bits@vib.be)
+
 ## Haskell
 Haskell is a judge that uses HUnit to test Haskell exercises. \
 **Programming languages:** Haskell\
