@@ -60,7 +60,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
   },
   "evaluation": {
     "handler": "python",
-    "image": "dodona/dodona-python",
+    "image": "dodona-python",
     "time_limit": 10,
     "memory_limit": 10000000,
     "network_enabled": true
