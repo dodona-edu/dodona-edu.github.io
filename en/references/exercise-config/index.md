@@ -60,7 +60,7 @@ The structure for a reading activity is identical to that of an exercise. There 
   },
   "evaluation": {
     "handler": "python",
-    "image": "dodona/dodona-python",
+    "image": "dodona-python",
     "time_limit": 10,
     "memory_limit": 10000000,
     "network_enabled": true
