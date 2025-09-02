@@ -51,9 +51,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Teacher`: the name or names of the instructors of the course.
 
-* `Academic Year`: the academic year in which the course is offered. Use the format `yyyy-yyyy` to ensure that the course is correctly sorted on the homepage and in the course overview.
-
-* `Institution`: selecting an educational institution can help users find your course and can also be used to limit the visibility and registrations for this course.
+* `Academic Year`: the academic year in which the course is offered.
 
 * `Language`: the language in which the course is given. This is optional and only used to help users find courses in their preferred language.
 
@@ -64,8 +62,6 @@ Finally, you need to set a few things about the course itself, such as the name 
 ### Access Rights
 
 * `Who can see this course`: this determines whether non-registered users can see the course. The following values can be set for this property:
-
-  * `Everyone`: the course is **visible** to all users in the list of available courses. They can also navigate to the course page, view all visible content, and possibly register for the course there.
 
   * `Only users of the configured institution`: the course is only accessible to users of the set educational institution (see `Educational Institution` above) and a direct link (see next item).
 
@@ -78,10 +74,6 @@ Finally, you need to set a few things about the course itself, such as the name 
   The access link has the advantage that users do not have to search for the course themselves in the course overview and that they immediately receive a request to register for the course if they have not already done so. As a course administrator, you are responsible for sharing the registration link only with non-registered users who are allowed to register for a hidden course.
 
 * `Who can register for this course`: this property determines whether and how users can register for the course. The following values can be set for this property:
-
-  * `Everyone`: users can freely register for the course without explicit approval from a course administrator. The course is therefore **open** to everyone.
-
-  * `Everyone that belongs to an institution`: users can register for the course if they belong to an educational institution. The registrations are therefore **closed** to users who have logged in using a personal account and thus do not belong to an educational institution.
 
   * `Only users of the configured institution`: only users of your own educational institution can register for this course.
 
