@@ -20,7 +20,7 @@ Om de eigenschappen van een bestaande cursus te bewerken, navigeer je naar de cu
 
 ![cursus bewerken knop](./staff.course_edit_button.png)
 
-Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, academiejaar, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../creating-a-course/#cursuseigenschappen).
+Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, zichtbaarheid en registratieprocedure kan aanpassen. Voor meer details over de specifieke eigenschappen kan je terecht op [deze pagina](../creating-a-course/#cursuseigenschappen).
 
 Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen op te slaan. Alternatief kan je ook op de `Aanpassen` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
 

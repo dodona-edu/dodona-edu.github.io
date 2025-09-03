@@ -19,7 +19,7 @@ To edit the properties of an existing course, navigate to the course page and cl
 
 ![edit course button](./staff.course_edit_button.png)
 
-You will be taken to a page where you can adjust the name, teacher, description, academic year, language, programming language, visibility, and registration procedure. For more details about the specific properties, you can go to [this page](../creating-a-course/#course-properties).
+You will be taken to a page where you can adjust the name, teacher, description, language, programming language, visibility, and registration procedure. For more details about the specific properties, you can go to [this page](../creating-a-course/#course-properties).
 
 After making changes, click the finish button in the upper right corner of the panel to save the new course properties. Alternatively, you can also click `Update` at the bottom of the panel. Then you will automatically navigate back to the course page where the new course properties will immediately take effect.
 
