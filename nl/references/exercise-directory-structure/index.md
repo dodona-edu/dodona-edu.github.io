@@ -25,11 +25,16 @@ Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-
 Binnenin de `description`-map kan je volgende mappen specifiëren:
 - **Een optionele `media`-map**: deze map bevat statische bestanden zoals afbeeldingen die gebruikt worden in de oefeningbeschrijving.
 - **Een optionele `boilerplate`-map**: deze map bevat de bestanden `boilerplate.en`, `boilerplate.nl`, en/of `boilerplate`. De inhoud van deze bestanden worden automatisch ingeladen in het inzendingstekstveld van de gebruikers. Je kan deze bestanden gebruiken om startcode of structuur te voorzien voor de studenten.
+- **Een optionele `preparation`-map**: deze map kan je gebruiken om bestanden in op te slaan die je gebruikt hebt bij het maken van je oefening.
 - **Een `evaluation`-map**: de inhoud van deze map wordt beschikbaar gesteld voor de judge en kan bijvoorbeeld bestanden met de testcode bevatten. Kijk in de documentatie van de judge die je gebruikt om te zien welke bestanden worden verwacht. Je kan links naar de documentatie voor elke judge [hier](/nl/references/judges) vinden.
 - **Een optionele `workdir`-map**: de inhoud van deze map wordt beschikbaar gesteld tijdens het uitvoeren van de judge en kan bijvoorbeeld databestanden bevatten die nodig zijn tijdens het uitvoeren van de tests.
 - **Een optionele `solution`-map**: bestanden in deze map zullen getoond worden op de oefening-informatiepagina als voorbeeldoplossing. Meerdere voorbeeldoplossingen zijn mogelijk, maar bestanden met een naam beginnend met *solution* zullen vooraan staan.
 
 Dodona negeert elk ander bestand of elke andere map. Je kan dus vrijuit andere bestanden (bijvoorbeeld met oplossingen voor je oefeningen) aanmaken of een persoonlijke oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen in andere oefeningenmappen plaatsen.
+
+::: warning Preparation map
+Om technische reden zal elke map genaamd preparation waar dan ook in je repository niet beschikbaar zijn voor Dodona.
+:::
 
 ## Voorbeeld van de structuur van een geldige oefeningmap
 
