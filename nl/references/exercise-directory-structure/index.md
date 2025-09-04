@@ -33,7 +33,7 @@ Binnenin de `description`-map kan je volgende mappen specifiëren:
 Dodona negeert elk ander bestand of elke andere map. Je kan dus vrijuit andere bestanden (bijvoorbeeld met oplossingen voor je oefeningen) aanmaken of een persoonlijke oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen in andere oefeningenmappen plaatsen.
 
 ::: warning Preparation map
-Om technische reden zal elke map genaamd preparation waar dan ook in je repository niet beschikbaar zijn voor Dodona.
+Mappen met de naam preparation, inclusief de inhoud, worden door Dodona genegeerd en kunnen dus niet gebruikt worden in oefeningomschrijvingen en testen.
 :::
 
 ## Voorbeeld van de structuur van een geldige oefeningmap

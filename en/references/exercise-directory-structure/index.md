@@ -32,7 +32,7 @@ Inside the `description` directory, you can specify the following directories:
 Dodona ignores every other file and directory. You can thus freely create additional files (for example, containing the solutions to your exercises) or create a personal exercise hierarchy. The only thing that isn't allowed is placing exercise directories inside other exercise directories.
 
 ::: warning Preparation folder
-For technical reasons, any folder named preparation anywhere in your repository will not be available for Dodona.
+Any folder named preparation, including its contents, will be ignored by Dodona and cannot be used in exercise descriptions or tests.
 :::
 
 
