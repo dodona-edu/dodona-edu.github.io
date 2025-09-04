@@ -42,6 +42,7 @@ Take a look at the [example exercises repository](https://github.com/dodona-edu/
 |   |   |   +-- boilerplate        #
 |   |   |       +-- boilerplate    # Default (here Dutch?) boilerplate code
 |   |   |       +-- boilerplate.en # English boilerplate code
+|   |   +-- preparation            # an optional directory you can use to store files you used to create the exercises
 |   |   +-- workdir                # current working dir for student code
 |   |       +-- intlines.txt       # a file available to the student
 |   :

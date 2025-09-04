@@ -24,11 +24,17 @@ Take a look at the [example exercises repository](https://github.com/dodona-edu/
 Inside the `description` directory, you can specify the following directories:
 - **An optional `media` directory**: this directory contains static files such as images used in the exercise description.
 - **An optional `boilerplate` directory**: this directory contains the files `boilerplate.en`, `boilerplate.nl`, and/or `boilerplate`. The contents of these files are loaded automatically in the submission text area of the users. You can use this to provide some starting code or structure to your students.
+- **An optional `preparation` directory**: this directory can be used to store files you used to create your exercise.
 - **An `evaluation` directory**: the content of this directory is made available to the judge and can, for example, contain files containing the test code. Look at the documentation of the judge you are using to see what files are expected. You can find links to the documentation for each judge [here](/en/references/judges).
 - **An optional `workdir` directory**: The content of this directory is made available when running the judge and can, for example, contain data files needed during execution.
 - **An optional `solution` directory**: Files in this directory will be shown on the exercise info page as sample solutions. Multiple sample solutions are possible, but files with a name starting with *solution* will be sorted first.
 
 Dodona ignores every other file and directory. You can thus freely create additional files (for example, containing the solutions to your exercises) or create a personal exercise hierarchy. The only thing that isn't allowed is placing exercise directories inside other exercise directories.
+
+::: warning Preparation folder
+Any folder named preparation, including its contents, will be ignored by Dodona and cannot be used in exercise descriptions or tests.
+:::
+
 
 ## Example of a valid exercise directory structure
 

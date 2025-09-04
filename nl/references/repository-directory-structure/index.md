@@ -42,6 +42,7 @@ Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-
 |   |   |   +-- boilerplate        #
 |   |   |       +-- boilerplate    # Standaard (hier Nederlands?) boilerplate code
 |   |   |       +-- boilerplate.en # Engelse boilerplate code
+|   |   +-- preparation            # Een (optionele) map die je kan gebruiken om bestanden in op te slaan die je hebt gebruikt tijdens het maken van de oefening
 |   |   `-- workdir                # Huidige werkmap voor de code van de student
 |   |       +-- intlines.txt       # Een bestand beschikbaar voor de student
 |   :
