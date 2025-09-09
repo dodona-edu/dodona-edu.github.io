@@ -67,7 +67,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
   * `Only registered users`: only registered users can see the course in the courses overview. There is an icon to indicate to course members that other users cannot see the course on the course page itself. Only registered users can navigate to this page. Other users can only register for the course if they use a direct registration link.
 
-* `Secret link`: when creating a course, a secret link is automatically generated as an access mechanism for hidden courses. With this link, users who normally can't see your course can get access to it and register themselves. This can be used to give user from outside your institution access to your institution-only course. You can find the secret link on the course edit page.
+* `Secret link`: when creating a course, a secret link is automatically generated as an access mechanism for hidden courses. With this link, users who normally can't see your course can get access to it and register themselves. This can be used to give users from outside your institution access to your institution-only course. You can find the secret link on the course edit page.
 
   ![access link](./staff.course_hidden_registration_link.png)
 
