@@ -61,19 +61,19 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 ### Access Rights
 
-* `Who can see this course`: this determines whether non-registered users can see the course. The following values can be set for this property:
+* `Who can see this course`: this setting determines whether non-registered users can see the course. The following values can be set:
 
   * `Only users of the configured institution`: the course is only accessible to users of the set educational institution (see `Educational Institution` above) and a direct link (see next item).
 
   * `Only registered users`: only registered users can see the course in the courses overview. There is an icon to indicate to course members that other users cannot see the course on the course page itself. Only registered users can navigate to this page. Other users can only register for the course if they use a direct registration link.
 
-* `Secret link`: when creating a course, a secret link is automatically generated as a shielding mechanism for hidden courses. Without this link, non-registered users cannot see the course page of a hidden course and therefore cannot register there. You can find this secret link on the course edit page. Click the copy button next to the access link to copy the access link to the clipboard.
+* `Secret link`: when creating a course, a secret link is automatically generated as an access mechanism for hidden courses. With this link, users who normally can't see your course can get access to it and register themselves. This can be used to give user from outside your institution access to your institution-only course. You can find the secret link on the course edit page.
 
   ![access link](./staff.course_hidden_registration_link.png)
 
   The access link has the advantage that users do not have to search for the course themselves in the course overview and that they immediately receive a request to register for the course if they have not already done so. As a course administrator, you are responsible for sharing the registration link only with non-registered users who are allowed to register for a hidden course.
 
-* `How do you want to approve new registrations`: this property determines how users can register for the course. The following values can be set for this property:
+* `How do you want to approve new registrations`: this setting determines how users can register for the course. The following values can be set:
 
   * `Open`: Everyone who can see the course can register for it (this includes anyone accessing the course via the secret link).
   
