@@ -67,19 +67,19 @@ Finally, you need to set a few things about the course itself, such as the name 
 
   * `Only registered users`: only registered users can see the course in the courses overview. There is an icon to indicate to course members that other users cannot see the course on the course page itself. Only registered users can navigate to this page. Other users can only register for the course if they use a direct registration link.
 
-* `Access Link`: when creating a course, an access link is automatically generated as a shielding mechanism for hidden courses. Without this link, non-registered users cannot see the course page of a hidden course and therefore cannot register there. You can find this access link on the course edit page. Click the copy button next to the access link to copy the access link to the clipboard.
+* `Secret link`: when creating a course, a secret link is automatically generated as a shielding mechanism for hidden courses. Without this link, non-registered users cannot see the course page of a hidden course and therefore cannot register there. You can find this secret link on the course edit page. Click the copy button next to the access link to copy the access link to the clipboard.
 
   ![access link](./staff.course_hidden_registration_link.png)
 
   The access link has the advantage that users do not have to search for the course themselves in the course overview and that they immediately receive a request to register for the course if they have not already done so. As a course administrator, you are responsible for sharing the registration link only with non-registered users who are allowed to register for a hidden course.
 
-* `Who can register for this course`: this property determines whether and how users can register for the course. The following values can be set for this property:
+* `How do you want to approve new registrations`: this property determines how users can register for the course. The following values can be set for this property:
 
-  * `Only users of the configured institution`: only users of your own educational institution can register for this course.
+  * `Open`: Everyone who can see the course can register for it (this includes anyone accessing the course via the secret link).
+  
+  * `Moderated`: Everyone who can see the course can submit a registration request, but they are only fully registered once approved by a course administrator.
 
-  * `Nobody`: users cannot register themselves for the course. The registrations are therefore **closed**.
-
-* By default, the approval of the registration is **automatic**. There is also an option to make the registration process **moderated**. Users can then submit a registration request for the course but are only registered once a course administrator has approved their registration request.
+  * `Closed`: users cannot register themselves for the course.
 
   ::: tip Important
 
