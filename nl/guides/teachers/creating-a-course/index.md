@@ -59,25 +59,25 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 ### Toegangsrechten
 
 
-* `Voor wie is deze cursus zichtbaar`: dit bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
+* `Voor wie is deze cursus zichtbaar`: deze instelling bepaalt of niet-geregistreerde gebruikers de cursus kunnen zien. De volgende waarden kunnen ingesteld worden:
 
   * `Enkel gebruikers van de ingestelde onderwijsinstelling`: de cursus is enkel toegankelijk voor gebruikers van de ingestelde onderwijsinstelling (zie `Onderwijsinstelling` hierboven) en een directe link (zie volgend item).
 
   * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het publieke cursusoverzicht. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken.
 
-* `Toegangslink`: bij het aanmaken van een cursus wordt automatisch een toegangslink gegenereerd als afschermingsmechanisme van verborgen cursussen. Zonder deze link kunnen niet-geregistreerde gebruikers de cursuspagina van een verborgen cursus niet zien en zich daar dus ook niet registreren. Je vindt deze toegangslink op de cursus-bewerkenpagina. Klik op de kopieerknop naast de toegangslink om de toegangslink naar het klembord te kopiëren.
+* `Geheime link`: bij het aanmaken van een cursus wordt automatisch een geheime gegenereerd als toegangsmechanisme voor verborgen cursussen. Met deze link kunnen gebruikers die de cursus normaal niet kunnen zien toegang krijgen tot je cursus en zich registreren. Dit kan gebruikt worden om gebruikers van buiten je onderwijsinstelling toegang te geven tot je cursus als die enkel zichtbaar staat voor gebruikers van je onderwijsinstelling. Je vindt deze geheime link op de cursus-bewerkenpagina.
 
   ![toegangslink](./staff.course_hidden_registration_link.png)
 
-  De toegangslink heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de registratielink enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.
+  De geheime link heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de geheime link enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.
 
-* `Wie kan zich registreren voor deze cursus`: deze eigenschap bepaalt of en hoe gebruikers zich voor de cursus kunnen registreren. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
+* `Hoe wil je nieuwe registraties goedkeuren`: deze instelling bepaalt hoe gebruikers zich voor de cursus kunnen registreren. Volgende waarden kunnen ingesteld worden:
 
-  * `Enkel gebruikers van {jouw_onderwijsinstelling}`: enkel gebruikers van je eigen onderwijsinstelling kunnen zich voor deze cursus registreren.
+  * `Open`: Iedereen die de cursus kan zien kan zich registreren (inclusief iedereen die toegang heeft tot de cursus via de geheime link).
+  
+  * `Gemodereerd`: Iedereen die de cursus kan zien kan een registratieverzoek indienen, maar ze zijn maar volledig geregistreerd wanneer ze goedgekeurd worden door een cursusbeheerder.
 
-  * `Niemand`: gebruikers kunnen zich niet zelf voor de cursus registreren. De registraties zijn dus **gesloten**.
-
-* Standaard verloopt de goedkeuring van de registratie **automatisch**. Er is ook een optie om het registratieproces **gemodereerd** te laten verlopen. Gebruikers kunnen dan een registratieverzoek indienen voor de cursus maar zijn pas geregistreerd als een cursusbeheerder hun registratieverzoek heeft goedgekeurd.
+  * `Gesloten`: gebruikers kunnen zich niet zelf voor de cursus registreren.
 
   ::: tip Belangrijk
 
