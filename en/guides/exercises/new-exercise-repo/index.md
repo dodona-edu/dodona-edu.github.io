@@ -24,8 +24,11 @@ In the creation form, choose a (preferably unique) name for your repository on D
 
 Before clicking on the add button, make sure the Dodona server has both read and write access to your exercise repository. We need this access to be able to edit the exercises through the Dodona web-interface.
 
-On github.com, the easiest way to do this is by adding the user [dodona-server](https://github.com/dodona-server) to your repository. From the moment we accept this invitation, you can get started. On github.ugent.be, add [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona). On gitlab.com, add [dodona-server](https://gitlab.com/dodona-server). If the repository is hosted on a self-hosted GitLab server, you will have to create a new user for Dodona on the GitLab instance, add our [ssh public key](/dodona.pub) to that user, and add that user as collaborator to the repository (with write access).
-
+- On github.com, invite the user [dodona-server](https://github.com/dodona-server) to your repository as a collaborator. Once the invitation is accepted, you can get started. The acceptance is automated, but can take up to half an hour. Is it taking longer? [Contact Team Dodona](https://dodona.be/en/contact).
+- On github.ugent.be, add [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona).
+- On gitlab.com, add [dodona-server](https://gitlab.com/dodona-server) as a member to your project.
+- For self-hosted GitLab servers, create a new user for Dodona, add our [SSH public key](/dodona.pub) to that user, and grant write access to your repository.
+ 
 ![github add collaborator](./github-add-collab.png)
 
 You can now click the add-button on Dodona to add your repository.
