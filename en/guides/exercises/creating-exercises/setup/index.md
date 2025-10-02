@@ -71,9 +71,9 @@ The easiest way to do this (on github.com) is to give the user [dodona-server](h
 GitHub will then send an invitation that the Dodona team needs to accept.
 Once the invitation is accepted, you can proceed to the next steps.
 
-::: warning Manual Approval
-A member of the Dodona team must manually accept the invitation on GitHub.
-This may take some time, so please be patient.
+::: warning Note
+The acceptance process is automated, but it can take up to half an hour before your invitation is accepted.
+If it's taking longer and you still don't see _dodona-server_ in the list of collaborators, please [contact the Dodona team](https://dodona.be/en/contact).
 :::
 
 ### Adding the Repository to Dodona

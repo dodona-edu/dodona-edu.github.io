@@ -71,9 +71,9 @@ De makkelijkste manier om dit te doen (op github.com) is de gebruiker [dodona-se
 GitHub zal dan een uitnodiging sturen die Team Dodona moet aanvaarden.
 Eens de uitnodiging aanvaard is, kan je verder gaan met de volgende stappen.
 
-::: warning Manueel werk
-Een lid van Team Dodona moet de uitnodiging van GitHub manueel aanvaarden.
-Daardoor kan het soms even duren eer dat gebeurt.
+::: warning Opgepast
+De uitnodiging van GitHub wordt automatisch door Team Dodona aanvaard. Dit kan tot een half uur duren.
+Zie je de gebruiker _dodona-server_ na een half uur nog steeds niet in de lijst van _Collaborators_ staan? [Neem dan contact op met Team Dodona](https://dodona.be/nl/contact).
 :::
 
 ### Repository toevoegen aan Dodona

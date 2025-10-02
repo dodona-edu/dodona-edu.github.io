@@ -22,10 +22,13 @@ In het formulier om de repository toe te voegen kies je een unieke naam voor je 
 
 ![github clone url](./github-clone-url.png)
 
-Voordat je op de toevoeg-knop klikt, moet je er eerst voor zorgen dat de Dodona server zowel lees- als schrijfrechten heeft op je repository met oefeningen. We hebben deze schrijftoegang nodig om eenvoudig de oefeningen kunnen bewerken via de webinterface.
+Voordat je op de toevoeg-knop klikt, moet je er eerst voor zorgen dat de Dodona server zowel lees- als schrijfrechten heeft op je repository met oefeningen. We hebben deze schrijftoegang nodig om eenvoudig de oefeningen te kunnen bewerken via de webinterface.
 
-Op github.com is de eenvoudigste manier om de gebruiker [dodona-server](https://github.com/dodona-server) aan je repository toe te voegen. Van zodra wij deze uitnodiging accepteren, kan je van start gaan. Op github.ugent.be voeg je op dezelfde wijze de gebruiker [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe. Op gitlab.com kan je [dodona-server](https://gitlab.com/dodona-server) toevoegen. Als je je repository op een eigen GitLab server host, dan zal je zelf een nieuwe gebruiker voor Dodona moeten aanmaken. Je kan onze [publieke ssh sleutel](/dodona.pub) hiervoor gebruiken.
-
+- Op github.com voeg je eenvoudig de gebruiker [dodona-server](https://github.com/dodona-server) toe aan je repository. Zodra wij de uitnodiging accepteren (binnen het half uur), kan je aan de slag. De acceptatie gebeurt automatisch, maar kan tot een half uur duren. Duurt het toch langer, [neem dan contact op met Team Dodona](https://dodona.be/nl/contact).
+- Op github.ugent.be voeg je [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe.
+- Op gitlab.com gebruik je [dodona-server](https://gitlab.com/dodona-server).
+- Host je op een eigen GitLab server, maak dan zelf een gebruiker voor Dodona aan en gebruik onze [publieke ssh sleutel](/dodona.pub).
+ 
 ![github gebruiker toevoegen](./github-add-collab.png)
 
 Je kan op de Dodona website het toevoegen van de repository nu finaliseren.
