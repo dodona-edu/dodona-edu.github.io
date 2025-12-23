@@ -238,7 +238,7 @@ Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *cla
 
 ## Wiskundige formules
 
-Dodona ondersteunt de LaTeX syntax om wiskundige formules te tonen met behulp van het [MathJax project](https://www.mathjax.org).
+Dodona ondersteunt de LaTeX syntax om wiskundige formules te tonen met behulp van [KaTeX](https://katex.org/).
 
 ### Inline formules
 Om wiskundige formules en symbolen weer te geven op dezelfde regel als andere tekst (*inline*), volstaat het om voor en na de formule een dubbel dollarteken te plaatsen. Deze syntax is dezelfde voor zowel Markdown als HTML.
@@ -256,13 +256,15 @@ Omring de formule met `\[` en `\]` in HTML.
 De oplossing kan gevonden worden met de volgende formule: \[a^2 = b^2 + c^2\]
 ```
 
-In Markdown kan je de dubbele dollar syntax gebruiken waarbij je alles op een nieuwe regel plaatst.
+In Markdown kan je de dubbele dollar syntax gebruiken waarbij je alles op een nieuwe regel plaatst en een nieuwe regel voor en na de `$$` laat.
 
 ```html
 De oplossing kan gevonden worden met de volgende formule:
+
 $$
 a^2 = b^2 + c^2
 $$
+
 ```
 
 ---
