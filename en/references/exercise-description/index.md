@@ -253,7 +253,7 @@ When using HTML, wrap the formula with `\[` and `\]`:
 The solution can be found with the following formula: \[a^2 = b^2 + c^2\]
 ```
 
-When using Markdown, use the double dollar syntax but put everything a new line and enter a newline before and after the `$$`:
+When using Markdown, use the double dollar syntax but put everything on a new line and enter a newline before and after the `$$`:
 
 ```html
 The solution can be found with the following formula:
