@@ -1,112 +1,112 @@
 ---
-title: "[nl] Python judge"
+title: Python judge
 description: "Python judge"
 order: 5
 ---
-::: warning Sorry
-For now, this page is only available in Dutch. Sorry!
-:::
 
 # Python judge
 
-::: warning
-We do not recommend this judge for new exercises.
+::: warning Note
+We do not recommend creating new exercises for this judge.
 This judge is no longer actively developed.
 
 Use [TESTed](/en/guides/exercises/) to create new Python exercises instead.
 :::
 
+All Python judges are written in Python and share a common base class `Judge`. The base class for master judges is called `MasterJudge`. The base class for interactive judges is called `TestcaseJudge`. Two generic interactive judges have already been implemented:
 
-Alle Python judges zijn in Python geschreven en delen een gemeenschappelijke basisklasse `Judge`. De basisklasse voor master judges heet `MasterJudge`. De basisklasse voor interactieve judges heet `TestcaseJudge`. Twee generieke interactieve judges zijn al geïmplementeerd:
+-   The [**`OutputJudge`**](#output-judge) class implements a judge that evaluates the submitted source code based on the output written to `stdout` based on input read via `stdin`. This judge is therefore suitable for exercises that ask for input via `input()` and print the results via `print()`.
+-   The [**`DoctestJudge`**](#doctest-judge) class implements a judge that evaluates the submitted source code by running a series of *unit tests* on it, described using an extended version of the Python `doctest` module format. This judge is suitable for testing Python **functions**.
 
--   The **`OutputJudge`** klasse implementeert een judge die de ingediende broncode evalueert gebaseerd op de output die naar `stdout` wordt geschreven gebaseerd op input die via `stdin` wordt ingelezen. Deze judge is dus geschikt voor oefeningen die input vragen via `input()` en de resultaten uitprinten via `print()`.
--   De **`DoctestJudge`** klasse implementeert een judge die de ingediende broncode evalueert door er een serie *unit tests* op uit te voeren die beschreven worden aan de hand van een uitgebreide versie van het format van de Python `doctest` module. Deze judge is geschikt om Python **functies** te testen.
+You must let the Python judge know which of these two options you want to use by setting this in the [`config.json`](/en/references/exercise-config/) file of your exercise. Under `evaluation`, add the key `pythia_judge` with the value `output` or `doctest`, depending on the type of exercise you are creating.
 
-Je moet de Python judge laten weten welk van deze twee mogelijkheden je wil gebruiken door dit in te stellen in het [`config.json`](/en/references/exercise-config/)-bestand van je oefening. Onder `evaluation` voeg je daarvoor de sleutel `pythia_judge` toe met als waarde `output` of `doctest`, afhankelijk van welk type oefening je aan het maken bent.
-
-::: tip Voorbeelden
-Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze judges gebruikt.
+::: tip Examples
+Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.be/en/courses/358/) to find an example of how to use these judges.
 :::
 
-De hiërarchie van de judge klassen die binnen het Python project ontwikkeld
-werden is als volgt:
+The hierarchy of the judge classes developed within the Python project is as follows:
 
     Judge -> MasterJudge
           -> TestcaseJudge -> OutputJudge
                            -> DoctestJudge
 
-## Algemene instellingen
+## General settings
 
-De volgende instellingen kunnen zowel voor de output judge als voor de doctest judge gebruikt worden. Instellingen die specifiek zijn aan een judge zullen hierna apart behandeld worden in [Output judge](#output-judge) en [Doctest judge](#doctest-judge).
+The following settings can be used for both the output judge and the doctest judge. Settings specific to a judge will be discussed separately in [Output judge](#output-judge) and [Doctest judge](#doctest-judge).
 
-- **`time limit`**:   Deze instelling geeft de tijdslimiet aan als een natuurlijk getal in seconden.
+- **`time limit`**:   This setting specifies the time limit as a natural number in seconds.
 
-- **`continue upon wrong answer`**:   Boolean die aangeeft of er moet verdergegaan worden met het uitvoeren van testen wanneer er een fout antwoord gegenereerd wordt. Standaard `true`.
+- **`continue upon wrong answer`**:   Boolean indicating whether to continue running tests when a wrong answer is generated. Default `true`.
 
-- **`continue upon failure`**:   Boolean die aangeeft dat er moet verdergegaan worden met het uitvoeren van testen wanneer een runtime error optreedt.
+- **`continue upon failure`**:   Boolean indicating whether to continue running tests when a runtime error occurs. Default `true`.
 
-- **`tab name`**:   String die de naam aangeeft van de tab in de feedback. Namen van tabs worden ook blootgesteld aan de vertalingen die door de judge worden uitgevoerd maar alle types van names worden los vertaald, wat betekent dat namen van functies, methodes, klassen en sleutelwoordargumenten als tokens gedetecteerd worden.
+- **`tab name`**:   String indicating the name of the tab in the feedback. Tab names are also exposed to translations performed by the judge, but all types of names are translated separately, meaning names of functions, methods, classes, and keyword arguments are detected as tokens.
+
+You can change these default settings at the bottom of a `.out` file, preceded by a line consisting of (at least 3) hyphens. For example:
+
+    ----------------------------------------
+    tab name: Echo
+    continue upon wrong answer: false
+    continue upon failure: false
 
 ## Output judge
 
-De normale werking van de judge bestaat per geüploade testcase uit een aantal stappen:
+The normal operation of the judge consists of a number of steps per uploaded test case:
 
-- Parsen van de invoer en verwachte uitvoer in samenhangende blokken
-- Per blok wordt uitvoer gegenereerd aan de hand van de ingediende code en de invoer uit het blok.
-- De verwachte en gegenereerde uitvoer per blok worden met elkaar vergeleken.
+- Parsing the input and expected output into coherent blocks.
+- For each block, output is generated based on the submitted code and the input from the block.
+- The expected and generated output per block are compared with each other.
 
-Als er fouten (of runtime-errors/time limit exceeded) tegengekomen worden stopt de judge daar en wordt feedback teruggegeven (in de vorm van een tabel met aangeduide verschillen tussen verwachte en gegenereerde uitvoer). Als daarentegen alle blokken correct waren, wordt ook nog eens voor de volledige input gekeken of de gegenereerde output overeenkomt met de verwachte uitvoer en wordt daarna feedback teruggegeven over deze laatste vergelijking.
+If errors (or runtime errors/time limit exceeded) are encountered, the judge stops there and returns feedback (in the form of a table with indicated differences between expected and generated output). If, on the other hand, all blocks were correct, the generated output is also checked against the expected output for the full input, and feedback is then returned about this last comparison.
 
-De default werking van de judge kan veranderd worden aan de hand van een aantal parameters. Deze moeten toegevoegd worden aan het bestand met verwachte uitvoer na één enkele regel die enkel bestaat uit koppeltekens (minstens 3).
+The default operation of the judge can be changed using a number of parameters. These must be added at the bottom of the file with expected output after a single line consisting only of hyphens (at least 3).
 
-### Parameters om de werking van de judge aan te passen
+### Parameters to adjust the judge's operation
 
-- **`python input without prompt`**:   Boolean die aangeeft of de prompt van de ingebouwde functies `input` en `raw_input` naar standaard uitvoer moeten geschreven worden of niet. Standaard `false` (waarbij het prompt dus **wel** naar standaard uitvoer geschreven wordt).
+- **`python input without prompt`**:   Boolean indicating whether the prompt of the built-in functions `input` and `raw_input` should be written to standard output or not. Default `false` (meaning the prompt **is** written to standard output).
 
-- **`block count`**:   String die aangeeft hoeveel blokken input de judge mag verwachten.
+- **`block count`**:   String indicating how many blocks of input the judge can expect.
 
-  - **`one`** (standaard): De input wordt als één blok beschouwd
-  - **`multi`**: De input bestaat uit een aantal blokken na elkaar (waardoor bij bepaalde vragen maar 1 testcase met meerdere testinputs nodig is).
-  - **`first line`**: De eerste regel van de invoer geeft het aantal blokken aan
-  - **`ends with <string>`**: De invoer wordt afgesloten met een regel die gelijk is aan `<string>`. Dus als bijvoorbeeld `ends with STOP` ingesteld wordt moet de invoer afgesloten worden met een regel die enkel `STOP` bevat.
+  - **`one`** (default): The input is considered as one block.
+  - **`multi`**: The input consists of a number of blocks one after the other (meaning for certain questions only 1 test case with multiple test inputs is needed).
+  - **`first line`**: The first line of the input indicates the number of blocks.
+  - **`ends with <string>`**: The input is terminated with a line equal to `<string>`. So if `ends with STOP` is set, the input must be terminated with a line containing only `STOP`.
 
-- **`input block size`**:   String die aangeeft hoe elk blok uit de invoer er uit ziet.
+- **`input block size`**:   String indicating what each block from the input looks like.
 
-  - **`first line`** (standaard): De eerste regel van het blok geeft aan hoeveel regels er daarna nog in het blok komen; deze eerste regel maakt ook deel uit van de invoer die door de ingediende code moet verwerkt worden.
-  - **`ends with <string>`**: Elk blok wordt afgesloten met een regel die gelijk is aan `<string>`. Als er geen string wordt opgegeven dan wordt een lege regel beschouwd als terminator/separator. Als het laatste blok eindigt met `<string>` dan wordt de `<string>` beschouwd als terminator en maakt die deel uit van de eigenlijke invoer die door de ingediende code verwerkt moet worden. In het geval dat het laatste blok niet eindigt met `<string>` wordt `<string>` beschouwd als separator en maakt die geen deel uit van die invoer die door de ingediende code verwerkt moet worden.
-  - **`<integer>`**: Elk blok bestaat uit `<integer>` regels.
+  - **`first line`** (default): The first line of the block indicates how many lines come after it in the block; this first line is also part of the input that must be processed by the submitted code.
+  - **`ends with <string>`**: Each block is terminated with a line equal to `<string>`. If no string is specified, an empty line is considered a terminator/separator. If the last block ends with `<string>`, the `<string>` is considered a terminator and is part of the actual input to be processed by the submitted code. In case the last block does not end with `<string>`, `<string>` is considered a separator and is not part of the input to be processed by the submitted code.
+  - **`<integer>`**: Each block consists of `<integer>` lines.
 
-- **`blockwise execution`**:   Boolean die aangeeft of de output bloksgewijs vergeleken moet worden of niet.
-    Dit is standaard `true` en dan wordt er per blok uitvoer gegenereerd en
-    vergeleken met de verwachte uitvoer. Als `false` ingesteld wordt zal er
-    enkel globaal de gegenereerde en de verwachte output vergeleken worden.
+- **`blockwise execution`**:   Boolean indicating whether the output should be compared block by block or not.
+    This is default `true` and then output is generated per block and compared with the expected output. If set to `false`, only the global generated and expected output will be compared.
 
-### Parameters om de manier van vergelijken te veranderen
+### Parameters to change the comparison method
 
-- **`comparison`**:   String die aangeeft hoe de gegenereerde en de verwachte uitvoer vergeleken moet worden
+- **`comparison`**:   String indicating how the generated and expected output should be compared.
 
-  - **`exact match`**: De twee output moeten exact gelijk zijn.
-  - **`ignore extra whitespace`** (standaard): De verwachte en gegenereerde uitvoer moeten gelijk zijn, maar opeenvolgende witruimtekarakters worden gereduceerd tot één enkel witruimtekarakter.
-  - **`ignore whitespace`**: De verwachte en gegenereerde uitvoer moeten gelijk zijn maar witruimte wordt genegeerd voor de vergelijking.
+  - **`exact match`**: The two outputs must be exactly the same.
+  - **`ignore extra whitespace`** (default): The expected and generated output must be the same, but consecutive whitespace characters are reduced to a single whitespace character.
+  - **`ignore whitespace`**: The expected and generated output must be the same but whitespace is ignored for the comparison.
 
-- **`ignore fp rounding`**:   Bepaalt hoe floating point getallen vergeleken worden.
+- **`ignore fp rounding`**:   Determines how floating point numbers are compared.
 
-  -   `default`: Getallen worden karakter per karakter vergeleken en moeten in alle karakters overeenstemmen.
-  -   `getal <e>`: De getallen $n$ en $m$ zijn gelijk als $|n-m| < 10^e$; met andere woorden als $e = -2$ moeten de twee getallen gelijk zijn tot op twee cijfers na de komma.
+  -   `default`: Numbers are compared character by character and must match in all characters.
+  -   `getal <e>`: The numbers $n$ and $m$ are equal if $|n-m| < 10^e$; in other words, if $e = -2$, the two numbers must be equal up to two digits after the decimal point.
 
-- **`case sensitive`**:   Boolean die aangeeft of er bij de vergelijking van de gegenereerde en de verwachte uitvoer rekening gehouden moet worden met het verschil tussen hoofdletters en kleine letters. Standaard `true`.
+- **`case sensitive`**:   Boolean indicating whether the difference between uppercase and lowercase letters should be taken into account when comparing the generated and expected output. Default `true`.
 
-- **`field order sensitive`**:   Boolean die aangeeft of er bij de vergelijking van de gegenereerde en de verwachte uitvoer rekening gehouden moet worden met de volgorde van de velden op een regel. Standaard `true`.
+- **`field order sensitive`**:   Boolean indicating whether the order of fields on a line should be taken into account when comparing the generated and expected output. Default `true`.
 
-- **`field separator`**:   Veldscheidingsteken dat gebruikt wordt voor de `field order sensitive` instelling. Standaard wordt een opeenvolgende reeks witruimtekarakters als veldscheidingsteken gebruikt.
+- **`field separator`**:   Field separator used for the `field order sensitive` setting. By default, a consecutive series of whitespace characters is used as a field separator.
 
-- **`line order sensitive`**:   Boolean die aangeeft of er bij de vergelijking van de gegenereerde en de verwachte uitvoer rekening gehouden moet worden met de volgorde van de regels. Standaard `true`.
+- **`line order sensitive`**:   Boolean indicating whether the order of lines should be taken into account when comparing the generated and expected output. Default `true`.
 
-### Definiëren van een eigen evaluatie functie
+### Defining a custom evaluation function
 
-In het bestand met verwachte uitvoer is er ook de mogelijkheid om een eigen functie te definiëren die evalueert of de oplossing juist of fout is. Deze functie moet als argumenten de verwachte en gegenereerde uitvoer ontvangen en op basis daarvan `True` of `False` teruggeven naargelang de correctheid.
+In the file with expected output, there is also the possibility to define a custom function that evaluates whether the solution is correct or incorrect. This function must receive the expected and generated output as arguments and return `True` or `False` depending on the correctness.
 
-In het volgende voorbeeld wordt er per lijn een andere toegelaten floating point marge gebruikt:
+In the following example, a different allowed floating point margin is used per line:
 
     2.04e+13
     136.365577302
@@ -123,14 +123,14 @@ In het volgende voorbeeld wordt er per lijn een andere toegelaten floating point
         return True
     </DEFINITION>
 
-#### Voorbeeld 1
+#### Example 1
 
-Bij opgave [Dierenriem](https://dodona.be/nl/exercises/1178427390/) schrijft de ingezonden code voor een datum (op 2 regels) het juiste sterrenbeeld uit (op 1 regel). We gebruiken `block count: multi` om meerdere testen te kunnen definiëren in één bestand.
+In the exercise [Zodiac](https://dodona.be/nl/exercises/1178427390/), the submitted code prints the correct zodiac sign (on 1 line) for a date (on 2 lines). We use `block count: multi` to define multiple tests in one file.
 
-Input bestand (`0.in`):
+Input file (`0.in`):
 
     1
-    januari
+    january
     12
     november
     23
@@ -138,7 +138,7 @@ Input bestand (`0.in`):
     25
     december
 
-Output bestand (`0.out`):
+Output file (`0.out`):
 
     Steenbok
     Schorpioen
@@ -152,16 +152,16 @@ Output bestand (`0.out`):
     blockwise execution: true
     continue upon wrong answer: false
 
-#### Voorbeeld 2
+#### Example 2
 
-Bij opgave [Delers](https://dodona.be/nl/exercises/1581119193/) moeten voor een gegeven getal alle delers uitgeschreven worden. Opnieuw kan hier gebruik gemaakt worden van `block count: multi`. Deze keer wordt de verwachte uitvoer beëindigd door een lege regel (`output block size: ends with`).
+In the exercise [Divisors](https://dodona.be/nl/exercises/1581119193/), all divisors must be printed for a given number. Again, `block count: multi` can be used here. This time the expected output is terminated by an empty line (`output block size: ends with`).
 
-Input bestand (`0.in`):
+Input file (`0.in`):
 
     298
     299
 
-Output bestand (`0.out`):
+Output file (`0.out`):
 
     1
     2
@@ -183,19 +183,19 @@ Output bestand (`0.out`):
 
 ## Doctest judge
 
-De doctest judge gebruikt doctests om de oplossingen van studenten te checken.
+The doctest judge uses doctests to check students' solutions.
 
 ### Parameters
 
-- **`used output channel`**:   Zet het output kanaal voor de volledige doctest. Zie [Outputkanalen](#outputkanalen) voor de uitleg rond output kanalen. Standaard gebruiken alle doctests `return` als enige output kanaal. Mogelijke waarden zijn `stdout`, `return` ene `stdout return`.
+- **`used output channel`**:   Sets the output channel for the entire doctest. See [Output channels](#output-channels) for the explanation regarding output channels. By default, all doctests use `return` as the sole output channel. Possible values are `stdout`, `return` and `stdout return`.
 
-- **`independent examples`**:   Boolean die aangeeft of alle doctests als afhankelijk of onafhankelijk van elkaar beschouwd moeten worden. (Zie [Uitvoeringscontext](#uitvoeringscontext) voor meer info over uitvoeringscontexten voor de Python Tutor.) Standaard is deze parameter `true` en vormt dus elk statement zijn eigen uitvoeringscontext. Bij `false` worden de statements gebundeld om een uitvoeringscontext te vormen.
+- **`independent examples`**:   Boolean indicating whether all doctests should be considered dependent or independent of each other. (See [Execution context](#execution-context) for more info on execution contexts for the Python Tutor.) Default is `true`, meaning each statement forms its own execution context. If `false`, statements are bundled to form an execution context.
 
-### Outputkanalen
+### Output channels
 
-De output van een uitvoering wordt gesplitst in kanalen (standaard uitvoer en returnwaarden). Dit verschilt van het standaard doctest gedrag.
+The output of an execution is split into channels (standard output and return values). This differs from the standard doctest behavior.
 
-Standaard zal de doctest judge enkel returnwaarden vergelijken. Met de parameter vermeld in [Parameters](#parameters) en optievlaggen voor individuele testen kan dit veranderd worden. Zie het volgende voorbeeld:
+By default, the doctest judge will only compare return values. This can be changed with the `used output channel` parameter mentioned in [Parameters](#parameters) and option flags (`STDOUT` and `RETURN`) for individual tests. See the following example:
 
 ``` python
 >>> def my_return(value):
@@ -211,36 +211,35 @@ Standaard zal de doctest judge enkel returnwaarden vergelijken. Met de parameter
 >>> def my_multiline(value):
 ...     return '{0}\n{0}\n{0}'.format(value)
 ...
->>> # Het standaard gedrag verwacht een return waarde
+>>> # The standard behavior expects a return value
 >>> my_return(5)
 5
->>> # Het volgende zal dus als incorrect geëvalueerd worden
->>> # De waarde wordt namelijk geprint, niet teruggegeven
+>>> # The following will be evaluated as incorrect
+>>> # The value is printed, not returned
 >>> my_print(5)
 5
->>> # Als we willen dat de student print in haar functie voegen we de 'STDOUT' optie vlag toe
->>> # Het volgende is correct:
+>>> # If we want the student to print in their function, we add the 'STDOUT' option flag
+>>> # The following is correct:
 >>> my_print(5) #doctest: +STDOUT
 5
->>> # Als we de 'STDOUT' optievlag toevoegen zal er gecontroleerd worden dat None teruggegeven worden.
->>> # Als we zowel de prints als de returnwaarde willen voegen we ze beide expliciet toe:
+>>> # If we add the 'STDOUT' option flag, it will be checked that None is returned.
+>>> # If we want both the prints and the return value, we explicitly add both:
 >>> my_print(5) #doctest: +STDOUT, +RETURN
 5
 None
 >>> my_combination(5) #doctest: +STDOUT, +RETURN
 5
 5
->>> # Merk op dat de laatste lijn in de verwachte output geïnterpreteerd wordt als de returnwaarde
+>>> # Note that the last line in the expected output is interpreted as the return value
 >>> my_multiline(5) #doctest: +RETURN
 5
 5
 5
->>> # Merk op dat in dit geval de volledige output als de returnwaarde wordt beschouwd,
->>> # en dat de feedback tabel de verwachte en gegenereerde output over meerdere lijnen
->>> # zal tonen
+>>> # Note that in this case the full output is considered the return value,
+>>> # and that the feedback table will show the expected and generated output over multiple lines
 >>>
->>> # Tracebacks worden gewoon in de verwachte output geplaatst. Geindenteerde lijnen worden genegeerd
->>> # net als de outputkanalen.
+>>> # Tracebacks are simply placed in the expected output. Indented lines are ignored
+>>> # just like the output channels.
 >>> 1/0
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -249,7 +248,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-Er bestaat één speciale optie vlag die gebruikt wordt wanneer de representatie van een zelf-gedefinieerd object gebruikt wordt. Dit is enkel het geval wanneer deze representatie werd overschreven. Wanneer de vlag geactiveerd wordt zal de (representatie van het object) van de returnwaarde vergeleken worden met de verwachte output. Merk op dat dit enkel nuttig is (en zal werken) wanneer de `__repr__(self)` methode overschreven is. Anders zal het adres van het object opgenomen worden in de representatie (wat voor elke uitvoering zal verschillen).
+There is one special option flag (`REPR`) that is used when the representation of a custom object is used. This is only the case when this representation has been overwritten. When the flag is activated, the (representation of the object) of the return value will be compared with the expected output. Note that this is only useful (and will work) when the `__repr__(self)` method is overwritten. Otherwise, the address of the object will be included in the representation (which will differ for each execution).
 
 ``` python
 >>> class MyObject(object):
@@ -261,59 +260,59 @@ I present to you:
 the representation of myself.
 ```
 
-De `REPR` vlag kan niet gecombineerd worden met andere vlaggen (de vlag overschrijft alle andere vlaggen).
+The `REPR` flag cannot be combined with other flags (the flag overrides all other flags).
 
-### Vergelijking van output
+### Comparison of output
 
-De hoofdreden voor het opsplitsen van de verschillende output is om toe te laten dat ze op een andere manier vergeleken worden. Returnwaarden worden vergeleken met type en inhoud. Standaard uitvoer (en dus ook tracebacks) worden gecontroleerd door de strings te vergelijken. De vergelijkingsmethode kan veranderd worden met de `OUTPUTPROCESSOR` optie tag. Het verwachte type voor de returnwaarden wordt afgeleid uit het type van de returnwaarde. Alleen als deze types overeenkomen zal de inhoud vergeleken worden. De vergelijking van de inhoud kan nu typespecifiek gebeuren.
+The main reason for splitting the different outputs is to allow them to be compared in a different way. Return values are compared by type and content. Standard output (and thus also tracebacks) are checked by comparing strings. The comparison method can be changed with the `OUTPUTPROCESSOR` option tag. The expected type for the return values is derived from the type of the return value. Only if these types match will the content be compared. The comparison of the content can now be done type-specifically.
 
-Om de vergelijking van de output aan te passen wordt de `OUTPUTPROCESSOR` tag gebruikt. Dit laat toe om een eigen processor te maken. Bijvoorbeeld, voor floats wordt standaard 2 decimalen vergeleken, maar dit kan aangepast worden aar het volgende:
+To customize the comparison of the output, the `OUTPUTPROCESSOR` tag is used. This allows creating a custom processor. For example, for floats 2 decimals are compared by default, but this can be adjusted to the following:
 
 ``` python
->>> 0.001 # standaard precisie is 2, dus correct
+>>> 0.001 # default precision is 2, so correct
 0.002
->>> 0.001 # precisie wordt op 5 ingesteld, dus incorrect
+>>> 0.001 # precision is set to 5, so incorrect
 <OUTPUTPROCESSOR>
 OutputProcessor(expected_type=float, precision=5)
 </OUTPUTPROCESSOR>
 0.002
 ```
 
-Merk op dat alle outputprocessors *sticky* gemaakt kunnen worden. Het zou vervelend zijn als er 20 testen waren, telkens met precisie 6 en er voor elk testgeval opnieuw de processor gedefinieerd zou moeten worden. Dit werkt als volgt:
+Note that all output processors can be made *sticky*. It would be annoying if there were 20 tests, each with precision 6, and the processor had to be defined again for each test case. This works as follows:
 
 ``` python
->>> 0.001 # standaard precisie is 2
+>>> 0.001 # default precision is 2
 0.002
->>> 0.001 # zet precision op 6 en houd dit zo, dus dit zal falen
+>>> 0.001 # set precision to 6 and keep it that way, so this will fail
 <OUTPUTPROCESSOR sticky="sticky">
 OutputProcessor(expected_type=float, precision=6)
 </OUTPUTPROCESSOR>
 0.002
->>> 0.003 # dit zal nog steeds falen
+>>> 0.003 # this will still fail
 0.004
 >>> 0.005 #doctest: +NOSTICKY
 0.006
->>> # Deze test was correct, de sticky werd voor een testgeval gecleared met +NOSTICKY
->>> 0.007 # deze test zal opnieuw falen
+>>> # This test was correct, the sticky was cleared for one test case with +NOSTICKY
+>>> 0.007 # this test will fail again
 0.008
 >>> 0.005 #doctest: +CLEARSTICKY
 0.006
->>> # De test hierboven is geslaagd
+>>> # The test above succeeded
 ```
 
-Een *sticky* outputprocessor definiëren voegt het toe aan de lijst van stickies. Deze stickies zullen toegevoegd worden aan een outputprocessor de expliciet in de tags gedefinieerd werd voor elke test behalve als de `NOSTICKY` vlag gebruikt werd. De `CLEARSTICKY` vlag maakt de lijst van *stickies*\* leeg.
+Defining a *sticky* output processor adds it to the list of stickies. These stickies will be added to an output processor explicitly defined in the tags for each test unless the `NOSTICKY` flag was used. The `CLEARSTICKY` flag clears the list of *stickies*.
 
-Er zijn nog meer standaard processors, maar deze zijn nogal specifiek. Ze worden allemaal gedefinieerd in `output_processors.py` samen met genoeg documentatie om hun werking en parameters uit te leggen. In het algemeen:
+There are more standard processors, but these are quite specific. They are all defined in `output_processors.py` together with enough documentation to explain their operation and parameters. In general:
 
-- **`FileContentChecker`**:   Kijkt of een bestand met een gegeven naam bestaat op het lokale file system en of de inhoud correspondeert met dat van een ander bestand. Dit tweede bestand kan zich in het lokale file system bevinden of de inhoud kan van het block gehaald worden (waarbij deze laatste optie voorrang heeft).
+- **`FileContentChecker`**:   Checks if a file with a given name exists on the local file system and if the content corresponds to that of another file. This second file can be located in the local file system or the content can be retrieved from the block (where the latter option takes precedence).
 
-  -   `ignoreTrailingNewlines`: Boolean die aangeeft of extra newlines op het einde van de gegenereerde (en de verwachte) uitvoer weggehaald moeten worden.
+  -   `ignoreTrailingNewlines`: Boolean indicating whether extra newlines at the end of the generated (and expected) output should be removed.
 
-- **`ImageRenderer`**:   Deze output processor rendert 2-dimensionale matrices als gekleurde afbeeldingen. Als de output correct is zal de matrix getoond worden in de feedbacktabel.
+- **`ImageRenderer`**:   This output processor renders 2-dimensional matrices as colored images. If the output is correct, the matrix will be shown in the feedback table.
 
-### Outputprocessors definiëren
+### Defining output processors
 
-Om een eigen output processor te definiëren introduceren we de `DEFINITION` tag. Deze tag laat toe om wat dan ook te definiëren in de scope van de doctest.
+To define a custom output processor, we introduce the `DEFINITION` tag. This tag allows defining anything within the scope of the doctest.
 
 ```python
 >>> my_new_function() #doctest: STDOUT
@@ -324,12 +323,12 @@ def my_new_function():
 hello world
 ```
 
-Dit voorbeeld zou uiteraard verwarrend zijn voor studenten, aangezien zij de definities niet kunnen zien, maar wel de test zelf. De tag kan echter gebruikt worden om nieuwe output processors te definiëren. De onderstaande voorbeelden maken de standaard processors vriendelijker. Eerst kort nog een overzicht van de structuur van de standaard processoren:
+This example would of course be confusing for students, as they cannot see the definitions, but they can see the test itself. However, the tag can be used to define new output processors. The examples below make the standard processors friendlier. First a brief overview of the structure of the standard processors:
 
--   `BasicProcessor`: Zowel het verwerken van standaard uitvoer (`process_stdout`) en de returnwaarde (`process_return`) zetten de status van het block op \"WA\" (*wrong answer*).
--   `OutputComparator(BasicProcessor)`: Overschrijft `process_stdout` en zet de status op \"AC\" (*answer correct*) als de verwachte en de gegenereerde uitvoer gelijk zijn (met het vergelijken van strings). Voegt ook de verwachte en de gegenereerde output toe aan het block zodat ze met een diff kunnen getoond worden in de feedbacktabel.
--   `TypedContentChecker(BasicProcessor)`: Overschrijft `process_return` en zet de status op \"AC\" als het type en de waarden van de verwachte return en de gegenereerde return gelijk zijn. Voegt ook de verwachte en de gegenereerde return toe aan het block na ze te annoteren zodat ze in de feedbacktabel getoond kunnen worden.
--   `OutputProcessor(OutputComparator, TypedContentChecker)`: Erft over van de vorige twee output processoren en combineert hun functionaliteit: `process_stdout` roept `OutputComparator.process_stdout` op en `process_return` roept `TypedContentChecker.process_return` op.
+-   `BasicProcessor`: Both processing standard output (`process_stdout`) and the return value (`process_return`) set the block status to "WA" (*wrong answer*).
+-   `OutputComparator(BasicProcessor)`: Overrides `process_stdout` and sets the status to "AC" (*answer correct*) if the expected and generated output are equal (comparing strings). Also adds the expected and generated output to the block so they can be shown with a diff in the feedback table.
+-   `TypedContentChecker(BasicProcessor)`: Overrides `process_return` and sets the status to "AC" if the type and values of the expected return and generated return are equal. Also adds the expected and generated return to the block after annotating them so they can be shown in the feedback table.
+-   `OutputProcessor(OutputComparator, TypedContentChecker)`: Inherits from the previous two output processors and combines their functionality: `process_stdout` calls `OutputComparator.process_stdout` and `process_return` calls `TypedContentChecker.process_return`.
 
 ```python
 >>> print('hello') #doctest: STDOUT
@@ -378,27 +377,27 @@ hello
 'hello'
 ```
 
-Enkele opmerkingen:
+Some remarks:
 
--   Als de inhoud met een eigen methode vergeleken moet worden kan de `content_check=False` parameter doorgegeven worden aan `super().process_return`. De functie zal dan enkel bepalen of de types overeen komen (en de block status instellen op \"AC\" of \"WA\"). Als de types niet overeenkwamen zal het block ook al annotaties bevatten. Als de types wel overeenkwamen moeten `setExpectedReturn` en `setGeneratedReturn` opgeroepen worden met geannoteerde string als de returns getoond moeten worden. Het is echter ook mogelijk om bijvoorbeeld de feedback te limiteren tot een bericht berekend uit de returns.
--   Gebruik enkel de functionaliteit die je nodig hebt. Als er geen printing verwacht wordt, overschrijf dan `TypedContentChecker`. Elke onverwacht standaard uitvoer zal dan opgevangen worden en juist aan de gebruiker getoond worden. Met de `OutputProcessor` zou er nog steeds een diff getoond worden, maar de \"onverwachte output\" boodschap zou niet getoond worden.
--   Vergeet niet terug te geven of het antwoord geaccepteerd wordt of niet. `continueUponWrongAnswer` hangt hier van af.
--   Zet de verwacht/gegenereerd paren met `Feedbacktable.setOutputPair(channel, exp, gen)`, waarbij `channel` een van `return`, `stderr` en `stdout` is. Voeg berichten toe aan elk paar met `Feedbacktable.addOutputMessage(channel, message, ...)`.
+-   If the content needs to be compared using a custom method, the `content_check=False` parameter can be passed to `super().process_return`. The function will then only determine if the types match (and set the block status to "AC" or "WA"). If the types did not match, the block will already contain annotations. If the types did match, `setExpectedReturn` and `setGeneratedReturn` must be called with annotated strings if the returns should be shown. However, it is also possible to limit feedback to a message calculated from the returns, for example.
+-   Use only the functionality you need. If no printing is expected, override `TypedContentChecker`. Any unexpected standard output will then be caught and correctly shown to the user. With `OutputProcessor`, a diff would still be shown, but the "unexpected output" message would not be shown.
+-   Do not forget to return whether the answer is accepted or not. `continueUponWrongAnswer` depends on this.
+-   Set the expected/generated pairs with `Feedbacktable.setOutputPair(channel, exp, gen)`, where `channel` is one of `return`, `stderr`, and `stdout`. Add messages to each pair with `Feedbacktable.addOutputMessage(channel, message, ...)`.
 
-### Verborgen en niet uitgevoerde testgevallen
+### Hidden and unexecuted test cases
 
-In het geval dat je een testgeval wil tonen aan de studenten maar niet uitvoeren kan je de `NOEXEC` vlag gebruiken. Omgekeerd (om een test uit te voeren maar niet te tonen) kan met de `NOSHOW` vlag.
+In case you want to show a test case to students but not execute it, you can use the `NOEXEC` flag. Conversely (to execute a test but not show it) can be done with the `NOSHOW` flag.
 
-```
+```python
 >>> 1/0 #doctest: +NOEXEC
-"Dit testgeval werd niet uitgevoerd"
+"This test case was not executed"
 >>> get_password() $doctest: +NOSHOW
 "hunter2"
 ```
 
-### Doctests in meerdere talen
+### Doctests in multiple languages
 
-Het is mogelijk meerdere talen te ondersteunen in doctests. Er moet niets veranderd worden aan het input bestand; bijna alles moet in het outputbestand gebeuren. Tussen de parameters onder de horizontale lijn moet er een `LANGUAGE` tag geplaatst worden. De geteste broncode en een voorbeeldvertaling volgt. Hier gaan we er van uit dat de originele doctest in het Engels is.
+It is possible to support multiple languages in doctests. Nothing needs to be changed in the input file; almost everything must be done in the output file. Between the parameters under the horizontal line, a `LANGUAGE` tag must be placed. The tested source code and an example translation follows. Here we assume the original doctest is in English.
 
 ``` python
 def show_usage():
@@ -419,13 +418,13 @@ class HtmlParagraph(object):
 </LANGUAGE>
 ```
 
-De mogelijke types substitutie zijn `function`, `method`, `class`, `kwarg`, `fixed` en `regex`. Bij `kwarg` zullen de namen van keyword argumenten vervangen worden. `fixed` zorgt voor letterlijke substituties zonder extra grenzen.
+The possible substitution types are `function`, `method`, `class`, `kwarg`, `fixed`, and `regex`. With `kwarg`, the names of keyword arguments will be replaced. `fixed` ensures literal substitutions without extra boundaries.
 
-Elke substitutie tag heeft ook een optionele parameter `detect` die standaard `true` is. Dit betekent dat de `to` parameter van de tag ook gebruikt wordt om de taal te detecteren. Als `detect` echter op `false` ingesteld staat wordt de substitutie genegeerd om de taal te detecteren.
+Each substitution tag also has an optional parameter `detect` which defaults to `true`. This means that the `to` parameter of the tag is also used to detect the language. However, if `detect` is set to `false`, the substitution is ignored for language detection.
 
-Zodra de taal gedetecteerd wordt is het vertalen volledig automatisch. De taal moet echter wel gedetecteerd worden. De gedetecteerde taal is de taal met de meeste woorden in de globale scope als er een met meer dan 0. Als er geen woorden gevonden worden wordt er geen vertaling of selectie uitgevoerd.
+Once the language is detected, translation is fully automatic. However, the language must be detected. The detected language is the language with the most words in the global scope if there is one with more than 0. If no words are found, no translation or selection is performed.
 
-Selectie is het proces dat er rekening mee houdt dat niet alles met korte zinnetjes vertaald kan worden. Of soms wil je sommige dingen enkel uitvoeren voor gebruikers van een bepaalde taal. Het volgende voorbeeld brengt meer duidelijkheid:
+Selection is the process that accounts for the fact that not everything can be translated with short phrases. Or sometimes you want to execute some things only for users of a certain language. The following example clarifies this:
 
 ``` python
 <LANGUAGE code="nl">
@@ -463,11 +462,11 @@ languages)" and None
 >>> "This is shown to everyone, but not translated." and None
 ```
 
-### Bestanden
+### Files
 
-Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bestand als link naar de inhoud van het bestand in de feedbacktabel terechtkomt. Als de optionele `href` parameter niet is ingevuld zal de inhoud van het bestand getoond worden met een pop-up. Dit kan voor grote bestanden tot lange wachttijden leiden, aangezien de inhoud twee keer in de feedbacktabel verwerkt zit. Voor grote bestanden kan dus de `href` parameter gebruikt worden. Dit zal er voor zorgen dat de naam van het bestand een link is naar een download van het bestand. Als de `href` parameter leeg is zal er geen link zijn naar de inhoud van het bestand.
+This tag has three forms. Each form will ensure that the name of the file ends up in the feedback table as a link to the content of the file. If the optional `href` parameter is not filled in, the content of the file will be shown with a pop-up. This can lead to long waiting times for large files, as the content is processed twice in the feedback table. For large files, the `href` parameter can be used. This will ensure that the name of the file is a link to a download of the file. If the `href` parameter is empty, there will be no link to the content of the file.
 
--   Ingebed
+-   Embedded
 
     ``` python
     >>> filestring = open('text.txt', 'r').read()
@@ -476,25 +475,21 @@ Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bes
     </FILE>
     ```
 
-    Met de eerste vorm, zoals hierboven getoond, kan je je bestanden inbedden in
-    de testdefinities. In plaats van deze code zal `filestring = StringIO("""This is the content of text.txt""").read()` uitgevoerd worden. Voor de student
-    wordt de originele code nog getoond worden.
+    With the first form, as shown above, you can embed your files in the test definitions. Instead of this code, `filestring = StringIO("""This is the content of text.txt""").read()` will be executed. For the student, the original code will still be shown.
 
--   Open bestaand bestand
+-   Open existing file
 
-    Deze vorm zorgt voor bestaande bestanden. Zo kan de inhoud gelinkt worden aan
-    de pop-up.
+    This form takes care of existing files. This allows the content to be linked to the pop-up.
 
     ``` xml
     <FILE name="text.txt" src="/temp/text.txt" />
     ```
 
-    Het `src` attribuut bevat de eigenlijke locatie van het bestand. Als dit
-    leeg is gebruiken we `name` als pad naar het bestand.
+    The `src` attribute contains the actual location of the file. If this is empty, we use `name` as the path to the file.
 
--   Open nieuw bestand
+-   Create and open new file
 
-    Deze vorm maakt een bestand aan met als inhoud de tekst van de tag. Dan wordt het op dezelfde manier als hierboven gebruikt.
+    This form creates a file with the text of the tag as content. Then it is used in the same way as above.
 
     ``` python
     >>> print_out_file('text.txt') # this would be a function doing print(open(file).read())
@@ -507,13 +502,13 @@ Deze tag heeft drie vormen. Elke vorm zal er voor zorgen dat de naam van het bes
     This is the content of text.txt.
     ```
 
-Om het gebruik van de Python Tutor toe te laten voor oefeningen met bestanden moet een `FILE` tag gebruikt worden. Als het geen ingebed bestand is moet er ook een (geldig) `href` attribuut aanwezig zijn. In dit laatste geval zal de Python Tutor ook enkel werken als de oefening publiek is.
+To allow the use of the Python Tutor for exercises with files, a `FILE` tag must be used. If it is not an embedded file, a (valid) `href` attribute must also be present. In this latter case, the Python Tutor will also only work if the exercise is public.
 
-### Uitvoeringscontext
+### Execution context
 
-Wanneer een sessie wordt opgestart van de Online Python Tutor voor het huidige statement, kan de uitvoering van het statement afhankelijk zijn van vroeger uitgevoerde statements. Daarom hebben we het concept van een uitvoeringscontext geïntroduceerd. De uitvoeringscontext kan op twee manieren aangepast worden.
+When a session is started from the online Python Tutor for the current statement, the execution of the statement may depend on previously executed statements. Therefore, we have introduced the concept of an execution context. The execution context can be adjusted in two ways.
 
-De parameter `independent examples` geeft aan of elk statement zijn eigen uitvoeringscontext vormt. Als deze parameter `True` is (de standaardwaarde) dan zal elk statement apart uitgevoerd worden en enkel het huidige statement zal aan de broncode toegevoegd worden wanneer de Python Tutor opgestart wordt. Als de parameter `False` is zullen standaard alle statements een uitvoeringscontext vormen. Met de vlag `NEWCONTEXT` kan een nieuwe context gestart worden.
+The parameter `independent examples` indicates whether each statement forms its own execution context. If this parameter is `True` (the default value), each statement will be executed separately and only the current statement will be added to the source code when the Python Tutor is started. If the parameter is `False`, all statements will form an execution context by default. With the `NEWCONTEXT` flag, a new context can be started.
 
 ``` python
 # first context
@@ -531,15 +526,15 @@ De parameter `independent examples` geeft aan of elk statement zijn eigen uitvoe
 
 ### Namespaces
 
-Doctests kunnen conditioneel uitgevoerd worden afhankelijk van of sommige namen gedefinieerd zijn in de globale namepace of sommige namespaces in de globale namespace. Dit kan door een (enkele) `NAMESPACE` tag aan de doctest toe te voegen.
+Doctests can be conditionally executed depending on whether some names are defined in the global namespace or some namespaces in the global namespace. This can be done by adding a (single) `NAMESPACE` tag to the doctest.
 
-De elementen van de `NAMESPACE` tag beschrijven condities op meerdere benoemde objecten. Elk element heeft een verplicht `name` attribuut, resulterend in een test of de naam bestaat in de ingesloten namespace (`NAMESPACE` of `CLASS`) en het correcte type heeft (zoals gegeven door de naam van de tag).
+The elements of the `NAMESPACE` tag describe conditions on multiple named objects. Each element has a mandatory `name` attribute, resulting in a test whether the name exists in the enclosed namespace (`NAMESPACE` or `CLASS`) and has the correct type (as given by the name of the tag).
 
-De namespace testen worden uitgevoerd in de volgorde zoals ze in de `NAMESPACE` tag staan. Vanaf er een test faalt stopt de uitvoering van doctest en de volgende namespace testen. Maar één block zal getoond worden met de foutboodschap van het blok dat faalde.
+The namespace tests are executed in the order they appear in the `NAMESPACE` tag. As soon as a test fails, the execution of doctest and the following namespace tests stops. Only one block will be shown with the error message of the block that failed.
 
-Namespace testen zijn altijd *sticky* in dat een gefaalde namespace test de huidige doctest en alle volgende doctesten niet uitvoert toet er een doctest wordt gevonden met een eigen `NAMESPACE` tag (en deze tag het `extend` attribuut niet op `true` heeft staan).
+Namespace tests are always *sticky* in that a failed namespace test does not execute the current doctest and all subsequent doctests until a doctest is found with its own `NAMESPACE` tag (and this tag does not have the `extend` attribute set to `true`).
 
-De `arg` attributen van `FUNCTION` en `METHOD` zijn op een generieke manier geïmplementeerd en refereren naar de suffixen van de `function.__code__.co_` attributen. Bijvoorbeeld `names` kan gebruikt worden om te controleren dat de functie zelf alle verplichte functie oproept. De waarde in het argument wordt geëvalueerd als een python object.
+The `arg` attributes of `FUNCTION` and `METHOD` are implemented in a generic way and refer to the suffixes of the `function.__code__.co_` attributes. For example, `names` can be used to check that the function itself calls all mandatory functions. The value in the argument is evaluated as a python object.
 
 ``` xml
 <NAMESPACE extends="true|false">
@@ -550,9 +545,9 @@ De `arg` attributen van `FUNCTION` en `METHOD` zijn op een generieke manier geï
 </NAMESPACE>
 ```
 
-De attributen zijn als volgt:
+The attributes are as follows:
 
-- **`extends`**: Wanneer een nieuwe namespace tag aangetroffen wordt met `extends="true"` worden de testen in de nieuwe namespace tag enkel uitgevoerd als er geen vorige namespace fouten waren.
-- **`name`**: Naam van de functie/methode/klasse die aanwezig moet zijn in de namespace. Dit veld is verplicht.
-- **`args`**: De verplichte argumenten die aanwezig moeten zijn in de definitie
-- **`names`**: De verplichte functies/methoden die moeten opgeroepen worden in de functie/methode.
+- **`extends`**: When a new namespace tag is found with `extends="true"`, the tests in the new namespace tag are only executed if there were no previous namespace errors.
+- **`name`**: Name of the function/method/class that must be present in the namespace. This field is mandatory.
+- **`args`**: The mandatory arguments that must be present in the definition
+- **`names`**: The mandatory functions/methods that must be called in the function/method.
