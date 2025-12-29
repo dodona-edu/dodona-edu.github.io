@@ -6,7 +6,7 @@ order: 5
 
 # Python judge
 
-::: warning Opmerking
+::: danger Verouderd
 We raden af om nieuwe oefeningen te maken voor deze judge.
 Deze judge wordt niet meer actief ontwikkeld.
 
