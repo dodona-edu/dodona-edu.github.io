@@ -41,6 +41,6 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How can I enable/disable student questions?](./annotations/#how-can-i-enable-disable-student-questions)
 - [How do I know if there are any open questions?](./annotations/#how-do-i-know-if-there-are-any-open-questions)
 - [How can I reply to a question from a student?](./annotations/#how-can-i-reply-to-a-question-from-a-student)
-- [How can I comment on a students' submission?](./annotations/#how-can-i-comment-on-a-students-submission)
+- [How can I comment on a student's submission?](./annotations/#how-can-i-comment-on-a-students-submission)
 - [How can I save and reuse comments?](./annotations/#how-can-i-save-and-reuse-comments)
 - [Why can't I find my saved comments?](./annotations/#why-cant-i-find-my-saved-comments)

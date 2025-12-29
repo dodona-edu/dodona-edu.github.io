@@ -9,14 +9,14 @@ On this page, you will find all the information you need to get started with Dod
 
 ## What is Dodona?
 
-Dodona is an online exercise platform for learning to code. The web application was developed at Ghent University to support practical sessions for large groups of students. Dodona focuses primarily on the automatic testing and feedback for submitted solutions to programming exercises. Currently, Dodona supports more than 20 programming languages, including Python, JavaScript, Java, Kotlin, C#, C++, bash, Prolog, Haskell, sql and R.
+Dodona is an online exercise platform for learning to code. The web application was developed at Ghent University to support practical sessions for large groups of students. Dodona focuses primarily on the automatic testing and feedback for submitted solutions to programming exercises. Currently, Dodona supports more than 20 programming languages, including Python, JavaScript, HTML, Java, Kotlin, C, C#, C++, Bash, Prolog, Haskell, SQL and R.
 
 ## Structure of the Guide
 
 The guide is divided into three parts.
 
 * The first part, [Signing Up & User Settings](../login-and-settings/), explains how to create a user account on Dodona and how to personalize it.
-* The second part, [Courses on Dodona](../courses/), discusses how to register to and unsubscribe from a course, how to navigate to a course, and how to interpret the submission status.
+* The second part, [Courses on Dodona](../courses/), discusses how to register for and unsubscribe from a course, how to navigate to a course, and how to interpret the submission status.
 * The last part, [Solving Exercises](../exercises/), contains all the information related to navigating to exercises or submissions, submitting solutions, and interpreting feedback.
 
 ## Contact Us
