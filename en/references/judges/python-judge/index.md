@@ -6,7 +6,7 @@ order: 5
 
 # Python judge
 
-::: warning Note
+::: danger Deprecated
 We do not recommend creating new exercises for this judge.
 This judge is no longer actively developed.
 
