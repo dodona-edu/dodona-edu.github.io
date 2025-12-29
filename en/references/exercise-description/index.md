@@ -235,7 +235,7 @@ Both HTML and Markdown tables are supported. You can add the `table` class for p
 
 ## Math snippets
 
-Dodona supports a LaTeX-style syntax to render mathematical formulas using the [MathJax project](https://www.mathjax.org).
+Dodona supports a LaTeX-style syntax to render mathematical formulas using [KaTeX](https://katex.org/).
 
 ### Inline formulas
 To display mathematical symbols and formulas inline, wrap them with a double dollar symbol. This syntax is the same for both Markdown and HTML.
@@ -253,13 +253,15 @@ When using HTML, wrap the formula with `\[` and `\]`:
 The solution can be found with the following formula: \[a^2 = b^2 + c^2\]
 ```
 
-When using Markdown, use the double dollar syntax but put everything a new line:
+When using Markdown, use the double dollar syntax but put everything on a new line and enter a newline before and after the `$$`:
 
 ```html
 The solution can be found with the following formula:
+
 $$
 a^2 = b^2 + c^2
 $$
+
 ```
 
 ## Code snippets
