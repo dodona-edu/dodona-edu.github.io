@@ -27,7 +27,7 @@ Before clicking on the add button, make sure the Dodona server has both read and
 - On github.com, invite the user [dodona-server](https://github.com/dodona-server) to your repository as a collaborator. Once the invitation is accepted, you can get started. The acceptance is automated, but can take up to half an hour. Is it taking longer? [Contact Team Dodona](https://dodona.be/en/contact).
 - On github.ugent.be, add [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona).
 - On gitlab.com, add [dodona-server](https://gitlab.com/dodona-server) as a member to your project.
-- For self-hosted GitLab servers, create a new user for Dodona, add our [SSH public key](/dodona.pub) to that user, and grant write access to your repository.
+- For self-hosted GitLab servers, create a new user for Dodona, add our [SSH public key](/dodona.pub){target="_blank"} to that user, and grant write access to your repository.
  
 ![github add collaborator](./github-add-collab.png)
 

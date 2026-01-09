@@ -45,7 +45,7 @@ Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De r
 
 Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, instellen. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
 
-![image](./staff.course_new_empty.png)
+![Lege cursus aanmaken](./staff.course_new_empty.png)
 
 * `Naam`: een naam voor de cursus. Verschillende cursussen kunnen dezelfde naam hebben, maar het is echter aangeraden om cursussen zoveel mogelijk een unieke naam te geven.
 
@@ -74,7 +74,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 * `Hoe wil je nieuwe registraties goedkeuren`: deze instelling bepaalt hoe gebruikers zich voor de cursus kunnen registreren. Volgende waarden kunnen ingesteld worden:
 
   * `Open`: Iedereen die de cursus kan zien kan zich registreren (inclusief iedereen die toegang heeft tot de cursus via de geheime link).
-  
+
   * `Gemodereerd`: Iedereen die de cursus kan zien kan een registratieverzoek indienen, maar ze zijn maar volledig geregistreerd wanneer ze goedgekeurd worden door een cursusbeheerder.
 
   * `Gesloten`: gebruikers kunnen zich niet zelf voor de cursus registreren.

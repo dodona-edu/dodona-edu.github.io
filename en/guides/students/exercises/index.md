@@ -12,32 +12,32 @@ All the information you need to navigate to exercises or solutions, submit solut
 Exercises on Dodona can either be part of a course or standalone.
 
 - Exercises that belong to a course can be found by visiting the course page.
-  ![image](./student.course_exercise_selection.png)
+  ![Course exercise selection](./student.course_exercise_selection.png)
 - Exercises that do not belong to a course can be found by visiting the [activity overview](https://dodona.be/en/activities/), which contains a list of all exercises.
 
 ::: tip Tip
 On your homepage, you can find a list of the five most recent exercises you submitted solutions for across all courses. This way, you can quickly select an exercise you recently worked on by clicking on the exercise name.
 
-![image](./student.recent_exercises.png)
+![Recent exercises](./student.recent_exercises.png)
 
 :::
 
 At the top of each exercise page, there is a panel with the name and description of the exercise. The display of these components depends on the selected language. If a translation of the name and description is provided in the selected language when creating the exercise, these components will also be displayed in that language.
 
-![image](./student.exercise_start.png)
+![Exercise start page](./student.exercise_start.png)
 
 ::: tip
 
 When performing an action on an exercise, the name of the exercise appears next to `Dodona` on the left side of the navigation bar, possibly preceded by the course name and the name of the exercise series from which you selected the exercise. By clicking on the exercise name in the navigation bar, you will navigate to the exercise page. By clicking on the exercise series name in the navigation bar, you will navigate to the exercise series on the course page. By clicking on the course name in the navigation bar, you will navigate to the course page.
 
-![image](./student.exercise_crumbs.png)
+![Exercise breadcrumbs](./student.exercise_crumbs.png)
 :::
 
 ## Submitting a Solution
 
 On an exercise page, below the panel with the exercise description, there is a second panel where you can submit a solution for the exercise. Click on the `Hand in` tab if it is not already selected, and place the source code of your solution in the *code editor*. Then click the submit button in the upper right corner of the panel to submit your solution. **You can submit as many times as you want. Only the result of your last submission will be considered**. Automatic feedback will be provided by the judge for each submission, which you can use to correct or further refine your solution.
 
-![image](./student.exercise_before_submit.png)
+![Restore code button](./student.exercise_before_submit.png)
 
 ::: tip Use an IDE
 
@@ -52,7 +52,7 @@ After submission, your solution is placed in a queue. While a solution is in the
 
 Once the judge has finished evaluating your solution, it receives its final status, and the feedback page with detailed [feedback](#interpreting-feedback) about the solution is automatically displayed in a new tab called `Feedback`.
 
-![image](./student.exercise_feedback_correct_tab.png)
+![Feedback tab](./student.exercise_feedback_correct_tab.png)
 
 ## Navigating to a Submission
 
@@ -60,25 +60,25 @@ You can navigate to your submitted solutions on Dodona in several ways. For each
 
 - You can view all your submissions for a single exercise by clicking on the `Submissions` tab on the relevant exercise page.
 
-![image](./student.exercise_submissions_tab.png)
+![Submissions tab](./student.exercise_submissions_tab.png)
 
 - You can view all the solutions you have ever submitted by clicking on `My Solutions` in the user menu in the navigation bar.
 
-![image](./student.all_submissions_link.png)
+![Link to all submissions](./student.all_submissions_link.png)
 
 A submissions overview contains the submission number, submission time, status, and a brief summary of the feedback for each solution. Before each solution, there is also an [icon](../courses/#submission-status) corresponding to the solution's status. The solutions are always listed in reverse chronological order (most recent at the top).
 
-![image](./student.all_submissions.png)
+![All submissions page](./student.all_submissions.png)
 
 You can select a solution by clicking on the arrow to the right of the solution in a solutions overview. This will navigate you to the feedback page with detailed feedback about the solution. the same page is displayed when you click on the submission number.
 
-![image](./student.submissions_to_exercise_feedback.png)
+![Submissions to exercise feedback](./student.submissions_to_exercise_feedback.png)
 
 ## Interpreting Feedback
 
 The feedback page contains detailed **feedback** about a solution you submitted for an exercise. As soon as possible after submission, the solution is automatically evaluated by a judge associated with the exercise. The judge provides detailed feedback on the correctness of the submission, which you can use to correct or further refine your solution.
 
-![image](./student.exercise_feedback_correct_page.png)
+![Exercise feedback correct page](./student.exercise_feedback_correct_page.png)
 
 At the top of the feedback page, the following information about the solution is displayed:
 
@@ -92,15 +92,15 @@ At the top of the feedback page, the following information about the solution is
 
   | Status                  | Icon                                                                    | Meaning                                                                                                           |
   |-------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-  | `Queued…`               | ![image](../../../../images/submission_icons/queued.png)                | Solution is in the queue                                                                                          |
-  | `Running...`            | ![image](../../../../images/submission_icons/running.png)               | Solution is currently being evaluated by the judge                                                                |
-  | `Correct`               | ![image](../../../../images/submission_icons/correct.png)               | All tests have succeeded.                                                                                         |
-  | `Wrong`                 | ![image](../../../../images/submission_icons/wrong.png)                 | Logical error encountered during the execution of at least one test                                               |
-  | `Runtime Error`         | ![image](../../../../images/submission_icons/runtime_error.png)         | Unexpected error encountered during the execution of at least one test                                            |
-  | `Timeout`               | ![image](../../../../images/submission_icons/time_limit_exceeded.png)   | Time limit for the exercise was exceeded during testing; may indicate poor performance or an infinite loop.       |
-  | `Memory limit exceeded` | ![image](../../../../images/submission_icons/memory_limit_exceeded.png) | Memory limit for the exercise was exceeded during the execution of at least one test                              |
-  | `Compilation Error`     | ![image](../../../../images/submission_icons/compilation_error.png)     | Solution contains grammatical errors                                                                              |
-  | `Internal Error`        | ![image](../../../../images/submission_icons/internal_error.png)        | Judge crashed during the evaluation of the solution; the cause of the error lies with the judge, not the solution |
+  | `Queued…`               | ![Queued](../../../../images/submission_icons/queued.png)                | Solution is in the queue                                                                                          |
+  | `Running...`            | ![Running](../../../../images/submission_icons/running.png)               | Solution is currently being evaluated by the judge                                                                |
+  | `Correct`               | ![Correct](../../../../images/submission_icons/correct.png)               | All tests have succeeded.                                                                                         |
+  | `Wrong`                 | ![Wrong](../../../../images/submission_icons/wrong.png)                 | Logical error encountered during the execution of at least one test                                               |
+  | `Runtime Error`         | ![Runtime error](../../../../images/submission_icons/runtime_error.png)         | Unexpected error encountered during the execution of at least one test                                            |
+  | `Timeout`               | ![Time limit exceeded](../../../../images/submission_icons/time_limit_exceeded.png)   | Time limit for the exercise was exceeded during testing; may indicate poor performance or an infinite loop.       |
+  | `Memory limit exceeded` | ![Memory limit exceeded](../../../../images/submission_icons/memory_limit_exceeded.png) | Memory limit for the exercise was exceeded during the execution of at least one test                              |
+  | `Compilation Error`     | ![Compilation error](../../../../images/submission_icons/compilation_error.png)     | Solution contains grammatical errors                                                                              |
+  | `Internal Error`        | ![Internal error](../../../../images/submission_icons/internal_error.png)        | Judge crashed during the evaluation of the solution; the cause of the error lies with the judge, not the solution |
 
   The lower a status is listed in the table above, the more severe the type of error it corresponds to.
 
@@ -108,11 +108,11 @@ At the top of the feedback page, the following information about the solution is
 
 Below the brief summary, there is more detailed feedback that the judge may have split across multiple *tabs*. Next to the name of a tab, there may be a *badge* on the right side with a number. The number indicates how many errors the judge found while executing the tests reported under that tab.
 
-![image](./student.exercise_feedback_incorrect_tab.png)
+![Incorrect solution feedback](./student.exercise_feedback_incorrect_tab.png)
 
 The last tab is always named `Code` and contains the source code of the solution. In certain places in the source code, the judge may have added comments (e.g., about coding style) that may also explain why a particular status was assigned to the solution.
 
-![image](./student.exercise_lint_error.png)
+![Linting error example](./student.exercise_lint_error.png)
 
 ::: tip Tip
 
@@ -121,7 +121,7 @@ In the `Code` tab on the feedback page, you cannot modify the source code of the
 
 For each tab, the judge reports on individual **tests** to which the source code was subjected. Related tests are grouped into a **test case**, and interdependent test cases are grouped into a **context**.
 
-![image](./student.exercise_feedback_correct_tab.png)
+![Correct solution feedback](./student.exercise_feedback_correct_tab.png)
 
 Visually, all test cases of a context are grouped in an expandable card.
 The header of the card will contain `Correct` or `Wrong` depending on the judge's assessment of the entire context.
@@ -136,20 +136,20 @@ If the judge reports on individual tests within a test case, they are listed bel
 -   A textual comparison between an expected value and a value generated based on the solution. If at least one of the values consists of multiple lines, the corresponding lines are aligned opposite each other. Identical corresponding lines are displayed with a transparent background color. If corresponding lines differ, they are displayed with a light-colored background color (green for the expected value and red for the generated value). Individual characters that differ within corresponding lines are displayed with a darker background color (green for the expected value and red for the generated value).
 
 -   General feedback about the executed test. For this feedback, the judge has complete freedom regarding the formatting, allowing for both textual and graphical feedback.
-    ![image](./student.exercise_feedback_incorrect_tab.png)
+    ![Visual feedback tab](./student.exercise_feedback_incorrect_tab.png)
 
-    ![image](./student.exercise_feedback_visual.png)
+    ![Visual feedback maximized](./student.exercise_feedback_visual.png)
 
 ## Asking Questions
 ::: tip Note
 This feature is only available if your teacher has enabled it.
 :::
 
-![image](./student.ask_questions.png)
+![Ask questions button](./student.ask_questions.png)
 After you have submitted your solution, you can ask a question in three ways. At the top of the submitted code, you can ask a general question by clicking on `Ask a question about your code`. In addition, you can click on the pink circle to the left of the line number to ask a question about a specific line of code. You can also select a piece of code and then ask questions about it using the same button.
 
 
-![image](./student.ask_question.gif)
+![Ask question animation](./student.ask_question.gif)
 
 Type the question you want to ask the teacher in the text box. You can use Markdown to add extra formatting to your text. Finally, click on `Ask question`.
 

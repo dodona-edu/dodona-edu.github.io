@@ -19,11 +19,11 @@ Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die c
 
 Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `Meer cursussen...` of op `Verken cursussen` te klikken.
 
-![image](./student.explore_courses.png)
+![Pagina om cursussen te ontdekken](./student.explore_courses.png)
 
 Dit zal je naar een [overzicht van alle cursussen](https://dodona.be/nl/courses/) brengen. Je krijgt er een of meerdere tabs te zien waar je de zoekbalk kan gebruiken om op basis van een cursusnaam, een naam van een lesgever, de naam van je onderwijsinstelling of een academiejaar de juiste cursus kan vinden.
 
-![image](./student.courses.png)
+![Recente cursussen op startpagina](./student.courses.png)
 
 ### Hoe registreer je?
 
@@ -31,20 +31,20 @@ Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd
 
 -   De cursus werkt met een **open registratieprocedure**, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `Registreren` om je voor de cursus te registreren.
 
-    ![image](./register.png)
+    ![Knop om te registreren](./register.png)
 
 
 -   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `Registratieverzoek indienen` om een registratieverzoek voor de cursus in te dienen.
 
-    ![image](./moderated_register.png)
+    ![Knop om registratieverzoek in te dienen](./moderated_register.png)
 
     Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de cursuspagina de boodschap `Je staat op de wachtlijst.` en wordt de cursus opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina.
 
-    ![image](./moderated_waiting.png)
+    ![Boodschap wachtlijst](./moderated_waiting.png)
 
 -   De cursus werkt met een **gesloten registratieprocedure**, wat betekent dat je geen registratieverzoek kunt indienen voor de cursus. De lesgever laat dus niet toe dat je jezelf kan registreren.
 
-    ![image](./closed_registration.png)
+    ![Boodschap gesloten registratie](./closed_registration.png)
 
 Nadat je geregistreerd bent, wordt de cursus getoond op je gepersonaliseerde startpagina.
 
@@ -54,13 +54,13 @@ Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina
 
 Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder kan je verschillende oefeningenreeksen zien die elk bestaan uit een of meerdere oefeningen.
 
-![image](./student.deadline_series_warning.png)
+![Waarschuwingssymbool deadline](./student.deadline_series_warning.png)
 
 ::: tip Tip
 
 Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de navigatiebalk. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je terug naar de cursuspagina.
 
-![image](./student.breadcrumb_course.png)
+![Broodkruimelnavigatie cursus](./student.breadcrumb_course.png)
 :::
 
 ### Oefeningenreeksen
@@ -92,17 +92,17 @@ Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vó
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
   | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) |
-  | `verkeerd` | ![image](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
-  | `correct` | ![image](../../../../images/course_exercise_status_icons/correct.png) (![image](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
+| `verkeerd` | ![Verkeerd](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
+| `correct` | ![Correct](../../../../images/course_exercise_status_icons/correct.png) (![Voor deadline](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
 
 Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
 
   |indienstatus | icoontje | weergegeven als je |
   |-------------|----------|--------------------|
-  | `correct` (groen) | ![image](../../../../images/course_exercise_status_icons/before_deadline.png) | laatst ingediende oplossing vóór de deadline correct is|
-  | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | geen oplossingen hebt ingediend|
-  | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
-  | `deadline gemist` (rood) | ![image](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
+  | `correct` (groen) | ![Voor deadline](../../../../images/course_exercise_status_icons/before_deadline.png) | laatst ingediende oplossing vóór de deadline correct is|
+  | `deadline gemist` (rood) | ![Na deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | geen oplossingen hebt ingediend|
+  | `deadline gemist` (rood) | ![Na deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
+  | `deadline gemist` (rood) | ![Na deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
 
 ::: tip Laatst ingediende oplossing vóór deadline telt
 
@@ -110,7 +110,7 @@ Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een op
 
 Dodona toont een **waarschuwingssymbool** naast je indienstatus van een oefening in een oefeningenreeks en in de lijst met recente op je startpagina als je laatst ingediende oplossing voor de oefening vóór de deadline van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
-![image](./student.deadline_series_warning.png)
+![Waarschuwingssymbool deadline](./student.deadline_series_warning.png)
 
 Als je **na het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit een oefeningenreeks, dan zal je indienstatus voor de oefening in de oefeningenreeks daardoor nooit wijzigen. Je indienstatus voor een oefening in een oefeningenreeks wordt immers bepaald op basis van je laatst ingediende oplossing vóór de deadline.
 :::
@@ -120,6 +120,6 @@ Als je **na het verstrijken van de deadline** van een oefeningenreeks een oploss
 
 Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `Uitschrijven` (of `Registratieverzoek annuleren`) waarmee je je kunt uitschrijven uit de cursus.
 
-![image](./student.unregister.png)
+![Uitschrijven knop](./student.unregister.png)
 
 Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Cursussen` in het hamburger menu aan de linkerkant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.

@@ -12,10 +12,10 @@ title: Vragen en opmerkingen
 Deze functionaliteit is enkel beschikbaar als je lesgever dit heeft ingeschakeld.
 :::
 
-![image](./student.ask_questions.png)
+![Knop om vragen te stellen](./student.ask_questions.png)
 Nadat je je oplossing hebt ingediend, kan je op drie manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de roze cirkel klikken een vraag stellen bij een specifieke regel code. Je kan ook een stuk code selecteren en dan hierover vragen stellen via diezelfde knop.
 
-![image](./student.ask_question.gif)
+![Animatie vraag stellen](./student.ask_question.gif)
 
 Typ in het tekstvak de vraag die je aan de lesgever wil stellen. Je kan Markdown gebruiken om je tekst extra opmaak te geven. Klik als laatste op `Vraag stellen`.
 
@@ -30,7 +30,7 @@ Je kan met Markdown extra opmaak toevoegen door:
 Bekijk hier [alle mogelijkheden van Markdown](/nl/references/exercise-description/#markdown).
 :::
 
-![img.png](./student.react.png)
+![Reageren op vraag](./student.react.png)
 
 Daarnaast kan je ook reageren op een bestaande vraag van jezelf of op een opmerking van een lesgever. Klik hiervoor op `Reageer` onder de vraag of opmerking. Typ je reactie in het tekstvak en klik op `Reageer`.
 
@@ -39,13 +39,13 @@ Daarnaast kan je ook reageren op een bestaande vraag van jezelf of op een opmerk
 
 Wanneer een lesgever je vraag beantwoordt, krijg je een melding in Dodona. Deze melding zal je doorverwijzen naar de pagina waar je de vraag stelde.
 
-![image](./comment_on_code.png)
+![Melding van antwoord](./comment_on_code.png)
 
 ## Hoe kan ik vragen voor studenten inschakelen/uitschakelen? <Badge type="tip" text="lesgever" />
 
 Gebruik het potloodje in de bovenste navigatiebalk van je cursus om naar de pagina `bewerken` te gaan. Hier kan je vragen voor studenten inschakelen of uitschakelen door het vakje `Sta toe dat studenten vragen stellen` aan of uit te vinken.
 
-![img.png](./ask_questions_toggle.png)
+![Studentenvragen instelling](./ask_questions_toggle.png)
 
 Vergeet niet om je wijzigingen op te slaan door op het roze vinkje bovenaan rechts op de pagina te klikken.
 
@@ -53,15 +53,15 @@ Vergeet niet om je wijzigingen op te slaan door op het roze vinkje bovenaan rech
 
 Als er open vragen zijn binnen een cursus, zal je een melding zien in de cursuskaart op je startpagina.
 
-![img.png](./course_card_question.png)
+![Melding in cursuskaart](./course_card_question.png)
 
 Je zal ook een melding zien in de bovenste navigatiebalk van je cursus. Klik op de melding om naar de pagina te gaan waar je alle open vragen kan zien.
 
-![img.png](./course_question_list.png)
+![Lijst met open vragen](./course_question_list.png)
 
 Als je alle open vragen over al je cursussen wil zien, kan je naar de pagina `Vragen` gaan in de linkse navigatiebalk van Dodona.
 
-![img.png](./questions_index_page.png)
+![Algemene vragenpagina](./questions_index_page.png)
 
 ## Hoe kan ik een vraag beantwoorden? <Badge type="tip" text="lesgever" />
 

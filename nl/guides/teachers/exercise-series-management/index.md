@@ -34,11 +34,11 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
   Klik op het invulveld of klik op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de tijdzone die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
 
-  ![image](./staff.series_calendar_open.png)
+  ![Kalender om datum te kiezen](./staff.series_calendar_open.png)
 
   Klik op de verwijderknop om een ingestelde deadline te wissen.
 
-  ![image](./staff.series_calendar_clear.png)
+  ![Deadline wissen](./staff.series_calendar_clear.png)
 
 * `Zichtbaarheid`: dit bepaalt of gebruikers de oefeningenreeks kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 
