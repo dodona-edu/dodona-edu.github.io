@@ -36,7 +36,7 @@ Als je een actie aan het uitvoeren bent op een oefening dan verschijnt de naam v
 
 Op een oefeningpagina staat onder het paneel met de beschrijving van de oefening een tweede paneel waarmee je een oplossing kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de *code editor*. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. **Je mag zoveel indienen als je wil. Er wordt enkel rekening gehouden met het resultaat van jouw laatste oplossing**. Bij elke oplossing wordt [automatische feedback](#interpreteren-van-feedback) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
 
-![Knop om vorige versie code te herstellen](./student.exercise_before_submit.png)
+![Oefening voor het indienen](./student.exercise_before_submit.png)
 
 ::: tip Gebruik een IDE
 
