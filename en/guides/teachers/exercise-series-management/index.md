@@ -24,10 +24,10 @@ You will be directed to a form where you can set the following properties of the
 
 ![series form](./staff.series_new.png)
 
-* `Name`: The name of the exercise series. 
+* `Name`: The name of the exercise series.
   Within a course, different exercise series can have the same name, but it is advisable to give each exercise series a unique name.
 
-* `Deadline`: An optional deadline that indicates until when solutions submitted for exercises in this series will be considered. 
+* `Deadline`: An optional deadline that indicates until when solutions submitted for exercises in this series will be considered.
   Students can continue to submit solutions for exercises in the series after the deadline and will still receive feedback.
   However, these submissions will not be considered in determining their submission status for the exercises in the series.
 
@@ -38,15 +38,15 @@ You will be directed to a form where you can set the following properties of the
   Keep this in mind if you set the deadline to an earlier time.
   :::
 
-  Click on the input field or the calendar button to set the date and time of the deadline. 
+  Click on the input field or the calendar button to set the date and time of the deadline.
   Select the deadline in the time zone set in your user profile.
   Other users will see the deadline in the time zone set in their user profile.
 
-  ![image](./staff.series_calendar_open.png)
+  ![Series calendar open](./staff.series_calendar_open.png)
 
   Click the delete button to remove a set deadline.
 
-  ![image](./staff.series_calendar_clear.png)
+  ![Clear series calendar](./staff.series_calendar_clear.png)
 
 * `Description`: An optional description that users see when viewing the exercise series in the course.
   You can use [Markdown](/en/references/exercise-description/#markdown) to format the description.
@@ -55,19 +55,19 @@ You will be directed to a form where you can set the following properties of the
 
   * `Visible for everyone`: All users see the exercise series on the course page.
 
-  * `Only vissible via secret link`: Only course administrators see the exercise series on the course page. 
+  * `Only vissible via secret link`: Only course administrators see the exercise series on the course page.
     There is a clear message indicating that other users cannot see the exercise series.
     You can give users access to this series by sending them the specific secret link (see below) of this series.
 
   * `Hidden for students`: Only course administrators see the exercise series on the course page.
     There is a clear message indicating that other users cannot see the exercise series there.
 
-  * `Visible for students after start time`: The exercise series is not visible to students until the start time you specify. 
+  * `Visible for students after start time`: The exercise series is not visible to students until the start time you specify.
     You can set the start time in the same way as the deadline.
 
   ![series hidden info](./staff.course_series_info_message.png)
 
-* `Secret Link`: When creating a series that is only vissible via secret link, a secret link is automatically generated to provide access to this series. 
+* `Secret Link`: When creating a series that is only vissible via secret link, a secret link is automatically generated to provide access to this series.
   Without this link, users cannot see this exercise series.
 
   You can find the secret link for an exercise series at the bottom of the edit page for that series.
@@ -159,9 +159,9 @@ The main actions are `Evaluate series` and `Series scoresheet`; other actions ca
   The submission status is displayed in the overview with the usual icons.
 
   ![scoresheet](./staff.scoresheet.png)
-  
+
   Click on the name of a course user to navigate to the user's overview page.
-  
+
   Click on the icon of a submission status to navigate to the solution used to determine the submission status
   (if the course user has indeed submitted a solution based on which the submission status could be determined).
   You can also filter by students who have started at least one activity and search by name or student labels in this overview.
@@ -215,6 +215,6 @@ whether the files should be grouped per student or per exercise, and which stude
 
 ![export options](./staff.series_export_options.png)
 
-Click `Start export` to start the download. 
+Click `Start export` to start the download.
 At that moment, all submitted solutions will be zipped, which may take a moment. Then the download will start automatically.
 ![export started](./staff.series_export_started.png)

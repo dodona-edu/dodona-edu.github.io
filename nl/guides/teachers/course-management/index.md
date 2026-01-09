@@ -24,7 +24,7 @@ Je komt op een pagina terecht waar je de naam, lesgevers, beschrijving, zichtbaa
 
 Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om de nieuwe cursuseigenschappen op te slaan. Alternatief kan je ook op de `Aanpassen` klikken onderaan het paneel. Daarna navigeer je automatisch terug naar de cursuspagina waar de nieuwe cursuseigenschappen onmiddellijk van toepassing zijn.
 
-![image](./staff.course_after_edit.png)
+![Cursus na bewerking](./staff.course_after_edit.png)
 
 ## Een cursus opbouwen
 

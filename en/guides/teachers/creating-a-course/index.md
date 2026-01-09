@@ -45,7 +45,7 @@ Next, you need to specify which elements of the course you want to copy. The ser
 
 Finally, you need to set a few things about the course itself, such as the name and instructor. These are pre-filled with the values of the copied course if that option was chosen. The following properties can be set:
 
-![image](./staff.course_new_empty.png)
+![New empty course](./staff.course_new_empty.png)
 
 * `Name`: a name for the course. Different courses can have the same name, but it is advisable to give courses a unique name whenever possible.
 
@@ -76,7 +76,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 * `How do you want to approve new registrations`: this setting determines how users can register for the course. The following values can be set:
 
   * `Open`: Everyone who can see the course can register for it (this includes anyone accessing the course via the secret link).
-  
+
   * `Moderated`: Everyone who can see the course can submit a registration request, but they are only fully registered once approved by a course administrator.
 
   * `Closed`: users cannot register themselves for the course.

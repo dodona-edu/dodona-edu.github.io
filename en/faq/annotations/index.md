@@ -12,11 +12,11 @@ title: Questions and comments
 This feature is only available if your teacher has enabled it.
 :::
 
-![image](./student.ask_questions.png)
+![Ask questions button](./student.ask_questions.png)
 After you have submitted your solution, you can ask a question in three ways. At the top of the submitted code, you can ask a general question by clicking on `Ask a question about your code`. In addition, you can click on the pink circle to the left of the line number to ask a question about a specific line of code. You can also select a piece of code and then ask questions about it using the same button.
 
 
-![image](./student.ask_question.gif)
+![Ask question animation](./student.ask_question.gif)
 
 Type the question you want to ask the teacher in the text box. You can use Markdown to add extra formatting to your text. Finally, click on `Ask question`.
 
@@ -31,7 +31,7 @@ You can add extra formatting with Markdown by:
 Here you can view [all the possibilities of Markdown](/en/references/exercise-description/#markdown).
 :::
 
-![img.png](./student.react.png)
+![Reply to question](./student.react.png)
 
 You can also respond to an existing question from yourself or to a comment from a teacher. To do this, click on `Reply` below the question or comment. Type your response in the text box and click on `Reply`.
 
@@ -39,13 +39,13 @@ You can also respond to an existing question from yourself or to a comment from 
 
 When a teacher answers your question, you will receive a notification in Dodona. This notification will redirect you to the page where you asked the question.
 
-![image](./comment_on_code.png)
+![Notification of answer](./comment_on_code.png)
 
 ## How can I enable/disable student questions? <Badge type="tip" text="teacher" />
 
 Use the pencil in the top navigation bar of your course to go to the `Edit` page. Here you can enable or disable student questions by checking or unchecking the box `Allow students to ask questions`.
 
-![img.png](./ask_questions_toggle.png)
+![Toggle student questions](./ask_questions_toggle.png)
 
 Don't forget to save your changes by clicking on the pink checkmark at the top right of the page.
 
@@ -53,15 +53,15 @@ Don't forget to save your changes by clicking on the pink checkmark at the top r
 
 If there are open questions within a course, you will see a notification in the course card on your homepage.
 
-![img.png](./course_card_question.png)
+![Course card question notification](./course_card_question.png)
 
 You will also see a notification in the top navigation bar of your course. Click on the notification to go to the page where you can see all the open questions.
 
-![img.png](./course_question_list.png)
+![Course question list](./course_question_list.png)
 
 If you want to see all open questions across all your courses, you can go to the `Questions` page in the navigation sidebar of Dodona.
 
-![img.png](./questions_index_page.png)
+![Global questions page](./questions_index_page.png)
 
 ## How can I reply to a question from a student? <Badge type="tip" text="teacher" />
 

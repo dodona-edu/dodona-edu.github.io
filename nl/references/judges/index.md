@@ -91,7 +91,7 @@ Onderstaande judges zijn verouderd en worden niet meer actief ontwikkeld. Ze bli
 
 ### Bash
 
-::: warning Opgepast
+::: danger Opgepast
 We raden af om nieuwe oefeningen te maken voor deze judge.
 Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Bash-oefeningen.
 :::
@@ -104,7 +104,7 @@ Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
 
 ### Csharp
 
-::: warning Opgepast
+::: danger Opgepast
 We raden af om nieuwe oefeningen te maken voor deze judge.
 Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe C#-oefeningen.
 :::
@@ -116,7 +116,7 @@ Csharp is een judge die gebruikt kan worden voor oefeningen in C#.\
 
 ### Javascript
 
-::: warning Opgepast
+::: danger Opgepast
 We raden af om nieuwe oefeningen te maken voor deze judge.
 Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Javascript-oefeningen.
 :::
@@ -129,7 +129,7 @@ Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
 
 ### JUnit
 
-::: warning Opgepast
+::: danger Opgepast
 We raden af om nieuwe oefeningen te maken voor deze judge.
 Gebruik in plaats daarvan de [Java-judge](#java).
 :::
@@ -141,7 +141,7 @@ De JUnit-judge gebruikt het JUnit-framework voor oefeningen in de programmeertaa
 
 ### Python
 
-::: warning Opgepast
+::: danger Opgepast
 We raden af om nieuwe oefeningen te maken voor deze judge.
 Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Python-oefeningen.
 :::

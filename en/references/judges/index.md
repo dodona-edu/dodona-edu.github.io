@@ -88,7 +88,7 @@ The Turtle judge evaluates the output of a Python Turtle program. It calculates 
 
 ### Bash
 
-::: warning Note
+::: danger Note
 We do not recommend using this judge for new exercises.
 Use [TESTed](/en/guides/exercises/) for new Bash exercises instead.
 :::
@@ -101,7 +101,7 @@ It is undocumented and has a lot of very use-case-specific implementations.\
 
 ### Csharp
 
-::: warning Note
+::: danger Note
 We do not recommend using this judge for new exercises.
 Use [TESTed](/en/guides/exercises/) for new C# exercises instead.
 :::
@@ -113,7 +113,7 @@ Csharp is a judge that can be used for exercises in C#.\
 
 ### Javascript
 
-::: warning Note
+::: danger Note
 We do not recommend using this judge for new exercises.
 Use [TESTed](/en/guides/exercises/) for new Javascript exercises instead.
 :::
@@ -126,7 +126,7 @@ It is undocumented and has a lot of very usecase specific implementations.\
 
 ### JUnit
 
-::: warning Note
+::: danger Note
 We do not recommend using this judge for new exercises.
 Use the [Java judge](#java) instead.
 :::
@@ -137,7 +137,7 @@ The JUnit judge is a judge for Java 8 exercises.\
 **Created by:** [Team Dodona](mailto:dodona@ugent.be)
 
 ### Python
-::: warning Note
+::: danger Note
 We do not recommend using this judge for new exercises.
 Use [TESTed](/en/guides/exercises/) for new Python exercises instead.
 :::

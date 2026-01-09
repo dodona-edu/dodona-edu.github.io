@@ -25,4 +25,4 @@ De handleiding is onderverdeeld in drie onderdelen.
 Als je met vragen zit over de werking van Dodona of als er interessante ideeën bij je opborrelen over hoe we het platform zouden kunnen verbeteren of uitbreiden, neem dan gerust contact met ons op. Alle commentaren en suggesties zijn meer dan welkom. Navigeer daarvoor naar de [contactpagina](https://dodona.be/nl/contact/) door in de voettekst (onderaan elke pagina) op `Contact` te klikken.
 Vul vervolgens de gegevens in het paneel `Contacteer ons` aan en klik daarna op de verzendknop in de rechterbenedenhoek van het paneel.
 
-![image](./contact.nl.png)
+![Contactformulier](./contact.nl.png)

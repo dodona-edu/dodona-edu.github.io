@@ -27,7 +27,7 @@ Voordat je op de toevoeg-knop klikt, moet je er eerst voor zorgen dat de Dodona 
 - Op github.com voeg je eenvoudig de gebruiker [dodona-server](https://github.com/dodona-server) toe aan je repository. Zodra wij de uitnodiging accepteren (binnen het half uur), kan je aan de slag. De acceptatie gebeurt automatisch, maar kan tot een half uur duren. Duurt het toch langer, [neem dan contact op met Team Dodona](https://dodona.be/nl/contact).
 - Op github.ugent.be voeg je [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe.
 - Op gitlab.com gebruik je [dodona-server](https://gitlab.com/dodona-server).
-- Host je op een eigen GitLab server, maak dan zelf een gebruiker voor Dodona aan en gebruik onze [publieke ssh sleutel](/dodona.pub).
+- Host je op een eigen GitLab server, maak dan zelf een gebruiker voor Dodona aan en gebruik onze [publieke ssh sleutel](/dodona.pub){target="_blank"}.
  
 ![github gebruiker toevoegen](./github-add-collab.png)
 

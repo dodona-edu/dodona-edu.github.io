@@ -102,7 +102,7 @@ Als je er voor gekozen hebt om punten te geven, dan is het puntenoverzicht ook z
 
 De totaalscore per student en het gemiddelde voor elke oefening worden automatisch berekend.
 
-In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Als je hier op klikt, dan wordt een csv-bestand met de punten gedownload. Dit bestand kan je eenvoudig open in bijvoorbeeld Excel.
+In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Als je op deze knop klikt, wordt een csv-bestand met de punten gedownload. Dit bestand kan je eenvoudig open in bijvoorbeeld Excel.
 
 ![evaluatie punten](./evaluatie-punten.png)
 

@@ -23,7 +23,7 @@ You will be taken to a page where you can adjust the name, teacher, description,
 
 After making changes, click the finish button in the upper right corner of the panel to save the new course properties. Alternatively, you can also click `Update` at the bottom of the panel. Then you will automatically navigate back to the course page where the new course properties will immediately take effect.
 
-![image](./staff.course_after_edit.png)
+![Course after edit](./staff.course_after_edit.png)
 
 ## Building a Course
 

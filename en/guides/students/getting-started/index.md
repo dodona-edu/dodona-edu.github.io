@@ -24,4 +24,4 @@ The guide is divided into three parts.
 If you have questions about how Dodona works or if you have interesting ideas on how we can improve or expand the platform, please feel free to contact us. All comments and suggestions are more than welcome. To do so, navigate to the [contact page](https://dodona.be/en/contact/) by clicking on `Contact` in the footer (at the bottom of every page).
 Then fill in the details in the `Get in touch` panel and click the `send message` button in the bottom right corner of the panel.
 
-![image](./contact.png)
+![Contact form link](./contact.png)

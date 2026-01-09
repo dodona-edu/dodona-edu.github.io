@@ -11,32 +11,32 @@ Alle informatie zodat je als student kan navigeren naar oefeningen of oplossinge
 Oefeningen op Dodona kunnen ofwel voorkomen in een cursus, ofwel daarbuiten.
 
 - Oefeningen die tot een cursus behoren, kan je vinden door de pagina van een cursus te bezoeken.
-    ![image](./student.course_exercise_selection.png)
+    ![Selectie van een oefening in een cursus](./student.course_exercise_selection.png)
 - Oefeningen die niet tot een cursus behoren, kan je vinden door het [activiteitenoverzicht](https://dodona.be/nl/activities/) te bezoeken dat een lijst bevat van alle oefeningen.
 
 ::: tip Tip
 Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je het laatst oplossingen voor ingediend hebt over alle cursussen heen. Zo kan je op een snelle manier een oefening waar je recent op hebt gewerkt selecteren door op de naam van de oefening te klikken.
 
-![image](./student.exercise_all_submissions_page.png)
+![Recente oefeningen op startpagina](./student.exercise_all_submissions_page.png)
 
 :::
 
 Op elke oefeningenpagina staat bovenaan een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde taal. Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
-![image](./student.exercise_start.png)
+![Startpagina van een oefening](./student.exercise_start.png)
 
 ::: tip
 
 Als je een actie aan het uitvoeren bent op een oefening dan verschijnt de naam van de oefening naast `Dodona` aan de linkerkant van de navigatiebalk, eventueel voorafgegaan door de naam van de cursus en de naam van de oefeningenreeks waaruit je de oefening geselecteerd hebt. Door in de navigatiebalk op de naam van de oefening te klikken, navigeer je naar de oefeningpagina. Door in de navigatiebalk op de naam van de oefeningenreeks te klikken, navigeer je naar de oefeningenreeks op de cursuspagina. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je naar de cursuspagina.
 
-![image](./student.exercise_crumbs.png)
+![Broodkruimelnavigatie bij oefening](./student.exercise_crumbs.png)
 :::
 
 ## Indienen van een oplossing
 
 Op een oefeningpagina staat onder het paneel met de beschrijving van de oefening een tweede paneel waarmee je een oplossing kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de *code editor*. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. **Je mag zoveel indienen als je wil. Er wordt enkel rekening gehouden met het resultaat van jouw laatste oplossing**. Bij elke oplossing wordt [automatische feedback](#interpreteren-van-feedback) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
 
-![image](./student.exercise_before_submit.png)
+![Oefening voor het indienen](./student.exercise_before_submit.png)
 
 ::: tip Gebruik een IDE
 
@@ -51,7 +51,7 @@ Na het indienen wordt je oplossing in een wachtrij geplaatst. Zolang een oplossi
 
 Zodra de judge klaar is met het beoordelen van je oplossing krijgt ze haar finale status en wordt de feedbackpagina met gedetailleerde [feedback](#interpreteren-van-feedback) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
 
-![image](./student.exercise_feedback_correct_tab.png)
+![Feedback tabblad](./student.exercise_feedback_correct_tab.png)
 
 ## Navigeren naar een oplossing
 
@@ -59,29 +59,29 @@ Je kan op Dodona op verschillende manieren naar je ingediende oplossingen navige
 
 - Je kan al jouw oplossingen van één oefening bekijken door op de `Oplossingen` tab op de relevante oefeningenpagina te klikken.
 
-![image](./student.exercise_submissions_tab.png)
+![Oplossingen tabblad](./student.exercise_submissions_tab.png)
 
 - Je kan al jouw oplossingen binnen een cursus bekijken door op de `Ingediende oplossingen` van de relevante cursus kaart te klikken.
 
-![image](./student.course_submissions.png)
+![Link naar oplossingen cursus](./student.course_submissions.png)
 
 - Je kan alle oplossingen die je ooit hebt ingediend zien door in het gebruikersmenu in de navigatiebalk op `Mijn oplossingen` te klikken.
 
-![image](./student.all_submissions_link.png)
+![Link naar alle oplossingen in gebruikersmenu](./student.all_submissions_link.png)
 
 Een oplossingenoverzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de feedback. Vóór elke oplossing staat ook nog een [icoontje](/nl/guides/students/courses/#indienstatus) dat overeenkomt met de status van de oplossing. In het overzicht worden je oplossingen altijd opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan).
 
-![image](./student.all_submissions.png)
+![Pagina met alle ingediende oplossingen](./student.all_submissions.png)
 
 Je kunt een oplossing selecteren door in een oplossingenoverzicht op het pijltje te klikken aan rechterkant van de oplossing. Hierdoor navigeer je naar de feedbackpagina met de gedetailleerde feedback over de oplossing.
 
-![image](./student.submissions_to_exercise_feedback.png)
+![Oplossing selecteren in overzicht](./student.submissions_to_exercise_feedback.png)
 
 ## Interpreteren van feedback
 
 Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing.
 
-![image](./student.exercise_feedback_correct_page.png)
+![Pagina met feedback over correcte oplossing](./student.exercise_feedback_correct_page.png)
 
 Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oplossing:
 
@@ -95,15 +95,15 @@ Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oploss
 
     | status               | icoontje             | betekenis            |
     |----------------------|----------------------|----------------------|
-    | `In de wachtrij…` | ![image](../../../../images/submission_icons/queued.png) | oplossing staat in de wachtrij |
-    | `Aan het uitvoeren...` | ![image](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
-    | `Correct` | ![image](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
-    | `Fout` | ![image](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
-    | `Uitvoeringsfout` | ![image](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
-    | `Timeout` | ![image](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
-    | `Geheugenfout` | ![image](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
-    | `Compilatiefout` | ![image](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
-    | `Interne fout` | ![image](../../../../images/submission_icons/internal_error.png) | judge is gecrasht tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
+    | `In de wachtrij…` | ![In de wachtrij](../../../../images/submission_icons/queued.png) | oplossing staat in de wachtrij |
+    | `Aan het uitvoeren...` | ![Aan het uitvoeren](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
+    | `Correct` | ![Correct](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
+    | `Fout` | ![Fout](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
+    | `Uitvoeringsfout` | ![Uitvoeringsfout](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
+    | `Timeout` | ![Tijdslimiet overschreden](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
+    | `Geheugenfout` | ![Geheugenlimiet overschreden](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
+    | `Compilatiefout` | ![Compilatiefout](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
+    | `Interne fout` | ![Interne fout](../../../../images/submission_icons/internal_error.png) | judge is gecrasht tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 
     Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert.
@@ -112,11 +112,11 @@ Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oploss
 
 Onder de korte samenvatting staat meer gedetailleerde feedback die de judge kan uitgesplitst hebben over meerdere *tabs*. Naast de naam van een tab kan aan de rechterkant een *badge* staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab.
 
-![image](./student.exercise_feedback_incorrect_tab.png)
+![Feedback over foute oplossing](./student.exercise_feedback_incorrect_tab.png)
 
 De laatste tab heeft altijd de naam `Code` en bevat de broncode van de oplossing. Op bepaalde plaatsen in de broncode kan de judge opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde status aan de oplossing toegekend heeft.
 
-![image](./student.exercise_lint_error.png)
+![Voorbeeld van een linter-fout](./student.exercise_lint_error.png)
 
 ::: tip Tip
 
@@ -125,7 +125,7 @@ In de tab `Code` op de feedbackpagina kan je de broncode van de oplossing niet w
 
 Per tab rapporteert de judge over individuele **testen** waaraan hij de broncode onderworpen heeft. Daarbij worden gerelateerde testen gegroepeerd in een **testgeval** en worden testgevallen die van elkaar afhankelijk zijn gegroepeerd in een **context**.
 
-![image](./student.exercise_feedback_correct_tab.png)
+![Feedback over correcte oplossing](./student.exercise_feedback_correct_tab.png)
 
 Visueel worden alle testgevallen van een context met elkaar verbonden via een dunne verticale lijn aan de linkerkant. De kleur van die lijn geeft aan of de judge de volledige context beoordeelt als geslaagd (groene lijn) of als niet geslaagd (rode lijn).
 
@@ -138,15 +138,15 @@ Als de judge binnen een testgeval rapporteert over individuele testen, dan worde
 -   Een tekstuele vergelijking tussen een verwachte waarde en een waarde die gegenereerd werd aan de hand van de oplossing. Als minstens één van beide waarden uit meerdere regels bestaat, dan worden de overeenkomstige regels tegenover elkaar uitgelijnd. Identieke overeenkomstige regels worden weergegeven met een transparante achtergrondkleur. Als overeenkomstige regels van elkaar verschillen dan worden ze weergegeven met een lichtgekleurde achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde). Individuele karakters die verschillen binnen overeenkomstige regels worden weergegeven met een donkerder achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde).
 
 -   Algemene feedback over de uitgevoerde test. Voor deze feedback heeft de judge alle vrijheid wat betreft de vormgeving, waardoor hij zowel tekstuele als grafische feedback kan aanleveren.
-    ![image](./student.exercise_feedback_incorrect_tab.png)
+    ![Feedback tabblad](./student.exercise_feedback_incorrect_tab.png)
 
-    ![image](./student.exercise_feedback_visual.nl.png)
+    ![Visuele feedback gemaximaliseerd](./student.exercise_feedback_visual.nl.png)
 
 ## Vragen stellen
-![image](./student.ask_questions.png)
+![Knop om vragen te stellen](./student.ask_questions.png)
 Nadat je je oplossing hebt ingediend, kan je op drie manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de roze cirkel klikken een vraag stellen bij een specifieke regel code. Je kan ook een stuk code selecteren en dan hierover vragen stellen via diezelfde knop.
 
-![image](./student.ask_question.gif)
+![Animatie vraag stellen](./student.ask_question.gif)
 
 Typ in het tekstvak de vraag die je aan de lesgever wil stellen. Je kan Markdown gebruiken om je tekst extra opmaak te geven. Klik als laatste op `Vraag stellen`.
 
@@ -161,6 +161,6 @@ Je kan met Markdown extra opmaak toevoegen door:
 Bekijk hier [alle mogelijkheden van Markdown](/nl/references/exercise-description/#markdown).
 :::
 
-![img.png](./student.react.png)
+![Reageren op opmerking](./student.react.png)
 
 Daarnaast kan je ook reageren op een bestaande vraag van jezelf of op een opmerking van een lesgever. Klik hiervoor op `Reageer` onder de vraag of opmerking. Typ je reactie in het tekstvak en klik op `Reageer`.
