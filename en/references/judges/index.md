@@ -45,6 +45,12 @@ It does render the Markdown code of a student and can be useful to manually eval
 **Get started** [Documentation](https://github.com/dodona-edu/judge-markdown) \
 **Created by:** [Team Dodona](mailto:dodona@ugent.be)
 
+## Nextflow
+The Nextflow judge uses CodeNarc to lint workflows and also checks the existence of produced files.\
+**Programming languages:** Nextflow\
+**Get started** [Git repo](https://github.com/dodona-edu/judge-nextflow), [examples](https://github.com/Bond-009/dodona-nextflow-exercises) \
+**Created by:** [Lode Willems](mailto:bits@vib.be)
+
 ## Prolog
 Prolog is a judge that can be used for exercises on the Prolog programming language.
 It supports PLUnit, QuickCheck and simple input output tests.\
