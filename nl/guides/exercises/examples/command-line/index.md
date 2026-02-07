@@ -39,7 +39,7 @@ repository/
 
 ## 2. Configuratie
 
-Dodona eist voor elke oefeningen ook een [configuratiebestand](/nl/references/exercise-config).
+Dodona eist voor elke oefening ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
 Maak het bestand `config.json` in de map `sum` met de volgende inhoud:
@@ -61,7 +61,7 @@ Maak het bestand `config.json` in de map `sum` met de volgende inhoud:
 }
 ```
 
-In dit bestand worden een aantal dingen gespecifieerd:
+In dit bestand worden een aantal dingen gespecificeerd:
 
 - `description.names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_).
 - `evaluation.handler`: We gebruiken TESTed als judge.

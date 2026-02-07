@@ -8,7 +8,7 @@ order: 2
 
 In deze handleiding stellen we een oefening op die gebruik maakt van functies.
 
-We zullen een oefeningen maken waar de leerlingen een functie moeten implementeren die het kleinste getal van de twee argumenten teruggeeft.
+We zullen een oefening maken waar de leerlingen een functie moeten implementeren die het kleinste getal van de twee argumenten teruggeeft.
 We zullen deze oefening hier volledig uitwerken voor gebruik met Dodona.
 
 We gaan er in deze handleiding van uit dat je al een werkende oefeningenrepository hebt.

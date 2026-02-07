@@ -55,7 +55,7 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
   De geheime link voor een oefeningenreeks kan je onderaan de bewerk-pagina voor die reeks vinden.
   ![verborgen reeks link](./staff.series_hidden_link.png)
 
-  Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te klikken. Dit kan je bijvoorbeeld doen als je per ongeluk de link kenbaar hebt gemaakt aan iemand die ze niet zou mogen zijn. Hou er wel rekening mee dat de oude link niet meer zal werken van zodra je een nieuwe genereert.
+  Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te klikken. Dit kan je bijvoorbeeld doen als je per ongeluk de link kenbaar hebt gemaakt aan iemand die ze niet zou mogen zien. Hou er wel rekening mee dat de oude link niet meer zal werken van zodra je een nieuwe genereert.
   ![reekslink vernieuwen](./staff.series_hidden_link_reset.png)
 
 * `Beschrijving`: een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in de cursus. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/references/exercise-description/#markdown).

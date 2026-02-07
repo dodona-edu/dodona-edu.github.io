@@ -27,7 +27,7 @@ Dit zal je naar een [overzicht van alle cursussen](https://dodona.be/nl/courses/
 
 ### Hoe registreer je?
 
-Als je navigeert naar de cursus dat je zocht, waarvoor je nog niet geregistreerd bent, dan zie je bovenaan de cursuspagina een paneel dat aangeeft of en hoe je je voor de cursus kan registreren. Hierbij zijn er drie mogelijkheden afhankelijk van hoe de cursus geconfigureerd werd:
+Als je navigeert naar de cursus die je zocht, waarvoor je nog niet geregistreerd bent, dan zie je bovenaan de cursuspagina een paneel dat aangeeft of en hoe je je voor de cursus kan registreren. Hierbij zijn er drie mogelijkheden afhankelijk van hoe de cursus geconfigureerd werd:
 
 -   De cursus werkt met een **open registratieprocedure**, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `Registreren` om je voor de cursus te registreren.
 

@@ -65,7 +65,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
   * `Enkel geregistreerde gebruikers`: alleen cursusbeheerders zien de cursus in het publieke cursusoverzicht. Er staat een icoontje bij om hen er op te wijzen dat andere gebruikers de cursus daar niet kunnen zien. Dit icoontje is ook te vinden op de cursuspagina zelf. Enkel geregistreerde gebruikers kunnen naar deze pagina navigeren. Andere gebruikers kunnen zich enkel voor de cursus registreren als ze een rechtstreekse registratielink gebruiken.
 
-* `Geheime link`: bij het aanmaken van een cursus wordt automatisch een geheime gegenereerd als toegangsmechanisme voor verborgen cursussen. Met deze link kunnen gebruikers die de cursus normaal niet kunnen zien toegang krijgen tot je cursus en zich registreren. Dit kan gebruikt worden om gebruikers van buiten je onderwijsinstelling toegang te geven tot je cursus als die enkel zichtbaar staat voor gebruikers van je onderwijsinstelling. Je vindt deze geheime link op de cursus-bewerkenpagina.
+* `Geheime link`: bij het aanmaken van een cursus wordt automatisch een geheime link gegenereerd als toegangsmechanisme voor verborgen cursussen. Met deze link kunnen gebruikers die de cursus normaal niet kunnen zien toegang krijgen tot je cursus en zich registreren. Dit kan gebruikt worden om gebruikers van buiten je onderwijsinstelling toegang te geven tot je cursus als die enkel zichtbaar staat voor gebruikers van je onderwijsinstelling. Je vindt deze geheime link op de cursus-bewerkenpagina.
 
   ![toegangslink](./staff.course_hidden_registration_link.png)
 

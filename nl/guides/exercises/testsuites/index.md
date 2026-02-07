@@ -5,7 +5,7 @@ order: 3
 
 # Testplannen voor oefeningen
 
-Om te controleren of dat een ingediende oplossing juist is, gebruikt Dodona testplannen.
+Om te controleren of een ingediende oplossing juist is, gebruikt Dodona testplannen.
 Dat testplan bevat een reeks testgevallen, die ervoor zorgen dat je redelijk zeker bent of een oplossing juist is of niet.
 
 In deze handleiding bespreken we kort de structuur, gevolgd door de verschillende mogelijkheden.
@@ -17,8 +17,8 @@ Er bestaan ook volledige voorbeelden voor eenvoudigere scenarios:
 
 - [Oefening met input-output](/nl/guides/exercises/examples/input-output): een oefening waarbij er invoer gelezen wordt en een resultaat uitgeschreven wordt
 - [Oefening met functies](/nl/guides/exercises/examples/function): hier moet een functie geschreven worden die een returnwaarde geeft
-- [Oefening met klassen](/nl/guides/exercises/examples/class): hier moet een klassen geschreven worden
-- [Oefening met argumenten](/nl/guides/exercises/examples/command-line): hier moet een programma geschreven worden dat argumenten aanvaard
+- [Oefening met klassen](/nl/guides/exercises/examples/class): hier moet een klasse geschreven worden
+- [Oefening met argumenten](/nl/guides/exercises/examples/command-line): hier moet een programma geschreven worden dat argumenten aanvaardt
 
 Deze handleiding bevat ook enkel een aantal veelvoorkomende gevallen.
 In de [referentiegids](/nl/references/tested/dsl) staat het volledige formaat voor testplannen uitgelegd.

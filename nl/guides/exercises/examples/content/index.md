@@ -14,7 +14,7 @@ De bestaande leesactiviteit kan uiteraard als voorbeeld dienen.
 
 ::: info Analoog aan een oefening
 De structuur en `config.json` voor een leesactiviteit zijn identiek aan deze van een oefening.
-Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en alles die specifiek voor oefeningen is, mag achterwege gelaten worden.
+Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en alles wat specifiek voor oefeningen is, mag achterwege gelaten worden.
 :::
 
 ## 1. Structuur
@@ -29,7 +29,7 @@ Maak daarna de map `media` aan in de map `description` waarin de afbeeldingen en
 De map voor deze leesactiviteit moet er als volgt uitzien:
 
 ```
-reading-activities//
+reading-activities/
 └── markdown_demo/
    └── description/
       └── media/
@@ -37,7 +37,7 @@ reading-activities//
 
 ## 2. Configuratie
 
-Dodona eist voor elke leesactiviteiten ook een [configuratiebestand](/nl/references/exercise-config).
+Dodona eist voor elke leesactiviteit ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
 Maak het bestand `config.json` in de map `markdown_demo` met de volgende inhoud:
@@ -58,13 +58,13 @@ Maak het bestand `config.json` in de map `markdown_demo` met de volgende inhoud:
 In dit bestand worden drie dingen gespecifieerd:
 
 - `names`: De **namen** van de leesactiviteit zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_) (in dit geval zijn beide namen hetzelfde).
-- `acces`: Het **toegangsniveau** is hier _private_. We kiezen voor een private leesactiviteit omdat dit maar een handleiding is, maar we moedigen aan om je leesactiviteiten publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit publieke leesactiviteiten op Dodona).
+- `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private leesactiviteit omdat dit maar een handleiding is, maar we moedigen aan om je leesactiviteiten publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit publieke leesactiviteiten op Dodona).
 - `type`: Moet ingesteld worden op `content` voor leesactiviteiten. De standaardwaarde indien afwezig is `exercise`.
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
 ```
-reading-activities//
+reading-activities/
 └── markdown_demo/
    ├── description/
    |  └── media/
@@ -169,7 +169,7 @@ De inhoud van leesactiviteiten wordt geschreven in Markdown, een redelijk eenvou
 Nadat je deze twee bestanden gemaakt hebt, moet je repository er zo uitzien:
 
 ```
-reading-activities//
+reading-activities/
 └── markdown_demo/
    ├── description/
    |  ├── media/

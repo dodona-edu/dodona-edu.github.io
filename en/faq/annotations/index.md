@@ -74,7 +74,7 @@ You can also directly mark a question as answered. This is often useful if you k
 
 > Note: comments support Markdown formatting, so you can use bold, italics, lists, ... You can check out all Markdown features in [this reference](/en/references/exercise-description/#markdown).
 
-## How can I comment on a students' submission? <Badge type="tip" text="teacher" />
+## How can I comment on a student's submission? <Badge type="tip" text="teacher" />
 
 As a teacher, you can also comment on the code of your students. This can be useful to give feedback on their solution, or to point out a mistake.
 

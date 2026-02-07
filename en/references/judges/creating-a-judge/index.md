@@ -19,7 +19,7 @@ As a Dodona staff member, you can go to the "Judges" page through the administra
 
 ## 2. Repository Structure
 
-The only thing a judge repository requires is a `run` executable in the root of the repository. This file willed be executed inside a docker container, where it can use the rest of the files in the repository. Optionally, the repository also contains a `config.json` file in the root, [used to overwrite configurations](#input).
+The only thing a judge repository requires is a `run` executable in the root of the repository. This file will be executed inside a docker container, where it can use the rest of the files in the repository. Optionally, the repository also contains a `config.json` file in the root, [used to overwrite configurations](#input).
 
 ## 3. Judge Interface
 
@@ -113,7 +113,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
     - `"compilation error"`, the submitted code did not compile.
     - `"runtime error"`, the submitted code crashed during the tests.
     - `"memory limit exceeded"`, the submitted code exceeded the memory limit during the tests.
-    - `"time limit exceeded"`, the submitted code did not finish the tests withing the given time.
+    - `"time limit exceeded"`, the submitted code did not finish the tests within the given time.
     - `"wrong"`, the submitted code finished the tests, but did not pass all tests.
     - `"correct"`, the submitted code finished and passed all tests.
   - Valid values, but used only by the platform:

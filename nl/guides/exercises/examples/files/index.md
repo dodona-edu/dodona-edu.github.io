@@ -7,7 +7,7 @@ order: 5
 # Oefening met bestanden
 
 In deze handleiding stellen we een oefening op die gebruik maakt van bestanden.
-Dit zowel op bestanden als invoer (dus de code van de studenten leest een bestand) en als uitvoer (de code van de studenten maakt en schrijft naar een bestand).
+Dit geldt zowel voor bestanden als invoer (dus de code van de studenten leest een bestand) en als uitvoer (de code van de studenten maakt en schrijft naar een bestand).
 In dit voorbeeld gebruiken we de [commandoregel](/nl/guides/exercises/examples/command-line), maar het deel met bestanden is hetzelfde bij gebruik met andere soorten oefeningen, zoals functies of klassen.
 
 Als voorbeeld implementeren we een programma dat een gesorteerde kopie van een bestand maakt.
@@ -43,7 +43,7 @@ repository/
 
 ## 2. Configuratie
 
-Dodona eist voor elke oefeningen ook een [configuratiebestand](/nl/references/exercise-config).
+Dodona eist voor elke oefening ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
 Maak het bestand `config.json` in de map `sort` met de volgende inhoud:

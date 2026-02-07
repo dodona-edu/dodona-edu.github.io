@@ -38,7 +38,7 @@ repository/
 
 ## 2. Configuratie
 
-Dodona eist voor elke oefeningen ook een [configuratiebestand](/nl/references/exercise-config).
+Dodona eist voor elke oefening ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
 Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
@@ -60,13 +60,13 @@ Maak het bestand `config.json` in de map `counter` met de volgende inhoud:
 }
 ```
 
-In dit bestand worden een aantal dingen gespecifieerd:
+In dit bestand worden een aantal dingen gespecificeerd:
 
 - `description.names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_).
 - `evaluation.handler`: We gebruiken TESTed als judge.
 - `evaluation.test_suite`: Het testplan krijgt de naam `suite.yaml`.
 - `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
-- `acces`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
+- `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
 
