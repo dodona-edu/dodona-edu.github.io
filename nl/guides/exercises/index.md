@@ -17,8 +17,8 @@ We hebben ook voorbeelden van vier veelvoorkomende soorten oefeningen:
 
 - [Oefening met input-output](/nl/guides/exercises/examples/input-output): een oefening waarbij er invoer gelezen wordt en een resultaat uitgeschreven wordt
 - [Oefening met functies](/nl/guides/exercises/examples/function): hier moet een functie geschreven worden die een returnwaarde geeft
-- [Oefening met klassen](/nl/guides/exercises/examples/class): hier moet een klassen geschreven worden
-- [Oefening met argumenten](/nl/guides/exercises/examples/command-line): hier moet een programma geschreven worden dat argumenten aanvaard
+- [Oefening met klassen](/nl/guides/exercises/examples/class): hier moet een klasse geschreven worden
+- [Oefening met argumenten](/nl/guides/exercises/examples/command-line): hier moet een programma geschreven worden dat argumenten aanvaardt
 
 Deze tutorials gaan ervan uit dat je al een repository hebt met oefeningen.
 Als dat niet het geval is, volg je best eerst de [kant-en-klare tutorial](/nl/guides/exercises/creating-exercises/introduction).

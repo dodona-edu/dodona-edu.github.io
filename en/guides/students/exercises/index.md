@@ -70,7 +70,7 @@ A submissions overview contains the submission number, submission time, status, 
 
 ![All submissions page](./student.all_submissions.png)
 
-You can select a solution by clicking on the arrow to the right of the solution in a solutions overview. This will navigate you to the feedback page with detailed feedback about the solution. the same page is displayed when you click on the submission number.
+You can select a solution by clicking on the arrow to the right of the solution in a solutions overview. This will navigate you to the feedback page with detailed feedback about the solution. The same page is displayed when you click on the submission number.
 
 ![Submissions to exercise feedback](./student.submissions_to_exercise_feedback.png)
 

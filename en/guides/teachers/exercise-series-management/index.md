@@ -55,7 +55,7 @@ You will be directed to a form where you can set the following properties of the
 
   * `Visible for everyone`: All users see the exercise series on the course page.
 
-  * `Only vissible via secret link`: Only course administrators see the exercise series on the course page.
+  * `Only visible via secret link`: Only course administrators see the exercise series on the course page.
     There is a clear message indicating that other users cannot see the exercise series.
     You can give users access to this series by sending them the specific secret link (see below) of this series.
 
@@ -67,7 +67,7 @@ You will be directed to a form where you can set the following properties of the
 
   ![series hidden info](./staff.course_series_info_message.png)
 
-* `Secret Link`: When creating a series that is only vissible via secret link, a secret link is automatically generated to provide access to this series.
+* `Secret Link`: When creating a series that is only visible via secret link, a secret link is automatically generated to provide access to this series.
   Without this link, users cannot see this exercise series.
 
   You can find the secret link for an exercise series at the bottom of the edit page for that series.

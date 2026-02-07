@@ -145,7 +145,7 @@ Feedback within an evaluation must always be released via the `Release Feedback`
 On the right side of the page, you will find the navigation and scoring interface.
 From top to bottom, you will see the following elements:
 * **Next**: via this button, you quickly move to the next student for the same exercise.
-* **Schoring scheme**: Here you will see all score items for this exercise. You can give a score for each of the components. Your points are automatically kept up to date as you enter them, and the total score is always up to date. If all partial scores have been entered, a checkmark will appear under **Total**. Via the thumbs up and down, you can quickly enter a 0 or the maximum score for a component.
+* **Scoring scheme**: Here you will see all score items for this exercise. You can give a score for each of the components. Your points are automatically kept up to date as you enter them, and the total score is always up to date. If all partial scores have been entered, a checkmark will appear under **Total**. Via the thumbs up and down, you can quickly enter a 0 or the maximum score for a component.
 * **Progress for this exercise**: This is the same progress indicator as on the overview page. The bar indicates how far you are in the grading process for this exercise.
 * **Student Status**: Here you will see the status of the submitted solutions for all exercises within this series. These icons are clickable and quickly take you to the corresponding evaluation page.
 

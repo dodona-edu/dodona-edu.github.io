@@ -215,13 +215,13 @@ The constructor of this class has the following parameters:
 3. `readable_actual`, optional: The generated value to show on Dodona.
 4. `messages`, optional: A list of messages (`Message`s or strings).
 5. `dsl_expected`, optional: The expected value as [string value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
-6. `dsl_actual`, optional: The generated value as [strong value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
+6. `dsl_actual`, optional: The generated value as [string value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
 
 In most cases, and especially when preparing programming-language-independent exercises, it is better to use `dsl_expected` and `dsl_actual`:
 otherwise the check function itself is responsible for displaying the expected and actual value in the correct programming language.
 
 The list of messages must be strings or `Message`s.
-A `Message` is a class from the `evluation_utils` module and has the following attributes:
+A `Message` is a class from the `evaluation_utils` module and has the following attributes:
 
 1. `description`: the message to show.
 2. `format`: the format of the message, like `text`, `code` or `html`.
@@ -271,7 +271,7 @@ This object contains a set of configuration options that influence how the test 
 The following options are available:
 
 - `applyRounding`: apply rounding when comparing values as float point numbers
-- `roundTo`: the number of decimals to round to, if `applyRouding` is true
+- `roundTo`: the number of decimals to round to, if `applyRounding` is true
 - `caseInsensitive`: ignore the case of text when comparing strings
 - `ignoreWhitespace`: ignore leading and trailing whitespace
 - `tryFloatingPoint`: try comparing text as floating point numbers
@@ -298,7 +298,7 @@ The following is supported:
 - Complex values, such as `[5, 6, 7]`, `{5, "Hello"}` or `{"key": "value"}`.
 - Function calls, including named arguments `the_function(5, named=6)`. Do note that named arguments are converted to positional arguments in programming languages that do not support named arguments.
 - Constructors (using our convention).
-- Assignments, such as `some_variabel = 5`.
+- Assignments, such as `some_variable = 5`.
 - Referencing variables, such as `the_function(some_variable)`.
 
 Notably, absent are any type of function or class definitions and all operators.

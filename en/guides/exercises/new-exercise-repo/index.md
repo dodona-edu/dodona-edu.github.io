@@ -48,4 +48,4 @@ The only thing left to do is adding this URL to GitHub. To do this, open your re
 You are now ready to add exercises and reading activities to your repository. If all goes well, they should show up automatically on Dodona.
 
 To find out more about how to create exercises in your repository, checkout the [repository directory structure](/en/references/repository-directory-structure) reference.
-The specific format of the test for your exercises depends on your chosen judge. You can find on overview of all our supported judges, with links to their documentation, on the [judge overview](/en/references/judges).
+The specific format of the test for your exercises depends on your chosen judge. You can find an overview of all our supported judges, with links to their documentation, on the [judge overview](/en/references/judges).

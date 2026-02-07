@@ -39,7 +39,7 @@ repository/
 
 ## 2. Configuratie
 
-Dodona eist voor elke oefeningen ook een [configuratiebestand](/nl/references/exercise-config).
+Dodona eist voor elke oefening ook een [configuratiebestand](/nl/references/exercise-config).
 Dit bestand bevat metadata, die door Dodona gebruikt worden.
 
 Maak het bestand `config.json` in de map `hello-world` met de volgende inhoud:
@@ -180,7 +180,7 @@ Dat kan als volgt:
     Hier is nog een regel
     Een laatste regel
 ```
-We hebber er hier voor gekozen om de YAML-syntaxis voor meerdere regels te gebruiken.
+We hebben er hier voor gekozen om de YAML-syntaxis voor meerdere regels te gebruiken.
 Als alternatief kunnen we ook expliciet newlines plaatsen:
 
 ```yaml
