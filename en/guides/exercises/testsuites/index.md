@@ -83,7 +83,7 @@ A good overview can be found on [this page](https://quickref.me/yaml.html).
 Your favorite search engine will undoubtedly find many more.
 
 If your text editor supports JSON Schema, you can add it to get validation and autocompletion in the test suites: use this [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json).
-If you use VS Code, you can also use our [extension](https://marketplace.visualstudio.com/items?itemName=dodona.dodona-exercise-plugin).
+If you use VS Code, you can also use our [extension](https://marketplace.visualstudio.com/items?itemName=DodonaLearningTechnologies.dodona-exercise-assistant).
 This will automatically configure JSON Schema.
 
 ## Function Calls and Return Values

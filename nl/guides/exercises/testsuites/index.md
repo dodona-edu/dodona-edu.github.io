@@ -83,7 +83,7 @@ Een goed overzicht is op [deze pagina](https://quickref.me/yaml.html) te vinden.
 Je favoriete zoekmachine vindt er ongetwijfeld nog veel meer.
 
 Als jouw tekstverwerker JSON Schema ondersteunt, kan je deze toevoegen om validatie en automatische aanvulling in de testplannen te krijgen: gebruik dit [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json).
-Gebruik je VS Code, kan je ook onze [extensie](https://marketplace.visualstudio.com/items?itemName=dodona.dodona-exercise-plugin) gebruiken.
+Gebruik je VS Code, kan je ook onze [extensie](https://marketplace.visualstudio.com/items?itemName=DodonaLearningTechnologies.dodona-exercise-assistant) gebruiken.
 Die zal vanzelf JSON Schema configureren.
 
 ## Functieoproepen en returnwaarden
