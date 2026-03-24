@@ -403,3 +403,52 @@ Note that by default, you can't use Markdown inside an HTML tag. If you want to 
     Peek a **boo**!
 </details>
 ```
+
+## Parsons puzzles
+
+To add a Parsons puzzle to your exercise or reading activity description, you can use the `<dw-parsons-puzzle>` element. A [Parsons puzzle](https://en.wikipedia.org/wiki/Parsons_problem) presents code fragments that students must drag and drop into the correct order.
+
+![Parsons puzzle](parsons.png)
+
+Wrap your code in a `<dw-parsons-puzzle>` element containing a `<pre>` element. Separate the draggable code blocks with `---`. Each block (one or more lines) can be dragged and reordered by the student.
+
+```html
+<dw-parsons-puzzle>
+<pre>
+def output():
+---
+    print("Hello World")
+---
+    print("This is my first Python program.")
+---
+    output()
+</pre>
+</dw-parsons-puzzle>
+```
+
+Lines that are not separated by `---` are grouped together in a single draggable block. This allows you to create blocks that span multiple lines:
+
+```html
+<dw-parsons-puzzle>
+<pre>
+# Hello World program
+
+# -------------------------
+# Subprograms
+# -------------------------
+---
+def output():
+---
+    print("Hello World")
+---
+    print("This is my first Python program.")
+---
+
+# -------------------------
+# Main program
+# -------------------------
+---
+output()
+</pre>
+</dw-parsons-puzzle>
+```
