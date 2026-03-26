@@ -11,7 +11,7 @@ Inside an exercise repository, Dodona handles every directory containing a `conf
 - **A `config.json` file**: this file contains the [exercise-specific configuration](/en/references/exercise-config). This configuration will be merged with all `dirconfig.json` files in the exercise's ancestor directories. You can always override config values set by a higher directory with the `config.json`-file.
 - **An optional `readme.md`, `readme.en.md` and/or `readme.nl.md` file:** The content of these files will be shown on the exercise info page. These files are meant to give extra context to teachers who might be interested in using this exercise in a course. If a localized file is available for a user's language (`readme.<lang>.md`) that will be shown instead of the generic `readme.md`. This is useful because `readme.md` is rendered and shown by GitHub in the exercise directory. We suggest creating a `readme.md` in the language of your target audience and optionally creating a translated `readme.nl.md` or `readme.en.md` file in the other language.
 - **A `description` directory**: this directory contains the files describing the exercise containing:
-  - **A `description.en.md` and/or `description.nl.md` file**: these files contain the English and/or Dutch description of the exercise.
+  - **A `description.<lang>.md` file** (e.g., `description.en.md`, `description.nl.md`, `description.fr.md`): these files contain the description of the exercise for each language, identified by a two-letter language code.
 
 ::: tip Examples
 Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.be/en/courses/358/) to see some examples on how to use these files.
@@ -46,6 +46,7 @@ Any folder named preparation, including its contents, will be ignored by Dodona 
 |   +-- description            #
 |   |   +-- description.nl.md  # The description in Dutch
 |   |   +-- description.en.md  # The description in English
+|   |   +-- description.fr.md  # The description in French
 |   |   +-- media              #
 |   |   |   +-- some_image.png # An image used in the description
 |   |   +-- boilerplate        #
@@ -68,6 +69,7 @@ Any folder named preparation, including its contents, will be ignored by Dodona 
 |   +-- description            #
 |   |   +-- description.nl.md  # The description in Dutch
 |   |   +-- description.en.md  # The description in English
+|   |   +-- description.fr.md  # The description in French
 |   |   +-- media              #
 |   |   |   +-- some_image.png # An image used in the description
 :

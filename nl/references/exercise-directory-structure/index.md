@@ -11,7 +11,7 @@ Binnenin een oefeningmap behandelt Dodona elke map met een `config.json`-bestand
 - **Een `config.json`-bestand**: dit bestand bevat de [oefening-specifieke configuratie](../exercise-config/). Deze configuratie zal samengevoegd worden met alle `dirconfig.json`-bestanden in de bovenliggende map van de oefeningmap. Je kan altijd configuratiewaarden die ingesteld werden door een bovenliggende map overschrijven met het `config.json`-bestand.
 - **Een optioneel `readme.md`-, `readme.en.md`- en/of `readme.nl.md`-bestand:** De inhoud van deze bestanden zal getoond worden op de oefening-infopagina. Deze bestanden hebben als doel extra informatie geven aan leerkrachten die deze oefening misschien willen gebruiken in een cursus. Als er een bestand beschikbaar is in de taal van de gebruiker (`readme.<taal>.md`), dan zal deze getoond worden in plaats van het generieke `readme.md`-bestand. Dit is nuttig omdat `readme.md` getoond wordt door GitHub in de oefeningmap. We suggereren om een `readme.md`-bestand te maken in de taal van je doelpubliek en dit optioneel te vertalen door `readme.nl.md` of `readme.en.md` te voorzien.
 - **Een `description`-map**: deze map bevat de volgende bestanden die de oefening beschrijven:
-  - **Een `description.en.md`- en/of `description.nl.md`-bestand**: deze bestanden bevatten de Engelse en/of Nederlandse beschrijving van de oefening.
+  - **Een `description.<taal>.md`-bestand** (bv. `description.en.md`, `description.nl.md`, `description.fr.md`): deze bestanden bevatten de beschrijving van de oefening per taal, aangeduid met een tweelettercode.
 
 ::: tip Voorbeelden
 Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze bestanden gebruikt.
@@ -46,6 +46,7 @@ Mappen met de naam preparation, inclusief de inhoud, worden door Dodona genegeer
 |   +-- description            #
 |   |   +-- description.nl.md  # De beschrijving in het Nederlands
 |   |   +-- description.en.md  # De beschrijving in het Engels
+|   |   +-- description.fr.md  # De beschrijving in het Frans
 |   |   +-- media              #
 |   |   |   +-- some_image.png # Een afbeelding die gebruikt wordt in de beschrijving
 |   |   +-- boilerplate        #
@@ -68,6 +69,7 @@ Mappen met de naam preparation, inclusief de inhoud, worden door Dodona genegeer
 |   +-- description            #
 |   |   +-- description.nl.md  # De beschrijving in het Nederlands
 |   |   +-- description.en.md  # De beschrijving in het Engels
+|   |   +-- description.fr.md  # De beschrijving in het Frans
 |   |   +-- media              #
 |   |   |   +-- some_image.png # Een afbeelding die gebruikt wordt in de beschrijving
 :
