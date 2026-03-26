@@ -53,6 +53,10 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden.
 
+* `Taal`: de natuurlijke taal waarin de cursus gegeven wordt. Dit kan ingesteld worden op een van de ondersteunde talen (bv. Nederlands, Engels, Frans, ...). Dit is optioneel en helpt gebruikers cursussen te vinden in hun voorkeurstaal. Daarnaast bepaalt de taal van de cursus in welke taal de activiteiten in de cursus getoond worden: als een activiteit een beschrijving heeft in de taal van de cursus, dan zal die beschrijving gebruikt worden.
+
+* `Programmeertaal`: de programmeertaal die in de cursus gebruikt wordt. Dit is optioneel en wordt enkel gebruikt om gebruikers te helpen cursussen te vinden in hun voorkeursprogrammeertaal.
+
 * `Beschrijving`: optioneel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
 
 
