@@ -53,7 +53,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Academic Year`: the academic year in which the course is offered.
 
-* `Language`: the language in which the course is given. This is optional and only used to help users find courses in their preferred language.
+* `Language`: the natural language in which the course is given. This can be set to any of the supported languages (e.g. Dutch, English, French, ...). It is optional and helps users find courses in their preferred language. Additionally, the course language determines in which language the activities in the course are shown: if an activity has a description available in the course language, that description will be used.
 
 * `Programming Language`: the programming language that is used in the course. This is optional and only used to help users find courses in their preferred programming language.
 
