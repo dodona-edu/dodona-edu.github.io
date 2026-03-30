@@ -16,7 +16,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
   - `public`: any other teacher on Dodona can use this exercise
   - `private`: only teachers with explicit permission can use this exercise
 - **`description`** (object): the specification of the description of the exercise
-  - **`names`** (object): the name of the exercise, with two-letter language codes as keys (e.g., `nl`, `en`, `fr`)
+  - **`names`** (object): the name of the exercise, with [two-letter language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) as keys (e.g., `nl`, `en`, `fr`)
 - **`evaluation`**: the specification of the evaluation procedure
   - **`handler`** (string, optional): the name of the judge that is used for evaluation. By default, Dodona uses the judge specified for the repository. An overview of the available judges can be found [here](/en/references/judges).
   - **`image`** (string, optional): the name of the docker image that is used for evaluation. By default, Dodona uses the image specified by the judge.
@@ -35,7 +35,7 @@ The structure for a reading activity is identical to that of an exercise. There 
   - `public`: any other teacher on Dodona can use this exercise
   - `private`: only teachers with explicit permission can use this exercise
 - **`description`** (object): the specification of the description of the exercise
-  - **`names`** (object): the name of the exercise, with two-letter language codes as keys (e.g., `nl`, `en`, `fr`)
+  - **`names`** (object): the name of the exercise, with [two-letter language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) as keys (e.g., `nl`, `en`, `fr`)
 - **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
 - **`contact`** (string, optional): info about the author of this reading activity, formatted like an email To header.
 

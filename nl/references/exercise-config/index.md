@@ -16,7 +16,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiken
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
-  - **`names`** (object): de naam van de oefening, met tweelettercodes als sleutels (bv. `nl`, `en`, `fr`)
+  - **`names`** (object): de naam van de oefening, met [tweelettercodes](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes) als sleutels (bv. `nl`, `en`, `fr`)
 - **`evaluation`**: de specificatie van de evaluatieprocedure
   - **`handler`** (string, optioneel): de naam van de judge die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de judge die ingesteld is voor de repository. Een overzicht van de mogelijke judges vind je [hier](/nl/references/judges).
   - **`image`** (string, optioneel): de naam van de docker image die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de image die ingesteld is voor de judge.
@@ -35,7 +35,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiken
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
-  - **`names`** (object): de naam van de oefening, met tweelettercodes als sleutels (bv. `nl`, `en`, `fr`)
+  - **`names`** (object): de naam van de oefening, met [tweelettercodes](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes) als sleutels (bv. `nl`, `en`, `fr`)
 - **`labels`** (lijst van strings, optioneel): een lijst van labels die gebruikt kunnen worden om deze oefening te vinden via de Dodona web interface. Standaard een lege lijst.
 - **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een e-mail-ontvanger hoofding.
 
