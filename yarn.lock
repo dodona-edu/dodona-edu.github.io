@@ -1079,10 +1079,10 @@ regex@^5.1.1:
   dependencies:
     regex-utilities "^2.3.0"
 
-resolve-accept-language@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.2.1.tgz#821677d9c32465be573773277a1ee1a6bd2f4ce2"
-  integrity sha512-En80VSeDCy21t5+7wjJKiSBKNJwDRlj12Mo6cjZzuLvF3Pr/NQT4QzYrCCkdTfon8mt418ismwLPdQbfG8+pcw==
+resolve-accept-language@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/resolve-accept-language/-/resolve-accept-language-3.2.2.tgz#8a68df50fd206045f3113bee09ee594dd550cdff"
+  integrity sha512-U+JcZDtlnqeYmdE+fgE5QXWl4fZuLAbcci3nDgXuXA8cxlvShIrV7KvU5/HgUd3mPCYqBh0C7Y1vEfC3VIqVJA==
 
 rfdc@^1.4.1:
   version "1.4.1"
