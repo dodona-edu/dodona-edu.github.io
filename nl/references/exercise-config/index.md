@@ -17,6 +17,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
   - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
   - **`names`** (object): de naam van de oefening, met [tweelettercodes](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes) als sleutels (bv. `nl`, `en`, `fr`)
+  - **`sandbox_files`** (array van strings, optioneel): een lijst van bestanden in de `description/media`-folder die automatisch ingeladen worden in de sandbox
 - **`evaluation`**: de specificatie van de evaluatieprocedure
   - **`handler`** (string, optioneel): de naam van de judge die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de judge die ingesteld is voor de repository. Een overzicht van de mogelijke judges vind je [hier](/nl/references/judges).
   - **`image`** (string, optioneel): de naam van de docker image die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de image die ingesteld is voor de judge.

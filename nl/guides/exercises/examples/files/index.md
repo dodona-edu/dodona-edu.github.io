@@ -54,7 +54,8 @@ Maak het bestand `config.json` in de map `sort` met de volgende inhoud:
     "names": {
       "en": "Sort",
       "nl": "Sorteren"
-    }
+    },
+    "sandbox_files": ["ongesorteerd.txt"]
   },
   "evaluation": {
     "handler": "tested",
@@ -68,6 +69,7 @@ Maak het bestand `config.json` in de map `sort` met de volgende inhoud:
 In dit bestand worden een aantal dingen gespecifieerd:
 
 - `description.names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_). In dit geval zijn de namen gelijk.
+- `description.sandbox_files`: De bestanden die in Dodona automatisch in de sandbox zullen ingeladen worden. Dit laat studenten toe om in de sandbox meteen met de juiste bestanden aan de slag te gaan. (We maken dit bestand later in deze gids nog aan.)
 - `evaluation.handler`: We gebruiken TESTed als judge.
 - `evaluation.test_suite`: Het testplan krijgt de naam `suite.yaml`.
 - `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
