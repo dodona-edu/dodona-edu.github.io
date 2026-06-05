@@ -54,7 +54,8 @@ Create the file `config.json` in the `sort` folder with the following content:
     "names": {
       "en": "Sort",
       "nl": "Sorteren"
-    }
+    },
+    "sandbox_files": ["unordered.txt"]
   },
   "evaluation": {
     "handler": "tested",
@@ -68,6 +69,7 @@ Create the file `config.json` in the `sort` folder with the following content:
 This file specifies a few things:
 
 - `description.names`: The **names** of the exercise as shown in Dodona in Dutch (_nl_) and English (_en_). In this case, the names are the same.
+- `description.sandbox_files`: The files that will be loaded into the sandbox automatically in Dodona. This allows students to start working with the right files immediately. (We'll create this file later in this guide.)
 - `evaluation.handler`: We use TESTed as the judge.
 - `evaluation.test_suite`: The test suite is named `suite.yaml`.
 - `programming_language`: The **programming language** of the exercise: here you choose the programming language in which students will submit their solutions. In this case, it is Python.

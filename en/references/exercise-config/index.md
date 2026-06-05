@@ -17,6 +17,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
   - `private`: only teachers with explicit permission can use this exercise
 - **`description`** (object): the specification of the description of the exercise
   - **`names`** (object): the name of the exercise, with [two-letter language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) as keys (e.g., `nl`, `en`, `fr`)
+  - **`sandbox_files`** (array of strings, optional): a list of files under the `description/media` directory that should be autoloaded in the sandbox
 - **`evaluation`**: the specification of the evaluation procedure
   - **`handler`** (string, optional): the name of the judge that is used for evaluation. By default, Dodona uses the judge specified for the repository. An overview of the available judges can be found [here](/en/references/judges).
   - **`image`** (string, optional): the name of the docker image that is used for evaluation. By default, Dodona uses the image specified by the judge.
