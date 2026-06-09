@@ -410,3 +410,52 @@ Merk op dat je standaard geen Markdown kan gebruiken binnenin html tags. Indien 
     Peek a **boo**!
 </details>
 ```
+
+## Parsons puzzles
+
+Om een Parsons puzzel toe te voegen aan je oefening- of leesactiviteitbeschrijving, kan je het `<dw-parsons-puzzle>` element gebruiken. Een [Parsons puzzel](https://en.wikipedia.org/wiki/Parsons_problem) toont codefragmenten die studenten in de juiste volgorde moeten slepen.
+
+![Parsons puzzel](parsons.png)
+
+Plaats je code in een `<dw-parsons-puzzle>` element met daarin een `<pre>` element. Scheid de versleepbare codeblokken met `---`. Elk blok (een of meerdere regels) kan door de student versleept en herschikt worden.
+
+```html
+<dw-parsons-puzzle>
+<pre>
+def output():
+---
+    print("Hello World")
+---
+    print("This is my first Python program.")
+---
+    output()
+</pre>
+</dw-parsons-puzzle>
+```
+
+Regels die niet gescheiden zijn door `---` worden gegroepeerd in één versleepbaar blok. Zo kan je blokken maken die meerdere regels beslaan:
+
+```html
+<dw-parsons-puzzle>
+<pre>
+# Hello World program
+
+# -------------------------
+# Subprograms
+# -------------------------
+---
+def output():
+---
+    print("Hello World")
+---
+    print("This is my first Python program.")
+---
+
+# -------------------------
+# Main program
+# -------------------------
+---
+output()
+</pre>
+</dw-parsons-puzzle>
+```
