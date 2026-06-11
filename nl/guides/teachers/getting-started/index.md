@@ -30,7 +30,7 @@ Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeper
 
 Eenmaal we je lesgeversrechten hebben geactiveerd kan je zelf een cursus aanmaken door op de knop `Cursus aanmaken` te klikken in het [cursusoverzicht](https://dodona.be/nl/courses/).
 
-![cursus aanmaken](./cursus-aanmaken.png)
+![cursus aanmaken](./staff.courses_new_link.png)
 
 Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud van een bestaande cursus over te nemen en aan te passen. Om inspiratie op te doen kan je een kijkje nemen in onze [uitgelichte cursussen](https://dodona.be/nl/courses/?tab=featured).
 
@@ -38,7 +38,7 @@ Vervolgens kan je kiezen om te starten vanaf een lege cursus, of om de inhoud va
 
 Een cursus op Dodona bestaat uit verschillende oefeningenreeksen die je kan gebruiken om oefeningen te groeperen. Om een nieuwe oefeningenreeks aan te maken, klik je op de `Reeksen beheren` knop op je cursuspagina en vervolgens op `Reeks aanmaken`. Je krijgt dan onderstaand formulier te zien.
 
-![reeks-aanmaken](./reeks-aanmaken.png)
+![reeks-aanmaken](./staff.series_new.png)
 
 Elke oefeningenreeks bestaat uit een titel en een beschrijving die je kan gebruiken om bijvoorbeeld te verwijzen naar lesmateriaal. Naast gewone tekst kan je hier ook het [Markdownformaat](/nl/references/exercise-description/#markdown) gebruiken om extra opmaak toe te voegen. Daarnaast kan je ook een eventuele deadline opgeven.
 
@@ -49,7 +49,7 @@ Voor elke oefeningenreeks kan je de zichtbaarheid instellen:
 
 Nadat je een reeks hebt aangemaakt, kan je oefeningen en leesactiviteiten toevoegen. Je kan hiervoor kiezen uit alle oefeningen en activiteiten die voor jou beschikbaar zijn in Dodona. Via het zoekveld kan je eenvoudig de lijst van oefeningen filteren. Hieronder zie je bijvoorbeeld dat enkel de Python oefeningen met het label "middelbaar" worden weergegeven.
 
-![oefening-toevoegen](./oefening-toevoegen.png)
+![oefening-toevoegen](./staff.series_add_exercise.png)
 
 Bij het selecteren van oefeningen kun je meer info over een oefening bekijken door naar de infopagina te gaan. Hier vind je voorbeeldoplossingen, beschikbare talen, instellingen, extra uitleg en contactgegevens van de auteur.
 
