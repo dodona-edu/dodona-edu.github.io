@@ -51,7 +51,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Teacher`: the name or names of the instructors of the course.
 
-* `Draft course`: whether the course is a draft course or not. Draft courses can be used to prepare courses before they are available to students. It can also be used to use the course as a template or question bank to copy content from other courses. A draft course can't have an academic year, and the question and access rights options also can't be changed.
+* `Draft course`: whether the course is a draft course or not. Draft courses can be used to prepare courses before they are available to students. A draft course can also be used as a template or question bank to copy content from, into other courses. A draft course can't have an academic year, and the question and access rights options also can't be changed.
 
 * `Academic year`: the academic year in which the course is offered.
 

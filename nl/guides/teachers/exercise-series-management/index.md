@@ -18,7 +18,7 @@ Op deze pagina vind je rechtsboven de knoppen `Bestaande reeks kopiëren` en `Re
 
 ![reeks aanmaken](./staff.course_new_series_button.png)
 
-Bij het kopiëren van een bestaande reeks selecteer je dan de reeks die je wilt kopiëren. Dit wordt standaard gefilterd op de huidige cursus, maar je kan reeksen kiezen van elke cursus waarvan je beheerder bent.
+Bij het kopiëren van een bestaande reeks selecteer je de reeks die je wil kopiëren. Dit wordt standaard gefilterd op de huidige cursus, maar je kan reeksen kiezen uit elke cursus die je beheert.
 
 ![reeks kopïeren](staff.series_new_copy.png)
 
@@ -27,14 +27,14 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
 ![series form](./staff.series_new.png)
 
-De eerste keuze om te maken is wat voor soort reeks je wil aanmaken. Je kan ofwel een normale reeks aanmaken of een optionele reeks. Een optionele reeks wordt standaard ingeklapt voor je studenten, and maakt duidelijk dat de oefeningen in de reeks optioneel zijn. De normale reeks heeft een duidelijke voortgangsaanduiding.
+Eerst kies je de soort reeks je wil aanmaken. Je kan ofwel een normale reeks aanmaken, of een optionele reeks. De normale reeks heeft een duidelijke voortgangsaanduiding. Een optionele reeks wordt standaard ingeklapt voor je studenten, and maakt duidelijk dat de oefeningen in de reeks optioneel zijn.
 
 Nadien stel je de volgende eigenschappen in:
 
 * `Naam`: De naam van de oefeningenreeks. Binnen een cursus kunnen verschillende oefeningenreeksen dezelfde naam hebben, maar het is aangeraden om alle oefeningenreeksen een unieke naam te geven.
 
 * `Deadline`: Een optionele deadline die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor oefeningen van deze oefeningenreeks. 
-  Studenten kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks en blijven daar nog steeds een beoordeling en feedback voor ontvangen. 
+  Studenten kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks, en ontvangen daar ook nog steeds een beoordeling en feedback voor. 
   Er wordt met deze oplossingen echter geen rekening meer gehouden bij het bepalen van hun indienstatus voor oefeningen uit de oefeningenreeks. 
   Dit kan niet ingesteld worden voor een optionele reeks.
 
@@ -82,11 +82,11 @@ Nadien stel je de volgende eigenschappen in:
   * `Verberg leeractiviteiten`: Als de leeractiviteiten verborgen zijn, dan zal enkel de beschrijving van deze reeks getoond worden. Je kan deze instelling gebruiken om bijvoorbeeld de leerstof van de reeks vooraf beschikbaar te stellen, zonder de oefeningen en leesactiviteiten al vrij te geven.
 
   * `Nummer leeractiviteiten`: Als deze instelling actief is, krijgt elke oefening en leesactiveit een nummer, beginnende bij 1.
-    Dit nummer wordt getoond in titels en oplijstingen en kan het makkelijke maken om over deze activiteiten te communiceren.
+    Dit nummer wordt getoond in titels en oplijstingen en kan het eenvoudiger maken om over deze activiteiten te communiceren.
 
 Om de reeks aan te maken klik je op de knop `Reeks aanmaken` onderaan de pagina. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
 
-Na het aanmaken van de reeks kom je op de pagina voor het beheren van de oefeningen in een reeks terecht.
+Na het aanmaken van de reeks kom je op de pagina terecht waar je de oefeningen van de reeks beheert.
 
 ## Oefeningen toevoegen aan een reeks
 

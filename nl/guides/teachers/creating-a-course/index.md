@@ -12,7 +12,7 @@ Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechte
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Maak een nieuwe cursus aan` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Blader door alle cursussen op Dodona`.
+Als je de nodige rechten hebt op Dodona, kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Maak een nieuwe cursus aan` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Blader door alle cursussen op Dodona`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -51,7 +51,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Lesgevers`: de naam of namen van de lesgevers van de cursus.
 
-* `Conceptcursus`: dit bepaalt of de cursus een concept is of niet. Conceptcursussen kunnen gebruikt worden om een cursus voor te bereiden voor die beschikbaar wordt voor studenten. Het kan ook gebruikt worden om de cursus als sjabloon te gebruikt of als vragendatabank om inhoud te kopiëren vanuit andere cursussen. Een conceptcursus kan geen academiejaar hebben, and de instelling voor vragen en toegangsrechten kunnen ook niet veranderd worden.
+* `Conceptcursus`: dit bepaalt of de cursus een concept is of niet. Conceptcursussen kunnen gebruikt worden om een cursus voor te bereiden voor die beschikbaar wordt voor studenten. Een conceptcursus kan ook gebruikt worden als sjabloon of als vragendatabank om inhoud te kopiëren naar andere cursussen. Een conceptcursus kan geen academiejaar hebben, en de instelling voor vragen en toegangsrechten kunnen ook niet veranderd worden.
 
 * `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden.
 

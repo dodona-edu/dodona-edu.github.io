@@ -20,7 +20,7 @@ On this page, you will find the `Copy existing series` and `Create Series` butto
 
 ![create series](./staff.course_new_series_button.png)
 
-When copying an existing series, you then pick the series you want to copy. This is filtered to the current course by default, but you can pick series from any course you are an admin of.
+When copying an existing series, you can pick the series you want to copy. This is filtered to the current course by default, but you can pick series from any course you are an admin of.
 
 ![copy series](staff.series_new_copy.png)
 
@@ -28,7 +28,7 @@ You will then be directed to a form where you can set the properties of the seri
 
 ![series form](./staff.series_new.png)
 
-The first choice to make is what kind of series you want to create. You can either create a regular series or an optional series. An optional series is collapsed by default for your students, and will make it clear that the exercises in them are optional. The regular series has clear progress tracking.
+The first choice to make is what kind of series you want to create. You can either create a regular series or an optional series. The regular series has clear progress tracking. An optional series is collapsed by default for your students, and will make it clear that the exercises in them are optional.
 
 After that you can set the following properties:
 
