@@ -22,13 +22,13 @@ On this page, you will find the `Copy existing series` and `Create Series` butto
 
 When copying an existing series, you can pick the series you want to copy. This is filtered to the current course by default, but you can pick series from any course you are an admin of.
 
-![copy series](staff.series_new_copy.png)
+![copy series](./staff.series_new_copy.png)
 
 You will then be directed to a form where you can set the properties of the series. This is also the form you land on when you create a new series.
 
 ![series form](./staff.series_new.png)
 
-The first choice to make is what kind of series you want to create. You can either create a regular series or an optional series. The regular series has clear progress tracking. An optional series is collapsed by default for your students, and will make it clear that the exercises in them are optional.
+The first choice to make is what kind of series you want to create. You can either create a regular series or an optional series. The regular series has clear progress tracking. An optional series is collapsed by default for your students, and will make it clear that the exercises in it are optional.
 
 After that you can set the following properties:
 
@@ -38,7 +38,7 @@ After that you can set the following properties:
 * `Deadline`: An optional deadline that indicates until when solutions submitted for exercises in this series will be considered.
   Students can continue to submit solutions for exercises in the series after the deadline and will still receive feedback.
   However, these submissions will not be considered in determining their submission status for the exercises in the series.
-  This can not be set for an optional series.
+  This cannot be set for an optional series.
 
   ::: tip Important
 

@@ -4,7 +4,7 @@ description: "Tutorial: cursus aanmaken"
 order: 2
 ---
 
-# Een cursus aanmaken
+# Een nieuwe cursus aanmaken
 
 :::tip Belangrijk
 
@@ -51,7 +51,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Lesgevers`: de naam of namen van de lesgevers van de cursus.
 
-* `Conceptcursus`: dit bepaalt of de cursus een concept is of niet. Conceptcursussen kunnen gebruikt worden om een cursus voor te bereiden voor die beschikbaar wordt voor studenten. Een conceptcursus kan ook gebruikt worden als sjabloon of als vragendatabank om inhoud te kopiëren naar andere cursussen. Een conceptcursus kan geen academiejaar hebben, en de instelling voor vragen en toegangsrechten kunnen ook niet veranderd worden.
+* `Conceptcursus`: maakt van de cursus een conceptcursus. Conceptcursussen zijn handig om een cursus voor te bereiden voordat die beschikbaar wordt voor studenten, of als sjabloon om inhoud uit te kopiëren. Twee zaken liggen vast voor een conceptcursus: er kan geen academiejaar ingesteld worden, en de instellingen voor `Vragen` en toegangsrechten kunnen niet aangepast worden.
 
 * `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden.
 

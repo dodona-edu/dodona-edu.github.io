@@ -20,14 +20,14 @@ Op deze pagina vind je rechtsboven de knoppen `Bestaande reeks kopiëren` en `Re
 
 Bij het kopiëren van een bestaande reeks selecteer je de reeks die je wil kopiëren. Dit wordt standaard gefilterd op de huidige cursus, maar je kan reeksen kiezen uit elke cursus die je beheert.
 
-![reeks kopïeren](staff.series_new_copy.png)
+![reeks kopiëren](./staff.series_new_copy.png)
 
 Je wordt dan doorgestuurd naar een formuler waar je de eigenschappen van de reeks kan instellen. Dit is ook het formulier waar je op terechtkomt als je een nieuwe reeks aanmaakt.
 Je komt op een formulier terecht waarin je de volgende eigenschappen van de reeks kan instellen:
 
 ![series form](./staff.series_new.png)
 
-Eerst kies je de soort reeks je wil aanmaken. Je kan ofwel een normale reeks aanmaken, of een optionele reeks. De normale reeks heeft een duidelijke voortgangsaanduiding. Een optionele reeks wordt standaard ingeklapt voor je studenten, and maakt duidelijk dat de oefeningen in de reeks optioneel zijn.
+Eerst kies je de soort reeks die je wil aanmaken. Je kan ofwel een normale reeks aanmaken, of een optionele reeks. De normale reeks heeft een duidelijke voortgangsaanduiding. Een optionele reeks wordt standaard ingeklapt voor je studenten, en maakt duidelijk dat de oefeningen in de reeks optioneel zijn.
 
 Nadien stel je de volgende eigenschappen in:
 
@@ -81,7 +81,7 @@ Nadien stel je de volgende eigenschappen in:
 
   * `Verberg leeractiviteiten`: Als de leeractiviteiten verborgen zijn, dan zal enkel de beschrijving van deze reeks getoond worden. Je kan deze instelling gebruiken om bijvoorbeeld de leerstof van de reeks vooraf beschikbaar te stellen, zonder de oefeningen en leesactiviteiten al vrij te geven.
 
-  * `Nummer leeractiviteiten`: Als deze instelling actief is, krijgt elke oefening en leesactiveit een nummer, beginnende bij 1.
+  * `Nummer leeractiviteiten`: Als deze instelling actief is, krijgt elke oefening en leesactiviteit een nummer, beginnende bij 1.
     Dit nummer wordt getoond in titels en oplijstingen en kan het eenvoudiger maken om over deze activiteiten te communiceren.
 
 Om de reeks aan te maken klik je op de knop `Reeks aanmaken` onderaan de pagina. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
