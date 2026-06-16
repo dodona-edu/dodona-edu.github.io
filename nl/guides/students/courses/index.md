@@ -17,7 +17,7 @@ Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die c
 
 ### Hoe vind je een cursus?
 
-Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `Meer cursussen...` of op `Verken cursussen` te klikken.
+Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `Blader door alle cursussen op Dodona` te klikken.
 
 ![Pagina om cursussen te ontdekken](./student.explore_courses.png)
 

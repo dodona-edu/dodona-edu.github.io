@@ -51,7 +51,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Teacher`: the name or names of the instructors of the course.
 
-* `Draft course`: whether the course is a draft. Draft courses let you prepare a course before it's available to students. A draft course can also serve as a template or content bank to copy exercises and reading activities into other courses. It can't have an academic year, and its `Questions` and access-rights options can't be changed either.
+* `Draft course`: whether the course is a draft. Draft courses let you prepare a course before it's available to students. A draft course can also serve as a template or content bank to copy exercises and reading activities into other courses. It can't have an academic year, and its `Questions` and access-rights options can't be changed either. Students are never able to see draft courses.
 
 * `Academic year`: the academic year in which the course is offered.
 
@@ -60,6 +60,8 @@ Finally, you need to set a few things about the course itself, such as the name 
 * `Programming language`: the programming language that is used in the course. This is optional and only used to help users find courses in their preferred programming language.
 
 * `Description`: an optional piece that is displayed at the top of the course page. For formatting the description, you can use [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona uses [kramdown](https://kramdown.gettalong.org) for rendering Markdown, which supports many extensions of the standard Markdown. For more explanation on how this formatting works, you can go [here](/en/references/exercise-description/).
+
+* `Questions`: these settings determine whether students can ask questions on their code in the corse, and if a draft answer is automatically generated. The draft answer is never shown directly to students, you decide as a teacher whether to use it or not.
 
 ### Access Rights
 

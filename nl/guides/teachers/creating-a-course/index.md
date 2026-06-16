@@ -51,7 +51,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Lesgevers`: de naam of namen van de lesgevers van de cursus.
 
-* `Conceptcursus`: maakt van de cursus een conceptcursus. Conceptcursussen zijn handig om een cursus voor te bereiden voordat die beschikbaar wordt voor studenten, of als sjabloon om inhoud uit te kopiëren. Twee zaken liggen vast voor een conceptcursus: er kan geen academiejaar ingesteld worden, en de instellingen voor `Vragen` en toegangsrechten kunnen niet aangepast worden.
+* `Conceptcursus`: maakt van de cursus een conceptcursus. Conceptcursussen zijn handig om een cursus voor te bereiden voordat die beschikbaar wordt voor studenten, of als sjabloon om inhoud uit te kopiëren. Twee zaken liggen vast voor een conceptcursus: er kan geen academiejaar ingesteld worden, en de instellingen voor `Vragen` en toegangsrechten kunnen niet aangepast worden. Studenten kunnen een conceptcursus nooit zien.
 
 * `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden.
 
@@ -61,6 +61,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Beschrijving`: optioneel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
 
+* `Vragen`: deze instellingen bepalen of studenten vragen kunnen stellen bij hun code in de cursus, en of er automatisch een conceptantwoord gegenereerd wordt. Het conceptantwoord wordt nooit rechtstreeks aan studenten getoond, jij bepaalt als lesgever of je het gebruikt of niet.
 
 ### Toegangsrechten
 

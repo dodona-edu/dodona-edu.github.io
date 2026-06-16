@@ -40,7 +40,7 @@ Use the [request form](https://dodona.be/en/rights_requests/new) on Dodona, and 
 
 ## Creating a Course
 
-Once we have activated your teacher rights, you can create a course by clicking the `Create Course` button in the [course overview](https://dodona.be/en/courses/).
+Once we have activated your teacher rights, you can create a course by clicking the `Create a new course` button in the [course overview](https://dodona.be/en/courses/).
 
 ![create course](./staff.courses_new_link.png)
 
