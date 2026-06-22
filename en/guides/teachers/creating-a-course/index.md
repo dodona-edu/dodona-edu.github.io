@@ -61,7 +61,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Description`: an optional piece that is displayed at the top of the course page. For formatting the description, you can use [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona uses [kramdown](https://kramdown.gettalong.org) for rendering Markdown, which supports many extensions of the standard Markdown. For more explanation on how this formatting works, you can go [here](/en/references/exercise-description/).
 
-* `Questions`: these settings determine whether students can ask questions on their code in the corse, and if a draft answer is automatically generated. The draft answer is never shown directly to students, you decide as a teacher whether to use it or not.
+* `Questions`: these settings determine whether students can ask questions on their code in the course, and if a draft answer is automatically generated. The draft answer is never shown directly to students, you decide as a teacher whether to use it or not.
 
 ### Access Rights
 
