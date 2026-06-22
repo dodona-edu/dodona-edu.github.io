@@ -14,17 +14,29 @@ Een cursusbeheerder kan onbeperkt oefeningenreeksen binnen je cursus aanmaken. J
 
 ![reeksen beheren](./staff.course_manage_series_button.png)
 
-Op deze pagina vind je rechtsboven de knop `Reeks aanmaken`.
+Op deze pagina vind je rechtsboven de knoppen `Bestaande reeks kopiëren` en `Reeks aanmaken`.
 
 ![reeks aanmaken](./staff.course_new_series_button.png)
 
+Bij het kopiëren van een bestaande reeks selecteer je de reeks die je wil kopiëren. Dit wordt standaard gefilterd op de huidige cursus, maar je kan reeksen kiezen uit elke cursus die je beheert.
+
+![reeks kopiëren](./staff.series_new_copy.png)
+
+Je wordt dan doorgestuurd naar een formuler waar je de eigenschappen van de reeks kan instellen. Dit is ook het formulier waar je op terechtkomt als je een nieuwe reeks aanmaakt.
 Je komt op een formulier terecht waarin je de volgende eigenschappen van de reeks kan instellen:
 
 ![series form](./staff.series_new.png)
 
+Eerst kies je de soort reeks die je wil aanmaken. Je kan ofwel een normale reeks aanmaken, of een optionele reeks. De normale reeks heeft een duidelijke voortgangsaanduiding. Een optionele reeks wordt standaard ingeklapt voor je studenten, en maakt duidelijk dat de oefeningen in de reeks optioneel zijn.
+
+Nadien stel je de volgende eigenschappen in:
+
 * `Naam`: De naam van de oefeningenreeks. Binnen een cursus kunnen verschillende oefeningenreeksen dezelfde naam hebben, maar het is aangeraden om alle oefeningenreeksen een unieke naam te geven.
 
-* `Deadline`: Een optionele deadline die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor oefeningen van deze oefeningenreeks. Studenten kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks en blijven daar nog steeds een beoordeling en feedback voor ontvangen. Er wordt met deze oplossingen echter geen rekening meer gehouden bij het bepalen van hun indienstatus voor oefeningen uit de oefeningenreeks.
+* `Deadline`: Een optionele deadline die aangeeft tot wanneer er rekening gehouden wordt met oplossingen die ingediend worden voor oefeningen van deze oefeningenreeks. 
+  Studenten kunnen na de deadline onbeperkt oplossingen blijven indienen voor oefeningen uit de oefeningenreeks, en ontvangen daar ook nog steeds een beoordeling en feedback voor. 
+  Er wordt met deze oplossingen echter geen rekening meer gehouden bij het bepalen van hun indienstatus voor oefeningen uit de oefeningenreeks. 
+  Dit kan niet ingesteld worden voor een optionele reeks.
 
 
   ::: tip Belangrijk
@@ -40,13 +52,18 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
 
   ![Deadline wissen](./staff.series_calendar_clear.png)
 
+* `Beschrijving`: een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in de cursus. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/references/exercise-description/#markdown).
+
 * `Zichtbaarheid`: dit bepaalt of gebruikers de oefeningenreeks kunnen zien. Voor deze eigenschap kunnen de volgende waarden ingesteld worden:
 
-  * `Open`: alle gebruikers zien de oefeningenreeks op de cursuspagina.
+  * `Zichtbaar voor iedereen`: alle gebruikers zien de oefeningenreeks op de cursuspagina.
 
-  * `Verborgen`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks niet kunnen zien. Je kan gebruikers toegang geven tot deze reeks door hun de specifieke geheime link (zie hieronder) van deze reeks door te sturen.
+  * `Enkel zichtbaar via de geheime link`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks niet kunnen zien. Je kan gebruikers toegang geven tot deze reeks door hun de specifieke geheime link (zie hieronder) van deze reeks door te sturen.
 
-  * `Gesloten`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks daar niet kunnen zien.
+  * `Verborgen voor studenten`: alleen cursusbeheerders zien de oefeningenreeks op de cursuspagina. Er staat een duidelijke mededeling bij om hen er op te wijzen dat andere gebruikers de oefeningenreeks daar niet kunnen zien.
+   
+  * `Zichtbaar voor studenten na starttijd`: de reeks is niet zichtbaar voor studenten tot na de starttijd die je specifieert.
+    Je kan de starttijd instellen op dezelfde manier als de deadline.
 
   ![reeks verborgen informatie](./staff.course_series_info_message.png)
 
@@ -58,27 +75,25 @@ Je komt op een formulier terecht waarin je de volgende eigenschappen van de reek
   Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te klikken. Dit kan je bijvoorbeeld doen als je per ongeluk de link kenbaar hebt gemaakt aan iemand die ze niet zou mogen zien. Hou er wel rekening mee dat de oude link niet meer zal werken van zodra je een nieuwe genereert.
   ![reekslink vernieuwen](./staff.series_hidden_link_reset.png)
 
-* `Beschrijving`: een optionele beschrijving die gebruikers te zien krijgen bij de weergave van de oefeningenreeks in de cursus. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](/nl/references/exercise-description/#markdown).
-
 * **Geavanceerde instellingen**:
 
   * `Verberg de "Voortgang groep" visualisatie voor studenten`: Bij een oefening wordt de voortgang van alle gebruikers in de cursus getoond. Hierin kan je zien hoeveel studenten een oefening reeds hebben begonnen of afgewerkt. Deze visualisatie is een meerwaarde voor studenten, maar je wil ze misschien uitschakelen voor examens.
 
   * `Verberg leeractiviteiten`: Als de leeractiviteiten verborgen zijn, dan zal enkel de beschrijving van deze reeks getoond worden. Je kan deze instelling gebruiken om bijvoorbeeld de leerstof van de reeks vooraf beschikbaar te stellen, zonder de oefeningen en leesactiviteiten al vrij te geven.
 
-Om de reeks aan te maken klik je op de afwerkknop in de rechterbovenhoek van het paneel `Reeks aanmaken`. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
+  * `Nummer leeractiviteiten`: Als deze instelling actief is, krijgt elke oefening en leesactiviteit een nummer, beginnende bij 1.
+    Dit nummer wordt getoond in titels en oplijstingen en kan het eenvoudiger maken om over deze activiteiten te communiceren.
 
-![reeks aanmaken](./staff.series_new_submit.png)
+Om de reeks aan te maken klik je op de knop `Reeks aanmaken` onderaan de pagina. De nieuwe oefeningenreeks wordt zo aan je cursus toegevoegd.
 
-Na het aanmaken van de reeks kom je op de bewerkingspagina terecht. Je kunt nu oefeningen aan de reeks toevoegen.
+Na het aanmaken van de reeks kom je op de pagina terecht waar je de oefeningen van de reeks beheert.
 
-## Oefeningenreeks bewerken
+## Oefeningen toevoegen aan een reeks
 
-Op de bewerking-pagina van een oefeningenreeks zie je een uitgebreide versie van het reeks-aanmakenpaneel waarin je naast het instellen van eigenschappen ook oefeningen kunt koppelen aan de oefeningenreeks. Je kan deze pagina bereiken op 3 manieren: automatisch na het aanmaken van een nieuwe reeks, door op het bewerken-icoontje te klikken van de reeks in het Reeksen beheren-paneel of door `Reeks bewerken` te kiezen in het reeks-actiemenu.
+Je kan deze pagina op twee manieren bereiken: automatisch na het aanmaken van een nieuwe reeks of door de knop `Leeractiviteiten beheren` in het reeks-actiemenu te gebruiken.
 
-![reeks bewerken](./staff.series_edit.png)
-
-Onderaan de pagina vind je de activiteiten die reeds tot deze reeks behoren en mogelijke activiteiten om eraan toe te voegen. Klik op de toevoegknop (`+`) aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
+Hier vind je de activiteiten die al deel uitmaken van de reeks en de mogelijke activiteiten om toe te voegen.
+Klik op de toevoegknop (`+`) aan de rechterkant van een oefening om de oefening aan de oefeningenreeks toe te voegen.
 
 ![reeks oefening toevoegen](./staff.series_add_exercise.png)
 
@@ -97,10 +112,6 @@ Versleep de verplaatsknop aan de linkerkant van de oefeningen om de volgorde van
 We veronderstellen hier dat de oefeningen die aan de oefeningenreeks moeten gekoppeld worden reeds beschikbaar zijn in Dodona. Het opstellen, publiceren en delen van oefeningen wordt [hier](/nl/guides/exercises/new-exercise-repo) besproken.
 
 :::
-
-Klik op de afwerkknop in de rechterbovenhoek van het paneel om de bewerkingen te bewaren. Dit is enkel van toepassing op de reeks-eigenschappen. Bewerkingen op de oefeningen binnenin die reeks worden meteen automatisch opgeslagen.
-
-![reeks bewerken opslaan](./staff.series_edit_submit.png)
 
 ## Oefeningenreeks beheren
 

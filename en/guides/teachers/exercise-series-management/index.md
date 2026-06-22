@@ -16,13 +16,21 @@ To do this, first navigate to the course page and then click `Manage Series`.
 
 ![manage series](./staff.course_manage_series_button.png)
 
-On this page, you will find the `Create Series` button in the top right corner.
+On this page, you will find the `Copy existing series` and `Create Series` buttons in the top right corner.
 
 ![create series](./staff.course_new_series_button.png)
 
-You will be directed to a form where you can set the following properties of the series:
+When copying an existing series, you can pick the series you want to copy. This is filtered to the current course by default, but you can pick series from any course you are an admin of.
+
+![copy series](./staff.series_new_copy.png)
+
+You will then be directed to a form where you can set the properties of the series. This is also the form you land on when you create a new series.
 
 ![series form](./staff.series_new.png)
+
+The first choice to make is what kind of series you want to create. You can either create a regular series or an optional series. The regular series has clear progress tracking. An optional series is collapsed by default for your students, and will make it clear that the exercises in it are optional.
+
+After that you can set the following properties:
 
 * `Name`: The name of the exercise series.
   Within a course, different exercise series can have the same name, but it is advisable to give each exercise series a unique name.
@@ -30,6 +38,7 @@ You will be directed to a form where you can set the following properties of the
 * `Deadline`: An optional deadline that indicates until when solutions submitted for exercises in this series will be considered.
   Students can continue to submit solutions for exercises in the series after the deadline and will still receive feedback.
   However, these submissions will not be considered in determining their submission status for the exercises in the series.
+  This cannot be set for an optional series.
 
   ::: tip Important
 
@@ -89,22 +98,15 @@ You will be directed to a form where you can set the following properties of the
   * `Number learning activities`: If this setting is active, each exercise and reading activity is given a sequential number, starting with 1.
     This number is displayed in titles and listings and can make it easier to communicate about these activities.
 
-To create the series, click the completion button in the top right corner of the `Create Series` panel. The new exercise series will be added to your course.
+To create the series, click the `Create series` button at the bottom of the page. The new exercise series will be added to your course.
 
-![create series](./staff.series_new_submit.png)
+After creating the series, you will be directed to the page for managing the exercises in a series.
 
-After creating the series, you will be directed to the editing page. You can now add exercises to the series.
+## Add exercises to a series
 
-## Edit an exercise series
+You can access this page in two ways: automatically after creating a new series or by choosing `Manage learning activities` in the series action menu.
 
-On the editing page of an exercise series, you will see an extended version of the series creation panel
-where you can not only set properties but also link exercises to the series.
-You can access this page in three ways: automatically after creating a new series,
-by clicking the edit icon of the series in the Manage series panel, or by choosing `Edit series` in the series action menu.
-
-![edit series](./staff.series_edit.png)
-
-At the bottom of the page, you will find the activities that already belong to this series and possible activities to add.
+Here you will find the activities that already belong to this series and possible activities to add.
 Click the add button (`+`) on the right side of an exercise to add it to the exercise series.
 
 ![add exercise to series](./staff.series_add_exercise.png)
@@ -126,12 +128,6 @@ We assume here that the exercises to be linked to the exercise series are alread
 The creation, publication, and sharing of exercises are discussed [here](/en/guides/exercises/creating-exercises/introduction).
 
 :::
-
-Click the completion button in the top right corner of the panel to save the edits.
-This only applies to the series properties.
-Edits to the exercises within the series are automatically saved immediately.
-
-![save series edits](./staff.series_edit_submit.png)
 
 ## Manage an exercise series
 

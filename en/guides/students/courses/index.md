@@ -18,7 +18,7 @@ To submit solutions for exercises in a course, you must be registered for that c
 
 ### How to Find a Course
 
-First, you need to find the course you want to register for. You can do this by clicking on `More courses...` or `Explore courses` on your homepage.
+First, you need to find the course you want to register for. You can do this by clicking on `Browse all courses on Dodona` on your homepage.
 
 ![Explore courses page](./student.explore_courses.png)
 

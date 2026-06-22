@@ -4,7 +4,7 @@ description: "Tutorial: cursus aanmaken"
 order: 2
 ---
 
-# Een cursus aanmaken
+# Een nieuwe cursus aanmaken
 
 :::tip Belangrijk
 
@@ -12,7 +12,7 @@ Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechte
 
 :::
 
-Als je de nodige rechten hebt op Dodona, dan kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Cursus aanmaken` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Meer cursussen...`.
+Als je de nodige rechten hebt op Dodona, kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Maak een nieuwe cursus aan` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Blader door alle cursussen op Dodona`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -51,6 +51,8 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Lesgevers`: de naam of namen van de lesgevers van de cursus.
 
+* `Conceptcursus`: maakt van de cursus een conceptcursus. Conceptcursussen zijn handig om een cursus voor te bereiden voordat die beschikbaar wordt voor studenten, of als sjabloon om inhoud uit te kopiëren. Twee zaken liggen vast voor een conceptcursus: er kan geen academiejaar ingesteld worden, en de instellingen voor `Vragen` en toegangsrechten kunnen niet aangepast worden. Studenten kunnen een conceptcursus nooit zien.
+
 * `Academiejaar`: het academiejaar waarin de cursus wordt aangeboden.
 
 * `Taal`: de natuurlijke taal waarin de cursus gegeven wordt. Dit kan ingesteld worden op een van de ondersteunde talen (bv. Nederlands, Engels, Frans, ...). Dit is optioneel en helpt gebruikers cursussen te vinden in hun voorkeurstaal. Daarnaast bepaalt de taal van de cursus in welke taal de activiteiten in de cursus getoond worden: als een activiteit een beschrijving heeft in de taal van de cursus, dan zal die beschrijving gebruikt worden.
@@ -59,6 +61,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Beschrijving`: optioneel stuk dat bovenaan de cursuspagina wordt weergegeven. Voor het opmaken van de beschrijving kan je gebruikmaken van [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Voor meer uitleg over hoe deze formattering werkt, kan je [hier](/nl/references/exercise-description/) terecht.
 
+* `Vragen`: deze instellingen bepalen of studenten vragen kunnen stellen bij hun code in de cursus, en of er automatisch een conceptantwoord gegenereerd wordt. Het conceptantwoord wordt nooit rechtstreeks aan studenten getoond, jij bepaalt als lesgever of je het gebruikt of niet.
 
 ### Toegangsrechten
 

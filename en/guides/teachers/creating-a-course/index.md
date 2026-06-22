@@ -12,7 +12,7 @@ You need extra rights to create a course. You can easily request these rights by
 
 :::
 
-If you have the necessary rights on Dodona, you can easily create a course yourself. You do this by clicking on the `Create course` button in the upper right corner of the [course overview](https://dodona.be/en/courses). From the landing page, you can reach this overview by clicking on `More courses...`.
+If you have the necessary rights on Dodona, you can easily create a course yourself. You do this by clicking on the `Create a new course` button in the upper right corner of the [course overview](https://dodona.be/en/courses). From the landing page, you can reach this overview by clicking on `Browse all courses on Dodona`.
 
 ![create course](./staff.courses_new_link.png)
 
@@ -51,13 +51,17 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Teacher`: the name or names of the instructors of the course.
 
-* `Academic Year`: the academic year in which the course is offered.
+* `Draft course`: whether the course is a draft. Draft courses let you prepare a course before it's available to students. A draft course can also serve as a template or content bank to copy exercises and reading activities into other courses. It can't have an academic year, and its `Questions` and access-rights options can't be changed either. Students are never able to see draft courses.
+
+* `Academic year`: the academic year in which the course is offered.
 
 * `Language`: the natural language in which the course is given. This can be set to any of the supported languages (e.g. Dutch, English, French, ...). It is optional and helps users find courses in their preferred language. Additionally, the course language determines in which language the activities in the course are shown: if an activity has a description available in the course language, that description will be used.
 
-* `Programming Language`: the programming language that is used in the course. This is optional and only used to help users find courses in their preferred programming language.
+* `Programming language`: the programming language that is used in the course. This is optional and only used to help users find courses in their preferred programming language.
 
 * `Description`: an optional piece that is displayed at the top of the course page. For formatting the description, you can use [Markdown](https://en.wikipedia.org/wiki/Markdown). Dodona uses [kramdown](https://kramdown.gettalong.org) for rendering Markdown, which supports many extensions of the standard Markdown. For more explanation on how this formatting works, you can go [here](/en/references/exercise-description/).
+
+* `Questions`: these settings determine whether students can ask questions on their code in the course, and if a draft answer is automatically generated. The draft answer is never shown directly to students, you decide as a teacher whether to use it or not.
 
 ### Access Rights
 
