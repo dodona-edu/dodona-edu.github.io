@@ -14,7 +14,7 @@ Het doel van uitgelichte cursussen is om gebruikers te helpen navigeren door het
 
 ## Ik heb een cursus gemaakt, hoe kan ik deze laten uitlichten?
 
-Als je een cursus hebt gemaakt en deze op Dodona als uitgelichte cursus wilt laten zien, neem dan contact op met Team Dodona via het [contactformulier](https://dodona.be/nl/contact) of door een e-mail te sturen naar [dodona@ugent.be](mailto:dodona@ugent.be).
+Als je een cursus hebt gemaakt en deze op Dodona als uitgelichte cursus wilt laten zien, neem dan contact op met Team Dodona via het [contactformulier](https://dodona.be/nl/contact) of door een e-mail te sturen naar [support@dodona.be](mailto:support@dodona.be).
 
 ## Hoe kan ik een uitgelichte cursus gebruiken?
 

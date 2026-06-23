@@ -21,7 +21,7 @@ Aanmelden op Dodona kan via de Smartschool, Microsoft 365 of Google Workspace ac
 ::: tip Meerdere inlogsystemen?
 Sommige scholen bieden zowel inloggen via Smartschool als via Microsoft 365 of Google Workspace aan. Omdat je Dodona-account gekoppeld is aan het gebruikte inlogsysteem, zal je twee verschillende Dodona-accounts hebben als je bijvoorbeeld eerst via Smartschool aanmeldt en vervolgens via Microsoft 365.
 
-Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:dodona@ugent.be"> dodona@ugent.be</a>.
+Om problemen te voorkomen kunnen we voor jouw school de inlogmogelijkheden beperken. Contacteer ons hiervoor op <a href="mailto:support@dodona.be"> support@dodona.be</a>.
 :::
 
 Een standaard Dodona-account kan zich vrij inschrijven voor cursussen en onbeperkt oefeningen indienen. Wil je als lesgever zelf een cursus aanmaken of oefeningen opstellen, dan heb je extra rechten nodig. Gebruik het [aanvraagformulier](https://dodona.be/nl/rights_requests/new) op Dodona en we geven je zo snel mogelijk de nodige rechten.

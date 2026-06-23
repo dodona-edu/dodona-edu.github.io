@@ -14,7 +14,7 @@ The goal of featured courses is to help users navigate the wide range of courses
 
 ## I made a course, how can I get it featured?
 
-If you've created a course and would like to have it featured on Dodona, please contact Team Dodona through the [contact form](https://dodona.be/en/contact) or by sending an email to [dodona@ugent.be](mailto:dodona@ugent.be).
+If you've created a course and would like to have it featured on Dodona, please contact Team Dodona through the [contact form](https://dodona.be/en/contact) or by sending an email to [support@dodona.be](mailto:support@dodona.be).
 
 ## How can I use a featured course?
 

@@ -6,7 +6,7 @@ order: 7
 # Creating a new Judge
 
 ::: warning
-This is an advanced guide aimed at developers. You will probably not need the info on this page. If you plan to create a judge, please contact us at <a href="mailto:dodona@ugent.be">dodona@ugent.be</a>.
+This is an advanced guide aimed at developers. You will probably not need the info on this page. If you plan to create a judge, please contact us at <a href="mailto:support@dodona.be">support@dodona.be</a>.
 :::
 
 Before you create your own judge, please check if there is no [existing judge](/nl/references/judges) that can be used for your exercises.

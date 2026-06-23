@@ -23,7 +23,7 @@ However, make sure you are using a recent version of Chrome, Firefox, or Safari;
 ## Teacher Permissions on Dodona
 
 Regular accounts on Dodona do not have sufficient permissions to create exercises.
-You can request teacher permissions for your account via [this form](https://dodona.ugent.be/en/rights_requests/new).
+You can request teacher permissions for your account via [this form](https://dodona.be/en/rights_requests/new).
 
 ## Forking the Repository
 
@@ -79,7 +79,7 @@ If it's taking longer and you still don't see _dodona-server_ in the list of col
 ### Adding the Repository to Dodona
 
 Once you have teacher permissions on Dodona, you can add your repository to the platform.
-To do this, go to <https://dodona.ugent.be/en/repositories/> and click the light pink button with a plus sign (`+`).
+To do this, go to <https://dodona.be/en/repositories/> and click the light pink button with a plus sign (`+`).
 
 ![New repo Dodona](./add-repository.png)
 

@@ -30,7 +30,7 @@ Please note that for security reasons you will not be able to view the tokens on
 ## How can I use the Dodona API?
 
 ::: warning
-If you want to build an application, tool or plugin that uses the Dodona API, please contact us at [dodona@ugent.be](mailto:dodona@ugent.be) so we can help you out. This will also allow us to notify you if we make any changes to the API.
+If you want to build an application, tool or plugin that uses the Dodona API, please contact us at [support@dodona.be](mailto:support@dodona.be) so we can help you out. This will also allow us to notify you if we make any changes to the API.
 :::
 
 Many of the actions you can perform on Dodona can also be done through the API. Unfortunately, we do not have a complete documentation of the API yet. The easiest way to check if a certain action is possible through the API is to add `.json` to the end of the URL. For example, if you want to get a list of all the featured courses on Dodona, you can go to [dodona.be/courses.json?tab=featured](https://dodona.be/courses.json?tab=featured). This will return a JSON object with all the featured courses on Dodona.

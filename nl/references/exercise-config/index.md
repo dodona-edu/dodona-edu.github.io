@@ -64,7 +64,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     "network_enabled": true
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
-  "contact": "Dodona <dodona@ugent.be>"
+  "contact": "Dodona <team@dodona.be>"
 }
 ```
 
@@ -96,6 +96,6 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     "memory_limit": 100000000
   },
   "programming_language": "python",
-  "contact": "Firstname Lastname <firstname_lastname@ugent.be>"
+  "contact": "Firstname Lastname <firstname_lastname@dodona.be>"
 }
 ```
