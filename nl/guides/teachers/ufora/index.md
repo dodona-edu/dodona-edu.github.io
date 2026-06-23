@@ -21,7 +21,7 @@ Surf naar [ufora.ugent.be](https://ufora.ugent.be) en navigeer naar je cursus. O
 Klik op het menu `Bestaande activiteiten` en vervolgens op `Dodona`. Er verschijnt nu een dialoogvenster om oefeningen te selecteren.
 
 ::: tip Geen Dodona?
-De Dodona-module is niet in alle faculteiten standaard ingeschakeld. Zie je geen Dodona-optie in het menu? Contacteer ons dan via dodona@ugent.be met vermelding van je cursuscode.
+De Dodona-module is niet in alle faculteiten standaard ingeschakeld. Zie je geen Dodona-optie in het menu? Contacteer ons dan via support@dodona.be met vermelding van je cursuscode.
 :::
 
 ![add content](./add-content.png)

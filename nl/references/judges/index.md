@@ -24,7 +24,7 @@ C is een judge die het GTester-framework gebruikt om testen uit te voeren op C-o
 Haskell is een judge die HUnit gebruikt om Haskell-oefeningen te testen. \
 **Programmeertalen:** Haskell\
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-haskell), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ## HTML
 De HTML judge beoordeelt zowel de HTML- als de CSS-code van een student, op basis van een modeloplossing of een checklist met criteria.\
@@ -36,27 +36,27 @@ De HTML judge beoordeelt zowel de HTML- als de CSS-code van een student, op basi
 Java is judge die het JUnit4-framework gebruikt om tests op Java-oefeningen uit te voeren.\
 **Programmeertalen:** Java\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java), [voorbeelden](https://github.com/dodona-edu/judge-java/tree/master/examples) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ## Markdown
 De Markdown-judge is geen echte judge omdat hij geen code evalueert.
 Het geeft wel de markdown code van een leerling weer en kan handig zijn om de uitvoer handmatig te evalueren in Dodona. \
 **Programmeertalen:** Markdown\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-markdown) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ## Prolog
 Prolog is een judge die gebruikt kan worden voor oefeningen in de programmeertaal Prolog.
 Het ondersteunt PLUnit, QuickCheck en eenvoudige input-outputtests.\
 **Programmeertalen:** Prolog\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-prolog), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/prolog) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ## R
 R is een judge die gebruikt kan worden voor oefeningen in de programmeertaal R.\
 **Programmeertalen:** R\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-r), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/R) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ## Scheme
 Scheme is een judge die de `R5RS`-variant van de programmeertaal Scheme ondersteunt. Het gebruikt een aangepast testframework [dunit](https://gitlab.soft.vub.ac.be/Structuur1/dodona-judge/-/tree/master/collects/dunit) om de tests te definiëren.\
@@ -76,7 +76,7 @@ TESTed is een judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.\
 **Programmeertalen:** Bash, C, C#, C++, Haskell, Java, JavaScript, Typescript, Kotlin, Python\
 **Aan de slag** [Documentatie](/nl/guides/exercises/), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/tested) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ## Turtle
 De Turtle-judge evalueert de uitvoer van een Python Turtle programma. Het berekent de overeenkomst tussen de uitvoer van de leerling en de modeloplossing. \
@@ -100,7 +100,7 @@ Bash is een judge die gebruikt kan worden voor oefeningen op de Bash terminal.
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.\
 **Programmeertalen:** Bash\
 **Aan de slag** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/bash), neem contact op met de makers voor meer informatie over deze judge. \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### Csharp
 
@@ -112,7 +112,7 @@ Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe C#-oefenin
 Csharp is een judge die gebruikt kan worden voor oefeningen in C#.\
 **Programmeertalen:** C# \
 **Aan de slag** [Voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### Javascript
 
@@ -125,7 +125,7 @@ JavaScript is een judge die gebruikt kan worden voor oefeningen in de programmee
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.\
 **Programmeertalen:** Javascript\
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### JUnit
 
@@ -137,7 +137,7 @@ Gebruik in plaats daarvan de [Java-judge](#java).
 De JUnit-judge gebruikt het JUnit-framework voor oefeningen in de programmeertaal Java 8.\
 **Programmeertalen:** Java \
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java8), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/java) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### Python
 
@@ -150,4 +150,4 @@ Python/Pythia is de eerste judge die is gemaakt voor Dodona.
 Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
 **Programmeertalen:** Python\
 **Aan de slag** [Documentatie](/nl/references/judges/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
-**Gemaakt door:** [Team Dodona](mailto:dodona@ugent.be)
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)

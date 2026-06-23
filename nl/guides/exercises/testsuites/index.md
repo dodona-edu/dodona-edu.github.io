@@ -317,7 +317,7 @@ Het is niet verplicht om argumenten te gebruiken:
 ::: warning Geavanceerde materie
 Taalspecifieke expressies en statements heb je voor de meeste oefeningen niet nodig.
 
-Als je toch denkt taalspecifieke expressies en statements nodig te hebben, dan horen we graag waarom: aarzel niet om ons een [e-mail te sturen](mailto:dodona@ugent.be?subject=Taalspecifieke%20expressies) om je gebruik te melden.
+Als je toch denkt taalspecifieke expressies en statements nodig te hebben, dan horen we graag waarom: aarzel niet om ons een [e-mail te sturen](mailto:support@dodona.be?subject=Taalspecifieke%20expressies) om je gebruik te melden.
 Zo kunnen we TESTed misschien uitbreiden met nieuwe functionaliteit, of jouw specifieke use-case gemakkelijker maken.
 :::
 

@@ -64,7 +64,7 @@ The structure for a reading activity is identical to that of an exercise. There 
     "network_enabled": true
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
-  "contact": "Dodona <dodona@ugent.be>"
+  "contact": "Dodona <team@dodona.be>"
 }
 ```
 
@@ -96,6 +96,6 @@ The structure for a reading activity is identical to that of an exercise. There 
     "memory_limit": 100000000
   },
   "programming_language": "python",
-  "contact": "Firstname Lastname <firstname_lastname@ugent.be>"
+  "contact": "Firstname Lastname <firstname_lastname@dodona.be>"
 }
 ```

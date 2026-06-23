@@ -23,7 +23,7 @@ Controleer voor de zekerheid toch of je een recente versie van Chrome, Firefox o
 ## Lesgeversrechten op Dodona
 
 Gewone accounts hebben op Dodona niet voldoende rechten om zelf oefeningen te kunnen maken.
-Daarvoor kan je via [het formulier](https://dodona.ugent.be/nl/rights_requests/new) lesgeversrechten aanvragen voor je account.
+Daarvoor kan je via [het formulier](https://dodona.be/nl/rights_requests/new) lesgeversrechten aanvragen voor je account.
 
 ## Repository forken
 
@@ -79,7 +79,7 @@ Zie je de gebruiker _dodona-server_ na een half uur nog steeds niet in de lijst 
 ### Repository toevoegen aan Dodona
 
 Eens je lesgeversrechten op Dodona hebt, kan je je repository toevoegen aan Dodona.
-Ga daarvoor eerst naar <https://dodona.ugent.be/nl/repositories/> en klik op de lichtroze knop met een plusteken (`+`) in.
+Ga daarvoor eerst naar <https://dodona.be/nl/repositories/> en klik op de lichtroze knop met een plusteken (`+`) in.
 
 ![New repo Dodona](./add-repository.png)
 

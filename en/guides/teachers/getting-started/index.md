@@ -31,7 +31,7 @@ Some schools use multiple identity providers.
 Since your Dodona account is linked to the sign-in system used, you will have two different Dodona accounts if you sign in via Google first and then via Microsoft 365 next.
 
 To prevent issues, we can limit the sign-in options for your school.
-Contact us at <a href="mailto:dodona@ugent.be">dodona@ugent.be</a> for this.
+Contact us at <a href="mailto:support@dodona.be">support@dodona.be</a> for this.
 :::
 
 A standard Dodona account can freely enroll in courses and submit exercises without limitations.

@@ -22,7 +22,7 @@ Click on the `Existing activities` menu and subsequently on the `Dodona` menu it
 
 
 ::: tip No Dodona?
-The Dodona module is not enabled in all faculties by default. If you don't see a Dodona option in the menu, send us an email at dodona@ugent.be with your course code.
+The Dodona module is not enabled in all faculties by default. If you don't see a Dodona option in the menu, send us an email at support@dodona.be with your course code.
 :::
 
 ![add content](./add-content.png)

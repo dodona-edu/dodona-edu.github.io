@@ -310,7 +310,7 @@ You can also combine `stdin` with an expression. It is not mandatory to use argu
 ::: warning Advanced Topic
 Language-specific expressions and statements are not needed for most exercises.
 
-If you think you need language-specific expressions and statements, we would like to know why: do not hesitate to [send us an email](mailto:dodona@ugent.be?subject=Language-specific%20expressions) to report your use.
+If you think you need language-specific expressions and statements, we would like to know why: do not hesitate to [send us an email](mailto:support@dodona.be?subject=Language-specific%20expressions) to report your use.
 This way, we can possibly expand TESTed with new functionality or make your specific use case easier.
 :::
 
