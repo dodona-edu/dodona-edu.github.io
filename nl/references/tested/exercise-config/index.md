@@ -27,46 +27,24 @@ Zie [_Formaat voor testplannen_](/nl/references/tested/json) voor een gedetaille
 Het `evaluation`-blok ondersteunt een `option`-object met velden die het gedrag van TESTed beïnvloeden.
 We overlopen deze opties hieronder.
 
-### `options.mode`
-
-Het veld `mode` geeft aan hoe testcode gegenereerd en uitgevoerd moeten worden (samen met de ingediende oplossing).
-Twee modi worden ondersteund:
-
-* `batch` (standaard): Alle testcode van een tabblad wordt gegenereerd en gecompileerd in één compilatie-eenheid (batchcompilatie).
-* `context`: Testcode wordt gegenereerd en gecompileerd per context (contextuele compilatie).
-
-Het compilatieproces is sneller bij batchcompilatie dan met contextuele compilatie,
-maar kan falen als een ingediende oplossing niet aan alle vereisten van de oefening voldoet.
-Als een oefening bijvoorbeeld vereist dat twee functie geïmplementeerd worden, maar de ingediende oplossing implementeert er slechts één, zal dit bij oplossingen in Java leiden tot compilatiefouten.
-Zie het volgende veld voor een oplossing.
-
-Hier is een voorbeeld dat contextuele compilatie gebruikt:
-
-```json
-{
-  "evaluation": {
-    "options": {
-      "mode": "context"
-    }
-  }
-}
-```
-
 ### `options.allow_fallback`
 
+Standaard genereert en compileert TESTed alle testcode van een tabblad samen in één compilatie-eenheid (*batchcompilatie*).
+Dat is snel, maar kan falen als een ingediende oplossing niet aan alle vereisten van de oefening voldoet.
+Als een oefening bijvoorbeeld vereist dat twee functies geïmplementeerd worden, maar de ingediende oplossing implementeert er slechts één, zal dit bij oplossingen in Java leiden tot compilatiefouten.
+
 Als het Booleaanse veld `allow_fallback` op `true` staat (de standaardwaarde),
-zal TESTed automatisch contextuele compilatie gebruiken als de batchcompilatie faalt.
+valt TESTed automatisch terug op het per context compileren van de testcode (*contextuele compilatie*) wanneer de batchcompilatie faalt.
 Dit kan nuttig zijn om ingediende oplossingen te evalueren die niet alle vereisten implementeren.
 
-Hier is een voorbeeld dat het terugvallen op de contextuele compilatie uitschakelt:
+Hier is een voorbeeld dat dit terugvallen uitschakelt:
 
 ```json
 {
   "evaluation": {
     "options": {
-      "mode": "batch",
       "allow_fallback": false
-    }   
+    }
   }
 }
 ```
@@ -270,7 +248,6 @@ Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) 
     "handler": "TESTed",
     "plan_name": "plan.json",
     "options": {
-      "mode": "batch",
       "allow_fallback": true,
       "linter": {
         "c": true,

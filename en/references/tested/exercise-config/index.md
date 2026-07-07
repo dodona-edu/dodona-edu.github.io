@@ -28,47 +28,25 @@ See the reference documentation for the [DSL test suites](/en/references/tested/
 The `evaluation` block can contain an `options` object with attributes that influence the general behaviour of TESTed.
 We discuss each of these options below.
 
-### `options.mode`
-
-The `mode` attribute indicates how test code is generated and compiled (along with submissions).
-Two modes are supported:
-
-* `batch` (default): All test code in a tab is generated and compiled in a single compilation unit (batch compilation).
-* `context`: Test code is generated and compiled per context (contextual compilation).
-
-The compilation process is faster with batch compilation than with contextual compilation,
-but may fail if a submission does not implement all requirements of the exercise.
-For example, if an exercise requires a student to implement two functions,
-but a submission only implements a single function, this will result in a compilation error for Java submissions.
-See the next attribute for a workaround.
-
-Here's an example that uses contextual compilation:
-
-```json
-{
-  "evaluation": {
-    "options": {
-      "mode": "context"
-    }
-  }
-}
-```
-
 ### `options.allow_fallback`
 
-When the boolean attribute `allow_fallback` is set to true (the default value),
-TESTed automatically falls back to contextual compilation when batch compilation fails.
+By default, TESTed generates and compiles all test code of a tab together in a single compilation unit (*batch compilation*).
+This is fast, but it can fail if a submission does not implement all requirements of the exercise.
+For example, if an exercise requires a student to implement two functions,
+but a submission only implements a single function, this will result in a compilation error for Java submissions.
+
+When the boolean attribute `allow_fallback` is set to `true` (the default value),
+TESTed automatically falls back to compiling the test code per context (*contextual compilation*) when batch compilation fails.
 This may be useful with submissions that do not implement all requirements of the exercise.
 
-Here's an example that disables falling back to contextual compilation:
+Here's an example that disables this fallback:
 
 ```json
 {
   "evaluation": {
     "options": {
-      "mode": "batch",
       "allow_fallback": false
-    }   
+    }
   }
 }
 ```
@@ -276,7 +254,6 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
     "handler": "TESTed",
     "test_suite": "suite.yaml",
     "options": {
-      "mode": "batch",
       "allow_fallback": true,
       "linter": {
         "c": true,
