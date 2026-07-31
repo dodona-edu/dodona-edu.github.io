@@ -6,6 +6,8 @@ order: 3
 
 # Advanced test suite reference
 
+_Last verified against TESTed commit [`0c5c0a4c`](https://github.com/dodona-edu/universal-judge/commit/0c5c0a4c88ce429a4328e792938136ec0e234e8d) (2026-07-31)._
+
 :::warning Advanced test suites vs. DSL test suites
 This is the reference guide for advanced test suites, written in JSON.
 In most cases, you should prefer using the [DSL test suites](/en/references/tested/dsl) (written in YAML).
@@ -222,7 +224,7 @@ The output channel for the result of an expression.
 The possible channels are:
 
 - [EmptyChannel](#emptychannel) (default): No result is expected.
-- [IgnoredChannel](#ignoredchannel): No exception is expected, but any exceptions raised are ignored.
+- [IgnoredChannel](#ignoredchannel): No result is expected, but any resulting value is ignored.
 - [ValueOutputChannel](#valueoutputchannel): The expected result of the expression.
 
 #### `.output.exit_code`
@@ -277,7 +279,7 @@ An IgnoredChannel object describes that no output is expected on a specific file
 Any output generated on the file descriptor will be ignored, and is considered correct by TESTed.
 In other words, if you do not want output, you should use [`EmptyChannel`](#emptychannel),
 while if you don't care about the output, you should use `IgnoredChannel`.
-The `EmptyChannel` is represented by a string constant `ignored`.
+The `IgnoredChannel` is represented by a string constant `ignored`.
 
 For example, ignoring any output on standard output:
 
@@ -291,8 +293,8 @@ For example, ignoring any output on standard output:
 
 ### ExceptionOutputChannel
 
-An `ExceptionOutputChannel`describes an expected exception, thrown upon executing the submission by an error message and
-an evaluator used to evaluate the exception.
+An `ExceptionOutputChannel` describes an expected exception, thrown upon executing the submission by an error message and
+an oracle used to evaluate the exception.
 It is represented by an object with two attributes.
 
 For example, if you require an error with the message `"Error"`:
@@ -558,8 +560,8 @@ you can either use one of the built-in check functions or provide your own.
 In a test suite, this translates to three kinds of oracles:
 
 1. "Generic oracles" for the built-in check functions.
-2. [`SpecificOracle`](#specificoracle) for a custom check function using the programming-language-independent way.
-3. [`ProgrammedOracle`](#programmedoracle) for custom check functions that are programming language specific.
+2. [`ProgrammedOracle`](#programmedoracle) for a custom check function using the programming-language-independent way.
+3. [`SpecificOracle`](#specificoracle) for custom check functions that are programming language specific.
 
 Each oracle has an attribute `.type` with the internal type of the oracle.
 Generic oracles also have an attribute `.name` with the internal name of the oracle.
@@ -705,7 +707,7 @@ For example, using a programmed oracle for the return value:
 
 #### `.type`
 
-A string with constant value `programmed`.
+A string with constant value `programmed` (current versions of TESTed also accept `custom_check`, the canonical value in the source code).
 
 #### `.function`
 
@@ -785,6 +787,7 @@ This object has a few attributes:
 - `evaluation_directory`: path to the `evaluation` folder of the exercise (that contains the test suite)
 - `programming_language`: the programming language of the submission
 - `natural_language`: the natural language of the user that submitted this submission
+- `submission_path`: path to the submitted file, or `None` if it is not available
 
 The other arguments are the same as the `arguments` attribute from the test suite.
 In this example, the check function would have three arguments: the context and the two numbers from the test suite.
@@ -924,11 +927,8 @@ In other languages, you must return an object with the correct attributes.
 
 The following fields are present:
 
-- `result`: the result of the check. Either a `boolean` or an advanced result object, with the following fields:
-    - `.enum`: the actual result (useful statuses include `compilation error`, `correct`, `wrong`, `internal error`).
-      Check the Dodona docs for more information on the status.
-    - `.human`: an optional human-readable description of the status.
-      This allows you to give more information.
+- `result`: the result of the check. Either a `boolean` or a status string
+  (useful statuses include `compilation error`, `correct`, `wrong`, `internal error`).
 - `readable_expected`: a human-readable representation (string) of the expected value
 - `readable_actual`: a human-readable representation (string) of the actual value
 - `messages`: an optional list of additional messages to display
@@ -1138,16 +1138,16 @@ For example, an integer would be:
 ```json
 {
  "type": "integer",
- "value": 10
+ "data": 10
 }
 ```
 
-Infinity would be represented as:
+Infinity would be represented as follows (note that the special constants are only valid for real numbers, not integers):
 
 ```json
 {
- "type": "integer",
- "value": "inf"
+ "type": "real",
+ "data": "inf"
 }
 ```
 
@@ -1160,7 +1160,7 @@ For example:
 ```json
 {
  "type": "text",
- "value": "Hello World"
+ "data": "Hello World"
 }
 ```
 
@@ -1173,7 +1173,7 @@ For example:
 ```json
 {
  "type": "boolean",
- "value": true
+ "data": true
 }
 ```
 
@@ -1187,10 +1187,10 @@ For example, a set with one literal element:
 ```json
 {
  "type": "set",
- "value": [
+ "data": [
   {
    "type": "boolean",
-   "value": true
+   "data": true
   }
  ]
 }
@@ -1210,20 +1210,20 @@ For example, an object where the key is a list (`[5]`), and the value a boolean 
 ```json
 {
  "type": "map",
- "value": [
+ "data": [
   {
    "key": {
     "type": "list",
-    "value": [
+    "data": [
      {
       "type": "integer",
-      "value": 5
+      "data": 5
      }
     ]
    },
    "value": {
     "type": "boolean",
-    "value": false
+    "data": false
    }
   }
  ]
@@ -1239,7 +1239,7 @@ For example:
 ```json
 {
  "type": "nothing",
- "value": null
+ "data": null
 }
 ```
 
