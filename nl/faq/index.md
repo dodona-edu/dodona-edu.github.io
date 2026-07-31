@@ -3,7 +3,7 @@ title: Frequently Asked Questions
 ---
 # Frequently Asked Questions
 
-In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebruik van Dodona. Of je nu een leerling bent die probeert te begrijpen hoe je door de lessen moet navigeren, een docent die een nieuwe cursus opzet of gewoon nieuwsgierig bent naar bepaalde functies, wij hebben het voor je geregeld. Om een specifieke pagina te vinden, is onze zoekfunctie in de navigatiebalk bovenaan erg krachtig. Als je het antwoord op je vraag niet kunt vinden, aarzel dan niet om contact op te nemen met [ons ondersteuningsteam](https://dodona.be/nl/contact).
+In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebruik van Dodona. Of je nu een leerling bent die probeert te begrijpen hoe je door de lessen moet navigeren, een lesgever die een nieuwe cursus opzet of gewoon nieuwsgierig bent naar bepaalde functies, wij hebben het voor je geregeld. Om een specifieke pagina te vinden, is onze zoekfunctie in de navigatiebalk bovenaan erg krachtig. Als je het antwoord op je vraag niet kunt vinden, aarzel dan niet om contact op te nemen met [ons ondersteuningsteam](https://dodona.be/nl/contact).
 
 ## Accounts en instellingen
 - [Hoe werken accounts op Dodona?](./accounts/#hoe-werken-accounts-op-dodona)
@@ -41,6 +41,8 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe kan ik vragen voor studenten inschakelen/uitschakelen?](./annotations/#hoe-kan-ik-vragen-voor-studenten-inschakelen-uitschakelen)
 - [Hoe weet ik of er open vragen zijn?](./annotations/#hoe-weet-ik-of-er-open-vragen-zijn)
 - [Hoe kan ik een vraag beantwoorden?](./annotations/#hoe-kan-ik-een-vraag-beantwoorden)
+- [Hoe werken AI-conceptantwoorden?](./annotations/#hoe-werken-ai-conceptantwoorden)
+- [Hoe schakel ik AI-conceptantwoorden in of uit?](./annotations/#hoe-schakel-ik-ai-conceptantwoorden-in-of-uit)
 - [Hoe kan ik opmerkingen geven op een oplossing van een student?](./annotations/#hoe-kan-ik-opmerkingen-geven-op-een-oplossing-van-een-student)
 - [Hoe kan ik opmerkingen opslaan en hergebruiken?](./annotations/#hoe-kan-ik-opmerkingen-opslaan-en-hergebruiken)
 - [Waarom vind ik mijn opgeslagen opmerkingen niet terug?](./annotations/#waarom-vind-ik-mijn-opgeslagen-opmerkingen-niet-terug)
