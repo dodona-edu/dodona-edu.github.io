@@ -50,7 +50,7 @@ In dit bestand worden een aantal dingen gespecificeerd:
 - `description.names`: De **namen** van de oefening zoals getoond door Dodona in het Nederlands (_nl_) en in het Engels (_en_). In dit geval zijn de namen gelijk.
 - `evaluation.handler`: We gebruiken TESTed als judge.
 - `evaluation.test_suite`: Het testplan krijgt de naam `suite.yaml`.
-- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt schrijven. In dit geval is dat Python.
 - `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
@@ -73,7 +73,7 @@ Maak een bestand `description.nl.md` aan in de map `description` van de oefening
 
 ````markdown
 Schrijf een functie `minimum` die twee getallen als argumenten aanvaardt.
-Deze functie moet het kleinste geval van die twee teruggeven.
+Deze functie moet het kleinste getal van die twee teruggeven.
 
 ### Voorbeeld
 

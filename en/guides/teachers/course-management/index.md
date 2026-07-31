@@ -55,6 +55,6 @@ You'll also see a button to `Detect plagiarism` next to it on the submissions ov
 
 ![Retest submissions and Detect plagiarism buttons above the submissions overview filtered to a single exercise](./submissions-detect-plagiarism-en.png)
 
-![dolos](./staff.dolos.png)
+![Dolos plagiarism report](/images/dolos.png)
 
 You can also filter for the `Most recent submissions per user` by clicking on the three dots to the right of the filter bar. Here you'll also find the option to `automatically reload submissions` every 5 seconds, which can be useful when you want to follow the progress of your students in real-time.

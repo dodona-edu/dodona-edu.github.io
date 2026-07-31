@@ -52,5 +52,10 @@ Deze oplossingen kan je ook op andere manieren bereiken:
 * Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `Oplossingen` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
 In het oplossingenoverzicht vind je rechtsboven de knop `Oplossingen hertesten`. Met deze knop kan je [alle oplossingen uit het overzicht hertesten](../series-export-and-retest/#oplossing-hertesten).
+Op het oplossingenoverzicht van een specifieke oefening vind je daarnaast de knop `Plagiaat detecteren`. Hiermee exporteer je de meest recente oplossing van elke student naar onze detectietool voor plagiaat in broncode, [dolos](https://dolos.ugent.be/).
+
+![Knoppen Oplossingen hertesten en Plagiaat detecteren boven het oplossingenoverzicht gefilterd op één oefening](./submissions-detect-plagiarism-nl.png)
+
+![Dolos-plagiaatrapport](/images/dolos.png)
 
 Rechts van de filterbalk vind je een knop met 3 puntjes. Hier kan je filteren op de `Meest recente correcte oplossing per gebruiker`, en de inzendingen `automatisch laten herladen` om de voortgang van je studenten in real-time op te volgen.

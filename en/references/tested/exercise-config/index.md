@@ -16,7 +16,7 @@ The `test_suite` attribute in the `evaluation` block takes the location of the t
 ```json
 {
   "evaluation": {
-    "test_suite": "plan.yaml"
+    "test_suite": "suite.yaml"
   }
 }
 ```

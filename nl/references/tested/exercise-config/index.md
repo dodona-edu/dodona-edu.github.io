@@ -20,7 +20,7 @@ Het veld `test_suite` in het `evaluation`-blok wordt gebruikt om de locatie van 
 }
 ```
 
-Zie [_Formaat voor testplannen_](/nl/references/tested/json) voor een gedetailleerde beschrijving van het formaat voor testplannen voor TESTed.
+Zie de referentiedocumentatie voor [DSL-testplannen](/nl/references/tested/dsl) en [geavanceerde testplannen](/nl/references/tested/json) voor een gedetailleerde beschrijving van de formaten voor testplannen.
 
 ## Algemene opties
 
@@ -104,7 +104,7 @@ Dit zijn de linters die TESTed op dit moment gebruikt:
 
 Het Booleaanse veld `options.linter` kan gebruikt worden om linters in (`true`) of uit (`false`) te schakelen voor een programmeeroefening,
 voor alle programmeertalen samen ofwel voor individuele talen.
-Het is een voorbeeld dat linters uitschakelt voor alle programmeertalen:
+Hier is een voorbeeld dat linters uitschakelt voor alle programmeertalen:
 
 ```json
 {
@@ -223,7 +223,7 @@ Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebe
 
 TESTed ondersteunt volgende velden voor de linter bij Kotlin (`ktlint`):
 
-- `editorconfig`: Locatie en naam van een `.editorconfig`-bestand (zie <https://editorconfig.org/>), relatief ten opzichte van de `evaluation`-map van de oefening.
+- `editorconfig`: Locatie en naam van een `editorconfig`-bestand (zie <https://editorconfig.org/>), relatief ten opzichte van de `evaluation`-map van de oefening.
 - `ktlint_ruleset`: Locatie en naam van een JAR-bestand met extra regels, relatief ten opzichte van de `evaluation`-map van de oefening.
 
 Hier is een voorbeeld dat het gebruik van een aantal van deze velden toont:

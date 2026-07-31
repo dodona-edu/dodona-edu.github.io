@@ -238,6 +238,14 @@ fallbacks).
 
 ## Phase 4 — Screenshot refresh
 
+STATUS (2026-08-01): teachers area, FAQ (api-tokens, featured-courses, annotations
+en+nl) done and committed. Students stages A-C done; stage D (EN course pass) in
+flight; stage E (NL) + stage F (icons) queued. A reusable manifest-driven capture
+system now lives in screenshots/ (shots.yaml + state scenarios + hooks + 2x runner)
+— future re-shoots are one command per page. Manual captures still owed: dolos
+(needs job worker, external service), ufora (external D2L), ide-plugins desktop
+shots (script in the FAQ manifest).
+
 Systematic re-shoot from the dev instance (dodona-comms capture pipeline), both languages
 in the same pass, new naming convention. Priority order:
 
@@ -259,6 +267,13 @@ in the same pass, new naming convention. Priority order:
 
 ## Phase 5 — New content for coverage gaps
 
+STATUS (2026-08-01): written and pending stacked PRs: assessments/exam-mode guide
+(with availability callout — exam_mode Flipper flag), AI draft answers FAQ entries
+(vague provider phrasing per Bart), course statistics guide. Composite exercises
+struck (internal). Remaining: coding scratchpad + course sections (blocked on
+student-page captures), grading/exercises refresh, smaller topics (item 9), FAQ
+activities expansion.
+
 Priority order from the app gap analysis:
 
 1. **Exam mode end-to-end** (exam series kind, sessions, activity password, invigilator
@@ -266,7 +281,8 @@ Priority order from the app gap analysis:
 2. **AI draft answers** to student questions (+ per-course `draft_answers_enabled`
    toggle; privacy questions teachers will ask)
 3. **Coding scratchpad / Papyros + Python tutor** (student-facing, zero docs)
-4. **Composite exercises** (new activity type; authoring reference + example tutorial)
+4. ~~Composite exercises~~ DO NOT DOCUMENT (Bart, 2026-08-01): still in development,
+   an internal-only feature. Revisit when it ships publicly.
 5. **Course sections + course sidebar** (update students/courses + course-management)
 6. **Course statistics & visualizations** (heatmap, punchcard, violin, timeseries…)
 7. **Series kind conversion** (+ exam kind in exercise-series-management)
@@ -278,6 +294,12 @@ Priority order from the app gap analysis:
 10. FAQ `activities` page (2 questions, stale since 2024-01) — expand or fold in
 
 ## Phase 6 — NL parity closure
+
+STATUS (2026-08-01): scanned (46 findings) and applied except 4 deferred items in
+guides/students/** (contended by capture work; includes the stale feedback-page
+prose). Scanner false alarms rejected with evidence: the python-judge "getal <e>"
+placeholder is descriptive (source-verified twice), assessments nav was already
+integrated. nl/references/judges/creating-a-judge became a proper short stub.
 
 Mostly absorbed into earlier phases (bilingual rule), but explicitly:
 - `nl/guides/teachers/getting-started`: substantially diverged — still documents the

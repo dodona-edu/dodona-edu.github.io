@@ -282,7 +282,7 @@ The constructor of this class has the following parameters:
 1. `result`: A boolean indicating if the generated value is correct or not.
 2. `readable_expected`, optional: The expected value to show on Dodona.
 3. `readable_actual`, optional: The generated value to show on Dodona.
-4. `messages`, optional: A list of messages (`Message`s or strings).
+4. `messages`, optional: A list of messages (`Message`s or strings). These messages are also shown on Dodona and can be used to give students additional feedback or explanation.
 5. `dsl_expected`, optional: The expected value as [string value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
 6. `dsl_actual`, optional: The generated value as [string value](#expressions-and-statements). TESTed will convert this to the programming language of the submission before showing it on Dodona.
 

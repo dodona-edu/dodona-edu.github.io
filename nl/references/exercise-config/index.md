@@ -29,7 +29,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 
 ## Configuratiebestandsstructuur voor leesactiviteiten
 
-De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en bepaalde verplichte velden zoals `programming_language` mogen achterwege gelaten worden.
+De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er zijn echter twee grote verschillen: de waarde van `type` moet ingesteld worden op `content` en velden die niet relevant zijn voor oefeningen, zoals `programming_language`, mogen achterwege gelaten worden. Het formaat van de beschrijving is ook identiek.
 
 - **`type`**: Moet ingesteld worden op `content` voor leesactiviteiten.
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken

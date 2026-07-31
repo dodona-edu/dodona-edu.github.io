@@ -16,7 +16,7 @@ De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oef
 
 ## Markdown
 
-Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schrijven in Markdown. Ook voor beschrijvingen van cursussen en reeksen kan Markdown gebruikt worden. Markdown is een soort opmaaktaal zoals HTML, maar dan een stuk eenvoudiger. Hieronder kan je de basisopmaak vinden, een lijst van alle syntax kan je vinden in deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Verder op deze pagina staan specifieke uitbreidingen die werken binnen Dodona oefeningenbeschrijvingen.
+Voor oefeningen en leesactiviteiten op Dodona raden we aan om de inhoud te schrijven in Markdown. Ook voor beschrijvingen van cursussen en reeksen kan Markdown gebruikt worden. Markdown is een soort opmaaktaal zoals HTML, maar dan een stuk eenvoudiger. Hieronder kan je de basisopmaak vinden, een lijst van alle syntax kan je vinden in deze [Markdown Cheatsheet pagina](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Verder op deze pagina staan specifieke uitbreidingen (zowel in Markdown als HTML) die werken binnen Dodona oefeningenbeschrijvingen.
 
 ### Titels
 

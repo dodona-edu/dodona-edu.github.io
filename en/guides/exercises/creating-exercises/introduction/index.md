@@ -1,6 +1,7 @@
 ---
 title: "Creating exercises: introduction"
 sidebarTitle: "Introduction"
+skipIndex: true
 order: 1
 next: true
 ---

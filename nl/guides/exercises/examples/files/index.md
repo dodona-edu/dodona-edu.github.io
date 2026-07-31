@@ -72,7 +72,7 @@ In dit bestand worden een aantal dingen gespecifieerd:
 - `description.sandbox_files`: De bestanden die in Dodona automatisch in de sandbox zullen ingeladen worden. Dit laat studenten toe om in de sandbox meteen met de juiste bestanden aan de slag te gaan. (We maken dit bestand later in deze gids nog aan.)
 - `evaluation.handler`: We gebruiken TESTed als judge.
 - `evaluation.test_suite`: Het testplan krijgt de naam `suite.yaml`.
-- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt. In dit geval is dat Python.
+- `programming_language`: De **programmeertaal** van de oefening: hier kies je in welke programmeertaal je de oplossingen wilt schrijven. In dit geval is dat Python.
 - `access`: Het **toegangsniveau** is hier _private_. We kiezen voor een private oefening omdat dit maar een handleiding is, maar we moedigen aan om je oefeningen publiek (_public_) te zetten: dan kunnen andere leerkrachten er ook gebruik van maken (net zoals jij de keuze hebt uit duizenden publieke oefeningen op Dodona).
 
 Nadat je dit bestand gemaakt hebt, zal je repository er zo uitzien:
@@ -108,12 +108,12 @@ anders moet het overschreven worden.
 ### Voorbeeld
 
 ```console
-$ ./sorteer ongeordend.txt geordend.txt
-$ cat ongeordend.txt
+$ ./sorteer ongesorteerd.txt gesorteerd.txt
+$ cat ongesorteerd.txt
 2
 3
 1
-$ cat geordend.txt
+$ cat gesorteerd.txt
 1
 2
 3

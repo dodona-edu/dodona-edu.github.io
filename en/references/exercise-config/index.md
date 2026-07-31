@@ -24,7 +24,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
   - **`time_limit`** (integer, optional): the time in seconds before the evaluations times out. By default, the limit is 42 seconds.
   - **`memory_limit`** (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 100MB.
   - **`network_enabled`** (boolean, optional): set to `true` if internet access should be enabled. This optional setting is `false` by default.
-- **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
+- **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface. Defaults to an empty list.
 - **`contact`** (string, optional): info about the author of this exercise, formatted like an email To header.
 
 ## Config file structure for reading activities
@@ -37,7 +37,7 @@ The structure for a reading activity is identical to that of an exercise. There 
   - `private`: only teachers with explicit permission can use this exercise
 - **`description`** (object): the specification of the description of the exercise
   - **`names`** (object): the name of the exercise, with [two-letter language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) as keys (e.g., `nl`, `en`, `fr`)
-- **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface.
+- **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface. Defaults to an empty list.
 - **`contact`** (string, optional): info about the author of this reading activity, formatted like an email To header.
 
 ## Example config file `config.json`

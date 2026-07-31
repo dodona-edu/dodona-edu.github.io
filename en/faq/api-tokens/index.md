@@ -41,7 +41,7 @@ For endpoints where you need to be signed in, you can use an [API token](#what-i
 curl \
   -H "Authorization: {YOUR TOKEN}" \
   -H "Accept: application/json" \
-  "https://dodona.be/nl/submissions.json"
+  "https://dodona.be/en/submissions.json"
 ```
 
 In Python, this would look like:

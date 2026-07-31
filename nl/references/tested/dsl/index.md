@@ -21,7 +21,7 @@ Dit document is de referentiegids voor het formaat van DSL-testplannen en bevat 
 
 DSL-testplannen worden geschreven in YAML.
 Een [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json) van het formaat is beschikbaar in de repository van TESTed.
-Dit schema kan zorgen voor automatische controles en automatisch aanvullen in uw tekstverwerker.
+Dit schema kan zorgen voor automatische controles en automatisch aanvullen in je editor.
 Gebruik je VS Code, dan kan je ook onze [extensie](https://marketplace.visualstudio.com/items?itemName=DodonaLearningTechnologies.dodona-exercise-assistant) installeren. Die configureert dit JSON Schema vanzelf.
 
 ## Structuur en opbouw
@@ -87,7 +87,7 @@ Omdat elke context apart wordt uitgevoerd, zijn de volgende beperkingen van toep
 
 - Enkel het eerste testgeval mag de "_main
   call_" bevatten, bijvoorbeeld met argumenten voor de commandoregel of standaardinvoer.
-- Enkel het laatste testgeval met de test bevatten voor de exitcode.
+- Enkel het laatste testgeval mag de test voor de exitcode bevatten.
 
 Merk op dat het eerste en laatste testgeval wel hetzelfde testgeval kunnen zijn:
 als er maar een testgeval is, kan het zowel de _main call_ als de test voor de exitcode bevatten.
@@ -98,7 +98,7 @@ Testgevallen zijn de bouwstenen van een testplannen, en bevatten de invoer en de
 Binnen dezelfde context zijn de volgende beperkingen van toepassing:
 
 - Enkel het eerste testgeval mag de _main call_ bevatten, bijvoorbeeld met argumenten voor de commandoregel of standaardinvoer.
-- Enkel het laatste testgeval met de test bevatten voor de exitcode.
+- Enkel het laatste testgeval mag de test voor de exitcode bevatten.
 
 Merk op dat het eerste en laatste testgeval wel hetzelfde testgeval kunnen zijn:
 als er maar een testgeval is, kan het zowel de _main call_ als de test voor de exitcode bevatten.
@@ -374,7 +374,7 @@ Dit object bevat een aantal configuratieopties die invloed hebben op hoe de test
 De volgende opties zijn beschikbaar:
 
 - `applyRounding`: pas afronding toe als waarden als vlottendekommagetal vergeleken worden
-- `roundTo`: het aantal cijfers om op af te ronden, als `applyRouding` gebruikt wordt
+- `roundTo`: het aantal cijfers om op af te ronden, als `applyRounding` gebruikt wordt
 - `caseInsensitive`: negeer hoofdletters en kleine letters bij het vergelijken van strings
 - `ignoreWhitespace`: negeer witruimte aan het begin en einde
 - `tryFloatingPoint`: probeer tekst eerst als vlottendekommagetal te vergelijken
