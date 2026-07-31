@@ -1,7 +1,7 @@
 ---
 title: "[en] Nieuwe programmeertaal"
 description: "Configureren van een nieuwe programmeertaal aan TESTed"
-order: 3
+order: 5
 ---
 
 # Nieuwe programmeertalen toevoegen

@@ -134,6 +134,24 @@ In het volgende deel van de handleiding zullen we dan effectief de oefening schr
 Er zijn verschillende soorten oefeningen die ondersteund worden door Dodona.
 In deze handleiding kiezen we voor een oefening met functies, maar we hebben ook handleidingen voor andere soorten oefeningen.
 
+## GitLab of een andere Git-host gebruiken
+
+De stappen hierboven gebruiken github.com, maar Dodona ondersteunt ook repository's op andere Git-hosts: de GitHub-instantie van de UGent ([github.ugent.be](https://github.ugent.be)) en GitLab, zowel [gitlab.com](https://gitlab.com) als eigen servers.
+De werkwijze is dezelfde: geef de Dodona-server toegang tot je repository, voeg de repository toe aan Dodona met de SSH-clone-URL en stel de webhook in.
+Enkel de manier waarop je toegang geeft, verschilt per host:
+
+- Op github.ugent.be voeg je [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) toe als collaborator.
+- Op gitlab.com voeg je [dodona-server](https://gitlab.com/dodona-server) toe als lid van je project.
+- Op een eigen GitLab-server maak je zelf een gebruiker voor Dodona aan, voeg je onze [publieke SSH-sleutel](/dodona.pub){target="_blank"} toe aan die gebruiker en geef je die gebruiker schrijfrechten op je repository.
+
+De sjabloonrepository bestaat enkel op GitHub.
+Start je met een lege repository op een andere host, zorg er dan voor dat die de [repositorystructuur](/nl/references/repository-directory-structure) volgt.
+
+::: warning Opgepast
+_VS Code for the Web_, dat we in de rest van deze handleiding gebruiken, werkt enkel met repository's op github.com.
+Op andere hosts moet je je oefeningen met je eigen tools bewerken.
+:::
+
 ## VS Code gebruiken
 
 In deze handleiding gebruiken we de webversie van VS Code.
