@@ -26,7 +26,7 @@ Je wordt dan doorgestuurd naar een formulier waar je de eigenschappen van de ree
 
 ![Reeksformulier met de soortkeuze, naam, deadline, beschrijvingseditor en zichtbaarheidsopties](./series-form-nl.png)
 
-Eerst kies je de soort reeks die je wil aanmaken: een gewone reeks, een toetsreeks, of een optionele reeks. De gewone reeks heeft een duidelijke voortgangsaanduiding. Een optionele reeks wordt standaard ingeklapt voor je studenten, en maakt duidelijk dat de oefeningen in de reeks optioneel zijn. Een toetsreeks beperkt de toegang en houdt een activiteitenlog van studenten bij; deze soort is bedoeld voor examens en wordt in een latere handleiding in detail beschreven.
+Eerst kies je de soort reeks die je wil aanmaken: een gewone reeks, een toetsreeks, of een optionele reeks. De gewone reeks heeft een duidelijke voortgangsaanduiding. Een optionele reeks wordt standaard ingeklapt voor je studenten, en maakt duidelijk dat de oefeningen in de reeks optioneel zijn. Een toetsreeks beperkt de toegang en houdt een activiteitenlog van studenten bij; deze soort is bedoeld voor toetsen en examens en wordt in detail beschreven in de handleiding over [toetsen en examens](../assessments/).
 
 Nadien geef je de reeks een naam en stel je optioneel een deadline, beschrijving, zichtbaarheid en enkele geavanceerde instellingen in. Alle eigenschappen van dit formulier worden beschreven in de referentie over [reeksinstellingen](../series-settings/).
 

@@ -81,7 +81,8 @@ Note that the old link will no longer work once you generate a new one.
 
 ## Advanced settings
 
-* `Hide the "Class progress" visualization for students`: For an exercise, the progress of all users in the course is shown.
+* `Hide the "Class progress" visualisation for students`: For an exercise, the progress of all users in the course is shown.
+  Here you can see how many students have already started or finished an exercise.
   This visualization can be valuable for students, but you might want to disable it for exams.
 
 * `Hide learning activities`: If the learning activities are hidden, only the description of this series will be shown.
@@ -89,3 +90,8 @@ Note that the old link will no longer work once you generate a new one.
 
 * `Number learning activities`: If this setting is active, each exercise and reading activity is given a sequential number, starting with 1.
   This number is displayed in titles and listings and can make it easier to communicate about these activities.
+
+## Assessment options
+
+If you picked `Assessment series` as the kind at the top of the form, an extra `Assessment options` section appears with the assessment password and the `Restrict Dodona to assessment content` and `Automatically stop assessment sessions` settings.
+These options, and running a test or exam in general, are covered in the [assessments and exams guide](../assessments/).

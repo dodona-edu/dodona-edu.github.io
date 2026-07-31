@@ -76,3 +76,8 @@ Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te kl
 
 * `Nummer leeractiviteiten`: Als deze instelling actief is, krijgt elke oefening en leesactiviteit een nummer, beginnende bij 1.
   Dit nummer wordt getoond in titels en oplijstingen en kan het eenvoudiger maken om over deze activiteiten te communiceren.
+
+## Toetsopties
+
+Koos je bovenaan het formulier `Toetsreeks` als reekstype, dan verschijnt er een extra sectie `Toetsopties` met het toetswachtwoord en de instellingen `Beperk Dodona tot de inhoud van de toets` en `Toetssessies automatisch stoppen`.
+Deze opties, en het afnemen van een toets of examen in het algemeen, worden beschreven in de handleiding over [toetsen en examens](../assessments/).

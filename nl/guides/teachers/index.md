@@ -14,10 +14,11 @@ Deze handleidingen behandelen alles wat je als leerkracht nodig hebt, van je eer
 3. [Oefeningenreeksenbeheer](./exercise-series-management/): bouw het leerpad van je cursus door reeksen aan te maken en er oefeningen aan toe te voegen.
 4. [Reeksinstellingen](./series-settings/): een referentie voor alle instellingen van een reeks, zoals deadlines, zichtbaarheid en geheime links.
 5. [Oplossingen exporteren en hertesten](./series-export-and-retest/): exporteer de oplossingen van een reeks als zip-bestand of hertest ze na een aanpassing aan een oefening.
-6. [Cursusbeheer](./course-management/): beheer beheerdersrechten, cursusinstellingen, vragen en oplossingen.
-7. [Gebruikersbeheer](./user-management/): volg registraties op, beheer rechten en organiseer studenten met labels.
-8. [Taken en toetsen verbeteren](./grading/): evalueer oplossingen manueel en geef studenten feedback en punten.
-9. [Dodona en Ufora](./ufora/): voeg Dodona-oefeningen toe aan Ufora, de leeromgeving van de Universiteit Gent.
+6. [Toetsen en examens](./assessments/): neem een toets of examen af met een toetsreeks, volg de sessies op en geef de resultaten vrij.
+7. [Cursusbeheer](./course-management/): beheer beheerdersrechten, cursusinstellingen, vragen en oplossingen.
+8. [Gebruikersbeheer](./user-management/): volg registraties op, beheer rechten en organiseer studenten met labels.
+9. [Taken en toetsen verbeteren](./grading/): evalueer oplossingen manueel en geef studenten feedback en punten.
+10. [Dodona en Ufora](./ufora/): voeg Dodona-oefeningen toe aan Ufora, de leeromgeving van de Universiteit Gent.
 
 Wil je zelf oefeningen aanmaken? De handleidingen over [oefeningen aanmaken](/nl/guides/exercises/creating-exercises/introduction/) leggen uit hoe je oefeningen schrijft en publiceert op Dodona.
 
