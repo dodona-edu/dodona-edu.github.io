@@ -1,6 +1,7 @@
 ---
 title: Cursussen op Dodona
 description: "Tutorial: cursussen op Dodona"
+order: 3
 ---
 
 # Cursussen op Dodona
@@ -85,7 +86,7 @@ In het menu van een oefeningenreeks vind je de volgende opties:
 
 ### Indienstatus
 
-Je indienstatus voor een oefening uit een oefeningenreeks wordt bepaald **op basis van de oplossing die je als laatste in de cursus hebt ingediend voor de oefening**. Als er een deadline werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat overeenkomt met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+Je indienstatus voor een oefening uit een oefeningenreeks wordt bepaald **op basis van de oplossing die je als laatste in de cursus hebt ingediend voor de oefening**. Als er een deadline werd ingesteld voor de oefeningenreeks, dan is dit de laatst ingediende oplossing voorafgaand aan de deadline. De status van een individuele oplossing (`Correct`, `Fout`, `Uitvoeringsfout`, ...) is iets anders dan je indienstatus; die statussen worden uitgelegd bij [Feedback begrijpen](../feedback/#mogelijke-statussen). In de oefeningenreeks zie je vóór elke oefening ook een **icoontje** dat overeenkomt met je indienstatus voor de oefening. Als je in een oefeningenreeks drukt op je indienstatus voor een oefening, dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
 Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vóór het verstrijken van de deadline:
 

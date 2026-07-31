@@ -1,6 +1,7 @@
 ---
 title: Aanmelden & gebruikersinstellingen
 description: "Tutorial: aanmelden en gebruikersinstellingen"
+order: 2
 ---
 
 # Aanmelden & gebruikersinstellingen
