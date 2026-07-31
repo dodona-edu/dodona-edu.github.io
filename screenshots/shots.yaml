@@ -837,6 +837,7 @@ shots:
     file: create-new-token
     url: http://dodona.localhost:3000/{locale}/profile
     user: 5 # Sofie
+    state: [faq-clean-tokens]
     hook: hooks/faq-create-new-token.mjs
     crop:
       selector: '[data-shot="api-tokens-card"]'
@@ -850,6 +851,7 @@ shots:
     file: token-generated
     url: http://dodona.localhost:3000/{locale}/profile
     user: 5 # Sofie
+    state: [faq-clean-tokens]
     hook: hooks/faq-token-generated.mjs
     crop:
       selector: '#fresh-token'

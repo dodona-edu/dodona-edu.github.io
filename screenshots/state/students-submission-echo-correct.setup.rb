@@ -10,6 +10,10 @@
 # The exercise page itself is the shot's URL (no dynamic-id handoff needed): loading
 # /en/courses/29/series/140/activities/347592237/ as student 5 shows the latest submission's
 # tabs directly.
+# Course 29 has no repository grants in the seeds; submissions/activity pages need
+# this (see course29-repo-access.*.rb; removed only by that scenario's teardown).
+CourseRepository.find_or_create_by!(course_id: 29, repository_id: 2)
+
 require 'json'
 
 code = <<~PY

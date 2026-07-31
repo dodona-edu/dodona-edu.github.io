@@ -2,6 +2,10 @@
 # Warning ("conditional statement with a constant value") and one Error ("Undefined
 # variable 'y'"), matching the retired student.exercise_lint_error.png. Dynamic id handed
 # off via the shared state file, same mechanism as students-submission-echo-wrong.
+# Course 29 has no repository grants in the seeds; submissions/activity pages need
+# this (see course29-repo-access.*.rb; removed only by that scenario's teardown).
+CourseRepository.find_or_create_by!(course_id: 29, repository_id: 2)
+
 require 'json'
 
 code = <<~PY

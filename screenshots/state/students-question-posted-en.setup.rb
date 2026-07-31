@@ -2,6 +2,10 @@
 # directly rather than driving the form through the browser -- frames 1-2 (bubble, open/typed
 # form) are pure UI states with no state dependency; only frame 3 needs this. Submission 1347,
 # line 16 (matches the gif's frame crop, which includes line 16).
+# Course 29 has no repository grants in the seeds; submissions/activity pages need
+# this (see course29-repo-access.*.rb; removed only by that scenario's teardown).
+CourseRepository.find_or_create_by!(course_id: 29, repository_id: 2)
+
 s = Submission.find(1347)
 Question.create!(
   submission: s,

@@ -1,5 +1,9 @@
 # D15b frame 3 (NL, Stage E): Dutch variant of students-question-posted-en. Apply only after
 # that EN scenario's teardown has run.
+# Course 29 has no repository grants in the seeds; submissions/activity pages need
+# this (see course29-repo-access.*.rb; removed only by that scenario's teardown).
+CourseRepository.find_or_create_by!(course_id: 29, repository_id: 2)
+
 s = Submission.find(1347)
 Question.create!(
   submission: s,
