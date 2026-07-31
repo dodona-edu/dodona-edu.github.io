@@ -1,0 +1,507 @@
+# Teacher-guide shot manifest (Phase 4 re-shoot, 2026-07-31).
+#
+# All 36 shots below were actually captured (course 11 "Visualisation Test",
+# zeus/user 1). CM-7 (dolos) was skipped: clicking "Detect plagiarism" needs a
+# real export job plus a live call to the external Dolos service, and this
+# dev instance has no background job worker, so the click hangs forever. It
+# stays a manual capture; see its `manual: true` entry at the end of
+# course-management.
+#
+# State scenarios used below (bin/rails runner in the dodona checkout):
+#   course11-naming[.rb nl]      course 11 + series 51-54 renamed off their
+#                                 seeded lorem names; pass "nl" for the NL pass
+#   course11-labels               seeds the 5a/5b member labels (course 11 has
+#                                 none by default)
+#   eval1-score-items[.rb nl]    renames evaluation 1's score items off their
+#                                 seeded lorem names; pass "nl" for the NL pass
+#   series-visibility              (SS-1 only) three series get non-default
+#                                 visibilities at once
+#   grading-wizard-series52       keeps series 52 evaluation-free so the
+#                                 G-1..G-6 wizard shots start clean
+#
+# course11-naming and eval1-score-items are locale-parameterized (one scenario,
+# run once per pass) because a single shot id is captured for both locales but
+# the `state:` list itself isn't locale-aware — run the matching setup.rb
+# (bare, or with an "nl" argument) before each `--locale` pass.
+
+area: teachers
+defaults:
+  user: 1
+
+shots:
+  # ---------------- user-management ----------------
+  - id: UM-1
+    page: guides/teachers/user-management
+    file: course-nav-users
+    url: /{locale}/courses/11/
+    keepNavbar: true
+    state: [course11-naming]
+    crop:
+      union: ['.dodona-navbar', '#main-container .card:first-of-type']
+      pad: 8
+    must_show:
+      - course navbar icons incl. the users icon
+      - "\"25 Registered users\" stat"
+      - "course title \"Programming\""
+
+  - id: UM-2
+    page: guides/teachers/user-management
+    file: users-overview
+    url: /{locale}/courses/11/members/
+    state: [course11-naming, course11-labels]
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - Registered / Pending 3 / Unregistered tabs
+      - Member labels + Institution filter dropdowns
+      - Download user list + Edit all labels buttons
+      - institution column values, progress bars, 5a/5b labels
+      - graduation-cap icons in the left margin for staff rows
+
+  - id: UM-3
+    page: guides/teachers/user-management
+    file: users-filtered
+    url: /{locale}/courses/11/members/
+    state: [course11-naming, course11-labels]
+    hook: hooks/user-management.mjs
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - two active filter chips (label 5a + Universiteit Gent)
+      - filtered rows showing the 5a label
+      - both filter dropdowns
+
+  - id: UM-4
+    page: guides/teachers/user-management
+    file: user-progress-tooltip
+    url: /{locale}/courses/11/members/
+    state: [course11-naming]
+    hook: hooks/user-management.mjs
+    crop:
+      selector: '[data-shot="um4-tooltip"]'
+    must_show:
+      - progress tooltip text
+      - tricolor progress bar
+
+  - id: UM-5
+    page: guides/teachers/user-management
+    file: users-edit-permissions
+    url: /{locale}/courses/11/members/
+    state: [course11-naming]
+    hook: hooks/user-management.mjs
+    crop:
+      union: ['[data-shot="um5-admin"]', '[data-shot="um5-student"]']
+      pad: 0
+    must_show:
+      - admin row (demote icon) and student row (promote icon) side by side
+
+  - id: UM-6
+    page: guides/teachers/user-management
+    file: users-admin-icon
+    url: /{locale}/courses/11/members/
+    state: [course11-naming]
+    hook: hooks/user-management.mjs
+    crop:
+      selector: '[data-shot="um6-strip"]'
+    must_show:
+      - left-margin cap icons on staff rows vs. a row without one
+
+  - id: UM-7
+    page: guides/teachers/user-management
+    file: member-overview
+    url: /{locale}/courses/11/members/5
+    viewport: { width: 1600, height: 1700 }
+    state: [course11-naming]
+    hook: hooks/user-management.mjs
+    crop:
+      selector: '#main-container'
+    must_show:
+      - submissions/correct/unfinished stats trio
+      - rendered punchcard + heatmap (not "Loading...")
+      - Edit labels button
+      - series status sidebar
+
+  # ---------------- course-management ----------------
+  - id: CM-1
+    page: guides/teachers/course-management
+    file: course-edit-button
+    url: /{locale}/courses/11/
+    keepNavbar: true
+    state: [course11-naming]
+    hook: hooks/course-management.mjs
+    crop:
+      selector: '[data-shot="cm1-strip"]'
+    must_show:
+      - pencil (edit) icon in the course navbar
+      - course title
+
+  - id: CM-2
+    page: guides/teachers/course-management
+    file: course-after-edit
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - header card: title, teacher, Teaching/Moderated pills, stats row
+
+  - id: CM-3
+    page: guides/teachers/course-management
+    file: course-submissions-link
+    url: /{locale}/courses/11/
+    keepNavbar: true
+    state: [course11-naming]
+    hook: hooks/course-management.mjs
+    crop:
+      selector: '[data-shot="cm3-strip"]'
+    must_show:
+      - "\"Submitted solutions\" stat"
+      - submissions icon in the navbar
+
+  - id: CM-4
+    page: guides/teachers/course-management
+    file: course-submissions-filter
+    url: /{locale}/courses/11/submissions/
+    state: [course11-naming]
+    hook: hooks/cap-height.mjs
+    cap_height: 750
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - funnel filter icons next to User and Exercise cells
+      - Status filter dropdown
+      - Retest submissions button
+
+  - id: CM-5
+    page: guides/teachers/course-management
+    file: course-submissions-filtered
+    url: /{locale}/courses/11/submissions/
+    state: [course11-naming]
+    hook: hooks/course-management.mjs
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - active filter chips for user + exercise
+      - rows all matching that user/exercise pair
+
+  - id: CM-6
+    page: guides/teachers/course-management
+    file: submissions-detect-plagiarism
+    url: /{locale}/courses/11/series/54/activities/1638674449/submissions/
+    state: [course11-naming]
+    hook: hooks/cap-height.mjs
+    cap_height: 235
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - Retest submissions button
+      - Detect plagiarism button
+
+  - id: CM-7
+    page: guides/teachers/course-management
+    file: staff.dolos
+    path: en/guides/teachers/course-management/staff.dolos.png
+    manual: true
+    # Not captured by this pipeline: "Detect plagiarism" triggers a real
+    # export job plus a live call to dolos.ugent.be before opening a new
+    # tab. This dev instance has no background job worker, so the export
+    # never finishes and the click hangs. Needs a manual capture on an
+    # instance with a running worker (see CM-6 for how to reach the button).
+    must_show:
+      - Dolos branding + similarity view
+      - no Dodona dev URLs visible
+
+  # ---------------- exercise-series-management ----------------
+  - id: ESM-1
+    page: guides/teachers/exercise-series-management
+    file: series-form
+    url: /{locale}/courses/11/series/new
+    viewport: { width: 1600, height: 1750 }
+    state: [course11-naming]
+    hook: hooks/exercise-series-management.mjs
+    crop:
+      selector: '[data-shot="esm1-form"]'
+    must_show:
+      - kind picker (Regular series / Assessment series / Optional series)
+      - "\"The kind can still be changed after the series has been created.\""
+      - Name, Deadline, description editor, visibility radios
+
+  - id: ESM-2
+    page: guides/teachers/exercise-series-management
+    file: series-actions-menu
+    url: /{locale}/courses/11/
+    state: [course11-naming, grading-wizard-series52]
+    hook: hooks/open-menu.mjs
+    menu_toggle: '#series-card-52 button.series-dropdown'
+    crop:
+      union: ['#series-card-52 .card-actions', '#series-card-52 .dropdown-menu']
+      pad: 8
+    must_show:
+      - Series scoresheet + Evaluate series buttons
+      - open menu listing Edit/Delete/Export student submissions/Retest submissions
+
+  - id: ESM-3
+    page: guides/teachers/exercise-series-management
+    file: series-delete
+    url: /{locale}/courses/11/manage_series/
+    state: [course11-naming]
+    hook: hooks/cap-height.mjs
+    cap_height: 750
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - drag handles, edit + delete buttons per row
+
+  - id: ESM-4
+    page: guides/teachers/exercise-series-management
+    file: scoresheet
+    url: /{locale}/series/54/scoresheet
+    state: [course11-naming]
+    hook: hooks/cap-height.mjs
+    cap_height: 900
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - mix of submission-status icons
+      - per-exercise columns
+      - the two filter checkboxes
+
+  # ---------------- series-settings ----------------
+  - id: SS-1
+    page: guides/teachers/series-settings
+    file: series-visibility-messages
+    url: /{locale}/courses/11/
+    locales: [en]
+    # NL counterpart is a kept 2026-06-11 capture (series-visibility-messages-nl.png),
+    # not produced by this pipeline.
+    viewport: { width: 1600, height: 2400 }
+    state: [course11-naming, series-visibility]
+    crop:
+      union: ['#series-card-51', '#series-card-53']
+      pad: 0
+    must_show:
+      - all three visibility banners (hidden / secret link / timed)
+      - "\"Make visible for students.\" links"
+
+  # ---------------- series-export-and-retest ----------------
+  - id: SE-1
+    page: guides/teachers/series-export-and-retest
+    file: series-export-action
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    hook: hooks/open-menu.mjs
+    menu_toggle: '#series-card-54 button.series-dropdown'
+    crop:
+      union: ['#series-card-54 .card-actions', '#series-card-54 .dropdown-menu']
+      pad: 8
+    must_show:
+      - open menu with Export student submissions + Retest submissions rows
+
+  - id: SE-2
+    page: guides/teachers/series-export-and-retest
+    file: export-exercise-choice
+    url: /{locale}/exports/series/54
+    state: [course11-naming]
+    crop:
+      selector: '#choose-panel'
+    must_show:
+      - header checkbox, both exercise rows, Next step button
+
+  - id: SE-3
+    page: guides/teachers/series-export-and-retest
+    file: export-options
+    url: /{locale}/exports/series/54
+    state: [course11-naming]
+    hook: hooks/series-export.mjs
+    crop:
+      selector: '#choose-options-panel'
+    must_show:
+      - export option checkboxes/radios
+      - Start export button
+
+  - id: SE-4
+    page: guides/teachers/series-export-and-retest
+    file: export-started
+    url: /{locale}/exports/series/54
+    state: [course11-naming]
+    hook: hooks/series-export.mjs
+    crop:
+      selector: '#downloading-panel'
+    must_show:
+      - the started/preparing download message
+
+  - id: SE-5
+    page: guides/teachers/series-export-and-retest
+    file: submission-retest-button
+    url: /{locale}/submissions/1218/
+    keepNavbar: true
+    state: [course11-naming]
+    crop:
+      union: ['.dodona-navbar', '#main-container .card:first-of-type']
+      pad: 0
+    must_show:
+      - circular-arrow retest icon in the navbar
+      - submission verdict header
+
+  # ---------------- grading ----------------
+  - id: G-1
+    page: guides/teachers/grading
+    file: evaluate-series-button
+    url: /{locale}/courses/11/
+    state: [course11-naming, grading-wizard-series52]
+    crop:
+      selector: '#series-card-52 .card-actions'
+    must_show:
+      - Evaluate series button
+
+  - id: G-2
+    page: guides/teachers/grading
+    file: evaluation-deadline
+    url: /{locale}/evaluations/new?series_id=52
+    state: [course11-naming, grading-wizard-series52]
+    crop:
+      selector: '#info-panel'
+    must_show:
+      - pre-filled deadline field + explanation text + confirm button
+
+  - id: G-3
+    page: guides/teachers/grading
+    file: evaluation-select-users
+    url: /{locale}/evaluations/new?series_id=52
+    state: [course11-naming, grading-wizard-series52]
+    hook: hooks/grading-wizard.mjs
+    crop:
+      selector: '#users-panel'
+    must_show:
+      - both default-config buttons (all enrolled / all who submitted)
+      - individual checkboxes + search box
+
+  - id: G-4
+    page: guides/teachers/grading
+    file: evaluation-add-grades
+    url: /{locale}/evaluations/new?series_id=52
+    state: [course11-naming, grading-wizard-series52]
+    hook: hooks/grading-wizard.mjs
+    crop:
+      selector: '#choice-panel'
+    must_show:
+      - both yes/no choices for adding a scoring scheme
+
+  - id: G-5
+    page: guides/teachers/grading
+    file: evaluation-add-score-items
+    url: /{locale}/evaluations/new?series_id=52
+    state: [course11-naming, grading-wizard-series52]
+    hook: hooks/grading-wizard.mjs
+    crop:
+      selector: '[data-shot="g5-block"]'
+    must_show:
+      - the Add score items affordance
+
+  - id: G-6
+    page: guides/teachers/grading
+    file: evaluation-score-items
+    url: /{locale}/evaluations/new?series_id=52
+    state: [course11-naming, grading-wizard-series52]
+    hook: hooks/grading-wizard.mjs
+    crop:
+      selector: '[data-shot="g5-block"]'
+    must_show:
+      - name/description/maximum/visibility columns
+      - at least one filled row
+
+  - id: G-7
+    page: guides/teachers/grading
+    file: evaluation-progress
+    url: /{locale}/evaluations/1
+    state: [course11-naming]
+    hook: hooks/cap-height.mjs
+    cap_height: 900
+    crop:
+      selector: '#main-container .card:not(.mt-3)'
+    must_show:
+      - partially filled per-exercise progress bars
+      - Evaluate + Detect plagiarism links
+      - Release feedback button
+
+  - id: G-8
+    page: guides/teachers/grading
+    file: evaluation-details
+    url: /{locale}/evaluations/1
+    state: [course11-naming]
+    hook: hooks/cap-height.mjs
+    cap_height: 1100
+    crop:
+      selector: '.card.mt-3'
+    must_show:
+      - mix of completed/open per-student-per-exercise icons with status badges
+      - both Evaluation details / Grade overview tabs
+
+  - id: G-9
+    page: guides/teachers/grading
+    file: evaluation-grades
+    url: /{locale}/evaluations/1
+    state: [course11-naming, eval1-score-items]
+    hook: hooks/grading-eval1.mjs
+    crop:
+      selector: '.card.mt-3'
+    must_show:
+      - numeric scores + dashes for missing
+      - Total column
+      - download CSV button
+
+  - id: G-10
+    page: guides/teachers/grading
+    file: evaluation-grading
+    url: /{locale}/evaluations/1
+    viewport: { width: 1600, height: 1600 }
+    state: [course11-naming, eval1-score-items]
+    hook: hooks/grading-eval1.mjs
+    crop:
+      selector: '#main-container'
+    must_show:
+      - code listing
+      - score item inputs with names + thumbs
+      - Next button + per-series status icons
+
+  # ---------------- getting-started ----------------
+  - id: GS-1
+    page: guides/teachers/getting-started
+    file: exercise-info
+    url: /{locale}/activities/946979464/info/
+    viewport: { width: 1600, height: 1900 }
+    hook: hooks/getting-started.mjs
+    crop:
+      union: ['.alert-info', '.card.activity-info', '.card.sample-solutions']
+      pad: 8
+    must_show:
+      - "\"only accessible to teachers\" banner"
+      - language/limits facts row, judge + repo links
+      - Sample solutions tabs
+
+  - id: GS-2
+    page: guides/teachers/getting-started
+    file: course-overview
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    crop:
+      union: ['#main-container .card:first-of-type', '.card.series:first-of-type']
+      pad: 0
+    must_show:
+      - stats row
+      - Learning path heading + Manage series button
+      - first series card with class-progress bars and deadline
+
+  # ---------------- creating-a-course ----------------
+  - id: CC-1
+    page: guides/teachers/creating-a-course
+    file: course-fast-copy
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    hook: hooks/open-menu.mjs
+    menu_toggle: '#main-container .card:first-of-type button.dropdown-toggle'
+    crop:
+      union: ['#main-container .card:first-of-type .card-actions', '#main-container .card:first-of-type .dropdown-menu']
+      pad: 8
+    must_show:
+      - Copy this course row in the header-card menu

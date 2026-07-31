@@ -13,3 +13,5 @@ basement_dist
 
 .vitepress/cache
 .vitepress/dist
+screenshots/.frames/
+tmp/
