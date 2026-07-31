@@ -11,7 +11,7 @@ A course is structured as a learning path with exercises that are bundled into e
 
 ## Administrative Rights
 
-Course administrators have special rights within a course. They can modify the course as they wish and track the progress of the students enrolled in the course. The user who creates the course is automatically appointed as the course administrator. They can, in turn, appoint other additional course administrators from among the users enrolled in the course.
+Course administrators have special rights within a course. They can modify the course as they wish and track the progress of the students enrolled in the course. The user who creates the course is automatically appointed as the course administrator. They can, in turn, appoint other additional course administrators from among the users enrolled in the course. To follow how your students are doing, Dodona also offers a set of [statistics and visualisations](../statistics/) per course and per series.
 
 ## Edit Course
 

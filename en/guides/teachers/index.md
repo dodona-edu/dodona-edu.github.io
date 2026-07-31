@@ -18,7 +18,8 @@ These guides cover everything you need as a teacher, from your first sign-in to 
 7. [Course management](./course-management/): manage administrative rights, course settings, questions, and submissions.
 8. [User management](./user-management/): follow up on registrations, manage permissions, and organise students with labels.
 9. [Grading](./grading/): manually evaluate submissions and give students feedback and scores.
-10. [Dodona and Ufora](./ufora/): add Dodona exercises to Ufora, the learning environment of Ghent University.
+10. [Statistics and visualisations](./statistics/): follow your students' activity with course statistics and the graphs per series.
+11. [Dodona and Ufora](./ufora/): add Dodona exercises to Ufora, the learning environment of Ghent University.
 
 Want to create your own exercises? The [creating exercises](/en/guides/exercises/creating-exercises/introduction/) guides explain how to write exercises and publish them on Dodona.
 
