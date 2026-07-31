@@ -49,6 +49,41 @@ Hier is een voorbeeld dat dit terugvallen uitschakelt:
 }
 ```
 
+### `options.compiler_optimizations`
+
+Standaard compileert TESTed testcode zonder compileroptimalisaties,
+omdat de extra compilatietijd voor korte oefeningen vaak veel groter is dan de gewonnen uitvoeringstijd.
+Als het Booleaanse veld `compiler_optimizations` op `true` staat (de standaardwaarde is `false`),
+worden compileroptimalisaties ingeschakeld voor de talen waarvan de compiler die ondersteunt: C, C++ en Haskell.
+Dit kan nuttig zijn voor langere oefeningen, of oefeningen waarbij de oplossing afhangt van optimalisatie.
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "compiler_optimizations": true
+    }
+  }
+}
+```
+
+### `options.parallel`
+
+Als het Booleaanse veld `parallel` op `true` staat (de standaardwaarde is `false`),
+voert TESTed de contexten van het testplan parallel uit.
+Dit kan het onderzoeken waard zijn voor oefeningen die rekenintensief zijn.
+Het is aangeraden om dit uitgeschakeld te laten voor oefeningen die zelf al multithreaded zijn.
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "parallel": true
+    }
+  }
+}
+```
+
 ## Linters
 
 Bij het [toevoegen van een nieuwe programmeertaal aan TESTed](/nl/references/tested/new-programming-language)
@@ -65,6 +100,7 @@ Dit zijn de linters die TESTed op dit moment gebruikt:
 | JavaScript      | [ESLint](https://eslint.org/)                          |
 | Kotlin          | [Ktlint](https://ktlint.github.io/)                    |
 | Python          | [Pylint](https://pylint.pycqa.org/en/latest/)          |
+| TypeScript      | [ESLint](https://eslint.org/)                          |
 
 Het Booleaanse veld `options.linter` kan gebruikt worden om linters in (`true`) of uit (`false`) te schakelen voor een programmeeroefening,
 voor alle programmeertalen samen ofwel voor individuele talen.
@@ -188,9 +224,7 @@ Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebe
 TESTed ondersteunt volgende velden voor de linter bij Kotlin (`ktlint`):
 
 - `editorconfig`: Locatie en naam van een `.editorconfig`-bestand (zie <https://editorconfig.org/>), relatief ten opzichte van de `evaluation`-map van de oefening.
-- `disabled_rules_ktlint`: Regels die _ktlint_ moeten negeren, ofwel als een lijst van strings, ofwel als één string die door komma's gescheiden wordt.
 - `ktlint_ruleset`: Locatie en naam van een JAR-bestand met extra regels, relatief ten opzichte van de `evaluation`-map van de oefening.
-- `ktlint_experimental`: Booleaanse waarde die aangeeft of `ktlint` ook experimentele regels moet gebruiken (`true`, de standaardwaarde) of niet (`false`).
 
 Hier is een voorbeeld dat het gebruik van een aantal van deze velden toont:
 
@@ -201,9 +235,7 @@ Hier is een voorbeeld dat het gebruik van een aantal van deze velden toont:
       "language": {
         "kotlin": {
           "editorconfig": "kotlin.editorconfig",
-          "disabled_rules_ktlint": ["filename"],
-          "ktlint_ruleset": "ktlint_rules.jar",
-          "ktlint_experimental": false
+          "ktlint_ruleset": "ktlint_rules.jar"
         }
       }
     }   
@@ -227,6 +259,26 @@ Hier is een voorbeeld dat het bestand `pylint.rc` instelt als configuratiebestan
         }
       }
     }   
+  }
+}
+```
+
+### TypeScript
+
+In het veld `eslint_config` kan de locatie van een configuratiebestand voor ESLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in TypeScript.
+Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebestand voor ESLint:
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "language": {
+        "typescript": {
+          "eslint_config": "eslintrc.yaml"
+        }
+      }
+    }
   }
 }
 ```
@@ -262,12 +314,13 @@ Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) 
         },
         "kotlin": {
           "editorconfig": "kotlin.editorconfig",
-          "disabled_rules_ktlint": ["filename"],
-          "ktlint_ruleset": "ktlint_rules.jar",
-          "ktlint_experimental": false
+          "ktlint_ruleset": "ktlint_rules.jar"
         },
         "python": {
           "pylint_config": "pylint.rc"
+        },
+        "typescript": {
+          "eslint_config": "eslintrc.yaml"
         }
       }
     }

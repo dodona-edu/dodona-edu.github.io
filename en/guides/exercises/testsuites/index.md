@@ -9,7 +9,7 @@ To verify whether a submitted solution is correct, Dodona uses test suites.
 This test suite contains a series of test cases that ensure you are reasonably certain whether a solution is correct or not.
 
 In this guide, we briefly discuss the structure, followed by the various possibilities.
-Here we use TESTed: the recommended way to create exercises for **Python**, **JavaScript**, **Typescript**, **Java**, **Kotlin**, **C**, **C#**, **C++**, **Haskell**, and **Bash**.
+Here we use TESTed: the recommended way to create exercises for **Python**, **JavaScript**, **TypeScript**, **Java**, **Kotlin**, **C**, **C#**, **C++**, **Haskell**, and **Bash**.
 If you want to do something that TESTed cannot do or you want to use a different programming language, first look at the [overview of all judges](/en/references/judges).
 
 This guide contains more advanced concepts.
@@ -337,11 +337,12 @@ Moreover, expressions will not work with functions that return `void`.
 More information and discussion at <https://github.com/dodona-edu/universal-judge/issues/423>
 :::
 
-If you only want to support one programming language, you can also set the language of the expressions and statements globally:
+If you only want to support one programming language, you can also set the language of the expressions and statements globally, with the `language` attribute of the root object:
 
 ```yaml
+language: "java"
+tabs:
 - tab: "My tab"
-  language: "java"
   testcases:
   - expression: "Submission.toString(1+1)"
     return: "2"

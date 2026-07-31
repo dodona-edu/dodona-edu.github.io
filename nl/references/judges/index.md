@@ -74,7 +74,7 @@ De SQL judge ondersteunt zowel query evaluatie (DML) als structurele database op
 Deze judge wordt aanbevolen door het Dodona-team.
 TESTed is een judge die voor meerdere programmeertalen gebruikt kan worden.
 Het gebruikt een eenvoudig eigen testformaat, dat onafhankelijk is van de programmeertaal.\
-**Programmeertalen:** Bash, C, C#, C++, Haskell, Java, JavaScript, Typescript, Kotlin, Python\
+**Programmeertalen:** Bash, C, C#, C++, Haskell, Java, JavaScript, Kotlin, Python, TypeScript\
 **Aan de slag** [Documentatie](/nl/guides/exercises/), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/tested) \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 

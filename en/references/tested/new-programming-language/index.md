@@ -6,6 +6,8 @@ order: 5
 
 # Adding new programming languages
 
+_This page targets developers working on TESTed's internals. Last verified against TESTed commit [`0c5c0a4c`](https://github.com/dodona-edu/universal-judge/commit/0c5c0a4c88ce429a4328e792938136ec0e234e8d) (2026-07-31)._
+
 TESTed is designed to (and does) support multiple programming languages.
 To make this easier, all programming-language-specific aspects of the judging process have gathered into one class.
 Adding support for a new programming language then involves creating a subclass and implementing the various methods.
@@ -17,7 +19,7 @@ We will use the C programming language as an example.
 Some useful links that could be useful:
 
 - Implementations for all programming languages currently supported by TESTed, including C, are available at <https://github.com/dodona-edu/universal-judge/tree/master/tested/languages>.
-- The class definition, which you need to subclass: <https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/config.py>
+- The class definition, which you need to subclass: <https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/language.py>
 - Test exercises: <https://github.com/dodona-edu/universal-judge/tree/master/tests/exercises>
 
 ## Installing and running TESTed
@@ -29,7 +31,7 @@ Note that you only need to install the Python dependencies.
 Dependencies for other programming languages (e.g. `ghc` for Haskell) are optional.
 
 To follow the parts of this tutorial that focus on the C programming language,
-you also need to have a local installation of the `gcc` compiler (version 8.1 or up).
+you also need to have a local installation of the `gcc` compiler.
 
 ::: tip Windows users
 We recommend using the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/) for development on Windows machines.
@@ -58,9 +60,9 @@ Test if you can run TESTed using the following command:
 > python -m tested --help
 usage: __main__.py [-h] [-c CONFIG] [-o OUTPUT] [-v]
 
-The programming language agnostic educational test framework.
+The programming-language-agnostic educational test framework.
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -c CONFIG, --config CONFIG
                         Where to read the config from
@@ -178,8 +180,10 @@ Finally, from the "language constructs", the following are not supported:
 - objects
 - exceptions
 - heterogeneous collections
+- heterogeneous arguments
 - default parameters
-- named parameters
+- named arguments
+- programmed evaluation
 
 ## The `Language` class
 
@@ -194,7 +198,7 @@ universal-judge/
 │ │ ├── haskell/
 │ │ ├── java/
 │ │ ├── python/
-│ │ ├── config.py
+│ │ ├── language.py
 │ │ ...
 │ ...
 ...
@@ -214,7 +218,7 @@ class C(Language):
 
     # Additional files we need in the test code.
     # These files should go in the `tested/languages/c/templates` directory.
-    def initial_dependencies(self) -> List[str]:
+    def initial_dependencies(self) -> list[str]:
       return ["values.h", "values.c", "evaluation_result.h", "evaluation_result.c"]
 
     # Compiled languages need a selector to choose which test to execute.
@@ -225,14 +229,18 @@ class C(Language):
     def file_extension(self) -> str:
       return "c"
 
+    # The single-line comment syntax of the language.
+    def comment(self, text: str) -> str:
+      return f"// {text}"
+
     # By default, TESTed uses snake case.
     # Here you can override this for certain features.
-    def naming_conventions(self) -> Dict[Conventionable, NamingConventions]:
+    def naming_conventions(self) -> dict[Conventionable, NamingConventions]:
       return {"global_identifier": "macro_case"}
 
     # As mentioned above, we only support these constructs.
     # This is the reverse: we list supported constructs.
-    def supported_constructs(self) -> Set[Construct]:
+    def supported_constructs(self) -> set[Construct]:
       return {
         Construct.FUNCTION_CALLS,
         Construct.ASSIGNMENTS,
@@ -241,15 +249,17 @@ class C(Language):
 
     # As mentioned above, we don't support various data types.
     # This is the reverse: we list supported data types.
-    def datatype_support(self) -> Mapping[AllTypes, TypeSupport]:
+    def datatype_support(self) -> dict[AllTypes, TypeSupport]:
       return {
         "integer": "supported",
         "real": "supported",
         "char": "supported",
         "text": "supported",
+        "string": "supported",
         "boolean": "supported",
         "nothing": "supported",
         "undefined": "reduced",
+        "null": "reduced",
         "int8": "reduced",
         "uint8": "reduced",
         "int16": "supported",
@@ -266,7 +276,7 @@ class C(Language):
     # The compilation command used by TESTed.
     # See below for more information, or check the method documentation
     # for technical details.
-    def compilation(self, files: List[str]) -> CallbackResult:
+    def compilation(self, files: list[str]) -> CallbackResult:
       main_file = files[-1]
       exec_file = Path(main_file).stem
       result = executable_name(exec_file)
@@ -289,11 +299,12 @@ class C(Language):
     # This will execute the result of the compilation command.
     # See below for more information, or check the method documentation
     # for technical details.
-    def execution(self, cwd: Path, file: str, arguments: List[str]) -> Command:
+    def execution(self, cwd: Path, file: str, arguments: list[str]) -> Command:
       local_file = cwd / executable_name(Path(file).stem)
       return [str(local_file.absolute()), *arguments]
 
-    # The actual implementation has more methods, but look at the code for those.
+    # The actual implementation has more methods (e.g. get_declaration_metadata),
+    # but look at the code for those.
 
     # The following four methods are responsible for generating C code based on
     # the test suite. To keep this class managable, we have extracted the generation
@@ -304,10 +315,10 @@ class C(Language):
     def generate_execution_unit(self, execution_unit: PreparedExecutionUnit) -> str:
       return generators.convert_execution_unit(execution_unit)
 
-    def generate_selector(self, contexts: List[str]) -> str:
+    def generate_selector(self, contexts: list[str]) -> str:
       return generators.convert_selector(contexts)
 
-    def generate_encoder(self, values: List[Value]) -> str:
+    def generate_encoder(self, values: list[Value]) -> str:
       return generators.convert_encoder(values)
 ```
 
@@ -351,7 +362,7 @@ Here is an example of calling the compilation method with the arguments and retu
 ```python
 >>> compilation(['submission.c', 'evaluation_result.c', 'context_0_0.c', 'selector.c'])
 (
-    ['gcc', '-std=c11', '-Wall', 'evaluation_result.c', 'values.c', 'selector.c',
+    ['gcc', '-std=c11', '-Wall', '-O0', 'evaluation_result.c', 'values.c', 'selector.c',
      '-o', 'selector.exe'], ['selector.exe']
 )
 ```
@@ -382,15 +393,12 @@ Here is an example of calling the execution method with the arguments and return
 
 ### Code generation
 
-The `Language` class has five methods that deal with code generation:
+The `Language` class has four methods that deal with code generation:
 
 - `generate_statement`, which generates a statement.
 - `generate_execution_unit`, which generates a complete executable file (with main function).
-- `generate_selector`, which generates code for the selector (only needed of `needs_selector` returns `True`).
+- `generate_selector`, which generates code for the selector (only needed if `needs_selector` returns `True`).
 - `generate_encoder`, which is used in the tests to encode a single value.
-- `generate_check_function`, which generates code for programming-language-agnostic custom evaluators.
-
-The last method is not implemented in C, as C does not support this.
 
 As the code for this is relatively long, we have extracted the implementation of these methods to a different file.
 
@@ -407,9 +415,9 @@ def convert_statement(statement: Statement, full=False) -> str:
         return statement
     elif isinstance(statement, FunctionCall):
         return convert_function_call(statement)
-    elif isinstance(statement, get_args(Value)):
+    elif isinstance(statement, Value):
         return convert_value(statement)
-    elif isinstance(statement, get_args(Assignment)):
+    elif isinstance(statement, VariableAssignment):
         if full:
             prefix = convert_declaration(statement.type) + " "
         else:
@@ -450,59 +458,59 @@ def convert_execution_unit(pu: PreparedExecutionUnit) -> str:
 
     # STEP 2
     result += f"""
-    static FILE* {pu.execution_name}_value_file = NULL;
-    static FILE* {pu.execution_name}_exception_file = NULL;
+    static FILE* {pu.unit.name}_value_file = NULL;
+    static FILE* {pu.unit.name}_exception_file = NULL;
     
-    static void {pu.execution_name}_write_separator() {{
-        fprintf({pu.execution_name}_value_file, "--{pu.testcase_separator_secret}-- SEP");
-        fprintf({pu.execution_name}_exception_file, "--{pu.testcase_separator_secret}-- SEP");
+    static void {pu.unit.name}_write_separator() {{
+        fprintf({pu.unit.name}_value_file, "--{pu.testcase_separator_secret}-- SEP");
+        fprintf({pu.unit.name}_exception_file, "--{pu.testcase_separator_secret}-- SEP");
         fprintf(stdout, "--{pu.testcase_separator_secret}-- SEP");
         fprintf(stderr, "--{pu.testcase_separator_secret}-- SEP");
     }}
     
-    static void {pu.execution_name}_write_context_separator() {{
-        fprintf({pu.execution_name}_value_file, "--{pu.context_separator_secret}-- SEP");
-        fprintf({pu.execution_name}_exception_file, "--{pu.context_separator_secret}-- SEP");
+    static void {pu.unit.name}_write_context_separator() {{
+        fprintf({pu.unit.name}_value_file, "--{pu.context_separator_secret}-- SEP");
+        fprintf({pu.unit.name}_exception_file, "--{pu.context_separator_secret}-- SEP");
         fprintf(stdout, "--{pu.context_separator_secret}-- SEP");
         fprintf(stderr, "--{pu.context_separator_secret}-- SEP");
     }}
     
     #undef send_value
-    #define send_value(value) write_value({pu.execution_name}_value_file, value)
+    #define send_value(value) write_value({pu.unit.name}_value_file, value)
     
     #undef send_specific_value
-    #define send_specific_value(value) write_evaluated({pu.execution_name}_value_file, value)
+    #define send_specific_value(value) write_evaluated({pu.unit.name}_value_file, value)
     """
 
     # STEP3: Generate code for each context.
     ctx: PreparedContext
     for i, ctx in enumerate(pu.contexts):
         result += f"""
-        int {pu.execution_name}_context_{i}(void) {{
+        int {pu.unit.name}_context_{i}(void) {{
             {_generate_internal_context(ctx, pu)}
         }}
         """
 
     result += f"""
-    int {pu.execution_name}() {{
-        {pu.execution_name}_value_file = fopen("{pu.value_file}", "w");
-        {pu.execution_name}_exception_file = fopen("{pu.exception_file}", "w");
+    int {pu.unit.name}() {{
+        {pu.unit.name}_value_file = fopen("{pu.value_file}", "w");
+        {pu.unit.name}_exception_file = fopen("{pu.exception_file}", "w");
         int exit_code;
     """
 
     for i, ctx in enumerate(pu.contexts):
-        result += " " * 4 + f"{pu.execution_name}_write_context_separator();\n"
-        result += " " * 4 + f"exit_code = {pu.execution_name}_context_{i}();\n"
+        result += " " * 4 + f"{pu.unit.name}_write_context_separator();\n"
+        result += " " * 4 + f"exit_code = {pu.unit.name}_context_{i}();\n"
 
     result += f"""
-        fclose({pu.execution_name}_value_file);
-        fclose({pu.execution_name}_exception_file);
+        fclose({pu.unit.name}_value_file);
+        fclose({pu.unit.name}_exception_file);
         return exit_code;
     }}
     
     #ifndef INCLUDED
     int main() {{
-        return {pu.execution_name}();
+        return {pu.unit.name}();
     }}
     #endif
     """
@@ -528,7 +536,7 @@ There are four functions to collect results:
 - `send_specific_exception(exception)`: Serialises and writes the result of a check for a specific programming language to the exception channel.
 
 As the C programming language does not support exceptions,
-we only implement the two exception functions (using macros).
+we only implement the two value functions (using macros).
 
 #### Generating selectors
 
@@ -537,7 +545,7 @@ we don't recompile the code for each context we execute.
 TESTed supports a "selector", which chooses what will be executed:
 
 ```python
-def convert_selector(contexts: List[str]) -> str:
+def convert_selector(contexts: list[str]) -> str:
     result = """
     #include <string.h>
     #include <stdio.h>
@@ -578,17 +586,23 @@ By using a selector, we can compile all tests into one executable.
 ## Registering the language
 
 We also need to register the language module in TESTed.
-In the file `tested/languages/__init__.py`, add the language to the dictionary `LANGUAGES`:
+In the file `tested/languages/__init__.py`, import the configuration class and add the language to the dictionary `LANGUAGES`:
 
 ```python
+from tested.languages.c.config import C  # This is the import we added.
+
 LANGUAGES = {
-    'c': C,  # This is what we added here, mapping a name to the configuration class.
-    'haskell': Haskell,
-    'java': Java,
-    'javascript': JavaScript,
-    'kotlin': Kotlin,
-    'python': Python,
-    'runhaskell': RunHaskell,
+    "bash": Bash,
+    "c": C,  # This is what we added here, mapping a name to the configuration class.
+    "haskell": Haskell,
+    "java": Java,
+    "javascript": JavaScript,
+    "typescript": TypeScript,
+    "kotlin": Kotlin,
+    "python": Python,
+    "runhaskell": RunHaskell,
+    "csharp": CSharp,
+    "cpp": CPP,
 }
 ```
 
@@ -599,5 +613,5 @@ we can test if the language module works as expected.
 TESTed contains some predefined tests that can be used for that purpose.
 Before this can be done, you should also extend the tests to support testing the new programming language:
 
-1. Add solutions in the programming language to one or more of the test exercises (in the `exercise` directory). Take a look at the existing solutions to infer what your solutions should do.
+1. Add solutions in the programming language to one or more of the test exercises (in the `tests/exercises` directory). Take a look at the existing solutions to infer what your solutions should do.
 2. Modify `tests/test_functionality.py` and other test files to include the new programming language for testing.

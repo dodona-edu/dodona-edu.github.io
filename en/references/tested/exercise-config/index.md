@@ -51,6 +51,41 @@ Here's an example that disables this fallback:
 }
 ```
 
+### `options.compiler_optimizations`
+
+By default, TESTed compiles test code without compiler optimizations,
+because the additional compilation time is often much larger than the gains in execution time for short exercises.
+When the boolean attribute `compiler_optimizations` is set to `true` (the default value is `false`),
+compiler optimizations are enabled for the languages whose compiler supports them: C, C++ and Haskell.
+This may be useful for longer exercises, or exercises where the solution depends on optimization.
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "compiler_optimizations": true
+    }
+  }
+}
+```
+
+### `options.parallel`
+
+When the boolean attribute `parallel` is set to `true` (the default value is `false`),
+TESTed executes the contexts of the test suite in parallel.
+This may be worth investigating for exercises that are computationally heavy.
+It is recommended to keep this disabled for exercises that are already multithreaded.
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "parallel": true
+    }
+  }
+}
+```
+
 ## Linters
 
 When [adding support for a new programming language to TESTed](/en/references/tested/new-programming-language),
@@ -67,6 +102,7 @@ TESTed currently uses the following linters:
 | JavaScript | [ESLint](https://eslint.org/)                          |
 | Kotlin     | [Ktlint](https://ktlint.github.io/)                    |
 | Python     | [Pylint](https://pylint.pycqa.org/en/latest/)          |
+| TypeScript | [ESLint](https://eslint.org/)                          |
 
 The boolean attribute `options.linter` can be used to enable (`true`) or disable (`false`) linting for a programming exercise,
 either for all programming languages at once or for individual languages.
@@ -193,9 +229,7 @@ Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
 TESTed supports the following attributes for linting Kotlin submissions:
 
 - `editorconfig`: Path name of a `editorconfig` file, relative to the `evaluation` directory of the exercise (see <https://editorconfig.org/>).
-- `disabled_rules_ktlint`: Rules that should be ignored by `ktlint`, either provided as a list of strings or as a comma-separated string.
 - `ktlint_ruleset`: Path name of a JAR file with additional rules, relative to the `evaluation` directory of the exercise.
-- `ktlint_experimental`: Boolean value that indicates if `ktlint` should use experimental rules (`true`; default value) or not (`false`).
 
 Here's an example that shows some of these attributes in action:
 
@@ -206,9 +240,7 @@ Here's an example that shows some of these attributes in action:
       "language": {
         "kotlin": {
           "editorconfig": "kotlin.editorconfig",
-          "disabled_rules_ktlint": ["filename"],
-          "ktlint_ruleset": "ktlint_rules.jar",
-          "ktlint_experimental": false
+          "ktlint_ruleset": "ktlint_rules.jar"
         }
       }
     }   
@@ -233,6 +265,27 @@ Here's an example that configures a PyLint configuration file `pylint.rc`:
         }
       }
     }   
+  }
+}
+```
+
+### TypeScript
+
+The attribute `eslint_config` takes the path name of a ESLint configuration file,
+relative to the `evaluation` directory of the exercise.
+TESTed will use this configuration file when linting TypeScript submissions.
+Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
+
+```json
+{
+  "evaluation": {
+    "options": {
+      "language": {
+        "typescript": {
+          "eslint_config": "eslintrc.yaml"
+        }
+      }
+    }
   }
 }
 ```
@@ -268,12 +321,13 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
         },
         "kotlin": {
           "editorconfig": "kotlin.editorconfig",
-          "disabled_rules_ktlint": ["filename"],
-          "ktlint_ruleset": "ktlint_rules.jar",
-          "ktlint_experimental": false
+          "ktlint_ruleset": "ktlint_rules.jar"
         },
         "python": {
           "pylint_config": "pylint.rc"
+        },
+        "typescript": {
+          "eslint_config": "eslintrc.yaml"
         }
       }
     }
