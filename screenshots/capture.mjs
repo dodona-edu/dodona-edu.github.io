@@ -1,21 +1,21 @@
 // Manifest-driven screenshot runner. See README.md in this directory.
 //
-//   node screenshots/capture.mjs --list [--area teachers]
-//   node screenshots/capture.mjs --area teachers [--id users-overview] [--locale en]
-//   node screenshots/capture.mjs --area faq --out-dir /tmp/shots   # dry run, don't touch the repo images
+//   node screenshots/capture.mjs --list [--page guides/teachers]
+//   node screenshots/capture.mjs --page guides/teachers/grading [--locale en]
+//   node screenshots/capture.mjs --id my-profile --out-dir /tmp/shots   # dry run, don't touch the repo images
 //
 // State scenarios are NOT executed automatically: the runner prints the setup
 // commands for the selected shots and refuses to run unless --assume-state is
 // given (you ran them yourself) . This keeps a capture run from silently
 // mutating a dev database.
 
-import { readFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, mkdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
-import { parse } from 'yaml';
+import { parseAllDocuments } from 'yaml';
 import { launch, signIn, goto, reinject, shootEl, shootUnion, shootClip, tag, hideInShadow, BASE } from './lib.mjs';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname), '..');
-const SHOTS_DIR = join(ROOT, 'screenshots', 'shots');
+const SHOTS_FILE = join(ROOT, 'screenshots', 'shots.yaml');
 
 const args = process.argv.slice(2);
 const opt = (name) => {
@@ -24,21 +24,24 @@ const opt = (name) => {
 };
 const flag = (name) => args.includes(`--${name}`);
 
-const areas = readdirSync(SHOTS_DIR).filter((f) => f.endsWith('.yaml'));
+// shots.yaml is a multi-document file; each document scopes its own defaults.
 let shots = [];
-for (const file of areas) {
-  const doc = parse(readFileSync(join(SHOTS_DIR, file), 'utf8'));
-  for (const shot of doc.shots) shots.push({ area: doc.area, ...doc.defaults, ...shot });
+for (const doc of parseAllDocuments(readFileSync(SHOTS_FILE, 'utf8'))) {
+  const section = doc.toJS();
+  for (const shot of section.shots) shots.push({ ...section.defaults, ...shot });
 }
+const dupes = shots.map((s) => s.id).filter((id, i, all) => all.indexOf(id) !== i);
+if (dupes.length > 0) throw new Error(`duplicate shot ids: ${[...new Set(dupes)].join(', ')}`);
 
-if (opt('area')) shots = shots.filter((s) => s.area === opt('area'));
 if (opt('id')) shots = shots.filter((s) => s.id === opt('id'));
-if (opt('page')) shots = shots.filter((s) => s.page === opt('page'));
+// --page is a prefix filter: "guides/teachers" selects every teacher page.
+// Entries without page: (explicit path:) match on their path instead.
+if (opt('page')) shots = shots.filter((s) => (s.page ?? s.path ?? '').startsWith(opt('page')));
 const locales = opt('locale') ? [opt('locale')] : ['en', 'nl'];
 
 if (flag('list')) {
   for (const s of shots) {
-    console.log(`${s.area}\t${s.id}\t${s.page}\t[${(s.state ?? []).join(', ')}]`);
+    console.log(`${s.id}\t${s.page}\t[${(s.state ?? []).join(', ')}]`);
   }
   process.exit(0);
 }

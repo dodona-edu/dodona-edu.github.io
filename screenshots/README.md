@@ -18,10 +18,10 @@ expedition. Built during the 2026-07 docs refresh.
 ## Usage
 
 ```sh
-node screenshots/capture.mjs --list                       # what exists
-node screenshots/capture.mjs --area teachers --page guides/teachers/grading
-node screenshots/capture.mjs --area faq --id my-profile --locale nl
-node screenshots/capture.mjs --area students --out-dir /tmp/shots   # dry run
+node screenshots/capture.mjs --list                          # what exists
+node screenshots/capture.mjs --page guides/teachers/grading  # one page
+node screenshots/capture.mjs --page faq --locale nl          # --page is a prefix filter
+node screenshots/capture.mjs --id my-profile --out-dir /tmp/shots   # dry run
 ```
 
 The runner prints the **state scenarios** the selected shots need. Apply each
@@ -36,9 +36,11 @@ Review the diff (`git diff --stat`, view the images) before committing, and run
 
 ## Layout
 
-- `shots/<area>.yaml` — the manifests: one entry per image with output location, URL,
-  sign-in user, crop, required state, and a must-show checklist (what the shot has to
-  prove; check it when reviewing).
+- `shots.yaml` — the manifest: one entry per image with output location, URL, sign-in
+  user, crop, required state, and a must-show checklist (what the shot has to prove;
+  check it when reviewing). It is a multi-document YAML file: each `---` section
+  scopes its own `defaults:` (sections currently mirror the guide audiences, but the
+  grouping is free — `page:` is what filters select on).
 - `state/<name>.setup.rb` + `state/<name>.teardown.rb` — paired, idempotent
   `bin/rails runner` scripts for the data each shot depends on.
 - `hooks/<name>.mjs` — per-shot interaction scripts (hover a gutter, open a dropdown,
