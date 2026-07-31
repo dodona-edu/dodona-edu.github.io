@@ -60,7 +60,8 @@ function getSidebarItems(directory: string, options: Options): SortableSidebarIt
         }]);
       }
     } else {
-      if (!subitem.endsWith(".md") || subitem.endsWith("index.md")) {
+      // Files starting with "_" are include partials, not pages.
+      if (!subitem.endsWith(".md") || subitem.endsWith("index.md") || subitem.split("/").pop()!.startsWith("_")) {
         continue;
       }
       const data = matter.read(subitem);

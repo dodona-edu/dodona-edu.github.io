@@ -158,6 +158,18 @@ repo and the target site map. Decisions needed:
 
 ## Phase 2 — Restructure existing content (no new topics yet)
 
+STATUS: done except the featured-courses decision (last bullet). Notable outcomes:
+real landing pages for students/teachers; new pages `guides/teachers/series-settings`,
+`guides/teachers/series-export-and-retest`, `guides/students/feedback`;
+`_what-is-dodona.md` include partial (sidebar.ts now skips `_` partials);
+`new-exercise-repo` merged into setup (+redirects, no chains); tested/index
+de-tutorialized but keeps a restored "TESTed in a nutshell" echo showcase;
+testsuites=cookbook / dsl=spec dedup done additively. New flags for later phases:
+NL feedback deep-dive prose still describes the pre-redesign context UI (Phase 6);
+DSL reference tab-attribute list lacks `language` + has hand-written attribute counts
+(Phase 3); no Dutch course-overview capture exists for teachers/getting-started
+(Phase 4).
+
 - teachers/getting-started may keep its end-to-end walkthrough (self-contained is fine),
   but: stop the physical screenshot duplication (share the files), reconcile the facts
   that have drifted (Smartschool, casing), and add the missing cross-links. Landing-page
