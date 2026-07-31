@@ -158,7 +158,7 @@ repo and the target site map. Decisions needed:
 
 ## Phase 2 — Restructure existing content (no new topics yet)
 
-STATUS: done except the featured-courses decision (last bullet). Notable outcomes:
+STATUS: done. Notable outcomes:
 real landing pages for students/teachers; new pages `guides/teachers/series-settings`,
 `guides/teachers/series-export-and-retest`, `guides/students/feedback`;
 `_what-is-dodona.md` include partial (sidebar.ts now skips `_` partials);
@@ -193,8 +193,9 @@ DSL reference tab-attribute list lacks `language` + has hand-written attribute c
   `order:`; reconcile the 4 EN/NL `order:` mismatches; renumber the teacher order-7 gap.
 - Rewrite `references/index.md` around audiences; add a judge-developer entry point
   linking `judges/creating-a-judge` + `tested/new-programming-language`.
-- Decide fate of `faq/featured-courses` inline course catalogue (link out to the live
-  featured tab vs keep hand-maintained list with hardcoded course IDs).
+- ~~Decide fate of `faq/featured-courses` inline course catalogue~~ DECIDED (Bart,
+  2026-07-31): keep the hand-maintained list, hardcoded course IDs and all. Accepted
+  maintenance cost; revisit only if it visibly rots.
 
 ## Phase 3 — Accuracy pass on technical references
 
