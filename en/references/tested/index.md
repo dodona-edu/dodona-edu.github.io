@@ -24,13 +24,16 @@ Currently, the following languages are supported:
 
 * Bash
 * C (gcc)
+* C# (.NET)
 * C++ (g++)
 * Haskell (ghc)
 * Java
 * JavaScript (NodeJS)
 * Kotlin
 * Python
-* C# (.NET)
+* TypeScript (NodeJS)
+
+For Haskell, TESTed also provides the `runhaskell` variant, which interprets submissions with `runhaskell` instead of compiling them with `ghc`.
 
 Because programming exercises underpinned by TESTed are independent of any programming language,
 TESTed is best suited for the following kinds of exercises:

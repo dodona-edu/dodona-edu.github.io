@@ -21,12 +21,16 @@ Momenteel zijn dat volgende programmeertalen:
 
 * Bash
 * C (gcc)
+* C# (.NET)
+* C++ (g++)
 * Haskell (ghc)
 * Java
 * JavaScript (NodeJS)
 * Kotlin
 * Python
-* C# (.NET)
+* TypeScript (NodeJS)
+
+Voor Haskell biedt TESTed ook de variant `runhaskell` aan, die ingediende oplossingen interpreteert met `runhaskell` in plaats van ze te compileren met `ghc`.
 
 Doordat de programmeeroefeningen die beoordeeld worden met TESTed programmeertaalonafhankelijk zijn, is TESTed het best geschikt voor volgende soorten oefeningen:
 
