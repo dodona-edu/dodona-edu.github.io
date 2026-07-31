@@ -38,28 +38,32 @@ At the [end of this document](#full-example), there is a full example of a test 
 ### Root of the test suite
 
 The test suite starts with either a root object, or a list of [tabs](#tabs).
-The root object contains three attributes:
+The root object contains six attributes:
 
 - `tabs`*: a list of [tab](#tabs) objects
 - `namespace`: the "namespace" for the code of the submission, such as the class name in Java.
 - `config`: the global [configuration options](#configuration-options)
 - `language`: the [language of the expressions and statements](#language-specific-expressions-and-statements). If this attribute is not set to `"tested"`, all expressions and statements (except for return values) will be programming-language-specific expressions or statements.
+- `files`: optional list of [files](#files)
+- `definitions`: reusable [definitions](#definitions)
 
 ### Tabs
 
 A tab object maps onto a tab in the output on Dodona.
-It has four possible attributes:
+It has six possible attributes:
 
 - `tab`*: the name of the tab to be displayed in Dodona
 - `contexts`*: a list of [contexts](#contexts) (if this is given, you cannot use the attribute `testcases`)
 - `testcases`*: a list of [test cases](#test-cases) (if this is given, you cannot use the attribute `contexts`)
 - `config`: the [configuration options](#configuration-options) for this tab and all children
+- `files`: optional list of [files](#files) for this tab and all children
+- `definitions`: reusable [definitions](#definitions)
 
 In a lot of exercises, you have precisely one testcase per context.
 This is exactly what you can do using the `testcases` attribute: behind the scenes, each testcase will be placed in its own context.
 
 :::tip Hint
-While there are four possible attributes, each tab object can only have three,
+While there are six possible attributes, each tab object can only have five,
 since `contexts` and `testcases` are mutually exclusive.
 :::
 
@@ -67,7 +71,7 @@ since `contexts` and `testcases` are mutually exclusive.
 
 A context is a group of test cases that depend on each other.
 For example, test cases that use variables must be in the same context.
-The context object has three attributes:
+The context object has four attributes:
 
 - `testcases`*: a list of [test cases](#test-cases)
 - `config`: the [configuration options](#configuration-options) for this context and all children
@@ -98,8 +102,9 @@ if you only have one test case, it may be a main call and have a check for the e
 
 A test case can have the following attributes:
 
-- `config`: the [configuration options](#configuration-options) for this test case and all children
-- `files`: optional list of [files](#files)
+- `description`: an optional description of the test case, which Dodona shows instead of the generated one. Either a string, or an object with the attributes `description` (the text to show) and `format` (the format of that text: `text` by default, `html` or a programming language).
+- `files`: optional list of [files](#files). On a test case, this attribute is deprecated: use `input_files` instead.
+- `input_files`: optional list of input files for this test case. Each file is an object with a `path` (the location of the file in the working directory) and optionally `content` (the content of the file; tag the value with `!path` to read the content from a file in the `evaluation` folder instead).
 
 Additionally, a test case can have all attributes described below, but do note:
 
@@ -157,8 +162,17 @@ The object has the following attributes:
 #### `exception`
 
 Specifies the expected message of an expected exception.
-Note that TESTed currently does not allow checking the exception type or class.
-For example, you cannot check that an assertion error or exception happened.
+
+To also check the type of the exception, use an object with two attributes: `message` (the expected message) and `types`, a mapping of programming language to the name of the expected exception type, since exception types are programming-language-specific:
+
+```yaml
+- expression: "divide(5, 0)"
+  exception:
+    message: "Cannot divide by zero"
+    types:
+      python: "ZeroDivisionError"
+      java: "ArithmeticException"
+```
 
 #### `return`
 
@@ -172,6 +186,32 @@ If you need more advanced return values, there are two options:
 - string tagged as `!expression` use the same Python syntax as for [expressions and statements](#expressions-and-statements)
 - objects tagged as `!oracle` denote the return value oracle (a custom check function) (see [below](#custom-check-function-oracles))
 
+#### `output_files` {#output-files}
+
+Specifies the files that the submission should create.
+
+The attribute is a list of expected files, each an object with two attributes:
+
+- `path`: the location where the submission should write the file, relative to the working directory
+- `content`: the expected content of the file. Tag the value with `!path` to read the expected content from a file in the `evaluation` folder instead of writing it inline.
+
+```yaml
+- expression: "write_greetings()"
+  output_files:
+    - path: "hello.txt"
+      content: "Hello!"
+    - path: "hello2.txt"
+      content: !path "expected_hello.txt"
+```
+
+For more advanced cases, the attribute can also be an object with the following attributes:
+
+- `data`: the list of expected files, as described above
+- `config`: the [configuration options](#test-options) for comparing the file contents. In addition to the options for text, there is the option `mode`: `full` (the default) compares the whole file at once, while `line` compares the file line by line.
+- the attributes of a [custom check function](#custom-check-function-oracles), if one is needed
+
+In older test suites, this attribute is called `file` and consists of an object with the attributes `content` (the path to a file in the `evaluation` folder containing the expected content) and `location` (the location where the submission should write the file). This form still works, but is deprecated.
+
 #### `exit_code`
 
 Specifies the expected exit code of the program.
@@ -180,15 +220,16 @@ Note that only the last test case of a context can have this attribute, although
 
 ### Custom check function (oracles)
 
-The following attributes can have a custom check function: `return`, `stdout` and `stderr`.
+The following attributes can have a custom check function: `return`, `stdout`, `stderr` and [`output_files`](#output-files).
 
 An object for a custom check function has the following attributes:
 
-- `oracle`: the type of check function. Currently, this can be `custom_check` or `builtin`. `builtin` uses the built-in oracle. For `custom_check` the parent object (the `return`, `stdout`, or `stderr` above it) should be tagged with `!oracle`
-- `value` (with `return`) or `data` (with `stdout`/`stderr`): the expected value (for advanced values see `!expression` [above](#return))
+- `oracle`: the type of check function. This can be `custom_check` or `builtin`. `builtin` uses the built-in oracle. For `custom_check` with `return`, the `return` object should be tagged with `!oracle`
+- `value` (with `return`) or `data` (with `stdout`/`stderr`/`output_files`): the expected value (for advanced values see `!expression` [above](#return))
 - `file`: the name of the file containing the custom check function (relative to the `evaluation` folder)
 - `name`: the name of the check function (in snake case)
 - `arguments`: a list of [values](#expressions-and-statements) that are arguments to the check function
+- `languages`: optional list of programming languages for which the check function can be used. By default, the check function is used for all programming languages.
 
 For a return value:
 
@@ -273,6 +314,14 @@ def evaluate_test(context):
     )
 ```
 
+Finally, for `return` there is a third type of check function: `specific_check`.
+Instead of one programming-language-independent check function, you provide a check function per programming language:
+
+- `functions`: a mapping of programming language to an object with the attributes `file` and `name` of the check function
+- `arguments`: a mapping of programming language to a list of language-specific arguments for the check function
+
+More information about these check functions is available in the reference for the [advanced format](/en/references/tested/json).
+
 ### Files
 
 Some parameters or other strings are a name of a file.
@@ -282,16 +331,40 @@ Each object in this list has two attributes:
 - `name`: the name of the file as it appears in the input
 - `url`: the location where the link should point to, relative to the exercise folder
 
+The list of files can be specified at the root, tab and context level, and applies to all levels below it.
+
+### Definitions
+
+The root object and tab objects can have a `definitions` attribute.
+This is a place to define YAML objects that are used multiple times elsewhere in the test suite.
+TESTed itself ignores the contents of this attribute: combine it with YAML anchors (`&name`) and aliases (`*name`) to reuse the defined objects:
+
+```yaml
+definitions:
+  rounding: &rounding
+    tryFloatingPoint: true
+    applyRounding: true
+    roundTo: 2
+tabs:
+- tab: "Sum"
+  config:
+    stdout: *rounding
+  testcases:
+  - arguments: ["2.125", "1.212"]
+    stdout: "3.34"
+```
+
 ## Configuration options
 
-The configuration object can be specified on any level and applies to all levels below it.
+The configuration object can be specified at the root, tab and context level, and applies to all levels below it.
 For example, specifying the config on the tab level means it will apply to all contexts and, in turn, all test cases within that tab.
+For a single test, the options can be set in the object form of the [`stdout`/`stderr`](#stdout-stderr) and [`output_files`](#output-files) attributes.
 
-The configuration option has two attributes:
+The configuration object has three attributes:
 
 - `stdout`: the [configuration options](#test-options) for standard output
 - `stderr`: the [configuration options](#test-options) for standard error
-- `return`: the [configuration options](#test-options) for the expected return value
+- `file`: the [configuration options](#test-options) for expected files (see [`output_files`](#output-files)), including the `mode` option
 
 ### Test options
 
@@ -303,6 +376,7 @@ The following options are available:
 - `caseInsensitive`: ignore the case of text when comparing strings
 - `ignoreWhitespace`: ignore leading and trailing whitespace
 - `tryFloatingPoint`: try comparing text as floating point numbers
+- `normalizeTrailingNewlines`: enforce the [trailing newline convention](#newlines-for-textual-results) on the expected text (default `true`)
 
 ## Expressions and statements
 
@@ -360,11 +434,12 @@ This name is programming language dependent:
     return: "2"
 ```
 
-If you only want to support one programming language, you can also set the language of the expressions and statements globally:
+If you only want to support one programming language, you can also set the language of the expressions and statements globally, with the `language` attribute of the [root object](#root-of-the-test-suite):
 
 ```yaml
+language: "java"
+tabs:
 - tab: "My tab"
-  language: "java"
   testcases:
   - expression: "Submission.toString(1+1)"
     return: "2"
@@ -386,6 +461,8 @@ For the result of `stdout` and `stderr`, TESTed follows this convention: either 
 TESTed will enforce this convention: if the text in the test plan does not end with a newline, TESTed will add a newline.
 
 This is the same convention as in POSIX, and is also applied in many programming languages. For example, `print` in Python will add a newline by default.
+
+This behaviour can be disabled with the `normalizeTrailingNewlines` [test option](#test-options).
 
 ## YAML cheat sheet
 

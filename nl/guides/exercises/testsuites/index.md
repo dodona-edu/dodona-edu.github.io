@@ -9,7 +9,7 @@ Om te controleren of een ingediende oplossing juist is, gebruikt Dodona testplan
 Dat testplan bevat een reeks testgevallen, die ervoor zorgen dat je redelijk zeker bent of een oplossing juist is of niet.
 
 In deze handleiding bespreken we kort de structuur, gevolgd door de verschillende mogelijkheden.
-Hier gebruiken we TESTed: de aanbevolen manier om oefeningen te maken voor **Python**, **JavaScript**, **Java**, **Kotlin**, **C**, **C#**, **C++**, **Haskell** en **Bash**.
+Hier gebruiken we TESTed: de aanbevolen manier om oefeningen te maken voor **Python**, **JavaScript**, **TypeScript**, **Java**, **Kotlin**, **C**, **C#**, **C++**, **Haskell** en **Bash**.
 Moest je iets willen doen dat TESTed niet kan of je wilt een andere programmeertaal gebruiken, kijk dan eerst naar het [overzicht van alle judges](/nl/references/judges).
 
 Deze handleiding bevat geavanceerdere concepten.
@@ -342,12 +342,12 @@ Bovendien zullen expressies niet werken bij functies met returnwaarde `void`.
 Meer informatie en discussie op <https://github.com/dodona-edu/universal-judge/issues/423>
 :::
 
-Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de expressies en statements ook globaal instellen:
-
+Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de expressies en statements ook globaal instellen, via het `language`-attribuut van het rootobject:
 
 ```yaml
+language: "java"
+tabs:
 - tab: "My tab"
-  language: "java"
   testcases:
   - expression: "Submission.toString(1+1)"
     return: "2"

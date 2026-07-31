@@ -39,17 +39,19 @@ Op het [eind van dit document](#volledig-voorbeeld) staat een volledig voorbeeld
 ### Top van het testplan
 
 Een testplan start met ofwel een lijst van [tabs](#tabs), ofwel een object.
-Dat object heeft drie attributen:
+Dat object heeft zes attributen:
 
 - `tabs`*: een lijst van [tab](#tabs)-objecten
 - `namespace`: de "namespace" voor de code van de ingediende oplossing, zoals de klassennaam in Java.
 - `config`: de globale [configuratieopties](#configuratieopties)
 - `language`: de [programmeertaal van de expressies en statements](#taalspecifieke-expressies-en-statements). Als dit attribuut niet op `"tested"` staat, zullen alle expressies en statements (uitgezonderd returnwaarden) een programmeertaalspecifieke expressie of statement zijn.
+- `files`: een optionele lijst van [bestanden](#bestanden)
+- `definitions`: herbruikbare [definities](#definities)
 
 ### Tabs
 
 Een tab-object komt overeen met een tab in de uitvoer op Dodona.
-Het heeft vier mogelijke attributen:
+Het heeft zes mogelijke attributen:
 
 - `tab`*: de naam van de tab die getoond wordt in Dodona
 - `contexts`*: een lijst van [contexten](#contexten) (als dit gebruikt wordt, mag het attribuut `testcases` niet
@@ -57,19 +59,21 @@ Het heeft vier mogelijke attributen:
 - `testcases`*: een lijst van [testgevallen](#testgevallen) (als dit gebruikt wordt, mag het attribuut `contexts` niet
   gebruikt worden)
 - `config`: de [configuratieopties](#configuratieopties) voor deze tab en al zijn kinderen
+- `files`: een optionele lijst van [bestanden](#bestanden) voor deze tab en al zijn kinderen
+- `definitions`: herbruikbare [definities](#definities)
 
 In veel oefeningen is er precies een testgeval per context.
 Dat is exact wat het attribuut `testcases` toelaat: achter de schermen zal elk testgeval in een eigen context geplaatst worden.
 
 :::tip Hint
-Hoewel er vier mogelijke attributen zijn, zal elk tab-object hoogstens drie attributen hebben, want `contexts` en `testcases` kunnen niet samen gebruikt worden.
+Hoewel er zes mogelijke attributen zijn, zal elk tab-object hoogstens vijf attributen hebben, want `contexts` en `testcases` kunnen niet samen gebruikt worden.
 :::
 
 ### Contexten
 
 Een context is een groep testgevallen die afhankelijk zijn van elkaar.
 Testgevallen die variabelen gebruiken, moeten bijvoorbeeld in dezelfde context zitten.
-Het context-object heeft drie attributen:
+Het context-object heeft vier attributen:
 
 - `testcases`*: een lijst van [testgevallen](#testgevallen)
 - `config`: de [configuratieopties](#configuratieopties) voor deze context en al zijn kinderen
@@ -101,8 +105,9 @@ als er maar een testgeval is, kan het zowel de _main call_ als de test voor de e
 
 Een testgeval-object kan de volgende attributen hebben:
 
-- `config`: de [configuratieopties](#configuratieopties) voor dit testgeval en al zijn kinderen
-- `files`: een optionele lijst van [bestanden](#bestanden)
+- `description`: een optionele beschrijving van het testgeval, die Dodona toont in plaats van de gegenereerde beschrijving. Ofwel een string, ofwel een object met de attributen `description` (de te tonen tekst) en `format` (het formaat van die tekst: standaard `text`, ook `html` of een programmeertaal is mogelijk).
+- `files`: een optionele lijst van [bestanden](#bestanden). Op het niveau van een testgeval is dit attribuut verouderd (_deprecated_): gebruik `input_files`.
+- `input_files`: een optionele lijst van invoerbestanden voor dit testgeval. Elk bestand is een object met een `path` (de locatie van het bestand in de werkmap) en optioneel `content` (de inhoud van het bestand; gebruik de tag `!path` om de inhoud uit een bestand in de map `evaluation` te lezen).
 
 Daarnaast kan een testgeval ook de attributen die hieronder beschreven worden hebben, maar merk op:
 
@@ -160,8 +165,17 @@ Het object heeft volgende attributen:
 #### `exception`
 
 Specifieert het verwachte bericht van een verwachte uitzondering of fout (een _exception_).
-Merk op dat TESTed momenteel niet kan oordelen over het soort of type van de fout.
-Het is bijvoorbeeld niet mogelijk om te controleren of een _assertion error_ gebruikt is.
+
+Om ook het type van de fout te controleren, gebruik je een object met twee attributen: `message` (het verwachte bericht) en `types`, een object met als sleutel een programmeertaal en als waarde de naam van het verwachte type, aangezien de types van fouten programmeertaalspecifiek zijn:
+
+```yaml
+- expression: "divide(5, 0)"
+  exception:
+    message: "Cannot divide by zero"
+    types:
+      python: "ZeroDivisionError"
+      java: "ArithmeticException"
+```
 
 #### `return`
 
@@ -175,6 +189,32 @@ Voor geavanceerde returnwaarden zijn er twee opties:
 - Een string met de tag `!expression` gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
 - Een object met de tag `!oracle` is het object voor een eigen orakel (een eigen checkfunctie) (zie [hieronder](#eigen-orakelfunctie-custom-check)).
 
+#### `output_files` {#output-files}
+
+Specifieert de bestanden die de ingediende oplossing moet aanmaken.
+
+Het attribuut is een lijst van verwachte bestanden, elk een object met twee attributen:
+
+- `path`: de locatie waar de oplossing het bestand moet wegschrijven, relatief ten opzichte van de werkmap
+- `content`: de verwachte inhoud van het bestand. Gebruik de tag `!path` om de verwachte inhoud uit een bestand in de map `evaluation` te lezen in plaats van ze rechtstreeks in het testplan te schrijven.
+
+```yaml
+- expression: "write_greetings()"
+  output_files:
+    - path: "hello.txt"
+      content: "Hello!"
+    - path: "hello2.txt"
+      content: !path "expected_hello.txt"
+```
+
+Voor complexere situaties kan het attribuut ook een object zijn met de volgende attributen:
+
+- `data`: de lijst van verwachte bestanden, zoals hierboven beschreven
+- `config`: de [configuratieopties](#testopties) voor het vergelijken van de inhoud. Naast de opties voor tekst is er ook de optie `mode`: `full` (de standaardwaarde) vergelijkt het volledige bestand in één keer, `line` vergelijkt het bestand regel per regel.
+- de attributen van een [eigen orakelfunctie](#eigen-orakelfunctie-custom-check), indien nodig
+
+In oudere testplannen heet dit attribuut `file` en bestaat het uit een object met de attributen `content` (het pad naar een bestand in de map `evaluation` met de verwachte inhoud) en `location` (de locatie waar de oplossing het bestand moet wegschrijven). Die vorm werkt nog steeds, maar is verouderd.
+
 #### `exit_code`
 
 Specifieert de verwachte exitcode van het programma.
@@ -183,15 +223,16 @@ Enkel het laatste testgeval in een context kan dit attribuut hebben, maar het la
 
 ### Eigen orakelfunctie (custom check)
 
-De volgende attributen kunnen een eigen orakelfunctie gebruiken: `return`, `stdout` en `stderr`.
+De volgende attributen kunnen een eigen orakelfunctie gebruiken: `return`, `stdout`, `stderr` en [`output_files`](#output-files).
 
 Een object voor een orakelfunctie bestaat uit de volgende attributen:
 
-- `oracle`: het soort orakelfunctie. Momenteel kan dit enkel `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde orakelfuncties. Voor `custom_check` moet het ouder object (het `return`, `stdout` of `stderr` erboven) de tag `!oracle` hebben
-- `value` (bij `return`) of `data` (bij `stdout`/`stderr`): de verwachte waarde (voor geavanceerde waarden zie `!expression` [hierboven](#return))
+- `oracle`: het soort orakelfunctie. Dit kan `custom_check` of `builtin` zijn. `builtin` gebruikt de ingebouwde orakelfuncties. Voor `custom_check` bij `return` moet het `return`-object de tag `!oracle` hebben
+- `value` (bij `return`) of `data` (bij `stdout`/`stderr`/`output_files`): de verwachte waarde (voor geavanceerde waarden zie `!expression` [hierboven](#return))
 - `file`: de naam van het bestand waarin de orakelfunctie zit (relatief ten opzichte van de map `evaluation`)
 - `name`: de naam van de orakelfunctie (in snake case)
 - `arguments`: een lijst van [waarden](#expressies-en-statements) die als argumenten aan de orakelfunctie gegeven worden
+- `languages`: een optionele lijst van programmeertalen waarvoor de orakelfunctie gebruikt kan worden. Standaard wordt de orakelfunctie voor alle programmeertalen gebruikt.
 
 Voor een returnwaarde:
 
@@ -275,6 +316,14 @@ def evaluate_test(context):
     )
 ```
 
+Tot slot is er voor `return` nog een derde soort orakelfunctie: `specific_check`.
+Daarbij geef je geen programmeertaalonafhankelijke orakelfunctie, maar een orakelfunctie per programmeertaal:
+
+- `functions`: een object met als sleutel een programmeertaal en als waarde een object met de attributen `file` en `name` van de orakelfunctie
+- `arguments`: een object met als sleutel een programmeertaal en als waarde een lijst van taalspecifieke argumenten voor de orakelfunctie
+
+Meer informatie over deze orakelfuncties staat in de referentie voor het [geavanceerde formaat](/nl/references/tested/json).
+
 ### Bestanden
 
 Soms zijn parameters of andere strings de naam van een bestand.
@@ -284,16 +333,40 @@ Elk object in die lijst heeft twee attributen:
 - `name`: de naam van het bestand zoals het voorkomt in de invoer
 - `url`: de locatie waar de snelkoppeling naar moet wijzen, relatief ten opzicht van de map van de oefening.
 
+De lijst van bestanden kan op het niveau van de top, een tab of een context staan en zal ook van toepassing zijn op alle onderliggende niveaus.
+
+### Definities
+
+De top van het testplan en tab-objecten kunnen een attribuut `definitions` hebben.
+Dat is een plaats om YAML-objecten te definiëren die meermaals gebruikt worden in het testplan.
+TESTed negeert zelf de inhoud van dit attribuut: combineer het met YAML-ankers (`&naam`) en -aliassen (`*naam`) om de gedefinieerde objecten te hergebruiken:
+
+```yaml
+definitions:
+  rounding: &rounding
+    tryFloatingPoint: true
+    applyRounding: true
+    roundTo: 2
+tabs:
+- tab: "Som"
+  config:
+    stdout: *rounding
+  testcases:
+  - arguments: ["2.125", "1.212"]
+    stdout: "3.34"
+```
+
 ## Configuratieopties
 
-Het configuratie-object kan op elk niveau gebruikt worden en zal ook van toepassing zijn op alle onderliggende niveaus.
+Het configuratie-object kan op het niveau van de top, een tab of een context gebruikt worden en zal ook van toepassing zijn op alle onderliggende niveaus.
 Een configuratie-object op tabniveau gebruiken zal er bijvoorbeeld voor zorgen dat die configuratie ook van toepassing is op alle contexten, en uiteindelijk ook op alle testgevallen in die tab.
+Voor één enkele test stel je de opties in via de objectvorm van de attributen [`stdout`/`stderr`](#stdout-stderr) en [`output_files`](#output-files).
 
-Een configuratie-object kan volgende attributen hebben:
+Een configuratie-object heeft drie attributen:
 
 - `stdout`: de [configuratieopties](#testopties) voor standaarduitvoer (_stdout_)
 - `stderr`: de [configuratieopties](#testopties) voor standaardfout (_stderr_)
-- `return`: de [configuratieopties](#testopties) voor de verwachte returnwaarde
+- `file`: de [configuratieopties](#testopties) voor verwachte bestanden (zie [`output_files`](#output-files)), inclusief de optie `mode`
 
 ### Testopties
 
@@ -305,6 +378,7 @@ De volgende opties zijn beschikbaar:
 - `caseInsensitive`: negeer hoofdletters en kleine letters bij het vergelijken van strings
 - `ignoreWhitespace`: negeer witruimte aan het begin en einde
 - `tryFloatingPoint`: probeer tekst eerst als vlottendekommagetal te vergelijken
+- `normalizeTrailingNewlines`: dwing de [conventie voor regeleindes](#regeleindes-voor-tekstuele-resultaten) af op de verwachte tekst (standaard `true`)
 
 ## Expressies en statements
 
@@ -365,11 +439,12 @@ Deze naam is programeertaalafhankelijk:
     return: "2"
 ```
 
-Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de expressies en statements ook globaal instellen:
+Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de expressies en statements ook globaal instellen, met het attribuut `language` aan de [top van het testplan](#top-van-het-testplan):
 
 ```yaml
+language: "java"
+tabs:
 - tab: "My tab"
-  language: "java"
   testcases:
   - expression: "Submission.toString(1+1)"
     return: "2"
@@ -392,6 +467,8 @@ TESTed zal deze conventie afdwingen: als de tekst in het tesplan niet eindigt me
 
 Dit is dezelfde conventie als in POSIX, en wordt ook toegepast in veel programmeertalen.
 Zo zal `print` in Python standaard een regeleinde toevoegen.
+
+Dit gedrag kan uitgeschakeld worden met de [testoptie](#testopties) `normalizeTrailingNewlines`.
 
 
 ## Spiekbriefje voor YAML
