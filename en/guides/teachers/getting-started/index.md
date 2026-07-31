@@ -10,10 +10,7 @@ All the information to get started smoothly with Dodona as a teacher.
 
 ## What is Dodona?
 
-Dodona is an online exercise platform for learning to code.
-The web application was developed at Ghent University to support practical exercises for large groups of students.
-Dodona therefore primarily focuses on the automatic testing and feedback of submitted solutions to programming exercises.
-Currently, Dodona supports programming languages such as Python, JavaScript, HTML, Java, Kotlin, C, C#, C++, Bash, Prolog, Haskell, SQL, and R.
+<!--@include: ../../_what-is-dodona.md-->
 
 On Dodona, teachers can create their own course, built from different exercise series.
 They can use existing courses and exercises or choose to create their own exercises and teaching materials.
@@ -37,12 +34,13 @@ Contact us at <a href="mailto:support@dodona.be">support@dodona.be</a> for this.
 A standard Dodona account can freely enroll in courses and submit exercises without limitations.
 If you want to create a course or set up exercises as a teacher, you will need additional rights.
 Use the [request form](https://dodona.be/en/rights_requests/new) on Dodona, and we will grant you the necessary rights as soon as possible.
+You can read more about how accounts work in the [FAQ](/en/faq/accounts/).
 
 ## Creating a Course
 
 Once we have activated your teacher rights, you can create a course by clicking the `Create a new course` button in the [course overview](https://dodona.be/en/courses/).
 
-![create course](./staff.courses_new_link.png)
+![create course](../creating-a-course/staff.courses_new_link.png)
 
 You can then choose to start from an empty course or to copy and modify the content of an existing course.
 For inspiration, you can browse our [featured courses](https://dodona.be/en/courses/?tab=featured).
@@ -55,17 +53,18 @@ A course on Dodona consists of different exercise series that you can use to gro
 To create a new exercise series, click the `Manage series` button on your course page and then `Create series`.
 You will see the following form:
 
-![create series](./staff.series_new.png)
+![create series](../exercise-series-management/staff.series_new.png)
 
 Each exercise series consists of a title and a description that you can use to refer to teaching materials, for example.
 In addition to regular text, you can also use the [Markdown format](/en/references/exercise-description/#markdown) to add extra formatting.
 You can also specify an optional deadline and set the visibility of the series.
+All available options are described in the [series settings](/en/guides/teachers/series-settings/) reference.
 
 After creating a series, you can add exercises and reading activities.
 You can choose from all exercises and activities available to you in Dodona.
 Using the search field, you can easily filter the list of exercises.
 
-![add exercise](./staff.series_add_exercise.png)
+![add exercise](../exercise-series-management/staff.series_add_exercise.png)
 
 When selecting exercises, you can view more information about an exercise by going to the info page.
 Here you will find sample solutions, available languages, settings, additional explanations, and the author's contact details.

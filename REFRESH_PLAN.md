@@ -158,6 +158,18 @@ repo and the target site map. Decisions needed:
 
 ## Phase 2 — Restructure existing content (no new topics yet)
 
+STATUS: done. Notable outcomes:
+real landing pages for students/teachers; new pages `guides/teachers/series-settings`,
+`guides/teachers/series-export-and-retest`, `guides/students/feedback`;
+`_what-is-dodona.md` include partial (sidebar.ts now skips `_` partials);
+`new-exercise-repo` merged into setup (+redirects, no chains); tested/index
+de-tutorialized but keeps a restored "TESTed in a nutshell" echo showcase;
+testsuites=cookbook / dsl=spec dedup done additively. New flags for later phases:
+NL feedback deep-dive prose still describes the pre-redesign context UI (Phase 6);
+DSL reference tab-attribute list lacks `language` + has hand-written attribute counts
+(Phase 3); no Dutch course-overview capture exists for teachers/getting-started
+(Phase 4).
+
 - teachers/getting-started may keep its end-to-end walkthrough (self-contained is fine),
   but: stop the physical screenshot duplication (share the files), reconcile the facts
   that have drifted (Smartschool, casing), and add the missing cross-links. Landing-page
@@ -181,8 +193,9 @@ repo and the target site map. Decisions needed:
   `order:`; reconcile the 4 EN/NL `order:` mismatches; renumber the teacher order-7 gap.
 - Rewrite `references/index.md` around audiences; add a judge-developer entry point
   linking `judges/creating-a-judge` + `tested/new-programming-language`.
-- Decide fate of `faq/featured-courses` inline course catalogue (link out to the live
-  featured tab vs keep hand-maintained list with hardcoded course IDs).
+- ~~Decide fate of `faq/featured-courses` inline course catalogue~~ DECIDED (Bart,
+  2026-07-31): keep the hand-maintained list, hardcoded course IDs and all. Accepted
+  maintenance cost; revisit only if it visibly rots.
 
 ## Phase 3 — Accuracy pass on technical references
 

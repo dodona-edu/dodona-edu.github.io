@@ -131,6 +131,24 @@ In the next part of this guide, we will create an actual exercise.
 Dodona supports different types of exercises.
 In this guide, we will create a function-based exercise, but there are also guides for other types of exercises.
 
+## Using GitLab or Another Git Host
+
+The steps above use github.com, but Dodona also supports repositories hosted elsewhere: the Ghent University GitHub instance ([github.ugent.be](https://github.ugent.be)) and GitLab, both [gitlab.com](https://gitlab.com) and self-hosted servers.
+The process is the same: grant the Dodona server access to your repository, add the repository to Dodona with its SSH clone URL, and set up the webhook.
+Only the way you grant access differs per host:
+
+- On github.ugent.be, add [SA-GitHubDodona](https://github.ugent.be/SA-GitHubDodona) as a collaborator.
+- On gitlab.com, add [dodona-server](https://gitlab.com/dodona-server) as a member to your project.
+- On a self-hosted GitLab server, create a new user for Dodona, add our [SSH public key](/dodona.pub){target="_blank"} to that user, and grant it write access to your repository.
+
+The template repository only exists on GitHub.
+If you start from an empty repository on another host, make sure it follows the [repository directory structure](/en/references/repository-directory-structure).
+
+::: warning Note
+_VS Code for the Web_, used in the rest of this guide, only works with repositories on github.com.
+On other hosts, you will need to edit your exercises with your own tools.
+:::
+
 ## Using VS Code
 
 In this guide, we use the web version of VS Code.

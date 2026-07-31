@@ -85,7 +85,7 @@ In the menu of an exercise series, you will find the following options:
 
 ### Submission Status
 
-Your submission status for an exercise from an exercise series is determined **based on the solution you last submitted in the course for the exercise**. If a deadline was set for the exercise series, this is the last submitted solution before the deadline. In the exercise series, you will also see an **icon** corresponding to your submission status for the exercise before each exercise. If you click on your submission status for an exercise in an exercise series, you will navigate to the solution used to determine the submission status (if you have effectively submitted a solution based on which the submission status could be determined).
+Your submission status for an exercise from an exercise series is determined **based on the solution you last submitted in the course for the exercise**. If a deadline was set for the exercise series, this is the last submitted solution before the deadline. The status of an individual submission (`Correct`, `Wrong`, `Runtime Error`, ...) is a different concept; those statuses are explained in [Understanding Feedback](../feedback/#submission-statuses). In the exercise series, you will also see an **icon** corresponding to your submission status for the exercise before each exercise. If you click on your submission status for an exercise in an exercise series, you will navigate to the solution used to determine the submission status (if you have effectively submitted a solution based on which the submission status could be determined).
 
 Possible displays of your submission status if no deadline is set or before the deadline expires:
 

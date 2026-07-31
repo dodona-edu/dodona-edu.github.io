@@ -4,15 +4,22 @@ sidebarDepth: 0
 ---
 # References
 
-Here you can find up-to-date descriptions of the Dodona config files and directory structures.
+Technical references for the Dodona config files, formats, and directory structures.
 
-## In English
-* [Exercise descriptions](exercise-description)
-* [Exercise config](exercise-config)
-* [Repository directory structure](repository-directory-structure)
-* [Exercise directory structure](exercise-directory-structure)
-* [Judges](judges)
-* [TESTed](tested)
+## For exercise authors
 
-## In Dutch
-* [Python judge](judges/python-judge)
+* [Exercise descriptions](exercise-description) — the Markdown format, images, math, callouts
+* [Exercise config](exercise-config) — `config.json` and `dirconfig.json` keys
+* [Exercise directory structure](exercise-directory-structure) — the layout of one exercise
+* [Repository directory structure](repository-directory-structure) — the layout of an exercise repository
+* [TESTed](tested) — the recommended judge: DSL test suites, configuration, data types
+
+## Choosing a judge
+
+* [Judges](judges) — all available judges, what they support, and which ones are deprecated
+
+## For judge and platform developers
+
+* [Creating a judge](judges/creating-a-judge) — the judge contract and output format
+* [Adding a programming language to TESTed](tested/new-programming-language)
+* [Advanced JSON test suites for TESTed](tested/json)

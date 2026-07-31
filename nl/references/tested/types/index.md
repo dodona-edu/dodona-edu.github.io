@@ -1,7 +1,7 @@
 ---
 title: Ondersteuning gegevenstypes
 description: "De verschillende gegevenstypes ondersteund door TESTed"
-order: 5
+order: 4
 ---
 
 # Ondersteuning voor gegevenstypes
