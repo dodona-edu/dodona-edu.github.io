@@ -20,13 +20,13 @@ Voor meer informatie hierover, zie de handleiding over [cursusbeheer](../course-
 Als lesgever navigeer je naar het gebruikersoverzicht van je cursus door naar je cursus te navigeren en vervolgens op `Geregistreerde gebruikers` te klikken in de cursusbeschrijving.
 Je kan ook op het gebruikersicoontje klikken in de navigatiebalk.
 
-![admin menu users](./staff.course_users.png)
+![Navigatiebalk van de cursus met het gebruikersicoontje, boven de cursuskaart met de statistiek "Geregistreerde gebruikers"](./course-nav-users-nl.png)
 
 Het gebruikersoverzicht lijst de naam, het e-mailadres en de onderwijsinstelling van alle cursusgebruikers op, samen met hun [voortgang](#voortgangsstatus) en hun [labels](#labels).
 Voor de naam van elke lesgever en beheerder staat een icoontje dat correspondeert met de beheersrechten die aan de gebruiker toegewezen werden.
 Met de knop `Gebruikerslijst downloaden` boven de tabel kan je de gebruikerslijst downloaden als CSV-bestand.
 
-![gebruikers](./staff.users.png)
+![Gebruikersoverzicht met naam, e-mailadres, onderwijsinstelling, voortgang en labels van elke cursusgebruiker, met de knoppen Gebruikerslijst downloaden en Alle labels bewerken erboven](./users-overview-nl.png)
 
 ### Gebruiker zoeken
 
@@ -34,7 +34,7 @@ Gebruik de zoekbalk bovenaan het gebruikersoverzicht om te zoeken naar specifiek
 Met de dropdowns `Gebruikerlabels` en `Onderwijsinstelling` onder de zoekbalk kan je de lijst filteren op gebruikerslabel of onderwijsinstelling.
 Verschillende filters kunnen tegelijkertijd actief zijn.
 
-![gefilterde lijst](./staff.users_filtered.png)
+![Gebruikersoverzicht gefilterd op een gebruikerslabel en een onderwijsinstelling, met twee actieve filterchips boven de tabel](./users-filtered-nl.png)
 
 ### Voortgangsstatus
 
@@ -43,7 +43,7 @@ Het groen-ingekleurde deel stelt het aandeel oefeningen in de cursus voor waarvo
 Het rode gedeelte stelt het aandeel oefeningen voor waar de gebruiker reeds oplossingen voor heeft ingediend, maar nog **niet correct** heeft opgelost.
 Het grijze gedeelte stelt de oefeningen voor waar de gebruiker nog **niet aan begonnen** is.
 
-![statistics](./user_progress_statistics.png)
+![Tooltip op een voortgangsbalkje dat toont hoeveel oefeningen een student begonnen en hoeveel die opgelost heeft](./user-progress-tooltip-nl.png)
 
 ### Labels
 
@@ -59,11 +59,11 @@ Als cursusbeheerder kan je zelf andere ingeschreven gebruikers promoveren tot cu
 Dit doe je door naast die gebruiker op de knop `Promoveren tot cursusbeheerder` (een icoontje van een afstudeerhoed) te klikken.
 Op dezelfde manier kan je een cursusbeheerder degraderen met de knop `Degraderen tot student`.
 
-![beheersrechten bewerken](./staff.users_edit_permissions.png)
+![Knoppen Promoveren tot cursusbeheerder en Degraderen tot student naast twee gebruikers in het overzicht](./users-edit-permissions-nl.png)
 
 Je kan de cursusbeheerders herkennen aan het icoontje in de linkermarge.
 
-![beheerder in gebruikersoverzicht](./staff.course_users_admin.png)
+![Afstudeerhoed-icoontje in de linkermarge van het gebruikersoverzicht, bij een cursusbeheerder](./users-admin-icon-nl.png)
 
 ::: tip Belangrijk
 
@@ -99,4 +99,4 @@ Je kan deze pagina raadplegen door in het gebruikersoverzicht van een cursus op 
 Op deze pagina krijg je een overzicht van de vooruitgang van een gebruiker binnenin de cursus.
 Naast enkele statistieken kan je ook de status voor elke oefening en reeks binnen de cursus voor deze student raadplegen.
 
-![cursusoverzicht](./staff.user_course_overview.png)
+![Overzichtspagina per student met indienstatistieken, een punchcard, een heatmap en de status per reeks](./member-overview-nl.png)

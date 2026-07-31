@@ -10,7 +10,7 @@ When you [create or copy an exercise series](../exercise-series-management/#crea
 You can return to this form at any time by choosing `Edit` in the series action menu or on the `Manage series` page.
 This page describes all the properties you can set on that form.
 
-![series form](../exercise-series-management/staff.series_new.png)
+![Series form with the kind picker, name, deadline, description editor, and visibility options](../exercise-series-management/series-form-en.png)
 
 ## Name
 
@@ -35,11 +35,11 @@ Click on the input field or the calendar button to set the date and time of the 
 Select the deadline in the time zone set in your user profile.
 Other users will see the deadline in the time zone set in their user profile.
 
-![Series calendar open](./staff.series_calendar_open.png)
+![Deadline field with the date picker calendar open](./series-calendar-open-en.png)
 
 Click the delete button to remove a set deadline.
 
-![Clear series calendar](./staff.series_calendar_clear.png)
+![Deadline field with the clear button to remove the set deadline](./series-calendar-clear-en.png)
 
 ## Description
 
@@ -62,7 +62,7 @@ This determines whether users can see the exercise series. The following values 
 * `Visible for students after start time`: The exercise series is not visible to students until the start time you specify.
   You can set the start time in the same way as the deadline.
 
-![series hidden info](./staff.course_series_info_message.png)
+![Three series cards on the course page, each showing its blue visibility banner: hidden for students, only visible via secret link, and visible after a start time](./series-visibility-messages-en.png)
 
 ## Secret link
 
@@ -71,13 +71,13 @@ Without this link, users cannot see this exercise series.
 
 You can find the secret link for an exercise series at the bottom of the edit page for that series.
 
-![hidden series link](./staff.series_hidden_link.png)
+![Secret link field at the bottom of the series edit page](./series-hidden-link-en.png)
 
 You can easily generate a new secret link by clicking the renew button.
 This can be useful if you accidentally shared the link with someone who should not have it.
 Note that the old link will no longer work once you generate a new one.
 
-![renew series link](./staff.series_hidden_link_reset.png)
+![Renew button next to the secret link field](./series-hidden-link-reset-en.png)
 
 ## Advanced settings
 

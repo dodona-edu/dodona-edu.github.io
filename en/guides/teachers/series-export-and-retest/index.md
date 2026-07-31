@@ -14,11 +14,11 @@ This page walks you through both.
 In the action menu of a series, you as a teacher can choose to export the submitted code of your students as a zip file.
 This can be useful if you prefer to grade on paper and want to print the code.
 
-![export series](./staff.series_export_action.png)
+![Series card bottom bar with the open action menu showing the Export student submissions row](./series-export-action-en.png)
 
 This will take you to an export page where you will first be asked to select the exercises in the series for which you want to export the submissions.
 
-![choose exercises](./staff.series_export_exercise_choice.png)
+![Export wizard step 1: exercise selection table with a header checkbox and the Next step button](./export-exercise-choice-en.png)
 
 If you want to download all of them, select the checkbox in the table header. Then click `Next step` to continue.
 
@@ -26,12 +26,12 @@ Next, you can check various options that affect the content of the export.
 You can obtain a summary csv, choose whether you want all solutions or only the latest ones, whether the deadline should be considered,
 whether the files should be grouped per student or per exercise, and which students should be included.
 
-![export options](./staff.series_export_options.png)
+![Export wizard step 2: option checkboxes and radio buttons with the Start export button](./export-options-en.png)
 
 Click `Start export` to start the download.
 At that moment, all submitted solutions will be zipped, which may take a moment. Then the download will start automatically.
 
-![export started](./staff.series_export_started.png)
+![Export wizard step 3 showing the "preparing submissions for download" progress message](./export-started-en.png)
 
 ## Retest submissions
 
@@ -44,7 +44,7 @@ If the configuration of the exercise has been modified since the last evaluation
 
 You can also re-evaluate a single solution: click the repeat button in the top right corner of the feedback page of a user's submission.
 
-![evaluate feedback](./staff.feedback_evaluate.png)
+![Navigation bar with the retest icon, above a submission's verdict header](./submission-retest-button-en.png)
 
 ::: tip Important
 

@@ -10,7 +10,7 @@ Wanneer je een [oefeningenreeks aanmaakt of kopieert](../exercise-series-managem
 Je kan dit formulier later altijd opnieuw openen via `Bewerken` in het reeks-actiemenu of op de pagina `Reeksen beheren`.
 Deze pagina beschrijft alle eigenschappen die je op dat formulier kan instellen.
 
-![reeksformulier](../exercise-series-management/staff.series_new.png)
+![Reeksformulier met de soortkeuze, naam, deadline, beschrijvingseditor en zichtbaarheidsopties](../exercise-series-management/series-form-nl.png)
 
 ## Naam
 
@@ -31,11 +31,11 @@ De indienstatus voor studenten wordt steeds dynamisch berekend op basis van de d
 
 Klik op het invulveld of klik op de kalenderknop om de datum en het tijdstip van de deadline in te stellen. Selecteer de deadline in de tijdzone die je hebt ingesteld in je gebruikersprofiel. Andere gebruikers krijgen de deadline te zien in de tijdzone die ze in hun gebruikersprofiel hebben ingesteld.
 
-![Kalender om datum te kiezen](./staff.series_calendar_open.png)
+![Deadlineveld met de kalender voor datumkeuze geopend](./series-calendar-open-nl.png)
 
 Klik op de verwijderknop om een ingestelde deadline te wissen.
 
-![Deadline wissen](./staff.series_calendar_clear.png)
+![Deadlineveld met de verwijderknop om de ingestelde deadline te wissen](./series-calendar-clear-nl.png)
 
 ## Beschrijving
 
@@ -54,7 +54,7 @@ Dit bepaalt of gebruikers de oefeningenreeks kunnen zien. Voor deze eigenschap k
 * `Zichtbaar voor studenten na starttijd`: de reeks is niet zichtbaar voor studenten tot na de starttijd die je specifieert.
   Je kan de starttijd instellen op dezelfde manier als de deadline.
 
-![reeks verborgen informatie](./staff.course_series_info_message.png)
+![Drie reekskaarten op de cursuspagina, elk met hun blauwe zichtbaarheidsmelding: verborgen voor studenten, enkel zichtbaar via geheime link, en zichtbaar na een starttijd](./series-visibility-messages-nl.png)
 
 ## Geheime link
 
@@ -62,11 +62,11 @@ Bij het aanmaken van een oefeningenreeks die enkel zichtbaar is via de geheime l
 
 De geheime link voor een oefeningenreeks kan je onderaan de bewerk-pagina voor die reeks vinden.
 
-![verborgen reeks link](./staff.series_hidden_link.png)
+![Veld met de geheime link onderaan de bewerkpagina van de reeks](./series-hidden-link-nl.png)
 
 Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te klikken. Dit kan je bijvoorbeeld doen als je per ongeluk de link kenbaar hebt gemaakt aan iemand die ze niet zou mogen zien. Hou er wel rekening mee dat de oude link niet meer zal werken van zodra je een nieuwe genereert.
 
-![reekslink vernieuwen](./staff.series_hidden_link_reset.png)
+![Vernieuwknop naast het veld met de geheime link](./series-hidden-link-reset-nl.png)
 
 ## Geavanceerde instellingen
 

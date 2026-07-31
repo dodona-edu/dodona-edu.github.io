@@ -14,11 +14,11 @@ Je hebt extra rechten nodig om een cursus te kunnen aanmaken. Je kan deze rechte
 
 Als je de nodige rechten hebt op Dodona, kan je eenvoudig zelf een cursus aanmaken. Dit doe je door op de knop `Maak een nieuwe cursus aan` te klikken in de rechterbovenhoek van het [cursusoverzicht](https://dodona.be/nl/courses). Vanaf de landingspagina bereik je dit overzicht door te klikken op `Blader door alle cursussen op Dodona`.
 
-![create course](./staff.courses_new_link.png)
+![Cursusoverzichtspagina met de knop Maak een nieuwe cursus aan rechtsboven](./courses-new-link-nl.png)
 
 Om een nieuwe cursus aan te maken, zijn er twee opties. Ofwel vertrek je vanaf een reeds **bestaande cursus** en kopieer je de inhoud, ofwel maak je een **volledige nieuwe cursus** aan. Klik op een van de twee knoppen om je keuze te maken. Als je er voor kiest om met een lege cursus te beginnen kan je direct naar de [sectie over cursuseigenschappen](#cursuseigenschappen) gaan
 
-![new course menu](./staff.course_new_options.png)
+![Menu voor een nieuwe cursus met de knoppen Bestaande cursus kopiëren en lege cursus](./course-new-options-nl.png)
 
 ## Cursus kopiëren
 
@@ -29,23 +29,23 @@ Als je een bestaande cursus snel wil kopiëren kan dat door onderstaande stappen
 * Klik op de drie verticale puntjes `⋮` rechtsonder de bovenste kaart van de cursus.
 * Kies voor `Deze cursus kopiëren`.
 
-![fast copy course](./staff.course_fast_copy.png)
+![Rechteronderhoek van de cursuskaart met het geopende kebabmenu en de rij Deze cursus kopiëren](./course-fast-copy-nl.png)
 
 :::
 
 Als je gekozen hebt om een bestaande cursus te kopiëren, dan krijg je een lijst van alle zichtbare cursussen op Dodona te zien. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Via de link-knop aan de rechterkant van de tabel open je de betreffende cursus in een nieuw venster. Zo kan je snel controleren of dit de juiste cursus is. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
 
-![choose existing course](./staff.course_new_copy_course_options.png)
+![Lijst van zichtbare cursussen om van te kopiëren, met een zoekbalk en een linkknop per rij](./course-new-copy-course-options-nl.png)
 
 Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De reeksstructuur inclusief beschrijvingen worden altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de cursusbeheerders wil overnemen. Vervolgens kan je er ook voor kiezen om de gekopieerde reeksen standaard allemaal op verborgen te zetten. Dit is zeer handig als je nog niet de volledige cursus wil vrijgeven aan je studenten.
 
-![choose existing course extra](./staff.course_new_copy.png)
+![Opties voor welke elementen over te nemen van de gekozen cursus: oefeningen, deadlines, beheerders en standaardzichtbaarheid van reeksen](./course-new-copy-nl.png)
 
 ## Cursuseigenschappen
 
 Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, instellen. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.
 
-![Lege cursus aanmaken](./staff.course_new_empty.png)
+![Formulier voor een nieuwe cursus met Naam, Lesgevers, Conceptcursus, Academiejaar, Taal en de andere eigenschappen](./course-new-empty-nl.png)
 
 * `Naam`: een naam voor de cursus. Verschillende cursussen kunnen dezelfde naam hebben, maar het is echter aangeraden om cursussen zoveel mogelijk een unieke naam te geven.
 
@@ -74,7 +74,7 @@ Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, 
 
 * `Geheime link`: bij het aanmaken van een cursus wordt automatisch een geheime link gegenereerd als toegangsmechanisme voor verborgen cursussen. Met deze link kunnen gebruikers die de cursus normaal niet kunnen zien toegang krijgen tot je cursus en zich registreren. Dit kan gebruikt worden om gebruikers van buiten je onderwijsinstelling toegang te geven tot je cursus als die enkel zichtbaar staat voor gebruikers van je onderwijsinstelling. Je vindt deze geheime link op de cursus-bewerkenpagina.
 
-  ![toegangslink](./staff.course_hidden_registration_link.png)
+  ![Veld met de geheime link op de cursus-bewerkpagina](./course-hidden-registration-link-nl.png)
 
   De geheime link heeft dus als voordeel dat gebruikers de cursus niet zelf moeten zoeken in het cursusoverzicht en dat ze meteen een verzoek krijgen om zich voor de cursus te registreren als ze dat nog niet gedaan hadden. Als cursusbeheerder krijg je de verantwoordelijkheid om de geheime link enkel te delen met niet-geregistreerde gebruikers die zich voor een verborgen cursus mogen registreren.
 
@@ -95,4 +95,4 @@ Eenmaal alles naar wens is ingesteld klik je op de knop `Cursus aanmaken` om je 
 
 Na het aanmaken van de nieuwe cursus navigeer je automatisch naar de cursuspagina, waar je kunt vaststellen dat je automatisch geregistreerd bent als cursusgebruiker en dat je aangeduid bent als cursusbeheerder.
 
-![cursus aangemaakt](./staff.course_created.png)
+![Cursuspagina net na het aanmaken, met de huidige gebruiker geregistreerd als cursusbeheerder](./course-created-nl.png)

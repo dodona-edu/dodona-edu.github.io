@@ -13,21 +13,21 @@ Op deze pagina overlopen we ze allebei.
 
 In het actiemenu van een reeks kan je als lesgever kiezen om de ingezonden code van je studenten te exporteren als een zip-bestand. Dit is bijvoorbeeld handig als je liever op papier verbetert en de code wil afdrukken.
 
-![reeks exporteren](./staff.series_export_action.png)
+![Onderste balk van de reekskaart met het geopende actiemenu en de rij Oplossingen van studenten exporteren](./series-export-action-nl.png)
 
 Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeningen in de reeks te selecteren waarvan je de inzendingen wenst.
 
-![oefeningen kiezen](./staff.series_export_exercise_choice.png)
+![Exporteerwizard stap 1: tabel met oefeningen om te selecteren, met een selectievakje in de hoofding en de knop Volgende stap](./export-exercise-choice-nl.png)
 
 Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `Volgende stap` om verder te gaan.
 
 Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per oefening gegroepeerd moeten worden en welke studenten meegerekend moeten worden.
 
-![export opties](./staff.series_export_options.png)
+![Exporteerwizard stap 2: aanvinkbare opties met de knop Start export](./export-options-nl.png)
 
-Klik op `Downloaden` om de download te starten. Op dat moment worden alle ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
+Klik op `Start export` om de download te starten. Op dat moment worden alle ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
 
-![export gestart](./staff.series_export_started.png)
+![Exporteerwizard stap 3 met het voortgangsbericht "oplossingen aan het voorbereiden om te downloaden"](./export-started-nl.png)
 
 ## Oplossing hertesten
 
@@ -37,7 +37,7 @@ Bij het hertesten van een oplossing worden alle testen opnieuw uitgevoerd zonder
 
 Je kan ook een enkele oplossing herevalueren: klik op de herhaalknop in de rechterbovenhoek van de feedbackpagina van een oplossing van een gebruiker.
 
-![feedback evalueren](./staff.feedback_evaluate.png)
+![Navigatiebalk met het hertest-icoontje, boven de statuskop van een oplossing](./submission-retest-button-nl.png)
 
 ::: tip Belangrijk
 

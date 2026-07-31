@@ -40,7 +40,7 @@ You can read more about how accounts work in the [FAQ](/en/faq/accounts/).
 
 Once we have activated your teacher rights, you can create a course by clicking the `Create a new course` button in the [course overview](https://dodona.be/en/courses/).
 
-![create course](../creating-a-course/staff.courses_new_link.png)
+![Course overview page with the Create a new course button in the top right corner](../creating-a-course/courses-new-link-en.png)
 
 You can then choose to start from an empty course or to copy and modify the content of an existing course.
 For inspiration, you can browse our [featured courses](https://dodona.be/en/courses/?tab=featured).
@@ -53,7 +53,7 @@ A course on Dodona consists of different exercise series that you can use to gro
 To create a new exercise series, click the `Manage series` button on your course page and then `Create series`.
 You will see the following form:
 
-![create series](../exercise-series-management/staff.series_new.png)
+![Series form with the kind picker, name, deadline, description editor, and visibility options](../exercise-series-management/series-form-en.png)
 
 Each exercise series consists of a title and a description that you can use to refer to teaching materials, for example.
 In addition to regular text, you can also use the [Markdown format](/en/references/exercise-description/#markdown) to add extra formatting.
@@ -64,12 +64,12 @@ After creating a series, you can add exercises and reading activities.
 You can choose from all exercises and activities available to you in Dodona.
 Using the search field, you can easily filter the list of exercises.
 
-![add exercise](../exercise-series-management/staff.series_add_exercise.png)
+![Add exercise to series: search bar and filters above a list of exercises with an add button on the right](../exercise-series-management/series-add-exercise-en.png)
 
 When selecting exercises, you can view more information about an exercise by going to the info page.
 Here you will find sample solutions, available languages, settings, additional explanations, and the author's contact details.
 
-![exercise info page](./staff.exercise_info_page.png)
+![Exercise info page with the language/limits facts row, judge and repository links, and the Sample solutions card](./exercise-info-en.png)
 
 In our guide on [exercise series management](/en/guides/teachers/exercise-series-management), you will find more information on how to manage exercise series.
 
@@ -82,7 +82,7 @@ Once you have set up your course, you can use it in your class.
 Students should easily find your course in the list once signed in, or you can share the course link with them.
 You can easily follow along with your students' progress using our built-in analytics.
 
-![course page](./staff.course_overview.png)
+![Course page header card and Learning path heading with the Manage series button and the first series card](./course-overview-en.png)
 
 Dodona also allows you to provide feedback, grade exercises, and answer questions.
 The following guides explain all the possibilities in detail:
