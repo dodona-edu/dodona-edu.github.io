@@ -6,6 +6,12 @@ order: 2
 
 # DSL test suite reference
 
+::: tip
+This is a reference guide, for advanced users.
+For recipes for common testing scenarios, see the [test suite guide](/en/guides/exercises/testsuites/).
+We also have a set of [tutorials](/en/guides/exercises/) for creating certain types of exercises.
+:::
+
 In TESTed, a test suite specifies which test cases are executed against a submission.
 TESTed differs from other test frameworks in that its test suites are independent of any programming language.
 As a result, a single test suite is sufficient to check submissions for the same exercise in different programming languages.
@@ -13,10 +19,9 @@ As a result, a single test suite is sufficient to check submissions for the same
 While TESTed has an [advanced format](/en/references/tested/json) for the test suites, we have also developed a small _domain-specific language_ (DSL), to make creating common exercises much easier.
 This document is the reference for the DSL test suite format, and contains all options and possibilities.
 
-We also have a set of [tutorials](/en/guides/exercises/) for creating certain types of exercises.
-
 DSL test suites are written in [YAML](https://en.wikipedia.org/wiki/YAML).
 A [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json) of the format is available in the TESTed repository, which can enable checks and autocompletion in your editor.
+If you use VS Code, you can also install our [extension](https://marketplace.visualstudio.com/items?itemName=DodonaLearningTechnologies.dodona-exercise-assistant), which configures this JSON Schema automatically.
 
 ## Structure
 
@@ -61,6 +66,7 @@ since `contexts` and `testcases` are mutually exclusive.
 ### Contexts
 
 A context is a group of test cases that depend on each other.
+For example, test cases that use variables must be in the same context.
 The context object has three attributes:
 
 - `testcases`*: a list of [test cases](#test-cases)
@@ -97,14 +103,23 @@ A test case can have the following attributes:
 
 Additionally, a test case can have all attributes described below, but do note:
 
-- A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive.
+- A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive. The exception is that `stdin` can be combined with an `expression` (see [`stdin`](#stdin)).
 - The attribute `return` requires the attribute `expression`.
 
 #### `stdin`
 
 The data to provide to the [standard input](https://en.wikipedia.org/wiki/Standard_streams#Standard_input_(stdin)).
 
-If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` as tests.
+If this attribute is used, you cannot specify a `statement` as input.
+You can combine `stdin` with an `expression`; it is not mandatory to use `arguments`:
+
+```yaml
+- tab: "example"
+  testcases:
+  - stdin: "Jan"
+    expression: "greet()"
+    return: "Hello, Jan."
+```
 
 #### `arguments`
 
@@ -184,6 +199,19 @@ return: !oracle
   file: "test.py"
   name: "evaluate_test"
   arguments: [5, 6]
+```
+
+For `stdout` and `stderr`, the same notation is used, but with `data` instead of `value`:
+
+```yaml
+- tab: "Today"
+  testcases:
+    - stdin: '1 + 1'
+      stdout:
+        data: "2"
+        oracle: "custom_check"
+        file: "test.py"
+        name: "evaluate_stdout"
 ```
 
 The check function must have the following signature:
@@ -289,7 +317,7 @@ Since the Python syntax does not have a separate syntax for all features support
 
 - Function calls whose name begins with a capital are considered constructors, e.g. `Constructor(56)`.
 - Identifiers that are in all caps are considered global constants, e.g. `VERY_LONG_NAME`.
-- Casts are done using the normal Python way. For example, to cast a number to `int64`: `int64(56)`.
+- Casts are done using the normal Python way. For example, to cast a number to `int64`: `int64(56)`. However, there is no support for Python constructors. A set must be noted as `set([1, 2, 3, 5])`, not as `set(1, 2, 3, 5)`.
 
 Additionally, most of the syntax is not supported, since TESTed only has support for limited expressions and statements.
 The following is supported:
@@ -310,6 +338,7 @@ If language-specific expressions or statements are used (either by setting the l
 This has the advantage that all language features of the programming language can be used.
 On the other hand, this causes exercises to no longer be programming language independent.
 You have to use the correct namespace yourself, and it will not work for functions with return type `void`.
+More information and discussion at <https://github.com/dodona-edu/universal-judge/issues/423>.
 
 Since TESTed cannot analyse these strings, it is necessary to use the `namespace` yourself.
 This is the name of the submitted solution or class (configurable with the attribute [`namespace`](#root-of-the-test-suite)).
@@ -328,6 +357,16 @@ This name is programming language dependent:
       kotlin: "toString(1+1)"
       python: "submission.to_string(1+1)"
       csharp: "Submission.toString(1+1)"
+    return: "2"
+```
+
+If you only want to support one programming language, you can also set the language of the expressions and statements globally:
+
+```yaml
+- tab: "My tab"
+  language: "java"
+  testcases:
+  - expression: "Submission.toString(1+1)"
     return: "2"
 ```
 

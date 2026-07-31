@@ -8,6 +8,7 @@ order: 2
 
 ::: tip
 Dit is een referentiegids, voor geavanceerde gebruikers.
+Voor recepten voor veelvoorkomende testscenario's is er de [handleiding over testplannen](/nl/guides/exercises/testsuites/).
 We hebben ook een [reeks handleidingen](/nl/guides/exercises) die uitleggen hoe je oefeningen maakt.
 :::
 
@@ -21,6 +22,7 @@ Dit document is de referentiegids voor het formaat van DSL-testplannen en bevat 
 DSL-testplannen worden geschreven in YAML.
 Een [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json) van het formaat is beschikbaar in de repository van TESTed.
 Dit schema kan zorgen voor automatische controles en automatisch aanvullen in uw tekstverwerker.
+Gebruik je VS Code, dan kan je ook onze [extensie](https://marketplace.visualstudio.com/items?itemName=DodonaLearningTechnologies.dodona-exercise-assistant) installeren. Die configureert dit JSON Schema vanzelf.
 
 ## Structuur en opbouw
 
@@ -66,6 +68,7 @@ Hoewel er vier mogelijke attributen zijn, zal elk tab-object hoogstens drie attr
 ### Contexten
 
 Een context is een groep testgevallen die afhankelijk zijn van elkaar.
+Testgevallen die variabelen gebruiken, moeten bijvoorbeeld in dezelfde context zitten.
 Het context-object heeft drie attributen:
 
 - `testcases`*: een lijst van [testgevallen](#testgevallen)
@@ -103,15 +106,23 @@ Een testgeval-object kan de volgende attributen hebben:
 
 Daarnaast kan een testgeval ook de attributen die hieronder beschreven worden hebben, maar merk op:
 
-- Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden.
+- Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden. De uitzondering is dat `stdin` gecombineerd kan worden met een `expression` (zie [`stdin`](#stdin)).
 - Het attribuut `return` werkt enkel met een `expression`.
 
 #### `stdin`
 
 De gegevens voor [standaardinvoer](https://nl.wikipedia.org/wiki/Standaardstromen).
 
-Als dit attribuut gebruikt wordt, kunnen `expression` en `statement` niet meer gebruikt worden als invoer,
-noch kan `return` als test gebruikt worden.
+Als dit attribuut gebruikt wordt, kan `statement` niet meer gebruikt worden als invoer.
+Je kan `stdin` wel combineren met een `expression`; het is niet verplicht om argumenten te gebruiken:
+
+```yaml
+- tab: "example"
+  testcases:
+  - stdin: "Jan"
+    expression: "greet()"
+    return: "Hello, Jan."
+```
 
 #### `arguments`
 
@@ -191,6 +202,19 @@ return: !oracle
   file: "test.py"
   name: "evaluate_test"
   arguments: [5, 6]
+```
+
+Voor `stdout` en `stderr` wordt dezelfde notatie gebruikt, maar met `data` in plaats van `value`:
+
+```yaml
+- tab: "Vandaag"
+  testcases:
+    - stdin: '1 + 1'
+      stdout:
+        data: "2"
+        oracle: "custom_check"
+        file: "test.py"
+        name: "evaluate_stdout"
 ```
 
 De orakelfunctie moet de volgende signatuur hebben:
@@ -296,7 +320,7 @@ Aangezien de syntaxis van Python voor een aantal zaken van TESTed geen aparte sy
 - Functieoproepen wier naam begint met een hoofdletters worden beschouwd als
   _constructors_, bijvoorbeeld `Constructor(56)`.
 - Identifiers die volledig in hoofdletters geschreven zijn worden beschouwd als globale constanten, bijvoorbeeld `VERY_LONG_NAME`.
-- Het casten van waarden gebeurt op de gebruikelijke manier van Python. Het casten van een getal naar `int64` wordt bijvoorbeeld `int64(56)`.
+- Het casten van waarden gebeurt op de gebruikelijke manier van Python. Het casten van een getal naar `int64` wordt bijvoorbeeld `int64(56)`. Er is wel geen ondersteuning voor Python-constructors. Een verzameling moet je noteren als `set([1, 2, 3, 5])`, niet als `set(1, 2, 3, 5)`.
 
 Bijkomend worden grote delen van de syntaxis niet ondersteund, daar TESTed enkel beperkte ondersteuning heeft voor expressies en statements.
 Volgende zaken worden ondersteund:
@@ -319,6 +343,7 @@ Als taalspecifieke expressies of statements gebruikt worden (hetzij door globaal
 
 Dit heeft als voordeel dat alle taalfaciliteiten van de programmeertaal gebruikt kunnen worden.
 Anderzijds zorgt dit ervoor dat een oefening niet meer programmeertaalonafhankelijk is, moet je zelf de juiste namespace gebruiken en zal dit niet werken bij functies met returntype `void`.
+Meer informatie en discussie op <https://github.com/dodona-edu/universal-judge/issues/423>.
 
 Aangezien TESTed geen analyse van deze strings kan doen, is het nodig om zelf de `namespace` te gebruiken.
 Dit is de naam van de ingediende oplossing of klasse (instelbaar met het attribuut [`namespace`](#top-van-het-testplan)).
@@ -340,6 +365,15 @@ Deze naam is programeertaalafhankelijk:
     return: "2"
 ```
 
+Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de expressies en statements ook globaal instellen:
+
+```yaml
+- tab: "My tab"
+  language: "java"
+  testcases:
+  - expression: "Submission.toString(1+1)"
+    return: "2"
+```
 
 ## Ondersteunde tags
 

@@ -21,7 +21,7 @@ Er bestaan ook volledige voorbeelden voor eenvoudigere scenarios:
 - [Oefening met argumenten](/nl/guides/exercises/examples/command-line): hier moet een programma geschreven worden dat argumenten aanvaardt
 
 Deze handleiding bevat ook enkel een aantal veelvoorkomende gevallen.
-In de [referentiegids](/nl/references/tested/dsl) staat het volledige formaat voor testplannen uitgelegd.
+In de [referentiegids](/nl/references/tested/dsl) staat het volledige formaat voor testplannen uitgelegd, met alle attributen en configuratieopties.
 
 ## Structuur
 
@@ -82,9 +82,31 @@ Dit is een intuïtief formaat, waarvoor er in veel tekstverwerkers ondersteuning
 Een goed overzicht is op [deze pagina](https://quickref.me/yaml.html) te vinden.
 Je favoriete zoekmachine vindt er ongetwijfeld nog veel meer.
 
-Als jouw tekstverwerker JSON Schema ondersteunt, kan je deze toevoegen om validatie en automatische aanvulling in de testplannen te krijgen: gebruik dit [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json).
-Gebruik je VS Code, kan je ook onze [extensie](https://marketplace.visualstudio.com/items?itemName=DodonaLearningTechnologies.dodona-exercise-assistant) gebruiken.
-Die zal vanzelf JSON Schema configureren.
+In de [referentiegids](/nl/references/tested/dsl) staat uitgelegd hoe je validatie en automatische aanvulling voor testplannen instelt in je tekstverwerker (JSON Schema, VS Code-extensie).
+
+## Invoer en uitvoer testen
+
+Voor een programma dat leest van standaardinvoer en schrijft naar standaarduitvoer gebruik je de attributen `stdin` en `stdout`:
+
+```yaml
+- tab: "Hello"
+  testcases:
+  - stdin: "Alice"
+    stdout: "Hello Alice"
+```
+
+Moet het programma meerdere regels invoer lezen, gebruik dan een YAML-string over meerdere regels (`|`):
+
+```yaml
+- tab: "Som"
+  testcases:
+  - stdin: |
+      5
+      3
+    stdout: "8"
+```
+
+In de [referentiegids](/nl/references/tested/dsl#testgevallen) vind je alle attributen van een testgeval (`stderr`, `exception`, ...).
 
 ## Functieoproepen en returnwaarden
 
@@ -150,24 +172,7 @@ Merk op dat alle testgevallen die variabelen gebruiken in dezelfde context moete
 
 Hoewel de Python-syntaxis gebruikt wordt, wijken de conventies in een testplan soms af van gewone Python.
 Een testplan gebruikt de Python-syntaxis, maar is geen Python.
-De gebruikte conventies zijn:
-
-- Functieoproepen waarvan de naam begint met een hoofdletter worden beschouwd als
-  _constructors_, bijvoorbeeld `Constructor(56)`.
-- Identifiers die volledig in hoofdletters geschreven zijn worden beschouwd als globale constanten, bijvoorbeeld `VERY_LONG_NAME`.
-- Het casten van waarden gebeurt op de gebruikelijke manier van Python. Het casten van een getal naar `int64` wordt bijvoorbeeld `int64(56)`. Er is wel geen ondersteuning voor Python-constructors. Een verzameling moet je noteren als `set([1, 2, 3, 5])`, niet als `set(1, 2, 3, 5)`.
-
-Bijkomend worden grote delen van de syntaxis niet ondersteund, daar TESTed enkel beperkte ondersteuning heeft voor expressies en statements.
-Volgende zaken worden ondersteund:
-
-- Eenvoudige waarden, zoals `5`, `-9.3` of `"Hello world"`.
-- Complexe waarden, zoals `[5, 6, 7]`, `{5, "Hello"}` of `{"key": "value"}`.
-- Functieoproepen, inclusief _named parameters_, zoals `the_function(5, named=6)`.
-- Constructors (middels onze conventie).
-- Declareren en toewijzen van variabelen (_assignments_), zoals `some_variable = 5`.
-- Refereren naar variabelen, zoals `the_function(some_variable)`.
-
-Noemenswaardige weglatingen zijn alle soorten van functie- of klassendefinities, alsook alle operatoren (zoals plus, minus, gedeeld, maal).
+In de [referentiegids](/nl/references/tested/dsl#expressies-en-statements) staat de volledige lijst van conventies en ondersteunde syntaxis.
 
 ## Datatypes
 
@@ -236,21 +241,7 @@ def evaluate_test(context, five, six):
 ```
 
 Wat we doen in deze functie is de datum van vandaag berekenen.
-
-Het eerste argument van de functie is altijd een object met de volgende velden:
-- `expected`: de verwachte waarde van het orakel zoals gedefinieerd door de sleutel `value` in het testplan
-- `actual`: de waarde gegeneerd door de oplossing van de student
-- `execution_directory`: het pad van de map waarin de oplossing beoordeeld is
-- `evaluation_directory`: het pad van de map `evaluation` uit de oefening (waar dus het testplan in zit)
-- `programming_language`: de programmeertaal van de oplossing van de student
-- `natural_language`: de natuurlijke taal van de student die de oplossing indiende
-
-We geven vervolgens een `EvaluationResult` terug met vier parameters:
-
-1. `result`: Een boolean die aangeeft of de waarde uit de oplossing juist is of niet. In dit geval vergelijken we die gewoon met de datum van vandaag.
-2. `dsl_expected`: De verwachte waarde om te tonen op Dodona. We overschrijven hier de verwachte waarde uit het testplan met de datum van vandaag. Dit gebruikt de Python-syntaxis.
-3. `dsl_actual`: De eigenlijke waarde om te tonen op Dodona. We geven hier de eigenlijke waarde gewoon door. Dit gebruikt de Python-syntaxis.
-4. `messages`: Een optionele lijst van berichten. Deze berichten worden ook getoond op Dodona en kunnen gebruikt worden om bijkomende feedback of uitleg aan de studenten te geven.
+De volledige lijst van velden op het context-object en van de parameters van `EvaluationResult` en `Message` staat in de [referentiegids](/nl/references/tested/dsl#eigen-orakelfunctie-custom-check).
 
 Ook `stderr` en `stdout` kunnen een eigen checkfunctie gebruiken.
 Hiervoor wordt dezelfde notatie gebruikt, maar met `data` in plaats van `value`:
@@ -362,6 +353,8 @@ Als je slechts één programmeertaal wilt ondersteunen, kan je de taal van de ex
     return: "2"
 ```
 
+In de [referentiegids](/nl/references/tested/dsl#taalspecifieke-expressies-en-statements) staan de details van hoe deze strings gebruikt worden.
+
 ## Bestanden koppelen aan expressies
 
 Bij het opstellen van een oefening op bestanden raden we de volgende werkwijze aan:
@@ -400,3 +393,5 @@ repository/  # De repo met oefeningen
    |  └── bestand.txt  # Het bestand om te evalueren
    └── config.json
 ```
+
+Het attribuut `files` wordt beschreven in de [referentiegids](/nl/references/tested/dsl#bestanden).
