@@ -108,10 +108,15 @@ Small, independently shippable fixes. Do first; nothing here depends on later de
 
 ## Phase 1 — Information architecture (decisions + written conventions)
 
+STATUS: drafted, pending review. `CONTRIBUTING.md` (this branch) embodies the decisions
+below; the docs skill mirror is dodona-claude-comms-plugin PR #5. Remaining open point:
+whether `en/faq/accounts` and `en/guides/students/login-and-settings` should also drop
+Smartschool from the English text (see terminology notes in Phase 0).
+
 The "something we can build on". Produces a short CONTRIBUTING/conventions doc in the
 repo and the target site map. Decisions needed:
 
-1. **Content model — OPEN, under discussion.** The earlier FAQ migration was one option,
+1. **Content model — decided (see CONTRIBUTING.md).** The earlier FAQ migration was one option,
    not a commitment. Design principle from Bart: **guides are meant to be self-contained**
    — overlap between guides and FAQ is intentional and fine. The enemy is therefore not
    duplication but *divergence* (copies drifting apart: Smartschool in one list and not
