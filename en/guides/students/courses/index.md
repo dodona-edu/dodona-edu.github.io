@@ -20,11 +20,11 @@ To submit solutions for exercises in a course, you must be registered for that c
 
 First, you need to find the course you want to register for. You can do this by clicking on `Browse all courses on Dodona` on your homepage.
 
-![Explore courses page](./student.explore_courses.png)
+![Browse all courses on Dodona link card, highlighted, on the homepage](./homepage-browse-courses-en.png)
 
 This will take you to an [overview of all courses](https://dodona.be/en/courses/). You will see one or more tabs where you can use the search bar to find the right course based on a course name, instructor name, educational institution name, or academic year.
 
-![Recent courses on homepage](./student.courses.png)
+![All courses overview with tabs, search field, and a table of courses](./all-courses-en.png)
 
 ### How to Register
 
@@ -32,19 +32,19 @@ When you navigate to the course you searched for and are not yet registered, you
 
 - The course uses an **open registration procedure**, which means anyone can register for the course without explicit approval from a course administrator. Click the `Register` button to register for the course.
 
-  ![Register button](./register.png)
+  ![Not a member of this course panel with the Register button](./registration-open-en.png)
 
 - The course uses a **moderated registration procedure**, which means you can submit a **registration request** that must then be approved or rejected by a course administrator. Only when your registration request is approved will you be effectively registered for the course. Click the ` Request registration` button to submit a registration request for the course.
 
-  ![Submit registration request button](./moderated_register.png)
+  ![Registration panel with the Request registration button](./registration-moderated-en.png)
 
   As long as your registration request has not been approved or rejected by a course administrator, the message `Your registration is pending` will appear in the panel at the top of the course page, and the course will be listed in the `Pending` panel in the right column of your homepage.
 
-  ![Waiting list message](./moderated_waiting.png)
+  ![Registration panel showing the pending message and a Withdraw registration request button](./registration-pending-en.png)
 
 - The course uses a **closed registration procedure**, which means you cannot submit a registration request for the course. The instructor does not allow self-registration.
 
-  ![Closed registration message](./closed_registration.png)
+  ![Registration panel stating you are currently not able to subscribe to this course](./registration-closed-en.png)
 
 After you have registered, the course will be displayed on your personalized homepage.
 

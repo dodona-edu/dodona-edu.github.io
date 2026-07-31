@@ -12,7 +12,7 @@ On this page, you will find all the information you need to create and personali
 
 You can use Dodona in English or Dutch. Use the language menu on the right side of the navigation bar (at the top of every page) for this purpose.
 
-![Choose language menu](./choose_language.png)
+![Open language menu in the navigation bar, showing English and Nederlands](./language-menu-en.png)
 
 If you select a language while logged in, it will also be set as your preferred language in your [user profile](https://dodona.be/profile). This way, your preferred language will be automatically selected upon login.
 
@@ -28,13 +28,13 @@ The name and description of an [exercise](../exercises/#navigating-to-an-exercis
 
 ## Signing Up
 
-To sign up for Dodona, either click on `Sign in` on the right side of the navigation bar or navigate to the landing page and click the `Sign in` button in the center of the page.
+To sign up for Dodona, either click on `Sign in` on the right side of the navigation bar or navigate to the landing page and click the `Try for free` button in the center of the page.
 
-![Sign in button](./login.png)
+![Sign in link in the navigation bar and Try for free button on the landing page, both highlighted](./sign-in-button-en.png)
 
 You can sign in to Dodona by selecting your educational institution on the sign-in page. Secondary school students can log in with their Smartschool, Microsoft 365, or Google Workspace account. If this is your first time signing in to Dodona, a new user account will be automatically created based on the personal information provided by your external educational or research institution.
 
-![Educational institution selection](./sign_in.png)
+![Sign-in page listing educational institutions such as Smartschool, Google Workspace, Office 365 and UGent, plus a search box](./sign-in-institutions-en.png)
 
 ::: warning Your Data on Dodona
 
@@ -61,19 +61,19 @@ Select `My Profile` in the user menu on the right side of the navigation bar to 
 
 On the profile page, you will find your personal information (first name, last name, username, and email address) and some personal preferences ([language](#selecting-the-language) and time zone) that together form your user profile.
 
-![My profile menu item](./student.user_menu_my_profile.png)
+![My profile menu item, highlighted, in the open user menu](./user-menu-my-profile-en.png)
 
 Click the edit button in the bottom right corner of your profile page to edit your user profile. You cannot modify your personal information such as your name and email address. These are automatically updated based on the data provided by your external educational or research institution when signing in.
 
-![Edit profile page](./student.edit_profile.png)
+![Profile page with personal information, statistics, and a highlighted Edit button](./profile-page-en.png)
 
 What you can modify is the **time zone** used for displaying all time indications on the platform (e.g., the time you submitted a solution or the deadline for an exercise series).
 
-![Edit timezone setting](./student.edit_timezone.png)
+![Edit profile page with the Time zone field highlighted](./profile-timezone-en.png)
 
 If the time zone in your user profile does not match the local time zone detected by your browser, you will see a notification at the top of every page indicating that all time indications on the platform do not match the local time zone.
 
-![Timezone mismatch warning](./student.wrong_timezone.png)
+![Timezone mismatch warning banner at the top of a page](./timezone-warning-en.png)
 
 You can only remove this notification by setting the time zone in your user profile to the local time zone. Note that the notification contains a link that allows you to navigate directly to your profile page.
 

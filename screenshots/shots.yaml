@@ -892,7 +892,7 @@ shots:
 #
 # Selector confidence: selectors quoted verbatim from the manifest (e.g. `.activities-table`,
 # `.card.card-nav`, `#main-container`, `.alert-warning`, `td.actions`, `.group.card`,
-# `a.link-card[href$="/courses/"]`) are high confidence. Selectors built from the manifest's
+# `a.link-card[href*="/courses/?tab=all"]`) are high confidence. Selectors built from the manifest's
 # prose descriptions only ("the globe", "the user chip", "the callout") go through
 # hooks/students-interact.mjs's text-matching helpers (`highlight`, `tagClosest`) and are
 # best-effort -- verify against the live dev instance before trusting a capture run.
@@ -952,9 +952,13 @@ shots:
     hook: hooks/students-interact.mjs
     signOut: true
     highlight:
-      - text: 'Sign in'
+      # Selector-based, not text-based: the hero CTA's rendered label is "Try for
+      # free" / "Probeer gratis" (app/views/pages/_landing.html.erb `.try_for_free`),
+      # not "Sign in" as the manifest assumed -- both link to sign_in_path though,
+      # so target them by href/class instead of the stale copy.
+      - selector: 'a.sign-in'
         scope: '.dodona-navbar'
-      - text: 'Sign in'
+      - selector: 'a[href$="/sign_in/"]'
         scope: '#main-container'
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 620 }
@@ -962,7 +966,11 @@ shots:
       - '"Learn to code" hero'
       - both Sign in affordances highlighted (navbar link + hero button)
       - no dev banner, no environment pill
-    notes: NAVBAR shot. NL pass highlight text becomes "Aanmelden" -- verify the rendered label at capture time.
+    notes: >-
+      NAVBAR shot. Hero button text is "Try for free" / "Probeer gratis", not "Sign
+      in" -- the docs prose ("...the `Sign in` button in the center of the page")
+      is stale; flagged for a prose fix, not changed here (out of this chunk's
+      authorised scope).
 
   - id: sign-in-institutions
     page: guides/students/login-and-settings
@@ -989,35 +997,42 @@ shots:
     url: /{locale}/
     user: 6
     crop:
-      union: ['a.link-card[href$="/courses/"]']
+      union: ['a.link-card[href*="/courses/?tab=all"]']
       pad: 24
-    css: 'a.link-card[href$="/courses/"] { outline: 3px solid #d32f2f; outline-offset: 2px; }'
+    css: 'a.link-card[href*="/courses/?tab=all"] { outline: 3px solid #d32f2f; outline-offset: 2px; }'
     must_show:
       - the exact link text the prose quotes ("Browse all courses on Dodona" / Dutch equivalent)
 
   - id: all-courses
     page: guides/students/courses
     file: all-courses
-    url: /{locale}/courses/
+    url: /{locale}/courses/?tab=all # matches the "Browse all courses" link's own href; the bare
+    # /courses/ URL defaults to the Featured-courses tab, which only shows 1 seeded row.
     user: 6
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 700 }
     must_show:
-      - tabs (All courses / Featured / My courses)
+      - tabs (Featured courses / All courses -- "My courses" only appears once the
+        reader has joined a course, matching the docs prose "one or more tabs";
+        the novice used for this shot has none yet)
       - search field
       - course rows with teacher / institution columns
       - EN UI in the EN shot (the retired file showed the NL UI here -- do not repeat that)
+
+  # Registration callouts (open/moderated/pending/closed) all render through the
+  # same partial (app/views/courses/_not_a_member_card.html.erb) into a single
+  # Application::CalloutComponent -- a stable `.callout.callout-info` div is the
+  # only such callout on a non-member's course page, so crop it directly instead
+  # of text-matching the (locale-dependent) prose inside it. No highlight box:
+  # the manifest doesn't ask for one on these four.
 
   - id: registration-open
     page: guides/students/courses
     file: registration-open
     url: /{locale}/courses/29/
     user: 6
-    hook: hooks/students-interact.mjs
-    tagClosest:
-      - { name: registration-callout, text: 'Register', ancestor: 'div' }
     crop:
-      selector: '[data-shot="registration-callout"]'
+      selector: '.callout.callout-info'
     must_show:
       - the "not a member of this course" sentence
       - Register button
@@ -1028,11 +1043,8 @@ shots:
     file: registration-moderated
     url: /{locale}/courses/3/
     user: 6
-    hook: hooks/students-interact.mjs
-    tagClosest:
-      - { name: registration-callout, text: 'Request registration', ancestor: 'div' }
     crop:
-      selector: '[data-shot="registration-callout"]'
+      selector: '.callout.callout-info'
     must_show:
       - '"registration needs to be approved by a course administrator" sentence'
       - Request registration button
@@ -1043,11 +1055,8 @@ shots:
     file: registration-pending
     url: /{locale}/courses/3/
     user: 5 # already `pending` in seeds -- zero state change, do NOT use the novice here
-    hook: hooks/students-interact.mjs
-    tagClosest:
-      - { name: registration-callout, text: 'pending', ancestor: 'div' }
     crop:
-      selector: '[data-shot="registration-callout"]'
+      selector: '.callout.callout-info'
     must_show:
       - '"Your registration is pending" sentence'
       - Withdraw registration request button
@@ -1057,11 +1066,8 @@ shots:
     file: registration-closed
     url: /{locale}/courses/6/?secret=CeJS2
     user: 6
-    hook: hooks/students-interact.mjs
-    tagClosest:
-      - { name: registration-callout, text: 'not able to subscribe', ancestor: 'div' }
     crop:
-      selector: '[data-shot="registration-callout"]'
+      selector: '.callout.callout-info'
     must_show:
       - '"You are currently not able to subscribe to this course" sentence, exactly, no buttons'
 
@@ -1074,8 +1080,10 @@ shots:
     hook: hooks/students-interact.mjs
     openUserMenu: true
     highlight:
-      - text: 'My profile'
-        scope: '.dodona-navbar'
+      # Selector, not the locale-dependent "My profile"/"Mijn profiel" label: the
+      # profile link is the only open-menu item pointing at /users/<id>.
+      - selector: 'a[href*="/users/"]'
+        scope: '.dropdown-menu.show'
     crop:
       clip: { x: 800, y: 0, width: 640, height: 420 }
     must_show:
@@ -1092,14 +1100,16 @@ shots:
     file: profile-page
     url: /{locale}/users/6/
     user: 6
-    css: |
-      /* hide the dev-only "This account was created manually..." token sign-in block --
-         best-effort: no stable class given in the manifest, scope by nearest sensible
-         container if this over-hides once verified live. */
-      #main-container .card:has(a[href*="/token_sign_in/"]) { display: none !important; }
+    # No CSS hide needed: the "This account was created manually and can only sign
+    # in using this link" token block the manifest warned about (source of the
+    # Feb-2025 leak) doesn't exist in the current app -- grepped app/ for
+    # token_sign_in/"created manually", zero hits. Feature has been removed since.
     hook: hooks/students-interact.mjs
     highlight:
-      - selector: 'a[href$="/edit"]'
+      # The generic href selector also matches the (hidden, off-by-default) time-zone
+      # mismatch banner's "profile page" link earlier in the DOM -- scope by the
+      # button's own classes so .first() lands on the visible Edit button.
+      - selector: 'a.btn.btn-filled[href$="/edit/"]'
     crop:
       selector: '#main-container'
     must_show:
@@ -1112,9 +1122,9 @@ shots:
     file: profile-timezone
     url: /{locale}/users/6/edit/
     user: 6
-    hook: hooks/students-interact.mjs
-    highlight:
-      - text: 'Time zone'
+    # Selector, not the locale-dependent "Time zone"/"Tijdzone" label: :has() picks
+    # out the whole form row (app/views/users/_form.html.erb) around the select.
+    css: '.field.form-group.row:has(#user_time_zone) { outline: 3px solid #d32f2f; outline-offset: 2px; }'
     crop:
       selector: '#main-container'
     must_show:

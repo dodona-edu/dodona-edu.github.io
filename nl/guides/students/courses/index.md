@@ -20,11 +20,11 @@ Om oplossingen voor oefeningen in een cursus te kunnen indienen moet je in die c
 
 Eerst moet je de cursus waarvoor je wil registreren vinden. Dit kan je doen door op je startpagina op `Blader door alle cursussen op Dodona` te klikken.
 
-![Pagina om cursussen te ontdekken](./student.explore_courses.png)
+![Gemarkeerde link-kaart "Blader door alle cursussen op Dodona" op de startpagina](./homepage-browse-courses-nl.png)
 
 Dit zal je naar een [overzicht van alle cursussen](https://dodona.be/nl/courses/) brengen. Je krijgt er een of meerdere tabs te zien waar je de zoekbalk kan gebruiken om op basis van een cursusnaam, een naam van een lesgever, de naam van je onderwijsinstelling of een academiejaar de juiste cursus kan vinden.
 
-![Recente cursussen op startpagina](./student.courses.png)
+![Overzicht van alle cursussen met tabs, zoekveld en een tabel met cursussen](./all-courses-nl.png)
 
 ### Hoe registreer je?
 
@@ -32,20 +32,20 @@ Als je navigeert naar de cursus die je zocht, waarvoor je nog niet geregistreerd
 
 -   De cursus werkt met een **open registratieprocedure**, wat betekent dat iedereen zich voor de cursus kan registreren zonder expliciete goedkeuring van een cursusbeheerder. Klik op de knop `Registreren` om je voor de cursus te registreren.
 
-    ![Knop om te registreren](./register.png)
+    ![Paneel "Je bent niet geregistreerd voor deze cursus" met de knop Registreren](./registration-open-nl.png)
 
 
 -   De cursus werkt met een **gemodereerde registratieprocedure**, wat betekent dat je een **registratieverzoek** kunt indienen dat daarna dient goedgekeurd of afgekeurd te worden door een cursusbeheerder. Pas wanneer je registratieverzoek wordt goedgekeurd, ben je ook effectief geregistreerd voor de cursus. Klik op de knop `Registratieverzoek indienen` om een registratieverzoek voor de cursus in te dienen.
 
-    ![Knop om registratieverzoek in te dienen](./moderated_register.png)
+    ![Registratiepaneel met de knop Registratieverzoek indienen](./registration-moderated-nl.png)
 
     Zolang je registratieverzoek nog niet werd goedgekeurd of afgekeurd door een cursusbeheerder, verschijnt in het paneel bovenaan de cursuspagina de boodschap `Je staat op de wachtlijst.` en wordt de cursus opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina.
 
-    ![Boodschap wachtlijst](./moderated_waiting.png)
+    ![Registratiepaneel met de wachtlijstboodschap en een knop Registratieverzoek annuleren](./registration-pending-nl.png)
 
 -   De cursus werkt met een **gesloten registratieprocedure**, wat betekent dat je geen registratieverzoek kunt indienen voor de cursus. De lesgever laat dus niet toe dat je jezelf kan registreren.
 
-    ![Boodschap gesloten registratie](./closed_registration.png)
+    ![Registratiepaneel met de boodschap dat je momenteel niet kan registreren voor deze cursus](./registration-closed-nl.png)
 
 Nadat je geregistreerd bent, wordt de cursus getoond op je gepersonaliseerde startpagina.
 

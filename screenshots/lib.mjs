@@ -39,11 +39,13 @@ const CLEAN_CSS_HIDE_NAV = `
   .dodona-navbar{display:none !important}
   .profiler-results,[class*="profiler"]{display:none !important}
   #bullet-footer,#bullet{display:none !important}
+  #active-announcement{display:none !important}
 `;
 const CLEAN_CSS_KEEP_NAV = `
   .dodona-navbar{position:static !important}
   .profiler-results,[class*="profiler"]{display:none !important}
   #bullet-footer,#bullet{display:none !important}
+  #active-announcement{display:none !important}
 `;
 
 export async function signIn(page, id = 1) {
