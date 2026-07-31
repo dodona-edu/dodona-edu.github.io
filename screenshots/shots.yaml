@@ -199,7 +199,7 @@ shots:
   - id: CM-7
     page: guides/teachers/course-management
     file: staff.dolos
-    path: en/guides/teachers/course-management/staff.dolos.png
+    path: images/dolos.png
     manual: true
     # Not captured by this pipeline: "Detect plagiarism" triggers a real
     # export job plus a live call to dolos.ugent.be before opening a new
@@ -890,7 +890,7 @@ shots:
 # still see the tabbed `Hand in / Submissions / Feedback` card, so every exercise/feedback
 # shot below targets `.card.card-nav` and its tabs, not the new-flow selectors.
 #
-# Selector confidence: selectors quoted verbatim from the manifest (e.g. `.activities-table`,
+# Selector confidence: selectors quoted verbatim from the manifest (e.g. `.activity-table`,
 # `.card.card-nav`, `#main-container`, `.alert-warning`, `td.actions`, `.group.card`,
 # `a.link-card[href*="/courses/?tab=all"]`) are high confidence. Selectors built from the manifest's
 # prose descriptions only ("the globe", "the user chip", "the callout") go through
@@ -1155,12 +1155,19 @@ shots:
     url: /{locale}/
     state: [students-series-deadlines]
     crop:
-      selector: 'div.card.user' # Home::RecentExercisesComponent, "Recent exercises" eyebrow
+      selector: 'div.card.user:has(.mdi-history)' # Home::RecentExercisesComponent; the DeadlinesComponent
+      # ("Upcoming deadlines") reuses the same "card user" class and renders first in the DOM, so a bare
+      # `div.card.user` selector's .first() picked the wrong card -- the history icon is unique to this one.
     must_show:
       - eyebrow "Recent exercises"
-      - 5 rows with status icons + course subtitle
-      - the warning triangle on the Curling row (best-is-not-last, already seeded)
-      - chevron per row
+      - 5 rows with status icons + course subtitle + time-ago
+    notes: |
+      CORRECTED must_show: the manifest's "warning triangle on the Curling row" and "chevron per
+      row" claims don't hold for this component. Home::RecentExercisesComponent renders each row's
+      icon via Submissions::StatusIconComponent (plain per-submission correct/wrong, no best-is-not-last
+      warning logic -- that logic lives only in app/views/activities/_user_status_icon.html.erb, used
+      by the course/series exercise table, see deadline-warning) and Application::CardRowComponent has
+      no chevron slot at all. Verified against source and the live capture.
 
   - id: course-page
     page: guides/students/courses
@@ -1172,8 +1179,15 @@ shots:
     must_show:
       - course header (title, teacher, description, Unregister row)
       - at least one series card
-      - green (not-expired) deadline under the series name
+      - not-yet-passed deadline under the series name
       - status column with correct/wrong icons
+    notes: |
+      CORRECTED must_show: the manifest called this a "green (not-expired) deadline" but
+      Series::DeadlineComponent#html_class only uses "deadline-ok" (var(--d-success), green) when
+      the reader completed the series BEFORE a deadline that has since PASSED (met: true). A future,
+      not-yet-passed deadline gets "deadline-future" (var(--d-on-surface-muted), gray) -- verified
+      against app/assets/stylesheets/models/series.css.scss and the live capture. The green case is
+      Stage F's icon-course-deadline-met crop, not this shot.
 
   - id: course-breadcrumb
     page: guides/students/courses
@@ -1200,9 +1214,9 @@ shots:
     highlight:
       - rowText: 'Curling'
         selector: '.mdi-alert'
-        scope: '#series_141' # best-effort Rails dom_id guess for the "Conditions" series card
+        scope: '#series-card-141' # Series::CardComponent id: "series-card-#{series.id}" (verified in app/components/series/card_component.html.erb)
     crop:
-      selector: '#series_141'
+      selector: '#series-card-141'
     must_show:
       - series deadline visible
       - Curling row "Wrong" status + warning triangle
@@ -1213,9 +1227,16 @@ shots:
     file: course-exercise-selection
     url: /{locale}/courses/29/
     state: [students-series-deadlines]
-    css: '.activities-table { outline: 3px solid #d32f2f; outline-offset: 2px; }'
+    # Use `border`, not `outline`: this page renders every candidate outline (on
+    # .activity-table, .table-scroll-wrapper, .series-activities-table-wrapper, even
+    # #series-card-140 itself) invisible on 3 of 4 sides -- verified live, root cause not fully
+    # pinned down (some ancestor's stacking/paint order swallows it) -- while a `border` on the
+    # same element renders correctly, since overflow clips content at the padding edge, never the
+    # element's own border. Border on the table-adjacent wrapper div, not the table (border-collapse
+    # would otherwise merge it into the header row).
+    css: '.series-activities-table-wrapper { border: 3px solid #d32f2f; border-radius: 6px; }'
     crop:
-      selector: '#series_140' # "Variables and types" series card; best-effort dom_id, see deadline-warning
+      selector: '#series-card-140' # Series::CardComponent id: "series-card-#{series.id}" (verified, see deadline-warning)
     must_show:
       - numbered exercise rows with language icons
       - class progress bars
@@ -1227,12 +1248,15 @@ shots:
     url: /{locale}/courses/29/
     state: [students-series-deadlines]
     hook: hooks/students-interact.mjs
+    # ancestor: '.card', not the default 'div' -- the Unregister button's closest 'div' is just
+    # its own .card-actions row (verified live), too tight to show any "course card context".
+    # Its closest '.card' is the whole course header card (title, description, actions row).
     tagClosest:
-      - { name: unregister-row, text: 'Unregister' }
+      - { name: unregister-row, text: 'Unregister', ancestor: '.card' }
     crop:
       selector: '[data-shot="unregister-row"]'
     must_show:
-      - course card context
+      - course card context (title, description)
       - highlighted Unregister link
 
   - id: exercise-page
@@ -1242,8 +1266,11 @@ shots:
     state: [students-series-deadlines]
     hook: hooks/students-interact.mjs
     iframeProfilerFix: true
+    # Union of the two cards: #main-container also includes the right-hand series
+    # sidebar (clipped mid-word at this viewport) and lets the fixed legacy submit
+    # FAB bleed into the frame.
     crop:
-      selector: '#main-container'
+      union: ['.card.activity-description', '.card.card-nav']
     must_show:
       - exercise title header
       - description
@@ -1275,8 +1302,14 @@ shots:
     url: /{locale}/courses/29/series/140/activities/347592237/
     state: [students-series-deadlines]
     hook: hooks/students-interact.mjs
+    # This URL already has submission #1347 on it (needed later for D14/D15), so the editor
+    # server-preloads that submission's code with a "We have preloaded your latest submission"
+    # callout on first load -- verified live. Click "Clear editor" (a normal, always-available
+    # UI action, matches the docs' "before submitting" framing) to get the empty editor the
+    # manifest calls for.
+    clickText: 'Clear editor'
     highlight:
-      - selector: '.card-nav button[type="submit"], .card-nav .submit' # best-effort: icon-only submit button, no text to match
+      - selector: '#editor-process-btn' # app/views/activities/_handin.html.erb: icon-only paper-plane submit button, verified id
     crop:
       selector: '.card.card-nav'
     must_show:
@@ -1292,14 +1325,19 @@ shots:
     url: /{locale}/courses/29/series/140/activities/347592237/
     state: [students-series-deadlines, students-submission-echo-correct]
     hook: hooks/students-interact.mjs
-    clickTab: 'Feedback'
+    # The Feedback tab has no direct trigger of its own (verified against exercise.ts): it only
+    # reveals+activates itself when a submission row's `a.load-submission` link is clicked from
+    # the Submissions tab (enableSubmissionTableLinks()), or after a live browser submit -- so
+    # go via Submissions first, then click the (newest, our throwaway) row.
+    clickTab: 'Submissions'
+    clickSelector: 'a.load-submission'
     crop:
       selector: '.card.card-nav'
     must_show:
       - three tabs, Feedback active
       - green verdict
       - at least 2 context cards
-      - submission-history block
+      - submission-history block (top-right of the header: today/#2/Correct, 4 days ago/#1/Correct)
     notes: |
       Shared image -- also referenced from feedback/index.md as ../exercises/feedback-tab-en.png
       (one canonical file for both guides, per the shared-screenshot rule).
@@ -1369,10 +1407,20 @@ shots:
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 900 }
     must_show:
-      - green Correct + "All tests succeeded"
+      - green checkmark + "Correct" verdict
       - '"Submission #1 for Curling in Programming 1" link line'
       - history list at right
-      - Correctness tab active
+      - first test-group tab active
+    notes: |
+      CORRECTED must_show: verified live, two manifest claims don't match the current UI.
+      (1) There's no "All tests succeeded" string anywhere on this page -- the header shows
+      just the verdict word ("Correct") and a relative timestamp, no separate summary
+      sentence; grepped config/locales for the phrase, zero hits.
+      (2) There's no generic "Correctness" tab -- the first tab is named after the judge's own
+      test-group/context name (here "Counter", since submission #1352's single context happens
+      to be about a Counter class -- unrelated to the "Counter" exercise elsewhere in the seeds),
+      with "Code" as the second tab. A fixed "Correctness" label only exists in the manifest's
+      assumption, not the app.
 
   - id: feedback-diff
     page: guides/students/feedback
@@ -1384,8 +1432,8 @@ shots:
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 950 }
     must_show:
-      - red "Wrong - N tests failed"
-      - Correctness tab with red badge count
+      - red "Wrong" verdict
+      - first test-group tab with red badge count (no fixed "Correctness" label, see submission-page's notes)
       - Your output / Expected output diff with char-level highlighting
 
   - id: code-annotations
@@ -1405,11 +1453,12 @@ shots:
   - id: visual-feedback
     page: guides/students/feedback
     file: visual-feedback
-    url: /{locale}/submissions/1353/
-    state: [students-series-deadlines]
-    # FALLBACK: only if #1353 doesn't render the curling-target graphic live, switch to
-    # `state: [students-series-deadlines, students-submission-curling-wrong]` and add
-    # `hook: hooks/students-interact.mjs` + `dynamicSubmission: students-submission-curling-wrong`.
+    url: /{locale}/submissions/ # placeholder; hook navigates to the real dynamic-id submission
+    # FALLBACK IN USE: verified live, #1353's one wrong test ("invalid arguments", an
+    # argument-count check) carries no graphic -- see state/students-submission-curling-wrong.setup.rb.
+    state: [students-series-deadlines, students-submission-curling-wrong]
+    hook: hooks/students-interact.mjs
+    dynamicSubmission: students-submission-curling-wrong
     crop:
       selector: '.group.card'
     must_show:
@@ -1423,7 +1472,7 @@ shots:
     state: [students-series-deadlines]
     hook: hooks/students-interact.mjs
     clickTab: 'Code'
-    hoverLine: 6
+    hoverLine: 1
     highlight:
       - text: 'Ask a question about your code'
     crop:
@@ -1440,7 +1489,7 @@ shots:
     state: [students-series-deadlines]
     hook: hooks/students-ask-question-flow.mjs
     frame: 1
-    hoverLine: 16
+    hoverLine: 1
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 500 }
     must_show:
@@ -1458,7 +1507,7 @@ shots:
     state: [students-series-deadlines]
     hook: hooks/students-ask-question-flow.mjs
     frame: 2
-    hoverLine: 16
+    hoverLine: 1
     questionText: 'Why do we need this line?' # NL pass: "Waarom hebben we deze regel nodig?"
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 500 }
@@ -1472,7 +1521,7 @@ shots:
     state: [students-series-deadlines, students-question-posted-en] # NL pass: students-question-posted-nl
     hook: hooks/students-ask-question-flow.mjs
     frame: 3
-    hoverLine: 16
+    hoverLine: 1
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 500 }
     must_show:
@@ -1568,34 +1617,34 @@ shots:
     path: images/course-status-icons/correct.png
     url: /en/courses/29/
     crop:
-      selector: '.activities-table i.mdi-check.colored-correct'
+      selector: '.activity-table i.mdi-check.colored-correct'
     notes: uses the existing (not-yet-past) students-series-deadlines deadline, or plain seeded state if captured before Stage D.
 
   - id: icon-course-wrong
     path: images/course-status-icons/wrong.png
     url: /en/courses/29/
     crop:
-      selector: '.activities-table i.mdi-close.colored-wrong'
+      selector: '.activity-table i.mdi-close.colored-wrong'
 
   - id: icon-course-deadline-met
     path: images/course-status-icons/deadline-met.png
     url: /en/courses/29/
     state: [students-icons-past-deadline]
     crop:
-      selector: '.activities-table i.mdi-alarm-check'
+      selector: '.activity-table i.mdi-alarm-check'
 
   - id: icon-course-deadline-missed
     path: images/course-status-icons/deadline-missed.png
     url: /en/courses/29/
     state: [students-icons-past-deadline]
     crop:
-      selector: '.activities-table i.mdi-alarm-off'
+      selector: '.activity-table i.mdi-alarm-off'
 
   - id: icon-course-warning-best-not-last
     path: images/course-status-icons/warning-best-not-last.png
     url: /en/courses/29/
     crop:
-      selector: '.activities-table i.mdi-alert.colored-warning'
+      selector: '.activity-table i.mdi-alert.colored-warning'
     notes: uses the already-seeded Curling correct-then-wrong sequence (series 141), no extra state needed.
 
   - id: icon-course-info-correct-after-deadline
@@ -1603,10 +1652,302 @@ shots:
     url: /en/courses/29/
     state: [students-icons-past-deadline]
     crop:
-      selector: '.activities-table i.mdi-information.colored-info'
+      selector: '.activity-table i.mdi-information.colored-info'
     notes: |
       UNDERSPECIFIED by the manifest: this icon only renders for an exercise whose latest
       accepted submission came AFTER the series deadline. students-icons-past-deadline alone
       is not sufficient -- it needs a fresh correct submission made on an unattempted
       series-140/141 exercise while the deadline is in the past (not detailed in
       manifest-students.md; flagged in the conversion report rather than invented here).
+
+---
+# Assessments-guide shot manifest (Phase 5 item 1: en/nl guides/teachers/assessments).
+# NOTHING in this section has been captured yet -- the guide ships text-first and reuses
+# the existing ESM-1 series-form image for the kind chooser. Assessment mode is behind
+# the `exam_mode` Flipper flag, so every shot needs a state scenario that enables the
+# flag AND builds an exam series; none of those scenarios exist yet:
+#
+#   assessments-exam-series    (to be written) enable the exam_mode Flipper flag for
+#                              user 1, add an exam series to course 11 with
+#                              activity_access: password, exam_lockdown_mode: true,
+#                              a future deadline and exam_auto_close: true, no sessions.
+#   assessments-exam-sessions  (to be written) on top of the above: a few students with
+#                              started sessions, a few stopped (one stopped_by teacher,
+#                              one handed in by the student), the rest not started, plus
+#                              the exam log rows those create -- drives ASSESS-3/4.
+#   assessments-exam-over      (to be written) all sessions stopped, exam_released
+#                              false -- drives ASSESS-5's "Publish assessment" button.
+#
+# The exam series only gets an id when its scenario first runs: the SERIES_ID
+# placeholders below must be filled in after writing assessments-exam-series (have the
+# setup script print the id, like grading-wizard-series52 does for its evaluation).
+
+defaults:
+  user: 1
+
+shots:
+  - id: ASSESS-1 # not yet captured (needs assessments-exam-series + SERIES_ID)
+    page: guides/teachers/assessments
+    file: assessment-options
+    url: /{locale}/series/SERIES_ID/edit
+    state: [assessments-exam-series]
+    crop:
+      selector: '#exam_mode_section'
+    must_show:
+      - '"Assessment options" heading'
+      - Require a password to start the assessment checkbox (checked) + Password field
+      - Restrict Dodona to assessment content checkbox (checked)
+      - Automatically stop assessment sessions checkbox (checked)
+
+  - id: ASSESS-2 # not yet captured (needs assessments-exam-series + SERIES_ID)
+    page: guides/teachers/assessments
+    file: assessment-start
+    url: /{locale}/courses/11/
+    user: 5
+    state: [assessments-exam-series]
+    crop:
+      selector: '#series-card-SERIES_ID'
+    must_show:
+      - '"How this assessment works" callout with the four/five explanation items'
+      - academic-integrity logging notice
+      - password input ("Enter password") + Start assessment button
+      - no exercise list visible on the card
+
+  - id: ASSESS-3 # not yet captured (needs assessments-exam-sessions + SERIES_ID)
+    page: guides/teachers/assessments
+    file: assessment-overview
+    url: /{locale}/series/SERIES_ID/assessment_overview
+    state: [assessments-exam-series, assessments-exam-sessions]
+    viewport: { width: 1600, height: 1500 }
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - status panel (Status/Dodona access/Password/Auto-stop rows, Show button)
+      - Not yet started / In progress / Stopped counter cards with nonzero counts
+      - Timeline callout with View full timeline button
+      - Stop sessions action next to the search bar
+      - sessions table with Started at/Stopped at values, per-row stop/reopen/timeline
+        buttons and a "Closed before starting" row
+
+  - id: ASSESS-4 # not yet captured (needs assessments-exam-sessions + SERIES_ID)
+    page: guides/teachers/assessments
+    file: assessment-timeline
+    url: /{locale}/series/SERIES_ID/exam_logs
+    state: [assessments-exam-series, assessments-exam-sessions]
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - Timestamp / Action / Actor columns
+      - a mix of event types (Assessment started, Submitted solution ..., Assessment
+        stopped with a teacher actor, one System actor row if auto-stop fired)
+      - User/Action/Actor/IP address/Browser filter dropdowns
+      - Export button
+
+  - id: ASSESS-5 # not yet captured (needs assessments-exam-over + SERIES_ID)
+    page: guides/teachers/assessments
+    file: assessment-publish
+    url: /{locale}/courses/11/
+    state: [assessments-exam-series, assessments-exam-over]
+    crop:
+      selector: '#series-card-SERIES_ID'
+    must_show:
+      - '"This assessment has ended." students-cannot-view banner on the series card'
+      - filled Publish assessment button
+      - status panel phase "Stopped, awaiting publication"
+
+---
+# Proposed shots for the AI draft answers FAQ entries
+# (en+nl faq/annotations: "How do AI draft answers work?" and
+# "How do I enable or disable AI draft answers?").
+# NOT captured yet; the FAQ text currently references no images.
+#
+# State prerequisite: a Question annotation with an associated LlmResponse on a
+# submission in course 11. In development DraftResponseJob short-circuits and
+# stores a placeholder response ('<StudentAnswer>Draft response generated for
+# development</StudentAnswer>'), so a scenario script can simply create a
+# question as a student user and run DraftResponseJob.perform_now(question)
+# (or create the LlmResponse directly with a realistic-looking response text —
+# preferred, so the shot shows a plausible draft instead of the dev
+# placeholder). The course must have questions_enabled and
+# draft_answers_enabled (both default on). The viewing user must be a course
+# admin of that course (user 1 / zeus works).
+# Suggested scenario id: question-with-draft[.rb nl] — locale-parameterized
+# because the LlmResponse draft text itself should match the shot locale.
+
+shots:
+  - id: AI-1
+    page: faq/annotations
+    file: draft-answer-suggested
+    url: /{locale}/submissions/{submission_with_question}/
+    state: [course11-naming, question-with-draft]
+    # Open the reply form on the question thread first: click the fake reply
+    # input under the question (placeholder shows a sparkle: "✨Reply...").
+    # The form opens prefilled with the draft only while no teacher reply
+    # exists yet (thread.firstResponse()).
+    crop:
+      selector: 'd-thread'
+      pad: 8
+    must_show:
+      - the student's question in the thread
+      - sparkle (mdi-creation) icon + "Suggested answer - Rate suggestion:" label above the text box
+      - thumbs up / thumbs down rating buttons (outline state, not yet rated)
+      - reply text box prefilled with the generated draft text
+      - Reply / Cancel buttons
+
+  - id: AI-2
+    page: faq/annotations
+    file: draft-answer-rated
+    url: /{locale}/submissions/{submission_with_question}/
+    state: [course11-naming, question-with-draft]
+    # Same form as AI-1, after clicking the thumbs-up button: the icon fills
+    # (mdi-thumb-up) and the optional comment input appears and takes focus.
+    crop:
+      selector: 'd-thread'
+      pad: 8
+    must_show:
+      - filled thumbs-up icon (rated "good")
+      - comment input with placeholder "Explain your rating (optional)..."
+
+  - id: AI-3
+    page: faq/annotations
+    file: draft-answers-toggle
+    url: /{locale}/courses/11/edit
+    state: [course11-naming]
+    # Crop to the "Questions" field group of the course edit form
+    # (app/views/courses/_form.html.erb): the questions_enabled checkbox row
+    # plus the draft_answers_enabled row and its help block below it.
+    crop:
+      union: ['.course-draft-disabled:has(#course_questions_enabled)', '.course-draft-disabled:has(#course_draft_answers_enabled)']
+      pad: 8
+    must_show:
+      - '"Questions" label with checkbox "Allow students to ask questions" (checked)'
+      - checkbox "Automatically propose a response to student questions" (checked)
+      - help text "Use an LLM to generate a draft response to questions. Students never see the draft; it's only a suggestion for your reply."
+
+---
+# Proposed shot entries for guides/teachers/statistics (NOT merged into
+# screenshots/shots.yaml — a concurrent agent owns that file).
+#
+# Notes for whoever merges these:
+# - Course 11 ("Visualisation Test", renamed to "Programming" by the
+#   course11-naming scenario) is the natural target: it is seeded with
+#   submissions precisely for the visualisations.
+# - ST-1/ST-2 (punchcard + heatmap) live on the course statistics page. The
+#   data is computed by a background job that the controller enqueues on first
+#   request and the frontend polls every second until it is ready. The dev
+#   instance used for the Phase 4 shots has no background job worker, so these
+#   two graphs will stay on "Loading..." forever there. Either run a worker
+#   (bin/rails jobs:work) for this pass, or precompute the matrices with a
+#   state scenario (Submission.punchcard_matrix / heatmap_matrix via
+#   bin/rails runner) before shooting.
+# - ST-3..ST-6 are tabs inside a series card on the course page: they need an
+#   interaction hook that clicks the matching `.graph-toggle` button
+#   (data-type: violin | stacked | timeseries | ctimeseries) for the chosen
+#   series and waits for the SVG to render (the data is fetched live; wait for
+#   `#stats-container-<id> svg`, plus absence of the "not enough data" text).
+# - Series graphs only count student submissions on non-optional series, so
+#   pick a series in course 11 that has seeded student submissions.
+# - Graph text (axis labels, tooltips, legend) is localised, so every shot
+#   needs -en and -nl variants.
+
+shots:
+  # ---------------- statistics (course statistics page) ----------------
+  - id: ST-1
+    page: guides/teachers/statistics
+    file: course-statistics-punchcard
+    url: /{locale}/courses/11/statistics/
+    state: [course11-naming]
+    # Needs: delayed-job worker running (or precomputed punchcard matrix).
+    crop:
+      union: ['#punchcard-container']
+      pad: 8
+    must_show:
+      - "\"Punchcard\" section header with the clock icon"
+      - weekday rows Monday-Sunday, hour columns 00:00-23:00
+      - dots of clearly different sizes
+
+  - id: ST-2
+    page: guides/teachers/statistics
+    file: course-statistics-heatmap
+    url: /{locale}/courses/11/statistics/
+    state: [course11-naming]
+    # Needs: delayed-job worker running (or precomputed heatmap matrix).
+    crop:
+      union: ['#heatmap-container']
+      pad: 8
+    must_show:
+      - "\"Heatmap\" section header with the calendar icon"
+      - one calendar block per academic year with month labels
+      - day cells in visibly different shades
+
+  # ---------------- statistics (series graphs on the course page) --------
+  - id: ST-3
+    page: guides/teachers/statistics
+    file: series-graph-violin
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    interact: click `.graph-toggle[data-type="violin"]` of a series with
+      student submissions, wait for `#stats-container-<seriesId> svg`
+    crop:
+      union: ['#series-card-<seriesId>']
+      pad: 8
+    must_show:
+      - graph title "Number of submissions per user" + info icon
+      - the four graph-toggle buttons in the series header, violin active
+      - one violin shape per exercise with the average dot
+      - x-axis label "Number of submissions"
+
+  - id: ST-4
+    page: guides/teachers/statistics
+    file: series-graph-stacked-status
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    interact: click `.graph-toggle[data-type="stacked"]`, wait for the SVG
+    crop:
+      union: ['#series-card-<seriesId>']
+      pad: 8
+    must_show:
+      - graph title "Distribution of submission statuses"
+      - one bar per exercise, segmented by status colours
+      - status legend (Correct, Wrong, ...)
+
+  - id: ST-5
+    page: guides/teachers/statistics
+    file: series-graph-timeseries
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    interact: click `.graph-toggle[data-type="timeseries"]`, wait for the SVG
+    crop:
+      union: ['#series-card-<seriesId>']
+      pad: 8
+    must_show:
+      - graph title "Submissions over time"
+      - Start date / End date pickers above the graph
+      - one row of squares per exercise, shading varies
+      - bin-size legend under the graph (e.g. "1 day")
+
+  - id: ST-6
+    page: guides/teachers/statistics
+    file: series-graph-cumulative-timeseries
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    interact: click `.graph-toggle[data-type="ctimeseries"]`, wait for the SVG
+    crop:
+      union: ['#series-card-<seriesId>']
+      pad: 8
+    must_show:
+      - graph title "Users with at least one correct submission"
+      - one line per exercise climbing over time
+      - y-axis with percentage ticks
+
+  # ---------------- optional extras (referenced in prose, not required) ---
+  - id: ST-7
+    page: guides/teachers/statistics
+    file: class-progress-bar
+    url: /{locale}/courses/11/
+    state: [course11-naming]
+    crop:
+      selector: '.series-activities-table-wrapper'
+    must_show:
+      - "\"Class progress\" column header"
+      - grey started-fraction and coloured correct-fraction in the bars

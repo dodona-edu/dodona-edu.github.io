@@ -4,12 +4,15 @@
 # through the browser (the hook for this shot -- hooks/students-interact.mjs with
 # clickTab: 'Feedback' -- stays a pure UI interaction). Run AFTER D1-D6.
 #
-# NOTE: this is a best-effort stand-in for "a correct echo solution" -- if you have access to
-# the exercise repo, prefer pasting its real solution.py instead of this loop.
+# Live-judges first (Submission#evaluate, in-process, same mechanism the test suite uses).
+# WHEN THE JUDGE IS UNAVAILABLE -- verified live: Echo's pythia_judge fails in this dev
+# checkout regardless of Docker being up (`FileNotFoundError: .../resources/plan.json`, a
+# pre-existing gap in this instance's judge setup, not something this capture run caused) --
+# falls back to a hand-constructed, schema-accurate result (matching
+# public/schemas/judge_output.json), the same proven approach as
+# state/faq-annotated-submission.setup.rb. Two context cards with a stdout test each, so the
+# Feedback tab shows >= 2 context cards as the shot requires.
 #
-# The exercise page itself is the shot's URL (no dynamic-id handoff needed): loading
-# /en/courses/29/series/140/activities/347592237/ as student 5 shows the latest submission's
-# tabs directly.
 # Course 29 has no repository grants in the seeds; submissions/activity pages need
 # this (see course29-repo-access.*.rb; removed only by that scenario's teardown).
 CourseRepository.find_or_create_by!(course_id: 29, repository_id: 2)
@@ -24,10 +27,43 @@ code = <<~PY
           break
 PY
 
-s = Submission.create!(exercise: Activity.find(347592237), course: Course.find(29), user: User.find(5), code: code)
+s = Submission.new(user: User.find(5), exercise: Activity.find(347_592_237), course: Course.find(29),
+                    code: code, evaluate: false, skip_rate_limit_check: true)
+s.save!
 
-Timeout.timeout(60) { sleep 1 while s.reload.status.in?(%w[queued running]) }
-raise "expected a correct verdict, got #{s.status}" unless s.status == 'correct'
+begin
+  s.evaluate
+  raise 'judge produced no verdict' if s.reload.status.to_s.in?(%w[queued running])
+  raise "expected a correct verdict, got #{s.status}" unless s.status == 'correct'
+rescue StandardError => e
+  warn "judge run failed (#{e.class}: #{e.message}); writing constructed result"
+  result = {
+    accepted: true,
+    status: 'correct',
+    description: nil,
+    groups: [
+      {
+        description: 'Examples',
+        groups: [
+          { accepted: true,
+            groups: [{ accepted: true, description: { description: '$ submission', format: 'console' },
+                       tests: [{ expected: "42\\n", generated: "42\\n", channel: 'stdout', accepted: true }] }] },
+          { accepted: true,
+            groups: [{ accepted: true, description: { description: '$ submission', format: 'console' },
+                       tests: [{ expected: "ECHO\\n", generated: "ECHO\\n", channel: 'stdout', accepted: true }] }] }
+        ]
+      }
+    ],
+    messages: []
+  }
+  CachedFile.write(s.fs_path(:result), ActiveSupport::Gzip.compress(result.to_json.force_encoding('UTF-8')))
+  s.update_columns(status: 'correct', accepted: true, summary: nil)
+  begin
+    s.update_exercise_status
+  rescue StandardError
+    nil
+  end
+end
 
 state_file = '/tmp/dodona-docs-capture-state.json'
 state = File.exist?(state_file) ? JSON.parse(File.read(state_file)) : {}
@@ -35,4 +71,4 @@ state['students-submission-echo-correct'] = { 'submission_id' => s.id }
 File.write(state_file, JSON.pretty_generate(state))
 
 Rails.cache.clear
-puts "students-submission-echo-correct: submission #{s.id}, status #{s.status}"
+puts "students-submission-echo-correct: submission #{s.id}, status #{s.reload.status}"

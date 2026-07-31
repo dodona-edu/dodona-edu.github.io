@@ -54,18 +54,18 @@ In addition to the option to navigate to a course yourself and complete the regi
 
 A course consists of various components. At the top of the course page, you will see the description of a course. Below that, you can see different exercise series, each consisting of one or more exercises.
 
-![Deadline warning symbol](./student.deadline_series_warning.png)
+![Course page with the header card and a series card showing its deadline and exercise table](./course-page-en.png)
 
 ::: tip Tip
 
 When working within a course, the name of the course appears next to `Dodona` on the left side of the navigation bar. By clicking on the course name in the navigation bar, you will navigate back to the course page.
 
-![Course breadcrumb](./student.breadcrumb_course.png)
+![Course breadcrumb, with the course name highlighted in the navigation bar](./course-breadcrumb-en.png)
 :::
 
 ### Exercise Series
 
-An exercise series consists of a description, a number of exercises, and possibly a **deadline** set by the course administrator. If a deadline is set, it will be displayed under the name of the exercise series. When displaying the deadline, the time zone from your [user profile](../login-and-settings/#setting-your-personal-preferences) is taken into account. Deadlines are displayed in green if they have not yet expired and in red if they have already expired.
+An exercise series consists of a description, a number of exercises, and possibly a **deadline** set by the course administrator. If a deadline is set, it will be displayed under the name of the exercise series. When displaying the deadline, the time zone from your [user profile](../login-and-settings/#setting-your-personal-preferences) is taken into account. A deadline that has not yet expired is displayed in gray; once it has expired, it turns red, unless your last submission before the deadline was correct, in which case it turns green.
 
 If a series has a deadline, only submitted solutions from before that time will be considered. After the deadline, you can still submit, but they may not count towards any evaluation. More details can be found in the section on [submission status](#submission-status).
 
@@ -108,9 +108,9 @@ Possible displays of your submission status after the deadline has expired:
 
 If you submit a solution for an exercise from an exercise series **before the deadline expires**, your submission status for the exercise can still change because that submission status is always based on your last submitted solution before the deadline. It is your responsibility to ensure that your last submitted solution before the deadline is also your most correct solution. You can optionally select a previous solution and resubmit it.
 
-Dodona displays a **warning symbol** next to your submission status for an exercise in an exercise series and in the list of recent submissions on your homepage if your last submitted solution for the exercise before the deadline of the exercise series has a status that is worse than the status of a solution for the exercise that you submitted before. You can optionally select a previous solution and resubmit it.
+Dodona displays a **warning symbol** next to your submission status for an exercise in an exercise series if your last submitted solution for the exercise before the deadline of the exercise series has a status that is worse than the status of a solution for the exercise that you submitted before. You can optionally select a previous solution and resubmit it.
 
-![Deadline warning symbol](./student.deadline_series_warning.png)
+![Series card with a warning triangle next to the Wrong status of an exercise that was previously correct](./deadline-warning-en.png)
 
 If you submit a solution for an exercise from an exercise series **after the deadline expires**, your submission status for the exercise in the exercise series will never change as a result. Your submission status for an exercise in an exercise series is determined based on your last submitted solution before the deadline.
 :::
@@ -119,6 +119,6 @@ If you submit a solution for an exercise from an exercise series **after the dea
 
 If you navigate to a course for which you are [registered](#registering-for-a-course) or for which you still have a registration request open, you will see a `Unregister` button (or `Withdraw registration request`) below the course description on the course page, which you can use to unsubscribe from the course.
 
-![Unregister button](./student.unregister.png)
+![Unregister button, highlighted, below the course description](./course-unregister-en.png)
 
 This will remove the course card from the left side of your homepage, and the course will no longer be listed on your [profile page](../login-and-settings/#setting-your-personal-preferences). If the course was listed under `Courses` in the hamburger menu on the left side of the navigation bar, the course will also be removed from that list. If the course was listed in the `Pending` panel in the right column of your homepage, the course will also be removed from that list.

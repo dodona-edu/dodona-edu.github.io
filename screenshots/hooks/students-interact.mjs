@@ -12,6 +12,12 @@
 //   openLanguageMenu: true        click the navbar language toggle ("en ▾" / "nl ▾").
 //   openUserMenu: true            click the navbar user chip ("Sofie ▾" / "Noor ▾" / ...).
 //   clickTab: 'Submissions'       click a hand-in/submission-page tab by its visible label.
+//   clickText: 'Clear editor'     click any element by its exact visible text (not just tabs).
+//   clickSelector: '.foo'         click the first element matching a CSS selector (e.g. the
+//                                 legacy hand-in card's Feedback tab only reveals/activates
+//                                 itself once a submission's `a.load-submission` row is
+//                                 clicked from the Submissions tab -- there is no other trigger
+//                                 for it server-side, verified against exercise.ts).
 //   hoverLine: 6                  hover the Nth line (1-based) in the code listing, to reveal
 //                                 the per-line "ask a question" bubble.
 //   iframeProfilerFix: true       rewrite the activity-description iframe's src to add
@@ -57,6 +63,30 @@ function outline(el) {
   el.style.outlineOffset = '2px';
 }
 
+// Click the first VISIBLE element whose own leading text is exactly this label (badge counts
+// or other trailing content in the same element are ignored). Some pages (e.g. the submission
+// results page's tab bar) render a second, hidden copy of the same label -- verified live --
+// so a plain `.first()` on getByText can land on the hidden one and hang forever waiting for
+// it to become actionable; and an exact getByText match fails on the real, visible tab when a
+// badge's text ("2") is a sibling text node inside the same button, making the button's own
+// full text "Code2" rather than "Code". Comparing only the first text node sidesteps both.
+export async function clickFirstVisible(page, text) {
+  const handle = await page.evaluateHandle((label) => {
+    const isVisible = (el) => !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    const firstOwnText = (el) => {
+      for (const node of el.childNodes) {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) return node.textContent.trim();
+      }
+      return el.textContent.trim();
+    };
+    const candidates = [...document.querySelectorAll('button, a')];
+    return candidates.find((el) => isVisible(el) && firstOwnText(el) === label) ?? null;
+  }, text);
+  const el = handle.asElement();
+  if (!el) throw new Error(`no visible element with leading text "${text}"`);
+  await el.click();
+}
+
 // `text` specs may be locale-dependent app copy (button/message strings); allow
 // `text: { en: '...', nl: '...' }` alongside a plain string. Plain strings are
 // used verbatim in both locales -- only reach for the object form when the
@@ -95,8 +125,18 @@ export async function prepare(page, { locale, shot, reinject }) {
   }
 
   if (shot.clickTab) {
-    await page.getByText(shot.clickTab, { exact: true }).first().click();
+    await clickFirstVisible(page, shot.clickTab);
     await page.waitForTimeout(500);
+  }
+
+  if (shot.clickText) {
+    await clickFirstVisible(page, localiseText(shot.clickText, locale));
+    await page.waitForTimeout(400);
+  }
+
+  if (shot.clickSelector) {
+    await page.locator(shot.clickSelector).first().click();
+    await page.waitForTimeout(shot.clickSelectorWait ?? 800);
   }
 
   if (shot.hoverLine) {

@@ -43,6 +43,7 @@ const CLEAN_CSS_HIDE_NAV = `
 `;
 const CLEAN_CSS_KEEP_NAV = `
   .dodona-navbar{position:static !important}
+  #page-wrapper{padding-top:0 !important}
   .profiler-results,[class*="profiler"]{display:none !important}
   #bullet-footer,#bullet{display:none !important}
   #active-announcement{display:none !important}
@@ -95,9 +96,10 @@ export async function shootEl(page, selector, outPath) {
   return { selector: String(selector), cssWidth: box.width, cssHeight: box.height, pngWidth: dims.width, pngHeight: dims.height, ok };
 }
 
-// Screenshot a manual clip rect (CSS px) at 2x.
+// Screenshot a manual clip rect (CSS px) at 2x. fullPage lets the clip extend
+// beyond the viewport (tall cards); without it Playwright truncates silently.
 export async function shootClip(page, clip, outPath) {
-  await page.screenshot({ path: outPath, clip, scale: 'device' });
+  await page.screenshot({ path: outPath, clip, scale: 'device', fullPage: true });
   const dims = pngDims(outPath);
   const ok = Math.abs(dims.width - Math.round(clip.width * 2)) <= 4;
   return { clip, pngWidth: dims.width, pngHeight: dims.height, ok };
