@@ -199,18 +199,34 @@ DSL reference tab-attribute list lacks `language` + has hand-written attribute c
 
 ## Phase 3 — Accuracy pass on technical references
 
+STATUS: done, all verified against TESTed origin/master 0c5c0a4c (2026-07-31) and the
+Rails app. Outcomes beyond the list below: `hidden` and `hideExpected` were deliberately
+NOT documented — both are schema-advertised but silently ignored by the parser
+(universal-judge#667); inherited `config.file` options don't reach `output_files:`
+channels (universal-judge#668); testcase-level `config` was documented but is rejected
+by the schema (removed); the tab-level `language` example (guide + reference) was
+invalid — `language` is root-only, both fixed. The check-links script now handles
+underscores in headings like VitePress does. Follow-up for Phase 5/6: the files
+example guide teaches the deprecated `file:` spelling — modernize to `output_files`
+when its content is next touched; the JSON reference's link_files section documents a
+legacy form (`input_files`/`use_strict_workdir` rewrite flagged, still parses via
+fallbacks).
+
 - Full schema-diff of `references/tested/dsl` against `tested/dsl/schema.json`: missing
-  `file` channel, `definitions`, `hidden`, root/tab `files`, `unit`/`case`/`script`
-  vocabulary, `normalizeTrailingNewlines`, `hideExpected`, `config.file`; fix
+  `file` channel, `definitions`, `hidden`, root/tab `files`,
+  `normalizeTrailingNewlines`, `hideExpected`, `config.file`; fix
   "three attributes"/"two attributes" miscounts. Verify the files-guide `file:` inside
   `testcases:` against the runtime parser (schema seems to forbid it).
+  NOT the `unit`/`case`/`script` synonym vocabulary: added to TESTed by mistake, will
+  be removed (Bart, 2026-07-31) — never document it.
 - One canonical supported-language list (source: TESTed `LANGUAGES` dict, 11 entries);
   fix the four pages that disagree (missing TypeScript/C#/C++; `runhaskell` undocumented).
   Add missing options: `parallel`, `optimized`, `compiler_optimizations`.
 - `options.mode`: docs commit 2026-07-07 removed it as "outdated", but
   `mode: ExecutionMode = PRECOMPILATION` still exists in `tested/configs.py` at
-  origin/master 0c5c0a4c (2026-07-31). Clarify with the team whether the option is
-  deprecated-but-alive (keep undocumented) or the docs removal was premature.
+  origin/master 0c5c0a4c (2026-07-31). Now tracked upstream in universal-judge#666
+  (together with the dead `options.optimized` knob); universal-judge#665 tracks the
+  C# Byte/SByte declaration swap found while adding the types columns.
 - `references/tested/new-programming-language` (603 lines, verified broken: dead
   `config.py` path, 7-entry LANGUAGES dict vs 11): either full maintenance pass or
   replace with a short pointer at the source tree.
@@ -226,8 +242,8 @@ Systematic re-shoot from the dev instance (dodona-comms capture pipeline), both 
 in the same pass, new naming convention. Priority order:
 
 1. `en/guides/students/courses` (2020 pre-redesign UI, highest-traffic student page)
-2. Shared icon sets `images/course_exercise_status_icons/`, `images/submission_icons/`,
-   `images/staff_registration_icons/` (2020)
+2. Shared icon sets `images/course_exercise_status_icons/`, `images/submission_icons/`
+   (2020; `staff_registration_icons/` was deleted in Phase 3 — no longer referenced)
 3. `ufora` (2020, both languages — also re-verify the D2L flow end-to-end; remove the
    six-year-old "in a later phase" roadmap sentence)
 4. All 2020 NL mirrors (students/exercises, login-and-settings, getting-started,
@@ -238,6 +254,8 @@ in the same pass, new naming convention. Priority order:
 8. Capture a Dutch recent-exercises screenshot for `nl/guides/students/exercises` — the
    page currently illustrates that section with the wrong image because no Dutch capture
    exists (`student.recent_exercises.png` is en-only)
+9. `nl/guides/teachers/user-management/user_progress_statistics.png` is still the 2020
+   capture (EN was re-shot in 2025); no current Dutch capture exists
 
 ## Phase 5 — New content for coverage gaps
 

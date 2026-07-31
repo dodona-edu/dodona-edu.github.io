@@ -88,7 +88,8 @@ function headingSlugs(fullText) {
       slug = custom[1];
     } else {
       // Keep the text of code spans; drop only the markup characters.
-      slug = slugify(heading.replace(/<[^>]+>/g, '').replace(/[*_`]/g, ''));
+      // Literal underscores stay: VitePress slugifies them to hyphens.
+      slug = slugify(heading.replace(/<[^>]+>/g, '').replace(/[*`]/g, ''));
     }
     const count = counts.get(slug) ?? 0;
     counts.set(slug, count + 1);
