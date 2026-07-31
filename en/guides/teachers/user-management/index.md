@@ -22,14 +22,16 @@ You can also click on the user icon in the navigation bar.
 
 ![admin menu users](./staff.course_users.png)
 
-In the user overview, the username, name, email address, and [progress](#progress) of all course users are listed.
+The user overview lists the name, email address, and institution of all course users, together with their [progress](#progress) and their [labels](#labels).
 For each teacher and administrator, an icon corresponding to the management rights assigned to the user is displayed next to their name.
+With the `Download user list` button above the table, you can download the user list as a CSV file.
 
 ![users](./staff.users.png)
 
 ### Search for Users
 
-Use the search bar at the top of the user overview to search for specific users based on a username, name, email address, or user label.
+Use the search bar at the top of the user overview to search for specific users by username, name, or email address.
+With the `Member labels` and `Institution` dropdowns below the search bar, you can filter the list by user label or institution.
 Multiple filters can be active simultaneously.
 
 ![filtered list](./staff.users_filtered.png)
@@ -43,11 +45,19 @@ The gray part represents the exercises that the user has not yet **started**.
 
 ![statistics](./staff.user_progress_statistics.png)
 
+### Labels
+
+You can assign labels to course users, for example to group them by class.
+The labels of each user are shown in the `Labels` column of the user overview, and you can filter on them with the `Member labels` dropdown.
+To edit the labels of a single user, open their course overview page and click `Edit labels`.
+To edit the labels of many users at once, click `Edit all labels` above the user overview: you download the user list as a CSV file, edit the labels column (multiple labels are separated by semicolons), and upload the modified file again.
+
 ### Designating Course Managers
 
 Each course has at least 1 course manager.
 As a course manager, you can promote other registered users to course manager.
-You can do this by clicking on the icon with a cap next to that user:
+You can do this by clicking the `Promote to course administrator` button (a graduation cap icon) next to that user.
+Similarly, you can demote a course manager with the `Demote to student` button.
 
 ![edit permissions](./staff.users_edit_permissions.png)
 
@@ -72,14 +82,15 @@ Depending on the set [registration procedure](../creating-a-course/#course-prope
 Each tab offers different actions to adjust the registration status of the corresponding user.
 
 * `Registered`: all course users who are currently registered.
-  By clicking on the blue _garbage bin_ icon, you unsubscribe the user from the course.
+  By clicking the `Unregister` button (a garbage bin icon), you unsubscribe the user from the course.
 
-* `Waiting List`: all course users for whom there is still an open registration request awaiting handling by a course manager.
-  By clicking on green button with the _checkmark_ icon, you approve the registration request. You can reject it by clicking on red button with the _garbage bin_ icon.
+* `Pending`: all course users for whom there is still an open registration request awaiting handling by a course manager.
+  By clicking the `Accept` button (a checkmark icon), you approve the registration request. You can reject it with the `Decline` button (a garbage bin icon).
+  With `Accept all` and `Decline all` above the table, you can handle all pending requests at once.
   This tab is only visible if the course uses moderated registration.
 
-* `Unsubscribed`: all course users who were once registered but have since unsubscribed.
-  You can re-register this user for the course by clicking on blue icon of a _user with a plus sign_.
+* `Unregistered`: all course users who were once registered but have since unsubscribed.
+  You can re-register such a user for the course by clicking the `Reregister` button (an icon of a user with a plus sign).
 
 ## Tracking Students
 
