@@ -1,7 +1,7 @@
 ---
 title: "Grading Assignments and Tests with Dodona"
 description: "Tutorial: Grading Assignments and Tests with Dodona"
-order: 6
+order: 8
 ---
 
 # Grading Assignments and Tests with Dodona

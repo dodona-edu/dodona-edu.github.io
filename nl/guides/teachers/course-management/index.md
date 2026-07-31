@@ -55,4 +55,4 @@ In het oplossingenoverzicht vind je rechts van de filterbalk een knop met 3 punt
 
 * `Meest recente correcte oplossing per gebruiker`: Beperkt het overzicht tot de meest recente correcte oplossing per gebruiker.
 
-* `Oplossingen hertesten` (actie): [Hertest](../exercise-series-management/#oplossing-hertesten) alle oplossingen uit het overzicht.
+* `Oplossingen hertesten` (actie): [Hertest](../series-export-and-retest/#oplossing-hertesten) alle oplossingen uit het overzicht.
