@@ -126,14 +126,14 @@ Create a file `solution.py` inside the `solution` directory with the following c
 ```python
 class Counter:
     def __init__(self, start_value=0):
-        self.count = start_value
+        self._count = start_value
 
     def count(self):
-        self.count += 1
+        self._count += 1
         return self
 
     def report(self):
-        print(self.count)
+        print(self._count)
 
 ```
 
@@ -144,7 +144,7 @@ repository/
 └── counter/
    ├── evaluation/
    ├── description/
-   |  └── description.nl.md
+   |  └── description.en.md
    ├── solution/
    |  └── solution.py
    └── config.json
@@ -184,7 +184,7 @@ repository/
    ├── evaluation/
    |  └── suite.yaml
    ├── description/
-   |  └── description.nl.md
+   |  └── description.en.md
    ├── solution/
    |  └── solution.py
    └── config.json

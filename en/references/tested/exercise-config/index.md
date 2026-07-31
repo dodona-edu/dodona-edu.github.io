@@ -251,18 +251,11 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
     }
   },
   "evaluation": {
-    "handler": "TESTed",
+    "handler": "tested",
     "test_suite": "suite.yaml",
     "options": {
       "allow_fallback": true,
-      "linter": {
-        "c": true,
-        "haskell": true,
-        "java": true,
-        "javascript": true,
-        "kotlin": true,
-        "python": true
-      },
+      "linter": true,
       "language": {
         "haskell": {
           "hlint_config": "hlint.config.yaml"

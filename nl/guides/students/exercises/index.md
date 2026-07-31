@@ -97,7 +97,7 @@ Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oploss
     |----------------------|----------------------|----------------------|
     | `In de wachtrij…` | ![In de wachtrij](../../../../images/submission_icons/queued.png) | oplossing staat in de wachtrij |
     | `Aan het uitvoeren...` | ![Aan het uitvoeren](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
-    | `Correct` | ![Correct](../../../../images/submission_icons/correct.png) | oplossing wordt momenteel beoordeeld door de judge |
+    | `Correct` | ![Correct](../../../../images/submission_icons/correct.png) | alle testen zijn geslaagd |
     | `Fout` | ![Fout](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
     | `Uitvoeringsfout` | ![Uitvoeringsfout](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
     | `Timeout` | ![Tijdslimiet overschreden](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |

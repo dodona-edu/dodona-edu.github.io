@@ -44,7 +44,7 @@ After successfully installing the Dodona plugin for PyCharm, you can follow thes
   ![submit to dodona](./pc-check-mark.png)
   Clicking this button will submit your code to Dodona and trigger an automatic check. Shortly after submission, you should see a pop-up in the bottom right corner showing the result of your submission.
   ![correct solution](./pc-correct.png)
-  If you want to see more details about the result, click on the 'more details' link to open the result in a new browser version. If you would like to resubmit, simply click on the blue check mark again. Remember, you can submit your solution as many times as you like.
+  If you want to see more details about the result, click on the 'more details' link to open the result in a new browser window. If you would like to resubmit, simply click on the blue check mark again. Remember, you can submit your solution as many times as you like.
 
 
 ## How do I install the VS Code extension?

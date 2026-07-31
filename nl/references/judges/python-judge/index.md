@@ -395,7 +395,7 @@ In het geval dat je een testgeval wil tonen aan de studenten maar niet uitvoeren
 ```python
 >>> 1/0 #doctest: +NOEXEC
 "Dit testgeval werd niet uitgevoerd"
->>> get_password() $doctest: +NOSHOW
+>>> get_password() #doctest: +NOSHOW
 "hunter2"
 ```
 

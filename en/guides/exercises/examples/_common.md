@@ -108,7 +108,7 @@ exercises/
 └── minimum/
    ├── evaluation/
    ├── description/
-   |  └── description.nl.md
+   |  └── description.en.md
    ├── solution/
    |  └── solution.py
    └── config.json

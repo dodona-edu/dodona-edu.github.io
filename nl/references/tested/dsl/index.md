@@ -19,7 +19,7 @@ Naast het [geavanceerde formaat](/nl/references/tested/json) voor testplannen he
 Dit document is de referentiegids voor het formaat van DSL-testplannen en bevat alle opties en mogelijkheden.
 
 DSL-testplannen worden geschreven in YAML.
-Een JSON Schema van het formaat is beschikbaar in de repository van TESTed.
+Een [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json) van het formaat is beschikbaar in de repository van TESTed.
 Dit schema kan zorgen voor automatische controles en automatisch aanvullen in uw tekstverwerker.
 
 ## Structuur en opbouw
@@ -131,7 +131,7 @@ Expressies en statements gebruiken de syntaxis van Python, met een aantal beperk
 Is de waarde een object, dan moet het een object zijn met als sleutel een programmeertaal en als waarde een [taalspecifieke expressie of statement](#taalspecifieke-expressies-en-statements).
 
 ```yaml
-return:
+expression:
   python: "submission.the_function()"
   java: "Submission.theFunction()"
 ```
@@ -162,7 +162,7 @@ Een string in het testplan zal dus ook een string worden in de testcode.
 Voor geavanceerde returnwaarden zijn er twee opties:
 
 - Een string met de tag `!expression` gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
-- Een object met de tag `!oracle` is het object voor een eigen orakel (een eigen checkfunctie) (zie [hieronder](#eigen-checkfuncties-orakels)).
+- Een object met de tag `!oracle` is het object voor een eigen orakel (een eigen checkfunctie) (zie [hieronder](#eigen-orakelfunctie-custom-check)).
 
 #### `exit_code`
 
@@ -482,7 +482,7 @@ Hieronder staat een testplan waar alle opties gebruikt worden:
         # Een functieoproep waarbij de waarde gecast wordt naar "uint8".
         - expression: 'echo(uint8(5))'
           # De verwachte returnwaarde wordt ook gecast naar "uint8".
-          return: "uint8(5)"
+          return: !expression "uint8(5)"
 
 # Een tweede tab in hetzelfde testplan.
 - tab: "Exception"

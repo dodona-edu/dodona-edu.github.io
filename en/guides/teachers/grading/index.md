@@ -137,10 +137,10 @@ On the evaluation page, you will always see the last submitted solution for the 
 On the left side, you will see the status of the tests and the submitted code.
 Feedback can be added to a specific line of code by clicking on the line number.
 For general feedback, click on `Add global comment`
-More information about adding and reusing comments can be found in [this FAQ](/en/faq/annotations#how-can-i-comment-on-a-students-submission).
+More information about adding and reusing comments can be found in [this FAQ](/en/faq/annotations#how-can-i-comment-on-a-student-s-submission).
 
 **Note**: The feedback you give here is not automatically visible to the students.
-Feedback within an evaluation must always be released via the `Release Feedback` button on the evaluation overview.
+Feedback within an evaluation must always be released via the `Release feedback` button on the evaluation overview.
 
 On the right side of the page, you will find the navigation and scoring interface.
 From top to bottom, you will see the following elements:

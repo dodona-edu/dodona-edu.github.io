@@ -13,10 +13,10 @@ As a result, a single test suite is sufficient to check submissions for the same
 While TESTed has an [advanced format](/en/references/tested/json) for the test suites, we have also developed a small _domain-specific language_ (DSL), to make creating common exercises much easier.
 This document is the reference for the DSL test suite format, and contains all options and possibilities.
 
-[//]: # (We also have a set of tutorials, for creating certain types of exercises.)
+We also have a set of [tutorials](/en/guides/exercises/) for creating certain types of exercises.
 
 DSL test suites are written in [YAML](https://en.wikipedia.org/wiki/YAML).
-A JSON Schema of the format is available in the TESTed repository, which can enable checks and autocompletion in your editor.
+A [JSON Schema](https://github.com/dodona-edu/universal-judge/blob/master/tested/dsl/schema.json) of the format is available in the TESTed repository, which can enable checks and autocompletion in your editor.
 
 ## Structure
 
@@ -124,7 +124,7 @@ Expressions and statements use the Python syntax, with some restrictions, which 
 If the value is an object, it must be a mapping of programming language to a [language-specific expressions or statement](#language-specific-expressions-and-statements).
 
 ```yaml
-return:
+expression:
   python: "submission.the_function()"
   java: "Submission.theFunction()"
 ```
@@ -468,7 +468,7 @@ YAML supports tags to give values another type:
         # A function call where the value is cast to "uint8".
         - expression: 'echo(uint8(5))'
           # The expected return value is also cast to "uint8".
-          return_raw: "uint8(5)"
+          return: !expression "uint8(5)"
 
 # A second tab in the same test suite.
 - tab: "Exception"

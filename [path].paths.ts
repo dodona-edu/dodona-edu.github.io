@@ -36,7 +36,7 @@ const redirects = internationalizedRedirects({
     'guides/creating-an-api-token': 'faq/api-tokens',
     'guides/creating-a-judge': 'references/judges/creating-a-judge',
     'references/python-judge': 'references/judges/python-judge',
-    'guides/the-coders-apprentice': 'guides/general/featured-courses',
+    'guides/the-coders-apprentice': 'faq/featured-courses',
     'guides': 'guides/general/getting-started',
 
     // redirects after setting up the faq pages

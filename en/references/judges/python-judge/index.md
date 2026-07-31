@@ -92,7 +92,7 @@ The default operation of the judge can be changed using a number of parameters. 
 - **`ignore fp rounding`**:   Determines how floating point numbers are compared.
 
   -   `default`: Numbers are compared character by character and must match in all characters.
-  -   `getal <e>`: The numbers $n$ and $m$ are equal if $|n-m| < 10^e$; in other words, if $e = -2$, the two numbers must be equal up to two digits after the decimal point.
+  -   `number <e>`: The numbers $n$ and $m$ are equal if $|n-m| < 10^e$; in other words, if $e = -2$, the two numbers must be equal up to two digits after the decimal point.
 
 - **`case sensitive`**:   Boolean indicating whether the difference between uppercase and lowercase letters should be taken into account when comparing the generated and expected output. Default `true`.
 
@@ -391,7 +391,7 @@ In case you want to show a test case to students but not execute it, you can use
 ```python
 >>> 1/0 #doctest: +NOEXEC
 "This test case was not executed"
->>> get_password() $doctest: +NOSHOW
+>>> get_password() #doctest: +NOSHOW
 "hunter2"
 ```
 

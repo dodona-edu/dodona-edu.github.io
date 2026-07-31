@@ -97,7 +97,7 @@ While writing or editing a comment, you can check `Save comment`. This will allo
 
 You can also save an existing comment by clicking `Save comment` in the comment menu.
 
-![Save existing comment](save-comment.png)
+![Save existing comment](./save-comment.png)
 
 Once you have saved one or more comments, you get a search field when writing new comments. Select the desired comment from the list to reuse it. You can still edit the comment before posting it.
 
@@ -108,10 +108,10 @@ Once you have saved one or more comments, you get a search field when writing ne
 Saved comments are scoped by course and by exercise by default. This way we are sure we only suggest relevant comments and the number of saved comments remains manageable.
 
 If you want to reuse a comment across your whole course, or even across multiple courses, you can edit the saved comment and remove the course and/or exercise limitations. This way the comment will be suggested in all exercises of all your courses.
-![edit_saved_comment.png](edit_saved_comment.png)
+![Editing the course and exercise limitations of a saved comment](./edit_saved_comment.png)
 
 To edit a saved comment, click on the saved comment icon on an annotation which reuses the comment. This will open the saved comment and clicking the pencil icon will allow you to edit the comment.
-![saved_comment_link.png](saved_comment_link.png)
+![Saved comment icon on an annotation which reuses the comment](./saved_comment_link.png)
 
 You can find an overview of all your saved comments for a certain exercise by clicking the link underneath the search field. Or by clicking on 'saved comments' in the sidebar menu.
 From here you can also edit or delete saved comments.

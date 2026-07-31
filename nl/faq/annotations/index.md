@@ -72,6 +72,8 @@ Wanneer je jouw antwoord afwerkt, zal de vraag gemarkeerd worden als beantwoord 
 
 Je kan ook direct een vraag markeren als beantwoord. Dit is vaak handig als je weet dat de student de vraag al opgelost heeft op een andere manier. Bijvoorbeeld als de student een andere oplossing ingediend heeft waar het probleem opgelost is, of als je de vraag beantwoord hebt buiten Dodona.
 
+> Terzijde: opmerkingen ondersteunen Markdown, dus je kan gebruik maken van vet, cursief, lijsten, ... Je kan alle Markdown features bekijken in [deze referentie](/nl/references/exercise-description/#markdown).
+
 ## Hoe kan ik opmerkingen geven op een oplossing van een student? <Badge type="tip" text="lesgever" />
 
 Als lesgever kan je ook opmerkingen geven op de code van je studenten. Dit kan handig zijn om feedback te geven op hun oplossing, of om een fout aan te duiden.
@@ -92,7 +94,7 @@ Tijdens het schrijven of bewerken van een opmerking kan je `Sla opmerking op` aa
 
 Je kan ook een bestaande opmerking opslaan door op `Opmerking opslaan` te klikken in het menu van de opmerking.
 
-![Save existing comment](save-comment-edit.png)
+![Save existing comment](./save-comment.png)
 
 Eenmaal je een of meerdere opmerkingen hebt opgeslagen, krijg je een zoekveld te zien wanneer je een nieuwe opmerking schrijft. Selecteer de gewenste opmerking uit de lijst om deze te hergebruiken. Je kan de opmerking nog steeds bewerken voor je deze post.
 
@@ -104,11 +106,11 @@ Opgeslagen opmerkingen zijn standaard beperkt tot een cursus en een oefening. Op
 
 Als je een opmerking in je hele cursus of zelfs in meerdere cursussen wilt hergebruiken, kun je de opgeslagen opmerking bewerken en de beperkingen op cursus en/of oefening verwijderen. Op deze manier wordt de opmerking voorgesteld in alle oefeningen van al je cursussen.
 
-![edit_saved_comment.png](edit_saved_comment.png)
+![De cursus- en oefeningbeperkingen van een opgeslagen opmerking bewerken](./edit_saved_comment.png)
 
 Om een opgeslagen opmerking te bewerken, klik je op het icoon van de opgeslagen opmerking in een annotatie die de opmerking hergebruikt. Dit opent de opgeslagen opmerking en door op het potloodicoon te klikken kun je de opmerking bewerken.
 
-![saved_comment_link.png](saved_comment_link.png)
+![Icoon van de opgeslagen opmerking bij een annotatie die de opmerking hergebruikt](./saved_comment_link.png)
 
 Je kunt een overzicht van al je opgeslagen opmerkingen voor een bepaalde oefening vinden door op de link onder het zoekveld te klikken. Of door op 'opgeslagen opmerkingen' in het zijbalkmenu te klikken.
 Vanaf hier kun je ook opgeslagen opmerkingen bewerken of verwijderen.
