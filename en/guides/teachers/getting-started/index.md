@@ -52,7 +52,7 @@ We give more details about creating a course in this [guide](/en/guides/teachers
 ## Setting Up a Course
 
 A course on Dodona consists of different exercise series that you can use to group exercises.
-To create a new exercise series, click the `Manage Series` button on your course page and then `Create Series`.
+To create a new exercise series, click the `Manage series` button on your course page and then `Create series`.
 You will see the following form:
 
 ![create series](./staff.series_new.png)
@@ -75,7 +75,7 @@ Here you will find sample solutions, available languages, settings, additional e
 In our guide on [exercise series management](/en/guides/teachers/exercise-series-management), you will find more information on how to manage exercise series.
 
 If you'd like to create your own exercises, we have a guide for that too.
-In [this guide](/en/guides/exercises/creating-exercises), you will find all the information on how to create exercises for Dodona.
+In [this guide](/en/guides/exercises/creating-exercises/introduction/), you will find all the information on how to create exercises for Dodona.
 
 ## Using Your Course
 

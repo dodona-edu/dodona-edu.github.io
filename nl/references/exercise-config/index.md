@@ -57,8 +57,8 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
     }
   },
   "evaluation": {
-    "handler": "python",
-    "image": "dodona-python",
+    "handler": "tested",
+    "test_suite": "suite.yaml",
     "time_limit": 10,
     "memory_limit": 10000000,
     "network_enabled": true
@@ -91,7 +91,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
 {
   "access": "private",
   "evaluation": {
-    "handler": "python",
+    "handler": "tested",
     "time_limit": 15,
     "memory_limit": 100000000
   },

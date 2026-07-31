@@ -88,7 +88,7 @@ This is what students will see when they attempt to solve the exercise, and it t
 Create a file called `description.en.md` in the `description` directory of the exercise with the following content:
 
 ````markdown
-Write a Python program that asks the name of the user and then greets the user with the sentence `Hallo, [NAME]!`,
+Write a Python program that asks the name of the user and then greets the user with the sentence `Hello, [NAME]!`,
 where `[NAME]` is the name of the user.
 
 The program should read the name from stdin and write the greeting to stdout.
@@ -97,8 +97,8 @@ The program should read the name from stdin and write the greeting to stdout.
 
 ```console
 $ python program.py
-Jan
-Hallo, Jan!
+John
+Hello, John!
 ```
 ````
 
@@ -113,7 +113,7 @@ Create a file called `solution.py` in the `solution` directory with the followin
 
 ```python
 name = input()
-print(f"Hallo, {name}!")
+print(f"Hello, {name}!")
 ```
 
 After adding these two files, your repository should look like this:

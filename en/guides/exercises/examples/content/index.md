@@ -28,7 +28,7 @@ After that, create a `media` folder inside the `description` folder, where image
 The folder structure for this reading activity should look like this:
 
 ```
-reading-activities//
+reading-activities/
 └── markdown_demo/
    └── description/
       └── media/
@@ -64,7 +64,7 @@ This file specifies three things:
 After creating this file, your repository should look like this:
 
 ```
-reading-activities//
+reading-activities/
 └── markdown_demo/
    ├── description/
    |  └── media/
@@ -173,7 +173,7 @@ The content of reading activities is written in Markdown, a relatively simple fo
 After creating these files, your repository should look like this:
 
 ```
-reading-activities//
+reading-activities/
 └── markdown_demo/
    ├── description/
    |  ├── media/

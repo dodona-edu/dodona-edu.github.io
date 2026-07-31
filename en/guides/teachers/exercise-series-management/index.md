@@ -12,11 +12,11 @@ Course administrators can create, edit, delete, and reorder these series.
 ## Create an exercise series
 
 A course administrator can create an unlimited number of exercise series within your course.
-To do this, first navigate to the course page and then click `Manage Series`.
+To do this, first navigate to the course page and then click `Manage series`.
 
 ![manage series](./staff.course_manage_series_button.png)
 
-On this page, you will find the `Copy existing series` and `Create Series` buttons in the top right corner.
+On this page, you will find the `Copy existing series` and `Create series` buttons in the top right corner.
 
 ![create series](./staff.course_new_series_button.png)
 
@@ -162,7 +162,7 @@ The main actions are `Evaluate series` and `Series scoresheet`; other actions ca
   (if the course user has indeed submitted a solution based on which the submission status could be determined).
   You can also filter by students who have started at least one activity and search by name or student labels in this overview.
 
-* `Export student submissions`: This action allows you to [export](#export-exercise-series-solutions) the submitted solutions of students for the exercises in the series as a zip file.
+* `Export student submissions`: This action allows you to [export](#export-exercise-series-submissions) the submitted solutions of students for the exercises in the series as a zip file.
 
 * `Retest submissions`: This action retests all solutions that course users have submitted for exercises in the exercise series.
   This can be useful if, for example, you have added or modified a number of tests and want to retest the already submitted solutions.

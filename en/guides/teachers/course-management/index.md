@@ -50,7 +50,7 @@ You can also access these submissions in other ways:
 * An overview of the submissions for a **specific exercise** can be found by clicking on the arrow to the right of an exercise on the course page.
 * An overview of the submissions for a **specific user** can be found by clicking on `Solutions` on the [course page of that user](../user-management/#tracking-students).
 
-In the submissions overview, you will find a button `Retest solutions` at the top right. This button allows you to [retest](../exercise-series-management/#retest-solutions) all solutions in the overview.
+In the submissions overview, you will find a button `Retest submissions` at the top right. This button allows you to [retest](../exercise-series-management/#retest-submissions) all solutions in the overview.
 You'll also see a button to `Detect plagiarism` next to it on the submissions overview for a specific exercise. This will export the latest submission for each student to our plagiarism detection tool [dolos](https://dolos.ugent.be/).
 
 ![detect plagiarism](./staff.course_submissions_plagiarism.png)

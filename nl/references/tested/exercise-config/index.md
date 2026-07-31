@@ -245,18 +245,11 @@ Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) 
     }
   },
   "evaluation": {
-    "handler": "TESTed",
-    "plan_name": "plan.json",
+    "handler": "tested",
+    "test_suite": "suite.yaml",
     "options": {
       "allow_fallback": true,
-      "linter": {
-        "c": true,
-        "haskell": true,
-        "java": true,
-        "javascript": true,
-        "kotlin": true,
-        "python": true
-      },
+      "linter": true,
       "language": {
         "haskell": {
           "hlint_config": "hlint.config.yaml"

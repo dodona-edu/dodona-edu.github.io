@@ -43,8 +43,6 @@ In addition to the previous two, the following fields are also part of the input
 - **judge**: Full path to a directory containing a copy of the judge repository.
 - **workdir**: Full path to the directory in which all user code should be executed.
 
-<!--- TODO: Check [the exercise wiki page](exercise-repositories#repository-structure) for more information on these last directories and files. -->
-
 ### Output
 
 The `run` executable should output JSON to _stdout_, which will be interpreted by the Feedback Renderer to form the feedback table. There are two output schemas available: full and partial. "Full" should output a single JSON object at the end of its judgement. "Partial" should output multiple small JSON objects during its run, describing its progress.

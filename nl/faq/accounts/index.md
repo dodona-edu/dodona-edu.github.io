@@ -28,7 +28,7 @@ Als je de zichtbaarheid van je cursus beperkt tot een bepaalde school, kunnen al
 
 - Ze hebben zich aangemeld met een persoonlijk Google- of Microsoft-account in plaats van met hun institutionele account. In dit geval moeten ze uitloggen en opnieuw inloggen met hun institutionele account.
 
-- Je school heeft meerdere inlogmethoden (bijvoorbeeld Smartschool en Microsoft 365) en Dodona denkt dat het om verschillende scholen gaat. In dit geval moet je contact met ons opnemen om de twee inlogmethoden voor je school handmatig samen te voegen. Gebruik het contactformulier op [dodona.be/nl/contact](https://dodona.be/en/contact) om contact met ons op te nemen.
+- Je school heeft meerdere inlogmethoden (bijvoorbeeld Smartschool en Microsoft 365) en Dodona denkt dat het om verschillende scholen gaat. In dit geval moet je contact met ons opnemen om de twee inlogmethoden voor je school handmatig samen te voegen. Gebruik het contactformulier op [dodona.be/nl/contact](https://dodona.be/nl/contact) om contact met ons op te nemen.
 
 ## Mijn naam of e-mailadres is verkeerd, hoe kan ik het veranderen?
 

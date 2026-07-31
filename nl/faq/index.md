@@ -26,7 +26,7 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe kan ik de VS Code-extensie gebruiken?](./ide-plugins/#hoe-kan-ik-de-vs-code-extensie-gebruiken)
 
 ## Oefeningen en leesactiviteiten
-- [Wat is een concept?](./activities/#wat-is-een-conceptactiviteit)
+- [Wat is een concept?](./activities/#wat-is-een-concept)
 - [Hoe maak ik nieuwe oefeningen aan?](./activities/#hoe-maak-ik-nieuwe-oefeningen-aan)
 
 ## Uitgelichte cursussen
@@ -36,7 +36,7 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Welke uitgelichte cursussen zijn er beschikbaar?](./featured-courses/#welke-uitgelichte-cursussen-zijn-er-beschikbaar)
 
 ## Vragen en opmerkingen
-- [Hoe kan ik een vraag stellen over mijn code?](./annotations/#hoe-kan-ik-een-vraag-stellen-over-mijn-code)
+- [Hoe kan ik vragen stellen over mijn code?](./annotations/#hoe-kan-ik-vragen-stellen-over-mijn-code)
 - [Hoe weet ik of mijn vraag beantwoord is?](./annotations/#hoe-weet-ik-of-mijn-vraag-beantwoord-is)
 - [Hoe kan ik vragen voor studenten inschakelen/uitschakelen?](./annotations/#hoe-kan-ik-vragen-voor-studenten-inschakelen-uitschakelen)
 - [Hoe weet ik of er open vragen zijn?](./annotations/#hoe-weet-ik-of-er-open-vragen-zijn)

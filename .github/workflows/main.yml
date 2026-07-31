@@ -22,5 +22,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Check internal links and anchors
+        run: yarn check-links
+
       - name: Build site
         run: yarn build

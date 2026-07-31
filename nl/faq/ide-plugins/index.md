@@ -44,7 +44,7 @@ Nadat je de Dodona-plugin voor PyCharm met succes hebt geïnstalleerd, kun je de
   ![submit to dodona](./pc-check-mark.png)
   Als je op deze knop klikt, wordt je code verzonden naar Dodona en automatisch gecontroleerd. Kort na het indienen zou je rechtsonder een pop-up moeten zien met het resultaat van je ingediende oplossing.
   ![juiste oplossing](./pc-correct.png)
-  Als je meer details over het resultaat wilt zien, klik dan op de link 'more details' om het resultaat in een nieuwe browserversie te openen. Als je opnieuw wilt indienen, klik je gewoon weer op het blauwe vinkje. Onthoud dat je zo vaak kan indienen als je wil.
+  Als je meer details over het resultaat wilt zien, klik dan op de link 'more details' om het resultaat in een nieuw browservenster te openen. Als je opnieuw wilt indienen, klik je gewoon weer op het blauwe vinkje. Onthoud dat je zo vaak kan indienen als je wil.
 
 ## Hoe installeer ik de VS Code-extensie?
 
