@@ -756,14 +756,14 @@ shots:
     file: all-questions-page
     url: http://dodona.localhost:3000/{locale}/questions/
     user: 1 # zeus
-    keepNavbar: true # the drawer toggle lives in the navbar
     state: [faq-annotated-submission, faq-annotations-content]
     hook: hooks/faq-all-questions-page.mjs
     crop:
-      union: ['#drawer', '.card:has(#questions-table-wrapper)']
+      selector: '[data-shot="questions"]'
     must_show:
-      - sidebar Questions entry
-      - question list with course names
+      - search field with Course/Status filters and Only-show-my-students toggle
+      - both course-29 question rows with user and course names visible
+      - answered row attributed to the neutral teacher name
     # Seeded lorem rows from courses 1-4 are hidden via CSS in the hook rather than
     # destroyed (coordinator decision: never destroy seed data).
 
