@@ -21,7 +21,7 @@ Volg de onderstaande stappen om een API token aan te maken op Dodona:
   ![Maak een token aan](./create-new-token-nl.png)
 
 3. **Kopieer het token**: Eenmaal het token is aangemaakt, kan je het kopiëren in het dialoogvenster van de toepassing die je toegang wil geven tot je Dodona-account, bijvoorbeeld de PyCharm-plugin.
-  ![Token generated](./token-generated-nl.png)
+  ![Token aangemaakt](./token-generated-nl.png)
 
 ::: tip
 Houd er rekening mee dat je om veiligheidsredenen de tokens niet kunt bekijken op Dodona nadat ze zijn aangemaakt. Je kunt echter wel een lijst van al je actieve tokens bekijken. Je kunt een token op elk moment verwijderen en het zal onmiddellijk stoppen met werken.
