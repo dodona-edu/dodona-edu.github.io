@@ -55,18 +55,18 @@ Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina
 
 Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder kan je verschillende oefeningenreeksen zien die elk bestaan uit een of meerdere oefeningen.
 
-![Waarschuwingssymbool deadline](./student.deadline_series_warning.png)
+![Cursuspagina met de headerkaart en een reekskaart met haar deadline en oefeningentabel](./course-page-nl.png)
 
 ::: tip Tip
 
 Als je binnen een cursus aan het werken bent dan verschijnt de naam van de cursus naast `Dodona` aan de linkerkant van de navigatiebalk. Door in de navigatiebalk op de naam van de cursus te klikken, navigeer je terug naar de cursuspagina.
 
-![Broodkruimelnavigatie cursus](./student.breadcrumb_course.png)
+![Broodkruimelnavigatie cursus, met de cursusnaam gemarkeerd in de navigatiebalk](./course-breadcrumb-nl.png)
 :::
 
 ### Oefeningenreeksen
 
-Een oefeningenreeks bestaat uit een beschrijving, een aantal oefeningen en eventueel een **deadline** die ingesteld werd door de cursusbeheerder. Indien er een deadline is ingesteld, dan wordt die weergegeven onder de naam van de oefeningenreeks. Bij weergave van de deadline wordt rekening gehouden met de tijdzone uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Deadlines worden in het groen weergegeven als ze nog niet verstreken zijn, en in het rood als ze reeds verstreken zijn.
+Een oefeningenreeks bestaat uit een beschrijving, een aantal oefeningen en eventueel een **deadline** die ingesteld werd door de cursusbeheerder. Indien er een deadline is ingesteld, dan wordt die weergegeven onder de naam van de oefeningenreeks. Bij weergave van de deadline wordt rekening gehouden met de tijdzone uit je [gebruikersprofiel](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Een deadline die nog niet verstreken is, wordt in het grijs weergegeven; eens ze verstreken is, wordt ze rood, tenzij je laatste oplossing vóór de deadline correct was — dan wordt ze groen.
 
 Als een reeks een deadline heeft, dan worden enkel ingediende oplossingen van voor dat tijdstip in rekening gebracht. Na de deadline kan je dus nog steeds indienen, maar ze tellen mogelijks niet mee voor een eventuele evaluatie. Meer details hierover kan je vinden bij de sectie [indienstatus](#indienstatus).
 
@@ -111,7 +111,7 @@ Als je **vóór het verstrijken van de deadline** van een oefeningenreeks een op
 
 Dodona toont een **waarschuwingssymbool** naast je indienstatus van een oefening in een oefeningenreeks en in de lijst met recente op je startpagina als je laatst ingediende oplossing voor de oefening vóór de deadline van de oefeningenreeks een status heeft die slechter is dan de status van een oplossing voor de oefening die je daarvoor hebt ingediend. Je kunt eventueel een voorgaande oplossing selecteren en opnieuw indienen.
 
-![Waarschuwingssymbool deadline](./student.deadline_series_warning.png)
+![Reekskaart met een waarschuwingsdriehoek naast de Fout-status van een oefening die voorheen correct was](./deadline-warning-nl.png)
 
 Als je **na het verstrijken van de deadline** van een oefeningenreeks een oplossing indient voor een oefening uit een oefeningenreeks, dan zal je indienstatus voor de oefening in de oefeningenreeks daardoor nooit wijzigen. Je indienstatus voor een oefening in een oefeningenreeks wordt immers bepaald op basis van je laatst ingediende oplossing vóór de deadline.
 :::
@@ -121,6 +121,6 @@ Als je **na het verstrijken van de deadline** van een oefeningenreeks een oploss
 
 Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `Uitschrijven` (of `Registratieverzoek annuleren`) waarmee je je kunt uitschrijven uit de cursus.
 
-![Uitschrijven knop](./student.unregister.png)
+![Gemarkeerde knop Uitschrijven, onder de cursusbeschrijving](./course-unregister-nl.png)
 
 Hierdoor verdwijnt het kaartje van de cursus aan de linkerkant van je startpagina en wordt de cursus niet langer opgelijst op je [profielpagina](../login-and-settings/#instellen-van-persoonlijke-voorkeuren). Als de cursus werd opgelijst onder `Cursussen` in het hamburger menu aan de linkerkant van de navigatiebalk, dan verdwijnt de cursus ook uit die lijst. Als de cursus werd opgelijst in het paneel `In afwachting` in de rechterkolom van je startpagina, dan verdwijnt de cursus ook uit die lijst.

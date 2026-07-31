@@ -11,9 +11,9 @@
 // expressing that state as a setup script instead of a UI interaction).
 //
 // Selectors verified against a live dev instance (2026-07-31 capture run).
-import { clickFirstVisible } from './students-interact.mjs';
+import { clickFirstVisible, localiseText } from './students-interact.mjs';
 
-export async function prepare(page, { shot }) {
+export async function prepare(page, { locale, shot }) {
   // .first() on a plain getByText('Code') can land on a second, hidden "Code" label the
   // submission page renders (verified live) and hang forever -- see clickFirstVisible.
   await clickFirstVisible(page, 'Code');
@@ -34,13 +34,17 @@ export async function prepare(page, { shot }) {
   }
 
   // Verified live: the per-line bubble is a d-create-annotation-button custom element in the
-  // gutter cell with a plain `button[aria-label="Ask question"]` inside (btn-fab-small-flex).
-  const bubble = line.locator('button[aria-label="Ask question"]').first();
+  // gutter cell with a plain `button[aria-label="..."]` inside (btn-fab-small-flex). The
+  // label is `t('js.annotations.add_question')`, which is locale-dependent ("Ask question" /
+  // "Stel een vraag") -- a bare English selector times out on the NL pass since that button
+  // never appears at all under that name (verified live: 0 matches on /nl/).
+  const askQuestionLabel = { en: 'Ask question', nl: 'Stel een vraag' }[locale] ?? 'Ask question';
+  const bubble = line.locator(`button[aria-label="${askQuestionLabel}"]`).first();
   await bubble.click();
   await page.waitForTimeout(400);
   if (shot.frame === 2) {
     const editor = page.locator('.code-listing-container textarea, .code-listing-container [contenteditable="true"]').first();
-    await editor.fill(shot.questionText ?? 'Why do we need this line?');
+    await editor.fill(localiseText(shot.questionText, locale) ?? 'Why do we need this line?');
     await page.waitForTimeout(300);
   }
 }

@@ -98,8 +98,17 @@ export async function shootEl(page, selector, outPath) {
 
 // Screenshot a manual clip rect (CSS px) at 2x. fullPage lets the clip extend
 // beyond the viewport (tall cards); without it Playwright truncates silently.
+// Only opt into fullPage when the clip actually needs it: forcing it
+// unconditionally makes Chromium resize the viewport to the full document
+// height and repaint before capturing, which desyncs any open
+// position:fixed/absolute overlay (a navbar dropdown menu, say) from its
+// trigger for that one frame -- verified live, a NAVBAR shot with an open
+// user menu came out as a translucent double-exposure ghost with fullPage
+// forced on, and crisp with it left off, on an otherwise identical shot.
 export async function shootClip(page, clip, outPath) {
-  await page.screenshot({ path: outPath, clip, scale: 'device', fullPage: true });
+  const viewport = page.viewportSize();
+  const fitsViewport = viewport && clip.x + clip.width <= viewport.width && clip.y + clip.height <= viewport.height;
+  await page.screenshot({ path: outPath, clip, scale: 'device', fullPage: !fitsViewport });
   const dims = pngDims(outPath);
   const ok = Math.abs(dims.width - Math.round(clip.width * 2)) <= 4;
   return { clip, pngWidth: dims.width, pngHeight: dims.height, ok };

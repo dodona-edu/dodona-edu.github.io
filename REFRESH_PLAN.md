@@ -238,6 +238,11 @@ fallbacks).
 
 ## Phase 4 — Screenshot refresh
 
+TOUCH-UP LIST (re-shoot with the fixed manifest crops, needs echo-wrong/correct
+state scenarios): submission-page, feedback-diff, code-annotations in BOTH locales
+(old viewport clips shipped dead margins); en course-page (shows a stale
+"Not yet solved" for Hello World, stale-FK artifact). Then stage F icons.
+
 STATUS (2026-08-01): teachers area, FAQ (api-tokens, featured-courses, annotations
 en+nl) done and committed. Students stages A-C done; stage D (EN course pass) in
 flight; stage E (NL) + stage F (icons) queued. A reusable manifest-driven capture

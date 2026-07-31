@@ -1175,7 +1175,9 @@ shots:
     url: /{locale}/courses/29/
     state: [students-series-deadlines]
     crop:
-      clip: { x: 0, y: 0, width: 1440, height: 900 }
+      # Viewport clips shipped dead margins + a footer sliver; the submission
+      # card itself (main is shadow-DOM, use the grid column) is the shot.
+      selector: '.col-md-10 .card'
     must_show:
       - course header (title, teacher, description, Unregister row)
       - at least one series card
@@ -1197,12 +1199,12 @@ shots:
     keepNavbar: true
     hook: hooks/students-interact.mjs
     highlight:
-      - text: 'Programming 1' # NL pass: "Programmeren 1" -- update alongside the Stage E course rename
+      - text: { en: 'Programming 1', nl: 'Programmeren 1' }
         scope: '.dodona-navbar'
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 64 }
     must_show:
-      - '"Dodona | Programming 1 > Conditions > Curling" crumb, course name highlighted'
+      - '"Dodona | Programming 1 > Conditions > Curling" crumb (nl: "Programmeren 1 > Voorwaarden > Curling"), course name highlighted'
     notes: NAVBAR shot. Same URL as exercise-breadcrumb (D8) -- shoot both from one page load if driving the browser by hand.
 
   - id: deadline-warning
@@ -1252,12 +1254,12 @@ shots:
     # its own .card-actions row (verified live), too tight to show any "course card context".
     # Its closest '.card' is the whole course header card (title, description, actions row).
     tagClosest:
-      - { name: unregister-row, text: 'Unregister', ancestor: '.card' }
+      - { name: unregister-row, text: { en: 'Unregister', nl: 'Uitschrijven' }, ancestor: '.card' }
     crop:
       selector: '[data-shot="unregister-row"]'
     must_show:
       - course card context (title, description)
-      - highlighted Unregister link
+      - highlighted Unregister/Uitschrijven link
 
   - id: exercise-page
     page: guides/students/exercises
@@ -1288,8 +1290,8 @@ shots:
     keepNavbar: true
     hook: hooks/students-interact.mjs
     highlight:
-      - { text: 'Programming 1', scope: '.dodona-navbar' }
-      - { text: 'Conditions', scope: '.dodona-navbar' }
+      - { text: { en: 'Programming 1', nl: 'Programmeren 1' }, scope: '.dodona-navbar' }
+      - { text: { en: 'Conditions', nl: 'Voorwaarden' }, scope: '.dodona-navbar' }
       - { text: 'Curling', scope: '.dodona-navbar' }
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 64 }
@@ -1307,7 +1309,7 @@ shots:
     # callout on first load -- verified live. Click "Clear editor" (a normal, always-available
     # UI action, matches the docs' "before submitting" framing) to get the empty editor the
     # manifest calls for.
-    clickText: 'Clear editor'
+    clickText: { en: 'Clear editor', nl: 'Maak de editor leeg' }
     highlight:
       - selector: '#editor-process-btn' # app/views/activities/_handin.html.erb: icon-only paper-plane submit button, verified id
     crop:
@@ -1329,7 +1331,7 @@ shots:
     # reveals+activates itself when a submission row's `a.load-submission` link is clicked from
     # the Submissions tab (enableSubmissionTableLinks()), or after a live browser submit -- so
     # go via Submissions first, then click the (newest, our throwaway) row.
-    clickTab: 'Submissions'
+    clickTab: { en: 'Submissions', nl: 'Oplossingen' }
     clickSelector: 'a.load-submission'
     crop:
       selector: '.card.card-nav'
@@ -1337,7 +1339,7 @@ shots:
       - three tabs, Feedback active
       - green verdict
       - at least 2 context cards
-      - submission-history block (top-right of the header: today/#2/Correct, 4 days ago/#1/Correct)
+      - 'submission-history block (top-right of the header: today/#2/Correct, 4 days ago/#1/Correct)'
     notes: |
       Shared image -- also referenced from feedback/index.md as ../exercises/feedback-tab-en.png
       (one canonical file for both guides, per the shared-screenshot rule).
@@ -1348,9 +1350,9 @@ shots:
     url: /{locale}/courses/29/series/141/activities/369972474/
     state: [students-series-deadlines]
     hook: hooks/students-interact.mjs
-    clickTab: 'Submissions'
+    clickTab: { en: 'Submissions', nl: 'Oplossingen' }
     highlight:
-      - text: 'Submissions'
+      - text: { en: 'Submissions', nl: 'Oplossingen' }
     crop:
       selector: '.card.card-nav'
     must_show:
@@ -1366,13 +1368,13 @@ shots:
     hook: hooks/students-interact.mjs
     openUserMenu: true
     highlight:
-      - text: 'My submissions'
+      - text: { en: 'My submissions', nl: 'Mijn oplossingen' }
         scope: '.dodona-navbar'
     crop:
       clip: { x: 800, y: 0, width: 640, height: 420 }
     must_show:
       - open menu
-      - highlight on My submissions
+      - 'highlight on My submissions (nl: Mijn oplossingen)'
     notes: NAVBAR shot.
 
   - id: my-submissions
@@ -1430,7 +1432,9 @@ shots:
     hook: hooks/students-interact.mjs
     dynamicSubmission: students-submission-echo-wrong
     crop:
-      clip: { x: 0, y: 0, width: 1440, height: 950 }
+      # Viewport clips shipped dead margins + a footer sliver; the submission
+      # card itself (main is shadow-DOM, use the grid column) is the shot.
+      selector: '.col-md-10 .card'
     must_show:
       - red "Wrong" verdict
       - first test-group tab with red badge count (no fixed "Correctness" label, see submission-page's notes)
@@ -1445,7 +1449,9 @@ shots:
     dynamicSubmission: students-submission-echo-lint
     clickTab: 'Code'
     crop:
-      clip: { x: 0, y: 0, width: 1440, height: 800 }
+      # Viewport clips shipped dead margins + a footer sliver; the submission
+      # card itself (main is shadow-DOM, use the grid column) is the shot.
+      selector: '.col-md-10 .card'
     must_show:
       - Code tab active with badge 2
       - one Warning + one Error machine annotation inline
@@ -1474,11 +1480,11 @@ shots:
     clickTab: 'Code'
     hoverLine: 1
     highlight:
-      - text: 'Ask a question about your code'
+      - text: { en: 'Ask a question about your code', nl: 'Stel een vraag over je code' }
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 500 }
     must_show:
-      - '"Ask a question about your code" button'
+      - '"Ask a question about your code" button (nl: "Stel een vraag over je code")'
       - Annotations toggle group
       - pink per-line bubble on the hovered line
 
@@ -1508,7 +1514,7 @@ shots:
     hook: hooks/students-ask-question-flow.mjs
     frame: 2
     hoverLine: 1
-    questionText: 'Why do we need this line?' # NL pass: "Waarom hebben we deze regel nodig?"
+    questionText: { en: 'Why do we need this line?', nl: 'Waarom hebben we deze regel nodig?' }
     crop:
       clip: { x: 0, y: 0, width: 1440, height: 500 }
     must_show:

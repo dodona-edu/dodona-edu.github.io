@@ -7,21 +7,15 @@ order: 5
 # Feedback begrijpen
 Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing, die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen. Deze pagina legt uit wat de verschillende statussen betekenen en hoe de gedetailleerde feedback van de judge gestructureerd is. Hoe je naar oefeningen navigeert en oplossingen indient, vind je bij [Oefeningen oplossen](../exercises/).
 
-![Pagina met feedback over correcte oplossing](./student.exercise_feedback_correct_page.png)
+![Resultatenpagina voor een correcte Curling-oplossing](./submission-page-nl.png)
 
 ## De feedbackpagina
 
-Aan de bovenkant van de feedbackpagina staan de volgende gegevens over de oplossing:
+Bovenaan de feedbackpagina staat een lijn met de tekst `Oplossing #N voor <oefening> in <cursus>`, die linkt naar de oefening- en cursuspagina (het cursusgedeelte ontbreekt als de oplossing niet binnen de context van een cursus werd ingediend). Daaronder:
 
-- `Opgave`: De **naam** van de oefening waarvoor de oplossing werd ingediend. Klik op de naam om naar de oefeningpagina te navigeren.
+- Een **icoontje** en de **status** die Dodona of de judge aan de oplossing heeft toegekend, samen met het **tijdstip** waarop de oplossing werd ingediend, weergegeven op een gebruiksvriendelijke manier (bijvoorbeeld *ongeveer 2 uur geleden*; plaats de cursor erboven voor de gedetailleerde weergave van het tijdstip). De betekenis van elke status vind je [hieronder](#mogelijke-statussen).
 
-- `Cursus`: De **naam van de cursus** waarbinnen de oplossing werd ingediend. Klik op de naam om naar de cursuspagina te navigeren. Dit informatieveld ontbreekt als de oplossing niet binnen de context van een cursus werd ingediend.
-
-- `Ingediend`: Het **tijdstip** waarop de oplossing werd ingediend. Dit tijdstip wordt op een gebruiksvriendelijke manier weergegeven, bijvoorbeeld *ongeveer 2 uur geleden*. Als je de cursor boven het tijdstip plaatst dan krijg je de gedetailleerde weergave van het tijdstip te zien.
-
-- `Status`: De **status** die Dodona of de judge aan de oplossing heeft toegekend. Met elke status correspondeert een **icoontje** dat in elke oplijsting van de oplossing wordt weergegeven. De betekenis van elke status vind je [hieronder](#mogelijke-statussen).
-
-- `Samenvatting`: Korte samenvatting van het resultaat die de judge aan de oplossing heeft toegekend.
+- Een **geschiedenislijst** aan de rechterkant, met je andere oplossingen voor dezelfde oefening (tijdstip van indienen, nummer en status), zodat je snel tussen oplossingen kan wisselen.
 
 ## Mogelijke statussen
 
@@ -47,13 +41,13 @@ Je indienstatus voor een oefening *binnen een cursus* (correct, deadline gemist,
 
 ## Feedbacktabs
 
-Onder de korte samenvatting staat meer gedetailleerde feedback die de judge kan uitgesplitst hebben over meerdere *tabs*. Naast de naam van een tab kan aan de rechterkant een *badge* staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab.
+Onder de korte samenvatting staat meer gedetailleerde feedback die de judge kan uitgesplitst hebben over meerdere *tabs*. De tabs zijn genoemd naar de eigen testgroepen van de judge (er is geen vaste tab `Correctheid`). Naast de naam van een tab kan aan de rechterkant een *badge* staan met daarin een getal. Het getal geeft aan hoeveel fouten de judge gevonden heeft bij het uitvoeren van de testen waarover hij rapporteert onder de tab.
 
-![Feedback over foute oplossing](./student.exercise_feedback_incorrect_tab.png)
+![Feedback over foute oplossing met een rode badge en een verschil op tekenniveau](./feedback-diff-nl.png)
 
 De laatste tab heeft altijd de naam `Code` en bevat de broncode van de oplossing. Op bepaalde plaatsen in de broncode kan de judge opmerkingen toegevoegd hebben (bijvoorbeeld over de programmeerstijl) die ook kunnen motiveren waarom hij een bepaalde status aan de oplossing toegekend heeft.
 
-![Voorbeeld van een linter-fout](./student.exercise_lint_error.png)
+![Code tabblad met een Waarschuwing- en een Fout-annotatie inline](./code-annotations-nl.png)
 
 ::: tip Tip
 
@@ -64,11 +58,11 @@ In de tab `Code` op de feedbackpagina kan je de broncode van de oplossing niet w
 
 Per tab rapporteert de judge over individuele **testen** waaraan hij de broncode onderworpen heeft. Daarbij worden gerelateerde testen gegroepeerd in een **testgeval** en worden testgevallen die van elkaar afhankelijk zijn gegroepeerd in een **context**.
 
-![Feedback over correcte oplossing](../exercises/student.exercise_feedback_correct_tab.png)
+![Feedback tabblad met twee correcte context-kaarten](../exercises/feedback-tab-nl.png)
 
-Visueel worden alle testgevallen van een context met elkaar verbonden via een dunne verticale lijn aan de linkerkant. De kleur van die lijn geeft aan of de judge de volledige context beoordeelt als geslaagd (groene lijn) of als niet geslaagd (rode lijn).
+Visueel worden alle testgevallen van een context gegroepeerd in een **uitklapbare kaart**. De koptekst van de kaart bevat `Correct` of `Fout`, afhankelijk van de beoordeling van de volledige context door de judge. Als sommige, maar niet alle contexten correct zijn, worden de correcte contexten standaard ingeklapt en de foute contexten standaard uitgeklapt.
 
-Aan de rechterkant van de dunne verticale lijn worden de testgevallen van de context onder elkaar weergegeven. De beschrijving van een testgeval wordt weergegeven binnen een rechthoek met lichtgrijze achtergrondkleur die over de volledige breedte loopt. In de rechterbovenhoek van die rechthoek staat een gekleurd symbool dat aangeeft of de judge het volledige testgeval beoordeelt als geslaagd (groen vinkje) of als niet geslaagd (rood kruisje).
+Binnen een context worden de testgevallen van de context onder elkaar weergegeven. De beschrijving van een testgeval wordt weergegeven binnen een rechthoek met lichtgrijze achtergrondkleur die over de volledige breedte loopt. In de rechterbovenhoek van die rechthoek staat een gekleurd symbool dat aangeeft of de judge het volledige testgeval beoordeelt als geslaagd (groen vinkje) of als niet geslaagd (rood kruisje).
 
 Als de judge binnen een testgeval rapporteert over individuele testen, dan worden die opgelijst onder de rechthoek met lichtgrijze achtergrond waarin de beschrijving van het testgeval staat. Om visueel onderscheid te maken met de weergave van het testgeval, wordt elke test weergegeven met een kleine marge links en rechts. De weergave van een test bestaat zelf uit de volgende optionele componenten die onder elkaar worden weergegeven:
 
@@ -77,6 +71,5 @@ Als de judge binnen een testgeval rapporteert over individuele testen, dan worde
 -   Een tekstuele vergelijking tussen een verwachte waarde en een waarde die gegenereerd werd aan de hand van de oplossing. Als minstens één van beide waarden uit meerdere regels bestaat, dan worden de overeenkomstige regels tegenover elkaar uitgelijnd. Identieke overeenkomstige regels worden weergegeven met een transparante achtergrondkleur. Als overeenkomstige regels van elkaar verschillen dan worden ze weergegeven met een lichtgekleurde achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde). Individuele karakters die verschillen binnen overeenkomstige regels worden weergegeven met een donkerder achtergrondkleur (groen voor de verwachte waarde en rood voor de gegenereerde waarde).
 
 -   Algemene feedback over de uitgevoerde test. Voor deze feedback heeft de judge alle vrijheid wat betreft de vormgeving, waardoor hij zowel tekstuele als grafische feedback kan aanleveren.
-    ![Feedback tabblad](./student.exercise_feedback_incorrect_tab.png)
 
-    ![Visuele feedback gemaximaliseerd](./student.exercise_feedback_visual.nl.png)
+    ![Foute test met een verschil en een door de judge getekende afbeelding eronder](./visual-feedback-nl.png)

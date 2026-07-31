@@ -43,7 +43,7 @@ Some educational or research institutions explicitly ask for your consent to sha
 
 ::: tip Error Message?
 
-If no one from your school has signed up for Dodona before, things might not go as expected. To sign up, we use the existing accounts from your educational institution and link them using techniques such as [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) and [OAuth](https://en.wikipedia.org/wiki/OAuth). Sometimes, this process fails because your school does not grant permission for this link. Ask an ICT administrator or instructor from your educational or research institution to [contact us](../getting-started/#contact-us) if you want to give all user accounts from your institution access to Dodona.
+If no one from your school has signed up for Dodona before, things might not go as expected. To sign up, we use the existing accounts from your educational institution and link them using techniques such as [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) and [OAuth](https://en.wikipedia.org/wiki/OAuth). Sometimes, this process fails because your school does not grant permission for this link. Ask an ICT administrator or instructor from your educational or research institution to [contact us](../getting-started/#contact-us) if you want to give all user accounts from your institution access to Dodona. This service is free of charge.
 :::
 
 ::: tip Multiple Accounts?

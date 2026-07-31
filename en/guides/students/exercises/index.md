@@ -56,7 +56,7 @@ Once the judge has finished evaluating your solution, it receives its final stat
 
 ## Navigating to a Submission
 
-You can navigate to your submitted solutions on Dodona in several ways. For each method, the submissions will be grouped differently by Dodona. Here are the three main methods:
+You can navigate to your submitted solutions on Dodona in several ways. For each method, the submissions will be grouped differently by Dodona. Here are the two main methods:
 
 - You can view all your submissions for a single exercise by clicking on the `Submissions` tab on the relevant exercise page.
 

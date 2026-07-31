@@ -91,7 +91,7 @@ export async function clickFirstVisible(page, text) {
 // `text: { en: '...', nl: '...' }` alongside a plain string. Plain strings are
 // used verbatim in both locales -- only reach for the object form when the
 // rendered copy actually differs per locale (verified against config/locales).
-function localiseText(text, locale) {
+export function localiseText(text, locale) {
   return typeof text === 'object' && text !== null ? text[locale] : text;
 }
 
@@ -125,7 +125,7 @@ export async function prepare(page, { locale, shot, reinject }) {
   }
 
   if (shot.clickTab) {
-    await clickFirstVisible(page, shot.clickTab);
+    await clickFirstVisible(page, localiseText(shot.clickTab, locale));
     await page.waitForTimeout(500);
   }
 
