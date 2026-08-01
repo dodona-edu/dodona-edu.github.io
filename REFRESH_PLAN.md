@@ -303,7 +303,7 @@ Priority order from the app gap analysis:
 
 STATUS (2026-08-01): scanned (46 findings) and applied except 4 deferred items in
 guides/students/** (contended by capture work; includes the stale feedback-page
-prose). Scanner false alarms rejected with evidence: the python-judge "getal <e>"
+prose). Scanner false alarms rejected with evidence: the python-judge `getal <e>`
 placeholder is descriptive (source-verified twice), assessments nav was already
 integrated. nl/references/judges/creating-a-judge became a proper short stub.
 

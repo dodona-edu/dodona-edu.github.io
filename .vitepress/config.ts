@@ -8,6 +8,8 @@ import markdownItImsize from "markdown-it-imsize";
 export default defineConfig({
   title: "Dodona Docs",
   description: packageInfo.description,
+  // Working documents and capture tooling are not site content.
+  srcExclude: ['REFRESH_PLAN.md', 'screenshots/**'],
   head: [
     ['meta', { name: 'theme-color', content: '#0061a6' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
