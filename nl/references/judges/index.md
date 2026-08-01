@@ -99,7 +99,7 @@ Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Bash-oefen
 Bash is een judge die gebruikt kan worden voor oefeningen op de Bash terminal.
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.\
 **Programmeertalen:** Bash\
-**Aan de slag** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/bash), neem contact op met de makers voor meer informatie over deze judge. \
+**Aan de slag** [Voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/bash), neem contact op met de makers voor meer informatie over deze judge. \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### Csharp
@@ -124,7 +124,7 @@ Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Javascript
 JavaScript is een judge die gebruikt kan worden voor oefeningen in de programmeertaal JavaScript.
 Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.\
 **Programmeertalen:** Javascript\
-**Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
+**Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### JUnit

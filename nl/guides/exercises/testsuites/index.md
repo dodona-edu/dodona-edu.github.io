@@ -144,9 +144,9 @@ Om een string als returnwaarde te hebben zijn er dus twee mogelijkheden:
 
 ```yaml
 - expression: 'echo("hello")'
-  return: "hallo"  # Een gewone string
+  return: "hello"  # Een gewone string
 - expression: 'echo("hello")'
-  return: !expression "'hallo'"  # Een string in Python-syntaxis
+  return: !expression "'hello'"  # Een string in Python-syntaxis
 ```
 
 

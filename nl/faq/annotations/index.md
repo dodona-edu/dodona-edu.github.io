@@ -12,10 +12,10 @@ title: Vragen en opmerkingen
 Deze functionaliteit is enkel beschikbaar als je lesgever dit heeft ingeschakeld.
 :::
 
-![Knop om vragen te stellen](./student.ask_questions.png)
+![Knop om vragen te stellen](./ask-question-button-nl.png)
 Nadat je je oplossing hebt ingediend, kan je op drie manieren een vraag stellen. Bovenaan de ingediende code kan je een algemene vraag stellen door op `Stel een vraag over je code` te klikken. Daarnaast kan je links van het regelnummer op de roze cirkel klikken een vraag stellen bij een specifieke regel code. Je kan ook een stuk code selecteren en dan hierover vragen stellen via diezelfde knop.
 
-![Animatie vraag stellen](./student.ask_question.gif)
+![Animatie vraag stellen](./ask-question-nl.gif)
 
 Typ in het tekstvak de vraag die je aan de lesgever wil stellen. Je kan Markdown gebruiken om je tekst extra opmaak te geven. Klik als laatste op `Vraag stellen`.
 
@@ -30,7 +30,7 @@ Je kan met Markdown extra opmaak toevoegen door:
 Bekijk hier [alle mogelijkheden van Markdown](/nl/references/exercise-description/#markdown).
 :::
 
-![Reageren op vraag](./student.react.png)
+![Reageren op vraag](./reply-to-comment-nl.png)
 
 Daarnaast kan je ook reageren op een bestaande vraag van jezelf of op een opmerking van een lesgever. Klik hiervoor op `Reageer` onder de vraag of opmerking. Typ je reactie in het tekstvak en klik op `Reageer`.
 
@@ -39,33 +39,33 @@ Daarnaast kan je ook reageren op een bestaande vraag van jezelf of op een opmerk
 
 Wanneer een lesgever je vraag beantwoordt, krijg je een melding in Dodona. Deze melding zal je doorverwijzen naar de pagina waar je de vraag stelde.
 
-![Melding van antwoord](./comment_on_code.png)
+![Melding van antwoord](./answer-notification-nl.png)
 
 ## Hoe kan ik vragen voor studenten inschakelen/uitschakelen? <Badge type="tip" text="lesgever" />
 
 Gebruik het potloodje in de bovenste navigatiebalk van je cursus om naar de pagina `bewerken` te gaan. Hier kan je vragen voor studenten inschakelen of uitschakelen door het vakje `Sta toe dat studenten vragen stellen` aan of uit te vinken.
 
-![Studentenvragen instelling](./ask_questions_toggle.png)
+![Studentenvragen instelling](./questions-toggle-nl.png)
 
-Vergeet niet om je wijzigingen op te slaan door op het roze vinkje bovenaan rechts op de pagina te klikken.
+Vergeet niet om je wijzigingen op te slaan door op de knop `Opslaan` onderaan de pagina te klikken.
 
 ## Hoe weet ik of er open vragen zijn? <Badge type="tip" text="lesgever" />
 
 Als er open vragen zijn binnen een cursus, zal je een melding zien in de cursuskaart op je startpagina.
 
-![Melding in cursuskaart](./course_card_question.png)
+![Melding in cursuskaart](./course-card-questions-nl.png)
 
 Je zal ook een melding zien in de bovenste navigatiebalk van je cursus. Klik op de melding om naar de pagina te gaan waar je alle open vragen kan zien.
 
-![Lijst met open vragen](./course_question_list.png)
+![Lijst met open vragen](./course-questions-page-nl.png)
 
 Als je alle open vragen over al je cursussen wil zien, kan je naar de pagina `Vragen` gaan in de linkse navigatiebalk van Dodona.
 
-![Algemene vragenpagina](./questions_index_page.png)
+![Algemene vragenpagina](./all-questions-page-nl.png)
 
 ## Hoe kan ik een vraag beantwoorden? <Badge type="tip" text="lesgever" />
 
-![Question on code](./question-on-code.png)
+![Vraag bij de code](./question-on-code-nl.png)
 
 Je kan een antwoord typen op de vraag door op het invoerveld te klikken. Terwijl je typt, zal de vraag gemarkeerd worden als in behandeling, om andere lesgevers te verwittigen dat iemand er al mee bezig is.
 Wanneer je jouw antwoord afwerkt, zal de vraag gemarkeerd worden als beantwoord en krijgt de student een melding.
@@ -82,7 +82,7 @@ Als lesgever kan je ook opmerkingen geven op de code van je studenten. Dit kan h
 
 Je kan een algemene opmerking toevoegen door op de knop `Globale opmerking toevoegen` te klikken. Je kan ook een stuk code selecteren en op de knop `Voeg opmerking toe` klikken om een opmerking toe te voegen over dat specifieke stuk code.
 
-![add comment](./add-comment.png)
+![Knop en manieren om een opmerking toe te voegen](./add-comment-nl.png)
 > Terzijde: opmerkingen ondersteunen Markdown, dus je kan gebruik maken van vet, cursief, lijsten, ... Je kan alle Markdown features bekijken in [deze referentie](/nl/references/exercise-description/#markdown).
 
 ## Hoe kan ik opmerkingen opslaan en hergebruiken? <Badge type="tip" text="lesgever" />
@@ -90,15 +90,15 @@ Studenten maken vaak dezelfde fouten, of hebben gelijkaardige vragen. Om te verm
 
 Tijdens het schrijven of bewerken van een opmerking kan je `Sla opmerking op` aanvinken. Dit zal je toelaten om een titel toe te voegen aan de opmerking, wat je zal helpen om de opmerking in de toekomst terug te vinden.
 
-![Save comment while writing](./save-comment-edit.png)
+![Opmerking opslaan tijdens het schrijven](./save-comment-while-writing-nl.png)
 
 Je kan ook een bestaande opmerking opslaan door op `Opmerking opslaan` te klikken in het menu van de opmerking.
 
-![Save existing comment](./save-comment.png)
+![Bestaande opmerking opslaan](./save-existing-comment-nl.png)
 
 Eenmaal je een of meerdere opmerkingen hebt opgeslagen, krijg je een zoekveld te zien wanneer je een nieuwe opmerking schrijft. Selecteer de gewenste opmerking uit de lijst om deze te hergebruiken. Je kan de opmerking nog steeds bewerken voor je deze post.
 
-![Reuse comment](./reuse-annotations.png)
+![Opmerking hergebruiken](./reuse-saved-comment-nl.png)
 
 ## Waarom vind ik mijn opgeslagen opmerkingen niet terug? <Badge type="tip" text="lesgever" />
 
@@ -106,14 +106,14 @@ Opgeslagen opmerkingen zijn standaard beperkt tot een cursus en een oefening. Op
 
 Als je een opmerking in je hele cursus of zelfs in meerdere cursussen wilt hergebruiken, kun je de opgeslagen opmerking bewerken en de beperkingen op cursus en/of oefening verwijderen. Op deze manier wordt de opmerking voorgesteld in alle oefeningen van al je cursussen.
 
-![De cursus- en oefeningbeperkingen van een opgeslagen opmerking bewerken](./edit_saved_comment.png)
+![De cursus- en oefeningbeperkingen van een opgeslagen opmerking bewerken](./edit-saved-comment-nl.png)
 
 Om een opgeslagen opmerking te bewerken, klik je op het icoon van de opgeslagen opmerking in een annotatie die de opmerking hergebruikt. Dit opent de opgeslagen opmerking en door op het potloodicoon te klikken kun je de opmerking bewerken.
 
-![Icoon van de opgeslagen opmerking bij een annotatie die de opmerking hergebruikt](./saved_comment_link.png)
+![Icoon van de opgeslagen opmerking bij een annotatie die de opmerking hergebruikt](./saved-comment-icon-nl.png)
 
 Je kunt een overzicht van al je opgeslagen opmerkingen voor een bepaalde oefening vinden door op de link onder het zoekveld te klikken. Of door op 'opgeslagen opmerkingen' in het zijbalkmenu te klikken.
 Vanaf hier kun je ook opgeslagen opmerkingen bewerken of verwijderen.
 
-![Link to saved comments](./link-to-saved-comments.png)
-![Saved comments](./saved-comments-list.png)
+![Link naar opgeslagen opmerkingen](./saved-comments-search-nl.png)
+![Opgeslagen opmerkingen](./saved-comments-list-nl.png)

@@ -86,7 +86,7 @@ To do this, go to <https://dodona.be/en/repositories/> and click the light pink 
 Then, fill in the repository details:
 
 1. **Name**: Choose a unique name for the repository on Dodona. This will be used to find it later.
-2. **Clone URL**:
+2. **Clone URL**: for this, you'll need to go back to GitHub.
    ![Clone URL](./clone-url.png)
     1. Go to the repository you created earlier on GitHub.
     2. Click the green `Code` button.

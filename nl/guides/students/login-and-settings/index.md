@@ -11,7 +11,7 @@ Op deze pagina vind je alle informatie zodat je als student een gebruikersaccoun
 
 Je kan Dodona gebruiken in het Nederlands of het Engels. Gebruik hiervoor het taalmenu aan de rechterkant van de navigatiebalk (bovenaan elke pagina).
 
-![Taalmenu in navigatiebalk](./choose_language.png)
+![Open taalmenu in de navigatiebalk, met English en Nederlands](./language-menu-nl.png)
 
 Als je een taal selecteert terwijl je aangemeld bent dan wordt die ook als voorkeurstaal ingesteld in je [gebruikersprofiel](https://dodona.be/profile). Op die manier wordt bij aanmelden automatisch je voorkeurstaal geselecteerd.
 
@@ -27,13 +27,13 @@ De naam en beschrijving van een [oefening](../exercises/#navigeren-naar-een-oefe
 
 ## Aanmelden
 
-Om je aan te melden op dodona klik je ofwel op `Aanmelden` aan de rechterkant van de navigatiebalk, ofwel navigeer je naar de landingspagina en klik je op de knop `Aanmelden` centraal op de pagina.
+Om je aan te melden op dodona klik je ofwel op `Aanmelden` aan de rechterkant van de navigatiebalk, ofwel navigeer je naar de landingspagina en klik je op de knop `Probeer gratis` centraal op de pagina.
 
-![Aanmeldknop](./login.png)
+![Aanmelden-link in de navigatiebalk en Probeer gratis-knop op de landingspagina, beide gemarkeerd](./sign-in-button-nl.png)
 
-Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Office365 of G-Suite account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
+Je kan je aanmelden op Dodona door je onderwijsinstelling te selecteren op de aanmeldpagina. Studenten uit het secundair kunnen inloggen met hun Smartschool, Microsoft 365 of Google Workspace account. Als dit de eerste keer is dat je aanmeldt op Dodona dan wordt er automatisch een nieuwe gebruikersaccount aangemaakt op basis van de persoonsgegevens die doorgestuurd werden door je externe onderwijs- of onderzoeksinstelling.
 
-![Selectie van onderwijsinstelling](./sign_in.png)
+![Aanmeldpagina met onderwijsinstellingen zoals Smartschool, Google Workspace, Office 365 en UGent, plus een zoekveld](./sign-in-institutions-nl.png)
 
 ::: warning Jouw data op Dodona
 
@@ -61,18 +61,18 @@ Kies voor `Mijn profiel` in het gebruikersmenu aan de rechterkant van de navigat
 
 Op de profielpagina staan je persoonsgegevens (voornaam, familienaam, gebruikersnaam en e-mailadres) en enkele persoonlijke voorkeuren ([taal](#selecteren-van-de-taal) en tijdzone) die samen je gebruikersprofiel vormen.
 
-![Menu-item mijn profiel](./student.user_menu_my_profile.png)
+![Menu-item mijn profiel, gemarkeerd, in het open gebruikersmenu](./user-menu-my-profile-nl.png)
 
 Klik op de bewerkknop in de rechterbenedenhoek van je profielpagina om je gebruikersprofiel te bewerken. Je persoonsgegevens zoals naam en e-mailadres kan je zelf niet aanpassen. Deze worden namelijk automatisch aangepast op basis van de gegevens die tijdens het aanmelden door je externe onderwijs- of onderzoeksinstelling naar Dodona worden doorgestuurd.
 
-![Pagina om profiel te bewerken](./student.edit_profile.png)
+![Profielpagina met persoonsgegevens, statistieken en een gemarkeerde bewerkknop](./profile-page-nl.png)
 
 Wat je wel kan aanpassen is de **tijdzone** die gebruikt wordt voor het weergeven van alle tijdsaanduidingen op het platform (bijvoorbeeld het tijdstip waarop je een oplossing hebt ingediend of de deadline voor een oefeningenreeks).
 
-![Instelling voor tijdzone](./student.edit_timezone.png)
+![Pagina om profiel te bewerken met het veld Tijdzone gemarkeerd](./profile-timezone-nl.png)
 
 Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedetecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
 
-![Waarschuwing voor verkeerde tijdzone](./student.wrong_timezone.png)
+![Waarschuwing voor verkeerde tijdzone bovenaan een pagina](./timezone-warning-nl.png)
 
 Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.

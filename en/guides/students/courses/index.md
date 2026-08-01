@@ -20,11 +20,11 @@ To submit solutions for exercises in a course, you must be registered for that c
 
 First, you need to find the course you want to register for. You can do this by clicking on `Browse all courses on Dodona` on your homepage.
 
-![Explore courses page](./student.explore_courses.png)
+![Browse all courses on Dodona link card, highlighted, on the homepage](./homepage-browse-courses-en.png)
 
 This will take you to an [overview of all courses](https://dodona.be/en/courses/). You will see one or more tabs where you can use the search bar to find the right course based on a course name, instructor name, educational institution name, or academic year.
 
-![Recent courses on homepage](./student.courses.png)
+![All courses overview with tabs, search field, and a table of courses](./all-courses-en.png)
 
 ### How to Register
 
@@ -32,19 +32,19 @@ When you navigate to the course you searched for and are not yet registered, you
 
 - The course uses an **open registration procedure**, which means anyone can register for the course without explicit approval from a course administrator. Click the `Register` button to register for the course.
 
-  ![Register button](./register.png)
+  ![Not a member of this course panel with the Register button](./registration-open-en.png)
 
 - The course uses a **moderated registration procedure**, which means you can submit a **registration request** that must then be approved or rejected by a course administrator. Only when your registration request is approved will you be effectively registered for the course. Click the ` Request registration` button to submit a registration request for the course.
 
-  ![Submit registration request button](./moderated_register.png)
+  ![Registration panel with the Request registration button](./registration-moderated-en.png)
 
   As long as your registration request has not been approved or rejected by a course administrator, the message `Your registration is pending` will appear in the panel at the top of the course page, and the course will be listed in the `Pending` panel in the right column of your homepage.
 
-  ![Waiting list message](./moderated_waiting.png)
+  ![Registration panel showing the pending message and a Withdraw registration request button](./registration-pending-en.png)
 
 - The course uses a **closed registration procedure**, which means you cannot submit a registration request for the course. The instructor does not allow self-registration.
 
-  ![Closed registration message](./closed_registration.png)
+  ![Registration panel stating you are currently not able to subscribe to this course](./registration-closed-en.png)
 
 After you have registered, the course will be displayed on your personalized homepage.
 
@@ -54,18 +54,18 @@ In addition to the option to navigate to a course yourself and complete the regi
 
 A course consists of various components. At the top of the course page, you will see the description of a course. Below that, you can see different exercise series, each consisting of one or more exercises.
 
-![Deadline warning symbol](./student.deadline_series_warning.png)
+![Course page with the header card and a series card showing its deadline and exercise table](./course-page-en.png)
 
 ::: tip Tip
 
 When working within a course, the name of the course appears next to `Dodona` on the left side of the navigation bar. By clicking on the course name in the navigation bar, you will navigate back to the course page.
 
-![Course breadcrumb](./student.breadcrumb_course.png)
+![Course breadcrumb, with the course name highlighted in the navigation bar](./course-breadcrumb-en.png)
 :::
 
 ### Exercise Series
 
-An exercise series consists of a description, a number of exercises, and possibly a **deadline** set by the course administrator. If a deadline is set, it will be displayed under the name of the exercise series. When displaying the deadline, the time zone from your [user profile](../login-and-settings/#setting-your-personal-preferences) is taken into account. Deadlines are displayed in green if they have not yet expired and in red if they have already expired.
+An exercise series consists of a description, a number of exercises, and possibly a **deadline** set by the course administrator. If a deadline is set, it will be displayed under the name of the exercise series. When displaying the deadline, the time zone from your [user profile](../login-and-settings/#setting-your-personal-preferences) is taken into account. A deadline that has not yet expired is displayed in gray; once it has expired, it turns red, unless your last submission before the deadline was correct, in which case it turns green.
 
 If a series has a deadline, only submitted solutions from before that time will be considered. After the deadline, you can still submit, but they may not count towards any evaluation. More details can be found in the section on [submission status](#submission-status).
 
@@ -89,28 +89,30 @@ Your submission status for an exercise from an exercise series is determined **b
 
 Possible displays of your submission status if no deadline is set or before the deadline expires:
 
-| Submission Status | Icon                                                                                                                                                 | Displayed if you                                                      |
-  | --- |------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| `not solved` |                                                                                                                                                      | have not submitted a solution (before the deadline)                   |
-| `incorrect` | ![Incorrect](../../../../images/course_exercise_status_icons/wrong.png)                                                                                  | the last solution you submitted was incorrect                         |
-| `correct` | ![Correct](../../../../images/course_exercise_status_icons/correct.png) ![Before deadline](../../../../images/course_exercise_status_icons/before_deadline.png) | the last solution you submitted was correct <br/> before the deadline |
+| Submission Status | Icon                                                                     | Displayed if you                                     |
+| --- |---------------------------------------------------------------------------|-------------------------------------------------------|
+| `not solved` |                                                                             | have not submitted a solution                          |
+| `incorrect` | ![Incorrect](../../../../images/course-status-icons/wrong.png)            | the last solution you submitted was incorrect          |
+| `correct` | ![Correct](../../../../images/course-status-icons/correct.png)            | the last solution you submitted was correct            |
 
 Possible displays of your submission status after the deadline has expired:
 
 | Submission Status | Icon | Displayed if you                                       |
-  | --- | --- |--------------------------------------------------------|
-| `correct` (green) | ![Before deadline](../../../../images/course_exercise_status_icons/before_deadline.png) | the last submitted solution before the deadline is correct |
-| `deadline missed` (red) | ![After deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | have not submitted any solutions                       |
-| `deadline missed` (red) | ![After deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | your last submitted solution is not correct            |
-| `deadline missed` (red) | ![After deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | submitted a correct solution after the deadline    |
+| --- | --- |--------------------------------------------------------|
+| `correct` (deadline met) | ![Deadline met](../../../../images/course-status-icons/deadline-met.png) | the last submitted solution before the deadline is correct |
+| `deadline missed` | ![Deadline missed](../../../../images/course-status-icons/deadline-missed.png) | have not submitted any solutions before the deadline |
+| `deadline missed` | ![Deadline missed](../../../../images/course-status-icons/deadline-missed.png) | your last submitted solution before the deadline is not correct |
+| `correct` (after the deadline) | | you did not have a correct solution before the deadline, but your latest submission is correct |
+
+The last row above is marked with a small info icon (ⓘ) next to the status instead of a deadline icon: it links to the correct solution you submitted, and its tooltip explains that it came in after the deadline.
 
 ::: tip Last Submitted Solution Before Deadline Counts
 
 If you submit a solution for an exercise from an exercise series **before the deadline expires**, your submission status for the exercise can still change because that submission status is always based on your last submitted solution before the deadline. It is your responsibility to ensure that your last submitted solution before the deadline is also your most correct solution. You can optionally select a previous solution and resubmit it.
 
-Dodona displays a **warning symbol** next to your submission status for an exercise in an exercise series and in the list of recent submissions on your homepage if your last submitted solution for the exercise before the deadline of the exercise series has a status that is worse than the status of a solution for the exercise that you submitted before. You can optionally select a previous solution and resubmit it.
+Dodona displays a **warning symbol** next to your submission status for an exercise in an exercise series if your last submitted solution for the exercise before the deadline of the exercise series has a status that is worse than the status of a solution for the exercise that you submitted before. You can optionally select a previous solution and resubmit it.
 
-![Deadline warning symbol](./student.deadline_series_warning.png)
+![Series card with a warning triangle next to the Wrong status of an exercise that was previously correct](./deadline-warning-en.png)
 
 If you submit a solution for an exercise from an exercise series **after the deadline expires**, your submission status for the exercise in the exercise series will never change as a result. Your submission status for an exercise in an exercise series is determined based on your last submitted solution before the deadline.
 :::
@@ -119,6 +121,6 @@ If you submit a solution for an exercise from an exercise series **after the dea
 
 If you navigate to a course for which you are [registered](#registering-for-a-course) or for which you still have a registration request open, you will see a `Unregister` button (or `Withdraw registration request`) below the course description on the course page, which you can use to unsubscribe from the course.
 
-![Unregister button](./student.unregister.png)
+![Unregister button, highlighted, below the course description](./course-unregister-en.png)
 
 This will remove the course card from the left side of your homepage, and the course will no longer be listed on your [profile page](../login-and-settings/#setting-your-personal-preferences). If the course was listed under `Courses` in the hamburger menu on the left side of the navigation bar, the course will also be removed from that list. If the course was listed in the `Pending` panel in the right column of your homepage, the course will also be removed from that list.

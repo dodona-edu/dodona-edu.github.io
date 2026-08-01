@@ -133,10 +133,10 @@ Een aantal technische specificaties zijn ook beschikbaar:
 
 - [Configuratie-opties](/nl/references/tested/exercise-config)
 - [Referentie voor DSL-testplannen](/nl/references/tested/dsl) (aanbevolen)
-- [Referentie voor geavanceerde testplannen](/en/references/tested/json) (niet aanbevolen voor algemeen gebruik)
+- [Referentie voor geavanceerde testplannen](/nl/references/tested/json) (niet aanbevolen voor algemeen gebruik)
 - [Gegevenstypes voor programmeertalen](/nl/references/tested/types)
 
 Nuttige handleidingen als u aan TESTed zelf wilt werken:
 
 - De [installatie-instructies](https://github.com/dodona-edu/universal-judge) in om TESTed lokaal uit te voeren.
-- Een [handleiding over het toevoegen van een programmeertaal](/en/references/tested/new-programming-language) (enkel in het Engels).
+- Een [handleiding over het toevoegen van een programmeertaal](/nl/references/tested/new-programming-language) (enkel in het Engels).

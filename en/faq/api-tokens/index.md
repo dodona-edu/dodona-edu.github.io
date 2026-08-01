@@ -15,13 +15,13 @@ An API token is a unique identifier that allows external applications to interac
 Follow the steps below to create an API token on Dodona:
 
 1. **Go to your profile page**: Navigate to your profile page by clicking on the appropriate link in the drop down menu. You can also go directly to [dodona.be/profile](https://dodona.be/en/profile).
-  ![My Profile](./my-profile.png)
+  ![My Profile](./my-profile-en.png)
 
 2. **Generate a new token**: Once you're on your profile page, scroll to the middle of the page and click the `+` button to generate a new token. You will need to enter a description for your token (e.g. "pycharm"). This description will help you identify the purpose of the token in the future.
-  ![Create a token](./create-new-token.png)
+  ![Create a token](./create-new-token-en.png)
 
 3. **Copy the token**: Once the token is generated, copy and paste it into the authentication dialog of the application you want to authorise, e.g. the PyCharm plugin or the VS Code extension.
-  ![Token generated](./token-generated.png)
+  ![Token generated](./token-generated-en.png)
 
 ::: tip
 Please note that for security reasons you will not be able to view the tokens on Dodona after creation. However, you can see a list of all your active tokens. You can delete a token at any time and it will stop working immediately.
@@ -41,7 +41,7 @@ For endpoints where you need to be signed in, you can use an [API token](#what-i
 curl \
   -H "Authorization: {YOUR TOKEN}" \
   -H "Accept: application/json" \
-  "https://dodona.be/nl/submissions.json"
+  "https://dodona.be/en/submissions.json"
 ```
 
 In Python, this would look like:

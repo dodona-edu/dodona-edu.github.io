@@ -86,6 +86,8 @@ The Turtle judge evaluates the output of a Python Turtle program. It calculates 
 
 ## Deprecated judges
 
+These judges are deprecated and are no longer actively developed. They remain available for existing exercises, but we recommend not using them to create new exercises.
+
 ### Bash
 
 ::: danger Note

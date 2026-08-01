@@ -20,21 +20,21 @@ For more information, see the guide on [course management](../course-management/
 As a teacher, navigate to the user overview of your course by going to your course and then clicking on `Registered users` in the course description.
 You can also click on the user icon in the navigation bar.
 
-![admin menu users](./staff.course_users.png)
+![Course navigation bar with the user icon, above the course header card showing the "Registered users" stat](./course-nav-users-en.png)
 
 The user overview lists the name, email address, and institution of all course users, together with their [progress](#progress) and their [labels](#labels).
 For each teacher and administrator, an icon corresponding to the management rights assigned to the user is displayed next to their name.
 With the `Download user list` button above the table, you can download the user list as a CSV file.
 
-![users](./staff.users.png)
+![User overview table listing name, email, institution, progress and labels for each course member, with the Download user list and Edit all labels buttons above it](./users-overview-en.png)
 
 ### Search for Users
 
 Use the search bar at the top of the user overview to search for specific users by username, name, or email address.
-With the `Member labels` and `Institution` dropdowns below the search bar, you can filter the list by user label or institution.
+With the `Member Labels` and `Institution` dropdowns below the search bar, you can filter the list by user label or institution.
 Multiple filters can be active simultaneously.
 
-![filtered list](./staff.users_filtered.png)
+![User overview filtered by a member label and an institution, showing two active filter chips above the table](./users-filtered-en.png)
 
 ### Progress
 
@@ -43,12 +43,12 @@ The green part represents the proportion of exercises in the course for which th
 The red part represents the proportion of exercises for which the user has submitted solutions but has not yet solved **correctly**.
 The gray part represents the exercises that the user has not yet **started**.
 
-![statistics](./staff.user_progress_statistics.png)
+![Tooltip on a progress bar showing how many exercises a student started and how many they solved](./user-progress-tooltip-en.png)
 
 ### Labels
 
 You can assign labels to course users, for example to group them by class.
-The labels of each user are shown in the `Labels` column of the user overview, and you can filter on them with the `Member labels` dropdown.
+The labels of each user are shown in the `Labels` column of the user overview, and you can filter on them with the `Member Labels` dropdown.
 To edit the labels of a single user, open their course overview page and click `Edit labels`.
 To edit the labels of many users at once, click `Edit all labels` above the user overview: you download the user list as a CSV file, edit the labels column (multiple labels are separated by semicolons), and upload the modified file again.
 
@@ -59,11 +59,11 @@ As a course manager, you can promote other registered users to course manager.
 You can do this by clicking the `Promote to course administrator` button (a graduation cap icon) next to that user.
 Similarly, you can demote a course manager with the `Demote to student` button.
 
-![edit permissions](./staff.users_edit_permissions.png)
+![Promote to course administrator and Demote to student buttons next to two users in the overview](./users-edit-permissions-en.png)
 
 You can recognize the course managers by the icon in the left margin.
 
-![admin in user overview](./staff.course_users_admin.png)
+![Graduation cap icon in the left margin of the user overview table, marking a course administrator](./users-admin-icon-en.png)
 
 ::: tip Important
 
@@ -99,4 +99,4 @@ You can view this page by clicking on a student's name in the user overview of a
 On this page, you will get an overview of a user's progress within the course.
 In addition to some statistics, you can also view the status for each exercise and series within the course for this student.
 
-![course overview](./staff.user_course_overview.png)
+![Per-student overview page with submission statistics, a punch card, a heatmap, and the status per series](./member-overview-en.png)

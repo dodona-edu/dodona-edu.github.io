@@ -15,8 +15,8 @@ De bestaande oefening kan uiteraard als voorbeeld dienen.
 ::: info Bestanden en mappen maken
 1. Selecteer de map waarin je het bestand of de map wil aanmaken.
 2. Gebruik de icoontjes bovenaan om een bestand of map aan te maken. Rechtsklikken op de map en kiezen voor `New File...` of `New Folder...` kan ook.
-2. Typ de naam van het bestand (inclusief extensie) of map. Kies bij voorkeur een naam zonder spaties.
-3. Bevestig met <kbd>Enter</kbd>.
+3. Typ de naam van het bestand (inclusief extensie) of map. Kies bij voorkeur een naam zonder spaties.
+4. Bevestig met <kbd>Enter</kbd>.
 :::
 
 <!--@include: ../../examples/_common.md-->
@@ -52,7 +52,7 @@ Om dit te doen klik je bovenaan de menubalk op het informatie-icoontje:
 
 ![Voorbeeldoplossing](./sample-solution.png)
 
-Vervolgens kies je de voorbeeldoplossing die je wilt indienen (hier is er maar een: `solution.py), waarna je op de knop _Deze oplossing indienen_ klikt.
+Vervolgens kies je de voorbeeldoplossing die je wilt indienen (hier is er maar een: `solution.py`), waarna je op de knop _Deze oplossing indienen_ klikt.
 Dit zal de oefeningenpagina openen met de voorbeeldoplossing ingeladen.
 Je moet enkel nog op indienen klikken.
 

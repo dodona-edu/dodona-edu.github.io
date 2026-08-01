@@ -14,7 +14,7 @@ Het verbeteren van oefeningen gebeurt steeds per reeks. Als je een taak, toets o
 
 Rechts onderaan de reeks vind je een knop om een nieuwe evaluatie voor die reeks aan te maken. Eenmaal aangemaakt kan je via dezelfde weg de evaluatie terugvinden.
 
-![reeks evalueren](./reeks-evalueren.png)
+![Onderste balk van de reekskaart met de knop Reeks evalueren](./evaluate-series-button-nl.png)
 
 ## Je evaluatie configureren
 
@@ -28,7 +28,7 @@ Als een reeks een deadline had ingesteld dan wordt deze automatisch overgenomen,
 
 Een deadline kan enkel in het verleden liggen en na het maken van je keuze kan ze niet meer worden aangepast.
 
-![deadline kiezen](./deadline-kiezen.png)
+![Deadlinestap van de evaluatiewizard, vooraf ingevuld met de deadline van de reeks](./evaluation-deadline-nl.png)
 
 ### Studenten selecteren
 
@@ -38,19 +38,23 @@ Als je gebruik maakte van een van de standaardconfiguraties kan je nog steeds de
 
 De studentenlijst is eenvoudig filterbaar via het zoekvak bovenaan de lijst en geeft tevens een beknopt overzicht van wie welke oefeningen correct indiende.
 
-![gebruikers selecteren](./gebruikers-selecteren.png)
+![Studentenselectiestap van de evaluatiewizard met de standaardconfiguratieknoppen, het zoekvak en de studentenlijst](./evaluation-select-users-nl.png)
 
 ### Punten geven?
 
 In de volgende stap beslis je of je punten wil koppelen aan je evaluatie. Als je er voor kiest om geen punten te geven, dan kan je tijdens het evalueren op een gestructureerde manier door de ingediende oplossingen van de studenten stappen en manueel feedback aan hun oplossingen toevoegen.
 
-![Wil je punten geven?](./punten-geven.png)
+![Stap van de evaluatiewizard die vraagt of je een puntenverdeling wil toevoegen, met de opties Ja en Nee](./evaluation-add-grades-nl.png)
 
 ### Een puntenverdeling opstellen
 
 Als je er voor gekozen hebt om punten te geven, dan kan je in de laatste stap de puntenverdeling configureren. Je kan per oefening een of meerdere scoreonderdelen toevoegen. Op basis van de verschillende deelpunten wordt automatisch een totaal per oefening en voor de volledige evaluatie berekend.
 
-Via het menu rechtsboven kan je scoreonderdelen aan alle oefeningen tegelijk toevoegen.
+Door op `Voeg scoreonderdelen toe` te klikken, open je een tabel-editor.
+
+![Scoreblok van een oefening met de knop Voeg scoreonderdelen toe in de totaalrij](./evaluation-add-score-items-nl.png)
+
+Deze tabel-editor werkt gelijkaardig aan een rekenbladprogramma zoals Excel. Je kan eenvoudig gegevens kopiëren en plakken, en je kan rijen invoegen of verwijderen.
 
 Als je een scoreonderdeel toevoegt, dan kan je volgende dingen instellen:
 * **naam**: de naam van het scoreonderdeel, typisch 1 woord
@@ -58,7 +62,7 @@ Als je een scoreonderdeel toevoegt, dan kan je volgende dingen instellen:
 * **maximumscore**: hoeveel punten je aan dit onderdeel wil toekennen, tot op een kwart punt nauwkeurig
 * **zichtbaarheid**: nadat je de evaluatie hebt afgerond kan je alle feedback en punten vrijgeven aan de studenten. Je hebt hierbij de keuze om bepaalde deelpunten voor hen te verbergen.
 
-![scoreonderdelen aanpassen](./score-items.png)
+![Tabel-editor voor scoreonderdelen met ingevulde naam-, maximum- en zichtbaarheidskolommen](./evaluation-score-items-nl.png)
 
 ## Het evaluatieoverzicht
 
@@ -73,7 +77,7 @@ Klik op de `Evalueren`-knop om de volgende niet-beoordeelde oplossing voor die o
 Studenten die geen oplossing hebben ingediend voor een bepaalde oefening, worden automatisch als voltooid gemarkeerd.
 Daarom kan het voorkomen dat de voortgangsbalken al gedeeltelijk gekleurd zijn na het aanmaken van de evaluatie.
 
-![evaluatievoortgang](./nl.staff.evaluation_progress.png)
+![Evaluatieoverzichtskaart met voortgangsbalken per oefening, de links Evalueren en Plagiaat detecteren, en de knop Feedback vrijgeven](./evaluation-progress-nl.png)
 
 ::: tip
 Voordat je begint met beoordelen, wil je misschien controleren op plagiaat.
@@ -94,7 +98,7 @@ Als de student geen oplossing heeft ingediend, zie je een cirkel met een streepj
 
 Door over de iconen te hoveren, wordt hun betekenis uitgelegd. Elk van de iconen is klikbaar en brengt je naar de overeenkomstige oplossing van die student voor die oefening.
 
-![evaluatieoverzicht](./nl.staff.evaluation_overview.png)
+![Resultaten-kaart, tabblad Evaluatiedetails, met een statusicoontje per student per oefening](./evaluation-details-nl.png)
 
 ### Puntenoverzicht
 
@@ -104,13 +108,13 @@ De totaalscore per student en het gemiddelde voor elke oefening worden automatis
 
 In de rechterbovenhoek van het puntenoverzicht is een downloadknop zichtbaar. Als je op deze knop klikt, wordt een csv-bestand met de punten gedownload. Dit bestand kan je eenvoudig open in bijvoorbeeld Excel.
 
-![evaluatie punten](./evaluatie-punten.png)
+![Resultaten-kaart, tabblad Puntenoverzicht, met scores per student per oefening, een Totaal-kolom en de downloadknop](./evaluation-grades-nl.png)
 
 ## Een oplossing evalueren
 
 Op de evaluatiepagina krijg je steeds de laatst ingediende oplossing voor de deadline van een student voor een bepaalde oefening te zien.
 
-![cijfers geven](./nl.staff.give_grades.png)
+![Verbeterpagina met de code en testresultaten links, en de puntenverdeling, de knop Volgende en de studentstatusicoontjes rechts](./evaluation-grading-nl.png)
 
 Aan de linkerkant zie je de status van de tests en de ingediende code.
 Feedback kan worden toegevoegd aan een specifieke regel code door op het regelnummer te klikken.

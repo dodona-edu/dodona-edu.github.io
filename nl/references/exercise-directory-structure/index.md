@@ -63,7 +63,7 @@ Mappen met de naam preparation, inclusief de inhoud, worden door Dodona genegeer
 ## Voorbeeld van de structuur van een geldige leesactiviteitmap
 
 ```
-+-- Aeneas                     # Korte naam voor de leesactiviteit
++-- Aeneis                     # Korte naam voor de leesactiviteit
 |   +-- config.json            # Configuratie van de leesactiviteit
 |   +-- README.md              # Beschrijving van de leesactiviteit
 |   +-- description            #

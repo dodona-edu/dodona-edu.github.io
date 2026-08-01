@@ -14,11 +14,11 @@ You need extra rights to create a course. You can easily request these rights by
 
 If you have the necessary rights on Dodona, you can easily create a course yourself. You do this by clicking on the `Create a new course` button in the upper right corner of the [course overview](https://dodona.be/en/courses). From the landing page, you can reach this overview by clicking on `Browse all courses on Dodona`.
 
-![create course](./staff.courses_new_link.png)
+![Course overview page with the Create a new course button in the top right corner](./courses-new-link-en.png)
 
 To create a new course, there are two options. Either you start from an existing course and copy the content, or you create a completely new course. Click on one of the two buttons to make your choice. If you choose to start with an empty course, you can go directly to the [section on course properties](#course-properties).
 
-![new course menu](./staff.course_new_options.png)
+![New course menu with the Copy existing course and empty course buttons](./course-new-options-en.png)
 
 ## Copy Course
 
@@ -29,23 +29,23 @@ If you want to quickly copy an existing course, follow these steps:
 * Click on the three vertical dots `⋮` in the bottom right corner of the top card of the course.
 * Choose `Copy this course`.
 
-![fast copy course](./staff.course_fast_copy.png)
+![Bottom-right corner of the course header card with the open kebab menu showing the Copy this course row](./course-fast-copy-en.png)
 
 :::
 
 If you have chosen to copy an existing course, you will see a list of all visible courses on Dodona. You can filter using the search bar to quickly find the desired course. Click the link button on the right side of the table to open the respective course in a new window. This way, you can quickly check if this is the correct course. Click the circle in the left column to confirm your choice.
 
-![choose existing course](./staff.course_new_copy_course_options.png)
+![List of visible courses to copy from, with a search bar and a link button per row](./course-new-copy-course-options-en.png)
 
 Next, you need to specify which elements of the course you want to copy. The series structure, including descriptions, is always copied. You can then choose whether to copy the exercises, deadlines, and course administrators. You can also choose to set all copied series to hidden by default. This is very useful if you do not want to release the entire course to your students yet.
 
-![choose existing course extra](./staff.course_new_copy.png)
+![Options for which elements to copy from the chosen course: exercises, deadlines, administrators, and default series visibility](./course-new-copy-en.png)
 
 ## Course Properties
 
 Finally, you need to set a few things about the course itself, such as the name and instructor. These are pre-filled with the values of the copied course if that option was chosen. The following properties can be set:
 
-![New empty course](./staff.course_new_empty.png)
+![New course form with the Name, Teacher, Draft course, Academic year, Language and other properties](./course-new-empty-en.png)
 
 * `Name`: a name for the course. Different courses can have the same name, but it is advisable to give courses a unique name whenever possible.
 
@@ -73,7 +73,7 @@ Finally, you need to set a few things about the course itself, such as the name 
 
 * `Secret link`: when creating a course, a secret link is automatically generated as an access mechanism for hidden courses. With this link, users who normally can't see your course can get access to it and register themselves. This can be used to give users from outside your institution access to your institution-only course. You can find the secret link on the course edit page.
 
-  ![access link](./staff.course_hidden_registration_link.png)
+  ![Secret link field on the course edit page](./course-hidden-registration-link-en.png)
 
   The access link has the advantage that users do not have to search for the course themselves in the course overview and that they immediately receive a request to register for the course if they have not already done so. As a course administrator, you are responsible for sharing the registration link only with non-registered users who are allowed to register for a hidden course.
 
@@ -95,4 +95,4 @@ Once everything is set to your liking, click the `Create Course` button to final
 
 After creating the new course, you will automatically navigate to the course page, where you can see that you are automatically registered as a course user and that you are designated as a course administrator.
 
-![course created](./staff.course_created.png)
+![Course page right after creation, with the current user registered as course administrator](./course-created-en.png)

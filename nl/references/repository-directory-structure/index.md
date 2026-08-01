@@ -14,12 +14,12 @@ Hier kan je afbeeldingen of andere zaken toevoegen waar je naar kan refereren va
 - **Een map `media`**: deze map bevat media-bestanden die gebruikt kunnen worden in alle oefeningenbeschrijvingen binnen deze repository. Dodona zal automatisch terugvallen op deze map indien er in een beschrijving gerefereerd wordt naar een media-item dat niet gevonden wordt in de `media`-map van die specifieke oefening.
 - **Optioneel meerdere `oefening`mappen**: deze mappen bevatten de informatie voor de individuele oefeningen. Voor meer informatie betreffende hun structuur, gelieve de pagina met de [oefeningenmap-structuur](/nl/references/exercise-directory-structure).
 
-Dodona negeert andere bestanden en mappen. Je kan dus zorgeloos andere bestanden toevoegen (bijvoorbeeld bestanden met de oplossing voor je oefeningen) or een eigen oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen binnen elkaar plaatsen.
+Dodona negeert andere bestanden en mappen. Je kan dus zorgeloos andere bestanden toevoegen (bijvoorbeeld bestanden met de oplossing voor je oefeningen) of een eigen oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen binnen elkaar plaatsen.
 
 ## Voorbeeld van een geldige repository-structuur
 
 ::: tip Voorbeelden
-Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden een geldige repository-structuur gebruikt.
+Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden van hoe een geldige repository-structuur gebruikt wordt.
 :::
 
 ```

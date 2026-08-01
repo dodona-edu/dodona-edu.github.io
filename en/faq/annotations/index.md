@@ -12,11 +12,11 @@ title: Questions and comments
 This feature is only available if your teacher has enabled it.
 :::
 
-![Ask questions button](./student.ask_questions.png)
+![Ask questions button](./ask-question-button-en.png)
 After you have submitted your solution, you can ask a question in three ways. At the top of the submitted code, you can ask a general question by clicking on `Ask a question about your code`. In addition, you can click on the pink circle to the left of the line number to ask a question about a specific line of code. You can also select a piece of code and then ask questions about it using the same button.
 
 
-![Ask question animation](./student.ask_question.gif)
+![Ask question animation](./ask-question-en.gif)
 
 Type the question you want to ask the teacher in the text box. You can use Markdown to add extra formatting to your text. Finally, click on `Ask question`.
 
@@ -31,7 +31,7 @@ You can add extra formatting with Markdown by:
 Here you can view [all the possibilities of Markdown](/en/references/exercise-description/#markdown).
 :::
 
-![Reply to question](./student.react.png)
+![Reply to question](./reply-to-comment-en.png)
 
 You can also respond to an existing question from yourself or to a comment from a teacher. To do this, click on `Reply` below the question or comment. Type your response in the text box and click on `Reply`.
 
@@ -39,33 +39,33 @@ You can also respond to an existing question from yourself or to a comment from 
 
 When a teacher answers your question, you will receive a notification in Dodona. This notification will redirect you to the page where you asked the question.
 
-![Notification of answer](./comment_on_code.png)
+![Notification of answer](./answer-notification-en.png)
 
 ## How can I enable/disable student questions? <Badge type="tip" text="teacher" />
 
 Use the pencil in the top navigation bar of your course to go to the `Edit` page. Here you can enable or disable student questions by checking or unchecking the box `Allow students to ask questions`.
 
-![Toggle student questions](./ask_questions_toggle.png)
+![Toggle student questions](./questions-toggle-en.png)
 
-Don't forget to save your changes by clicking on the pink checkmark at the top right of the page.
+Don't forget to save your changes by clicking the `Save` button at the bottom of the page.
 
 ## How do I know if there are any open questions? <Badge type="tip" text="teacher" />
 
 If there are open questions within a course, you will see a notification in the course card on your homepage.
 
-![Course card question notification](./course_card_question.png)
+![Course card question notification](./course-card-questions-en.png)
 
 You will also see a notification in the top navigation bar of your course. Click on the notification to go to the page where you can see all the open questions.
 
-![Course question list](./course_question_list.png)
+![Course question list](./course-questions-page-en.png)
 
 If you want to see all open questions across all your courses, you can go to the `Questions` page in the navigation sidebar of Dodona.
 
-![Global questions page](./questions_index_page.png)
+![Global questions page](./all-questions-page-en.png)
 
 ## How can I reply to a question from a student? <Badge type="tip" text="teacher" />
 
-![Question on code](./question-on-code.png)
+![Question on code](./question-on-code-en.png)
 
 You can choose to type a reply to the question by clicking the input field. While typing, the question will be marked as in progress, to notify other teachers someone is already working on it.
 Finishing the reply will mark the question as answered and send the student a notification.
@@ -82,7 +82,7 @@ As a teacher, you can also comment on the code of your students. This can be use
 
 You can either use the `Add global comment` button to add a general comment about the submission, or you can select a piece of code and click the `Add comment` button to add a comment about that specific piece of code.
 
-![add comment](./add-comment.png)
+![Add comment button and comment entry points](./add-comment-en.png)
 
 > Note: comments support Markdown formatting, so you can use bold, italics, lists, ... You can check out all Markdown features in [this reference](/en/references/exercise-description/#markdown).
 
@@ -93,27 +93,27 @@ Students often make the same mistakes, or have similar questions. To avoid havin
 
 While writing or editing a comment, you can check `Save comment`. This will allow you to add a title for this comment, which should help you find the comment for future use.
 
-![Save comment while writing](./save-comment-edit.png)
+![Save comment while writing](./save-comment-while-writing-en.png)
 
 You can also save an existing comment by clicking `Save comment` in the comment menu.
 
-![Save existing comment](./save-comment.png)
+![Save existing comment](./save-existing-comment-en.png)
 
 Once you have saved one or more comments, you get a search field when writing new comments. Select the desired comment from the list to reuse it. You can still edit the comment before posting it.
 
-![Reuse comment](./reuse-annotations.png)
+![Reuse comment](./reuse-saved-comment-en.png)
 
 ## Why can't I find my saved comments? <Badge type="tip" text="teacher" />
 
 Saved comments are scoped by course and by exercise by default. This way we are sure we only suggest relevant comments and the number of saved comments remains manageable.
 
 If you want to reuse a comment across your whole course, or even across multiple courses, you can edit the saved comment and remove the course and/or exercise limitations. This way the comment will be suggested in all exercises of all your courses.
-![Editing the course and exercise limitations of a saved comment](./edit_saved_comment.png)
+![Editing the course and exercise limitations of a saved comment](./edit-saved-comment-en.png)
 
 To edit a saved comment, click on the saved comment icon on an annotation which reuses the comment. This will open the saved comment and clicking the pencil icon will allow you to edit the comment.
-![Saved comment icon on an annotation which reuses the comment](./saved_comment_link.png)
+![Saved comment icon on an annotation which reuses the comment](./saved-comment-icon-en.png)
 
 You can find an overview of all your saved comments for a certain exercise by clicking the link underneath the search field. Or by clicking on 'saved comments' in the sidebar menu.
 From here you can also edit or delete saved comments.
-![Link to saved comments](./link-to-saved-comments.png)
-![Saved comments](./saved-comments-list.png)
+![Link to saved comments](./saved-comments-search-en.png)
+![Saved comments](./saved-comments-list-en.png)

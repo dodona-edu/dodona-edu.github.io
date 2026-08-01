@@ -16,7 +16,7 @@ If you want to grade a task, test, or exam later, it's best to create a separate
 At the bottom right of the series, you will find a button to create a new evaluation for that series.
 Once created, you can find the evaluation again via the same button.
 
-![evaluate series](./staff.evaluate_series.png)
+![Series card bottom bar with the Evaluate series button](./evaluate-series-button-en.png)
 
 ## Configuring Your Evaluation
 
@@ -33,7 +33,7 @@ If a series had a set deadline, it will be automatically adopted, but you can ad
 
 A deadline can only be in the past and cannot be changed after making your choice.
 
-![choose deadline](./staff.choose_deadline.png)
+![Evaluation wizard deadline step, pre-filled with the series deadline](./evaluation-deadline-en.png)
 
 ### Selecting Students
 
@@ -45,14 +45,14 @@ Even if you used one of the default configurations, you can still manually adjus
 
 The student list is easily filterable via the search box at the top of the list and also provides a concise overview of who submitted which exercises correctly.
 
-![select users](./staff.select_users.png)
+![Evaluation wizard student-selection step with the default-configuration buttons, search box and user list](./evaluation-select-users-en.png)
 
 ### Adding Scores?
 
 In the next step, decide whether you want to add a scoring scheme to your evaluation.
 If you choose not to add scores, you can still go through the submitted solutions in a structured way during the evaluation and manually add feedback to their solutions.
 
-![Give points?](./staff.give_points.png)
+![Evaluation wizard step asking whether to add a scoring scheme, with Yes and No options](./evaluation-add-grades-en.png)
 
 ### Creating a Scoring Scheme
 
@@ -62,12 +62,12 @@ Based on the different partial scores, a total per exercise and for the entire e
 
 By clicking on `Add score items`, a table editor opens.
 
-![add score items](./staff.add_score_items.png)
+![Exercise score block with the Add score items button in the totals row](./evaluation-add-score-items-en.png)
 
 This table editor works similar to a spreadsheet program, such as Excel.
 You can easily copy and paste data, and you can insert or remove rows.
 
-![adjust score components](./staff.score_items.png)
+![Score item table editor with filled-in name, maximum and visibility columns](./evaluation-score-items-en.png)
 
 When adding a score item, you can set the following:
 * **name**: the name of the score item, typically one word
@@ -89,7 +89,7 @@ Click the `Evaluate` button to start grading the next unreviewed solution for th
 Students who did not submit any solution for a particular exercise are automatically marked as completed.
 Therefore, it may happen that the progress bars are already partially colored after creating the evaluation.
 
-![evaluation progress](./staff.evaluation_progress.png)
+![Evaluation overview card with per-exercise progress bars, the Evaluate and Detect plagiarism links, and the Release feedback button](./evaluation-progress-en.png)
 
 ::: tip
 Before you start grading, you might want to check for plagiarism.
@@ -110,7 +110,7 @@ If the student has not submitted a solution, you will see a circle with a dash.
 
 Hovering over the icons will explain their meaning. Each of the icons is clickable and takes you to the corresponding solution of that student for that exercise.
 
-![evaluation overview](./staff.evaluation_overview.png)
+![Results card, Evaluation details tab, showing a status icon per student per exercise](./evaluation-details-en.png)
 
 ### Grade Overview
 
@@ -126,13 +126,13 @@ In the upper right corner of the score overview, a download button is visible.
 Clicking this button will download a CSV file with the scores.
 You can easily open this file in, for example, Excel.
 
-![evaluation points](./staff.evaluation_grades.png)
+![Results card, Grade overview tab, with per-student per-exercise scores, a Total column and the download button](./evaluation-grades-en.png)
 
 ## Evaluating a Solution
 
 On the evaluation page, you will always see the last submitted solution for the deadline of a student for a particular exercise.
 
-![give points](./staff.give_grades.png)
+![Grading page with the code and test results on the left, and the scoring scheme, Next button and student status icons on the right](./evaluation-grading-en.png)
 
 On the left side, you will see the status of the tests and the submitted code.
 Feedback can be added to a specific line of code by clicking on the line number.

@@ -188,7 +188,7 @@ This test consists of three main parts:
 
 ::: warning
 Currently, the source file must be placed both in `workdir` (for evaluation) and in `description/media` (for display on Dodona).
-We hope to resolve this in the future. See [here](/en/guides/exercises/testsuites/) for more information.
+We hope to resolve this in the future. See [here](/en/guides/exercises/testsuites/#linking-files-to-expressions) for more information.
 :::
 
 Now we need the source file and the expected solution file.
