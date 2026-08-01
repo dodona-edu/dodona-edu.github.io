@@ -1,7 +1,7 @@
 ---
 title: "Grading Assignments and Tests with Dodona"
 description: "Tutorial: Grading Assignments and Tests with Dodona"
-order: 8
+order: 9
 ---
 
 # Grading Assignments and Tests with Dodona
@@ -117,7 +117,7 @@ Hovering over the icons will explain their meaning. Each of the icons is clickab
 If you chose to add scores, the grade overview will also be visible.
 Similar to the detailed overview, a box is provided per student per exercise in this table.
 Each box displays the score you gave to the corresponding solution.
-If no points have been entered for a solution, you will see a dash.
+If no points have been entered for a solution, you will see a dash. If not all score items for a solution have been entered a score yet, the score is displayed in light grey.
 Here too, each score is clickable and takes you to the corresponding solution.
 
 The total score per student and the average for each exercise are automatically calculated.

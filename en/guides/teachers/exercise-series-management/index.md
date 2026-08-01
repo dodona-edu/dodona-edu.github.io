@@ -28,7 +28,7 @@ You will then be directed to a form where you can set the properties of the seri
 
 ![Series form with the kind picker, name, deadline, description editor, and visibility options](./series-form-en.png)
 
-The first choice to make is what kind of series you want to create: a regular series, an assessment series, or an optional series. The regular series has clear progress tracking. An optional series is collapsed by default for your students, and will make it clear that the exercises in it are optional. An assessment series restricts access and keeps a student-action log; it exists for exams and will be documented in detail in a later guide.
+The first choice to make is what kind of series you want to create: a regular series, an assessment series, or an optional series. The regular series has clear progress tracking. An optional series is collapsed by default for your students, and will make it clear that the exercises in it are optional. An assessment series restricts access and keeps a student-action log; it exists for tests and exams and is covered in detail in the [assessments and exams guide](../assessments/).
 
 After that, give the series a name and optionally configure a deadline, description, visibility, and some advanced settings.
 All properties on this form are described in the [series settings](../series-settings/) reference.
