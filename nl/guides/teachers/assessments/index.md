@@ -40,6 +40,8 @@ Als je het toetstype selecteert, verschijnt er een extra sectie `Toetsopties` op
 
 * `Toetssessies automatisch stoppen`: wanneer de deadline bereikt is, worden alle toetssessies automatisch gestopt. Studenten hebben dan geen toegang meer tot de oefeningen en hun oplossingen. Deze optie vereist dat de reeks een deadline heeft. Sessies die zo gestopt worden, tonen `Systeem` als uitvoerder in de tijdslijn van de toets.
 
+![Sectie toetsopties van het reeksformulier, met een gegenereerd wachtwoord en de vinkjes bij "Beperk Dodona" en "automatisch stoppen" aangevinkt](assessment-options-nl.png)
+
 Alle andere eigenschappen van het formulier (naam, deadline, beschrijving, zichtbaarheid, …) werken zoals bij elke reeks en worden beschreven in de referentie over [reeksinstellingen](../series-settings/). De zichtbaarheidsinstellingen combineren mooi met een toets: met `Zichtbaar voor studenten na starttijd` verschijnt de reeks bijvoorbeeld pas op het moment dat het examen begint. Merk op dat zelfs een zichtbare toetsreeks haar oefeningen nooit toont aan studenten zolang ze hun sessie niet gestart hebben.
 
 ## Het toetswachtwoord
@@ -53,6 +55,8 @@ Het wachtwoord geldt per reeks en is hetzelfde voor alle studenten. Het wachtwoo
 ## Wat je studenten zien
 
 Voor de toets gestart is, zien studenten de reeks in de cursus met een uitleg getiteld `Hoe deze toets werkt` in plaats van de oefeningenlijst. Die legt uit hoe ze starten en afronden, waarschuwt dat ze na het afronden geen oplossingen meer kunnen wijzigen, dat de lesgever de toets op elk moment kan afsluiten, en dat API-toegang geblokkeerd wordt. Er staat ook een privacyvermelding bij: tijdens de toets worden hun acties geregistreerd, waaronder tijdstippen, interacties, hun IP-adres en browserinformatie, en die gegevens worden uitsluitend gebruikt om een correct en eerlijk verloop van de toets te garanderen.
+
+![Reekskaart voor de toets gestart is, met de uitleg "Hoe deze toets werkt", een wachtwoordveld en de knop Start toets, zonder oefeningenlijst](assessment-start-nl.png)
 
 Om te beginnen voert een student het wachtwoord in (indien vereist) en klikt op `Start toets`. Vanaf dat moment:
 
@@ -69,6 +73,8 @@ De toets is gekoppeld aan de browser waarmee de student ze startte. Meldt een st
 ## De toets opvolgen
 
 Tijdens het examen is het toetsoverzicht je controlekamer. Je bereikt het via de knop `Toetsoverzicht` op de reeks. Op deze pagina kan je opvolgen wie de toets gestart of al afgerond heeft, en kan je de sessie van een student indien nodig handmatig stoppen of heropenen.
+
+![Toetsoverzicht met het statuspaneel, de tellers voor nog niet gestart/bezig/gestopt, de tijdslijn-callout en de sessietabel met gestart- en gestoptijdstippen per student](assessment-overview-nl.png)
 
 Bovenaan vind je het statuspaneel van de toets met de huidige fase (`Nog niet gestart`, `Bezig`, `Gestopt, klaar om vrij te geven` of `Vrijgegeven`) en de actieve instellingen: `Dodona-toegang` (`Beperkt` of `Onbeperkt`), `Wachtwoord` (`Vereist`, met de knop `Tonen`, of `Niet vereist`) en `Automatisch stoppen` (`Ingeschakeld` of `Uitgeschakeld`). Daarnaast tonen drie tellers hoeveel studenten `Nog niet gestart`, `Bezig` en `Gestopt` zijn; klik op een teller om de tabel eronder te filteren.
 
@@ -93,6 +99,8 @@ Zodra elke sessie gestopt is, verandert de fase van de toets naar `Gestopt, klaa
 
 Na de toets beslis jij wanneer studenten de oefeningen en hun oplossingen opnieuw kunnen bekijken. Klik op `Toets vrijgeven` op de reeks en bevestig. De toets wordt dan voor iedereen afgesloten en studenten kunnen de opgaven en hun oplossingen in alleen-lezenmodus bekijken: ze kunnen geen nieuwe oplossingen indienen en geen activiteiten als gelezen markeren. Dit is het natuurlijke moment om studenten hun werk te laten inkijken, bijvoorbeeld terwijl je de oplossingen klassikaal bespreekt.
 
+![Reekskaart nadat de toets is afgelopen, met de melding "Deze toets is afgelopen" en de knop Toets vrijgeven](assessment-publish-nl.png)
+
 Te vroeg vrijgegeven? Met `Toets verbergen` in het reeks-actiemenu maak je de toets weer privé.
 
 Vrijgeven staat los van verbeteren. Om de toets te verbeteren maak je een evaluatie aan voor de reeks en geef je optioneel feedback en punten; zie de handleiding over [taken en toetsen verbeteren](../grading/). Een evaluatie werkt op de oplossingen die studenten tijdens de toets indienden, dus je kan verbeteren voor of na het vrijgeven.
@@ -109,6 +117,8 @@ De volgende gebeurtenissen worden geregistreerd, telkens met een tijdstip, de be
 * `Aangemeld tijdens toets` en `Afgemeld tijdens toets`
 
 Je kan de tijdslijn filteren op `Gebruiker`, `Actie`, `Uitvoerder`, `IP adres` en `Browser`. De knop `Exporteer` downloadt de log als CSV-bestand, inclusief het IP-adres en de browserinformatie bij elke gebeurtenis, zodat je ze kan archiveren of onregelmatigheden na het examen kan onderzoeken.
+
+![Tijdslijn van de toets met de filters Gebruiker/Actie/Uitvoerder/IP adres/Browser, de knop Exporteer, en een mix van gebeurtenissen inclusief een rij met Systeem als uitvoerder](assessment-timeline-nl.png)
 
 ## Privacyoverwegingen
 

@@ -1702,18 +1702,24 @@ shots:
 #   assessments-exam-over      (to be written) all sessions stopped, exam_released
 #                              false -- drives ASSESS-5's "Publish assessment" button.
 #
-# The exam series only gets an id when its scenario first runs: the SERIES_ID
-# placeholders below must be filled in after writing assessments-exam-series (have the
-# setup script print the id, like grading-wizard-series52 does for its evaluation).
+# The exam series only gets an id when its scenario first runs, and that id is not a
+# stable fixture the way series 51-54/140/141/52 are: assessments-exam-series.teardown.rb
+# destroys the series again at the end of the capture chunk (course 11 needs to come
+# back clean), so a hardcoded id would go stale the next time this manifest is used to
+# recapture these shots. Same handoff as `dynamicSubmission` in students-interact.mjs:
+# the setup script writes the id to the shared JSON state file
+# (/tmp/dodona-docs-capture-state.json) and hooks/assessments.mjs reads it, navigating to
+# the real per-shot URL and substituting the `{seriesId}` token below into crop.selector.
 
 defaults:
   user: 1
+  hook: hooks/assessments.mjs
 
 shots:
-  - id: ASSESS-1 # not yet captured (needs assessments-exam-series + SERIES_ID)
+  - id: ASSESS-1
     page: guides/teachers/assessments
     file: assessment-options
-    url: /{locale}/series/SERIES_ID/edit
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real series edit URL
     state: [assessments-exam-series]
     crop:
       selector: '#exam_mode_section'
@@ -1723,24 +1729,24 @@ shots:
       - Restrict Dodona to assessment content checkbox (checked)
       - Automatically stop assessment sessions checkbox (checked)
 
-  - id: ASSESS-2 # not yet captured (needs assessments-exam-series + SERIES_ID)
+  - id: ASSESS-2
     page: guides/teachers/assessments
     file: assessment-start
     url: /{locale}/courses/11/
     user: 5
     state: [assessments-exam-series]
     crop:
-      selector: '#series-card-SERIES_ID'
+      selector: '#series-card-{seriesId}'
     must_show:
       - '"How this assessment works" callout with the four/five explanation items'
       - academic-integrity logging notice
       - password input ("Enter password") + Start assessment button
       - no exercise list visible on the card
 
-  - id: ASSESS-3 # not yet captured (needs assessments-exam-sessions + SERIES_ID)
+  - id: ASSESS-3
     page: guides/teachers/assessments
     file: assessment-overview
-    url: /{locale}/series/SERIES_ID/assessment_overview
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real assessment_overview URL
     state: [assessments-exam-series, assessments-exam-sessions]
     viewport: { width: 1600, height: 1500 }
     crop:
@@ -1753,10 +1759,10 @@ shots:
       - sessions table with Started at/Stopped at values, per-row stop/reopen/timeline
         buttons and a "Closed before starting" row
 
-  - id: ASSESS-4 # not yet captured (needs assessments-exam-sessions + SERIES_ID)
+  - id: ASSESS-4
     page: guides/teachers/assessments
     file: assessment-timeline
-    url: /{locale}/series/SERIES_ID/exam_logs
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real exam_logs URL
     state: [assessments-exam-series, assessments-exam-sessions]
     crop:
       selector: '#main-container .card'
@@ -1767,43 +1773,37 @@ shots:
       - User/Action/Actor/IP address/Browser filter dropdowns
       - Export button
 
-  - id: ASSESS-5 # not yet captured (needs assessments-exam-over + SERIES_ID)
+  - id: ASSESS-5
     page: guides/teachers/assessments
     file: assessment-publish
     url: /{locale}/courses/11/
     state: [assessments-exam-series, assessments-exam-over]
     crop:
-      selector: '#series-card-SERIES_ID'
+      selector: '#series-card-{seriesId}'
     must_show:
       - '"This assessment has ended." students-cannot-view banner on the series card'
       - filled Publish assessment button
       - status panel phase "Stopped, awaiting publication"
 
 ---
-# Proposed shots for the AI draft answers FAQ entries
-# (en+nl faq/annotations: "How do AI draft answers work?" and
-# "How do I enable or disable AI draft answers?").
-# NOT captured yet; the FAQ text currently references no images.
+# Shots for the AI draft answers FAQ entries (en+nl faq/annotations: "How do AI draft
+# answers work?" and "How do I enable or disable AI draft answers?"). Captured 2026-08;
+# wired into both locales of that page.
 #
-# State prerequisite: a Question annotation with an associated LlmResponse on a
-# submission in course 11. In development DraftResponseJob short-circuits and
-# stores a placeholder response ('<StudentAnswer>Draft response generated for
-# development</StudentAnswer>'), so a scenario script can simply create a
-# question as a student user and run DraftResponseJob.perform_now(question)
-# (or create the LlmResponse directly with a realistic-looking response text —
-# preferred, so the shot shows a plausible draft instead of the dev
-# placeholder). The course must have questions_enabled and
-# draft_answers_enabled (both default on). The viewing user must be a course
-# admin of that course (user 1 / zeus works).
-# Suggested scenario id: question-with-draft[.rb nl] — locale-parameterized
-# because the LlmResponse draft text itself should match the shot locale.
+# State: state/question-with-draft.setup.rb seeds a global Question from Sofie (user
+# 5) plus a directly-created, realistic-looking LlmResponse (not the dev placeholder)
+# on Submission 1206 -- an already-judged, annotation-free, stable seeded fixture on
+# course 11, so no dynamic-id handoff is needed; the url below points straight at it.
+# hooks/ai-draft-answer.mjs drives the reply-form interaction (open it, and for AI-2
+# rate it) that a plain goto() can't.
 
 shots:
   - id: AI-1
     page: faq/annotations
     file: draft-answer-suggested
-    url: /{locale}/submissions/{submission_with_question}/
+    url: /{locale}/submissions/1206/#code
     state: [course11-naming, question-with-draft]
+    hook: hooks/ai-draft-answer.mjs
     # Open the reply form on the question thread first: click the fake reply
     # input under the question (placeholder shows a sparkle: "✨Reply...").
     # The form opens prefilled with the draft only while no teacher reply
@@ -1821,8 +1821,9 @@ shots:
   - id: AI-2
     page: faq/annotations
     file: draft-answer-rated
-    url: /{locale}/submissions/{submission_with_question}/
+    url: /{locale}/submissions/1206/#code
     state: [course11-naming, question-with-draft]
+    hook: hooks/ai-draft-answer.mjs
     # Same form as AI-1, after clicking the thumbs-up button: the icon fills
     # (mdi-thumb-up) and the optional comment input appears and takes focus.
     crop:
