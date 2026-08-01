@@ -23,15 +23,16 @@ Meaning of the possible statuses that can be assigned to a solution:
 
 | Status                  | Icon                                                                    | Meaning                                                                                                           |
 |-------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| `Queued…`               | ![Queued](../../../../images/submission_icons/queued.png)                | Solution is in the queue                                                                                          |
-| `Running...`            | ![Running](../../../../images/submission_icons/running.png)               | Solution is currently being evaluated by the judge                                                                |
-| `Correct`               | ![Correct](../../../../images/submission_icons/correct.png)               | All tests have succeeded.                                                                                         |
-| `Wrong`                 | ![Wrong](../../../../images/submission_icons/wrong.png)                 | Logical error encountered during the execution of at least one test                                               |
-| `Runtime Error`         | ![Runtime error](../../../../images/submission_icons/runtime_error.png)         | Unexpected error encountered during the execution of at least one test                                            |
-| `Timeout`               | ![Time limit exceeded](../../../../images/submission_icons/time_limit_exceeded.png)   | Time limit for the exercise was exceeded during testing; may indicate poor performance or an infinite loop.       |
-| `Memory limit exceeded` | ![Memory limit exceeded](../../../../images/submission_icons/memory_limit_exceeded.png) | Memory limit for the exercise was exceeded during the execution of at least one test                              |
-| `Compilation Error`     | ![Compilation error](../../../../images/submission_icons/compilation_error.png)     | Solution contains grammatical errors                                                                              |
-| `Internal Error`        | ![Internal error](../../../../images/submission_icons/internal_error.png)        | Judge crashed during the evaluation of the solution; the cause of the error lies with the judge, not the solution |
+| `Queued…`               | ![Queued](../../../../images/submission-status-icons/queued-running.png) | Solution is in the queue                                                                                          |
+| `Running...`            | ![Running](../../../../images/submission-status-icons/queued-running.png) | Solution is currently being evaluated by the judge                                                                |
+| `Correct`               | ![Correct](../../../../images/submission-status-icons/correct.png)      | All tests have succeeded.                                                                                         |
+| `Wrong`                 | ![Wrong](../../../../images/submission-status-icons/wrong.png)          | Logical error encountered during the execution of at least one test                                               |
+| `Runtime Error`         | ![Runtime error](../../../../images/submission-status-icons/runtime-error.png) | Unexpected error encountered during the execution of at least one test                                    |
+| `Timeout`               | ![Time limit exceeded](../../../../images/submission-status-icons/time-limit-exceeded.png) | Time limit for the exercise was exceeded during testing; may indicate poor performance or an infinite loop. |
+| `Memory limit exceeded` | ![Memory limit exceeded](../../../../images/submission-status-icons/memory-limit-exceeded.png) | Memory limit for the exercise was exceeded during the execution of at least one test               |
+| `Output limit exceeded` | ![Output limit exceeded](../../../../images/submission-status-icons/output-limit-exceeded.png) | The solution produced more output than the exercise allows                                          |
+| `Compilation Error`     | ![Compilation error](../../../../images/submission-status-icons/compilation-error.png) | Solution contains grammatical errors                                                                       |
+| `Internal Error`        | ![Internal error](../../../../images/submission-status-icons/internal-error.png) | Judge crashed during the evaluation of the solution; the cause of the error lies with the judge, not the solution |
 
 The lower a status is listed in the table above, the more severe the type of error it corresponds to.
 

@@ -92,18 +92,20 @@ Mogelijke weergaven van je indienstatus als er geen deadline is ingesteld of vó
 
   | indienstatus | icoontje | weergegeven als je |
   | --- | --- | --- |
-  | `niet opgelost` | | geen oplossing hebt ingediend (vóór de deadline) |
-| `verkeerd` | ![Verkeerd](../../../../images/course_exercise_status_icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
-| `correct` | ![Correct](../../../../images/course_exercise_status_icons/correct.png) (![Voor deadline](../../../../images/course_exercise_status_icons/before_deadline.png)) |laatste oplossing die je indiende correct was (vóór de deadline) |
+  | `niet opgelost` | | geen oplossing hebt ingediend |
+| `verkeerd` | ![Verkeerd](../../../../images/course-status-icons/wrong.png) | laatste oplossing die je indiende verkeerd was |
+| `correct` | ![Correct](../../../../images/course-status-icons/correct.png) | laatste oplossing die je indiende correct was |
 
 Mogelijke weergaven van je indienstatus nadat de deadline verstreken is:
 
   |indienstatus | icoontje | weergegeven als je |
   |-------------|----------|--------------------|
-  | `correct` (groen) | ![Voor deadline](../../../../images/course_exercise_status_icons/before_deadline.png) | laatst ingediende oplossing vóór de deadline correct is|
-  | `deadline gemist` (rood) | ![Na deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | geen oplossingen hebt ingediend|
-  | `deadline gemist` (rood) | ![Na deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | als je laatst ingediende oplossing niet correct is |
-  | `deadline gemist` (rood) | ![Na deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | als je na de deadline een correcte oplossing hebt ingediend |
+  | `correct` (deadline gehaald) | ![Deadline gehaald](../../../../images/course-status-icons/deadline-met.png) | laatst ingediende oplossing vóór de deadline correct is |
+  | `deadline gemist` | ![Deadline gemist](../../../../images/course-status-icons/deadline-missed.png) | geen oplossingen hebt ingediend vóór de deadline |
+  | `deadline gemist` | ![Deadline gemist](../../../../images/course-status-icons/deadline-missed.png) | je laatst ingediende oplossing vóór de deadline niet correct is |
+  | `correct` (na de deadline) | | je geen correcte oplossing had vóór de deadline, maar je laatst ingediende oplossing wel correct is |
+
+De laatste rij hierboven wordt niet gemarkeerd met een deadline-icoontje, maar met een klein info-icoontje (ⓘ) naast de status: het linkt naar de correcte oplossing die je indiende, en de tooltip legt uit dat die pas na de deadline binnenkwam.
 
 ::: tip Laatst ingediende oplossing vóór deadline telt
 

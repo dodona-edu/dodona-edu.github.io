@@ -1175,9 +1175,16 @@ shots:
     url: /{locale}/courses/29/
     state: [students-series-deadlines]
     crop:
-      # Viewport clips shipped dead margins + a footer sliver; the submission
-      # card itself (main is shadow-DOM, use the grid column) is the shot.
-      selector: '.col-md-10 .card'
+      # This page's content column is .col-md-9 (not .col-md-10, the submission-page
+      # grid) and it holds the header card PLUS a per-series card, so a single-selector
+      # crop can't fit the must_show list -- union the header card with the first
+      # series card instead of clipping a raw viewport rect (that shipped dead
+      # margins + a footer sliver).
+      # pad 8, not the union default's looser sibling values elsewhere: the
+      # series-sidebar column starts only 12px right of the card's right edge,
+      # so anything wider clips a sliver of its "PART 1" heading into frame.
+      union: ['.col-md-9 > .card', '.card.series']
+      pad: 8
     must_show:
       - course header (title, teacher, description, Unregister row)
       - at least one series card
@@ -1407,7 +1414,9 @@ shots:
     url: /{locale}/submissions/1352/
     state: [students-series-deadlines]
     crop:
-      clip: { x: 0, y: 0, width: 1440, height: 900 }
+      # Viewport clips shipped dead margins + a footer sliver; the submission
+      # card itself (main is shadow-DOM, use the grid column) is the shot.
+      selector: '.col-md-10 .card'
     must_show:
       - green checkmark + "Correct" verdict
       - '"Submission #1 for Curling in Programming 1" link line'
@@ -1565,7 +1574,13 @@ shots:
 
   - id: icon-sub-queued-running
     path: images/submission-status-icons/queued-running.png
-    url: /en/submissions/
+    # Unfiltered /en/submissions/ only ever shows the newest page of student 5's history
+    # (correct/wrong dominate it) -- verified live, every other status row here needed the
+    # built-in ?status= dropdown filter (SubmissionsController `has_dropdown :status`) to
+    # surface at all. queued/running never persist in seeded data (they're mid-evaluation
+    # states); one submission is temporarily flipped to status "queued" for this capture,
+    # see the accompanying report -- reverted right after.
+    url: /en/submissions/?status=queued
     crop:
       selector: '#main-container table i.mdi-timer-sand-empty'
 
@@ -1583,38 +1598,41 @@ shots:
 
   - id: icon-sub-time-limit-exceeded
     path: images/submission-status-icons/time-limit-exceeded.png
-    url: /en/submissions/
+    url: /en/submissions/?status=time+limit+exceeded
     crop:
       selector: '#main-container table i.mdi-alarm.colored-wrong'
 
   - id: icon-sub-memory-limit-exceeded
     path: images/submission-status-icons/memory-limit-exceeded.png
-    url: /en/submissions/
+    url: /en/submissions/?status=memory+limit+exceeded
     crop:
       selector: '#main-container table i.mdi-memory.colored-wrong'
 
   - id: icon-sub-compilation-error
     path: images/submission-status-icons/compilation-error.png
-    url: /en/submissions/
+    url: /en/submissions/?status=compilation+error
     crop:
       selector: '#main-container table i.mdi-lightning-bolt-circle.colored-wrong'
 
   - id: icon-sub-runtime-error
     path: images/submission-status-icons/runtime-error.png
-    url: /en/submissions/
+    url: /en/submissions/?status=runtime+error
     crop:
       selector: '#main-container table i.mdi-flash.colored-wrong'
 
   - id: icon-sub-internal-error
     path: images/submission-status-icons/internal-error.png
-    url: /en/submissions/
+    # Student 5 has zero "internal error" submissions in the seeds (verified live: 18 exist
+    # platform-wide, none for user 5) -- one submission is temporarily flipped to that
+    # status for this capture, see the accompanying report -- reverted right after.
+    url: /en/submissions/?status=internal+error
     crop:
       selector: '#main-container table i.mdi-alert.colored-warning'
     notes: internal error is the "anything else" fallback color/icon in status_icon_component.rb -- double-check this row is the internal-error one and not another warning-colored row.
 
   - id: icon-sub-output-limit-exceeded
     path: images/submission-status-icons/output-limit-exceeded.png
-    url: /en/submissions/
+    url: /en/submissions/?status=output+limit+exceeded
     crop:
       selector: '#main-container table i.mdi-script-text.colored-wrong'
     notes: also add the missing "Output limit exceeded" table row to feedback/index.md in both locales alongside this image (Stage-0 decision 5).

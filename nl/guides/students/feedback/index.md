@@ -23,15 +23,16 @@ Betekenis van de mogelijke statussen die aan een oplossing kunnen toegekend word
 
 | status               | icoontje             | betekenis            |
 |----------------------|----------------------|----------------------|
-| `In de wachtrij…` | ![In de wachtrij](../../../../images/submission_icons/queued.png) | oplossing staat in de wachtrij |
-| `Aan het uitvoeren...` | ![Aan het uitvoeren](../../../../images/submission_icons/running.png) | oplossing wordt momenteel beoordeeld door de judge |
-| `Correct` | ![Correct](../../../../images/submission_icons/correct.png) | alle testen zijn geslaagd |
-| `Fout` | ![Fout](../../../../images/submission_icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
-| `Uitvoeringsfout` | ![Uitvoeringsfout](../../../../images/submission_icons/runtime_error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
-| `Timeout` | ![Tijdslimiet overschreden](../../../../images/submission_icons/time_limit_exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
-| `Geheugenfout` | ![Geheugenlimiet overschreden](../../../../images/submission_icons/memory_limit_exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
-| `Compilatiefout` | ![Compilatiefout](../../../../images/submission_icons/compilation_error.png) | oplossing bevat grammaticale fouten |
-| `Interne fout` | ![Interne fout](../../../../images/submission_icons/internal_error.png) | judge is gecrasht tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
+| `In de wachtrij…` | ![In de wachtrij](../../../../images/submission-status-icons/queued-running.png) | oplossing staat in de wachtrij |
+| `Aan het uitvoeren...` | ![Aan het uitvoeren](../../../../images/submission-status-icons/queued-running.png) | oplossing wordt momenteel beoordeeld door de judge |
+| `Correct` | ![Correct](../../../../images/submission-status-icons/correct.png) | alle testen zijn geslaagd |
+| `Fout` | ![Fout](../../../../images/submission-status-icons/wrong.png) | logische fout opgeworpen tijdens het uitvoeren van minstens één test |
+| `Uitvoeringsfout` | ![Uitvoeringsfout](../../../../images/submission-status-icons/runtime-error.png) | onverwachte fout opgeworpen tijdens het uitvoeren van minstens één test |
+| `Timeout` | ![Tijdslimiet overschreden](../../../../images/submission-status-icons/time-limit-exceeded.png) | tijdslimiet vastgelegd voor de oefening werd overschreden tijdens het testen; kan wijzen op slechte performantie of een oneindige lus. |
+| `Geheugenfout` | ![Geheugenlimiet overschreden](../../../../images/submission-status-icons/memory-limit-exceeded.png) | geheugenlimiet vastgelegd voor de oefening werd overschreden tijdens het uitvoeren van minstens één test |
+| `Uitvoerlimiet overschreden` | ![Uitvoerlimiet overschreden](../../../../images/submission-status-icons/output-limit-exceeded.png) | de oplossing produceerde meer uitvoer dan toegelaten voor de oefening |
+| `Compilatiefout` | ![Compilatiefout](../../../../images/submission-status-icons/compilation-error.png) | oplossing bevat grammaticale fouten |
+| `Interne fout` | ![Interne fout](../../../../images/submission-status-icons/internal-error.png) | judge is gecrasht tijdens het beoordelen van de oplossing; oorzaak van fout ligt dus niet bij de oplossing maar bij het falen van de judge |
 
 Hoe lager de status in bovenstaande tabel wordt opgelijst, hoe zwaarder het soort fout dat ermee correspondeert.
 

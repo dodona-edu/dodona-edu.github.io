@@ -89,20 +89,22 @@ Your submission status for an exercise from an exercise series is determined **b
 
 Possible displays of your submission status if no deadline is set or before the deadline expires:
 
-| Submission Status | Icon                                                                                                                                                 | Displayed if you                                                      |
-  | --- |------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| `not solved` |                                                                                                                                                      | have not submitted a solution (before the deadline)                   |
-| `incorrect` | ![Incorrect](../../../../images/course_exercise_status_icons/wrong.png)                                                                                  | the last solution you submitted was incorrect                         |
-| `correct` | ![Correct](../../../../images/course_exercise_status_icons/correct.png) ![Before deadline](../../../../images/course_exercise_status_icons/before_deadline.png) | the last solution you submitted was correct <br/> before the deadline |
+| Submission Status | Icon                                                                     | Displayed if you                                     |
+| --- |---------------------------------------------------------------------------|-------------------------------------------------------|
+| `not solved` |                                                                             | have not submitted a solution                          |
+| `incorrect` | ![Incorrect](../../../../images/course-status-icons/wrong.png)            | the last solution you submitted was incorrect          |
+| `correct` | ![Correct](../../../../images/course-status-icons/correct.png)            | the last solution you submitted was correct            |
 
 Possible displays of your submission status after the deadline has expired:
 
 | Submission Status | Icon | Displayed if you                                       |
-  | --- | --- |--------------------------------------------------------|
-| `correct` (green) | ![Before deadline](../../../../images/course_exercise_status_icons/before_deadline.png) | the last submitted solution before the deadline is correct |
-| `deadline missed` (red) | ![After deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | have not submitted any solutions                       |
-| `deadline missed` (red) | ![After deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | your last submitted solution is not correct            |
-| `deadline missed` (red) | ![After deadline](../../../../images/course_exercise_status_icons/after_deadline.png) | submitted a correct solution after the deadline    |
+| --- | --- |--------------------------------------------------------|
+| `correct` (deadline met) | ![Deadline met](../../../../images/course-status-icons/deadline-met.png) | the last submitted solution before the deadline is correct |
+| `deadline missed` | ![Deadline missed](../../../../images/course-status-icons/deadline-missed.png) | have not submitted any solutions before the deadline |
+| `deadline missed` | ![Deadline missed](../../../../images/course-status-icons/deadline-missed.png) | your last submitted solution before the deadline is not correct |
+| `correct` (after the deadline) | | you did not have a correct solution before the deadline, but your latest submission is correct |
+
+The last row above is marked with a small info icon (ⓘ) next to the status instead of a deadline icon: it links to the correct solution you submitted, and its tooltip explains that it came in after the deadline.
 
 ::: tip Last Submitted Solution Before Deadline Counts
 
