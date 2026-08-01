@@ -74,6 +74,30 @@ Je kan ook direct een vraag markeren als beantwoord. Dit is vaak handig als je w
 
 > Terzijde: opmerkingen ondersteunen Markdown, dus je kan gebruik maken van vet, cursief, lijsten, ... Je kan alle Markdown features bekijken in [deze referentie](/nl/references/exercise-description/#markdown).
 
+## Hoe werken AI-conceptantwoorden? <Badge type="tip" text="lesgever" />
+
+Wanneer een student een vraag stelt over zijn of haar code, kan Dodona automatisch een conceptantwoord genereren met een groot taalmodel (LLM). Zo hoef je niet van een leeg tekstvak te vertrekken, maar start je van een voorstel dat je kan bewerken, vervangen of verwijderen.
+
+Als er een conceptantwoord beschikbaar is en nog geen enkele lesgever op de vraag heeft gereageerd, wordt het antwoordveld vooraf ingevuld met het concept. Het is duidelijk gemarkeerd als een voorstel: boven het tekstvak zie je een sterretjesicoon met het label `Voorgesteld antwoord`, en als je over het icoon beweegt, verschijnt de melding `Dit is een conceptopmerking gemaakt door generatieve AI.` Het concept is maar een voorstel: je kan het vrij bewerken, of het wissen en zelf een antwoord schrijven. Er wordt niets naar de student gestuurd tot je zelf het antwoord verstuurt.
+
+![Antwoordveld vooraf ingevuld met het AI-voorgestelde conceptantwoord, met een sterretjesicoon en beoordelingsknoppen boven het tekstvak](./draft-answer-suggested-nl.png)
+
+Naast het label kan je het voorstel beoordelen met de duim omhoog (`Goed antwoord`) of duim omlaag (`Slecht antwoord`). Na het beoordelen verschijnt een optioneel tekstveld waar je je beoordeling kan toelichten. Deze feedback helpt ons om de kwaliteit van de gegenereerde concepten te evalueren, dus we stellen ze erg op prijs.
+
+![Voorgesteld antwoord beoordeeld met duim omhoog, met het optionele tekstveld "Leg je beoordeling uit"](./draft-answer-rated-nl.png)
+
+::: info Privacy
+Om een concept te genereren stuurt Dodona de vraag, de ingediende code van de student, de opgave van de oefening, de programmeertaal en de gefaalde automatische testresultaten naar een externe AI-provider. De naam van de student en andere accountgegevens worden niet meegestuurd. Studenten zien het gegenereerde concept nooit: het verschijnt enkel in jouw antwoordveld, en enkel de tekst die jij effectief verstuurt, wordt aan de student getoond.
+:::
+
+## Hoe schakel ik AI-conceptantwoorden in of uit? <Badge type="tip" text="lesgever" />
+
+Gebruik het potloodje in de bovenste navigatiebalk van je cursus om naar de pagina `bewerken` te gaan. Vink in de sectie `Vragen` het vakje `Genereer automatisch een voorstel voor een antwoord` aan of uit. Vergeet niet om je wijzigingen op te slaan door op de knop `Opslaan` onderaan de pagina te klikken.
+
+![Sectie "Vragen" van het cursus-bewerkformulier met de vakjes "Sta toe dat studenten vragen stellen" en "Genereer automatisch een voorstel voor een antwoord"](./draft-answers-toggle-nl.png)
+
+Conceptantwoorden staan standaard aan, maar er worden enkel concepten gegenereerd als studenten vragen kunnen stellen in de cursus. Meer informatie over deze instellingen vind je in de gids over [cursuseigenschappen](/nl/guides/teachers/creating-a-course/#cursuseigenschappen).
+
 ## Hoe kan ik opmerkingen geven op een oplossing van een student? <Badge type="tip" text="lesgever" />
 
 Als lesgever kan je ook opmerkingen geven op de code van je studenten. Dit kan handig zijn om feedback te geven op hun oplossing, of om een fout aan te duiden.
