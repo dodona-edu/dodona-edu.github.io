@@ -238,10 +238,9 @@ fallbacks).
 
 ## Phase 4 — Screenshot refresh
 
-TOUCH-UP LIST (re-shoot with the fixed manifest crops, needs echo-wrong/correct
-state scenarios): submission-page, feedback-diff, code-annotations in BOTH locales
-(old viewport clips shipped dead margins); en course-page (shows a stale
-"Not yet solved" for Hello World, stale-FK artifact). Then stage F icons.
+TOUCH-UPS + stage F: done (2026-08-01). All planned captures complete except the
+manual trio (dolos, Ufora, ide-plugins desktop) and the not-yet-captured entries for
+the new Phase 5 pages (ASSESS/AI/ST/SB/SEC ids in shots.yaml).
 
 STATUS (2026-08-01): teachers area, FAQ (api-tokens, featured-courses, annotations
 en+nl) done and committed. Students stages A-C done; stage D (EN course pass) in
@@ -272,7 +271,9 @@ in the same pass, new naming convention. Priority order:
 
 ## Phase 5 — New content for coverage gaps
 
-STATUS (2026-08-01): written and pending stacked PRs: assessments/exam-mode guide
+STATUS (2026-08-01, final): ALL pages written. Stacked PRs: assessments #615,
+AI answers #616, statistics #617, plus scratchpad and course-sections branches.
+Previously: assessments/exam-mode guide
 (with availability callout — exam_mode Flipper flag), AI draft answers FAQ entries
 (vague provider phrasing per Bart), course statistics guide. Composite exercises
 struck (internal). Remaining: coding scratchpad + course sections (blocked on

@@ -1975,3 +1975,166 @@ shots:
     must_show:
       - "\"Class progress\" column header"
       - grey started-fraction and coloured correct-fraction in the bars
+
+---
+# Proposed shots for the new student sandbox page (guides/students/scratchpad).
+# NOT yet merged into screenshots/shots.yaml — the page currently ships without
+# images, so add the matching ![...] references to en/nl index.md in the same
+# pass that captures these.
+#
+# Capture notes (from the dev-and-media cookbook):
+# - The sandbox opens as an off-canvas `#scratchpad-offcanvas`: code editor +
+#   Run/output on the left, the exercise description in an <iframe> on the
+#   right. To crop to just code+output, measure the iframe's left edge and crop
+#   the full-page screenshot to [offcanvas.left .. iframe.left].
+# - The Run button lives in a shadow DOM: click it via a browser_snapshot ref
+#   (the snapshot pierces shadow DOM), not a plain CSS query.
+# - The first run loads Pyodide + packages and takes ~10-20s. The Run button is
+#   rendered before Pyodide is actually ready (papyros#1064), so wait for the
+#   run to produce output before shooting, don't trust the button appearing.
+# - Needs a published Python exercise (scratch_pad_supported? = exercise +
+#   programming_language python). SB-4 additionally needs a submission whose
+#   feedback has a test case with stdin/statements (the Debug button only
+#   renders for those).
+
+defaults:
+  user: 1
+
+shots:
+  # ---------------- students/scratchpad ----------------
+  - id: SB-1
+    page: guides/students/scratchpad
+    file: to-sandbox-button
+    url: /{locale}/activities/{python-exercise-id}/
+    crop:
+      selector: '.card-actions.card-actions-sticky'
+      pad: 8
+    must_show:
+      - the outlined "To sandbox" / "Naar sandbox" button with clipboard icon
+      - the filled submit button next to it
+
+  - id: SB-2
+    page: guides/students/scratchpad
+    file: sandbox-run
+    url: /{locale}/activities/{python-exercise-id}/
+    # Hook: open the offcanvas via #scratchpad-offcanvas-show-btn, type a short
+    # program that prints something and reads input(), click Run via snapshot
+    # ref (shadow DOM), answer the input prompt, wait for the finished output.
+    crop:
+      selector: '#scratchpad-offcanvas'
+    must_show:
+      - '"Python sandbox" header'
+      - code editor with the short program, Run/Debug buttons, "Finalize and submit" / "Naar indienbox"
+      - input field and output panel with the produced output
+      - Description tab with the exercise description on the right
+
+  - id: SB-3
+    page: guides/students/scratchpad
+    file: sandbox-debugger
+    url: /{locale}/activities/{python-exercise-id}/
+    # Hook: as SB-2 but click the Debug run mode; wait for the Debugger tab to
+    # activate and the trace to render, drag the slider a few steps in.
+    crop:
+      selector: '#scratchpad-offcanvas'
+    must_show:
+      - Debugger tab active on the right with the step slider and arrow buttons
+      - variables/frames shown for the current step
+      - highlighted current line in the editor on the left
+      - '"Stop debugging" / "Stop debugger" button'
+
+  - id: SB-4
+    page: guides/students/scratchpad
+    file: feedback-debug-button
+    url: /{locale}/submissions/{python-submission-id}/
+    # Needs a judged Python submission whose feedback contains a test case
+    # with stdin or statements; the Debug button only renders for those.
+    crop:
+      selector: '.group'   # the test-case card containing the tutorlink
+      pad: 8
+    must_show:
+      - a test-case card from the feedback page
+      - the "Debug" / "Debuggen" button with the bug-play icon
+
+---
+# Proposed shots for the sections + course sidebar pages (Phase 5).
+# To be merged into screenshots/shots.yaml by the shot owner — NOT applied here.
+#
+# All four shots show localised UI, so each is captured per locale
+# (…-en.png / …-nl.png), same as the existing manifest entries.
+#
+# Required new state scenario (bin/rails runner in the dodona checkout):
+#   course11-sections[.rb nl]   course 11 gets two sections ("Basics" /
+#                               "Basisbegrippen" and "Loops" / "Lussen");
+#                               series 51+52 go into the first section,
+#                               series 53+54 into the second (set section_id
+#                               and matching order via reorder semantics).
+#                               Builds on course11-naming so series names are
+#                               presentable. SEC-4 additionally needs one
+#                               empty section ("Advanced" / "Gevorderd") —
+#                               either a flag on this scenario or a separate
+#                               course11-empty-section scenario.
+#
+# SEC-2 wants visible per-series progress bars, so capture as a student-ish
+# member with some submissions (zeus/user 1 as course admin also sees them if
+# they have activity statuses in course 11; otherwise seed a member with
+# submissions and capture as that user).
+
+shots:
+  # ---------------- students/courses ----------------
+  - id: SEC-1
+    page: guides/students/courses
+    file: course-sections
+    url: /{locale}/courses/11/
+    state: [course11-naming, course11-sections]
+    crop:
+      union: ['.series-section:nth-of-type(1)', '.series-section:nth-of-type(2)']
+      pad: 8
+    must_show:
+      - two section headers with their names
+      - "series/activity counts in a header (e.g. \"2 series · 10 activities\")"
+      - Collapse button next to a section header
+      - at least one series card under a section header
+
+  - id: SEC-2
+    page: guides/students/courses
+    file: course-sidebar
+    url: /{locale}/courses/11/
+    state: [course11-naming, course11-sections]
+    crop:
+      selector: '#scrollspy-nav'
+      pad: 8
+    must_show:
+      - section names as group headers in the sidebar
+      - series entries nested under their section
+      - a per-series progress bar with coloured segments
+      - the active (highlighted) series link
+
+  # ---------------- teachers/exercise-series-management ----------------
+  - id: SEC-3
+    page: guides/teachers/exercise-series-management
+    file: manage-series-sections
+    url: /{locale}/courses/11/manage_series/
+    state: [course11-naming, course11-sections]
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - reorder hint above the table (Drag the handles to reorder…)
+      - a section row with its name input and "series · activities" meta
+      - Add series and Delete section buttons on the section row
+      - series rows with drag handles under the section row
+      - Add section button below the table
+
+  # Admin-only empty-section state on the course page. Optional: the prose
+  # describes it without an image; include only if the page feels bare.
+  - id: SEC-4
+    page: guides/teachers/exercise-series-management
+    file: section-empty
+    url: /{locale}/courses/11/
+    state: [course11-naming, course11-sections] # + empty "Advanced" section, see header note
+    crop:
+      selector: '.series-section.is-empty'
+      pad: 8
+    must_show:
+      - empty section header with its name
+      - "\"This section has no series yet.\" message"
+      - New series button
