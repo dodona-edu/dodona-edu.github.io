@@ -12,6 +12,7 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Ik heb een cursus gemaakt voor mijn studenten, maar slechts een aantal van hen kan deze zien. Wat is er aan de hand?](./accounts/#ik-heb-een-cursus-gemaakt-voor-mijn-studenten-maar-slechts-een-aantal-van-hen-kan-deze-zien-wat-is-er-aan-de-hand)
 - [Mijn naam of e-mailadres is verkeerd, hoe kan ik het veranderen?](./accounts/#mijn-naam-of-e-mailadres-is-verkeerd-hoe-kan-ik-het-veranderen)
 - [Ik krijg een waarschuwing dat mijn tijdzone verkeerd is, wat moet ik doen?](./accounts/#ik-krijg-een-waarschuwing-dat-mijn-tijdzone-verkeerd-is-wat-moet-ik-doen)
+- [Hoe krijg ik lesgeversrechten?](./accounts/#hoe-krijg-ik-lesgeversrechten)
 
 ## API en API tokens
 - [Wat is een API token?](./api-tokens/#wat-is-een-api-token)
@@ -25,9 +26,16 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe installeer ik de VS Code-extensie?](./ide-plugins/#hoe-installeer-ik-de-vs-code-extensie)
 - [Hoe kan ik de VS Code-extensie gebruiken?](./ide-plugins/#hoe-kan-ik-de-vs-code-extensie-gebruiken)
 
+## Notificaties
+- [Wanneer krijg ik notificaties?](./notifications/#wanneer-krijg-ik-notificaties)
+- [Hoe markeer ik notificaties als gelezen of verwijder ik ze?](./notifications/#hoe-markeer-ik-notificaties-als-gelezen-of-verwijder-ik-ze)
+- [Wat is de aankondigingsbanner bovenaan de pagina?](./notifications/#wat-is-de-aankondigingsbanner-bovenaan-de-pagina)
+
 ## Oefeningen en leesactiviteiten
-- [Wat is een concept?](./activities/#wat-is-een-concept)
+- [Wat is een conceptactiviteit?](./activities/#wat-is-een-conceptactiviteit)
 - [Hoe maak ik nieuwe oefeningen aan?](./activities/#hoe-maak-ik-nieuwe-oefeningen-aan)
+- [Hoe markeer ik een leesactiviteit als gelezen?](./activities/#hoe-markeer-ik-een-leesactiviteit-als-gelezen)
+- [Wat betekenen de statussen naast activiteiten?](./activities/#wat-betekenen-de-statussen-naast-activiteiten)
 
 ## Uitgelichte cursussen
 - [Wat is een uitgelichte cursus?](./featured-courses/#wat-is-een-uitgelichte-cursus)

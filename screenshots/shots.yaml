@@ -2140,3 +2140,48 @@ shots:
       - empty section header with its name
       - "\"This section has no series yet.\" message"
       - New series button
+
+---
+# Small-topics shots (feat/docs-small-topics pages). None captured yet; states are
+# light: favourite via CourseMembership#favorite, a seeded notification, the seeded
+# announcement, archived via a past-year course if one exists (else skip archived).
+defaults:
+  user: 5
+shots:
+  - id: SM-favorites
+    page: guides/students/courses
+    file: favorite-courses
+    url: /{locale}/
+    crop: { selector: 'TODO-favorites-row' }
+    must_show: [Favorites row eyebrow, heart on a course card]
+  - id: SM-calendar-menu
+    page: guides/students/courses
+    file: course-calendar-menu
+    url: /{locale}/courses/29/
+    crop: { selector: 'TODO-card-footer' }
+    must_show: [open kebab menu, Add course to calendar item]
+  - id: SM-archived-banner
+    page: guides/students/courses
+    file: course-archived-banner
+    url: /{locale}/courses/TODO/
+    crop: { selector: 'TODO-banner' }
+    must_show: [This course is archived banner]
+  - id: SM-notification-bell
+    page: faq/notifications
+    file: notification-bell
+    url: /{locale}/
+    crop: { selector: 'TODO-bell-dropdown' }
+    keepNavbar: true
+    must_show: [bell with unread dot, dropdown with a notification, View all link]
+  - id: SM-notifications-page
+    page: faq/notifications
+    file: notifications-page
+    url: /{locale}/notifications/
+    crop: { selector: 'TODO-list' }
+    must_show: [notification rows with read toggle and delete, Clear notifications]
+  - id: SM-announcement
+    page: faq/notifications
+    file: announcement-banner
+    url: /{locale}/
+    crop: { selector: '#active-announcement' }
+    must_show: [announcement text, dismiss cross]

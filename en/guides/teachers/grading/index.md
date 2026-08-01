@@ -93,8 +93,9 @@ Therefore, it may happen that the progress bars are already partially colored af
 
 ::: tip
 Before you start grading, you might want to check for plagiarism.
-Clicking on `Detect plagiarism` will open a new tab with our plagiarism detection tool [dolos](https://dolos.ugent.be/).
+Clicking on `Detect plagiarism` will open a new tab with our plagiarism detection tool [Dolos](https://dolos.ugent.be/).
 Here you can easily see if students have submitted suspiciously similar solutions for a given exercise.
+For a walkthrough of the Dolos workflow and what the report shows, see [detecting plagiarism with Dolos](../course-management/#detecting-plagiarism-with-dolos).
 :::
 
 ### Detailed Overview

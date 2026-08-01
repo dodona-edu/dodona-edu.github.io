@@ -133,6 +133,22 @@ Dodona displays a **warning symbol** next to your submission status for an exerc
 If you submit a solution for an exercise from an exercise series **after the deadline expires**, your submission status for the exercise in the exercise series will never change as a result. Your submission status for an exercise in an exercise series is determined based on your last submitted solution before the deadline.
 :::
 
+## Favourite Courses
+
+On your homepage, each course you are registered for is shown as a course card. At the bottom of such a card, you will find a heart icon with which you can mark the course as a favourite (`Favorite`). Your favourite courses appear in a separate `Favorites` row at the top of your homepage, above the other courses, giving you quick access to the courses you work in most often. This row is always shown, regardless of the academic year you selected, so it is also a handy way to keep a course from a previous academic year close at hand. Click the heart icon again (`Unfavorite`) to remove a course from your favourites.
+
+## Course Deadlines in Your Calendar
+
+Dodona can provide the deadlines of a course as a calendar feed (iCalendar) that you can add to your own calendar application. On the course page, click the three dots at the bottom of the card with the course description and choose `Add course to calendar`.
+
+This link opens in your default calendar application (such as Apple Calendar or Outlook), which then subscribes to the feed. Alternatively, you can copy the link address and add it to your calendar application manually; in Google Calendar, for example, you can add a calendar via `From URL`. The feed contains an event for each exercise series with a deadline that is visible to you, with a link back to that series on Dodona. Because your calendar application subscribes to the feed, new or changed deadlines appear in your calendar automatically.
+
+## Archived Courses
+
+Courses from past academic years are archived on Dodona after a while. An archived course becomes read-only: you can no longer register for it or submit new solutions, but all your previous work remains available. You can still browse the exercises, review your submissions, and consult the feedback you received.
+
+When you open an archived course, a banner at the top of the page reminds you of this: `This course is archived`. The course card on your homepage shows a similar message. Archived courses are also hidden by default in the [overview of all courses](#how-to-find-a-course); disable the `Hide archived` filter there to include them in the results.
+
 ## Unsubscribing from a Course
 
 If you navigate to a course for which you are [registered](#registering-for-a-course) or for which you still have a registration request open, you will see a `Unregister` button (or `Withdraw registration request`) below the course description on the course page, which you can use to unsubscribe from the course.

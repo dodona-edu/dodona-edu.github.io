@@ -51,10 +51,21 @@ You can also access these submissions in other ways:
 * An overview of the submissions for a **specific user** can be found by clicking on `Solutions` on the [course page of that user](../user-management/#tracking-students).
 
 In the submissions overview, you will find a button `Retest submissions` at the top right. This button allows you to [retest](../series-export-and-retest/#retest-submissions) all solutions in the overview.
-You'll also see a button to `Detect plagiarism` next to it on the submissions overview for a specific exercise. This will export the latest submission for each student to our plagiarism detection tool [dolos](https://dolos.ugent.be/).
+
+You can also filter for the `Most recent submissions per user` by clicking on the three dots to the right of the filter bar. Here you'll also find the option to `automatically reload submissions` every 5 seconds, which can be useful when you want to follow the progress of your students in real-time.
+
+### Detecting Plagiarism with Dolos
+
+On the submissions overview for a specific exercise, you will find a `Detect plagiarism` button next to `Retest submissions`.
 
 ![Retest submissions and Detect plagiarism buttons above the submissions overview filtered to a single exercise](./submissions-detect-plagiarism-en.png)
 
+Clicking this button collects the most recent submission of each student for the exercise and sends them to [Dolos](https://dolos.ugent.be/), our plagiarism detection tool for source code. Dolos runs as a separate service: the report opens in a new tab, and on Dodona the button changes into `Open plagiarism report` so you can return to the report later. Dolos supports most commonly used programming languages; for exercises in a language it does not support, the button is disabled.
+
+The report gives you a high-level view of how similar the submitted solutions are: it lists the pairs of submissions with the highest similarity and visualises clusters of similar solutions in a graph. This makes it easy to spot suspiciously similar submissions, but the interpretation remains up to you: high similarity is a signal to investigate, not proof of plagiarism. You can learn more about Dolos and how to read its reports on [dolos.ugent.be](https://dolos.ugent.be/).
+
 ![Dolos plagiarism report](/images/dolos.png)
 
-You can also filter for the `Most recent submissions per user` by clicking on the three dots to the right of the filter bar. Here you'll also find the option to `automatically reload submissions` every 5 seconds, which can be useful when you want to follow the progress of your students in real-time.
+::: tip Dolos in evaluations
+The `Detect plagiarism` button is also available on the overview page of an [evaluation](../grading/#evaluation-progress), so you can check for plagiarism before you start grading a task, test, or exam.
+:::

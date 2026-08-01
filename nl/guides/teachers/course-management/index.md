@@ -52,10 +52,21 @@ Deze oplossingen kan je ook op andere manieren bereiken:
 * Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `Oplossingen` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
 In het oplossingenoverzicht vind je rechtsboven de knop `Oplossingen hertesten`. Met deze knop kan je [alle oplossingen uit het overzicht hertesten](../series-export-and-retest/#oplossing-hertesten).
-Op het oplossingenoverzicht van een specifieke oefening vind je daarnaast de knop `Plagiaat detecteren`. Hiermee exporteer je de meest recente oplossing van elke student naar onze detectietool voor plagiaat in broncode, [dolos](https://dolos.ugent.be/).
+
+Rechts van de filterbalk vind je een knop met 3 puntjes. Hier kan je filteren op de `Meest recente correcte oplossing per gebruiker`, en de inzendingen `automatisch laten herladen` om de voortgang van je studenten in real-time op te volgen.
+
+### Plagiaat detecteren met Dolos
+
+Op het oplossingenoverzicht van een specifieke oefening vind je naast `Oplossingen hertesten` ook de knop `Plagiaat detecteren`.
 
 ![Knoppen Oplossingen hertesten en Plagiaat detecteren boven het oplossingenoverzicht gefilterd op één oefening](./submissions-detect-plagiarism-nl.png)
 
+Als je op deze knop klikt, verzamelt Dodona de meest recente oplossing van elke student voor de oefening en stuurt die door naar [Dolos](https://dolos.ugent.be/), onze detectietool voor plagiaat in broncode. Dolos draait als een aparte dienst: het rapport opent in een nieuw tabblad, en op Dodona verandert de knop in `Rapport bekijken` zodat je later naar het rapport kan terugkeren. Dolos ondersteunt de meeste gangbare programmeertalen; voor oefeningen in een taal die niet ondersteund wordt, is de knop uitgeschakeld.
+
+Het rapport geeft je een overzicht op hoog niveau van hoe gelijkaardig de ingediende oplossingen zijn: het lijst de paren oplossingen met de hoogste gelijkenis op en visualiseert clusters van gelijkaardige oplossingen in een graaf. Zo spoor je verdacht gelijkaardige oplossingen makkelijk op, maar de interpretatie blijft aan jou: een hoge gelijkenis is een signaal om verder te onderzoeken, geen bewijs van plagiaat. Meer informatie over Dolos en het lezen van de rapporten vind je op [dolos.ugent.be](https://dolos.ugent.be/).
+
 ![Dolos-plagiaatrapport](/images/dolos.png)
 
-Rechts van de filterbalk vind je een knop met 3 puntjes. Hier kan je filteren op de `Meest recente correcte oplossing per gebruiker`, en de inzendingen `automatisch laten herladen` om de voortgang van je studenten in real-time op te volgen.
+::: tip Dolos in evaluaties
+De knop `Plagiaat detecteren` vind je ook op de overzichtspagina van een [evaluatie](../grading/#evaluatievoortgang), zodat je op plagiaat kan controleren voor je begint met het verbeteren van een taak, toets of examen.
+:::
