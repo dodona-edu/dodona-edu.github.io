@@ -11,7 +11,7 @@ Deze handleidingen behandelen alles wat je als leerkracht nodig hebt, van je eer
 
 1. [Van start](./getting-started/): een quickstart van begin tot einde, van aanmelden en lesgeversrechten aanvragen tot een eerste cursus met oefeningen.
 2. [Een nieuwe cursus aanmaken](./creating-a-course/): start van een lege cursus of kopieer een bestaande, en bepaal hoe studenten zich registreren.
-3. [Oefeningenreeksenbeheer](./exercise-series-management/): bouw het leerpad van je cursus door reeksen aan te maken en er oefeningen aan toe te voegen.
+3. [Oefeningenreeksenbeheer](./exercise-series-management/): bouw het leerpad van je cursus door reeksen aan te maken, er oefeningen aan toe te voegen en ze te groeperen in secties.
 4. [Reeksinstellingen](./series-settings/): een referentie voor alle instellingen van een reeks, zoals deadlines, zichtbaarheid en geheime links.
 5. [Oplossingen exporteren en hertesten](./series-export-and-retest/): exporteer de oplossingen van een reeks als zip-bestand of hertest ze na een aanpassing aan een oefening.
 6. [Toetsen en examens](./assessments/): neem een toets of examen af met een toetsreeks, volg de sessies op en geef de resultaten vrij.

@@ -28,7 +28,7 @@ Klik na het aanpassen op de afwerkknop in de rechterbovenhoek van het paneel om 
 
 ## Een cursus opbouwen
 
-Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Oefeningenreeksen`. Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management/).
+Als cursusbeheerder kan je voor de cursus een leerpad uitstippelen. Het leerpad wordt op de cursuspagina weergegeven onder de hoofding `Leerpad`. Aan het leerpad kan je oefeningenreeksen toevoegen waaraan je oefeningen kunt koppelen, en die reeksen kan je groeperen in [secties](../exercise-series-management/#reeksen-groeperen-in-secties) om grotere cursussen te structureren. Voor meer uitleg over wat je allemaal kan doen, zie [oefeningenreeksen beheren](../exercise-series-management/).
 
 ## Cursusgebruikers beheren
 

@@ -11,7 +11,7 @@ These guides cover everything you need as a teacher, from your first sign-in to 
 
 1. [Getting started](./getting-started/): an end-to-end quickstart, from signing in and requesting teacher rights to a first course with exercises.
 2. [Creating a course](./creating-a-course/): start from an empty course or copy an existing one, and control how students register.
-3. [Exercise series management](./exercise-series-management/): build the learning path of your course by creating series and filling them with exercises.
+3. [Exercise series management](./exercise-series-management/): build the learning path of your course by creating series, filling them with exercises, and grouping them into sections.
 4. [Series settings](./series-settings/): a reference for all series settings, including deadlines, visibility, and secret links.
 5. [Series export and retest](./series-export-and-retest/): export the submissions of a series as a zip file or retest them after changing an exercise.
 6. [Assessments and exams](./assessments/): run a test or exam with an assessment series, monitor sessions, and publish the results.

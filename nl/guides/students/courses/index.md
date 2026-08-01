@@ -53,7 +53,7 @@ Naast de mogelijkheid om zelf naar een cursus te navigeren en op de cursuspagina
 
 ## Cursuscomponenten
 
-Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder kan je verschillende oefeningenreeksen zien die elk bestaan uit een of meerdere oefeningen.
+Een cursus bestaat uit verschillende componenten. Bovenaan de cursuspagina zie je de beschrijving van een cursus. Daaronder, onder de hoofding `Leerpad`, zie je de verschillende oefeningenreeksen van de cursus, die elk bestaan uit een of meerdere oefeningen. In grotere cursussen kunnen die reeksen gegroepeerd worden in [secties](#secties). Rechts geeft [een zijbalk](#de-zijbalk) een overzicht van alle reeksen in de cursus.
 
 ![Cursuspagina met de headerkaart en een reekskaart met haar deadline en oefeningentabel](./course-page-nl.png)
 
@@ -83,6 +83,22 @@ In het menu van een oefeningenreeks vind je de volgende opties:
 - `Alle opgaven en leesactiviteiten bekijken`: Toont een overzicht waarin de namen en beschrijvingen van alle oefeningen uit de oefeningenreeks netjes onder elkaar staan. Onder elke beschrijving staat ook je [indienstatus](#indienstatus) voor de oefening. Als je op de indienstatus drukt dan navigeer je naar de oplossing die gebruikt werd om de indienstatus te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
 
 - `Mijn oplossingen exporteren`: Downloadt een ZIP-bestand dat voor elke oefening uit de oefeningenreeks de oplossing bevat die gebruikt werd om je [indienstatus](#indienstatus) voor de oefening te bepalen (als je effectief een oplossing hebt ingediend op basis waarvan de indienstatus kon bepaald worden).
+
+### Secties
+
+In grotere cursussen kan de cursusbeheerder oefeningenreeksen groeperen in **secties**, bijvoorbeeld een sectie per hoofdstuk of per deel van de cursus. Een sectie wordt op de cursuspagina weergegeven als een hoofding boven haar reeksen, samen met het aantal reeksen en leeractiviteiten dat ze bevat. Met de knop `Inklappen` naast de hoofding kan je een sectie dichtklappen, wat handig is om het overzicht te bewaren in een lange cursus; klik op `Uitklappen` om ze weer te openen.
+
+![Cursuspagina met twee secties, elk weergegeven als een hoofding met het aantal reeksen en leeractiviteiten boven haar reekskaarten](./course-sections-nl.png)
+
+
+### De zijbalk
+
+Op grotere schermen zie je rechts op de cursuspagina een zijbalk met alle oefeningenreeksen van de cursus, gegroepeerd onder de naam van hun sectie. Klik in de zijbalk op de naam van een reeks of sectie om ernaartoe te springen op de pagina; terwijl je scrolt, markeert de zijbalk de reeks waar je op dat moment naar kijkt. In cursussen met veel secties houdt de zijbalk enkel de sectie waarin je aan het lezen bent uitgeklapt.
+
+Als je geregistreerd bent voor de cursus, dan toont de zijbalk bij elke reeks ook een voortgangsbalk, met per oefening een gekleurd segment dat aangeeft of je ze hebt opgelost, geprobeerd of nog niet gestart bent. Beweeg met je muis over de voortgangsbalk om de details te zien; de tooltip op de teller ernaast toont bijvoorbeeld `2 van 10 activiteiten opgelost`. Optionele reeksen tonen geen voortgangsbalk.
+
+![Zijbalk van de cursus met reeksen gegroepeerd onder sectiehoofdingen, met bij elke reeks een voortgangsbalk](./course-sidebar-nl.png)
+
 
 ### Indienstatus
 

@@ -52,7 +52,7 @@ In addition to the option to navigate to a course yourself and complete the regi
 
 ## Course Components
 
-A course consists of various components. At the top of the course page, you will see the description of a course. Below that, you can see different exercise series, each consisting of one or more exercises.
+A course consists of various components. At the top of the course page, you will see the description of a course. Below that, under the heading `Learning path`, you can see the different exercise series of the course, each consisting of one or more exercises. In larger courses, these series can be grouped into [sections](#sections). On the right, [a sidebar](#the-course-sidebar) gives an overview of all series in the course.
 
 ![Course page with the header card and a series card showing its deadline and exercise table](./course-page-en.png)
 
@@ -82,6 +82,22 @@ In the menu of an exercise series, you will find the following options:
 - `Show all learning activity descriptions`: Displays an overview where the names and descriptions of all exercises from the exercise series are neatly listed. Under each description, you will also see your [submission status](#submission-status) for the exercise. If you click on the submission status, you will navigate to the solution used to determine the submission status (if you have effectively submitted a solution based on which the submission status could be determined).
 
 - `Export my submissions`: Downloads a ZIP file containing the submission for each exercise in the exercise series that was used to determine your [submission status](#submission-status) for the exercise (if you have effectively submitted a solution based on which the submission status could be determined).
+
+### Sections
+
+In larger courses, the course administrator can group exercise series into **sections**, for example one section per chapter or per part of the course. A section is displayed on the course page as a header above its series, together with the number of series and learning activities it contains. You can fold a section closed with the `Collapse` button next to its header, which is useful to keep the overview in a long course; click `Expand` to open it again.
+
+![Course page with two sections, each shown as a header with series and activity counts above its series cards](./course-sections-en.png)
+
+
+### The Course Sidebar
+
+On larger screens, the right side of the course page shows a sidebar listing all exercise series of the course, grouped under their section names. Click the name of a series or section in the sidebar to jump to it on the page; while you scroll, the sidebar highlights the series you are currently looking at. In courses with many sections, the sidebar only keeps the section you are reading expanded.
+
+If you are registered for the course, the sidebar also shows a progress bar for each series, with one coloured segment per exercise indicating whether you solved it, attempted it, or have not started it yet. Hover over the progress bar to see the details; the tooltip on the counter next to it reads, for example, `2 of 10 activities solved`. Optional series do not show a progress bar.
+
+![Course sidebar with series grouped under section headers, each series showing a progress bar](./course-sidebar-en.png)
+
 
 ### Submission Status
 
