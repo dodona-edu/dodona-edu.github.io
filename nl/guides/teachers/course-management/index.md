@@ -12,7 +12,7 @@ Een cursus wordt opgebouwd als een leerpad met oefeningen die gebundeld worden i
 
 ## Beheersrechten
 
-Cursusbeheerders hebben binnen een cursus speciale rechten. Ze kunnen de cursus aanpassen naar hun wens en de voortgang van de studenten die voor de cursus zijn ingeschreven opvolgen. De gebruiker die de cursus aanmaakt wordt standaard aangesteld tot cursusbeheerder. Hij kan op zijn beurt andere extra cursusbeheerder aanstellen onder de gebruikers die voor de cursus zijn ingeschreven.
+Cursusbeheerders hebben binnen een cursus speciale rechten. Ze kunnen de cursus aanpassen naar hun wens en de voortgang van de studenten die voor de cursus zijn ingeschreven opvolgen. De gebruiker die de cursus aanmaakt wordt standaard aangesteld tot cursusbeheerder. Hij kan op zijn beurt andere extra cursusbeheerder aanstellen onder de gebruikers die voor de cursus zijn ingeschreven. Om op te volgen hoe je studenten het doen, biedt Dodona ook een reeks [statistieken en visualisaties](../statistics/) per cursus en per reeks.
 
 ## Cursus bewerken
 

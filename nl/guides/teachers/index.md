@@ -18,7 +18,8 @@ Deze handleidingen behandelen alles wat je als leerkracht nodig hebt, van je eer
 7. [Cursusbeheer](./course-management/): beheer beheerdersrechten, cursusinstellingen, vragen en oplossingen.
 8. [Gebruikersbeheer](./user-management/): volg registraties op, beheer rechten en organiseer studenten met labels.
 9. [Taken en toetsen verbeteren](./grading/): evalueer oplossingen manueel en geef studenten feedback en punten.
-10. [Dodona en Ufora](./ufora/): voeg Dodona-oefeningen toe aan Ufora, de leeromgeving van de Universiteit Gent.
+10. [Statistieken en visualisaties](./statistics/): volg de activiteit van je studenten op met cursusstatistieken en de grafieken per reeks.
+11. [Dodona en Ufora](./ufora/): voeg Dodona-oefeningen toe aan Ufora, de leeromgeving van de Universiteit Gent.
 
 Wil je zelf oefeningen aanmaken? De handleidingen over [oefeningen aanmaken](/nl/guides/exercises/creating-exercises/introduction/) leggen uit hoe je oefeningen schrijft en publiceert op Dodona.
 

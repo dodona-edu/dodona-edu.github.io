@@ -1850,28 +1850,27 @@ shots:
       - help text "Use an LLM to generate a draft response to questions. Students never see the draft; it's only a suggestion for your reply."
 
 ---
-# Proposed shot entries for guides/teachers/statistics (NOT merged into
-# screenshots/shots.yaml — a concurrent agent owns that file).
+# Shot entries for guides/teachers/statistics.
 #
-# Notes for whoever merges these:
-# - Course 11 ("Visualisation Test", renamed to "Programming" by the
-#   course11-naming scenario) is the natural target: it is seeded with
+# - Course 11 ("Visualisation Test", renamed to "Programming"/"Programmeren"
+#   by the course11-naming scenario) is the target: it is seeded with
 #   submissions precisely for the visualisations.
 # - ST-1/ST-2 (punchcard + heatmap) live on the course statistics page. The
-#   data is computed by a background job that the controller enqueues on first
-#   request and the frontend polls every second until it is ready. The dev
-#   instance used for the Phase 4 shots has no background job worker, so these
-#   two graphs will stay on "Loading..." forever there. Either run a worker
-#   (bin/rails jobs:work) for this pass, or precompute the matrices with a
-#   state scenario (Submission.punchcard_matrix / heatmap_matrix via
-#   bin/rails runner) before shooting.
-# - ST-3..ST-6 are tabs inside a series card on the course page: they need an
-#   interaction hook that clicks the matching `.graph-toggle` button
-#   (data-type: violin | stacked | timeseries | ctimeseries) for the chosen
-#   series and waits for the SVG to render (the data is fetched live; wait for
-#   `#stats-container-<id> svg`, plus absence of the "not enough data" text).
-# - Series graphs only count student submissions on non-optional series, so
-#   pick a series in course 11 that has seeded student submissions.
+#   data is computed by a background job (UpdatePunchcardMatrixJob /
+#   UpdateHeatmapMatrixJob) that the controller enqueues on first request and
+#   the frontend polls every second until it is ready. A Solid Queue worker
+#   is running on the capture instance, so hooks/course-statistics.mjs polls
+#   the container for an <svg> instead of trusting the fixed post-goto wait.
+# - ST-3..ST-6 are tabs inside a series card on the course page:
+#   hooks/course-statistics.mjs clicks the matching `.graph-toggle` button
+#   (data-type: violin | stacked | timeseries | ctimeseries) for series 52
+#   and waits for `#stats-container-52 svg`. Series 52 ("Conditions") was
+#   picked over series 51 (which has more submissions) because series 51's
+#   tab pane does not activate on click in the current app build (verified:
+#   the pane keeps class "tab-pane" instead of "tab-pane active show") --
+#   flag for an app-side follow-up, not a hook bug.
+# - Series graphs only count student submissions on non-optional series;
+#   none of course 11's series 51-54 are optional.
 # - Graph text (axis labels, tooltips, legend) is localised, so every shot
 #   needs -en and -nl variants.
 
@@ -1882,9 +1881,9 @@ shots:
     file: course-statistics-punchcard
     url: /{locale}/courses/11/statistics/
     state: [course11-naming]
-    # Needs: delayed-job worker running (or precomputed punchcard matrix).
+    hook: hooks/course-statistics.mjs
     crop:
-      union: ['#punchcard-container']
+      union: ['h3:has-text("Punchcard")', '#punchcard-container']
       pad: 8
     must_show:
       - "\"Punchcard\" section header with the clock icon"
@@ -1896,9 +1895,9 @@ shots:
     file: course-statistics-heatmap
     url: /{locale}/courses/11/statistics/
     state: [course11-naming]
-    # Needs: delayed-job worker running (or precomputed heatmap matrix).
+    hook: hooks/course-statistics.mjs
     crop:
-      union: ['#heatmap-container']
+      union: ['h3:has-text("Heatmap")', '#heatmap-container']
       pad: 8
     must_show:
       - "\"Heatmap\" section header with the calendar icon"
@@ -1911,10 +1910,9 @@ shots:
     file: series-graph-violin
     url: /{locale}/courses/11/
     state: [course11-naming]
-    interact: click `.graph-toggle[data-type="violin"]` of a series with
-      student submissions, wait for `#stats-container-<seriesId> svg`
+    hook: hooks/course-statistics.mjs
     crop:
-      union: ['#series-card-<seriesId>']
+      union: ['#series-card-52']
       pad: 8
     must_show:
       - graph title "Number of submissions per user" + info icon
@@ -1927,9 +1925,9 @@ shots:
     file: series-graph-stacked-status
     url: /{locale}/courses/11/
     state: [course11-naming]
-    interact: click `.graph-toggle[data-type="stacked"]`, wait for the SVG
+    hook: hooks/course-statistics.mjs
     crop:
-      union: ['#series-card-<seriesId>']
+      union: ['#series-card-52']
       pad: 8
     must_show:
       - graph title "Distribution of submission statuses"
@@ -1941,9 +1939,9 @@ shots:
     file: series-graph-timeseries
     url: /{locale}/courses/11/
     state: [course11-naming]
-    interact: click `.graph-toggle[data-type="timeseries"]`, wait for the SVG
+    hook: hooks/course-statistics.mjs
     crop:
-      union: ['#series-card-<seriesId>']
+      union: ['#series-card-52']
       pad: 8
     must_show:
       - graph title "Submissions over time"
@@ -1956,9 +1954,9 @@ shots:
     file: series-graph-cumulative-timeseries
     url: /{locale}/courses/11/
     state: [course11-naming]
-    interact: click `.graph-toggle[data-type="ctimeseries"]`, wait for the SVG
+    hook: hooks/course-statistics.mjs
     crop:
-      union: ['#series-card-<seriesId>']
+      union: ['#series-card-52']
       pad: 8
     must_show:
       - graph title "Users with at least one correct submission"
