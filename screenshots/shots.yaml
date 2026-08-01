@@ -1977,25 +1977,44 @@ shots:
       - grey started-fraction and coloured correct-fraction in the bars
 
 ---
-# Proposed shots for the new student sandbox page (guides/students/scratchpad).
-# NOT yet merged into screenshots/shots.yaml — the page currently ships without
-# images, so add the matching ![...] references to en/nl index.md in the same
-# pass that captures these.
+# Shots for the student sandbox page (guides/students/scratchpad). The page
+# ships without images -- add the matching ![...] references to en/nl
+# index.md in the same pass that captures these.
 #
-# Capture notes (from the dev-and-media cookbook):
+# Target: activity 576967365 ("ISBN", series 141/Conditions, course 29) --
+# a published Python exercise, so scratch_pad_supported? is true. Reached via
+# the bare /activities/<id>/ URL (no course/series in the path), which
+# matters: ActivitiesController#show only sets @course from a course_id
+# param, so ActivityPresenter's language (course.language || ...) falls back
+# straight to the URL locale here -- unlike the courses/29/series/... shots
+# elsewhere in this file, these do NOT need the students-course29-dutch
+# language flip for the NL pass (verified against the controller and live).
+# course29-repo-access is likewise not needed: that grant unblocks students,
+# but the signed-in user for this section is zeus (defaults.user: 1), who
+# has access regardless (verified live, 200 without the grant).
+#
+# SB-4 needs a judged Python submission whose feedback has a context with
+# stdin or statements -- FeedbackContext#_renderTutorLink only renders the
+# Debug button when submissionContext.scratchPadSupported AND
+# (context.data.statements || context.data.stdin). Submission 1350 (student
+# 5, "ISBN", course 29, status correct) already has a context with
+# statements set, so no throwaway submission is needed.
+#
+# Capture notes (from the dev-and-media cookbook, refined against the live
+# instance):
 # - The sandbox opens as an off-canvas `#scratchpad-offcanvas`: code editor +
 #   Run/output on the left, the exercise description in an <iframe> on the
-#   right. To crop to just code+output, measure the iframe's left edge and crop
-#   the full-page screenshot to [offcanvas.left .. iframe.left].
-# - The Run button lives in a shadow DOM: click it via a browser_snapshot ref
-#   (the snapshot pierces shadow DOM), not a plain CSS query.
-# - The first run loads Pyodide + packages and takes ~10-20s. The Run button is
-#   rendered before Pyodide is actually ready (papyros#1064), so wait for the
-#   run to produce output before shooting, don't trust the button appearing.
-# - Needs a published Python exercise (scratch_pad_supported? = exercise +
-#   programming_language python). SB-4 additionally needs a submission whose
-#   feedback has a test case with stdin/statements (the Debug button only
-#   renders for those).
+#   right.
+# - The Run/Debug buttons (md-filled-button/md-outlined-button) sit a few
+#   shadow roots deep (p-code-runner > p-button-lint). Playwright's own
+#   locators pierce open shadow roots natively, so a scoped text locator
+#   reaches them directly -- no manual shadow-root walk needed here (that's
+#   only for document.querySelector-based code, e.g. style injection).
+# - The Run button is clickable (and queues a run) before Pyodide has
+#   actually finished loading. The reliable signal is the `backend-ready`
+#   attribute p-code-runner reflects once papyros.runner.backendReady
+#   resolves (requires @dodona/papyros >= 4.8.0); wait on that, not on the
+#   button appearing. See hooks/sandbox.mjs.
 
 defaults:
   user: 1
@@ -2005,7 +2024,7 @@ shots:
   - id: SB-1
     page: guides/students/scratchpad
     file: to-sandbox-button
-    url: /{locale}/activities/{python-exercise-id}/
+    url: /{locale}/activities/576967365/
     crop:
       selector: '.card-actions.card-actions-sticky'
       pad: 8
@@ -2016,10 +2035,12 @@ shots:
   - id: SB-2
     page: guides/students/scratchpad
     file: sandbox-run
-    url: /{locale}/activities/{python-exercise-id}/
-    # Hook: open the offcanvas via #scratchpad-offcanvas-show-btn, type a short
-    # program that prints something and reads input(), click Run via snapshot
-    # ref (shadow DOM), answer the input prompt, wait for the finished output.
+    url: /{locale}/activities/576967365/
+    hook: hooks/sandbox.mjs
+    # Hook opens the offcanvas, waits for backend-ready, types a short
+    # program that prints something and reads input(), clicks Run, answers
+    # the input prompt, and waits for the real produced output (not just the
+    # run finishing) before the shot is taken.
     crop:
       selector: '#scratchpad-offcanvas'
     must_show:
@@ -2031,9 +2052,11 @@ shots:
   - id: SB-3
     page: guides/students/scratchpad
     file: sandbox-debugger
-    url: /{locale}/activities/{python-exercise-id}/
-    # Hook: as SB-2 but click the Debug run mode; wait for the Debugger tab to
-    # activate and the trace to render, drag the slider a few steps in.
+    url: /{locale}/activities/576967365/
+    hook: hooks/sandbox.mjs
+    # Hook types a short flat (unindented) program, clicks Debug, waits for
+    # the frame picker to attach, then jumps to the last step so real
+    # frames/variables are showing instead of the frame-0 placeholder card.
     crop:
       selector: '#scratchpad-offcanvas'
     must_show:
@@ -2045,11 +2068,10 @@ shots:
   - id: SB-4
     page: guides/students/scratchpad
     file: feedback-debug-button
-    url: /{locale}/submissions/{python-submission-id}/
-    # Needs a judged Python submission whose feedback contains a test case
-    # with stdin or statements; the Debug button only renders for those.
+    url: /{locale}/submissions/1350/
+    wait: 3000 # client-side feedback table fetches + renders after load
     crop:
-      selector: '.group'   # the test-case card containing the tutorlink
+      selector: '.group:has(.tutorlink)' # the test-case card containing the Debug button
       pad: 8
     must_show:
       - a test-case card from the feedback page

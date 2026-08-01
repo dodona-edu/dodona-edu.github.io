@@ -11,6 +11,8 @@ Voor Python-oefeningen heeft Dodona een ingebouwde **sandbox**: een venster waar
 
 De sandbox is beschikbaar op de pagina van elke Python-oefening. Onderaan het paneel waarmee je een oplossing indient, naast de indienknop, vind je de knop `Naar sandbox`. Als je erop klikt, opent de `Python sandbox` in een paneel bovenop de oefeningpagina.
 
+![Indienbalk met de knop Naar sandbox naast Indienen](./to-sandbox-button-nl.png)
+
 De sandbox bestaat uit twee helften:
 
 - Links vind je een **code-editor** met een knop `Uitvoeren`, een veld om **invoer** te geven en de **uitvoer** van je code.
@@ -25,6 +27,8 @@ De sandbox voert Python volledig in je browser uit. De eerste keer dat je code u
 ## Code uitvoeren
 
 Schrijf je code in de editor links en klik op `Uitvoeren`. De uitvoer van je programma verschijnt in het uitvoerpaneel eronder. Terwijl je code loopt, kan je ze op elk moment onderbreken met de knop `Stop`.
+
+![Python-sandbox met een kort programma, de geproduceerde uitvoer en het invoerveld](./sandbox-run-nl.png)
 
 Nog enkele dingen die de sandbox kan:
 
@@ -51,9 +55,13 @@ Klik op de knop `Debuggen` naast `Uitvoeren` om de debugger te starten. De recht
 - Bij elke stap toont de debugger welke regel wordt uitgevoerd en hoe je programma informatie opbouwt en bewaart: de variabelen die op dat moment bestaan en hun waarden.
 - Klik op `Stop debugger` om terug te keren naar de gewone modus.
 
+![Tab Debugger met de schuifbalk, pijltjesknoppen, de variabelen van de huidige stap en de gemarkeerde huidige regel in de editor](./sandbox-debugger-nl.png)
+
 ### Een fout testgeval debuggen
 
 Je kan de debugger ook rechtstreeks starten vanuit de feedback op een oplossing. Op de feedbackpagina van een Python-oefening staat bij testgevallen een knop `Debuggen`. Als je erop klikt, opent de sandbox met de code van je oplossing, wordt dat specifieke testgeval uitgevoerd met dezelfde invoer die de judge gebruikte, en opent de tab `Debugger`. Boven de debugger zie je onder `Testgeval dat gedebugd wordt` welk testgeval je aan het doorlopen bent. Zo kan je stap voor stap volgen waar je oplossing precies de mist ingaat bij een gefaalde test.
+
+![Testgeval op de feedbackpagina met de knop Debuggen](./feedback-debug-button-nl.png)
 
 ## Beperkingen
 

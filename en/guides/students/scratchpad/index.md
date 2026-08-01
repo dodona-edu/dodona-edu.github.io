@@ -11,6 +11,8 @@ For Python exercises, Dodona has a built-in **sandbox**: a window in which you c
 
 The sandbox is available on the page of every Python exercise. At the bottom of the panel where you submit your solution, next to the submit button, you will find the `To sandbox` button. Clicking it opens the `Python sandbox` in a panel on top of the exercise page.
 
+![Hand-in action bar with the To sandbox button next to Submit](./to-sandbox-button-en.png)
+
 The sandbox consists of two halves:
 
 - On the left you will find a **code editor** with a `Run` button, a field to provide **input**, and the **output** of your code.
@@ -25,6 +27,8 @@ The sandbox runs Python entirely in your browser. The first time you run code, y
 ## Running Code
 
 Write your code in the editor on the left and click `Run`. The output of your program appears in the output panel below. While your code is running, you can interrupt it at any time with the `Stop` button.
+
+![Python sandbox with a short program, its produced output, and the input field](./sandbox-run-en.png)
 
 Some more things the sandbox can do:
 
@@ -51,9 +55,13 @@ Click the `Debug` button next to `Run` to start the debugger. The right half of 
 - At each step, the debugger shows which line is being executed and how your program builds and stores information: the variables that exist at that point and their values.
 - Click `Stop debugging` to return to normal mode.
 
+![Debugger tab with the step slider, arrow buttons, the current step's variables, and the highlighted current line in the editor](./sandbox-debugger-en.png)
+
 ### Debugging a Failed Test Case
 
 You can also start the debugger straight from the feedback on a submission. On the feedback page of a Python exercise, test cases show a `Debug` button. Clicking it opens the sandbox with the code of your submission, runs that specific test case with the same input the judge used, and opens the `Debugger` tab. Above the debugger, under `Test case being debugged`, you can see which test case you are stepping through. This way you can follow, step by step, exactly where your submission goes wrong for a failed test.
+
+![Test case on the feedback page with the Debug button](./feedback-debug-button-en.png)
 
 ## Limitations
 
