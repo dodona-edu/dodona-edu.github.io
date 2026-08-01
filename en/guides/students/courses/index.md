@@ -87,7 +87,7 @@ In the menu of an exercise series, you will find the following options:
 
 In larger courses, the course administrator can group exercise series into **sections**, for example one section per chapter or per part of the course. A section is displayed on the course page as a header above its series, together with the number of series and learning activities it contains. You can fold a section closed with the `Collapse` button next to its header, which is useful to keep the overview in a long course; click `Expand` to open it again.
 
-<!-- screenshot pending SEC-1: ./course-sections-en.png — alt: "Course page with two sections, each shown as a header with series and activity counts above its series cards" -->
+![Course page with two sections, each shown as a header with series and activity counts above its series cards](./course-sections-en.png)
 
 
 ### The Course Sidebar
@@ -96,7 +96,7 @@ On larger screens, the right side of the course page shows a sidebar listing all
 
 If you are registered for the course, the sidebar also shows a progress bar for each series, with one coloured segment per exercise indicating whether you solved it, attempted it, or have not started it yet. Hover over the progress bar to see the details; the tooltip on the counter next to it reads, for example, `2 of 10 activities solved`. Optional series do not show a progress bar.
 
-<!-- screenshot pending SEC-2: ./course-sidebar-en.png — alt: "Course sidebar with series grouped under section headers, each series showing a progress bar" -->
+![Course sidebar with series grouped under section headers, each series showing a progress bar](./course-sidebar-en.png)
 
 
 ### Submission Status

@@ -2056,28 +2056,25 @@ shots:
       - the "Debug" / "Debuggen" button with the bug-play icon
 
 ---
-# Proposed shots for the sections + course sidebar pages (Phase 5).
-# To be merged into screenshots/shots.yaml by the shot owner — NOT applied here.
+# Shots for the sections + course sidebar pages (Phase 5).
 #
 # All four shots show localised UI, so each is captured per locale
 # (…-en.png / …-nl.png), same as the existing manifest entries.
 #
-# Required new state scenario (bin/rails runner in the dodona checkout):
-#   course11-sections[.rb nl]   course 11 gets two sections ("Basics" /
-#                               "Basisbegrippen" and "Loops" / "Lussen");
-#                               series 51+52 go into the first section,
-#                               series 53+54 into the second (set section_id
-#                               and matching order via reorder semantics).
-#                               Builds on course11-naming so series names are
-#                               presentable. SEC-4 additionally needs one
-#                               empty section ("Advanced" / "Gevorderd") —
-#                               either a flag on this scenario or a separate
-#                               course11-empty-section scenario.
+# State scenario (bin/rails runner in the dodona checkout):
+#   course11-sections.setup.rb [nl] [empty] / .teardown.rb -- course 11 gets
+#   two sections ("Basics" / "Basisbegrippen" and "Loops" / "Lussen"); series
+#   51+52 go into the first section, series 53+54 into the second (section_id
+#   and order set via the same semantics as CoursesController#reorder_series).
+#   Builds on course11-naming so series names are presentable. Pass "empty"
+#   to additionally create the empty "Advanced" / "Gevorderd" third section
+#   SEC-4 needs; leave it off for SEC-1..3 so their shots stay uncluttered.
 #
-# SEC-2 wants visible per-series progress bars, so capture as a student-ish
-# member with some submissions (zeus/user 1 as course admin also sees them if
-# they have activity statuses in course 11; otherwise seed a member with
-# submissions and capture as that user).
+# SEC-2 wants visible per-series progress bars: zeus (user 1) is a course
+# admin in course 11 but has zero submissions there, so its progress bars
+# would be all-grey/unstarted. User 126 is a real member with a mixed spread
+# of accepted/started/regressed statuses across all four series -- SEC-1 and
+# SEC-2 capture as that user instead of the user: 1 default.
 
 shots:
   # ---------------- students/courses ----------------
@@ -2086,6 +2083,7 @@ shots:
     file: course-sections
     url: /{locale}/courses/11/
     state: [course11-naming, course11-sections]
+    user: 126
     crop:
       union: ['.series-section:nth-of-type(1)', '.series-section:nth-of-type(2)']
       pad: 8
@@ -2100,9 +2098,12 @@ shots:
     file: course-sidebar
     url: /{locale}/courses/11/
     state: [course11-naming, course11-sections]
+    user: 126
+    # The nav element itself is stretched to full page height; bound the crop to
+    # its actual content instead.
     crop:
-      selector: '#scrollspy-nav'
-      pad: 8
+      union: ['#scrollspy-nav > *:first-child', '#scrollspy-nav > *:last-child']
+      pad: 16
     must_show:
       - section names as group headers in the sidebar
       - series entries nested under their section
@@ -2124,13 +2125,14 @@ shots:
       - series rows with drag handles under the section row
       - Add section button below the table
 
-  # Admin-only empty-section state on the course page. Optional: the prose
-  # describes it without an image; include only if the page feels bare.
+  # Admin-only empty-section state on the course page. The prose alone
+  # covers it, but the dashed empty-state box is a distinct enough visual
+  # that it earns a shot; included in the page after that sentence.
   - id: SEC-4
     page: guides/teachers/exercise-series-management
     file: section-empty
     url: /{locale}/courses/11/
-    state: [course11-naming, course11-sections] # + empty "Advanced" section, see header note
+    state: [course11-naming, course11-sections] # run course11-sections.setup.rb with the "empty" arg
     crop:
       selector: '.series-section.is-empty'
       pad: 8

@@ -88,7 +88,7 @@ In het menu van een oefeningenreeks vind je de volgende opties:
 
 In grotere cursussen kan de cursusbeheerder oefeningenreeksen groeperen in **secties**, bijvoorbeeld een sectie per hoofdstuk of per deel van de cursus. Een sectie wordt op de cursuspagina weergegeven als een hoofding boven haar reeksen, samen met het aantal reeksen en leeractiviteiten dat ze bevat. Met de knop `Inklappen` naast de hoofding kan je een sectie dichtklappen, wat handig is om het overzicht te bewaren in een lange cursus; klik op `Uitklappen` om ze weer te openen.
 
-<!-- screenshot pending SEC-1: ./course-sections-nl.png — alt: "Cursuspagina met twee secties, elk weergegeven als een hoofding met het aantal reeksen en leeractiviteiten boven haar reekskaarten" -->
+![Cursuspagina met twee secties, elk weergegeven als een hoofding met het aantal reeksen en leeractiviteiten boven haar reekskaarten](./course-sections-nl.png)
 
 
 ### De zijbalk
@@ -97,7 +97,7 @@ Op grotere schermen zie je rechts op de cursuspagina een zijbalk met alle oefeni
 
 Als je geregistreerd bent voor de cursus, dan toont de zijbalk bij elke reeks ook een voortgangsbalk, met per oefening een gekleurd segment dat aangeeft of je ze hebt opgelost, geprobeerd of nog niet gestart bent. Beweeg met je muis over de voortgangsbalk om de details te zien; de tooltip op de teller ernaast toont bijvoorbeeld `2 van 10 activiteiten opgelost`. Optionele reeksen tonen geen voortgangsbalk.
 
-<!-- screenshot pending SEC-2: ./course-sidebar-nl.png — alt: "Zijbalk van de cursus met reeksen gegroepeerd onder sectiehoofdingen, met bij elke reeks een voortgangsbalk" -->
+![Zijbalk van de cursus met reeksen gegroepeerd onder sectiehoofdingen, met bij elke reeks een voortgangsbalk](./course-sidebar-nl.png)
 
 
 ### Indienstatus

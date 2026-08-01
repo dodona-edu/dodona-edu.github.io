@@ -73,7 +73,7 @@ Het leerpad van een grote cursus kan behoorlijk lang worden. Om er meer structuu
 
 Om een sectie aan te maken, ga je naar de pagina `Reeksen beheren` en klik je op de knop `Sectie toevoegen` onder de tabel. Onderaan de lijst verschijnt een nieuwe sectie met de naam `Nieuwe sectie`, waarvan de naam geselecteerd is zodat je meteen de gewenste naam kan typen. Om een sectie later te hernoemen, klik je in de tabel op haar naam en typ je de nieuwe naam; die wordt opgeslagen zodra je op Enter drukt of het veld verlaat.
 
-<!-- screenshot pending SEC-3: ./manage-series-sections-nl.png — alt: "Pagina Reeksen beheren met een sectierij boven haar reeksrijen, en de knop Sectie toevoegen onder de tabel" -->
+![Pagina Reeksen beheren met een sectierij boven haar reeksrijen, en de knop Sectie toevoegen onder de tabel](./manage-series-sections-nl.png)
 
 
 Secties en reeksen vormen op de pagina `Reeksen beheren` één lijst, en de hint boven de tabel legt uit hoe ze zich tot elkaar verhouden: `Versleep de handvaten om te herordenen. Reeksen horen bij de sectie erboven.` Om een reeks in een sectie te plaatsen, sleep je ze dus onder de hoofding van die sectie; om ze uit elke sectie te halen, sleep je ze boven de eerste sectiehoofding. Reeksen boven de eerste sectiehoofding verschijnen gewoon bovenaan de cursuspagina, buiten elke sectie, dus je kan gegroepeerde en niet-gegroepeerde reeksen vrij combineren. Het aantal reeksen en leeractiviteiten naast elke sectienaam wordt bijgewerkt terwijl je sleept.
@@ -81,6 +81,8 @@ Secties en reeksen vormen op de pagina `Reeksen beheren` één lijst, en de hint
 Elke sectierij heeft ook een knop `Reeks toevoegen`, waarmee je rechtstreeks een nieuwe reeks in die sectie aanmaakt. En op de cursuspagina van een cursus die nog geen reeksen heeft, vind je een kaart `Een sectie toevoegen` om van daaruit je eerste sectie aan te maken.
 
 Een sectie zonder reeksen is enkel zichtbaar voor cursusbeheerders: op de cursuspagina zien zij de sectie met de boodschap `Deze sectie heeft nog geen reeksen.` en een knop `Nieuwe reeks`, terwijl studenten ze helemaal niet zien. Studenten zien ook nooit een sectie waarvan alle reeksen voor hen verborgen zijn.
+
+![Lege sectie op de cursuspagina, enkel zichtbaar voor cursusbeheerders, met de boodschap "Deze sectie heeft nog geen reeksen." en een knop Nieuwe reeks](./section-empty-nl.png)
 
 Om een sectie te verwijderen, klik je op `Sectie verwijderen` in haar rij op de pagina `Reeksen beheren`. Zoals het bevestigingsvenster aangeeft, worden de reeksen erin niet verwijderd: ze verliezen enkel hun groepering en blijven in de cursus staan.
 

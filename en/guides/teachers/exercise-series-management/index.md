@@ -82,7 +82,7 @@ The learning path of a large course can become quite long. To give it more struc
 
 To create a section, go to the `Manage series` page and click the `Add section` button below the table. A new section named `New section` appears at the bottom of the list, with its name selected so you can immediately type the name you want. To rename a section later, click its name in the table and type the new name; it is saved as soon as you press Enter or leave the field.
 
-<!-- screenshot pending SEC-3: ./manage-series-sections-en.png — alt: "Manage series page with a section row above its series rows, and the Add section button below the table" -->
+![Manage series page with a section row above its series rows, and the Add section button below the table](./manage-series-sections-en.png)
 
 
 Sections and series form a single list on the `Manage series` page, and the hint above the table explains how they relate: `Drag the handles to reorder. Series belong to the section above them.` So to move a series into a section, drag it below that section's header; to take it out of any section, drag it above the first section header. Series above the first section header simply appear at the top of the course page, outside any section, so you can freely combine grouped and ungrouped series. The series and activity counts next to each section name update while you drag.
@@ -90,6 +90,8 @@ Sections and series form a single list on the `Manage series` page, and the hint
 Each section row also has an `Add series` button, which creates a new series directly in that section. And on the course page of a course that has no series yet, you will find an `Add a section` card to create your first section from there.
 
 A section without series is only visible to course administrators: on the course page, they see it with the message `This section has no series yet.` and a `New series` button, while students do not see it at all. Students also never see a section whose series are all hidden from them.
+
+![Empty section on the course page, visible only to course administrators, with the "This section has no series yet." message and a New series button](./section-empty-en.png)
 
 To delete a section, click `Delete section` on its row on the `Manage series` page. As the confirmation dialog says, the series in it will not be deleted: they only lose their grouping and stay in the course.
 
