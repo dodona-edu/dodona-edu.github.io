@@ -7,7 +7,7 @@ order: 5
 # Exercise series management
 
 The learning path of a course consists of various exercise series, each containing different exercises.
-Course administrators can create, edit, delete, and reorder these series.
+Course administrators can create, edit, delete, and reorder these series, and group them into [sections](#group-series-into-sections).
 
 ## Create an exercise series
 
@@ -75,6 +75,23 @@ It can be useful to give series in a course a specific order, for example, to so
 By default, they will be sorted in reverse chronological order based on when you add them.
 This way, students will always find the most recent series at the top, and thus have to scroll less to find the latest exercises.
 In the series management panel, you can reorder the series by dragging the hamburger icon on the left side.
+
+## Group series into sections
+
+The learning path of a large course can become quite long. To give it more structure, you can group series into **sections**: named groups of series, for example one section per chapter or per part of the course. On the course page, each section is displayed as a header above its series, showing how many series and learning activities it contains, and students can collapse a section they are done with. The sidebar on the right of the course page groups the series per section as well, so students can jump straight to the part they are working on. The [courses guide for students](/en/guides/students/courses/#sections) describes what this looks like on their side.
+
+To create a section, go to the `Manage series` page and click the `Add section` button below the table. A new section named `New section` appears at the bottom of the list, with its name selected so you can immediately type the name you want. To rename a section later, click its name in the table and type the new name; it is saved as soon as you press Enter or leave the field.
+
+<!-- screenshot pending SEC-3: ./manage-series-sections-en.png — alt: "Manage series page with a section row above its series rows, and the Add section button below the table" -->
+
+
+Sections and series form a single list on the `Manage series` page, and the hint above the table explains how they relate: `Drag the handles to reorder. Series belong to the section above them.` So to move a series into a section, drag it below that section's header; to take it out of any section, drag it above the first section header. Series above the first section header simply appear at the top of the course page, outside any section, so you can freely combine grouped and ungrouped series. The series and activity counts next to each section name update while you drag.
+
+Each section row also has an `Add series` button, which creates a new series directly in that section. And on the course page of a course that has no series yet, you will find an `Add a section` card to create your first section from there.
+
+A section without series is only visible to course administrators: on the course page, they see it with the message `This section has no series yet.` and a `New series` button, while students do not see it at all. Students also never see a section whose series are all hidden from them.
+
+To delete a section, click `Delete section` on its row on the `Manage series` page. As the confirmation dialog says, the series in it will not be deleted: they only lose their grouping and stay in the course.
 
 ## The series menu
 

@@ -27,7 +27,7 @@ After making changes, click the finish button in the upper right corner of the p
 
 ## Building a Course
 
-As a course administrator, you can outline a learning path for the course. The learning path is displayed on the course page under the heading `Exercise Series`. You can add exercise series to the learning path, to which you can link exercises. For more explanation about what you can do, see [managing exercise series](../exercise-series-management/).
+As a course administrator, you can outline a learning path for the course. The learning path is displayed on the course page under the heading `Learning path`. You can add exercise series to the learning path, to which you can link exercises, and group those series into [sections](../exercise-series-management/#group-series-into-sections) to structure larger courses. For more explanation about what you can do, see [managing exercise series](../exercise-series-management/).
 
 ## Managing Course Users
 

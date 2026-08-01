@@ -6,7 +6,7 @@ order: 5
 
 # Oefeningenreeksenbeheer
 
-Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillende oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen.
+Het leerpad van een cursus bestaat uit verschillende oefeningenreeksen die elk opnieuw bestaan uit verschillende oefeningen. Cursusbeheerders kunnen deze reeksen aanmaken, bewerken, verwijderen en herordenen, en ze groeperen in [secties](#reeksen-groeperen-in-secties).
 
 ## Oefeningenreeks aanmaken
 
@@ -66,6 +66,23 @@ Uiteraard is het mogelijk om een reeks te verwijderen uit een cursus. De actie v
 ![Pagina Reeksen beheren met sleepgreep, bewerk- en verwijderknop per rij](./series-delete-nl.png)
 
 Het kan handig zijn om reeksen in een cursus een bepaalde volgorde te geven, om ze bijvoorbeeld te sorteren volgens moeilijkheidsgraad. Standaard zullen ze gesorteerd worden in omgekeerd chronologische volgorde op basis van wanneer je ze toevoegt. Zo moeten studenten minder scrollen als ze een reeks willen maken. In het reeksen-beherenpaneel kan je in de tabel van de reeds toegevoegde reeksen ze verslepen via het icoontje aan de linkerkant.
+
+## Reeksen groeperen in secties
+
+Het leerpad van een grote cursus kan behoorlijk lang worden. Om er meer structuur in te brengen kan je reeksen groeperen in **secties**: benoemde groepen van reeksen, bijvoorbeeld een sectie per hoofdstuk of per deel van de cursus. Op de cursuspagina wordt elke sectie weergegeven als een hoofding boven haar reeksen, met daarbij het aantal reeksen en leeractiviteiten dat ze bevat, en studenten kunnen een sectie waarmee ze klaar zijn inklappen. Ook de zijbalk rechts op de cursuspagina groepeert de reeksen per sectie, zodat studenten meteen naar het deel kunnen springen waaraan ze werken. De [cursushandleiding voor studenten](/nl/guides/students/courses/#secties) beschrijft hoe dit er aan hun kant uitziet.
+
+Om een sectie aan te maken, ga je naar de pagina `Reeksen beheren` en klik je op de knop `Sectie toevoegen` onder de tabel. Onderaan de lijst verschijnt een nieuwe sectie met de naam `Nieuwe sectie`, waarvan de naam geselecteerd is zodat je meteen de gewenste naam kan typen. Om een sectie later te hernoemen, klik je in de tabel op haar naam en typ je de nieuwe naam; die wordt opgeslagen zodra je op Enter drukt of het veld verlaat.
+
+<!-- screenshot pending SEC-3: ./manage-series-sections-nl.png — alt: "Pagina Reeksen beheren met een sectierij boven haar reeksrijen, en de knop Sectie toevoegen onder de tabel" -->
+
+
+Secties en reeksen vormen op de pagina `Reeksen beheren` één lijst, en de hint boven de tabel legt uit hoe ze zich tot elkaar verhouden: `Versleep de handvaten om te herordenen. Reeksen horen bij de sectie erboven.` Om een reeks in een sectie te plaatsen, sleep je ze dus onder de hoofding van die sectie; om ze uit elke sectie te halen, sleep je ze boven de eerste sectiehoofding. Reeksen boven de eerste sectiehoofding verschijnen gewoon bovenaan de cursuspagina, buiten elke sectie, dus je kan gegroepeerde en niet-gegroepeerde reeksen vrij combineren. Het aantal reeksen en leeractiviteiten naast elke sectienaam wordt bijgewerkt terwijl je sleept.
+
+Elke sectierij heeft ook een knop `Reeks toevoegen`, waarmee je rechtstreeks een nieuwe reeks in die sectie aanmaakt. En op de cursuspagina van een cursus die nog geen reeksen heeft, vind je een kaart `Een sectie toevoegen` om van daaruit je eerste sectie aan te maken.
+
+Een sectie zonder reeksen is enkel zichtbaar voor cursusbeheerders: op de cursuspagina zien zij de sectie met de boodschap `Deze sectie heeft nog geen reeksen.` en een knop `Nieuwe reeks`, terwijl studenten ze helemaal niet zien. Studenten zien ook nooit een sectie waarvan alle reeksen voor hen verborgen zijn.
+
+Om een sectie te verwijderen, klik je op `Sectie verwijderen` in haar rij op de pagina `Reeksen beheren`. Zoals het bevestigingsvenster aangeeft, worden de reeksen erin niet verwijderd: ze verliezen enkel hun groepering en blijven in de cursus staan.
 
 ## Het reeks-menu
 
