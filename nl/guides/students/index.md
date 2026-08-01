@@ -14,5 +14,6 @@ Ben je nieuw op Dodona? Volg dan de handleidingen in deze volgorde:
 3. [Cursussen op Dodona](./courses/): registreren voor een cursus, navigeren doorheen de oefeningenreeksen en deadlines opvolgen.
 4. [Oefeningen oplossen](./exercises/): navigeren naar oefeningen, oplossingen indienen en vragen stellen over je code.
 5. [Feedback begrijpen](./feedback/): de statussen van je oplossingen en de gedetailleerde feedback van de judge interpreteren.
+6. [De Python-sandbox](./scratchpad/): Python-code uitvoeren en debuggen rechtstreeks in je browser.
 
 Zoek je een snel antwoord? De FAQ behandelt veelgestelde vragen over [accounts](/nl/faq/accounts/), [vragen en opmerkingen bij je code](/nl/faq/annotations/) en de [IDE-plugins](/nl/faq/ide-plugins/).

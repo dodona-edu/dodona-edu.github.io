@@ -14,5 +14,6 @@ If you are new to Dodona, follow the guides in this order:
 3. [Courses on Dodona](./courses/): register for a course, navigate its exercise series, and keep track of deadlines.
 4. [Solving Exercises](./exercises/): navigate to exercises, submit solutions, and ask questions about your code.
 5. [Understanding Feedback](./feedback/): interpret the submission statuses and the detailed feedback of the judge.
+6. [The Python Sandbox](./scratchpad/): run and debug Python code directly in your browser.
 
 Looking for a quick answer instead? The FAQ covers common questions about [accounts](/en/faq/accounts/), [questions and comments on your code](/en/faq/annotations/), and the [IDE plugins](/en/faq/ide-plugins/).
