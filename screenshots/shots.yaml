@@ -1786,30 +1786,24 @@ shots:
       - status panel phase "Stopped, awaiting publication"
 
 ---
-# Proposed shots for the AI draft answers FAQ entries
-# (en+nl faq/annotations: "How do AI draft answers work?" and
-# "How do I enable or disable AI draft answers?").
-# NOT captured yet; the FAQ text currently references no images.
+# Shots for the AI draft answers FAQ entries (en+nl faq/annotations: "How do AI draft
+# answers work?" and "How do I enable or disable AI draft answers?"). Captured 2026-08;
+# wired into both locales of that page.
 #
-# State prerequisite: a Question annotation with an associated LlmResponse on a
-# submission in course 11. In development DraftResponseJob short-circuits and
-# stores a placeholder response ('<StudentAnswer>Draft response generated for
-# development</StudentAnswer>'), so a scenario script can simply create a
-# question as a student user and run DraftResponseJob.perform_now(question)
-# (or create the LlmResponse directly with a realistic-looking response text —
-# preferred, so the shot shows a plausible draft instead of the dev
-# placeholder). The course must have questions_enabled and
-# draft_answers_enabled (both default on). The viewing user must be a course
-# admin of that course (user 1 / zeus works).
-# Suggested scenario id: question-with-draft[.rb nl] — locale-parameterized
-# because the LlmResponse draft text itself should match the shot locale.
+# State: state/question-with-draft.setup.rb seeds a global Question from Sofie (user
+# 5) plus a directly-created, realistic-looking LlmResponse (not the dev placeholder)
+# on Submission 1206 -- an already-judged, annotation-free, stable seeded fixture on
+# course 11, so no dynamic-id handoff is needed; the url below points straight at it.
+# hooks/ai-draft-answer.mjs drives the reply-form interaction (open it, and for AI-2
+# rate it) that a plain goto() can't.
 
 shots:
   - id: AI-1
     page: faq/annotations
     file: draft-answer-suggested
-    url: /{locale}/submissions/{submission_with_question}/
+    url: /{locale}/submissions/1206/#code
     state: [course11-naming, question-with-draft]
+    hook: hooks/ai-draft-answer.mjs
     # Open the reply form on the question thread first: click the fake reply
     # input under the question (placeholder shows a sparkle: "✨Reply...").
     # The form opens prefilled with the draft only while no teacher reply
@@ -1827,8 +1821,9 @@ shots:
   - id: AI-2
     page: faq/annotations
     file: draft-answer-rated
-    url: /{locale}/submissions/{submission_with_question}/
+    url: /{locale}/submissions/1206/#code
     state: [course11-naming, question-with-draft]
+    hook: hooks/ai-draft-answer.mjs
     # Same form as AI-1, after clicking the thumbs-up button: the icon fills
     # (mdi-thumb-up) and the optional comment input appears and takes focus.
     crop:
