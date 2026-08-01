@@ -39,6 +39,8 @@ On an exercise page, below the panel with the exercise description, there is a s
 
 ![Hand-in panel with an empty editor and the highlighted submit button](./handin-editor-en.png)
 
+For Python exercises, the `To sandbox` button next to the submit button opens [the Python sandbox](../scratchpad/), where you can run and debug your code in the browser before submitting it.
+
 ::: tip Use an IDE
 
 Although you can program directly in the editor on Dodona, we do not recommend solving all exercises there. Instead, we advise using an [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE). IDEs provide more support during the writing, execution, testing, and debugging of source code. This way, you learn to apply your programming skills generically to solve problems other than just the exercises on Dodona.
