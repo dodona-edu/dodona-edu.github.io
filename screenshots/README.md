@@ -63,3 +63,36 @@ Review the diff (`git diff --stat`, view the images) before committing, and run
   external services (the Dolos shot is manual for that reason).
 
 Full background: the `dev-and-media.md` cookbook in the dodona-comms Claude plugin.
+
+## Manual captures still owed
+
+Three image sets cannot be captured from the dev server and need a human:
+
+- **Dolos report** (`images/dolos.png`, shared by both locales): the "Detect
+  plagiarism" flow submits a real export and opens a report on the external
+  dolos.ugent.be service, so capture it from an instance where that is appropriate,
+  then crop the report view.
+- **Ufora / D2L** (`en|nl/guides/teachers/ufora/`, three images per locale, 2020
+  vintage): external Brightspace UI; re-verify the whole flow while re-shooting —
+  the content tooling has changed since the shots were taken.
+- **IDE plugins** (`faq/ide-plugins/`, 10 desktop-app images): the UI is
+  locale-independent, so capture ONE set and store it once (`images/ide-plugins/`),
+  referenced from both locales. One consistent OS and light IDE theme, latest
+  PyCharm (New UI) and VS Code, a throwaway account's token, no personal paths in
+  window chrome, no hand-drawn markers — crop tight instead:
+  1. `pc-settings` — the menu entry opening PyCharm's Settings (reconcile the docs
+     prose with the platform you shoot).
+  2. `pc-install` — Settings > Plugins > Marketplace, "Dodona" result with Install.
+  3. `pc-new-exercise` — right-click project > New > Dodona Exercise (neutral
+     project name).
+  4. `pc-link` — generated solution file, line-1 exercise URL (must be
+     `https://dodona.be/...`).
+  5. `pc-check-mark` — the blue Submit to Dodona toolbar button with tooltip.
+  6. `pc-correct` — the accepted-solution balloon with More details.
+  7. `vs-market` — VS Code Extensions view, Dodona extension row.
+  8. `vs-token` — the Dodona: Api Token setting, empty input.
+  9. `vs-submit` — command palette matching Submit to Dodona.
+  10. `vs-correct` — the "Solution was correct!" toast with View results.
+
+  Per image, check the current plugin's label text still matches the docs prose and
+  fix the prose in the same PR when it doesn't.
