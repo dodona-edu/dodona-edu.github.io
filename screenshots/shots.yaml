@@ -1702,18 +1702,24 @@ shots:
 #   assessments-exam-over      (to be written) all sessions stopped, exam_released
 #                              false -- drives ASSESS-5's "Publish assessment" button.
 #
-# The exam series only gets an id when its scenario first runs: the SERIES_ID
-# placeholders below must be filled in after writing assessments-exam-series (have the
-# setup script print the id, like grading-wizard-series52 does for its evaluation).
+# The exam series only gets an id when its scenario first runs, and that id is not a
+# stable fixture the way series 51-54/140/141/52 are: assessments-exam-series.teardown.rb
+# destroys the series again at the end of the capture chunk (course 11 needs to come
+# back clean), so a hardcoded id would go stale the next time this manifest is used to
+# recapture these shots. Same handoff as `dynamicSubmission` in students-interact.mjs:
+# the setup script writes the id to the shared JSON state file
+# (/tmp/dodona-docs-capture-state.json) and hooks/assessments.mjs reads it, navigating to
+# the real per-shot URL and substituting the `{seriesId}` token below into crop.selector.
 
 defaults:
   user: 1
+  hook: hooks/assessments.mjs
 
 shots:
-  - id: ASSESS-1 # not yet captured (needs assessments-exam-series + SERIES_ID)
+  - id: ASSESS-1
     page: guides/teachers/assessments
     file: assessment-options
-    url: /{locale}/series/SERIES_ID/edit
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real series edit URL
     state: [assessments-exam-series]
     crop:
       selector: '#exam_mode_section'
@@ -1723,24 +1729,24 @@ shots:
       - Restrict Dodona to assessment content checkbox (checked)
       - Automatically stop assessment sessions checkbox (checked)
 
-  - id: ASSESS-2 # not yet captured (needs assessments-exam-series + SERIES_ID)
+  - id: ASSESS-2
     page: guides/teachers/assessments
     file: assessment-start
     url: /{locale}/courses/11/
     user: 5
     state: [assessments-exam-series]
     crop:
-      selector: '#series-card-SERIES_ID'
+      selector: '#series-card-{seriesId}'
     must_show:
       - '"How this assessment works" callout with the four/five explanation items'
       - academic-integrity logging notice
       - password input ("Enter password") + Start assessment button
       - no exercise list visible on the card
 
-  - id: ASSESS-3 # not yet captured (needs assessments-exam-sessions + SERIES_ID)
+  - id: ASSESS-3
     page: guides/teachers/assessments
     file: assessment-overview
-    url: /{locale}/series/SERIES_ID/assessment_overview
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real assessment_overview URL
     state: [assessments-exam-series, assessments-exam-sessions]
     viewport: { width: 1600, height: 1500 }
     crop:
@@ -1753,10 +1759,10 @@ shots:
       - sessions table with Started at/Stopped at values, per-row stop/reopen/timeline
         buttons and a "Closed before starting" row
 
-  - id: ASSESS-4 # not yet captured (needs assessments-exam-sessions + SERIES_ID)
+  - id: ASSESS-4
     page: guides/teachers/assessments
     file: assessment-timeline
-    url: /{locale}/series/SERIES_ID/exam_logs
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real exam_logs URL
     state: [assessments-exam-series, assessments-exam-sessions]
     crop:
       selector: '#main-container .card'
@@ -1767,13 +1773,13 @@ shots:
       - User/Action/Actor/IP address/Browser filter dropdowns
       - Export button
 
-  - id: ASSESS-5 # not yet captured (needs assessments-exam-over + SERIES_ID)
+  - id: ASSESS-5
     page: guides/teachers/assessments
     file: assessment-publish
     url: /{locale}/courses/11/
     state: [assessments-exam-series, assessments-exam-over]
     crop:
-      selector: '#series-card-SERIES_ID'
+      selector: '#series-card-{seriesId}'
     must_show:
       - '"This assessment has ended." students-cannot-view banner on the series card'
       - filled Publish assessment button

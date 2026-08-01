@@ -40,6 +40,8 @@ When you select the assessment kind, an extra `Assessment options` section appea
 
 * `Automatically stop assessment sessions`: when the deadline is reached, all assessment sessions are automatically stopped. Students then no longer have access to the exercises and their submissions. This option requires the series to have a deadline. Sessions stopped this way show `System` as the actor in the assessment timeline.
 
+![Assessment options section of the series form, with a generated password, and the restrict-Dodona and auto-stop checkboxes checked](assessment-options-en.png)
+
 All other properties of the form (name, deadline, description, visibility, …) work as for any series and are described in the [series settings](../series-settings/) reference. The visibility settings combine nicely with an assessment: with `Visible for students after start time`, for example, the series only appears at the moment the exam starts. Note that even a visible assessment series never shows its exercises to students until they start their session.
 
 ## The assessment password
@@ -53,6 +55,8 @@ The password is per series and the same for all students, so announcing it on th
 ## What your students see
 
 Before the assessment is started, students see the series in the course with an explanation titled `How this assessment works` instead of the exercise list. It tells them how to start and finalize, warns that they cannot modify solutions after finalizing, that the teacher may close the assessment at any time, and that API access is blocked. It also contains a privacy notice: during the assessment their actions are logged, including timestamps, interactions, their IP address, and browser information, and these data are used solely to ensure a fair and correct examination process.
+
+![Series card before the assessment has started, showing the "How this assessment works" explanation, a password field, and the Start assessment button, with no exercise list](assessment-start-en.png)
 
 To begin, a student enters the password (if required) and clicks `Start assessment`. From that moment:
 
@@ -69,6 +73,8 @@ The assessment is tied to the browser the student started it with. If a student 
 ## Monitoring the assessment
 
 During the exam, the assessment overview is your control room. You reach it via the `Assessment overview` button on the series. The page shows who has started or already finalized the assessment, and lets you manually stop or reopen a student's session if needed.
+
+![Assessment overview page with the status panel, the not-yet-started/in-progress/stopped counters, the timeline callout, and the sessions table listing started and stopped times per student](assessment-overview-en.png)
 
 At the top you find the assessment status panel with the current phase (`Not yet started`, `In progress`, `Stopped, awaiting publication` or `Published`) and the effective settings: `Dodona access` (`Restricted` or `Unrestricted`), `Password` (`Required`, with the `Show` button, or `Not required`) and `Auto-stop` (`Enabled` or `Disabled`). Next to it, three counters show how many students are `Not yet started`, `In progress` and `Stopped`; clicking a counter filters the table below.
 
@@ -93,6 +99,8 @@ Once every session is stopped, the assessment phase changes to `Stopped, awaitin
 
 After the assessment, you decide when students can see the exercises and their submissions again. Click `Publish assessment` on the series and confirm. The assessment is then closed for everyone, and students can view the exercises and their submissions in read-only mode: they cannot submit new solutions or mark activities as read. This is the natural moment to let students review their work, for example while you discuss the solutions in class.
 
+![Series card after the assessment has ended, with the "This assessment has ended" banner and the Publish assessment button](assessment-publish-en.png)
+
 Published too early? `Unpublish assessment` in the series action menu makes the assessment private again.
 
 Publishing is independent of grading. To grade the assessment, create an evaluation for the series and optionally give feedback and scores; see the [grading guide](../grading/). An evaluation works on the submissions students made during the assessment, so you can grade before or after publishing.
@@ -109,6 +117,8 @@ The following events are recorded, each with a timestamp, the student involved, 
 * `Signed in during assessment` and `Signed out during assessment`
 
 You can filter the timeline by `User`, `Action`, `Actor`, `IP address` and `Browser`. The `Export` button downloads the log as a CSV file, including the IP address and browser information for each event, so you can archive it or investigate irregularities after the exam.
+
+![Assessment timeline with User/Action/Actor/IP address/Browser filters, the Export button, and a mix of event rows including a System-actor row](assessment-timeline-en.png)
 
 ## Privacy considerations
 
