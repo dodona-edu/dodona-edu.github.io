@@ -37,3 +37,9 @@ Dodona automatically gets your name and email from the login provider (e.g. Smar
 ## I get a warning that my time zone is wrong, what should I do?
 
 All deadlines on Dodona are displayed in your local time. To do this, Dodona needs to associate a time zone with your account. If we detect that the timezone of your browser is different from the timezone of your account, we will show a warning. You can change your timezone in your [Account Settings](https://dodona.be/en/profile).
+
+## How do I get teacher rights? <Badge type="tip" text="teacher" />
+
+New accounts start out as student accounts. You need teacher rights to create your own courses and exercises. You can request them free of charge: sign in and fill out the [teacher rights request form](https://dodona.be/en/rights_requests/new). The form asks why you need teacher rights, some information about your educational institution, and a bit about you (your role and how you know Dodona).
+
+We review your request as soon as possible and you will get an email when it has been processed. Once your request is approved, the [getting started guide for teachers](/en/guides/teachers/getting-started/) walks you through creating your first course.

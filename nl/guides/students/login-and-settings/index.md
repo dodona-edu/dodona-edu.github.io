@@ -76,3 +76,9 @@ Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone
 ![Waarschuwing voor verkeerde tijdzone bovenaan een pagina](./timezone-warning-nl.png)
 
 Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
+
+## Selecteren van de stijl
+
+Dodona heeft een licht en een donker thema. Open het gebruikersmenu aan de rechterkant van de navigatiebalk en beweeg met de muis over `Stijl` om te kiezen tussen `Licht`, `Donker` en `Systeem`. Kies je `Systeem` (de standaardinstelling), dan volgt Dodona de voorkeur van je apparaat.
+
+Net als je taal wordt de gekozen stijl opgeslagen in je gebruikersprofiel, zodat Dodona ze onthoudt wanneer je opnieuw aanmeldt.

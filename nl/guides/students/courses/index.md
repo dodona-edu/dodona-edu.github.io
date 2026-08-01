@@ -135,6 +135,28 @@ Als je **na het verstrijken van de deadline** van een oefeningenreeks een oploss
 :::
 
 
+## Favoriete cursussen
+
+Op je startpagina wordt elke cursus waarvoor je geregistreerd bent weergegeven als een cursuskaart. Onderaan zo'n kaart vind je een hartje waarmee je de cursus als favoriet kan markeren (`Voeg toe aan favorieten`). Je favoriete cursussen verschijnen in een aparte rij `Favorieten` bovenaan je startpagina, boven de andere cursussen, zodat je snel bij de cursussen kan waarin je het vaakst werkt. Die rij wordt altijd getoond, ongeacht het academiejaar dat je selecteerde, dus dit is ook een handige manier om een cursus uit een vorig academiejaar binnen handbereik te houden. Klik opnieuw op het hartje (`Verwijder uit favorieten`) om een cursus uit je favorieten te halen.
+
+![Rij Favorieten op de startpagina met een favoriete cursuskaart waarvan het hartje is ingevuld](./favorite-courses-nl.png)
+
+## Cursusdeadlines in je agenda
+
+Dodona kan de deadlines van een cursus aanbieden als een agendafeed (iCalendar) die je kan toevoegen aan je eigen agenda-applicatie. Klik op de cursuspagina op de drie puntjes onderaan de kaart met de cursusbeschrijving en kies `Cursus toevoegen aan agenda`.
+
+![Geopend menu van de cursuskaart met het item Cursus toevoegen aan agenda](./course-calendar-menu-nl.png)
+
+Deze link opent in je standaard agenda-applicatie (zoals Apple Agenda of Outlook), die zich vervolgens abonneert op de feed. Je kan het adres van de link ook kopiëren en manueel toevoegen aan je agenda-applicatie; in Google Agenda kan je bijvoorbeeld een agenda toevoegen via `Via URL`. De feed bevat een gebeurtenis voor elke oefeningenreeks met een deadline die zichtbaar is voor jou, met een link terug naar die reeks op Dodona. Omdat je agenda-applicatie zich abonneert op de feed, verschijnen nieuwe of gewijzigde deadlines automatisch in je agenda.
+
+## Gearchiveerde cursussen
+
+Cursussen uit voorbije academiejaren worden na verloop van tijd gearchiveerd op Dodona. Een gearchiveerde cursus wordt alleen-lezen: je kan je er niet meer voor registreren en geen nieuwe oplossingen meer indienen, maar al je eerdere werk blijft beschikbaar. Je kan nog steeds de oefeningen bekijken, je oplossingen raadplegen en de feedback die je kreeg nalezen.
+
+Als je een gearchiveerde cursus opent, herinnert een banner bovenaan de pagina je hieraan: `Deze cursus is gearchiveerd`. De cursuskaart op je startpagina toont een gelijkaardige boodschap. Gearchiveerde cursussen worden standaard ook verborgen in het [overzicht van alle cursussen](#hoe-vind-je-een-cursus); schakel daar de filter `Verberg gearchiveerd` uit om ze mee op te nemen in de resultaten.
+
+![Banner "Deze cursus is gearchiveerd" bovenaan een gearchiveerde cursuspagina](./course-archived-banner-nl.png)
+
 ## Uitschrijven uit een cursus
 
 Als je navigeert naar een cursus waarvoor je [geregistreerd](#registreren-voor-een-cursus) bent of waarvoor je nog een registratieverzoek hebt openstaan, dan zie je onder de beschrijving van de cursus op de cursuspagina een knop `Uitschrijven` (of `Registratieverzoek annuleren`) waarmee je je kunt uitschrijven uit de cursus.

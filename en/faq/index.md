@@ -12,6 +12,7 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [I have created a course for my students, but only some of them can see it. What is going on?](./accounts/#i-have-created-a-course-for-my-students-but-only-some-of-them-can-see-it-what-is-going-on)
 - [My name or email is wrong, how can I change it?](./accounts/#my-name-or-email-is-wrong-how-can-i-change-it)
 - [I get a warning that my time zone is wrong, what should I do?](./accounts/#i-get-a-warning-that-my-time-zone-is-wrong-what-should-i-do)
+- [How do I get teacher rights?](./accounts/#how-do-i-get-teacher-rights)
 
 ## API and API tokens
 - [What is an API token?](./api-tokens/#what-is-an-api-token)
@@ -21,6 +22,8 @@ In this FAQ section you will find answers to the most frequently asked questions
 ## Exercises and reading activities
 - [What is a draft activity?](./activities/#what-is-a-draft-activity)
 - [How do I create new exercises?](./activities/#how-do-i-create-new-exercises)
+- [How do I mark a reading activity as read?](./activities/#how-do-i-mark-a-reading-activity-as-read)
+- [What do the statuses next to activities mean?](./activities/#what-do-the-statuses-next-to-activities-mean)
 
 ## Featured courses
 - [What is a featured course?](./featured-courses/#what-is-a-featured-course)
@@ -34,6 +37,11 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How can I use the PyCharm plugin?](./ide-plugins/#how-can-i-use-the-pycharm-plugin)
 - [How do I install the VS Code extension?](./ide-plugins/#how-do-i-install-the-vs-code-extension)
 - [How can I use the VS Code extension?](./ide-plugins/#how-can-i-use-the-vs-code-extension)
+
+## Notifications
+- [When do I receive notifications?](./notifications/#when-do-i-receive-notifications)
+- [How do I mark notifications as read or delete them?](./notifications/#how-do-i-mark-notifications-as-read-or-delete-them)
+- [What is the announcement banner at the top of the page?](./notifications/#what-is-the-announcement-banner-at-the-top-of-the-page)
 
 ## Questions and comments
 - [How can I ask a question about my code?](./annotations/#how-can-i-ask-a-question-about-my-code)

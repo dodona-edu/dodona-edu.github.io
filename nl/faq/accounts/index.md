@@ -37,3 +37,9 @@ Dodona krijgt automatisch je naam en e-mailadres van de inlogprovider (bv. Smart
 ## Ik krijg een waarschuwing dat mijn tijdzone verkeerd is, wat moet ik doen?
 
 Alle deadlines op Dodona worden weergegeven in je lokale tijd. Hiervoor moet Dodona een tijdzone aan je account koppelen. Als we detecteren dat de tijdzone van je browser afwijkt van de tijdzone van je account, geven we een waarschuwing. Je kunt je tijdzone wijzigen in je [accountinstellingen](https://dodona.be/nl/profile).
+
+## Hoe krijg ik lesgeversrechten? <Badge type="tip" text="lesgever" />
+
+Nieuwe accounts zijn standaard studentenaccounts. Je hebt lesgeversrechten nodig om zelf cursussen en oefeningen te kunnen aanmaken. Je kan ze gratis aanvragen: meld je aan en vul het [aanvraagformulier voor lesgeversrechten](https://dodona.be/nl/rights_requests/new) in. Het formulier vraagt waarom je lesgeversrechten nodig hebt, wat informatie over je onderwijsinstelling en iets over jezelf (je rol en hoe je Dodona kent).
+
+We bekijken je aanvraag zo snel mogelijk en je krijgt een e-mail zodra ze verwerkt is. Eenmaal je aanvraag is goedgekeurd, helpt het [stappenplan voor lesgevers](/nl/guides/teachers/getting-started/) je op weg bij het aanmaken van je eerste cursus.

@@ -2161,3 +2161,71 @@ shots:
       - empty section header with its name
       - "\"This section has no series yet.\" message"
       - New series button
+
+---
+# Small-topics shots (feat/docs-small-topics pages). States:
+# - SM-favorites needs Sofie (user 5) to have a favourite course
+#   (CourseMembership#favorite on course 29); see state/sm-favorites.{setup,teardown}.rb.
+# - SM-notification-bell / SM-notifications-page need no state: Sofie already has
+#   unread seeded notifications (ids 18-20, 22).
+# - SM-announcement needs no state: Announcement#3 (user_group: students, active,
+#   no stop date) is already unread by Sofie and is the one
+#   Announcements::BannerComponent picks for her.
+# - SM-archived-banner needs no state either: course 24 ("Empty state - student,
+#   archived") is seeded with archived_override: true and visibility:
+#   visible_for_all, so Sofie can see it (and its "This course is archived" banner)
+#   without being a member -- nothing to restore.
+# NL pass note: these shots don't flip course 29's language (unlike the
+# faq-course-language scenario), so SM-favorites and SM-calendar-menu show its
+# English name ("Programming 1") even under /nl/. That matches production for an
+# English-named course and is expected, not a bug.
+defaults:
+  user: 5
+shots:
+  - id: SM-favorites
+    page: guides/students/courses
+    file: favorite-courses
+    url: /{locale}/
+    state: [sm-favorites]
+    crop: { selector: '.favorites-row' }
+    must_show: [Favorites row eyebrow, heart on a course card]
+  - id: SM-calendar-menu
+    page: guides/students/courses
+    file: course-calendar-menu
+    url: /{locale}/courses/29/
+    hook: hooks/open-menu.mjs
+    menu_toggle: '#main-container .card:first-of-type button.dropdown-toggle'
+    crop:
+      union: ['#main-container .card:first-of-type .card-actions', '#main-container .card:first-of-type .dropdown-menu']
+      pad: 8
+    must_show: [open kebab menu, Add course to calendar item]
+  - id: SM-archived-banner
+    page: guides/students/courses
+    file: course-archived-banner
+    url: /{locale}/courses/24/
+    crop: { selector: '.page-messages [role="status"]' }
+    must_show: [This course is archived banner]
+  - id: SM-notification-bell
+    page: faq/notifications
+    file: notification-bell
+    url: /{locale}/
+    hook: hooks/open-menu.mjs
+    menu_toggle: '#navbar-notifications-toggle'
+    keepNavbar: true
+    crop:
+      union: ['#navbar-notifications-toggle', '.notification-dropdown']
+      pad: 8
+    must_show: [bell with unread dot, dropdown with a notification, View all link]
+  - id: SM-notifications-page
+    page: faq/notifications
+    file: notifications-page
+    url: /{locale}/notifications/
+    crop: { selector: '#main-container .card:first-of-type' }
+    must_show: [notification rows with read toggle and delete, Clear notifications]
+  - id: SM-announcement
+    page: faq/notifications
+    file: announcement-banner
+    url: /{locale}/
+    hook: hooks/sm-announcement.mjs
+    crop: { selector: '#active-announcement' }
+    must_show: [announcement text, dismiss cross]

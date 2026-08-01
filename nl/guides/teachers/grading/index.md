@@ -81,8 +81,9 @@ Daarom kan het voorkomen dat de voortgangsbalken al gedeeltelijk gekleurd zijn n
 
 ::: tip
 Voordat je begint met beoordelen, wil je misschien controleren op plagiaat.
-Door op `Plagiaat detecteren` te klikken, opent een nieuw tabblad met ons plagiaatdetectietool [dolos](https://dolos.ugent.be/).
+Door op `Plagiaat detecteren` te klikken, opent een nieuw tabblad met ons plagiaatdetectietool [Dolos](https://dolos.ugent.be/).
 Hier kun je gemakkelijk zien of studenten verdacht vergelijkbare oplossingen hebben ingediend voor een bepaalde oefening.
+Een volledige rondleiding door de Dolos-workflow en wat het rapport toont, vind je bij [plagiaat detecteren met Dolos](../course-management/#plagiaat-detecteren-met-dolos).
 :::
 
 ### Detailoverzicht

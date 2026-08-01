@@ -77,3 +77,9 @@ If the time zone in your user profile does not match the local time zone detecte
 
 You can only remove this notification by setting the time zone in your user profile to the local time zone. Note that the notification contains a link that allows you to navigate directly to your profile page.
 
+## Selecting a Theme
+
+Dodona has a light and a dark theme. Open the user menu on the right side of the navigation bar and hover over `Theme` to choose between `Light`, `Dark`, and `System`. If you select `System` (the default), Dodona follows the theme preference of your device.
+
+Just like your language, your selected theme is stored in your user profile, so Dodona remembers it the next time you sign in.
+
