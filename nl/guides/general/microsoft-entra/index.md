@@ -64,7 +64,7 @@ Dit is wat een gebruiker te zien krijgt bij het aanmelden op Dodona:
 
 ![Screenshot van het Microsoft-toestemmingsscherm voor de Dodona-applicatie, met het geverifieerde uitgeversbadge en de gevraagde machtigingen "View your basic profile" en "Maintain access to data you have given it access to"](./user-consent-nl.png =440x)
 
-Let op: Microsoft vertaalt wel de omkadering van dit scherm, maar niet de namen van de machtigingen zelf. Die blijven in het Engels staan, zoals je hierboven ziet. Dat is dus geen foutje van onze kant.
+Let op: Microsoft vertaalt wel de omkadering van dit scherm, maar niet de namen van de machtigingen zelf. Die blijven in het Engels staan, zoals je hierboven ziet.
 
 ::: info Waarom het toestemmingsscherm "Maintain access to data you have given it access to" vermeldt
 
