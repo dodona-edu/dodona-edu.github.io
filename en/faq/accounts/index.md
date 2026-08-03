@@ -12,6 +12,8 @@ Accounts on Dodona are automatically created when you log in for the first time.
 
 It is not possible to manually create an account on Dodona with a username and password.
 
+If your institution signs in with Microsoft and restricts which applications its users may consent to, your IT department can find everything they need in [Allowing Dodona in Microsoft Entra ID](/en/guides/general/microsoft-entra/).
+
 ## I work in several schools, how does this work?
 
 Your account on Dodona is linked to the way you log in. For example, if you have Smartschool accounts at several schools, each of them will be linked to a different Dodona account.
