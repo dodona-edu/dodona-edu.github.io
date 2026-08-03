@@ -2229,3 +2229,35 @@ shots:
     hook: hooks/sm-announcement.mjs
     crop: { selector: '#active-announcement' }
     must_show: [announcement text, dismiss cross]
+
+  # ---------------- microsoft-entra (guides/general) ----------------
+  # Both shots below are Microsoft's own consent screens at
+  # login.microsoftonline.com, not Dodona pages, so the runner has no page to
+  # navigate to and can't capture them. They stay manual captures.
+  #
+  # To recapture: open the consent URL in the comment while signed in as a
+  # tenant admin, clip the `#lightbox` element at 2x, and white out the
+  # account email that sits above the heading. Do not click Accept.
+  #
+  # The Dutch pass needs an `Accept-Language: nl-BE` request header on that
+  # request; the `ui_locales` and `mkt` URL parameters are both ignored by
+  # this Microsoft flow.
+  - id: ME-1
+    page: guides/general/microsoft-entra
+    file: admin-consent
+    manual: true
+    # https://login.microsoftonline.com/{tenant}/adminconsent?client_id={client_id}
+    must_show:
+      - Dodona name, publisher and blue verified badge
+      - permission list showing only "View users' basic profile"
+      - no account email visible
+
+  - id: ME-2
+    page: guides/general/microsoft-entra
+    file: user-consent
+    manual: true
+    # https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id={client_id}&response_type=code&redirect_uri=https%3A%2F%2Fdodona.be%2Fusers%2Fauth%2Fmicrosoft%2Fcallback&response_mode=query&scope=openid%20email%20profile&prompt=consent
+    must_show:
+      - Dodona name, publisher and blue verified badge
+      - permission list showing "View your basic profile" and "Maintain access to data you have given it access to"
+      - no account email visible
