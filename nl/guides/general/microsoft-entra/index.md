@@ -14,7 +14,7 @@ Studenten en lesgevers hebben niets van deze pagina nodig. Zij melden zich gewoo
 
 <!--@include: ../../_what-is-dodona.md-->
 
-Dodona wordt ontwikkeld en beheerd door Dodona Learning Technologies BV. Het gebruik van Dodona is gratis voor onderwijsinstellingen.
+Dodona wordt ontwikkeld en beheerd door Dodona Learning Technologies BV.
 
 ## Waarom je hier terechtkomt
 
@@ -57,7 +57,7 @@ Dodona roept de Microsoft Graph API nooit aan. De machtigingen hierboven dienen 
 - `oid` en `tid`: de onveranderlijke identificatoren van de gebruiker en van je tenant. Dodona gebruikt die om een terugkerende gebruiker te herkennen en om het account aan je instelling te koppelen.
 - `email`, `given_name`, `family_name`, `preferred_username` en `name`: het e-mailadres en de naam van de gebruiker, om het Dodona-profiel in te vullen.
 
-Dat is de volledige lijst. Er is geen achtergrondproces, geen vernieuwingstoken, en niets waarmee Dodona je directory zou kunnen bevragen.
+Dat is de volledige lijst. Er is geen achtergrondproces, en niets waarmee Dodona je directory zou kunnen bevragen.
 :::
 
 Concreet betekent dat:
