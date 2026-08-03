@@ -14,7 +14,7 @@ Students and teachers don't need anything on this page. They simply sign in at [
 
 <!--@include: ../../_what-is-dodona.md-->
 
-Dodona is developed and operated by Dodona Learning Technologies BV. Using Dodona is free of charge for educational institutions.
+Dodona is developed and operated by Dodona Learning Technologies BV.
 
 ## Why you might be reading this
 
@@ -57,7 +57,7 @@ Dodona never calls the Microsoft Graph API. The permissions above exist only so 
 - `oid` and `tid`: the immutable identifiers of the user and of your tenant. Dodona uses these to recognise a returning user and to link the account to your institution.
 - `email`, `given_name`, `family_name`, `preferred_username` and `name`: the user's email address and name, used to fill in their Dodona profile.
 
-That is the complete list. There is no background service, no refresh token, and nothing with which Dodona could query your directory.
+That is the complete list. There is no background service, and nothing with which Dodona could query your directory.
 :::
 
 Concretely, this means that:
