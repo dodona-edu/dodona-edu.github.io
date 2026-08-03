@@ -12,7 +12,7 @@ Accounts op Dodona worden automatisch aangemaakt wanneer je voor de eerste keer 
 
 Het is niet mogelijk om handmatig een account aan te maken op Dodona met een gebruikersnaam en wachtwoord.
 
-Meldt je instelling zich aan met Microsoft en beperkt ze aan welke applicaties haar gebruikers toestemming mogen geven? Dan vindt je IT-dienst alles wat ze nodig heeft in [Dodona toelaten in Microsoft Entra ID](/nl/guides/general/microsoft-entra/).
+Meldt je instelling zich aan met Microsoft en beperkt ze aan welke applicaties haar gebruikers toestemming mogen geven? Dan vindt je IT-dienst alles wat ze nodig heeft in [Dodona toelaten in Microsoft Entra ID](/nl/guides/microsoft-entra/).
 
 ## Ik werk op verschillende scholen, hoe werkt dit?
 
