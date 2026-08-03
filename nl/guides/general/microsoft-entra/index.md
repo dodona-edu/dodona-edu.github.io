@@ -33,12 +33,12 @@ Als je instelling de vorige applicatie expliciet toeliet, geldt die goedkeuring 
 | --- | --- |
 | Weergavenaam | `Dodona` |
 | Toepassings-ID (client) | `060c642b-473b-4423-a9f6-dfc67066deb6` |
-| Uitgever | Dodona Learning Technologies BV |
+| Uitgever | Dodona Learning Technologies |
 | Domein van de uitgever | `dodona.be` |
 | Ondersteunde accounttypes | Accounts in elke organisatiemap (multitenant) en persoonlijke Microsoft-accounts |
 | Omleidings-URI | `https://dodona.be/users/auth/microsoft/callback` |
 
-De applicatie is [publisher verified](https://learn.microsoft.com/en-us/entra/identity-platform/publisher-verification-overview) bij Microsoft. Microsoft heeft dus geverifieerd dat Dodona Learning Technologies BV de organisatie is die de applicatie publiceert. Je herkent dat aan het blauwe `Verified`-label op het toestemmingsscherm en op de pagina van de applicatie in het Microsoft Entra-beheercentrum.
+De applicatie is [publisher verified](https://learn.microsoft.com/en-us/entra/identity-platform/publisher-verification-overview) bij Microsoft. Microsoft heeft dus geverifieerd dat Dodona Learning Technologies de organisatie is die de applicatie publiceert. Je herkent dat aan het blauwe `Verified`-label op het toestemmingsscherm en op de pagina van de applicatie in het Microsoft Entra-beheercentrum.
 
 ## Welke machtigingen Dodona vraagt
 

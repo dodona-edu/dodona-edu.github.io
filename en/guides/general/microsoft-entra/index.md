@@ -33,12 +33,12 @@ If your institution explicitly allowed the previous application, that approval d
 | --- | --- |
 | Display name | `Dodona` |
 | Application (client) ID | `060c642b-473b-4423-a9f6-dfc67066deb6` |
-| Publisher | Dodona Learning Technologies BV |
+| Publisher | Dodona Learning Technologies |
 | Publisher domain | `dodona.be` |
 | Supported account types | Accounts in any organizational directory (multitenant) and personal Microsoft accounts |
 | Redirect URI | `https://dodona.be/users/auth/microsoft/callback` |
 
-The application is [publisher verified](https://learn.microsoft.com/en-us/entra/identity-platform/publisher-verification-overview) by Microsoft, which means Microsoft has verified that Dodona Learning Technologies BV is the organisation publishing it. You can recognise this by the blue `Verified` badge on the consent prompt and on the application's page in the Microsoft Entra admin center.
+The application is [publisher verified](https://learn.microsoft.com/en-us/entra/identity-platform/publisher-verification-overview) by Microsoft, which means Microsoft has verified that Dodona Learning Technologies is the organisation publishing it. You can recognise this by the blue `Verified` badge on the consent prompt and on the application's page in the Microsoft Entra admin center.
 
 ## Which permissions Dodona requests
 
