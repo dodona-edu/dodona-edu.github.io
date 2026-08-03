@@ -29,7 +29,7 @@ If your institution explicitly allowed the previous application, that approval d
 
 ## The application registration
 
-| | |
+| Property | Value |
 | --- | --- |
 | Display name | `Dodona` |
 | Application (client) ID | `060c642b-473b-4423-a9f6-dfc67066deb6` |
@@ -58,6 +58,13 @@ Dodona never calls the Microsoft Graph API. The permissions above exist only so 
 - `email`, `given_name`, `family_name`, `preferred_username` and `name`: the user's email address and name, used to fill in their Dodona profile.
 
 That is the complete list. There is no background service, and nothing with which Dodona could query your directory.
+:::
+
+::: info Why the consent screen mentions "Maintain access to data you have given it access to"
+
+Microsoft's consent screen shows this line for every application, including ones that never ask for it. It corresponds to the `offline_access` scope, and Microsoft [documents](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#the-offline_access-scope) that it "currently appears on all consent pages, even for flows that don't provide a refresh token".
+
+Dodona does not request `offline_access`. Its sign-in requests ask for `openid`, `email` and `profile` only, which is exactly what you see on the application's `API permissions` page. Microsoft only issues a refresh token to an application that explicitly requests that scope, so Dodona never receives one.
 :::
 
 Concretely, this means that:
