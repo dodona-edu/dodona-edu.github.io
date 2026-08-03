@@ -1,7 +1,7 @@
 ---
 title: "Dodona toelaten in Microsoft Entra ID"
 description: "Voor IT-beheerders: de Microsoft-applicatie van Dodona nakijken en toelaten in je eigen Microsoft Entra-tenant."
-order: 2
+order: 5
 ---
 
 # Dodona toelaten in Microsoft Entra ID
@@ -12,7 +12,7 @@ Studenten en lesgevers hebben niets van deze pagina nodig. Zij melden zich gewoo
 
 ## Over Dodona
 
-<!--@include: ../../_what-is-dodona.md-->
+<!--@include: ../_what-is-dodona.md-->
 
 Dodona wordt ontwikkeld en beheerd door Dodona Learning Technologies BV.
 

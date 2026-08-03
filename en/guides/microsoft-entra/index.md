@@ -1,7 +1,7 @@
 ---
 title: "Allowing Dodona in Microsoft Entra ID"
 description: "For IT administrators: reviewing and allowing Dodona's Microsoft application in your own Microsoft Entra tenant."
-order: 2
+order: 5
 ---
 
 # Allowing Dodona in Microsoft Entra ID
@@ -12,7 +12,7 @@ Students and teachers don't need anything on this page. They simply sign in at [
 
 ## About Dodona
 
-<!--@include: ../../_what-is-dodona.md-->
+<!--@include: ../_what-is-dodona.md-->
 
 Dodona is developed and operated by Dodona Learning Technologies BV.
 
