@@ -29,7 +29,7 @@ Als je instelling de vorige applicatie expliciet toeliet, geldt die goedkeuring 
 
 ## De app-registratie
 
-| | |
+| Eigenschap | Waarde |
 | --- | --- |
 | Weergavenaam | `Dodona` |
 | Toepassings-ID (client) | `060c642b-473b-4423-a9f6-dfc67066deb6` |
@@ -58,6 +58,13 @@ Dodona roept de Microsoft Graph API nooit aan. De machtigingen hierboven dienen 
 - `email`, `given_name`, `family_name`, `preferred_username` en `name`: het e-mailadres en de naam van de gebruiker, om het Dodona-profiel in te vullen.
 
 Dat is de volledige lijst. Er is geen achtergrondproces, en niets waarmee Dodona je directory zou kunnen bevragen.
+:::
+
+::: info Waarom het toestemmingsscherm "Maintain access to data you have given it access to" vermeldt
+
+Het toestemmingsscherm van Microsoft toont deze regel bij elke applicatie, ook bij applicaties die er nooit om vragen. Ze komt overeen met de `offline_access`-scope. Microsoft [documenteert](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#the-offline_access-scope) zelf, in het Engels, dat die "currently appears on all consent pages, even for flows that don't provide a refresh token".
+
+Dodona vraagt geen `offline_access`. De aanmeldaanvragen van Dodona vragen enkel `openid`, `email` en `profile`, precies wat je ziet op de `API permissions`-pagina van de applicatie. Microsoft geeft enkel een refresh token aan een applicatie die die scope expliciet aanvraagt, waardoor Dodona er nooit een ontvangt.
 :::
 
 Concreet betekent dat:
