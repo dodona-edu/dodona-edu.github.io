@@ -60,6 +60,12 @@ Dodona roept de Microsoft Graph API nooit aan. De machtigingen hierboven dienen 
 Dat is de volledige lijst. Er is geen achtergrondproces, en niets waarmee Dodona je directory zou kunnen bevragen.
 :::
 
+Dit is wat een gebruiker te zien krijgt bij het aanmelden op Dodona:
+
+![Screenshot van het Microsoft-toestemmingsscherm voor de Dodona-applicatie, met het geverifieerde uitgeversbadge en de gevraagde machtigingen "View your basic profile" en "Maintain access to data you have given it access to"](./user-consent-nl.png =440x)
+
+Let op: Microsoft vertaalt wel de omkadering van dit scherm, maar niet de namen van de machtigingen zelf. Die blijven in het Engels staan, zoals je hierboven ziet. Dat is dus geen foutje van onze kant.
+
 ::: info Waarom het toestemmingsscherm "Maintain access to data you have given it access to" vermeldt
 
 Het toestemmingsscherm van Microsoft toont deze regel bij elke applicatie, ook bij applicaties die er nooit om vragen. Ze komt overeen met de `offline_access`-scope. Microsoft [documenteert](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#the-offline_access-scope) zelf, in het Engels, dat die "currently appears on all consent pages, even for flows that don't provide a refresh token".
@@ -88,6 +94,10 @@ Op de pagina `Permissions` van de applicatie zie je precies welke machtigingen g
 ### Beheerderstoestemming geven voor de hele organisatie
 
 Als je toestemming geeft namens je organisatie, krijgen je gebruikers zelf nooit een toestemmingsscherm te zien. Dat doe je vanaf de pagina `Permissions` van de applicatie onder `Enterprise applications`, zoals beschreven in [Grant tenant-wide admin consent to an application](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent).
+
+Zo ziet het beheerderstoestemmingsscherm eruit:
+
+![Screenshot van het Microsoft-beheerderstoestemmingsscherm voor de Dodona-applicatie, met het geverifieerde uitgeversbadge en de gevraagde machtiging "View users' basic profile"](./admin-consent-nl.png =440x)
 
 Staat de applicatie nog niet in je tenant, dan kan je de toestemmingsflow ook rechtstreeks starten. Open de volgende URL terwijl je aangemeld bent met een account dat namens je organisatie toestemming mag geven, en vervang `{tenant}` door je tenant-ID of door een van je geverifieerde domeinnamen:
 

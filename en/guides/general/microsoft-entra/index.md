@@ -60,6 +60,10 @@ Dodona never calls the Microsoft Graph API. The permissions above exist only so 
 That is the complete list. There is no background service, and nothing with which Dodona could query your directory.
 :::
 
+This is what a user sees when signing in to Dodona for the first time:
+
+![Screenshot of the Microsoft consent screen for the Dodona application, showing the verified publisher badge and the requested permissions "View your basic profile" and "Maintain access to data you have given it access to"](./user-consent-en.png =440x)
+
 ::: info Why the consent screen mentions "Maintain access to data you have given it access to"
 
 Microsoft's consent screen shows this line for every application, including ones that never ask for it. It corresponds to the `offline_access` scope, and Microsoft [documents](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#the-offline_access-scope) that it "currently appears on all consent pages, even for flows that don't provide a refresh token".
@@ -88,6 +92,10 @@ From the application's `Permissions` page you can see exactly which permissions 
 ### Granting tenant-wide admin consent
 
 Granting admin consent on behalf of your organisation means your users are never prompted for consent themselves. You do this from the application's `Permissions` page under `Enterprise applications`, as described in [Grant tenant-wide admin consent to an application](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent).
+
+This is what the admin consent screen looks like:
+
+![Screenshot of the Microsoft admin consent screen for the Dodona application, showing the verified publisher badge and the requested permission "View users' basic profile"](./admin-consent-en.png =440x)
 
 If the application isn't in your tenant yet, you can also start the consent flow directly. Open the following URL while signed in with an account that may consent on behalf of your organisation, and replace `{tenant}` with your tenant ID or one of your verified domain names:
 
