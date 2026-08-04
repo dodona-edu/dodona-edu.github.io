@@ -2230,7 +2230,7 @@ shots:
     crop: { selector: '#active-announcement' }
     must_show: [announcement text, dismiss cross]
 
-  # ---------------- microsoft-entra (guides/general) ----------------
+  # ---------------- microsoft-entra (guides/administrators) ----------------
   # Both shots below are Microsoft's own consent screens at
   # login.microsoftonline.com, not Dodona pages, so the runner has no page to
   # navigate to and can't capture them. They stay manual captures.
