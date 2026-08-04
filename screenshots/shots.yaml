@@ -2243,7 +2243,7 @@ shots:
   # request; the `ui_locales` and `mkt` URL parameters are both ignored by
   # this Microsoft flow.
   - id: ME-1
-    page: guides/microsoft-entra
+    page: guides/administrators/microsoft-entra
     file: admin-consent
     manual: true
     # https://login.microsoftonline.com/{tenant}/adminconsent?client_id={client_id}
@@ -2253,7 +2253,7 @@ shots:
       - no account email visible
 
   - id: ME-2
-    page: guides/microsoft-entra
+    page: guides/administrators/microsoft-entra
     file: user-consent
     manual: true
     # https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id={client_id}&response_type=code&redirect_uri=https%3A%2F%2Fdodona.be%2Fusers%2Fauth%2Fmicrosoft%2Fcallback&response_mode=query&scope=openid%20email%20profile&prompt=consent
