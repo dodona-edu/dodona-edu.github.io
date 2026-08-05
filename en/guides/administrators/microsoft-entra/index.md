@@ -18,7 +18,7 @@ Dodona is developed and operated by Dodona Learning Technologies BV.
 
 ## Why you might be reading this
 
-Dodona uses Microsoft Entra ID (formerly Azure AD) to sign in users with their institutional Microsoft 365 account. Some institutions restrict which third-party applications their users may consent to. In that case Microsoft blocks the sign-in, and someone from your IT department has to allow the Dodona application explicitly before your users can get in.
+Dodona uses Microsoft Entra ID (formerly Azure AD) to sign in users with their institutional Microsoft 365 account. Some institutions restrict which third-party applications their users may consent to. In that case Microsoft blocks the sign-in, and your users can only get in once you explicitly allow the Dodona application.
 
 ::: warning We now use our own application registration
 

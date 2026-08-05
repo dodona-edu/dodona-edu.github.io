@@ -18,7 +18,7 @@ Dodona wordt ontwikkeld en beheerd door Dodona Learning Technologies BV.
 
 ## Waarom je hier terechtkomt
 
-Dodona gebruikt Microsoft Entra ID (vroeger Azure AD) om gebruikers aan te melden met hun institutionele Microsoft 365-account. Sommige instellingen beperken aan welke externe applicaties hun gebruikers toestemming mogen geven. In dat geval blokkeert Microsoft de aanmelding, en moet iemand van je IT-dienst de Dodona-applicatie eerst expliciet toelaten voor je gebruikers binnen geraken.
+Dodona gebruikt Microsoft Entra ID (vroeger Azure AD) om gebruikers aan te melden met hun institutionele Microsoft 365-account. Sommige instellingen beperken aan welke externe applicaties hun gebruikers toestemming mogen geven. In dat geval blokkeert Microsoft de aanmelding, en geraken je gebruikers pas binnen zodra je de Dodona-applicatie expliciet toelaat.
 
 ::: warning We gebruiken nu onze eigen app-registratie
 
