@@ -1,12 +1,9 @@
 # bin/rails runner screenshots/state/assessments-exam-series.setup.rb [nl]
 #
-# Base state for the ASSESS-1..5 shots in guides/teachers/assessments (en+nl). Enables
-# the exam_mode Flipper flag for the zeus actor (recording whether it was already
-# enabled -- it is, by default, via the seeded `Flipper.enable_group(:exam_mode, :zeus)`
-# -- so teardown can restore exactly), then creates a single exam-kind series on course
-# 11 with a password, lockdown mode and auto-close enabled, a future deadline, and two
-# activities. No sessions yet: assessments-exam-sessions/-over layer those on top
-# separately, against the same series.
+# Base state for the ASSESS-1..5 shots in guides/teachers/assessments (en+nl). Creates a
+# single exam-kind series on course 11 with a password, lockdown mode and auto-close
+# enabled, a future deadline, and two activities. No sessions yet:
+# assessments-exam-sessions/-over layer those on top separately, against the same series.
 #
 # Pass "nl" as the first argument for the Dutch pass (locale-appropriate series name),
 # otherwise EN is used -- same convention as course11-naming.setup.rb.
@@ -30,18 +27,11 @@
 require 'json'
 
 locale_nl = ARGV.first == 'nl'
-zeus = User.find(1)
 
-# --- Flipper flag ------------------------------------------------------------
 state_file = '/tmp/dodona-docs-capture-state.json'
 state = File.exist?(state_file) ? JSON.parse(File.read(state_file)) : {}
 state['assessments-exam-series'] ||= {}
-if state['assessments-exam-series']['flag_was_enabled'].nil?
-  state['assessments-exam-series']['flag_was_enabled'] = Flipper.enabled?(:exam_mode, zeus)
-end
-Flipper.enable_actor(:exam_mode, zeus)
 
-# --- Exam series ---------------------------------------------------------------
 course = Course.find(11)
 series = course.series.find_or_initialize_by(kind: :exam)
 series.update!(
@@ -75,5 +65,4 @@ state['assessments-exam-series'].merge!('series_id' => series.id, 'locale' => (l
 File.write(state_file, JSON.pretty_generate(state))
 
 Rails.cache.clear
-puts "assessments-exam-series: series id=#{series.id} name='#{series.name}' " \
-     "flag_was_enabled=#{state['assessments-exam-series']['flag_was_enabled']}"
+puts "assessments-exam-series: series id=#{series.id} name='#{series.name}'"

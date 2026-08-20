@@ -20,10 +20,6 @@ Deze handleiding overloopt het volledige traject: de reeks instellen, wat je stu
 Een toetsreeks regelt de toegang *binnen* Dodona: ze vergrendelt de computer van de student niet, neemt het scherm niet op en blokkeert geen andere websites. Beschouw ze als één laag van een examen onder toezicht, naast toezicht in het lokaal of de examenomgeving van je school.
 :::
 
-::: info Beschikbaarheid
-Toetsreeksen worden geleidelijk uitgerold. Zie je de toetsoptie niet bij het aanmaken van een reeks, [contacteer ons](https://dodona.be/nl/contact/) dan en we schakelen ze voor je in.
-:::
-
 ## Een toetsreeks aanmaken
 
 Een toetsreeks maak je aan zoals elke andere reeks: navigeer naar je cursus, klik op `Reeksen beheren` en dan op `Reeks aanmaken`, zoals beschreven in [oefeningenreeksenbeheer](../exercise-series-management/#oefeningenreeks-aanmaken). Bovenaan het reeksformulier kies je `Toetsreeks` als type, daar omschreven als "Reeks met beperkte toegang en activiteitenlog".
