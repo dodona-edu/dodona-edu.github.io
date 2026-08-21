@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Feedback begrijpen
-Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Zo snel mogelijk na het indienen wordt de oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde feedback over de oplossing, die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen. Deze pagina legt uit wat de verschillende statussen betekenen en hoe de gedetailleerde feedback van de judge gestructureerd is. Hoe je naar oefeningen navigeert en oplossingen indient, vind je bij [Oefeningen oplossen](../exercises/).
+Zo snel mogelijk na het indienen wordt een oplossing automatisch beoordeeld door een judge die aan de oefening gekoppeld is. Als motivatie van zijn beoordeling voorziet de judge gedetailleerde **feedback** over de oplossing, die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen. Je ziet die feedback meteen in het indienpaneel nadat je een oplossing hebt ingediend, en ze wordt ook getoond op de feedbackpagina van een oplossing, die je bereikt via de [oplossingenoverzichten](../exercises/#navigeren-naar-een-oplossing). Deze pagina legt uit wat de verschillende statussen betekenen en hoe de gedetailleerde feedback van de judge gestructureerd is. Hoe je naar oefeningen navigeert en oplossingen indient, vind je bij [Oefeningen oplossen](../exercises/).
 
 ![Resultatenpagina voor een correcte Curling-oplossing](./submission-page-nl.png)
 
@@ -52,14 +52,14 @@ De laatste tab heeft altijd de naam `Code` en bevat de broncode van de oplossing
 
 ::: tip Tip
 
-In de tab `Code` op de feedbackpagina kan je de broncode van de oplossing niet wijzigen. Je moet hiervoor op de bewerkknop klikken in de rechterbovenhoek van de feedbackpagina. De broncode van de oplossing waar je op dat moment naar kijkt wordt dan ingeladen in de editor. Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
+In de tab `Code` kan je de broncode van de oplossing niet wijzigen. Klik hiervoor op `Wijzig oplossing` in de rechterbovenhoek van de feedbackpagina (in het indienpaneel op de oefeningpagina heet die knop `Deze oplossing bewerken`). De broncode van de oplossing waar je op dat moment naar kijkt wordt dan ingeladen in de editor. Daar kan je de broncode bewerken en daarna eventueel opnieuw indienen.
 :::
 
 ## Testen, testgevallen en contexten
 
 Per tab rapporteert de judge over individuele **testen** waaraan hij de broncode onderworpen heeft. Daarbij worden gerelateerde testen gegroepeerd in een **testgeval** en worden testgevallen die van elkaar afhankelijk zijn gegroepeerd in een **context**.
 
-![Feedback tabblad met twee correcte context-kaarten](../exercises/feedback-tab-nl.png)
+![Feedback met twee correcte context-kaarten](../exercises/handin-feedback-nl.png)
 
 Visueel worden alle testgevallen van een context gegroepeerd in een **uitklapbare kaart**. De koptekst van de kaart bevat `Correct` of `Fout`, afhankelijk van de beoordeling van de volledige context door de judge. Als sommige, maar niet alle contexten correct zijn, worden de correcte contexten standaard ingeklapt en de foute contexten standaard uitgeklapt.
 

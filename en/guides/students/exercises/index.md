@@ -24,7 +24,7 @@ On your homepage, you can find a list of the five most recent exercises you subm
 
 At the top of each exercise page, there is a panel with the name and description of the exercise. The display of these components depends on the selected language. If a translation of the name and description is provided in the selected language when creating the exercise, these components will also be displayed in that language.
 
-![Exercise page with the description card and the hand-in panel](./exercise-page-en.png)
+![Exercise page with the description card and, below it, the hand-in panel with the code editor and the Submit button](./exercise-page-en.png)
 
 ::: tip
 
@@ -35,34 +35,40 @@ When performing an action on an exercise, the name of the exercise appears next 
 
 ## Submitting a Solution
 
-On an exercise page, below the panel with the exercise description, there is a second panel where you can submit a solution for the exercise. Click on the `Submit` tab if it is not already selected, and place the source code of your solution in the *code editor*. Then click the submit button in the upper right corner of the panel to submit your solution. **You can submit as many times as you want. Only the result of your last submission will be considered**. Automatic feedback will be provided by the judge for each submission, which you can use to correct or further refine your solution.
+Below the panel with the exercise description, you will find the *hand-in panel*. Its header shows the name of the exercise and, in the top-right corner, a button with your number of submissions for this exercise (for example `1 submission`). The *code editor* is always visible in this panel: place the source code of your solution in the editor and click the `Submit` button at the bottom right to submit it. As the bar at the bottom of the panel reminds you: **you can submit as many times as you like, and only your latest submission will be taken into account**. Automatic feedback will be provided by the judge for each submission, which you can use to correct or further refine your solution.
 
-![Hand-in panel with an empty editor and the highlighted submit button](./handin-editor-en.png)
+![Hand-in panel with an empty editor and the highlighted Submit button](./handin-editor-en.png)
 
 For Python exercises, the `To sandbox` button next to the submit button opens [the Python sandbox](../scratchpad/), where you can run and debug your code in the browser before submitting it.
+
+::: tip Deadlines
+When the deadline of the exercise series is less than five minutes away, an alert appears above the editor with the exact deadline. Once the deadline has passed, the alert warns you that you can still submit, but that your submissions may no longer be taken into account.
+:::
 
 ::: tip Use an IDE
 
 Although you can program directly in the editor on Dodona, we do not recommend solving all exercises there. Instead, we advise using an [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated_development_environment) (IDE). IDEs provide more support during the writing, execution, testing, and debugging of source code. This way, you learn to apply your programming skills generically to solve problems other than just the exercises on Dodona.
 
-Additionally, there is a plugin available for JetBrains IDEs such as [IntelliJ](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/), and [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html). There is also an extension available for [**Visual Studio Code**](https://code.visualstudio.com/). Programmers using these IDEs can submit their solutions directly to Dodona using these tools. Without the tool, you would need to copy and paste the code into the submission text box on Dodona and click the orange circle. Instructions can be found [here for PyCharm](/en/faq/ide-plugins/#how-do-i-install-the-pycharm-plugin) and [here for VS Code](/en/faq/ide-plugins/#how-do-i-install-the-vs-code-extension).
+Additionally, there is a plugin available for JetBrains IDEs such as [IntelliJ](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/), and [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html). There is also an extension available for [**Visual Studio Code**](https://code.visualstudio.com/). Programmers using these IDEs can submit their solutions directly to Dodona using these tools. Without the tool, you would need to copy and paste the code into the editor on Dodona and click the submit button. Instructions can be found [here for PyCharm](/en/faq/ide-plugins/#how-do-i-install-the-pycharm-plugin) and [here for VS Code](/en/faq/ide-plugins/#how-do-i-install-the-vs-code-extension).
 :::
 
-After submitting a solution, the `Submissions` tab is automatically selected. This tab contains an overview of all the solutions you have submitted for the exercise within the course. These solutions are listed in reverse chronological order (most recent at the top), so the solution you just submitted will be at the very top. The overview includes the submission time, status, and a brief summary of the [feedback](../feedback/) for each solution. Before each solution, there is also an [icon](../feedback/#submission-statuses) corresponding to the solution's status.
+After you click `Submit`, your solution is placed in a queue and evaluated by the judge; the submit button shows the progress (`Handing in…`, `Evaluating…`). This usually takes only a few seconds. As soon as the judge has finished, the detailed [feedback](../feedback/) appears in the hand-in panel itself, in place of the editor. A bar at the top of the panel shows the status of the submission (for example `Correct` or `Wrong`) with a short summary and the time of submission.
 
-After submission, your solution is placed in a queue. While a solution is in the queue, it has the status `Queued...`. As soon as the platform is ready to evaluate a solution, the first submitted solution from the queue is executed and evaluated by the system. During evaluation, a solution has the status `Running...`. This usually takes only a few seconds.
+![Hand-in panel showing the feedback for a correct submission, with the status bar and the Edit this submission button](./handin-feedback-en.png)
 
-Once the judge has finished evaluating your solution, it receives its final status, and the feedback page with detailed [feedback](../feedback/) about the solution is automatically displayed in a new tab called `Feedback`.
+From the feedback you can go straight back to improving your code: click `Edit this submission` (or `Edit & resubmit` at the bottom of the panel) to load the code of the submission you are viewing back into the editor. If you had unsubmitted changes in the editor, the `Back to editor` button returns to the editor exactly as you left it.
 
-![Feedback tab, active, with a green verdict and multiple test-case cards](./feedback-tab-en.png)
+When you return to an exercise you have submitted for before, the editor automatically contains the code of your latest submission. An info message above the editor, `We have preloaded your latest submission into the editor.`, tells you this happened. Prefer to start over? The button next to that message restores the exercise's initial code (`Restore the initial code`) or, if the exercise has none, empties the editor (`Clear editor`).
+
+![Info message above the editor saying the latest submission was preloaded, with the Clear editor button](./handin-preloaded-en.png)
 
 ## Navigating to a Submission
 
 You can navigate to your submitted solutions on Dodona in several ways. For each method, the submissions will be grouped differently by Dodona. Here are the two main methods:
 
-- You can view all your submissions for a single exercise by clicking on the `Submissions` tab on the relevant exercise page.
+- You can view all your submissions for a single exercise in the *submission history* of that exercise: click the button with your number of submissions (for example `2 submissions`) in the top-right corner of the hand-in panel. The submissions are listed in reverse chronological order (most recent at the top), with for each submission its number, status, a brief summary of the [feedback](../feedback/), and the submission time. Before each submission, there is also an [icon](../feedback/#submission-statuses) corresponding to its status. Click a submission to view its feedback in the hand-in panel.
 
-![Submissions tab with a reverse-chronological list of solutions](./submissions-tab-en.png)
+![Open submission history with a list of submissions and their statuses](./submission-history-en.png)
 
 - You can view all the solutions you have ever submitted by clicking on `My submissions` in the user menu in the navigation bar.
 
@@ -78,7 +84,7 @@ You can select a solution by clicking on the arrow to the right of the solution 
 
 ## Reading Your Results
 
-The feedback page contains detailed **feedback** about a solution you submitted for an exercise. At the top, it shows the **status** the judge assigned to your solution (for example `Correct` or `Wrong`) and a brief summary of the result. Below that, the judge reports in detail on all tests your solution was subjected to, and the `Code` tab shows your source code with any comments the judge added.
+Whether you view the feedback in the hand-in panel or on the feedback page of a submission, it always contains the same detailed **feedback** about your solution. At the top, it shows the **status** the judge assigned to your solution (for example `Correct` or `Wrong`) and a brief summary of the result. Below that, the judge reports in detail on all tests your solution was subjected to, and the `Code` tab shows your source code with any comments the judge added.
 
 The meaning of each status and the way the detailed feedback is structured are explained in [Understanding Feedback](../feedback/).
 
