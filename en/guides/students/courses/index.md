@@ -139,13 +139,35 @@ On your homepage, each course you are registered for is shown as a course card. 
 
 ![Favorites row on the homepage with a favourited course card, its heart icon filled in](./favorite-courses-en.png)
 
+## Upcoming Deadlines on Your Homepage
+
+You do not have to open every course to know what is due: your homepage collects the deadlines of all courses you are registered for. The `Upcoming deadlines` panel in the right column lists the exercise series with the closest deadlines, each linking to the series and its course. The label next to a series shows how much time you have left: it is grey for deadlines that are still some way off, and becomes orange for deadlines within the week and red for deadlines within two days. Once you have solved all exercises of a series before its deadline, the label turns green and shows a check mark. Hover over a label to see the exact date and time of the deadline.
+
+![Upcoming deadlines panel on the homepage, listing series from two courses with their deadline labels](./home-deadlines-en.png)
+
+Your closest deadlines are also displayed as cards at the top of your homepage, under the heading `Upcoming deadlines`, and the [course cards](#favourite-courses) on your homepage show the next deadlines of each course as well. Finally, within a course, the deadline of each exercise series is displayed under the name of the series, as described [above](#exercise-series).
+
 ## Course Deadlines in Your Calendar
 
-Dodona can provide the deadlines of a course as a calendar feed (iCalendar) that you can add to your own calendar application. On the course page, click the three dots at the bottom of the card with the course description and choose `Add course to calendar`.
+Dodona can also provide the deadlines of a course as a calendar feed (iCalendar) that you can add to your own calendar application, so that they appear right next to your classes and other appointments. On the course page, click the three dots at the bottom of the card with the course description and choose `Add course to calendar`.
 
 ![Course page card menu open, showing the Add course to calendar item](./course-calendar-menu-en.png)
 
-This link opens in your default calendar application (such as Apple Calendar or Outlook), which then subscribes to the feed. Alternatively, you can copy the link address and add it to your calendar application manually; in Google Calendar, for example, you can add a calendar via `From URL`. The feed contains an event for each exercise series with a deadline that is visible to you, with a link back to that series on Dodona. Because your calendar application subscribes to the feed, new or changed deadlines appear in your calendar automatically.
+The feed contains an event for every exercise series of the course that has a deadline and is visible to you; series without a deadline do not appear. Each event is named after the exercise series, takes place at the moment of the deadline, and contains a link that takes you straight back to the series on Dodona. In your calendar application, the calendar itself is named `Dodona:` followed by the name of the course. The feed covers a single course: if you want the deadlines of several courses in your calendar, add each course separately in the same way.
+
+::: tip Subscribe Rather Than Import
+
+The calendar link is a subscription (a `webcal://` link): your calendar application checks the feed regularly, so new or changed deadlines appear in your calendar automatically. If you would instead download the file and import it once, you would only get a snapshot that never updates — subscribing is almost always what you want. Do note that some applications only refresh subscribed calendars every few hours (Google Calendar can even take up to a day), so a deadline your teacher has just added or moved may take a while to show up.
+
+:::
+
+### Adding the Feed to Your Calendar Application
+
+Clicking `Add course to calendar` opens your default calendar application (such as Apple Calendar or Outlook), which then offers to subscribe to the feed. If nothing happens, or if you keep your calendar somewhere else, right-click the menu item, copy the link address, and add the calendar to your application of choice by its URL:
+
+- **Google Calendar**: next to `Other calendars`, click `+` and choose `From URL`, then paste the copied link. See [Google's help page on subscribing to calendars](https://support.google.com/calendar/answer/37100) for more details.
+- **Apple Calendar**: on a Mac, choose `File` > `New Calendar Subscription` and paste the link, or simply click `Add course to calendar` on your Mac, iPhone, or iPad. See [Apple's help page on calendar subscriptions](https://support.apple.com/guide/calendar/subscribe-to-calendars-icl1022/mac).
+- **Outlook**: in Outlook on the web, choose `Add calendar` and subscribe from the web with the copied link. See [Microsoft's help page on subscribing to a calendar](https://support.microsoft.com/en-us/office/import-or-subscribe-to-a-calendar-in-outlook-com-or-outlook-on-the-web-cff1429c-5af6-41ec-a5b4-74f2c278e98c).
 
 ## Archived Courses
 
