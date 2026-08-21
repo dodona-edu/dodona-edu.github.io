@@ -58,6 +58,11 @@ Keep this page open—you will need it later.
 
 Before adding your new repository to Dodona, you need to grant Dodona read and write access to it.
 
+::: info Why write access?
+Dodona doesn't just read your repository, it also writes to it: when Dodona processes a new exercise, it stores a unique identifier in the exercise's `config.json` file and pushes that change to your repository as a commit by _Dodona_.
+This is normal and requires no action on your part, but it does mean your repository can contain changes that you didn't make yourself.
+:::
+
 The easiest way to do this (on github.com) is to give the user [dodona-server](https://github.com/dodona-server) access to your repository:
 
 1. Go to the `Settings` tab of your repository.

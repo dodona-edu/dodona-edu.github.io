@@ -35,6 +35,12 @@ Do this as follows:
 
 If everything went well, this window should now be empty.
 
+::: info Why the pop-up?
+This pop-up appears when your copy of the repository is behind the version on GitHub.
+That can happen because Dodona also makes commits in your repository: when it processes a new exercise, it stores a unique identifier in the exercise's `config.json` file and pushes that change.
+Syncing first fetches those changes, after which your own changes can be pushed.
+:::
+
 ## 6. Testing the Exercise
 
 The exercise you just created can be found in [your exercise repository](https://dodona.be/en/repositories/) on Dodona.
