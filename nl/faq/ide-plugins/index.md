@@ -46,6 +46,14 @@ Nadat je de Dodona-plugin voor PyCharm met succes hebt geïnstalleerd, kun je de
   ![juiste oplossing](./pc-correct.png)
   Als je meer details over het resultaat wilt zien, klik dan op de link 'more details' om het resultaat in een nieuw browservenster te openen. Als je opnieuw wilt indienen, klik je gewoon weer op het blauwe vinkje. Onthoud dat je zo vaak kan indienen als je wil.
 
+## Hoe koppel ik de PyCharm-plugin aan een ander Dodona-account?
+
+De plugin onthoudt het account dat je bij het eerste gebruik instelde, zelfs als je de plugin opnieuw installeert. Wil je overschakelen naar een ander account, volg dan deze stappen:
+
+1. Maak een [API-token](/nl/faq/api-tokens/) aan voor het account dat je wil gebruiken; tokens zijn immers gekoppeld aan één specifiek account.
+2. Open in PyCharm het menu 'File' en klik op 'Settings...'. Zoek naar 'Dodona' om de instellingen van de plugin te vinden.
+3. Verwijder daar het gekoppelde account en voeg een nieuw account toe met het API-token dat je net aanmaakte.
+
 ## Hoe installeer ik de VS Code-extensie?
 
 Zo installeer je de Dodona-extensie voor Visual Studio Code:
