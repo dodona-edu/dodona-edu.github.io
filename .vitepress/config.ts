@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 import packageInfo from '../package.json';
 import { getSidebar } from "./sidebar";
+import { sidebarHotReload } from "./sidebarHotReload";
 import markdownItImsize from "markdown-it-imsize";
 
 
@@ -17,6 +18,10 @@ export default defineConfig({
   ],
 
   lastUpdated: false,
+
+  vite: {
+    plugins: [sidebarHotReload()],
+  },
 
   markdown: {
     config: (md) => {
