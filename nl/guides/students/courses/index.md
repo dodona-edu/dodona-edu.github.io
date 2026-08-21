@@ -141,13 +141,35 @@ Op je startpagina wordt elke cursus waarvoor je geregistreerd bent weergegeven a
 
 ![Rij Favorieten op de startpagina met een favoriete cursuskaart waarvan het hartje is ingevuld](./favorite-courses-nl.png)
 
+## Aankomende deadlines op je startpagina
+
+Je hoeft niet elke cursus apart te openen om te weten wat er wanneer af moet: je startpagina verzamelt de deadlines van alle cursussen waarvoor je geregistreerd bent. Het paneel `Aankomende deadlines` in de rechterkolom lijst de oefeningenreeksen met de dichtstbijzijnde deadlines op, telkens met een link naar de reeks en haar cursus. Het label naast een reeks toont hoeveel tijd je nog hebt: het is grijs voor deadlines die nog veraf zijn, en wordt oranje voor deadlines binnen de week en rood voor deadlines binnen de twee dagen. Zodra je alle oefeningen van een reeks vóór de deadline hebt opgelost, wordt het label groen en verschijnt er een vinkje. Beweeg met je muis over een label om de exacte datum en het exacte tijdstip van de deadline te zien.
+
+![Paneel Aankomende deadlines op de startpagina, met reeksen uit twee cursussen en hun deadlinelabels](./home-deadlines-nl.png)
+
+Je dichtstbijzijnde deadlines worden ook als kaarten bovenaan je startpagina getoond, onder de hoofding `Aankomende deadlines`, en daarnaast tonen ook de [cursuskaarten](#favoriete-cursussen) op je startpagina de eerstvolgende deadlines van elke cursus. Binnen een cursus staat de deadline van elke oefeningenreeks ten slotte onder de naam van de reeks, zoals [hierboven](#oefeningenreeksen) beschreven.
+
 ## Cursusdeadlines in je agenda
 
-Dodona kan de deadlines van een cursus aanbieden als een agendafeed (iCalendar) die je kan toevoegen aan je eigen agenda-applicatie. Klik op de cursuspagina op de drie puntjes onderaan de kaart met de cursusbeschrijving en kies `Cursus toevoegen aan agenda`.
+Dodona kan de deadlines van een cursus ook aanbieden als een agendafeed (iCalendar) die je kan toevoegen aan je eigen agenda-applicatie, zodat ze netjes tussen je lessen en andere afspraken verschijnen. Klik op de cursuspagina op de drie puntjes onderaan de kaart met de cursusbeschrijving en kies `Cursus toevoegen aan agenda`.
 
 ![Geopend menu van de cursuskaart met het item Cursus toevoegen aan agenda](./course-calendar-menu-nl.png)
 
-Deze link opent in je standaard agenda-applicatie (zoals Apple Agenda of Outlook), die zich vervolgens abonneert op de feed. Je kan het adres van de link ook kopiëren en manueel toevoegen aan je agenda-applicatie; in Google Agenda kan je bijvoorbeeld een agenda toevoegen via `Via URL`. De feed bevat een gebeurtenis voor elke oefeningenreeks met een deadline die zichtbaar is voor jou, met een link terug naar die reeks op Dodona. Omdat je agenda-applicatie zich abonneert op de feed, verschijnen nieuwe of gewijzigde deadlines automatisch in je agenda.
+De feed bevat een gebeurtenis voor elke oefeningenreeks van de cursus die een deadline heeft en zichtbaar is voor jou; reeksen zonder deadline verschijnen er niet in. Elke gebeurtenis krijgt de naam van de oefeningenreeks, vindt plaats op het moment van de deadline en bevat een link die je meteen terugbrengt naar de reeks op Dodona. In je agenda-applicatie heet de agenda zelf `Dodona:` gevolgd door de naam van de cursus. De feed dekt één cursus: wil je de deadlines van meerdere cursussen in je agenda, voeg dan elke cursus apart op dezelfde manier toe.
+
+::: tip Abonneren in plaats van importeren
+
+De agendalink is een abonnement (een `webcal://`-link): je agenda-applicatie controleert de feed regelmatig, zodat nieuwe of gewijzigde deadlines automatisch in je agenda verschijnen. Zou je het bestand daarentegen downloaden en eenmalig importeren, dan krijg je enkel een momentopname die nooit wordt bijgewerkt — abonneren is dus bijna altijd wat je wil. Hou er wel rekening mee dat sommige applicaties geabonneerde agenda's maar om de paar uur verversen (bij Google Agenda kan het zelfs tot een dag duren), waardoor een deadline die je lesgever net heeft toegevoegd of verplaatst even op zich kan laten wachten.
+
+:::
+
+### De feed toevoegen aan je agenda-applicatie
+
+Als je op `Cursus toevoegen aan agenda` klikt, opent je standaard agenda-applicatie (zoals Apple Agenda of Outlook), die dan voorstelt om je te abonneren op de feed. Gebeurt er niets, of hou je je agenda ergens anders bij, klik dan met de rechtermuisknop op het menu-item, kopieer het linkadres en voeg de agenda via die URL toe aan de applicatie van je keuze:
+
+- **Google Agenda**: klik naast `Andere agenda's` op `+`, kies `Via URL` en plak de gekopieerde link. Meer details vind je op [de helppagina van Google over abonneren op agenda's](https://support.google.com/calendar/answer/37100?hl=nl).
+- **Apple Agenda**: kies op een Mac `Archief` > `Nieuw agenda-abonnement` en plak de link, of klik gewoon op `Cursus toevoegen aan agenda` op je Mac, iPhone of iPad. Zie [de helppagina van Apple over agenda-abonnementen](https://support.apple.com/nl-be/guide/calendar/icl1022/mac).
+- **Outlook**: kies in Outlook op het web `Agenda toevoegen` en abonneer je via het web met de gekopieerde link. Zie [de helppagina van Microsoft over abonneren op een agenda](https://support.microsoft.com/nl-nl/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c).
 
 ## Gearchiveerde cursussen
 

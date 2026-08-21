@@ -2227,6 +2227,23 @@ shots:
     crop: { selector: '#active-announcement' }
     must_show: [announcement text, dismiss cross]
 
+  # SM-home-deadlines (docs issue #332): the homepage "Upcoming deadlines" panel
+  # (Home::DeadlinesComponent, right column). Needs BOTH states: students-series-deadlines
+  # gives course 29's "Variables and types" and "Conditions" a deadline 10 days out (grey
+  # "upcoming" pills), home-deadlines dresses course 1 up as a plausible second course with
+  # an urgent deadline 2 days out (red pill), so the panel shows two courses and two
+  # urgency colours (Sofie's seeded solves also turn "Variables and types" into a green
+  # met pill with a check mark, matching the prose -- keep it if the reseed still shows
+  # it). Like SM-favorites, course/series names stay English under /nl/.
+  - id: SM-home-deadlines
+    page: guides/students/courses
+    file: home-deadlines
+    url: /{locale}/
+    state: [students-series-deadlines, home-deadlines]
+    crop:
+      selector: '.home .sidebar .card:has(.card-eyebrow--pink)'
+    must_show: [Upcoming deadlines panel title with alarm eyebrow, series linking to two different courses, deadline pills in at least two urgency colours]
+
   # ---------------- microsoft-entra (guides/administrators) ----------------
   # Both shots below are Microsoft's own consent screens at
   # login.microsoftonline.com, not Dodona pages, so the runner has no page to
