@@ -35,6 +35,12 @@ Doe dit als volgt:
 
 Als alles goed gegaan is, werd dit venster leeg.
 
+::: info Waarom die pop-up?
+Deze pop-up verschijnt wanneer jouw versie van de repository achterloopt op de versie op GitHub.
+Dat kan gebeuren doordat Dodona ook commits maakt in je repository: wanneer Dodona een nieuwe oefening verwerkt, slaat het een unieke identificatiecode op in het bestand `config.json` van die oefening en pusht het die wijziging.
+Door eerst te syncen haal je die wijzigingen binnen, waarna je eigen wijzigingen gepusht kunnen worden.
+:::
+
 ## 6. Oefening testen
 
 De oefening die je daarnet gemaakt hebt, kan je terugvinden in [jouw oefeningenrepository](https://dodona.be/nl/repositories/) op Dodona.

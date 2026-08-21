@@ -58,6 +58,11 @@ Laat de pagina open staan, je zal haar nog nodig hebben.
 
 Voor je je nieuwe repository aan Dodona kan toevoegen, moet je ervoor zorgen dat Dodona lees- en schrijfrechten heeft op je repository.
 
+::: info Waarom schrijfrechten?
+Dodona leest niet alleen je repository, maar schrijft er ook naar: wanneer Dodona een nieuwe oefening verwerkt, slaat het een unieke identificatiecode op in het bestand `config.json` van die oefening en pusht het die wijziging naar je repository als een commit van _Dodona_.
+Dit is normaal en je hoeft er niets voor te doen, maar het betekent wel dat je repository wijzigingen kan bevatten die je niet zelf gemaakt hebt.
+:::
+
 De makkelijkste manier om dit te doen (op github.com) is de gebruiker [dodona-server](https://github.com/dodona-server) toegang te geven tot je repository:
 
 1. Ga naar het tabblad `Settings` in je repository.
