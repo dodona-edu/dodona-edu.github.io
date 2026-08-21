@@ -58,16 +58,16 @@ To do this, click on the info icon in the top menu bar:
 
 ![Sample Solution](./sample-solution.png)
 
-Next, select the sample solution you want to submit (in this case, there is only one: `solution.py`), then click the _Submit this solution_ button.
-This will open the exercise page with the sample solution preloaded.
-All you need to do is click submit.
+Next, select the sample solution you want to submit (in this case, there is only one: `solution.py`), then click the `Submit this solution` button.
+This will open the exercise page with the sample solution loaded into the editor.
+All you need to do is click `Submit`.
 
-![Select Sample Solution](./dodona-submit.png)
+![Sample solutions card on the exercise information page with the Submit this solution button highlighted](./dodona-submit-en.png)
 
-Once the solution is marked as correct, you will be able to publish the exercise by clicking _Publish this exercise_.
+Once the solution is marked as correct, you will be able to publish the exercise by clicking `Publish activity` in the banner at the top of the exercise page.
 Your exercise is now ready to use on Dodona!
 
-![Minimum Exercise](./minimum.png)
+![Exercise page of a draft exercise with the publish banner and the feedback for a correct submission](./minimum-en.png)
 
 ::: tip
 Let someone else try your exercise. This often helps you discover gaps in the test suite and refine the exercise further.

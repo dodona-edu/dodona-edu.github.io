@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Understanding Feedback
-The feedback page contains detailed **feedback** about a solution you submitted for an exercise. As soon as possible after submission, the solution is automatically evaluated by a judge associated with the exercise. The judge provides detailed feedback on the correctness of the submission, which you can use to correct or further refine your solution. This page explains what the different submission statuses mean and how the detailed feedback of the judge is structured. How to navigate to exercises and submit solutions is covered in [Solving Exercises](../exercises/).
+As soon as possible after submission, a solution is automatically evaluated by a judge associated with the exercise. The judge provides detailed **feedback** on the correctness of the submission, which you can use to correct or further refine your solution. You see this feedback right in the hand-in panel after submitting a solution, and it is also shown on the feedback page of a submission, which you reach through the [submission overviews](../exercises/#navigating-to-a-submission). This page explains what the different submission statuses mean and how the detailed feedback of the judge is structured. How to navigate to exercises and submit solutions is covered in [Solving Exercises](../exercises/).
 
 ![Submission results page for a correct Curling solution](./submission-page-en.png)
 
@@ -52,14 +52,14 @@ The last tab is always named `Code` and contains the source code of the solution
 
 ::: tip Tip
 
-In the `Code` tab on the feedback page, you cannot modify the source code of the solution. You must click the edit button in the upper right corner of the feedback page. The source code of the solution you are currently viewing will then be loaded into the editor. There you can edit the source code and possibly resubmit it.
+In the `Code` tab, you cannot modify the source code of the solution. To do that, click `Edit submission` in the upper right corner of the feedback page (in the hand-in panel on the exercise page, this button is called `Edit this submission`). The source code of the solution you are currently viewing will then be loaded into the editor. There you can edit the source code and possibly resubmit it.
 :::
 
 ## Tests, Test Cases, and Contexts
 
 For each tab, the judge reports on individual **tests** to which the source code was subjected. Related tests are grouped into a **test case**, and interdependent test cases are grouped into a **context**.
 
-![Feedback tab with two correct context cards](../exercises/feedback-tab-en.png)
+![Feedback with two correct context cards](../exercises/handin-feedback-en.png)
 
 Visually, all test cases of a context are grouped in an expandable card.
 The header of the card will contain `Correct` or `Wrong` depending on the judge's assessment of the entire context.

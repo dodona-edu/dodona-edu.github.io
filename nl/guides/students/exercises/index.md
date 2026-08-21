@@ -24,7 +24,7 @@ Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je
 
 Op elke oefeningenpagina staat bovenaan een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde taal. Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
-![Oefeningpagina met de beschrijvingskaart en het indieningspaneel](./exercise-page-nl.png)
+![Oefeningpagina met de beschrijvingskaart en daaronder het indienpaneel met de code-editor en de indienknop](./exercise-page-nl.png)
 
 ::: tip
 
@@ -35,34 +35,40 @@ Als je een actie aan het uitvoeren bent op een oefening dan verschijnt de naam v
 
 ## Indienen van een oplossing
 
-Op een oefeningpagina staat onder het paneel met de beschrijving van de oefening een tweede paneel waarmee je een oplossing kunt indienen voor de oefening. Klik hiervoor op de tab `Indienen`, als deze tab niet geselecteerd was, en plaats de broncode van je oplossing in de *code editor*. Klik daarna op de indienknop in de rechterbovenhoek van het paneel om je oplossing in te dienen. **Je mag zoveel indienen als je wil. Er wordt enkel rekening gehouden met het resultaat van jouw laatste oplossing**. Bij elke oplossing wordt [automatische feedback](../feedback/) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
+Onder het paneel met de beschrijving van de oefening vind je het *indienpaneel*. In de koptekst staat de naam van de oefening en, in de rechterbovenhoek, een knop met je aantal ingediende oplossingen voor deze oefening (bijvoorbeeld `1 oplossing`). De *code-editor* is altijd zichtbaar in dit paneel: plaats de broncode van je oplossing in de editor en klik rechtsonder op de knop `Indienen` om ze in te dienen. Zoals de balk onderaan het paneel je eraan herinnert: **je kan zo vaak indienen als je wil, en er wordt enkel rekening gehouden met je laatst ingediende oplossing**. Bij elke oplossing wordt [automatische feedback](../feedback/) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
 
-![Indieningspaneel met een lege editor en de gemarkeerde indienknop](./handin-editor-nl.png)
+![Indienpaneel met een lege editor en de gemarkeerde indienknop](./handin-editor-nl.png)
 
 Bij Python-oefeningen opent de knop `Naar sandbox` naast de indienknop [de Python-sandbox](../scratchpad/), waarin je je code in de browser kan uitvoeren en debuggen voor je ze indient.
+
+::: tip Deadlines
+Als de deadline van de oefeningenreeks minder dan vijf minuten veraf is, verschijnt er boven de editor een melding met de exacte deadline. Is de deadline al verstreken, dan waarschuwt de melding je dat je nog kan indienen, maar dat er met je oplossingen mogelijk geen rekening meer gehouden wordt.
+:::
 
 ::: tip Gebruik een IDE
 
 Alhoewel je perfect kan programmeren in de editor op Dodona zelf, raden we niet aan om alle oefeningen hierin op te lossen. In plaats daarvan adviseren we om een [Integrated Development Environment](https://nl.wikipedia.org/wiki/Integrated_development_environment) (IDE) te gebruiken. IDE's geven namelijk meer ondersteuning tijdens het schrijven, uitvoeren, testen en debuggen van broncode. Op die manier leer je je programmeervaardigheden generiek in te zetten om andere problemen aan te pakken dan enkel de oefeningen uit Dodona.
 
-Bovendien is er een plugin voorzien voor de JetBrains IDE's zoals [IntelliJ](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/), en [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html). Ook voor [**Visual Studio Code**](https://code.visualstudio.com/) is een extensie voorzien. Programmeurs die met die IDE's werken kunnen hun oplossingen rechtstreeks in Dodona indienen met behulp van die tool. Zonder die tool moet je code kopiëren en plakken in het indieningstekstvak op Dodona en op de oranje cirkel te klikken. Instructies vind je [hier voor PyCharm](/nl/faq/ide-plugins/#hoe-installeer-ik-de-pycharm-plugin) en [hier voor VS Code](/nl/faq/ide-plugins/#hoe-installeer-ik-de-vs-code-extensie).
+Bovendien is er een plugin voorzien voor de JetBrains IDE's zoals [IntelliJ](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/), en [WebStorm](https://www.jetbrains.com/webstorm/specials/webstorm/webstorm.html). Ook voor [**Visual Studio Code**](https://code.visualstudio.com/) is een extensie voorzien. Programmeurs die met die IDE's werken kunnen hun oplossingen rechtstreeks in Dodona indienen met behulp van die tool. Zonder die tool moet je je code kopiëren en plakken in de editor op Dodona en op de indienknop klikken. Instructies vind je [hier voor PyCharm](/nl/faq/ide-plugins/#hoe-installeer-ik-de-pycharm-plugin) en [hier voor VS Code](/nl/faq/ide-plugins/#hoe-installeer-ik-de-vs-code-extensie).
 :::
 
-Na het indienen van een oplossing wordt automatisch de tab `Oplossingen` geselecteerd. Deze tab bevat een overzicht van alle oplossingen die je in de cursus hebt ingediend voor de oefening. Deze oplossingen worden in het overzicht opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), waardoor de oplossing die je net hebt ingediend helemaal bovenaan staat. Het overzicht bevat voor elke oplossing het tijdstip van indienen, de status en een korte samenvatting van de [feedback](../feedback/). In het overzicht zie je vóór elke oplossing ook een [icoontje](../feedback/#mogelijke-statussen) dat overeenkomt met de status van de oplossing.
+Nadat je op `Indienen` geklikt hebt, wordt je oplossing in een wachtrij geplaatst en beoordeeld door de judge; de indienknop toont de voortgang (`Bezig met indienen…`, `Evalueren…`). Meestal duurt dit maar enkele seconden. Zodra de judge klaar is, verschijnt de gedetailleerde [feedback](../feedback/) in het indienpaneel zelf, op de plaats van de editor. Een balk bovenaan het paneel toont de status van de oplossing (bijvoorbeeld `Correct` of `Fout`) met een korte samenvatting en het tijdstip van indienen.
 
-Na het indienen wordt je oplossing in een wachtrij geplaatst. Zolang een oplossing in de wachtrij staat heeft ze de status `In de wachtrij...`. Van zodra het platform klaar is om een oplossing te beoordelen, wordt de eerst ingediende oplossing uit de wachtrij uitgevoerd en beoordeeld door het systeem. Tijdens het beoordelen heeft een oplossing de status `Aan het uitvoeren...`. Meestal duurt dit maar enkele seconden.
+![Indienpaneel dat de feedback voor een correcte oplossing toont, met de statusbalk en de knop Deze oplossing bewerken](./handin-feedback-nl.png)
 
-Zodra de judge klaar is met het beoordelen van je oplossing krijgt ze haar finale status en wordt de feedbackpagina met gedetailleerde [feedback](../feedback/) over de oplossing automatisch weergegeven in een nieuwe tab `Feedback`.
+Vanuit de feedback kan je meteen verder werken aan je code: klik op `Deze oplossing bewerken` (of op `Bewerken en herindienen` onderaan het paneel) om de code van de getoonde oplossing terug in de editor te laden. Had je nog niet-ingediende wijzigingen in de editor staan, dan keer je met de knop `Terug naar editor` terug naar de editor zoals je die achterliet.
 
-![Feedback tabblad, actief, met een groen resultaat en meerdere testgeval-kaarten](./feedback-tab-nl.png)
+Als je terugkeert naar een oefening waarvoor je al eerder hebt ingediend, dan bevat de editor automatisch de code van je laatst ingediende oplossing. Een infomelding boven de editor, `We hebben jouw laatste oplossing ingeladen in de editor.`, vertelt je dat dit gebeurd is. Begin je liever opnieuw? De knop naast die melding zet de voorbeeldcode van de oefening terug (`Zet de voorbeeldcode terug`) of maakt, als de oefening geen voorbeeldcode heeft, de editor leeg (`Maak de editor leeg`).
+
+![Infomelding boven de editor dat de laatste oplossing werd ingeladen, met de knop Maak de editor leeg](./handin-preloaded-nl.png)
 
 ## Navigeren naar een oplossing
 
 Je kan op Dodona op verschillende manieren naar je ingediende oplossingen navigeren. Voor elke manier zullen de oplossingen door Dodona op een andere manier gegroepeerd worden. Hieronder volgen de twee belangrijkste manieren:
 
-- Je kan al jouw oplossingen van één oefening bekijken door op de `Oplossingen` tab op de relevante oefeningenpagina te klikken.
+- Je kan al jouw oplossingen van één oefening bekijken in de *indiengeschiedenis* van die oefening: klik op de knop met je aantal ingediende oplossingen (bijvoorbeeld `2 oplossingen`) in de rechterbovenhoek van het indienpaneel. De oplossingen worden opgelijst in omgekeerde chronologische volgorde (meest recente bovenaan), met voor elke oplossing haar nummer, status, een korte samenvatting van de [feedback](../feedback/) en het tijdstip van indienen. Vóór elke oplossing staat ook een [icoontje](../feedback/#mogelijke-statussen) dat overeenkomt met haar status. Klik op een oplossing om haar feedback in het indienpaneel te bekijken.
 
-![Oplossingen tabblad met een omgekeerd chronologische lijst van oplossingen](./submissions-tab-nl.png)
+![Geopende indiengeschiedenis met een lijst van oplossingen en hun statussen](./submission-history-nl.png)
 
 - Je kan alle oplossingen die je ooit hebt ingediend zien door in het gebruikersmenu in de navigatiebalk op `Mijn oplossingen` te klikken.
 
@@ -72,13 +78,13 @@ Een oplossingenoverzicht bevat het oplossingsnummer, het tijdstip van indienen, 
 
 ![Overzicht van alle oplossingen met zoekveld, statusfilter en een tabel met oplossingen](./my-submissions-nl.png)
 
-Je kunt een oplossing selecteren door in een oplossingenoverzicht op het pijltje te klikken aan rechterkant van de oplossing. Hierdoor navigeer je naar de feedbackpagina met de gedetailleerde feedback over de oplossing. Dezelfde pagina wordt getoond als je op het oplossingsnummer klikt.
+Je kan een oplossing selecteren door in een oplossingenoverzicht op het pijltje te klikken aan rechterkant van de oplossing. Hierdoor navigeer je naar de feedbackpagina met de gedetailleerde feedback over de oplossing. Dezelfde pagina wordt getoond als je op het oplossingsnummer klikt.
 
 ![Overzicht van alle oplossingen met het pijltje van de eerste rij gemarkeerd](./my-submissions-open-nl.png)
 
 ## Je resultaat bekijken
 
-Op de feedbackpagina staat gedetailleerde **feedback** over een oplossing die je ingediend hebt voor een oefening. Bovenaan zie je de **status** die de judge aan je oplossing heeft toegekend (bijvoorbeeld `Correct` of `Fout`) en een korte samenvatting van het resultaat. Daaronder rapporteert de judge in detail over alle testen waaraan je oplossing onderworpen werd, en in de tab `Code` zie je je broncode met eventuele opmerkingen van de judge.
+Of je de feedback nu bekijkt in het indienpaneel of op de feedbackpagina van een oplossing, ze bevat altijd dezelfde gedetailleerde **feedback** over je oplossing. Bovenaan zie je de **status** die de judge aan je oplossing heeft toegekend (bijvoorbeeld `Correct` of `Fout`) en een korte samenvatting van het resultaat. Daaronder rapporteert de judge in detail over alle testen waaraan je oplossing onderworpen werd, en in de tab `Code` zie je je broncode met eventuele opmerkingen van de judge.
 
 De betekenis van elke status en de manier waarop de gedetailleerde feedback gestructureerd is, worden uitgelegd bij [Feedback begrijpen](../feedback/).
 

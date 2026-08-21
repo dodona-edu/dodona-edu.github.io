@@ -58,16 +58,16 @@ Om dit te doen klik je bovenaan de menubalk op het informatie-icoontje:
 
 ![Voorbeeldoplossing](./sample-solution.png)
 
-Vervolgens kies je de voorbeeldoplossing die je wilt indienen (hier is er maar een: `solution.py`), waarna je op de knop _Deze oplossing indienen_ klikt.
-Dit zal de oefeningenpagina openen met de voorbeeldoplossing ingeladen.
-Je moet enkel nog op indienen klikken.
+Vervolgens kies je de voorbeeldoplossing die je wilt indienen (hier is er maar een: `solution.py`), waarna je op de knop `Deze oplossing indienen` klikt.
+Dit zal de oefeningenpagina openen met de voorbeeldoplossing ingeladen in de editor.
+Je moet enkel nog op `Indienen` klikken.
 
-![Voorbeeldoplossing kiezen](./dodona-submit.png)
+![Kaart Voorbeeldoplossingen op de informatiepagina van de oefening met de knop Deze oplossing indienen gemarkeerd](./dodona-submit-nl.png)
 
-Eens de oplossing juist gerekend is, zal je de oefening kunnen publiceren door op _Deze oefening publiceren_ te klikken.
+Eens de oplossing juist gerekend is, zal je de oefening kunnen publiceren door op `Deze oefening publiceren` te klikken in de banner bovenaan de oefeningpagina.
 Je oefening is nu klaar om te gebruiken op Dodona!
 
-![Minimum oefening](./minimum.png)
+![Oefeningpagina van een conceptoefening met de publiceerbanner en de feedback voor een correcte oplossing](./minimum-nl.png)
 
 ::: tip
 Laat je oefening eens oplossen door iemand anders. Zo ontdek je vaak nog gaten in het testplan, en kan je de oefening verder verfijnen.

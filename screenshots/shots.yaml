@@ -886,9 +886,12 @@ shots:
 # Stages D/E (course 29 exercise/submission shots) additionally need the
 # course29-repo-access scenario applied (see ../state/), or activity pages 403.
 #
-# Hand-in flow: confirmed LEGACY (capture-decisions.md "Students" #1) -- production students
-# still see the tabbed `Hand in / Submissions / Feedback` card, so every exercise/feedback
-# shot below targets `.card.card-nav` and its tabs, not the new-flow selectors.
+# Hand-in flow: NEW FLOW as of 2026-08 (dodona-edu/dodona flag `new_handin_flow` at 100%
+# in production). The tabbed `Hand in / Submissions / Feedback` card is gone; the exercise
+# page renders one `.handin-card` (Activities::HandinComponent) with an always-visible
+# editor, a submission-history dropdown in the card eyebrow, and feedback shown in place.
+# The dev seeds only enable the flag for the :zeus group, so every shot that shows the
+# hand-in card to a STUDENT (user 5) needs the new-handin-flow state scenario applied.
 #
 # Selector confidence: selectors quoted verbatim from the manifest (e.g. `.activity-table`,
 # `.card.card-nav`, `#main-container`, `.alert-warning`, `td.actions`, `.group.card`,
@@ -1272,22 +1275,32 @@ shots:
     page: guides/students/exercises
     file: exercise-page
     url: /{locale}/courses/29/series/140/activities/347592237/
-    state: [students-series-deadlines]
+    state: [students-series-deadlines, new-handin-flow]
     hook: hooks/students-interact.mjs
     iframeProfilerFix: true
+    # This URL already has a submission for user 5, so the editor preloads it with the
+    # "We have preloaded your latest submission" callout (that callout gets its own shot,
+    # handin-preloaded). Click "Clear editor" for the clean-first-visit look the docs
+    # intro wants.
+    clickText: { en: 'Clear editor', nl: 'Maak de editor leeg' }
+    scrollTop: true # the click scrolls; the tall union crop needs document == viewport coords
     # Union of the two cards: #main-container also includes the right-hand series
-    # sidebar (clipped mid-word at this viewport) and lets the fixed legacy submit
-    # FAB bleed into the frame.
+    # sidebar (clipped mid-word at this viewport) and the "Submit" jump link in the
+    # left gutter.
     crop:
-      union: ['.card.activity-description', '.card.card-nav']
+      union: ['.card.activity-description', '.handin-card']
     must_show:
       - exercise title header
       - description
-      - code editor
-      - submit arrow
+      - hand-in card with the always-visible code editor
+      - submission-history button with submission count in the card eyebrow
+      - Submit button in the sticky footer
       - '"You can submit as many times as you like..." hint'
       - NO profiler badge in the description card's corner
-    notes: description language follows the COURSE language -- Stage E's course29-dutch flip covers the NL pass, not the URL locale.
+    notes: |
+      description language follows the COURSE language -- Stage E's course29-dutch flip covers
+      the NL pass, not the URL locale. Capture this (and handin-editor/handin-preloaded) while
+      students-submission-echo-correct is NOT applied, so the count button reads "1 submission".
 
   - id: exercise-breadcrumb
     page: guides/students/exercises
@@ -1309,62 +1322,79 @@ shots:
     page: guides/students/exercises
     file: handin-editor
     url: /{locale}/courses/29/series/140/activities/347592237/
-    state: [students-series-deadlines]
+    state: [students-series-deadlines, new-handin-flow]
     hook: hooks/students-interact.mjs
     # This URL already has submission #1347 on it (needed later for D14/D15), so the editor
-    # server-preloads that submission's code with a "We have preloaded your latest submission"
+    # preloads that submission's code with a "We have preloaded your latest submission"
     # callout on first load -- verified live. Click "Clear editor" (a normal, always-available
     # UI action, matches the docs' "before submitting" framing) to get the empty editor the
     # manifest calls for.
     clickText: { en: 'Clear editor', nl: 'Maak de editor leeg' }
     highlight:
-      - selector: '#editor-process-btn' # app/views/activities/_handin.html.erb: icon-only paper-plane submit button, verified id
+      - selector: 'd-handin-button' # filled Submit button in the sticky card footer
     crop:
-      selector: '.card.card-nav'
+      selector: '.handin-card'
     must_show:
       - empty editor line 1
-      - Hand in / Submissions tabs
-      - highlighted submit button
+      - submission-history button with submission count in the card eyebrow
+      - highlighted Submit button
       - '"To sandbox" button'
-      - hint line
+      - '"You can submit as many times as you like..." hint line'
 
-  - id: feedback-tab
+  - id: handin-preloaded
     page: guides/students/exercises
-    file: feedback-tab
+    file: handin-preloaded
     url: /{locale}/courses/29/series/140/activities/347592237/
-    state: [students-series-deadlines, students-submission-echo-correct]
-    hook: hooks/students-interact.mjs
-    # The Feedback tab has no direct trigger of its own (verified against exercise.ts): it only
-    # reveals+activates itself when a submission row's `a.load-submission` link is clicked from
-    # the Submissions tab (enableSubmissionTableLinks()), or after a live browser submit -- so
-    # go via Submissions first, then click the (newest, our throwaway) row.
-    clickTab: { en: 'Submissions', nl: 'Oplossingen' }
-    clickSelector: 'a.load-submission'
+    state: [students-series-deadlines, new-handin-flow]
+    # No hook: the callout shows on plain page load because submission #1347 exists.
+    # Echo has no boilerplate, so the action reads "Clear editor"; an exercise WITH
+    # boilerplate would show "Restore the initial code" instead -- the docs prose
+    # covers both, the shot shows the clear variant.
     crop:
-      selector: '.card.card-nav'
+      selector: '#restore-boilerplate'
+      pad: 8
     must_show:
-      - three tabs, Feedback active
-      - green verdict
+      - '"We have preloaded your latest submission into the editor." info callout'
+      - '"Clear editor" action button'
+
+  - id: handin-feedback
+    page: guides/students/exercises
+    file: handin-feedback
+    url: /{locale}/courses/29/series/140/activities/347592237/
+    state: [students-series-deadlines, students-submission-echo-correct, new-handin-flow]
+    hook: hooks/students-interact.mjs
+    # In-place feedback (replaces the retired Feedback tab): open the submission-history
+    # dropdown in the card eyebrow, then click the newest (throwaway, correct) row; the
+    # feedback then renders inside the hand-in card with the submission bar on top.
+    clickSelectors: ['.handin-card .card-eyebrow .dropdown-toggle', 'd-submission-history .submission-history-row']
+    clickSelectorWait: 2500
+    crop:
+      selector: '.handin-card'
+    must_show:
+      - '"Feedback / Submission #N" card eyebrow'
+      - submission bar with green Correct status, "Back to editor" and "Edit this submission"
       - at least 2 context cards
-      - 'submission-history block (top-right of the header: today/#2/Correct, 4 days ago/#1/Correct)'
+      - '"Edit & resubmit" button in the card footer'
     notes: |
-      Shared image -- also referenced from feedback/index.md as ../exercises/feedback-tab-en.png
+      Shared image -- also referenced from feedback/index.md as ../exercises/handin-feedback-en.png
       (one canonical file for both guides, per the shared-screenshot rule).
 
-  - id: submissions-tab
+  - id: submission-history
     page: guides/students/exercises
-    file: submissions-tab
+    file: submission-history
     url: /{locale}/courses/29/series/141/activities/369972474/
-    state: [students-series-deadlines]
+    state: [students-series-deadlines, new-handin-flow]
     hook: hooks/students-interact.mjs
-    clickTab: { en: 'Submissions', nl: 'Oplossingen' }
-    highlight:
-      - text: { en: 'Submissions', nl: 'Oplossingen' }
+    # Replaces the retired Submissions tab: the history now lives in a dropdown behind
+    # the submission-count button in the hand-in card eyebrow.
+    clickSelectors: ['.handin-card .card-eyebrow .dropdown-toggle']
     crop:
-      selector: '.card.card-nav'
+      union: ['.handin-card .card-eyebrow .dropdown-toggle', '#submission-history-dropdown']
+      pad: 8
     must_show:
-      - reverse-chronological rows (Wrong above Correct)
-      - status icons, time-ago, summary, chevrons
+      - '"2 submissions" count button'
+      - '"Submission history" panel header (nl: "Oplossingen") with the solved-state summary'
+      - reverse-chronological rows (#2 wrong above #1 correct) with status icons, summaries, time-ago
 
   - id: user-menu-my-submissions
     page: guides/students/exercises
@@ -2275,3 +2305,64 @@ shots:
       - Dodona name, publisher and blue verified badge
       - permission list showing "View your basic profile" and "Maintain access to data you have given it access to"
       - no account email visible
+
+---
+# Shots for the exercise-creation tutorial (guides/exercises/creating-exercises/exercise).
+# Both images were manual captures of a hand-built "Minimum" exercise until 2026-08; the
+# seeded TESTed exercise "Minimum" (activity 445402040, series 140 of course 29, sample
+# solution solution.py) lets the pipeline reproduce them.
+#
+# State scenario tutorial-minimum (bin/rails runner in the dodona checkout): flips
+# activity 445402040 to draft and gives zeus a correct (constructed-result) submission on
+# it, so the draft banner shows the "Publish activity." link and the hand-in card has a
+# correct submission to display. Capture these shots LAST (after the student stages):
+# while the scenario is applied, the Minimum exercise is invisible to students and its
+# series table row shows the draft notice. Teardown restores draft: false and destroys
+# the throwaway submission.
+#
+# Both shots use the bare /activities/<id>/ URL, so the description/UI language follows
+# the URL locale (see the students/scratchpad section header) -- no course flip needed.
+
+defaults:
+  user: 1
+  hook: hooks/students-interact.mjs
+  viewport: { width: 1440, height: 1200 }
+
+shots:
+  - id: tutorial-sample-solution-submit
+    page: guides/exercises/creating-exercises/exercise
+    file: dodona-submit
+    url: /{locale}/activities/445402040/info/
+    state: [tutorial-minimum]
+    # The Sample solutions card only shows the solution code + "Submit this solution"
+    # button after a solution tab is clicked.
+    clickText: 'solution.py'
+    highlight:
+      - text: { en: 'Submit this solution', nl: 'Deze oplossing indienen' }
+    crop:
+      selector: '.card.sample-solutions'
+    must_show:
+      - Sample solutions card with the solution.py tab active
+      - the sample solution code
+      - highlighted "Submit this solution" button
+
+  - id: tutorial-publish-draft
+    page: guides/exercises/creating-exercises/exercise
+    file: minimum
+    url: /{locale}/activities/445402040/
+    state: [tutorial-minimum]
+    viewport: { width: 1440, height: 2000 }
+    iframeProfilerFix: true
+    # Open the (only) submission from the history dropdown so the correct feedback shows
+    # in place in the hand-in card, matching the "solution is marked as correct ->
+    # publish" step in the prose.
+    clickSelectors: ['.handin-card .card-eyebrow .dropdown-toggle', 'd-submission-history .submission-history-row']
+    clickSelectorWait: 2500
+    scrollTop: true # the clicks scroll; the tall union crop needs document == viewport coords
+    crop:
+      union: ['.draft-notice', '.handin-card']
+      pad: 8
+    must_show:
+      - 'draft banner with "Publish activity." link (nl: "Deze oefening publiceren.")'
+      - description card of the Minimum exercise
+      - hand-in card showing Correct in-place feedback

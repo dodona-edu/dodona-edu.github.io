@@ -13,11 +13,11 @@
 //   openUserMenu: true            click the navbar user chip ("Sofie ▾" / "Noor ▾" / ...).
 //   clickTab: 'Submissions'       click a hand-in/submission-page tab by its visible label.
 //   clickText: 'Clear editor'     click any element by its exact visible text (not just tabs).
-//   clickSelector: '.foo'         click the first element matching a CSS selector (e.g. the
-//                                 legacy hand-in card's Feedback tab only reveals/activates
-//                                 itself once a submission's `a.load-submission` row is
-//                                 clicked from the Submissions tab -- there is no other trigger
-//                                 for it server-side, verified against exercise.ts).
+//   clickSelector: '.foo'         click the first element matching a CSS selector.
+//   clickSelectors: ['.a', '.b']  click several selectors in turn (e.g. open the hand-in
+//                                 card's submission-history dropdown, then click a row in
+//                                 it to load that submission's feedback in place).
+//                                 clickSelectorWait applies after the last click.
 //   hoverLine: 6                  hover the Nth line (1-based) in the code listing, to reveal
 //                                 the per-line "ask a question" bubble.
 //   iframeProfilerFix: true       rewrite the activity-description iframe's src to add
@@ -139,6 +139,17 @@ export async function prepare(page, { locale, shot, reinject }) {
     await page.waitForTimeout(shot.clickSelectorWait ?? 800);
   }
 
+  // clickSelectors: ['.a', '.b'] clicks each selector in turn (e.g. open the
+  // submission-history dropdown, then click a row inside it). clickSelectorWait
+  // applies after the LAST click (feedback fetch + render time); intermediate
+  // clicks get a fixed short settle.
+  const selectors = shot.clickSelectors ?? [];
+  for (const [i, selector] of selectors.entries()) {
+    await page.locator(selector).first().click();
+    const last = i === selectors.length - 1;
+    await page.waitForTimeout(last ? (shot.clickSelectorWait ?? 800) : 600);
+  }
+
   if (shot.hoverLine) {
     const line = page.locator('.code-listing-container tr, .code-listing-container .line').nth(shot.hoverLine - 1);
     await line.hover();
@@ -169,6 +180,15 @@ export async function prepare(page, { locale, shot, reinject }) {
       const target = leaf.closest(ancestor ?? 'div') ?? leaf;
       target.setAttribute('data-shot', name);
     }, { name: spec.name, text, ancestor: spec.ancestor, doOutline: spec.outline });
+  }
+
+  // Clicks scroll their target into view. A union/clip crop that exceeds the viewport
+  // makes lib.mjs take a fullPage screenshot, whose clip coordinates are
+  // document-absolute while boundingBox() is viewport-relative -- so scroll back to
+  // the top after interacting to make the two coordinate systems coincide.
+  if (shot.scrollTop) {
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(300);
   }
 
   for (const spec of shot.highlight ?? []) {
