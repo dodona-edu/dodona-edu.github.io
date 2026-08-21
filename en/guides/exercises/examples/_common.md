@@ -114,6 +114,14 @@ exercises/
    └── config.json
 ```
 
+::: tip Providing Starter Code (Boilerplate)
+Sometimes you don't want students to start from an empty editor, but from some starter or example code: a function signature to complete, a piece of code to extend, ...
+You can provide this by creating a folder named `boilerplate` inside the `description` folder, containing a file that is also named `boilerplate`.
+The contents of that file are automatically loaded into the editor when a student opens the exercise.
+If you want different starter code depending on the language of the assignment, use the file names `boilerplate.en` and `boilerplate.nl` instead.
+You can find more details in the [exercise directory structure reference](/en/references/exercise-directory-structure/).
+:::
+
 ## 4. Creating a Test Suite
 
 We want this exercise to be automatically graded.

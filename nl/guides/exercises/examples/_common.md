@@ -113,6 +113,14 @@ exercises/
    └── config.json
 ```
 
+::: tip Startcode meegeven (boilerplate)
+Soms wil je niet dat studenten met een lege editor beginnen, maar met wat start- of voorbeeldcode: een functiesignatuur om aan te vullen, een stukje code om uit te breiden, ...
+Dat kan door in de map `description` een map `boilerplate` aan te maken, met daarin een bestand dat ook `boilerplate` heet.
+De inhoud van dat bestand wordt automatisch ingeladen in de editor wanneer een student de oefening opent.
+Wil je andere startcode afhankelijk van de taal van de opgave, gebruik dan de bestandsnamen `boilerplate.nl` en `boilerplate.en`.
+Meer details vind je in de [referentie over de oefeningmap-structuur](/nl/references/exercise-directory-structure/).
+:::
+
 ## 4. Een testplan maken
 
 We willen dat deze oefening automatisch getest wordt.
