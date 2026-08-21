@@ -20,10 +20,6 @@ This guide walks through the full journey: setting up the series, what your stud
 An assessment series controls access *within* Dodona: it does not lock down the student's computer, record their screen, or block other websites. Treat it as one layer of a supervised exam, alongside supervision in the room or the exam environment your school uses.
 :::
 
-::: info Availability
-Assessments are being rolled out gradually. If you don't see the assessment option when creating a series, [contact us](https://dodona.be/en/contact/) and we'll enable it for you.
-:::
-
 ## Creating an assessment series
 
 An assessment series is created like any other series: navigate to your course, click `Manage series` and then `Create series`, as described in [exercise series management](../exercise-series-management/#create-an-exercise-series). At the top of the series form, choose `Assessment series` as the kind, described there as "Series with restricted access and a student-action log".

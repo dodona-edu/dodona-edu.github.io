@@ -1686,21 +1686,18 @@ shots:
 
 ---
 # Assessments-guide shot manifest (Phase 5 item 1: en/nl guides/teachers/assessments).
-# NOTHING in this section has been captured yet -- the guide ships text-first and reuses
-# the existing ESM-1 series-form image for the kind chooser. Assessment mode is behind
-# the `exam_mode` Flipper flag, so every shot needs a state scenario that enables the
-# flag AND builds an exam series; none of those scenarios exist yet:
+# The guide reuses the existing ESM-1 series-form image for the kind chooser; every
+# other shot needs an exam series built by one of these state scenarios:
 #
-#   assessments-exam-series    (to be written) enable the exam_mode Flipper flag for
-#                              user 1, add an exam series to course 11 with
+#   assessments-exam-series    add an exam series to course 11 with
 #                              activity_access: password, exam_lockdown_mode: true,
 #                              a future deadline and exam_auto_close: true, no sessions.
-#   assessments-exam-sessions  (to be written) on top of the above: a few students with
-#                              started sessions, a few stopped (one stopped_by teacher,
-#                              one handed in by the student), the rest not started, plus
+#   assessments-exam-sessions  on top of the above: a few students with started
+#                              sessions, a few stopped (one stopped_by teacher, one
+#                              handed in by the student), the rest not started, plus
 #                              the exam log rows those create -- drives ASSESS-3/4.
-#   assessments-exam-over      (to be written) all sessions stopped, exam_released
-#                              false -- drives ASSESS-5's "Publish assessment" button.
+#   assessments-exam-over      all sessions stopped, exam_released false -- drives
+#                              ASSESS-5's "Publish assessment" button.
 #
 # The exam series only gets an id when its scenario first runs, and that id is not a
 # stable fixture the way series 51-54/140/141/52 are: assessments-exam-series.teardown.rb
