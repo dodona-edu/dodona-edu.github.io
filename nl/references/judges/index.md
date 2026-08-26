@@ -127,18 +127,6 @@ Het is niet gedocumenteerd en heeft veel zeer usecase-specifieke implementaties.
 **Aan de slag** [Github repo](https://github.com/dodona-edu/judge-javascript), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
-### JUnit
-
-::: danger Opgepast
-We raden af om nieuwe oefeningen te maken voor deze judge.
-Gebruik in plaats daarvan de [Java-judge](#java).
-:::
-
-De JUnit-judge gebruikt het JUnit-framework voor oefeningen in de programmeertaal Java 8.\
-**Programmeertalen:** Java \
-**Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java8), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/java) \
-**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
-
 ### Python
 
 ::: danger Opgepast
@@ -150,4 +138,19 @@ Python/Pythia is de eerste judge die is gemaakt voor Dodona.
 Het is een Python judge die eenvoudige input/output tests of meer geavanceerde doctests mogelijk maakt.\
 **Programmeertalen:** Python\
 **Aan de slag** [Documentatie](/nl/references/judges/python-judge), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/python) \
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
+
+## Verwijderde judges
+
+Onderstaande judges zijn verwijderd van Dodona. Oefeningen die deze judges gebruiken, kunnen niet meer geëvalueerd of geopend worden. We houden deze pagina's bij zodat bestaande links blijven werken.
+
+### JUnit
+
+::: danger Opgepast
+Deze judge is verwijderd. Oefeningen die ze gebruiken kunnen niet meer geëvalueerd worden.
+Gebruik in plaats daarvan de [Java-judge](#java).
+:::
+
+De JUnit-judge gebruikt het JUnit-framework voor oefeningen in de programmeertaal Java 8.\
+**Programmeertalen:** Java \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
