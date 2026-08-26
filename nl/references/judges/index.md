@@ -142,12 +142,12 @@ Het is een Python judge die eenvoudige input/output tests of meer geavanceerde d
 
 ## Verwijderde judges
 
-Onderstaande judges zijn verwijderd van Dodona. Oefeningen die deze judges gebruiken, kunnen niet meer geëvalueerd of geopend worden. We houden deze pagina's bij zodat bestaande links blijven werken.
+Onderstaande judges zijn verwijderd van Dodona. Oefeningen die deze judges gebruiken, kunnen niet meer geëvalueerd of geopend worden. We houden deze vermeldingen bij zodat bestaande links blijven werken.
 
 ### JUnit
 
 ::: danger Opgepast
-Deze judge is verwijderd. Oefeningen die ze gebruiken kunnen niet meer geëvalueerd worden.
+Deze judge is verwijderd. Oefeningen die deze judge gebruiken, kunnen niet meer geëvalueerd worden.
 Gebruik in plaats daarvan de [Java-judge](#java).
 :::
 
