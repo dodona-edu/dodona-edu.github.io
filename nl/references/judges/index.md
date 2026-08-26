@@ -142,7 +142,7 @@ Het is een Python judge die eenvoudige input/output tests of meer geavanceerde d
 
 ## Verwijderde judges
 
-Onderstaande judges zijn verwijderd van Dodona. Oefeningen die deze judges gebruiken, kunnen niet meer geëvalueerd of geopend worden. We houden deze vermeldingen bij zodat bestaande links blijven werken.
+Onderstaande judges zijn verwijderd van Dodona. Oefeningen die deze judges gebruiken, kunnen niet meer geëvalueerd of geopend worden. We houden deze vermeldingen bij ter referentie, zodat je later nog kan achterhalen wat er met een judge gebeurd is, in plaats van er geen spoor meer van terug te vinden.
 
 ### JUnit
 

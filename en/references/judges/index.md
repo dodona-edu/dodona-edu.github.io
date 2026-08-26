@@ -140,7 +140,7 @@ It is a Python judge that allows simple input/output tests or more advanced doct
 
 ## Removed judges
 
-These judges have been removed from Dodona. Exercises that use them can no longer be evaluated or opened. We keep their entries here so that existing links to them keep working.
+These judges have been removed from Dodona. Exercises that use them can no longer be evaluated or opened. We keep their entries here as a record, so that anyone wondering what happened to a judge can still find out, instead of finding no trace of it at all.
 
 ### JUnit
 
