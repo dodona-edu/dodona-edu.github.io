@@ -79,7 +79,7 @@ You can only remove this notification by setting the time zone in your user prof
 
 ## Selecting a Theme
 
-Dodona has a light and a dark theme. Open the user menu on the right side of the navigation bar and hover over `Theme` to choose between `Light`, `Dark`, and `System`. If you select `System` (the default), Dodona follows the theme preference of your device.
+Dodona has a light and a dark theme. Open the user menu on the right side of the navigation bar and choose `Light`, `Dark`, or `System` under the `Theme` heading. If you select `System` (the default), Dodona follows the theme preference of your device.
 
 Just like your language, your selected theme is stored in your user profile, so Dodona remembers it the next time you sign in.
 
