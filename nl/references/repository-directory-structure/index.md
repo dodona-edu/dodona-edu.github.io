@@ -13,8 +13,29 @@ Een repository bevat alle mappen en bestanden waaruit een cursus bestaat. We ver
 Hier kan je afbeeldingen of andere zaken toevoegen waar je naar kan refereren vanuit een cursusbeschrijving of een reeksbeschrijving. De URL van deze bestanden vind je op de pagina van de repository op Dodona. Dit zijn publieke bestanden, dus ze mogen geen confidentiële informatie bevatten.
 - **Een map `media`**: deze map bevat media-bestanden die gebruikt kunnen worden in alle oefeningenbeschrijvingen binnen deze repository. Dodona zal automatisch terugvallen op deze map indien er in een beschrijving gerefereerd wordt naar een media-item dat niet gevonden wordt in de `media`-map van die specifieke oefening.
 - **Optioneel meerdere `oefening`mappen**: deze mappen bevatten de informatie voor de individuele oefeningen. Voor meer informatie betreffende hun structuur, gelieve de pagina met de [oefeningenmap-structuur](/nl/references/exercise-directory-structure).
+- **Optioneel een `.dodonaignore` bestand**: dit bestand somt de paden op die Dodona niet mag kopiëren uit je repository. Zie [bestanden uitsluiten met `.dodonaignore`](#bestanden-uitsluiten-met-dodonaignore) hieronder.
 
 Dodona negeert andere bestanden en mappen. Je kan dus zorgeloos andere bestanden toevoegen (bijvoorbeeld bestanden met de oplossing voor je oefeningen) of een eigen oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen binnen elkaar plaatsen.
+
+## Bestanden uitsluiten met `.dodonaignore`
+
+Alles in je repository wordt naar Dodona gekopieerd wanneer je pusht. Voeg een `.dodonaignore` bestand toe aan de hoofdmap van je repository om bepaalde paden buiten te houden. Het werkt zoals een `.gitignore`, alleen blijven de bestanden gewoon in je git-repository staan en worden ze enkel weggehouden van Dodona. Dat is handig voor materiaal waar het platform niets aan heeft, zoals voorbeeldoplossingen, grote testbestanden of gegenereerde bestanden.
+
+Elke lijn is één padpatroon:
+
+```
+oplossingen/
+*.pyc
+/scratch/
+```
+
+Een patroon zonder schuine streep vooraan komt overal in de repository overeen, een patroon dat met een schuine streep begint enkel in de hoofdmap van de repository, en een schuine streep achteraan beperkt het patroon tot mappen. Het `.dodonaignore` bestand zelf wordt ook nooit gekopieerd.
+
+Het bestand wordt bij elke synchronisatie gelezen, dus een `.dodonaignore` toevoegen of aanpassen heeft effect bij je volgende push: paden die eerder wel gekopieerd werden, worden dan ook uit Dodona verwijderd. Verwijder je een patroon weer, dan komen die bestanden terug bij de push daarna.
+
+::: warning Behoud de bestanden die Dodona nodig heeft
+Een patroon dat te breed is, zoals een niet-verankerde `tests` of een verdwaalde `*`, sluit ook bestanden uit die Dodona nodig heeft om oplossingen te verbeteren. Voor judge-repositories wordt dit gecontroleerd: een `.dodonaignore` die `config.json` of `run` zou uitsluiten laat de synchronisatie mislukken, en de laatst werkende versie blijft staan. De beheerder van de repository krijgt een e-mail wanneer een synchronisatie mislukt.
+:::
 
 ## Voorbeeld van een geldige repository-structuur
 
@@ -24,6 +45,7 @@ Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-
 
 ```
 +-- README.md                      # Beschrijft de repository
++-- .dodonaignore                  # Optioneel: paden die niet naar Dodona gekopieerd worden
 +-- public                         # Bevat bestanden die behoren tot het vak of reeksen
 |   +-- CodersApprentice.png       # Een voorbeeldafbeelding die hergebruikt kan worden doorheen het vak
 +-- media                          # Bevat bestanden die gebruikt kunnen worden bij elke oefening

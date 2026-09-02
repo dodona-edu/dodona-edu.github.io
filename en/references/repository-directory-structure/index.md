@@ -13,8 +13,29 @@ A repository directory contains a collection of exercises. We expect this reposi
 You can add pictures or other resources that can then be referred to in the description of the course or a series. The URL to these files can be found on the repository page on Dodona. These are public elements, so these files should not be confidential.
 - **A `media` directory**: this directory contains media files that can be used in all exercise descriptions in that repository only. Dodona will automatically fallback to this folder if a media item is referred to but not found in the `media` directory of the exercise it was used in.
 - **Optionally multiple `exercise` directories**: these directories contain the information for the individual exercises. For more information regarding their structure, please see the [exercise directory structure page](/en/references/exercise-directory-structure).
+- **Optionally a `.dodonaignore` file**: this file lists the paths that Dodona should not copy from your repository. See [excluding files with `.dodonaignore`](#excluding-files-with-dodonaignore) below.
 
 Dodona ignores other files and directories. You can thus freely create additional files (for example, containing the solutions to your exercises) or create a personal exercise hierarchy. The only thing that isn't allowed is placing exercise directories inside other exercise directories.
+
+## Excluding files with `.dodonaignore`
+
+Everything in your repository is copied to Dodona when you push. Add a `.dodonaignore` file to the root of your repository to keep some paths out. It works like a `.gitignore`, except that the files stay in your git repository and are only kept away from Dodona. That is useful for material the platform has no use for, such as sample solutions, large test data or generated files.
+
+Each line is one path pattern:
+
+```
+solutions/
+*.pyc
+/scratch/
+```
+
+A pattern without a leading slash matches anywhere in the repository, a pattern that starts with a slash only matches at the root of the repository, and a trailing slash restricts the pattern to directories. The `.dodonaignore` file itself is never copied either.
+
+The file is read on every synchronisation, so adding or editing it takes effect on your next push: paths that were copied before are then removed from Dodona as well. Remove a pattern again and the files reappear on the push after that.
+
+::: warning Keep the files that Dodona needs
+A pattern that is too broad, such as an unanchored `tests` or a stray `*`, also excludes files that Dodona needs to judge submissions. For judge repositories this is checked: a `.dodonaignore` that would exclude `config.json` or `run` makes the synchronisation fail and the last working version stays in place. The administrator of the repository receives an email whenever a synchronisation fails.
+:::
 
 ## Example of a valid repository structure
 
@@ -24,6 +45,7 @@ Take a look at the [example exercises repository](https://github.com/dodona-edu/
 
 ```
 +-- README.md                      # Describes the repository
++-- .dodonaignore                  # Optional: paths that are not copied to Dodona
 +-- public                         # Contains files that belong to the course or series
 |   +-- CodersApprentice.png       # An example image to reuse throughout the course
 +-- media                          # Contains files that can be used in any exercise description
