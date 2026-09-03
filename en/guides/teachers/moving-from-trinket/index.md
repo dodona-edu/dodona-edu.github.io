@@ -187,12 +187,6 @@ If you used Trinket's optional self-check tests, that `tests.py` is in the expor
 
 [Test suites](/en/guides/exercises/testsuites/) explains the format, and [an exercise with input and output](/en/guides/exercises/examples/input-output/) is the closest match to a typical Trinket assignment: a program that reads input and prints a result.
 
-::: tip Prompts and expected output
-
-When a program asks a question with `input("What is your name? ")`, that prompt does not show up in the output the tests compare. Ask the same question with a separate `print` and it does. Both work, as long as your test suite matches what the program actually prints. Keeping the prompt inside `input()` is usually the simpler of the two.
-
-:::
-
 These pages cover the rest:
 
 * [Creating exercises: the exercise](/en/guides/exercises/creating-exercises/exercise/) for a first complete exercise, end to end.
