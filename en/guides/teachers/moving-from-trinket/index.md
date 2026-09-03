@@ -78,9 +78,11 @@ That `trinket` object also holds the assignment's dates: when work was due, when
 
 One directory per lesson holds the `.md` files, numbered in the order they appeared. Under `trinkets/`, each assignment has its own directory with the starter code inside. The folder in between is named after the kind of trinket: `python3` in this example, but `python` (which accepted both Python 2 and 3), `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` and `R` are all possible. `assets/` holds the images you uploaded, and is absent when a course used none.
 
-::: warning Unpublished pages are in there too
+::: info Unpublished pages come along too
 
-Depending on when you took the export, `course.json` carries an `isDraft` flag on each lesson and material. Pages you never published sit next to the published ones and look identical, so check that flag before you convert a lesson you thought was finished. Older exports do not have it at all.
+Depending on when you took the export, `course.json` carries an `isDraft` flag on each lesson and material, marking the pages you never published. Older exports do not have it.
+
+Dodona works the same way: every activity starts as a [draft](/en/faq/activities/#what-is-a-draft-activity) and stays invisible to students until you publish it. An unfinished page can come across as it is, and you publish it once you have finished it.
 
 :::
 

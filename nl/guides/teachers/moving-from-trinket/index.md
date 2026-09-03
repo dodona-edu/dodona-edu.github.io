@@ -78,9 +78,11 @@ Dat `trinket`-object bevat ook de data van de assignment: wanneer het werk moest
 
 Per les is er één map met de `.md`-bestanden, genummerd in de volgorde waarin ze in de cursus stonden. Onder `trinkets/` heeft elke assignment zijn eigen map met de startcode erin. De map ertussen is genoemd naar het soort trinket: in dit voorbeeld `python3`, maar ook `python` (dat zowel Python 2 als 3 aanvaardde), `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` en `R` zijn mogelijk. `assets/` bevat de afbeeldingen die je uploadde, en is afwezig als een cursus geen afbeeldingen gebruikte.
 
-::: warning Ongepubliceerde pagina's zitten er ook tussen
+::: info Ongepubliceerde pagina's komen ook mee
 
-Afhankelijk van wanneer je de export maakte, heeft `course.json` een `isDraft`-vlag op elke les en elk stuk materiaal. Pagina's die je nooit publiceerde, staan naast de gepubliceerde en zien er identiek uit, dus controleer die vlag voor je een les omzet waarvan je dacht dat ze af was. Oudere exports hebben die vlag helemaal niet.
+Afhankelijk van wanneer je de export maakte, heeft `course.json` een `isDraft`-vlag op elke les en elk stuk materiaal, die de pagina's markeert die je nooit publiceerde. Oudere exports hebben die niet.
+
+Dodona werkt op dezelfde manier: elke activiteit start als [conceptactiviteit](/nl/faq/activities/#wat-is-een-conceptactiviteit) en blijft onzichtbaar voor studenten tot je ze publiceert. Een onafgewerkte pagina kan gewoon overkomen zoals ze is, en je publiceert ze zodra je ze afgewerkt hebt.
 
 :::
 
