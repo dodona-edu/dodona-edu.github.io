@@ -6,27 +6,21 @@ order: 12
 
 # Een cursus verhuizen van Trinket
 
-Trinket is gestopt, dus als je ermee lesgaf, hou je enkel nog een export van je cursus over: een zip-bestand. Deze handleiding leidt je van die zip naar een werkende cursus op Dodona.
+Trinket is gestopt. Als je je cursus exporteerde voor het zover was, heb je een zip-bestand met je materiaal. Deze handleiding leidt je van die zip naar een werkende cursus op Dodona.
 
-We gaan ervan uit dat je Dodona nog nooit gebruikt hebt en ook nog nooit met git gewerkt hebt. We gaan er wel van uit dat je je export nog hebt, want Trinket zelf bestaat niet meer om op terug te vallen.
-
-::: tip We doen dit ook voor jou
-
-Je moet dit niet alleen doen. [Neem contact met ons op](https://dodona.be/nl/contact) en we zetten je cursus voor je om. We hebben dit al vaker gedaan en hebben er de tools voor.
-
-:::
+We gaan ervan uit dat je Dodona nog nooit gebruikt hebt en ook nog nooit met git gewerkt hebt.
 
 ## Voor je begint
 
-Voor je aan Dodona begint, breng eerst in kaart wat je precies hebt.
+Breng eerst in kaart wat je precies hebt.
 
-**Een export bevat wat Trinket bewaarde, niet waar je pagina's naar verwezen.** Je lespagina's zitten in de zip, en ook de code van elke trinket. Alles waar een pagina alleen maar naar verwees, zit er niet in: slides die via een viewer getoond werden, bestanden op Google Drive, afbeeldingen die van een andere site ingeladen werden, ingesloten video's.
+**Een export bevat wat Trinket bewaarde, niet waar je pagina's naar verwezen.** Je lespagina's zitten in de zip, en ook de code van elke trinket. Alles waar een pagina alleen maar naar verwees, zit er niet in: bestanden die via een viewer getoond werden, documenten op Google Drive, afbeeldingen die van een andere site ingeladen werden, ingesloten video's.
 
-Open enkele lespagina's in een teksteditor en zoek naar links. Alles wat buiten de zip leeft, moet je ergens anders verzamelen, en een deel daarvan is samen met Trinket verdwenen.
+Open enkele lespagina's in een teksteditor en zoek naar links, zodat je weet wat ontbreekt voor je begint met herbouwen.
 
-::: warning Doe dit eerst
+::: warning Links naar Trinket zelf werken niet meer
 
-Als pagina's linken naar bestanden die op Trinket zelf gehost stonden, download ze dan nu. Zodra die adressen niet meer werken, is die inhoud weg, tenzij je er zelf een kopie van hebt.
+trinket.io geeft nu op elk adres een melding dat de dienst gestopt is. Alles wat daar gehost stond, is dus enkel nog beschikbaar als je er zelf een kopie van hebt. Links naar andere diensten, zoals Google Drive of Google Slides, blijven wel gewoon werken.
 
 :::
 
@@ -34,7 +28,7 @@ Dit is ook een goed moment om te bepalen wat je wil behouden. Een cursus die ove
 
 ## Wat zit er in de export
 
-De zip bestaat uit drie delen.
+De zip bestaat uit drie delen. Dit voorbeeld komt uit een Python-cursus:
 
 ```
 course.json
@@ -77,7 +71,7 @@ Het bruikbare gegeven is het `type` van elk stuk materiaal:
 
 Per les is er één map met de `.md`-bestanden, genummerd in de volgorde waarin ze in de cursus stonden. Onder `trinkets/` heeft elke assignment zijn eigen map met de startcode erin, meestal als `main.py`.
 
-Lees de `.md`-bestanden door voor je iets plant. Trinket-cursussen houden de uitleg vaak in de slides en laten de pagina's zelf vrij beknopt, waardoor een export die klein oogt in de praktijk een pak groter kan zijn.
+Lees de `.md`-bestanden door voor je iets plant. Hoeveel van de uitleg in de pagina's zelf zit, verschilt sterk van cursus tot cursus, en dat bepaalt hoeveel je moet herschrijven.
 
 ## Van Trinket naar Dodona
 
@@ -95,20 +89,19 @@ In de praktijk betekent dat twee dingen. Is het de bedoeling dat studenten code 
 
 ## Bepalen wat een oefening wordt
 
-Dodona verbetert automatisch: het voert het programma van de student uit en vergelijkt de uitvoer met wat jij als correct hebt opgegeven. Dat ene gegeven stuurt de meeste van je keuzes.
+Dodona verbetert door het programma van een student uit te voeren en het resultaat te vergelijken met wat jij hebt opgegeven. Vraag je dus voor elk stuk materiaal af of je op voorhand kan zeggen wat een correcte oplossing doet.
 
-Maak er een **oefening** van zodra je exact kan opschrijven wat een correcte oplossing produceert. Maak er een **leesactiviteit** van als de taak bestaat uit lezen, voorspellen of uitleggen, want dan is er niets om uit te voeren en niets om te vergelijken.
+Maak er een **oefening** van wanneer dat kan. Maak er een **leesactiviteit** van wanneer de taak bestaat uit lezen, voorspellen of uitleggen, want dan is er niets om uit te voeren.
 
-Taken waarbij studenten iets moeten verzinnen, zitten daartussenin. "Print een bericht naar keuze" of "schrijf je eigen mop" kan niet automatisch verbeterd worden, want elk correct antwoord ziet er anders uit. Je hebt twee uitwegen:
-
-* **Leg het resultaat vast.** Herschrijf de taak zodat iedereen dezelfde uitvoer produceert: geef het bericht zelf mee in plaats van "print je eigen bericht". De vaardigheid die geoefend wordt, blijft dezelfde, en de oefening kan nu wel verbeterd worden.
-* **Verbeter het zelf.** Gebruik de [Markdown-judge](/nl/references/judges/#markdown): studenten dienen dan tekst in in plaats van een programma, en jij leest en beoordeelt die zelf.
+Taken waarbij studenten iets moeten verzinnen, vragen om een keuze vooraf. "Print een bericht naar keuze" kan niet automatisch verbeterd worden, want elk correct antwoord ziet er anders uit. De gangbare oplossing is om het bericht zelf in de beschrijving te geven, zodat elke correcte oplossing dezelfde uitvoer produceert. Studenten oefenen exact dezelfde vaardigheid, en de oefening kan nu wel verbeterd worden.
 
 Liep één taak in Trinket over meerdere pagina's, beslis dan per pagina. Een pagina waarop studenten iets indienen, is een activiteit op zich. Een pagina die enkel naar die taak toewerkt, hoort erbij.
 
 ## Een repository opzetten
 
 Je activiteiten staan in een git-repository die Dodona uitleest. Zet die eenmalig op, voor je begint te schrijven.
+
+Dit is een echt verschil met Trinket, en de moeite waard om te begrijpen voor je begint. Je materiaal staat niet binnen Dodona opgeslagen: het staat in een repository die je zelf bezit, en Dodona leest die enkel uit. Je kan ze kopiëren, elders onderbrengen of aan een collega doorgeven, en ze verdwijnt niet als het platform verdwijnt. Dat is precies de situatie waarin je je nu met Trinket bevindt.
 
 [Oefeningen opstellen: installatie](/nl/guides/exercises/creating-exercises/setup/) neemt het hele proces met je door: een GitHub-account aanmaken, vertrekken van onze template-repository, de gebruiker `dodona-server` toegang geven tot je repository, de repository toevoegen aan Dodona, en een webhook instellen zodat Dodona je wijzigingen automatisch oppikt.
 
@@ -144,14 +137,14 @@ De mapstructuur dient enkel om zelf overzicht te houden. Welke activiteiten in w
 
 Om een **page** om te zetten, verhuis je de tekst naar `description/description.nl.md`. De [referentie over oefeningbeschrijvingen](/nl/references/exercise-description/) behandelt afbeeldingen, codeblokken, tabellen en callouts.
 
-Om een **assignment** om te zetten, doe je hetzelfde met de tekst, gebruik je de startcode van de trinket als boilerplate, schrijf je een testplan dat de verwachte uitvoer beschrijft, en voeg je een eigen oplossing toe.
+Om een **assignment** om te zetten, doe je hetzelfde met de tekst, gebruik je de startcode van de trinket als boilerplate, schrijf je een testplan dat beschrijft wat een correcte oplossing doet, en voeg je een eigen oplossing toe.
 
 Deze pagina's helpen je verder:
 
 * [Oefeningen opstellen: opgave en testplan schrijven](/nl/guides/exercises/creating-exercises/exercise/) voor een eerste volledige oefening.
 * [Oefening met invoer-uitvoer](/nl/guides/exercises/examples/input-output/), de vorm die de meeste omgezette Trinket-assignments aannemen.
 * [Leesactiviteit](/nl/guides/exercises/examples/content/) voor pagina's zonder taak.
-* [Testplannen](/nl/guides/exercises/testsuites/) om te beschrijven wat een correct antwoord produceert.
+* [Testplannen](/nl/guides/exercises/testsuites/) om te beschrijven wat een correct antwoord doet.
 * De [referentie over `config.json`](/nl/references/exercise-config/) voor de instellingen van één activiteit.
 
 ## De cursus opbouwen
@@ -166,21 +159,24 @@ Materiaal dat je voor jezelf schreef in plaats van voor studenten, zoals lesvoor
 
 ## Wat anders werkt dan in Trinket
 
-Een paar gewoontes uit Trinket overleven de overstap niet. Geen daarvan is een probleem zodra je ze kent.
+Twee dingen zijn de moeite waard om te weten voor je je testplannen schrijft.
 
-* **Verbeteren kijkt enkel naar de uitvoer.** Een regel als "los dit op met één print-statement" kan niet automatisch gecontroleerd worden, want een oplossing die de regel breekt, print nog altijd het juiste resultaat. Zet de regel in de beschrijving en controleer ze zelf wanneer je oplossingen bekijkt.
-* **Vragen horen thuis in `input()`.** Stel je de vraag met een apart print-statement, dan telt die mee in de uitvoer die de tests vergelijken, en falen correcte oplossingen plots. Zet de tekst in de `input()`-oproep zelf.
-* **Eén activiteit, één oplossing.** Een taak met een makkelijkere en een moeilijkere variant wordt twee activiteiten, zodat studenten elk apart indienen.
-* **Studenten kunnen niet in de code zelf antwoorden.** Vroeg een taak om commentaar toe te voegen die uitlegt wat code doet, maak er dan een leesactiviteit van met het antwoord achter een [spoiler](/nl/references/exercise-description/#spoilers), of een Markdown-judge-oefening als je hun antwoorden zelf wil lezen en beoordelen.
+**Tests voeren het programma van je studenten uit, ze lezen het niet.** Dodona kan controleren wat een programma print, wat een functie teruggeeft, welke uitzondering het opwerpt, met welke exitcode het stopt, en welke bestanden het wegschrijft. Wat Dodona niet kan controleren, is hoe de code geschreven is. Een regel zoals "los dit op met één print-statement" wordt niet door de tests afgedwongen, want een oplossing die de regel negeert, gedraagt zich nog steeds correct. Zet de regel in de beschrijving, en controleer ze zelf wanneer je oplossingen leest.
+
+**Studenten dienen één oplossing per activiteit in.** Een taak met een makkelijkere en een moeilijkere variant wordt twee activiteiten in plaats van één.
+
+::: tip Prompts en verwachte uitvoer
+
+Stel je een vraag met `input("Wat is je naam? ")`, dan komt die prompt niet terug in de uitvoer die de tests vergelijken. Stel je dezelfde vraag met een apart `print`-statement, dan wel. Beide werken, zolang je testplan overeenkomt met wat het programma echt print. De prompt binnen `input()` houden is meestal de eenvoudigste van de twee.
+
+:::
 
 ## Voor je de cursus deelt met studenten
 
-Drie dingen om te controleren.
+Nieuwe activiteiten starten als [conceptactiviteit](/nl/faq/activities/#wat-is-een-conceptactiviteit), waardoor studenten ze nog niet kunnen zien. Dat geeft je ruimte voor een laatste redactieronde voor je iets publiceert.
 
-Nieuwe activiteiten starten als [conceptactiviteit](/nl/faq/activities/#wat-is-een-conceptactiviteit), waardoor studenten ze nog niet kunnen zien. Ze blijven dat tot je zelf anders beslist, zodat je rustig kan werken.
+Los elke oefening zelf op en dien je eigen oplossing in. Dat is de snelste manier om een testplan te vinden dat het verkeerde verwacht, en het kost je ongeveer een minuutje per oefening.
 
-Los elke oefening zelf op en dien je eigen oplossing in. Dat is de snelste manier om een testplan te vinden dat het verkeerde verwacht, en het kost je maar een minuutje per oefening.
+Controleer daarna de zichtbaarheid van elke reeks, ook die met je eigen notities.
 
-Controleer ten slotte de zichtbaarheid van elke reeks. Alles waar je nog niet klaar voor bent om te tonen, inclusief de reeks met je eigen notities, blijft verborgen tot je het publiceert.
-
-Ziet alles er goed uit? Dan publiceer je de reeksen en deel je de cursus met je studenten.
+Daarna is het een gewone Dodona-cursus. [Gebruikersbeheer](../user-management/) behandelt studenten die zich registreren en aansluiten, [verbeteren](../grading/) behandelt feedback en scores, en [statistieken](../statistics/) toont je hoe je studenten het doen. De [handleidingen voor lesgevers](../) behandelen de rest.
