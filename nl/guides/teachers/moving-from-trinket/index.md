@@ -6,9 +6,9 @@ order: 12
 
 # Een cursus verhuizen van Trinket
 
-Trinket is gestopt. Als je je cursus exporteerde voor het zover was, heb je een zip-bestand met je materiaal. Deze handleiding leidt je van die zip naar een werkende cursus op Dodona.
+Trinket is gestopt. Heb je je cursus nog geëxporteerd voor het platform sloot, dan zit al je materiaal in één zip-bestand. Deze handleiding brengt je van die zip naar een werkende cursus op Dodona.
 
-We gaan ervan uit dat je Dodona nog nooit gebruikt hebt en ook nog nooit met git gewerkt hebt.
+We gaan ervan uit dat je nog nooit met Dodona of met git gewerkt hebt.
 
 ## Voor je begint
 
