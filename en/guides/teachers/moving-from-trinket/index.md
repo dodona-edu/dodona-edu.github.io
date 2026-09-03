@@ -216,7 +216,7 @@ New activities start as [draft](/en/faq/activities/#what-is-a-draft-activity), s
 
 Solve every exercise yourself and submit your own solution. This is the fastest way to catch a test suite that expects the wrong thing, and it takes about a minute per exercise.
 
-Then check the visibility of each series, including the one holding your own notes.
+Then go through the series and check that each one has the visibility you want.
 
 After that it is an ordinary Dodona course. [User management](../user-management/) covers students registering and joining, [grading](../grading/) covers feedback and scores, and [statistics](../statistics/) shows you how your students are doing. The [teacher guides](../) cover the rest.
 

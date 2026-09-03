@@ -216,7 +216,7 @@ Nieuwe activiteiten starten als [conceptactiviteit](/nl/faq/activities/#wat-is-e
 
 Los elke oefening zelf op en dien je eigen oplossing in. Dat is de snelste manier om een testplan te vinden dat het verkeerde verwacht, en het kost je ongeveer een minuutje per oefening.
 
-Controleer daarna de zichtbaarheid van elke reeks, ook die met je eigen notities.
+Overloop daarna de reeksen en controleer of elke reeks de zichtbaarheid heeft die je wil.
 
 Daarna is het een gewone Dodona-cursus. [Gebruikersbeheer](../user-management/) behandelt studenten die zich registreren en aansluiten, [verbeteren](../grading/) behandelt feedback en scores, en [statistieken](../statistics/) toont je hoe je studenten het doen. De [handleidingen voor lesgevers](../) behandelen de rest.
 
