@@ -104,7 +104,7 @@ Lees de `.md`-bestanden door voor je iets plant. Hoeveel van de uitleg in de pag
 
 Een trinket midden in een pagina, die studenten ter plekke konden uitvoeren en aanpassen, heeft op Dodona een tegenhanger: een code playground. Dat is een uitvoerbaar, bewerkbaar blok binnen een leesactiviteit, en studenten kunnen het uitvoeren zonder iets in te dienen.
 
-Je schrijft er een door de code in een `<pre>` te verpakken:
+Je schrijft er een door de code in een `<pre>` te zetten, binnenin een `<dw-code-playground>`-element:
 
 ```html
 <dw-code-playground>
@@ -123,7 +123,7 @@ Dit is een proof of concept. Zowel het uiterlijk van playgrounds als de manier w
 
 :::
 
-Een playground is om te verkennen, niet om te evalueren: er wordt niets ingediend en niets verbeterd. Wil je dat studenten feedback krijgen op wat ze schreven, gebruik dan een oefening.
+Een playground is om te verkennen, niet om te evalueren: er wordt niets ingediend en niets verbeterd. Oefeningen hebben hun eigen plek om te experimenteren, dus je kiest niet tussen de twee: elke Python-oefening heeft een [sandbox](/nl/guides/students/scratchpad/) achter de knop `Naar sandbox`, waar studenten hun code kunnen uitvoeren, testen en debuggen voor ze indienen. Gebruik een oefening overal waar studenten feedback moeten krijgen op wat ze schreven.
 
 ## Bepalen wat een oefening wordt
 
@@ -185,7 +185,13 @@ Om een **assignment** om te zetten, begin je met de tekst, en voeg je vervolgens
 
 Gebruikte je Trinkets optionele zelftests, dan zit die `tests.py` in de export zoals elk ander codebestand. Dodona kan dat bestand niet zomaar uitvoeren, maar het legt vast wat jij toen al de moeite waard vond om te controleren, en dat is een goede start voor het echte testplan.
 
-Testplannen schrijven is het nieuwe onderdeel van de overstap, dus neem de tijd voor het eerste en hergebruik daarna die vorm. [Testplannen](/nl/guides/exercises/testsuites/) legt het formaat uit, en [een oefening met invoer en uitvoer](/nl/guides/exercises/examples/input-output/) komt het dichtst bij een typische Trinket-assignment: een programma dat invoer leest en een resultaat print.
+[Testplannen](/nl/guides/exercises/testsuites/) legt het formaat uit, en [een oefening met invoer en uitvoer](/nl/guides/exercises/examples/input-output/) komt het dichtst bij een typische Trinket-assignment: een programma dat invoer leest en een resultaat print.
+
+::: tip Prompts en verwachte uitvoer
+
+Stel je een vraag met `input("Wat is je naam? ")`, dan komt die prompt niet terug in de uitvoer die de tests vergelijken. Stel je dezelfde vraag met een apart `print`-statement, dan wel. Beide werken, zolang je testplan overeenkomt met wat het programma echt print. De prompt binnen `input()` houden is meestal de eenvoudigste van de twee.
+
+:::
 
 Deze pagina's behandelen de rest:
 
@@ -204,28 +210,6 @@ Met activiteiten in je repository bouw je de cursus zelf op Dodona:
 
 Materiaal dat je voor jezelf schreef in plaats van voor studenten, zoals lesvoorbereidingen of antwoordsleutels, kan gewoon in de cursus blijven staan: zet het in een eigen reeks en laat die reeks verborgen. Enkel wie de cursus mag beheren, ziet ze dan.
 
-## Wat anders werkt dan in Trinket
-
-Twee dingen zijn de moeite waard om te weten voor je je testplannen schrijft.
-
-**Tests voeren het programma van je studenten uit, ze lezen het niet.** Dodona kan controleren wat een programma print, wat een functie teruggeeft, welke uitzondering het opwerpt, met welke exitcode het stopt, en welke bestanden het wegschrijft. Wat Dodona niet kan controleren, is hoe de code geschreven is. Een regel zoals "los dit op met één print-statement" wordt niet door de tests afgedwongen, want een oplossing die de regel negeert, gedraagt zich nog steeds correct. Zet de regel in de beschrijving, en controleer ze zelf wanneer je oplossingen leest.
-
-**Studenten dienen één oplossing per activiteit in.** Een taak met een makkelijkere en een moeilijkere variant wordt twee activiteiten in plaats van één.
-
-::: tip Prompts en verwachte uitvoer
-
-Stel je een vraag met `input("Wat is je naam? ")`, dan komt die prompt niet terug in de uitvoer die de tests vergelijken. Stel je dezelfde vraag met een apart `print`-statement, dan wel. Beide werken, zolang je testplan overeenkomt met wat het programma echt print. De prompt binnen `input()` houden is meestal de eenvoudigste van de twee.
-
-:::
-
-## Een AI-assistent het eerste werk laten doen
-
-Een cursus omzetten is veel handwerk: een beschrijving en een testplan voor elke afzonderlijke activiteit.
-
-We hebben goede ervaringen met een codeassistent die de eerste versie maakt. Wijs de assistent naar je export, naar deze handleiding en de referentiepagina's waar die naar linkt, en naar [universal-judge](https://github.com/dodona-edu/universal-judge), de repository achter TESTed, die het testplanformaat volledig documenteert. Vraag de assistent vervolgens om de mapstructuur, de beschrijvingen en een eerste testplan per oefening te maken.
-
-Wat je terugkrijgt, is een eerste ontwerp, geen afgewerkte cursus. Lees elke beschrijving, en dien voor elke oefening je eigen oplossing in. Een testplan kan er prima uitzien en toch net iets verkeerd verwachten, iets wat je niet ziet door het gewoon te lezen.
-
 ## Voor je de cursus deelt met studenten
 
 Nieuwe activiteiten starten als [conceptactiviteit](/nl/faq/activities/#wat-is-een-conceptactiviteit), waardoor studenten ze nog niet kunnen zien. Dat geeft je ruimte voor een laatste redactieronde, en de kans om je activiteiten zelf op het platform uit te proberen voor er iets gepubliceerd wordt.
@@ -235,3 +219,11 @@ Los elke oefening zelf op en dien je eigen oplossing in. Dat is de snelste manie
 Controleer daarna de zichtbaarheid van elke reeks, ook die met je eigen notities.
 
 Daarna is het een gewone Dodona-cursus. [Gebruikersbeheer](../user-management/) behandelt studenten die zich registreren en aansluiten, [verbeteren](../grading/) behandelt feedback en scores, en [statistieken](../statistics/) toont je hoe je studenten het doen. De [handleidingen voor lesgevers](../) behandelen de rest.
+
+## Een AI-assistent het eerste werk laten doen
+
+Alles hierboven is handwerk: een beschrijving en een testplan voor elke afzonderlijke activiteit. Voor een cursus van eender welke omvang is het de moeite waard om die eerste versie te verkorten.
+
+We hebben goede ervaringen met een codeassistent die de eerste versie maakt. Wijs de assistent naar je export, naar deze handleiding en de referentiepagina's waar die naar linkt, en naar [universal-judge](https://github.com/dodona-edu/universal-judge), de repository achter TESTed, die het testplanformaat volledig documenteert. Vraag de assistent vervolgens om de mapstructuur, de beschrijvingen en een eerste testplan per oefening te maken.
+
+Wat je terugkrijgt, is een eerste ontwerp, geen afgewerkte cursus. Lees elke beschrijving, en dien voor elke oefening je eigen oplossing in. Een testplan kan er prima uitzien en toch net iets verkeerd verwachten, iets wat je niet ziet door het gewoon te lezen.

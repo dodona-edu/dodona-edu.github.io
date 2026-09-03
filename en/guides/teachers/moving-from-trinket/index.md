@@ -104,7 +104,7 @@ Read through the `.md` files before you plan anything. How much of the teaching 
 
 A trinket embedded in the middle of a page, which students could run and edit where it stood, has a counterpart on Dodona: a code playground. It is a runnable, editable block inside a reading activity, and students can run it without submitting anything.
 
-You write one by wrapping the code in a `<pre>`:
+You write one by putting the code in a `<pre>` inside a `<dw-code-playground>` element:
 
 ```html
 <dw-code-playground>
@@ -123,7 +123,7 @@ This is a proof of concept. Both the way playgrounds look and the way you write 
 
 :::
 
-A playground is for exploring, not for assessment: nothing is submitted, and nothing is graded. Where students should get feedback on what they wrote, use an exercise.
+A playground is for exploring, not for assessment: nothing is submitted, and nothing is graded. Exercises have their own place to experiment, so you are not choosing between the two: every Python exercise has a [sandbox](/en/guides/students/scratchpad/) behind the `To sandbox` button, where students can run, test and debug their code before handing it in. Use an exercise wherever students should get feedback on what they wrote.
 
 ## Deciding what becomes an exercise
 
@@ -185,7 +185,13 @@ To convert an **assignment**, start with the text, then add the three things tha
 
 If you used Trinket's optional self-check tests, that `tests.py` is in the export like any other code file. Dodona cannot run it as it stands, but it records what you already decided was worth checking, which is a head start on the real suite.
 
-Writing test suites is the new part of the move, so give the first one time and reuse its shape afterwards. [Test suites](/en/guides/exercises/testsuites/) explains the format, and [an exercise with input and output](/en/guides/exercises/examples/input-output/) is the closest match to a typical Trinket assignment: a program that reads input and prints a result.
+[Test suites](/en/guides/exercises/testsuites/) explains the format, and [an exercise with input and output](/en/guides/exercises/examples/input-output/) is the closest match to a typical Trinket assignment: a program that reads input and prints a result.
+
+::: tip Prompts and expected output
+
+When a program asks a question with `input("What is your name? ")`, that prompt does not show up in the output the tests compare. Ask the same question with a separate `print` and it does. Both work, as long as your test suite matches what the program actually prints. Keeping the prompt inside `input()` is usually the simpler of the two.
+
+:::
 
 These pages cover the rest:
 
@@ -204,28 +210,6 @@ With activities in your repository, build the course itself on Dodona:
 
 Material you wrote for yourself rather than for students, like lesson plans or answer keys, can stay in the course: put it in its own series and leave that series hidden. Only people who can manage the course will see it.
 
-## What works differently than in Trinket
-
-Two things to know before you write your test suites.
-
-**Tests run your students' programs, they do not read them.** Dodona can check what a program prints, what a function returns, which exception it raises, what exit code it ends with, and the files it writes. What it cannot check is how the code was written. A rule such as "solve this with a single print statement" will not be enforced by the tests, because a solution that ignores the rule still behaves correctly. Put the rule in the description, and check it yourself when you read submissions.
-
-**Students hand in one solution per activity.** A task that offered an easier and a harder version becomes two activities rather than one.
-
-::: tip Prompts and expected output
-
-When a program asks a question with `input("What is your name? ")`, that prompt does not show up in the output the tests compare. Ask the same question with a separate `print` and it does. Both work, as long as your test suite matches what the program actually prints. Keeping the prompt inside `input()` is usually the simpler of the two.
-
-:::
-
-## Letting an AI assistant do the first pass
-
-Converting a course is a lot of manual work: a description and a test suite for every single activity.
-
-We have had good results letting a coding assistant do the first pass. Point it at your export, at this guide and the reference pages it links to, and at [universal-judge](https://github.com/dodona-edu/universal-judge), the repository behind TESTed, which documents the test suite format in full. Then ask it to produce the directory structure, the descriptions and a first test suite per exercise.
-
-What comes back is a first draft, not a finished course. Read every description, and submit your own solution to every exercise. A test suite can look reasonable and still expect slightly the wrong thing, which you will not see by reading it.
-
 ## Before you share it with students
 
 New activities start as [draft](/en/faq/activities/#what-is-a-draft-activity), so students cannot see them yet. That gives you room for a final authoring pass, and lets you try your activities out on the platform yourself, before anything is published.
@@ -235,3 +219,11 @@ Solve every exercise yourself and submit your own solution. This is the fastest 
 Then check the visibility of each series, including the one holding your own notes.
 
 After that it is an ordinary Dodona course. [User management](../user-management/) covers students registering and joining, [grading](../grading/) covers feedback and scores, and [statistics](../statistics/) shows you how your students are doing. The [teacher guides](../) cover the rest.
+
+## Letting an AI assistant do the first pass
+
+Everything above is manual work: a description and a test suite for every single activity. On a course of any size, the first pass is worth shortening.
+
+We have had good results letting a coding assistant do the first pass. Point it at your export, at this guide and the reference pages it links to, and at [universal-judge](https://github.com/dodona-edu/universal-judge), the repository behind TESTed, which documents the test suite format in full. Then ask it to produce the directory structure, the descriptions and a first test suite per exercise.
+
+What comes back is a first draft, not a finished course. Read every description, and submit your own solution to every exercise. A test suite can look reasonable and still expect slightly the wrong thing, which you will not see by reading it.
