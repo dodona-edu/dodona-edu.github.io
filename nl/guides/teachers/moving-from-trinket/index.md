@@ -72,8 +72,6 @@ Het bruikbare gegeven is het `type` van elk stuk materiaal:
 * `page` is een lespagina: enkel tekst, volledig terug te vinden in het bijhorende `.md`-bestand.
 * `assignment` is een pagina met een trinket erbij. De tekst staat in het `.md`-bestand, en de code waar studenten van vertrokken staat in `trinkets/`. Elke assignment draagt ook een `trinket`-object, waarvan de `shortCode` aangeeft welke map erbij hoort: de mapnaam eindigt op diezelfde code.
 
-Dat zijn de enige twee materiaaltypes die Trinket had. Een video, een presentatie of een quiz was nooit een type op zich: het was een `page` met dat element ingesloten in de tekst, en daarom zie je ze hier niet apart terug.
-
 Dat `trinket`-object bevat ook de data van de assignment: wanneer het werk moest ingeleverd zijn, wanneer inzendingen sloten, en wanneer de pagina zichtbaar werd. Trinket stelde die per assignment in, terwijl Dodona een deadline per reeks instelt, dus assignments die dezelfde datum deelden, vormen hier een voor de hand liggende reeks.
 
 Per les is er één map met de `.md`-bestanden, genummerd in de volgorde waarin ze in de cursus stonden. Onder `trinkets/` heeft elke assignment zijn eigen map met de startcode erin. De map ertussen is genoemd naar het soort trinket: in dit voorbeeld `python3`, maar ook `python` (dat zowel Python 2 als 3 aanvaardde), `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` en `R` zijn mogelijk. `assets/` bevat de afbeeldingen die je uploadde, en is afwezig als een cursus geen afbeeldingen gebruikte.
