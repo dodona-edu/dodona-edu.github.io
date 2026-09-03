@@ -14,9 +14,9 @@ It assumes you have never used Dodona and have never used git.
 
 Start by working out what you actually have.
 
-**An export contains what Trinket stored, not what your pages linked to.** Your lesson pages are in the zip, and so is the code of every trinket. Anything a page merely pointed at is not: files shown through a viewer, documents on Google Drive, images loaded from another site, embedded video.
+**An export contains what Trinket stored, not what your pages linked to.** Your lesson pages are in the zip, along with the code of every trinket and the images you uploaded. What is missing is anything a page only pointed at: documents you added through Trinket's viewer, such as PDFs and slide decks, files on Google Drive, images loaded from another site, embedded video.
 
-Open a few lesson pages in a text editor and look for links, so you know what is missing before you start rebuilding.
+Open a few lesson pages in a text editor and look for links, so you know what is missing before you start rebuilding. Everything on that list has to be gathered separately and carried across by hand, from wherever you still have it. Later on it goes into your own repository, next to the pages that use it.
 
 ::: warning Links to Trinket itself no longer work
 
@@ -28,7 +28,7 @@ This is also a good moment to decide what you want to keep. A course that grew o
 
 ## What is in the export
 
-The zip has three parts. This example comes from a Python course:
+The zip is laid out like this. The example comes from a Python course:
 
 ```
 course.json
@@ -44,6 +44,9 @@ trinkets/
   python3/
     12-Loops-Predict_a1b2c3d4e5/
       main.py
+assets/
+  60f1a2b3c4d5e6f7/
+    diagram.png
 ```
 
 `course.json` is the table of contents. It lists your lessons in order, and for each lesson the materials it contains:
@@ -69,7 +72,15 @@ The `type` of each material is the useful part:
 * `page` is a lesson page: text only, and all of it is in the matching `.md` file.
 * `assignment` is a page with a trinket attached. The text is in the `.md` file, and the code students started from is in `trinkets/`.
 
-One directory per lesson holds the `.md` files, numbered in the order they appeared. Under `trinkets/`, each assignment has its own directory with the starter code inside, usually as `main.py`.
+Those two are the only material types Trinket had. A video, a slide deck or a quiz was never a type of its own: it was a `page` with that thing embedded in its text, which is why they do not show up separately here.
+
+One directory per lesson holds the `.md` files, numbered in the order they appeared. Under `trinkets/`, each assignment has its own directory with the starter code inside. The folder in between is named after the kind of trinket: `python3` in this example, but `python`, `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` and `R` are all possible. `assets/` holds the images you uploaded, and is absent when a course used none.
+
+::: warning Unpublished pages are in there too
+
+Depending on when you took the export, `course.json` carries an `isDraft` flag on each lesson and material. Pages you never published sit next to the published ones and look identical, so check that flag before you convert a lesson you thought was finished. Older exports do not have it at all.
+
+:::
 
 Read through the `.md` files before you plan anything. How much of the teaching sits in the pages themselves differs a lot between courses, and that decides how much you have to rewrite.
 
@@ -81,11 +92,33 @@ Read through the `.md` files before you plan anything. How much of the teaching 
 | A lesson | A [series](../exercise-series-management/) inside that course |
 | A material of type `page` | A [reading activity](/en/guides/exercises/examples/content/) |
 | A material of type `assignment` | An [exercise](/en/guides/exercises/creating-exercises/introduction/), or a reading activity when there is nothing to grade |
-| The starter code of a trinket | The boilerplate of the exercise |
+| The starter code of a trinket | The [boilerplate](/en/references/exercise-directory-structure/#exercise-only-configuration) of the exercise |
+| A trinket embedded in a page | A code playground in a reading activity, described below |
 
-There is one thing that does not carry across: a trinket embedded in the middle of a page, which students could run and edit where it stood. On Dodona, students write and run code inside an exercise, which they then submit and get feedback on.
+### Runnable code inside a page
 
-In practice that means two things. If the point is for students to run code and change it, make it an exercise. If the point is to show code while you explain something, put it in a code block in a reading activity and follow that with an exercise where they use it.
+A trinket embedded in the middle of a page, which students could run and edit where it stood, has a counterpart on Dodona: a code playground. It is a runnable, editable block inside a reading activity, and students can run it without submitting anything.
+
+You write one by wrapping the code in a `<pre>`:
+
+```html
+<dw-code-playground>
+<pre>
+name = input("What is your name? ")
+print("Hello, " + name + "!")
+</pre>
+</dw-code-playground>
+```
+
+The block runs in the student's browser and can read input, so a program that asks a question works as expected.
+
+::: warning Code playgrounds are an early preview
+
+This is a proof of concept. Both the way playgrounds look and the way you write them are likely to change, so expect to revisit pages that use them. They currently run Python only.
+
+:::
+
+A playground is for exploring, not for assessment: nothing is submitted, and nothing is graded. Where students should get feedback on what they wrote, use an exercise.
 
 ## Deciding what becomes an exercise
 
@@ -101,7 +134,7 @@ If one task in Trinket ran across several pages, decide page by page. A page tha
 
 Your activities live in a git repository that Dodona reads. Set that up once, before you write anything.
 
-This is a real difference from Trinket, and worth understanding before you start. Your content is not stored inside Dodona: it lives in a repository you own, and Dodona reads from it. You can copy it, move it elsewhere, or hand it to a colleague, and it does not disappear if the platform does. That is exactly the situation you are in now with Trinket.
+Dodona works differently from Trinket here. Your material is not stored inside the platform: it lives in a repository you own, and Dodona only reads from it. You can copy it, move it elsewhere, or hand it to a colleague, and it stays yours whatever happens to the platform. There is also no export step to think about later, because the repository already is your copy.
 
 [Creating exercises: installation](/en/guides/exercises/creating-exercises/setup/) walks through the setup: creating a GitHub account, starting from our template repository, giving the user `dodona-server` access to your repository, adding the repository to Dodona, and setting up a webhook so Dodona picks up your changes automatically.
 
@@ -123,6 +156,8 @@ my-course/
       config.json
       description/
         description.en.md
+        boilerplate/
+          boilerplate
       evaluation/
         suite.yaml
       solution/
@@ -137,15 +172,20 @@ The folder structure is only there to keep you organised. Which activities end u
 
 To convert a **page**, move its text into `description/description.en.md`. The [description reference](/en/references/exercise-description/) covers images, code blocks, tables and callouts.
 
-To convert an **assignment**, do the same for the text, then use the trinket's starter code as the boilerplate, write a test suite that describes what a correct solution does, and add a solution of your own.
+To convert an **assignment**, start with the text, then add the three things that turn it into a graded exercise:
+
+* **The starter code** goes in `description/boilerplate/boilerplate`, so students open the exercise with the same code the trinket gave them.
+* **A test suite** in `evaluation/` describes what a correct solution does. Trinket had no equivalent: assignments were handed in and then read by you, so there is no grading logic in the export to carry over and you write these from scratch. It is also what the rest of Dodona is built on: students find out whether they are right the moment they submit, they can correct themselves without waiting for you, and you can see who is stuck and where. An exercise without a test suite is just a page with an editor attached.
+* **A model solution** in `solution/` proves the test suite is right. Submit it yourself once. If your own solution does not pass, the test suite is wrong, and you want to know that before thirty students do.
+
+Writing test suites is the new part of the move, so give the first one time and reuse its shape afterwards. [Test suites](/en/guides/exercises/testsuites/) explains the format, and [an exercise with input and output](/en/guides/exercises/examples/input-output/) is the closest match to a typical Trinket assignment: a program that reads input and prints a result.
 
 These pages cover the rest:
 
-* [Creating exercises: the exercise](/en/guides/exercises/creating-exercises/exercise/) for a first complete exercise.
-* [An exercise with input and output](/en/guides/exercises/examples/input-output/), which is the shape most converted Trinket assignments take.
+* [Creating exercises: the exercise](/en/guides/exercises/creating-exercises/exercise/) for a first complete exercise, end to end.
 * [A reading activity](/en/guides/exercises/examples/content/) for pages without a task.
-* [Test suites](/en/guides/exercises/testsuites/) for describing what a correct answer does.
 * [The `config.json` reference](/en/references/exercise-config/) for the settings of a single activity.
+* [The exercise directory structure](/en/references/exercise-directory-structure/) for where each file belongs.
 
 ## Building the course
 
@@ -159,7 +199,7 @@ Material you wrote for yourself rather than for students, like lesson plans or a
 
 ## What works differently than in Trinket
 
-Two things are worth knowing before you write your test suites.
+Two things to know before you write your test suites.
 
 **Tests run your students' programs, they do not read them.** Dodona can check what a program prints, what a function returns, which exception it raises, what exit code it ends with, and the files it writes. What it cannot check is how the code was written. A rule such as "solve this with a single print statement" will not be enforced by the tests, because a solution that ignores the rule still behaves correctly. Put the rule in the description, and check it yourself when you read submissions.
 
@@ -171,9 +211,17 @@ When a program asks a question with `input("What is your name? ")`, that prompt 
 
 :::
 
+## Letting an AI assistant do the first pass
+
+Converting a course is a lot of manual work: a description and a test suite for every single activity.
+
+We have had good results letting a coding assistant do the first pass. Point it at your export, at this guide and the reference pages it links to, and at [universal-judge](https://github.com/dodona-edu/universal-judge), the repository behind TESTed, which documents the test suite format in full. Then ask it to produce the directory structure, the descriptions and a first test suite per exercise.
+
+What comes back is a first draft, not a finished course. Read every description, and submit your own solution to every exercise. A test suite can look reasonable and still expect slightly the wrong thing, which you will not see by reading it.
+
 ## Before you share it with students
 
-New activities start as [draft](/en/faq/activities/#what-is-a-draft-activity), so students cannot see them yet. That gives you room for a final authoring pass before anything is published.
+New activities start as [draft](/en/faq/activities/#what-is-a-draft-activity), so students cannot see them yet. That gives you room for a final authoring pass, and lets you try your activities out on the platform yourself, before anything is published.
 
 Solve every exercise yourself and submit your own solution. This is the fastest way to catch a test suite that expects the wrong thing, and it takes about a minute per exercise.
 
