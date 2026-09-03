@@ -23,4 +23,6 @@ These guides cover everything you need as a teacher, from your first sign-in to 
 
 Want to create your own exercises? The [creating exercises](/en/guides/exercises/creating-exercises/introduction/) guides explain how to write exercises and publish them on Dodona.
 
+Coming from Trinket? [Moving a course from Trinket](./moving-from-trinket/) takes you from an export of your Trinket course to a working course on Dodona.
+
 For quick answers to common questions, see the [FAQ](/en/faq/).
