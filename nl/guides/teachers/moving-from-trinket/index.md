@@ -127,7 +127,7 @@ In een playground kunnen studenten dus wel experimenteren, maar er wordt niets i
 
 Dodona verbetert door het programma van een student uit te voeren en het resultaat te vergelijken met wat jij opgaf. Vraag je bij elk stuk materiaal dus af of je op voorhand kan zeggen wat een correcte oplossing doet.
 
-Kan dat, maak er dan een **oefening** van. Bestaat de taak uit lezen, voorspellen of uitleggen, maak er dan een **leesactiviteit** van, want dan valt er niets uit te voeren.
+Als je dat kan, wordt het een **oefening**. Bestaat de taak uit lezen, voorspellen of uitleggen, dan wordt het een **leesactiviteit**: er valt niets uit te voeren.
 
 Bij taken waarin studenten zelf iets verzinnen, moet jij eerst een keuze maken. "Print een bericht naar keuze" valt niet automatisch te verbeteren, want elk correct antwoord ziet er anders uit. Meestal los je dat op door het bericht zelf in de beschrijving te zetten, zodat elke correcte oplossing dezelfde uitvoer geeft. Studenten oefenen precies hetzelfde, en de oefening valt nu wel te verbeteren.
 
@@ -194,7 +194,7 @@ Deze pagina's behandelen de rest:
 
 ## De cursus opbouwen
 
-Staan je activiteiten in de repository, dan bouw je de cursus zelf op Dodona:
+Zodra je activiteiten in de repository staan, bouw je de cursus op Dodona:
 
 1. [Maak de cursus aan](../creating-a-course/).
 2. [Maak per les een reeks aan en voeg er je activiteiten aan toe](../exercise-series-management/), in de volgorde waarin ze in de export stonden.
