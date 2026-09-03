@@ -72,8 +72,6 @@ The `type` of each material is the useful part:
 * `page` is a lesson page: text only, and all of it is in the matching `.md` file.
 * `assignment` is a page with a trinket attached. The text is in the `.md` file, and the code students started from is in `trinkets/`. Each assignment also carries a `trinket` object, whose `shortCode` is how you tell which folder belongs to it: the folder name ends in that same code.
 
-Those two are the only material types Trinket had. A video, a slide deck or a quiz was never a type of its own: it was a `page` with that thing embedded in its text, which is why they do not show up separately here.
-
 That `trinket` object also holds the assignment's dates: when work was due, when submissions closed, and when the page became visible. Trinket set those per assignment, while Dodona sets a deadline per series, so assignments that shared a date make an obvious series here.
 
 One directory per lesson holds the `.md` files, numbered in the order they appeared. Under `trinkets/`, each assignment has its own directory with the starter code inside. The folder in between is named after the kind of trinket: `python3` in this example, but `python` (which accepted both Python 2 and 3), `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` and `R` are all possible. `assets/` holds the images you uploaded, and is absent when a course used none.
