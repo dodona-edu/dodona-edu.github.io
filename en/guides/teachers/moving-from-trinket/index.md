@@ -70,11 +70,13 @@ assets/
 The `type` of each material is the useful part:
 
 * `page` is a lesson page: text only, and all of it is in the matching `.md` file.
-* `assignment` is a page with a trinket attached. The text is in the `.md` file, and the code students started from is in `trinkets/`.
+* `assignment` is a page with a trinket attached. The text is in the `.md` file, and the code students started from is in `trinkets/`. Each assignment also carries a `trinket` object, whose `shortCode` is how you tell which folder belongs to it: the folder name ends in that same code.
 
 Those two are the only material types Trinket had. A video, a slide deck or a quiz was never a type of its own: it was a `page` with that thing embedded in its text, which is why they do not show up separately here.
 
-One directory per lesson holds the `.md` files, numbered in the order they appeared. Under `trinkets/`, each assignment has its own directory with the starter code inside. The folder in between is named after the kind of trinket: `python3` in this example, but `python`, `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` and `R` are all possible. `assets/` holds the images you uploaded, and is absent when a course used none.
+That `trinket` object also holds the assignment's dates: when work was due, when submissions closed, and when the page became visible. Trinket set those per assignment, while Dodona sets a deadline per series, so assignments that shared a date make an obvious series here.
+
+One directory per lesson holds the `.md` files, numbered in the order they appeared. Under `trinkets/`, each assignment has its own directory with the starter code inside. The folder in between is named after the kind of trinket: `python3` in this example, but `python` (which accepted both Python 2 and 3), `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` and `R` are all possible. `assets/` holds the images you uploaded, and is absent when a course used none.
 
 ::: warning Unpublished pages are in there too
 
@@ -94,6 +96,7 @@ Read through the `.md` files before you plan anything. How much of the teaching 
 | A material of type `assignment` | An [exercise](/en/guides/exercises/creating-exercises/introduction/), or a reading activity when there is nothing to grade |
 | The starter code of a trinket | The [boilerplate](/en/references/exercise-directory-structure/#exercise-only-configuration) of the exercise |
 | A trinket embedded in a page | A code playground in a reading activity, described below |
+| The due date on an assignment | The [deadline](../series-settings/#deadline) on the series it goes into |
 
 ### Runnable code inside a page
 
@@ -177,6 +180,8 @@ To convert an **assignment**, start with the text, then add the three things tha
 * **The starter code** goes in `description/boilerplate/boilerplate`, so students open the exercise with the same code the trinket gave them.
 * **A test suite** in `evaluation/` describes what a correct solution does. Trinket had no equivalent: assignments were handed in and then read by you, so there is no grading logic in the export to carry over and you write these from scratch. It is also what the rest of Dodona is built on: students find out whether they are right the moment they submit, they can correct themselves without waiting for you, and you can see who is stuck and where. An exercise without a test suite is just a page with an editor attached.
 * **A model solution** in `solution/` proves the test suite is right. Submit it yourself once. If your own solution does not pass, the test suite is wrong, and you want to know that before thirty students do.
+
+If you used Trinket's optional self-check tests, that `tests.py` is in the export like any other code file. Dodona cannot run it as it stands, but it records what you already decided was worth checking, which is a head start on the real suite.
 
 Writing test suites is the new part of the move, so give the first one time and reuse its shape afterwards. [Test suites](/en/guides/exercises/testsuites/) explains the format, and [an exercise with input and output](/en/guides/exercises/examples/input-output/) is the closest match to a typical Trinket assignment: a program that reads input and prints a result.
 

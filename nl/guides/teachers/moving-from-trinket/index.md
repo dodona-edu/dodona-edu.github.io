@@ -70,11 +70,13 @@ assets/
 Het bruikbare gegeven is het `type` van elk stuk materiaal:
 
 * `page` is een lespagina: enkel tekst, volledig terug te vinden in het bijhorende `.md`-bestand.
-* `assignment` is een pagina met een trinket erbij. De tekst staat in het `.md`-bestand, en de code waar studenten van vertrokken staat in `trinkets/`.
+* `assignment` is een pagina met een trinket erbij. De tekst staat in het `.md`-bestand, en de code waar studenten van vertrokken staat in `trinkets/`. Elke assignment draagt ook een `trinket`-object, waarvan de `shortCode` aangeeft welke map erbij hoort: de mapnaam eindigt op diezelfde code.
 
 Dat zijn de enige twee materiaaltypes die Trinket had. Een video, een presentatie of een quiz was nooit een type op zich: het was een `page` met dat element ingesloten in de tekst, en daarom zie je ze hier niet apart terug.
 
-Per les is er één map met de `.md`-bestanden, genummerd in de volgorde waarin ze in de cursus stonden. Onder `trinkets/` heeft elke assignment zijn eigen map met de startcode erin. De map ertussen is genoemd naar het soort trinket: in dit voorbeeld `python3`, maar ook `python`, `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` en `R` zijn mogelijk. `assets/` bevat de afbeeldingen die je uploadde, en is afwezig als een cursus geen afbeeldingen gebruikte.
+Dat `trinket`-object bevat ook de data van de assignment: wanneer het werk moest ingeleverd zijn, wanneer inzendingen sloten, en wanneer de pagina zichtbaar werd. Trinket stelde die per assignment in, terwijl Dodona een deadline per reeks instelt, dus assignments die dezelfde datum deelden, vormen hier een voor de hand liggende reeks.
+
+Per les is er één map met de `.md`-bestanden, genummerd in de volgorde waarin ze in de cursus stonden. Onder `trinkets/` heeft elke assignment zijn eigen map met de startcode erin. De map ertussen is genoemd naar het soort trinket: in dit voorbeeld `python3`, maar ook `python` (dat zowel Python 2 als 3 aanvaardde), `html`, `java`, `blocks`, `console`, `pygame`, `glowscript`, `glowscript-blocks`, `music` en `R` zijn mogelijk. `assets/` bevat de afbeeldingen die je uploadde, en is afwezig als een cursus geen afbeeldingen gebruikte.
 
 ::: warning Ongepubliceerde pagina's zitten er ook tussen
 
@@ -94,6 +96,7 @@ Lees de `.md`-bestanden door voor je iets plant. Hoeveel van de uitleg in de pag
 | Materiaal van het type `assignment` | Een [oefening](/nl/guides/exercises/creating-exercises/introduction/), of een leesactiviteit als er niets te verbeteren valt |
 | De startcode van een trinket | De [boilerplate](/nl/references/exercise-directory-structure/#oefening-specifieke-configuratie) van de oefening |
 | Een trinket ingesloten in een pagina | Een code playground in een leesactiviteit, hieronder beschreven |
+| De uiterste datum op een assignment | De [deadline](../series-settings/#deadline) van de reeks waarin ze terechtkomt |
 
 ### Uitvoerbare code binnen een pagina
 
@@ -177,6 +180,8 @@ Om een **assignment** om te zetten, begin je met de tekst, en voeg je vervolgens
 * **De startcode** komt in `description/boilerplate/boilerplate`, zodat studenten de oefening openen met dezelfde code die de trinket hen gaf.
 * **Een testplan** in `evaluation/` beschrijft wat een correcte oplossing doet. Trinket had hier geen equivalent voor: assignments werden ingediend en dan door jou nagekeken, dus er zit geen verbeterlogica in de export om over te nemen en je schrijft deze van nul. Het is ook waar de rest van Dodona op gebouwd is: studenten weten meteen bij het indienen of ze het goed hebben, ze kunnen zichzelf bijsturen zonder op jou te wachten, en jij ziet wie waar vastzit. Een oefening zonder testplan is gewoon een pagina met een editor eraan.
 * **Een modeloplossing** in `solution/` bewijst dat het testplan klopt. Dien ze zelf één keer in. Slaagt je eigen oplossing niet, dan klopt het testplan niet, en dat wil je weten voor dertig studenten het ontdekken.
+
+Gebruikte je Trinkets optionele zelftests, dan zit die `tests.py` in de export zoals elk ander codebestand. Dodona kan dat bestand niet zomaar uitvoeren, maar het legt vast wat jij toen al de moeite waard vond om te controleren, en dat is een goede start voor het echte testplan.
 
 Testplannen schrijven is het nieuwe onderdeel van de overstap, dus neem de tijd voor het eerste en hergebruik daarna die vorm. [Testplannen](/nl/guides/exercises/testsuites/) legt het formaat uit, en [een oefening met invoer en uitvoer](/nl/guides/exercises/examples/input-output/) komt het dichtst bij een typische Trinket-assignment: een programma dat invoer leest en een resultaat print.
 
