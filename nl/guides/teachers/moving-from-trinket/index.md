@@ -218,4 +218,8 @@ Alles hierboven is handwerk: een beschrijving en een testplan voor elke activite
 
 We hebben goede ervaringen met een codeassistent die dat eerste werk doet. Wijs hem je export aan, deze handleiding met de referentiepagina's waar ze naar linkt, en [universal-judge](https://github.com/dodona-edu/universal-judge), de repository achter TESTed, waarin het formaat van een testplan volledig beschreven staat. Vraag hem daarna om de mappenstructuur, de beschrijvingen en per oefening een eerste testplan te maken.
 
+::: warning Let op met wat je deelt met een AI-assistent
+Een export kan auteursrechtelijk materiaal of persoonsgegevens bevatten. Upload geen studentenwerk of vertrouwelijke inhoud, en kijk alles na wat de assistent aanmaakt.
+:::
+
 Wat je terugkrijgt is een eerste versie, geen afgewerkte cursus. Lees elke beschrijving na, en dien bij elke oefening je eigen oplossing in. Een testplan kan er prima uitzien en toch net iets anders verwachten, en dat zie je niet door het te lezen.
