@@ -21,6 +21,26 @@ As a Dodona staff member, you can go to the "Judges" page through the administra
 
 The only thing a judge repository requires is a `run` executable in the root of the repository. This file will be executed inside a docker container, where it can use the rest of the files in the repository. Optionally, the repository also contains a `config.json` file in the root, [used to overwrite configurations](#input).
 
+### Precompiling Python bytecode
+
+Every submission runs against a fresh copy of the judge, so a judge written in Python compiles its own modules again on every single run. A judge can avoid that by asking Dodona to compile its bytecode once, while it synchronises the repository. Add a `precompile` key to `config.json`:
+
+```json
+{
+  "precompile": {
+    "python": "3.12"
+  }
+}
+```
+
+The value names the interpreter Dodona should use, so it has to be `3` (whatever `python3` is on the Dodona server) or a `3.x` version. Only the minor version matters: bytecode compiled by any 3.12.x is used by any other 3.12.x, so the version here does not have to be the exact patch version of the Python in your judge's docker image. Bytecode that does not match the interpreter running the judge is silently ignored, and the judge simply compiles as it did before.
+
+Dodona compiles on a copy of the repository, so the files it serves stay a mirror of git and only the archive that a submission unpacks holds the `__pycache__` directories. If the requested interpreter is not installed, the synchronisation still succeeds and the archive is built without bytecode. A value that is not a valid version number fails the synchronisation.
+
+::: tip
+Third-party packages do not need this. Your docker image installs those with pip, which ships bytecode already.
+:::
+
 ## 3. Judge Interface
 
 The judge is basically the `run` executable, and interfaces with Dodona through its standard input and standard output.
