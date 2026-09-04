@@ -16,7 +16,7 @@ Breng eerst in kaart wat je precies hebt.
 
 **Een export bevat wat Trinket zelf bewaarde, niet waar je pagina's naar verwezen.** Je lespagina's zitten in de zip, net als de code van elke trinket en de afbeeldingen die je uploadde. Alles waar een pagina enkel naar verwees, zit er niet in: documenten die je via de viewer van Trinket toevoegde, zoals pdf's en presentaties, bestanden op Google Drive, afbeeldingen van een andere site, ingesloten video's.
 
-Open daarom een paar lespagina's in een teksteditor en zoek naar links. Zo weet je wat er ontbreekt nog voor je begint. Wat op die lijst staat, moet je zelf bij elkaar zoeken en mee verhuizen, van waar je het ook nog vindt. Later zet je die bestanden in je eigen repository, bij de pagina's waarin je ze gebruikt.
+Open daarom een paar lespagina's in een teksteditor en zoek naar links. Zo weet je wat er nog ontbreekt voor je begint. Wat op die lijst staat, moet je zelf bij elkaar zoeken en mee verhuizen, van waar je het ook nog vindt. Later zet je die bestanden in je eigen repository, bij de pagina's waarin je ze gebruikt.
 
 ::: warning Links naar Trinket zelf werken niet meer
 
