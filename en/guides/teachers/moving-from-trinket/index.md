@@ -218,4 +218,8 @@ Everything above is manual work: a description and a test suite for every single
 
 We have had good results letting a coding assistant do the first pass. Point it at your export, at this guide and the reference pages it links to, and at [universal-judge](https://github.com/dodona-edu/universal-judge), the repository behind TESTed, which documents the test suite format in full. Then ask it to produce the directory structure, the descriptions and a first test suite per exercise.
 
+::: warning Be careful what you share with an AI assistant
+Your export may contain copyrighted material or personal data. Do not upload student work or confidential content, and review everything the assistant generates.
+:::
+
 What comes back is a first draft, not a finished course. Read every description, and submit your own solution to every exercise. A test suite can look reasonable and still expect slightly the wrong thing, which you will not see by reading it.
