@@ -6,7 +6,7 @@ order: 7
 
 # Geheugenlimieten
 
-Elke oplossing die op Dodona ingediend wordt, wordt geëvalueerd in een container met een geheugenlimiet. Op deze pagina lees je hoe Dodona die limiet bepaalt, hoeveel geheugen elke judge echt nodig heeft, en waarom een limiet die lager ligt dan de standaardwaarde problemen geeft die heel moeilijk te herkennen zijn.
+Elke oplossing die op Dodona ingediend wordt, wordt geëvalueerd in een container met een geheugenlimiet. Op deze pagina lees je hoe Dodona die limiet bepaalt, welke limieten vandaag van toepassing zijn, en waarom een limiet die lager ligt dan de standaardwaarde problemen geeft die heel moeilijk te herkennen zijn.
 
 Het veld `memory_limit` zelf is gedocumenteerd in de [referentie over oefeningconfiguratie](/nl/references/exercise-config/).
 
@@ -37,33 +37,7 @@ De meeste judges stellen zelf geen geheugenlimiet in en gebruiken dus de standaa
 | TESTed | 512 MB, behalve 750 MB voor Kotlin en 1000 MB voor Haskell |
 | alle andere judges | 256 MB (de standaardwaarde) |
 
-## Hoeveel geheugen een judge nodig heeft
-
-De tabel hieronder toont hoeveel geheugen één evaluatie effectief gebruikt. Elk getal is de piek van één evaluatie op een productieserver, gemeten in het slechtste geval waarin de bestanden van de judge nog niet in het geheugen zaten.
-
-| Judge | Piekgeheugen |
-| --- | --- |
-| Python (`judge-pythia`) | 50 MB |
-| Bash | 29 MB |
-| HTML | 46 MB |
-| Prolog | 52 MB |
-| SQL | 133 MB |
-| Java | meer dan 100 MB |
-| C# | 162 MB |
-| R | 155 MB |
-| Scheme | 220 MB |
-| Haskell | 250 MB |
-
-Oefeningen die TESTed gebruiken hebben wat meer nodig, omdat TESTed testcode genereert en compileert:
-
-| Programmeertaal in TESTed | Piekgeheugen |
-| --- | --- |
-| Python | 105 MB |
-| C# | 215 MB |
-| C++ | 300 MB |
-| Kotlin | 433 MB |
-
-Elk van deze waarden ligt ruim onder de limiet die erop van toepassing is. Voor een gewone oefening moet je dus niets instellen.
+Deze waarden zijn niet willekeurig gekozen. We hebben gemeten hoeveel geheugen één evaluatie van elke judge in het slechtste geval gebruikt, dus wanneer de bestanden van de judge nog niet in het geheugen zaten, en de limieten ruim boven die waarden gelegd. Geen enkele judge op Dodona heeft meer nodig dan de limiet die voor hem geldt, dus voor een gewone oefening hoef je niets in te stellen.
 
 ## Waarom een lagere limiet onbetrouwbaar is
 

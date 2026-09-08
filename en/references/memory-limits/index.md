@@ -6,7 +6,7 @@ order: 7
 
 # Memory limits
 
-Every submission on Dodona is evaluated in a container with a memory limit. This page explains how Dodona determines that limit, how much memory each judge really needs, and why setting a limit below the default causes problems that are very hard to recognise.
+Every submission on Dodona is evaluated in a container with a memory limit. This page explains how Dodona determines that limit, which limits apply today, and why setting a limit below the default causes problems that are very hard to recognise.
 
 The `memory_limit` key itself is documented in the [exercise config reference](/en/references/exercise-config/).
 
@@ -37,33 +37,7 @@ Most judges do not set a memory limit and use the base default. These judges set
 | TESTed | 512 MB, except 750 MB for Kotlin and 1000 MB for Haskell |
 | every other judge | 256 MB (the base default) |
 
-## How much memory a judge needs
-
-The table below lists what one evaluation actually uses. Each number is the peak memory of a single evaluation on a production worker, measured in the worst case where the files of the judge were not already in memory.
-
-| Judge | Peak memory |
-| --- | --- |
-| Python (`judge-pythia`) | 50 MB |
-| Bash | 29 MB |
-| HTML | 46 MB |
-| Prolog | 52 MB |
-| SQL | 133 MB |
-| Java | more than 100 MB |
-| C# | 162 MB |
-| R | 155 MB |
-| Scheme | 220 MB |
-| Haskell | 250 MB |
-
-Exercises that use TESTed need somewhat more, because TESTed generates and compiles test code:
-
-| Programming language in TESTed | Peak memory |
-| --- | --- |
-| Python | 105 MB |
-| C# | 215 MB |
-| C++ | 300 MB |
-| Kotlin | 433 MB |
-
-Every one of these values is comfortably below the limit that applies to it. For a normal exercise you therefore do not need to set anything.
+These values are not arbitrary. We measured what one evaluation of each judge uses in the worst case, when the files of the judge were not already in memory, and set the limits above that with room to spare. No judge on Dodona needs more than the limit that applies to it, so a normal exercise does not need to set anything.
 
 ## Why a lower limit is unreliable
 
