@@ -56,6 +56,8 @@ After you click `Submit`, your solution is placed in a queue and evaluated by th
 
 ![Hand-in panel showing the feedback for a correct submission, with the status bar and the Edit this submission button](./handin-feedback-en.png)
 
+Judging continues while you look at something else. If you open an earlier submission from the submission history, or click `Edit & resubmit`, while your latest solution is still being judged, the panel keeps showing what you opened. A `New result!` message then appears at the top of the hand-in panel with the status of your new submission; click `View result` in that message to open its feedback. The message disappears once you open the result or hand in a new solution.
+
 From the feedback you can go straight back to improving your code: click `Edit this submission` (or `Edit & resubmit` at the bottom of the panel) to load the code of the submission you are viewing back into the editor. If you had unsubmitted changes in the editor, the `Back to editor` button returns to the editor exactly as you left it.
 
 When you return to an exercise you have submitted for before, the editor automatically contains the code of your latest submission. An info message above the editor, `We have preloaded your latest submission into the editor.`, tells you this happened. Prefer to start over? The button next to that message restores the exercise's initial code (`Restore the initial code`) or, if the exercise has none, empties the editor (`Clear editor`).

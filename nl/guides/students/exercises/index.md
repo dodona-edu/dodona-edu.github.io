@@ -56,6 +56,8 @@ Nadat je op `Indienen` geklikt hebt, wordt je oplossing in een wachtrij geplaats
 
 ![Indienpaneel dat de feedback voor een correcte oplossing toont, met de statusbalk en de knop Deze oplossing bewerken](./handin-feedback-nl.png)
 
+Het beoordelen loopt gewoon door terwijl je naar iets anders kijkt. Open je een eerdere oplossing in de indiengeschiedenis, of klik je op `Bewerken en herindienen`, terwijl je laatste oplossing nog beoordeeld wordt, dan blijft het paneel tonen wat je geopend hebt. Bovenaan het indienpaneel verschijnt dan de melding `Nieuw resultaat!` met de status van je nieuwe oplossing; klik in die melding op `Bekijk resultaat` om de feedback ervan te openen. De melding verdwijnt zodra je het resultaat opent of een nieuwe oplossing indient.
+
 Vanuit de feedback kan je meteen verder werken aan je code: klik op `Deze oplossing bewerken` (of op `Bewerken en herindienen` onderaan het paneel) om de code van de getoonde oplossing terug in de editor te laden. Had je nog niet-ingediende wijzigingen in de editor staan, dan keer je met de knop `Terug naar editor` terug naar de editor zoals je die achterliet.
 
 Als je terugkeert naar een oefening waarvoor je al eerder hebt ingediend, dan bevat de editor automatisch de code van je laatst ingediende oplossing. Een infomelding boven de editor, `We hebben jouw laatste oplossing ingeladen in de editor.`, vertelt je dat dit gebeurd is. Begin je liever opnieuw? De knop naast die melding zet de voorbeeldcode van de oefening terug (`Zet de voorbeeldcode terug`) of maakt, als de oefening geen voorbeeldcode heeft, de editor leeg (`Maak de editor leeg`).

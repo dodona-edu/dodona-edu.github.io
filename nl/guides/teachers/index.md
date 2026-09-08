@@ -23,4 +23,6 @@ Deze handleidingen behandelen alles wat je als leerkracht nodig hebt, van je eer
 
 Wil je zelf oefeningen aanmaken? De handleidingen over [oefeningen aanmaken](/nl/guides/exercises/creating-exercises/introduction/) leggen uit hoe je oefeningen schrijft en publiceert op Dodona.
 
+Kom je van Trinket? [Een cursus verhuizen van Trinket](./moving-from-trinket/) brengt je van een export van je Trinket-cursus naar een werkende cursus op Dodona.
+
 Voor snelle antwoorden op veelgestelde vragen kan je terecht in de [FAQ](/nl/faq/).
