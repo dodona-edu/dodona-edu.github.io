@@ -21,8 +21,8 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 - **`evaluation`**: the specification of the evaluation procedure
   - **`handler`** (string, optional): the name of the judge that is used for evaluation. By default, Dodona uses the judge specified for the repository. An overview of the available judges can be found [here](/en/references/judges).
   - **`image`** (string, optional): the name of the docker image that is used for evaluation. By default, Dodona uses the image specified by the judge.
-  - **`time_limit`** (integer, optional): the time in seconds before the evaluations times out. By default, the limit is 42 seconds.
-  - **`memory_limit`** (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 100MB.
+  - **`time_limit`** (integer, optional): the time in seconds before the evaluations times out. By default, the limit is 42 seconds. On a simple exercise it is useful to lower this: a student who writes an infinite loop gets feedback after 5 seconds instead of 42, and less evaluation time is wasted. Leave enough room for a correct solution. The limit covers the whole evaluation, including starting the judge and compiling the code, not only the time the student's program runs, so a value that is fine for Python can be too tight for a compiled language.
+  - **`memory_limit`** (integer, optional): the amount of memory in bytes that is available for running the evaluation. By default, the limit is 256MB, or more if the judge sets a higher value. Only set this if you need more than the default. A lower value rarely produces a clear error message: it usually just makes every evaluation several times slower.
   - **`network_enabled`** (boolean, optional): set to `true` if internet access should be enabled. This optional setting is `false` by default.
 - **`labels`** (array of strings, optional): a list of labels that can be used to search for this exercise using the Dodona web interface. Defaults to an empty list.
 - **`contact`** (string, optional): info about the author of this exercise, formatted like an email To header.
@@ -59,8 +59,6 @@ The structure for a reading activity is identical to that of an exercise. There 
   "evaluation": {
     "handler": "tested",
     "test_suite": "suite.yaml",
-    "time_limit": 10,
-    "memory_limit": 10000000,
     "network_enabled": true
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
@@ -91,9 +89,7 @@ The structure for a reading activity is identical to that of an exercise. There 
 {
   "access": "private",
   "evaluation": {
-    "handler": "tested",
-    "time_limit": 15,
-    "memory_limit": 100000000
+    "handler": "tested"
   },
   "programming_language": "python",
   "contact": "Firstname Lastname <firstname_lastname@dodona.be>"
