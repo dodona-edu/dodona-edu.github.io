@@ -13,6 +13,7 @@ Technische referenties voor de configuratiebestanden, formaten en mappenstructur
 * [Oefeningmap-structuur](exercise-directory-structure) — de structuur van één oefening
 * [Repository-structuur](repository-directory-structure) — de structuur van een oefeningenrepository
 * [TESTed](tested) — de aanbevolen judge: DSL-testplannen, configuratie, datatypes
+* [Geheugenlimieten](memory-limits) — hoe de geheugenlimiet van een evaluatie bepaald wordt, en wat elke judge nodig heeft
 
 ## Een judge kiezen
 
