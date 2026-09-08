@@ -48,7 +48,7 @@ The table below lists what one evaluation actually uses. Each number is the peak
 | HTML | 46 MB |
 | Prolog | 52 MB |
 | SQL | 133 MB |
-| Java | 110 MB |
+| Java | more than 100 MB |
 | C# | 162 MB |
 | R | 155 MB |
 | Scheme | 220 MB |
@@ -91,7 +91,6 @@ The limit is dominated by the runtime of the programming language, not by the da
 
 What does work:
 
-* **Let the judge report the resource usage.** Judges can measure and report what a solution really uses, and show that in the feedback.
 * **Test the efficiency in your test suite.** If your exercise is about efficiency, then test that explicitly, for example by testing the solution on a large input and checking the result of that. That gives your student a clear message instead of a slow evaluation.
 
 ## When you do need a higher limit

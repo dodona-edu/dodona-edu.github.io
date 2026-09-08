@@ -48,7 +48,7 @@ De tabel hieronder toont hoeveel geheugen één evaluatie effectief gebruikt. El
 | HTML | 46 MB |
 | Prolog | 52 MB |
 | SQL | 133 MB |
-| Java | 110 MB |
+| Java | meer dan 100 MB |
 | C# | 162 MB |
 | R | 155 MB |
 | Scheme | 220 MB |
@@ -91,7 +91,6 @@ De limiet wordt gedomineerd door de runtime van de programmeertaal, niet door de
 
 Wat wel werkt:
 
-* **Laat de judge het gebruik van bronnen rapporteren.** Judges kunnen meten en rapporteren wat een oplossing echt gebruikt, en dat tonen in de feedback.
 * **Test de efficiëntie in je testplan.** Als je oefening over efficiëntie gaat, test dat dan expliciet, bijvoorbeeld door de oplossing te testen op een grote invoer en het resultaat daarvan te controleren. Zo krijgt je student een duidelijke boodschap in plaats van een trage evaluatie.
 
 ## Wanneer je wel een hogere limiet nodig hebt
