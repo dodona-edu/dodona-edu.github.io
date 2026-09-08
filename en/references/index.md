@@ -13,6 +13,7 @@ Technical references for the Dodona config files, formats, and directory structu
 * [Exercise directory structure](exercise-directory-structure) — the layout of one exercise
 * [Repository directory structure](repository-directory-structure) — the layout of an exercise repository
 * [TESTed](tested) — the recommended judge: DSL test suites, configuration, data types
+* [Memory limits](memory-limits) — how the memory limit of an evaluation is determined, and what each judge needs
 
 ## Choosing a judge
 
