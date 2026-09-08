@@ -21,8 +21,8 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 - **`evaluation`**: de specificatie van de evaluatieprocedure
   - **`handler`** (string, optioneel): de naam van de judge die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de judge die ingesteld is voor de repository. Een overzicht van de mogelijke judges vind je [hier](/nl/references/judges).
   - **`image`** (string, optioneel): de naam van de docker image die gebruikt wordt voor de evaluatie. Standaard gebruikt Dodona de image die ingesteld is voor de judge.
-  - **`time_limit`** (integer, optioneel): de tijd in seconden waarna de evaluatie van een oefening stopgezet wordt. Standaard is dit 42 seconden
-  - **`memory_limit`** (integer, optioneel): de hoeveelheid geheugen in bytes die gebruikt kan worden bij het uitvoeren van de evaluatie. Standaard is dit ingesteld op 100M.
+  - **`time_limit`** (integer, optioneel): de tijd in seconden waarna de evaluatie van een oefening stopgezet wordt. Standaard is dit 42 seconden. Stel dit enkel in als de standaardwaarde niet volstaat. Een lagere waarde laat correcte maar trage oplossingen falen.
+  - **`memory_limit`** (integer, optioneel): de hoeveelheid geheugen in bytes die gebruikt kan worden bij het uitvoeren van de evaluatie. Standaard is dit 256MB, of meer als de judge een hogere waarde instelt. Stel dit enkel in als je meer nodig hebt dan de standaardwaarde. Een lagere waarde geeft zelden een duidelijke foutmelding: meestal wordt elke evaluatie gewoon verschillende keren trager.
   - **`network_enabled`** (boolean, optioneel): ingesteld op `true` als toegang tot het internet toegelaten is. Standaard staat deze waarde op `false`.
 - **`labels`** (lijst van strings, optioneel): een lijst van labels die gebruikt kunnen worden om deze oefening te vinden via de Dodona web interface. Standaard een lege lijst.
 - **`contact`** (string, optioneel): informatie over de auteur van deze oefening, geformatteerd zoals een e-mail-ontvanger hoofding.
@@ -59,8 +59,6 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
   "evaluation": {
     "handler": "tested",
     "test_suite": "suite.yaml",
-    "time_limit": 10,
-    "memory_limit": 10000000,
     "network_enabled": true
   },
   "labels": ["voorbeeld", "eenvoudige oefening"],
@@ -91,9 +89,7 @@ De structuur voor een leesactiviteit is identiek aan deze van een oefening. Er z
 {
   "access": "private",
   "evaluation": {
-    "handler": "tested",
-    "time_limit": 15,
-    "memory_limit": 100000000
+    "handler": "tested"
   },
   "programming_language": "python",
   "contact": "Firstname Lastname <firstname_lastname@dodona.be>"
