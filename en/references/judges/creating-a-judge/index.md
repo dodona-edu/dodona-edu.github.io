@@ -34,6 +34,30 @@ The `run` executable should accept JSON input with the following fields as confi
 
 These two values can be overwritten and extended with random other key-value pairs in _(1)_ the Judge configuration, found as `config.json` in the judge repository root and _(2)_ the `evaluation` subobject in the configuration of the submitted exercise, the latter overwriting the former.
 
+#### A memory limit per programming language
+
+A judge that supports several programming languages does not always need the same amount of memory for each of them. Instead of one `memory_limit` that has to cover the most demanding language, such a judge can set a limit per language with the `memory_limit_by_language` key in its `config.json`:
+
+```json
+{
+  "memory_limit": 512000000,
+  "memory_limit_by_language": {
+    "haskell": 1000000000,
+    "kotlin": 750000000
+  }
+}
+```
+
+The keys are programming language names as Dodona knows them, so `csharp` rather than `C#`. A language that is not listed falls back to the `memory_limit` of the judge, so you only list the languages that deviate.
+
+The value replaces the `memory_limit` of the judge for that language, and the configuration of the exercise can still override it in turn. The order of precedence is therefore unchanged: the default of Dodona, then the judge, then the exercise.
+
+::: tip
+`memory_limit_by_language` is read by Dodona and removed from the configuration before it is passed to the judge. Your `run` executable always receives a plain integer in `memory_limit`, so it needs no support for this key.
+:::
+
+The limit is a default that an exercise can also lower, not a floor. See the [memory limits reference](/en/references/memory-limits/) for the limits that apply today and why a limit that is too low makes evaluations slow instead of failing them.
+
 In addition to the previous two, the following fields are also part of the input:
 
 - **programming_language**: The full name (e.g. "python", "haskell") of the programming language the student submitted his code for.
