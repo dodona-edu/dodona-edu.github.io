@@ -32,7 +32,7 @@ Schrijf je code in de editor links en klik op `Uitvoeren`. De uitvoer van je pro
 
 Nog enkele dingen die de sandbox kan:
 
-- **Invoer**: als je programma invoer leest (bijvoorbeeld met `input()`), dan kan je je antwoord gewoon intypen in het invoerveld wanneer je programma erom vraagt, en op enter drukken. Geef je alle invoer liever vooraf in? Klik dan op `Geef invoer vooraf in` en typ alle invoerregels op voorhand; met `Wisselen naar interactieve invoer` keer je terug.
+- **Invoer**: als je programma invoer leest (bijvoorbeeld met `input()`), dan kan je je antwoord gewoon intypen in het invoerveld wanneer je programma erom vraagt, en op enter drukken. Geef je alle invoer liever vooraf in? Het invoervenster heeft twee tabbladen: op `Eén per keer` beantwoord je elke vraag op het moment dat je programma ze stelt, en op `Alles ineens` geef je alle invoerregels op voorhand in.
 - **Turtle-tekeningen**: als je code tekent met de module `turtle`, dan verschijnt de tekening in een aparte tab `Turtle` naast de tekstuele uitvoer.
 - **Packages**: importeert je code een package, dan probeert de sandbox die automatisch te installeren. De meeste veelgebruikte packages werken; packages die toegang tot je besturingssysteem nodig hebben, werken niet in de browser.
 - **Bestanden van de oefening**: bestanden die bij de oefening horen, kunnen automatisch in de sandbox geladen worden, en je kan links of afbeeldingen uit de opgave naar de sandbox slepen om ze in je code te gebruiken.
