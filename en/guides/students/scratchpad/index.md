@@ -32,7 +32,7 @@ Write your code in the editor on the left and click `Run`. The output of your pr
 
 Some more things the sandbox can do:
 
-- **Input**: if your program reads input (for example with `input()`), you can simply type your answer in the input field when your program asks for it, and press enter. Prefer to prepare all input beforehand? Click `Switch to batch input` and enter all input lines in advance; `Switch to interactive mode` takes you back.
+- **Input**: if your program reads input (for example with `input()`), you can simply type your answer in the input field when your program asks for it, and press enter. Prefer to prepare all input beforehand? The input panel has two tabs: on `One at a time` you answer each question at the moment your program asks it, and on `All at once` you enter all input lines in advance.
 - **Turtle graphics**: if your code draws with the `turtle` module, the drawing appears in a separate `Turtle` tab next to the textual output.
 - **Packages**: when your code imports a package, the sandbox automatically tries to install it. Most commonly used packages work; packages that need access to your operating system do not work in the browser.
 - **Files from the exercise**: files that come with the exercise can be loaded into the sandbox automatically, and you can drag links or images from the exercise description into the sandbox to use them in your code.

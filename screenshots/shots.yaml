@@ -2073,6 +2073,10 @@ shots:
       - '"Python sandbox" header'
       - code editor with the short program, Run/Debug buttons, "Finalize and submit" / "Naar indienbox"
       - input field and output panel with the produced output
+      - >-
+        the input mode tabs "One at a time" / "All at once"
+        ("Eén per keer" / "Alles ineens"), which replaced the two switch
+        buttons in papyros 4.13.0
       - Description tab with the exercise description on the right
 
   - id: SB-3
