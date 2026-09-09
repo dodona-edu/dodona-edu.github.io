@@ -37,6 +37,16 @@ Het bestand wordt bij elke synchronisatie gelezen, dus een `.dodonaignore` toevo
 Een patroon dat te breed is, zoals een niet-verankerde `tests` of een verdwaalde `*`, sluit ook bestanden uit die Dodona nodig heeft om oplossingen te verbeteren. Voor judge-repositories wordt dit gecontroleerd: een `.dodonaignore` die `config.json` of `run` zou uitsluiten laat de synchronisatie mislukken, en de laatst werkende versie blijft staan. De beheerder van de repository krijgt een e-mail wanneer een synchronisatie mislukt.
 :::
 
+## Symbolische links
+
+Symbolische links worden net als alle andere bestanden naar Dodona gekopieerd, zolang ze binnen je repository blijven. Een link naar een ander bestand in dezelfde repository blijft dus werken, wat handig is voor materiaal dat verschillende oefeningen delen.
+
+Een link die buiten je repository uitkomt, wordt niet gekopieerd. Dat gaat zowel over absolute links, bijvoorbeeld een link naar `/etc/hosts`, als over relatieve links die met `../` voorbij de hoofdmap van je repository klimmen. Op Dodona zou zo'n link naar een bestand wijzen dat geen deel uitmaakt van je repository, dus laat de synchronisatie hem achterwege en is het bestand er gewoon niet: een lege beschrijving, een afbeelding die niet laadt, of een configuratiebestand dat gelezen wordt alsof het er niet is.
+
+::: warning Hou gedeelde bestanden binnen de repository
+Als een van je oefeningen naar een bestand buiten de repository wees, werkt die niet meer. Kopieer dat bestand naar de repository, of link naar een kopie die er al staat.
+:::
+
 ## Voorbeeld van een geldige repository-structuur
 
 ::: tip Voorbeelden

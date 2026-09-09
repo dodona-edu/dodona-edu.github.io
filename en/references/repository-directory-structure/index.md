@@ -37,6 +37,16 @@ The file is read on every synchronisation, so adding or editing it takes effect 
 A pattern that is too broad, such as an unanchored `tests` or a stray `*`, also excludes files that Dodona needs to judge submissions. For judge repositories this is checked: a `.dodonaignore` that would exclude `config.json` or `run` makes the synchronisation fail and the last working version stays in place. The administrator of the repository receives an email whenever a synchronisation fails.
 :::
 
+## Symbolic links
+
+Symbolic links are copied to Dodona like any other file, as long as they stay inside your repository. A link to another file in the same repository keeps working, which is handy for material that several exercises share.
+
+A link that resolves outside your repository is not copied. That covers absolute links, such as a link to `/etc/hosts`, and relative links that climb past the root of your repository with `../`. On Dodona such a link would point at a file that is not part of your repository, so the synchronisation leaves it behind and the file is simply absent: a description that is empty, an image that does not load, or a configuration file that is read as if it were not there.
+
+::: warning Keep shared files inside the repository
+If one of your exercises pointed at a file outside the repository, it stops working. Copy that file into the repository, or link to a copy that is already there.
+:::
+
 ## Example of a valid repository structure
 
 ::: tip Examples
