@@ -23,7 +23,7 @@ Dodona builds the memory limit in layers. Each layer overrides the previous one:
 3. **The `dirconfig.json` files** of your repository, from the root of the repository down to the directory of the exercise.
 4. **The `config.json` of the exercise** itself.
 
-The resulting value is clamped between 10 MB and 1000 MB. A value outside that range is replaced by the nearest bound.
+The resulting value is clamped between 10 MB and 1000 MB. A value outside that range is replaced by the nearest bound when the exercise is evaluated. Dodona no longer writes that bound into the `config.json` of your exercise, so your own value stays in your repository exactly as you wrote it. The info page of the exercise shows the limit that is really used.
 
 ## The limits that apply today
 
@@ -43,7 +43,7 @@ These values are not arbitrary. We measured what one evaluation of each judge us
 
 The limit covers everything the evaluation reads, not just the program of your student. Starting a judge means loading the runtime of the programming language, so the compiler, the interpreter and the standard library, plus the judge itself. All of that counts against the same limit. In practice, an evaluation needs about two to three times as much memory as the code of the student uses on its own.
 
-When the total does not fit inside the limit, the evaluation is usually **not** stopped with an error. The system throws out the files of the judge to make room, and then has to read those same files back from disk, over and over. The student still gets the correct verdict, but the evaluation takes three to twenty times longer, and nothing in the feedback mentions the memory limit.
+When the total does not fit inside the limit, the evaluation is usually **not** stopped with an error. The system throws out the files of the judge to make room, and then has to read those same files back from disk, over and over. The student still gets the correct verdict, but the evaluation takes three to twenty times longer. As long as it still finishes within the time limit, nothing in the feedback mentions the memory limit. If it becomes so slow that it runs into the time limit, the submission gets the status `Memory limit exceeded` instead of `Timeout`, so the status names the real cause.
 
 Whether this happens also depends on what the worker machine was doing just before. If another student recently submitted a solution for the same judge, the files of that judge are still in memory and the evaluation is fast. If not, the evaluation is slow. The same exercise with the same solution can therefore be fast for one student and slow for another.
 
