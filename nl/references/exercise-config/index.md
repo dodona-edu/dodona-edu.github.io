@@ -14,7 +14,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 - **`programming_language`** (string): de programmeertaal van de oefening, wordt gebruikt voor *syntax highlighting* en om de juiste bestandsextensie te bepalen. Een overzicht van de mogelijke programmeertalen vind je [hier](https://dodona.be/nl/programming_languages/).
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiken
-  - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken
+  - **`private`**: enkel lesgevers met expliciete toestemming mogen deze oefening gebruiken. Een cursus krijgt deze toestemming pas nadat die toegevoegd is aan de toegelaten cursussen van de repository van de oefening. Het kopiëren van een cursus doet dit niet automatisch; zie [een cursus kopiëren](/nl/guides/teachers/creating-a-course/) voor meer uitleg.
 - **`description`** (object): de specificatie van de beschrijving van deze oefening
   - **`names`** (object): de naam van de oefening, met [tweelettercodes](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes) als sleutels (bv. `nl`, `en`, `fr`)
   - **`sandbox_files`** (array van strings, optioneel): een lijst van bestanden in de `description/media`-folder die automatisch ingeladen worden in de sandbox
