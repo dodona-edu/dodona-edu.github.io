@@ -126,18 +126,6 @@ It is undocumented and has a lot of very usecase specific implementations.\
 **Get started** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
 **Created by:** [Team Dodona](mailto:team@dodona.be)
 
-### JUnit
-
-::: danger Note
-We do not recommend using this judge for new exercises.
-Use the [Java judge](#java) instead.
-:::
-
-The JUnit judge is a judge for Java 8 exercises.\
-**Programming languages:** Java\
-**Get started** [Documentation](https://github.com/dodona-edu/judge-java8), [examples](https://github.com/dodona-edu/example-exercises/tree/master/java) \
-**Created by:** [Team Dodona](mailto:team@dodona.be)
-
 ### Python
 ::: danger Note
 We do not recommend using this judge for new exercises.
@@ -148,4 +136,19 @@ Python/Pythia is the first judge that was created for Dodona.
 It is a Python judge that allows simple input/output tests or more advanced doctests.\
 **Programming languages:** Python\
 **Get started** [Documentation](/en/references/judges/python-judge), [examples](https://github.com/dodona-edu/example-exercises/tree/master/python) \
+**Created by:** [Team Dodona](mailto:team@dodona.be)
+
+## Removed judges
+
+These judges have been removed from Dodona. Exercises that use them can no longer be evaluated or opened. We keep their entries here as a record, so that anyone wondering what happened to a judge can still find out, instead of finding no trace of it at all.
+
+### JUnit
+
+::: danger Note
+This judge has been removed. Exercises that use it can no longer be evaluated.
+Use the [Java judge](#java) instead.
+:::
+
+The JUnit judge is a judge for Java 8 exercises.\
+**Programming languages:** Java\
 **Created by:** [Team Dodona](mailto:team@dodona.be)
