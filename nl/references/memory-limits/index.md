@@ -23,7 +23,7 @@ Dodona bouwt de geheugenlimiet op in lagen. Elke laag overschrijft de vorige:
 3. **De `dirconfig.json`-bestanden** van je repository, van de hoofdmap van de repository tot in de map van de oefening.
 4. **De `config.json` van de oefening** zelf.
 
-De waarde die daaruit volgt, wordt beperkt tot het bereik van 10 MB tot 1000 MB. Een waarde buiten dat bereik wordt vervangen door de dichtstbijzijnde grens.
+De waarde die daaruit volgt, wordt beperkt tot het bereik van 10 MB tot 1000 MB. Een waarde buiten dat bereik wordt vervangen door de dichtstbijzijnde grens op het moment dat de oefening geÃ«valueerd wordt. Dodona schrijft die grens niet langer in de `config.json` van je oefening, dus je eigen waarde blijft in je repository staan zoals je ze geschreven hebt. De infopagina van de oefening toont de limiet die echt gebruikt wordt.
 
 ## De limieten van vandaag
 
@@ -43,7 +43,7 @@ Deze waarden zijn niet willekeurig gekozen. We hebben gemeten hoeveel geheugen Ã
 
 De limiet geldt voor alles wat de evaluatie inleest, niet alleen voor het programma van je student. Een judge starten betekent dat de runtime van de programmeertaal ingeladen wordt, dus de compiler, de interpreter en de standaardbibliotheek, en daarbovenop de judge zelf. Dat telt allemaal mee voor dezelfde limiet. In de praktijk heeft een evaluatie ongeveer twee tot drie keer zoveel geheugen nodig als wat de code van de student op zich gebruikt.
 
-Als het totaal niet in de limiet past, wordt de evaluatie meestal **niet** afgebroken met een foutmelding. Het systeem gooit de bestanden van de judge weg om plaats te maken, en moet diezelfde bestanden daarna telkens opnieuw van schijf lezen. De student krijgt nog altijd de juiste beoordeling, maar de evaluatie duurt drie tot twintig keer langer, en nergens in de feedback staat dat de geheugenlimiet de oorzaak is.
+Als het totaal niet in de limiet past, wordt de evaluatie meestal **niet** afgebroken met een foutmelding. Het systeem gooit de bestanden van de judge weg om plaats te maken, en moet diezelfde bestanden daarna telkens opnieuw van schijf lezen. De student krijgt nog altijd de juiste beoordeling, maar de evaluatie duurt drie tot twintig keer langer. Zolang ze nog binnen de tijdslimiet klaar is, staat nergens in de feedback dat de geheugenlimiet de oorzaak is. Wordt ze zo traag dat ze tegen de tijdslimiet aanloopt, dan krijgt de oplossing de status `Geheugenlimiet overschreden` in plaats van `Timeout`, zodat de status wel de echte oorzaak benoemt.
 
 Of dat gebeurt, hangt bovendien af van wat de server er net daarvoor deed. Als een andere student kort daarvoor een oplossing indiende voor dezelfde judge, dan zitten de bestanden van die judge nog in het geheugen en verloopt de evaluatie snel. Zo niet, dan verloopt ze traag. Dezelfde oefening met dezelfde oplossing kan dus snel zijn voor de ene student en traag voor de andere.
 
