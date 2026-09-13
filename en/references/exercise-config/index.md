@@ -14,7 +14,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 - **`programming_language`** (string): the programming language of the exercise, used for syntax highlighting and correct file extensions. The available programming languages can be found [here](https://dodona.be/en/programming_languages/).
 - **`access`** (`public` or `private`): determines who can use this exercise
   - `public`: any other teacher on Dodona can use this exercise
-  - `private`: only teachers with explicit permission can use this exercise
+  - `private`: only teachers with explicit permission can use this exercise. A course only gets this permission once it is added to the approved courses of the exercise's repository. Copying a course does not carry this over automatically; see [copying a course](/en/guides/teachers/creating-a-course/#copy-course) for details.
 - **`description`** (object): the specification of the description of the exercise
   - **`names`** (object): the name of the exercise, with [two-letter language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) as keys (e.g., `nl`, `en`, `fr`)
   - **`sandbox_files`** (array of strings, optional): a list of files under the `description/media` directory that should be autoloaded in the sandbox

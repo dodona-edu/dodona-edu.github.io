@@ -41,6 +41,14 @@ Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De r
 
 ![Opties voor welke elementen over te nemen van de gekozen cursus: oefeningen, deadlines, beheerders en standaardzichtbaarheid van reeksen](./course-new-copy-nl.png)
 
+::: warning Privé-oefeningen zijn nog niet toegelaten in de kopie
+
+Gebruikt de cursus die je kopieert privé-oefeningen, dan kan de kopie die oefeningen nog niet gebruiken: een cursus krijgt pas toegang tot de privé-oefeningen van een repository nadat die cursus toegevoegd is aan de lijst met toegelaten cursussen van die repository. Het kopiëren van een cursus doet dit niet automatisch, ook niet als de oorspronkelijke cursus wel toegelaten was. Op de cursuspagina van de kopie staat zo'n oefening daardoor zonder link, met een oranje waarschuwingsicoontje ernaast.
+
+Ben je zelf beheerder van de repository waar de oefening vandaan komt, dan kan je op dat icoontje klikken om de cursus toe te voegen aan de toegelaten cursussen. Dat geeft in één keer toegang tot alle privé-oefeningen van die repository. Ben je dat niet, neem dan contact op met de beheerder van de repository, of verwijder de oefening uit de cursus. De beheerder kan de cursus ook zelf toevoegen via de `Toegelaten cursussen`-pagina van de repository, met de knop `Cursussen toevoegen`.
+
+:::
+
 ## Cursuseigenschappen
 
 Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, instellen. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.

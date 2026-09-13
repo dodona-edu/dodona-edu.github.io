@@ -41,6 +41,14 @@ Next, you need to specify which elements of the course you want to copy. The ser
 
 ![Options for which elements to copy from the chosen course: exercises, deadlines, administrators, and default series visibility](./course-new-copy-en.png)
 
+::: warning Private exercises are not allowed in the copy yet
+
+If the course you copy uses private exercises, the copy cannot use them yet: a course only gets access to a repository's private exercises once that course is added to the repository's list of approved courses. Copying a course does not do this automatically, even if the original course already had access. On the copy's course page, such an exercise is therefore shown without a link, with an orange warning icon next to it.
+
+If you administer the repository the exercise comes from, you can click this icon to add the course to the repository's approved courses. This grants access to every private exercise from that repository at once. If you don't administer the repository, contact its administrator, or remove the exercise from the course. The administrator can also add the course from the repository's `Approved courses` page, using the `Add courses` button.
+
+:::
+
 ## Course Properties
 
 Finally, you need to set a few things about the course itself, such as the name and instructor. These are pre-filled with the values of the copied course if that option was chosen. The following properties can be set:
