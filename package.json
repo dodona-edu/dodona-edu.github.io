@@ -23,7 +23,7 @@
     "medium-zoom": "^1.1.0",
     "resolve-accept-language": "^3.2.2",
     "vitepress": "^1.6.4",
-    "playwright-core": "^1.49.0",
+    "playwright-core": "^1.63.0",
     "yaml": "^2.6.0"
   },
   "dependencies": {},
