@@ -146,6 +146,11 @@ Only the way you grant access differs per host:
 - On gitlab.com, add [dodona-server](https://gitlab.com/dodona-server) as a member to your project.
 - On a self-hosted GitLab server, create a new user for Dodona, add our [SSH public key](/dodona.pub){target="_blank"} to that user, and grant it write access to your repository.
 
+::: warning Note
+Dodona clones your repository from its own servers, so your git server has to be reachable from the public internet.
+A server that is only available inside your school's network or behind a VPN cannot be used: Dodona refuses such a clone URL with the message that the host of the remote does not resolve to a public internet address.
+:::
+
 The template repository only exists on GitHub.
 If you start from an empty repository on another host, make sure it follows the [repository directory structure](/en/references/repository-directory-structure).
 

@@ -149,6 +149,11 @@ Enkel de manier waarop je toegang geeft, verschilt per host:
 - Op gitlab.com voeg je [dodona-server](https://gitlab.com/dodona-server) toe als lid van je project.
 - Op een eigen GitLab-server maak je zelf een gebruiker voor Dodona aan, voeg je onze [publieke SSH-sleutel](/dodona.pub){target="_blank"} toe aan die gebruiker en geef je die gebruiker schrijfrechten op je repository.
 
+::: warning Opgepast
+Dodona haalt je repository op vanaf zijn eigen servers, dus je git-server moet bereikbaar zijn via het publieke internet.
+Een server die enkel binnen het netwerk van je school of achter een VPN beschikbaar is, kan je niet gebruiken: Dodona weigert zo'n clone-URL met de melding dat de host van de remote niet naar een publiek internetadres verwijst.
+:::
+
 De sjabloonrepository bestaat enkel op GitHub.
 Start je met een lege repository op een andere host, zorg er dan voor dat die de [repositorystructuur](/nl/references/repository-directory-structure) volgt.
 
