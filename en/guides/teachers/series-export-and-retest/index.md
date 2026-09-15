@@ -33,6 +33,13 @@ At that moment, all submitted solutions will be zipped, which may take a moment.
 
 ![Export wizard step 3 showing the "preparing submissions for download" progress message](./export-started-en.png)
 
+::: tip One export at a time
+
+Dodona prepares one export at a time per user, and allows at most ten exports per hour.
+If you start another export while one is still being prepared, the export page reports `You already have an export in progress or started too many exports in the last hour. Try again later.`
+Wait for the running export to finish, then start the next one.
+:::
+
 ## Retest submissions
 
 The `Retest submissions` action in the series menu retests all solutions that course users have submitted for exercises in the exercise series.
