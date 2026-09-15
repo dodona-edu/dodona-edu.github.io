@@ -29,6 +29,13 @@ Klik op `Start export` om de download te starten. Op dat moment worden alle inge
 
 ![Exporteerwizard stap 3 met het voortgangsbericht "oplossingen aan het voorbereiden om te downloaden"](./export-started-nl.png)
 
+::: tip Eén export tegelijk
+
+Dodona bereidt per gebruiker één export tegelijk voor, en staat maximaal tien exports per uur toe.
+Als je een tweede export start terwijl er nog een wordt voorbereid, dan meldt de exporteerpagina `Je hebt al een export lopen of je hebt het afgelopen uur te veel exports gestart. Probeer het later opnieuw.`
+Wacht tot de lopende export klaar is en start daarna de volgende.
+:::
+
 ## Oplossing hertesten
 
 De actie `Oplossingen hertesten` in het reeks-menu hertest alle oplossingen die cursusgebruikers ingediend hebben voor oefeningen van de oefeningenreeks. Dit kan nuttig zijn als je bijvoorbeeld een aantal testen hebt toegevoegd of aangepast en je de al ingediende oplossingen opnieuw wil testen.
