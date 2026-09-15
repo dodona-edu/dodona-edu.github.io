@@ -94,7 +94,7 @@ In larger courses, the course administrator can group exercise series into **sec
 
 On larger screens, the right side of the course page shows a sidebar listing all exercise series of the course, grouped under their section names. Click the name of a series or section in the sidebar to jump to it on the page; while you scroll, the sidebar highlights the series you are currently looking at. In courses with many sections, the sidebar only keeps the section you are reading expanded.
 
-If you are registered for the course, the sidebar also shows a progress bar for each series, with one coloured segment per exercise indicating whether you solved it, attempted it, or have not started it yet. Hover over the progress bar to see the details; the tooltip on the counter next to it reads, for example, `2 of 10 activities solved`. Optional series do not show a progress bar.
+If you are registered for the course, the sidebar also shows a progress bar for each series, with one coloured segment per exercise indicating whether you solved it, attempted it, or have not started it yet. Hover over a segment to see which learning activity it stands for and your status for it, for example `Even numbers · Solved`; click the segment to open that activity in its series. The tooltip on the counter next to the bar reads, for example, `2 of 10 activities solved`. Optional series do not show a progress bar, and neither do series whose learning activities you cannot see yet, such as a series for a test or exam that you have not started yet or whose results your teacher has not released.
 
 ![Course sidebar with series grouped under section headers, each series showing a progress bar](./course-sidebar-en.png)
 
