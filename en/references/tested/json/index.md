@@ -718,6 +718,13 @@ An [`EvaluationFunction`](#evaluationfunction-programmed) object that represents
 A list of arguments that are passed when calling the evaluation function (see [EvaluationFunction](#evaluationfunction-programmed)
 and [Statements and expressions](#statements-and-expressions)).
 
+#### `.languages`
+
+An optional list of programming languages for which the oracle can be used, e.g. `["python"]`.
+By default, the oracle is used for all programming languages.
+Setting this list also passes the path of the submission to the evaluation function as `submission_path`
+(see [EvaluationFunction](#evaluationfunction-programmed)).
+
 ### SpecificOracle
 
 A `SpecificOracle` object contains all the necessary information to use a custom oracle for values that depends on
@@ -787,7 +794,7 @@ This object has a few attributes:
 - `evaluation_directory`: path to the `evaluation` folder of the exercise (that contains the test suite)
 - `programming_language`: the programming language of the submission
 - `natural_language`: the natural language of the user that submitted this submission
-- `submission_path`: path to the submitted file, or `None` if it is not available
+- `submission_path`: path to the submitted file, or `None` if it is not available. TESTed only fills this in when the oracle has a [`languages`](#languages) list; without it, this is always `None`.
 
 The other arguments are the same as the `arguments` attribute from the test suite.
 In this example, the check function would have three arguments: the context and the two numbers from the test suite.

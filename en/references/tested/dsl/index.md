@@ -229,7 +229,7 @@ An object for a custom check function has the following attributes:
 - `file`: the name of the file containing the custom check function (relative to the `evaluation` folder)
 - `name`: the name of the check function (in snake case)
 - `arguments`: a list of [values](#expressions-and-statements) that are arguments to the check function
-- `languages`: optional list of programming languages for which the check function can be used. By default, the check function is used for all programming languages.
+- `languages`: optional list of programming languages for which the check function can be used. By default, the check function is used for all programming languages. Setting this list also gives the check function the path to the submission (see `submission_path` below).
 
 For a return value:
 
@@ -272,6 +272,7 @@ This object has a few attributes:
 - `evaluation_directory`: path to the `evaluation` folder of the exercise (that contains the test suite)
 - `programming_language`: the programming language of the submission
 - `natural_language`: the natural language of the user that submitted this submission
+- `submission_path`: path to the submitted file, or `None` if it is not available. TESTed only fills this in when the oracle has a `languages` list in the test suite; without it, this is always `None`. [This example exercise](https://github.com/dodona-edu/example-exercises/tree/master/tested/forbidden-construct) uses it to check how a submission is written.
 
 The other arguments are the same as the `arguments` attribute from the test suite.
 In this example, the check function would have three arguments: the context and the two numbers from the test suite.
