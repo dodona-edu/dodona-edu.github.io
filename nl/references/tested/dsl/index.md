@@ -232,7 +232,7 @@ Een object voor een orakelfunctie bestaat uit de volgende attributen:
 - `file`: de naam van het bestand waarin de orakelfunctie zit (relatief ten opzichte van de map `evaluation`)
 - `name`: de naam van de orakelfunctie (in snake case)
 - `arguments`: een lijst van [waarden](#expressies-en-statements) die als argumenten aan de orakelfunctie gegeven worden
-- `languages`: een optionele lijst van programmeertalen waarvoor de orakelfunctie gebruikt kan worden. Standaard wordt de orakelfunctie voor alle programmeertalen gebruikt.
+- `languages`: een optionele lijst van programmeertalen waarvoor de orakelfunctie gebruikt kan worden. Standaard wordt de orakelfunctie voor alle programmeertalen gebruikt. Als je deze lijst instelt, krijgt de orakelfunctie ook het pad naar de ingediende oplossing (zie `submission_path` hieronder).
 
 Voor een returnwaarde:
 
@@ -275,6 +275,7 @@ Dit object bevat een aantal velden:
 - `evaluation_directory`: het pad van de map `evaluation` uit de oefening (waar dus het testplan in zit)
 - `programming_language`: de programmeertaal van de oplossing van de student
 - `natural_language`: de natuurlijke taal van de student die de oplossing indiende
+- `submission_path`: het pad van het ingediende bestand, of `None` als dat niet beschikbaar is. TESTed vult dit enkel in als het orakel in het testplan een lijst `languages` heeft; zonder die lijst is dit altijd `None`. [Deze voorbeeldoefening](https://github.com/dodona-edu/example-exercises/tree/master/tested/forbidden-construct) gebruikt het om na te gaan hoe een oplossing geschreven is.
 
 De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
 In het voorbeeld zou de orakelfunctie dus drie argumenten hebben: de context en de twee getallen uit het testplan.
