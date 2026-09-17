@@ -1,13 +1,15 @@
 # bin/rails runner screenshots/state/question-with-draft.setup.rb [nl]
 #
-# State for the AI-1/AI-2 shots (faq/annotations, "How do AI draft answers work?"):
-# a global (line_nr: nil) Question from Sofie (user 5) on Submission 1206 -- an
-# already-judged "correct" Java echo submission on course 11, with zero pre-existing
-# annotations. That submission id is a stable seeded fixture (like series 51-54), not
-# a fresh row this scenario creates, so -- unlike hooks/assessments.mjs -- no
-# dynamic-id handoff through the shared JSON state file is needed: shots.yaml points
-# straight at /submissions/1206/#code and hooks/ai-draft-answer.mjs only has to drive
-# the reply-form interaction, not navigate to a not-yet-known URL.
+# State for the AI-1 shot (faq/annotations, "How do AI draft answers work?"):
+# a global (line_nr: nil) Question from Sofie (user 5) on Submission 557 -- an
+# already-judged "correct" Python echo submission on course 11, with zero pre-existing
+# annotations. That submission id is a seeded fixture, not a fresh row this scenario
+# creates, so -- unlike hooks/assessments.mjs -- no dynamic-id handoff through the
+# shared JSON state file is needed: shots.yaml points straight at
+# /submissions/557/#code and hooks/ai-draft-answer.mjs only has to drive the
+# reply-form interaction, not navigate to a not-yet-known URL. (This scenario used to
+# pin submission 1206, which the seeds no longer create -- they now stop at 1156.
+# The guard below fails loudly if 557 moves off course 11 too.)
 #
 # Course 11's questions_enabled/draft_answers_enabled are both true (seeded default),
 # so Question#delayed_generate_draft fires DraftResponseJob.perform_later after
@@ -23,17 +25,13 @@
 # <StudentAnswer> portion (LlmResponse#student_answer) is ever sent to the frontend.
 #
 # Pass "nl" as the first argument for the Dutch pass, otherwise EN is used -- same
-# convention as course11-naming.setup.rb, which AI-1/AI-2/AI-3 also depend on and
+# convention as course11-naming.setup.rb, which AI-1 and AI-3 also depend on and
 # which should be run alongside this one for the same pass.
 #
-# Idempotent: destroys any Question left on submission 1206 by a previous run of this
-# scenario (submission 1206 has zero seeded annotations of its own, so clearing all
+# Idempotent: destroys any Question left on submission 557 by a previous run of this
+# scenario (submission 557 has zero seeded annotations of its own, so clearing all
 # of its annotations is always scoped to this scenario's own leftovers) before
-# creating a fresh one. rating starts at not_rated on every run -- AI-2's hook rates
-# it live in the browser (a pure client-side toggle, see state/LlmResponse.ts; it does
-# not PATCH the server until the reply is actually submitted, which the hook never
-# does), so re-running this setup is also how to reset AI-1's "not yet rated" state if
-# AI-2 was captured first in a --id-scoped rerun.
+# creating a fresh one.
 #
 # Verified live: this dev instance has an actual Solid Queue worker running (not just
 # the queue-adapter-inserts-a-row situation described above), so
@@ -50,9 +48,9 @@
 
 locale_nl = ARGV.first == 'nl'
 
-submission = Submission.find(1206) # Sofie, course 11, Java echo exercise, judged "correct"
+submission = Submission.find(557) # Sofie, course 11, Python echo exercise, judged "correct"
 unless submission.course_id == 11
-  raise "submission 1206 has moved to course #{submission.course_id}, expected course 11 -- update this scenario"
+  raise "submission 557 has moved to course #{submission.course_id}, expected course 11 -- update this scenario"
 end
 
 submission.annotations.where(type: 'Question').destroy_all
@@ -83,18 +81,16 @@ ta_note = if locale_nl
 
 student_answer = if locale_nl
                     <<~NL.strip
-                      Je lus roept `next()`/`nextLine()` op zonder eerst te controleren of er nog een regel is om te lezen. Zodra de invoer op is, blijft die aanroep wachten op meer invoer. Bescherm de lus met `scanner.hasNextLine()` (of controleer op EOF) zodat ze stopt zodra de invoer op is.
+                      Je lus roept `input()` op zonder eerst te controleren of er nog een regel is om te lezen. Zodra de invoer op is, heeft die aanroep niets meer om terug te geven en stopt je programma daar. Lees de regels met een `for regel in sys.stdin:`-lus, of vang de `EOFError` op, zodat ze stopt zodra de invoer op is.
                     NL
                   else
                     <<~EN.strip
-                      Your loop calls `next()`/`nextLine()` without first checking whether there is another line to read. Once the input runs out, that call blocks waiting for more. Guard the loop with `scanner.hasNextLine()` (or check for EOF) so it stops as soon as the input is exhausted.
+                      Your loop calls `input()` without first checking whether there is another line to read. Once the input runs out, that call has nothing left to return and your program stops there. Read the lines with a `for line in sys.stdin:` loop, or catch the `EOFError`, so it ends as soon as the input is exhausted.
                     EN
                   end
 
 question.build_llm_response(
-  response: "<TANote>#{ta_note}</TANote>\n<StudentAnswer>\n#{student_answer}\n</StudentAnswer>",
-  rating: :not_rated,
-  comment: nil
+  response: "<TANote>#{ta_note}</TANote>\n<StudentAnswer>\n#{student_answer}\n</StudentAnswer>"
 ).save!
 
 course.update!(draft_answers_enabled: true) # course11-naming / AI-3 need this checked; it's also the seeded default
@@ -102,4 +98,4 @@ course.update!(draft_answers_enabled: true) # course11-naming / AI-3 need this c
 Rails.cache.clear
 
 puts "question-with-draft: Question #{question.id} + LlmResponse #{question.llm_response.id} " \
-     "on Submission 1206 (locale=#{locale_nl ? 'nl' : 'en'})"
+     "on Submission 557 (locale=#{locale_nl ? 'nl' : 'en'})"
