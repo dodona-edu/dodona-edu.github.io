@@ -1591,6 +1591,10 @@ shots:
     file: contact
     url: /{locale}/contact/
     # No course-29 state -- this page is unrelated to series 140/141.
+    # #time-zone-warning sits inside #main-container and fires whenever the dev
+    # container's clock differs from user 1's profile timezone, so it lands in this
+    # crop on some machines and not others. It is not part of the contact form.
+    css: '#time-zone-warning{display:none !important}'
     crop:
       selector: '#main-container'
     must_show:
