@@ -85,9 +85,6 @@ Note that the old link will no longer work once you generate a new one.
   Here you can see how many students have already started or finished an exercise.
   This visualization can be valuable for students, but you might want to disable it for exams.
 
-* `Hide learning activities`: If the learning activities are hidden, only the description of this series will be shown.
-  You can use this setting to, for example, make the course material of the series available in advance without releasing the exercises and reading activities.
-
 * `Number learning activities`: If this setting is active, each exercise and reading activity is given a sequential number, starting with 1.
   This number is displayed in titles and listings and can make it easier to communicate about these activities.
 

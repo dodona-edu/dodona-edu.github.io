@@ -72,8 +72,6 @@ Je kan eenvoudig een nieuwe geheime link genereren door op de vernieuwknop te kl
 
 * `Verberg de "Voortgang groep" visualisatie voor studenten`: Bij een oefening wordt de voortgang van alle gebruikers in de cursus getoond. Hierin kan je zien hoeveel studenten een oefening reeds hebben begonnen of afgewerkt. Deze visualisatie is een meerwaarde voor studenten, maar je wil ze misschien uitschakelen voor examens.
 
-* `Verberg leeractiviteiten`: Als de leeractiviteiten verborgen zijn, dan zal enkel de beschrijving van deze reeks getoond worden. Je kan deze instelling gebruiken om bijvoorbeeld de leerstof van de reeks vooraf beschikbaar te stellen, zonder de oefeningen en leesactiviteiten al vrij te geven.
-
 * `Nummer leeractiviteiten`: Als deze instelling actief is, krijgt elke oefening en leesactiviteit een nummer, beginnende bij 1.
   Dit nummer wordt getoond in titels en oplijstingen en kan het eenvoudiger maken om over deze activiteiten te communiceren.
 
