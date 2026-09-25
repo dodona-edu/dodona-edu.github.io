@@ -49,6 +49,10 @@ If you administer the repository the exercise comes from, you can click this ico
 
 :::
 
+:::tip A new academic year
+Teaching the same course again next year? Copy last year's course and give the copy the new academic year, rather than reusing the old course. Dodona archives courses after their academic year, so every group of students keeps its own course with its own submissions and results. The FAQ explains [why courses are archived](/en/faq/courses/#why-is-my-course-archived).
+:::
+
 ## Course Properties
 
 Finally, you need to set a few things about the course itself, such as the name and instructor. These are pre-filled with the values of the copied course if that option was chosen. The following properties can be set:

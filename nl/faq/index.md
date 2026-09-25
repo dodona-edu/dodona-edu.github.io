@@ -19,6 +19,11 @@ In deze FAQ-sectie vind je antwoorden op de meest gestelde vragen over het gebru
 - [Hoe maak ik een API token aan?](./api-tokens/#hoe-maak-ik-een-api-token-aan)
 - [Hoe kan ik de Dodona API gebruiken?](./api-tokens/#hoe-kan-ik-de-dodona-api-gebruiken)
 
+## Cursussen
+- [Waarom is mijn cursus gearchiveerd?](./courses/#waarom-is-mijn-cursus-gearchiveerd)
+- [Hoe begin ik een nieuw academiejaar met mijn cursus?](./courses/#hoe-begin-ik-een-nieuw-academiejaar-met-mijn-cursus)
+- [Kan een gearchiveerde cursus heropend worden?](./courses/#kan-een-gearchiveerde-cursus-heropend-worden)
+
 ## IDE plugins
 - [Wat is een IDE plugin?](./ide-plugins/#wat-is-een-ide-plugin)
 - [Hoe installeer ik de PyCharm plugin?](./ide-plugins/#hoe-installeer-ik-de-pycharm-plugin)

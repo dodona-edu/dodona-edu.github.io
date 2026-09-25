@@ -49,6 +49,10 @@ Ben je zelf beheerder van de repository waar de oefening vandaan komt, dan kan j
 
 :::
 
+:::tip Een nieuw academiejaar
+Geef je volgend jaar dezelfde cursus opnieuw? Kopieer dan de cursus van vorig jaar en geef de kopie het nieuwe academiejaar, in plaats van de oude cursus opnieuw te gebruiken. Dodona archiveert cursussen na hun academiejaar, zodat elke groep studenten een eigen cursus houdt met eigen oplossingen en resultaten. In de FAQ lees je [waarom cursussen gearchiveerd worden](/nl/faq/courses/#waarom-is-mijn-cursus-gearchiveerd).
+:::
+
 ## Cursuseigenschappen
 
 Finaal moet je nog enkele zaken over de cursus zelf, zoals de naam en lesgever, instellen. Deze worden vooraf ingevuld met de waarden van de gekopieerde cursus indien deze optie gekozen werd. Volgende eigenschappen kunnen ingesteld worden.

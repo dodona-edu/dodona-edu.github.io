@@ -19,6 +19,11 @@ In this FAQ section you will find answers to the most frequently asked questions
 - [How do I create an API token?](./api-tokens/#how-do-i-create-an-api-token)
 - [How can I use the Dodona API?](./api-tokens/#how-can-i-use-the-dodona-api)
 
+## Courses
+- [Why is my course archived?](./courses/#why-is-my-course-archived)
+- [How do I start a new academic year with my course?](./courses/#how-do-i-start-a-new-academic-year-with-my-course)
+- [Can an archived course be reopened?](./courses/#can-an-archived-course-be-reopened)
+
 ## Exercises and reading activities
 - [What is a draft activity?](./activities/#what-is-a-draft-activity)
 - [How do I create new exercises?](./activities/#how-do-i-create-new-exercises)
