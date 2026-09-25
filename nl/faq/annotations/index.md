@@ -80,11 +80,7 @@ Wanneer een student een vraag stelt over zijn of haar code, kan Dodona automatis
 
 Als er een conceptantwoord beschikbaar is en nog geen enkele lesgever op de vraag heeft gereageerd, wordt het antwoordveld vooraf ingevuld met het concept. Het is duidelijk gemarkeerd als een voorstel: boven het tekstvak zie je een sterretjesicoon met het label `Voorgesteld antwoord`, en als je over het icoon beweegt, verschijnt de melding `Dit is een conceptopmerking gemaakt door generatieve AI.` Het concept is maar een voorstel: je kan het vrij bewerken, of het wissen en zelf een antwoord schrijven. Er wordt niets naar de student gestuurd tot je zelf het antwoord verstuurt.
 
-![Antwoordveld vooraf ingevuld met het AI-voorgestelde conceptantwoord, met een sterretjesicoon en beoordelingsknoppen boven het tekstvak](./draft-answer-suggested-nl.png)
-
-Naast het label kan je het voorstel beoordelen met de duim omhoog (`Goed antwoord`) of duim omlaag (`Slecht antwoord`). Na het beoordelen verschijnt een optioneel tekstveld waar je je beoordeling kan toelichten. Deze feedback helpt ons om de kwaliteit van de gegenereerde concepten te evalueren, dus we stellen ze erg op prijs.
-
-![Voorgesteld antwoord beoordeeld met duim omhoog, met het optionele tekstveld "Leg je beoordeling uit"](./draft-answer-rated-nl.png)
+![Antwoordveld vooraf ingevuld met het AI-voorgestelde conceptantwoord, met een sterretjesicoon en het label Voorgesteld antwoord boven het tekstvak](./draft-answer-suggested-nl.png)
 
 ::: info Privacy
 Om een concept te genereren stuurt Dodona de vraag, de ingediende code van de student, de opgave van de oefening, de programmeertaal en de gefaalde automatische testresultaten naar een externe AI-provider. De naam van de student en andere accountgegevens worden niet meegestuurd. Studenten zien het gegenereerde concept nooit: het verschijnt enkel in jouw antwoordveld, en enkel de tekst die jij effectief verstuurt, wordt aan de student getoond.

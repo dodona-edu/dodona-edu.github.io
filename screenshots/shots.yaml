@@ -1819,16 +1819,16 @@ shots:
 #
 # State: state/question-with-draft.setup.rb seeds a global Question from Sofie (user
 # 5) plus a directly-created, realistic-looking LlmResponse (not the dev placeholder)
-# on Submission 1206 -- an already-judged, annotation-free, stable seeded fixture on
+# on Submission 557 -- an already-judged, annotation-free seeded fixture on
 # course 11, so no dynamic-id handoff is needed; the url below points straight at it.
-# hooks/ai-draft-answer.mjs drives the reply-form interaction (open it, and for AI-2
-# rate it) that a plain goto() can't.
+# hooks/ai-draft-answer.mjs drives the reply-form interaction (opening the form) that
+# a plain goto() can't.
 
 shots:
   - id: AI-1
     page: faq/annotations
     file: draft-answer-suggested
-    url: /{locale}/submissions/1206/#code
+    url: /{locale}/submissions/557/#code
     state: [course11-naming, question-with-draft]
     hook: hooks/ai-draft-answer.mjs
     # Open the reply form on the question thread first: click the fake reply
@@ -1840,25 +1840,9 @@ shots:
       pad: 8
     must_show:
       - the student's question in the thread
-      - sparkle (mdi-creation) icon + "Suggested answer - Rate suggestion:" label above the text box
-      - thumbs up / thumbs down rating buttons (outline state, not yet rated)
+      - sparkle (mdi-creation) icon + "Suggested answer" label above the text box
       - reply text box prefilled with the generated draft text
       - Reply / Cancel buttons
-
-  - id: AI-2
-    page: faq/annotations
-    file: draft-answer-rated
-    url: /{locale}/submissions/1206/#code
-    state: [course11-naming, question-with-draft]
-    hook: hooks/ai-draft-answer.mjs
-    # Same form as AI-1, after clicking the thumbs-up button: the icon fills
-    # (mdi-thumb-up) and the optional comment input appears and takes focus.
-    crop:
-      selector: 'd-thread'
-      pad: 8
-    must_show:
-      - filled thumbs-up icon (rated "good")
-      - comment input with placeholder "Explain your rating (optional)..."
 
   - id: AI-3
     page: faq/annotations
