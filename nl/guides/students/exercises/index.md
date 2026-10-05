@@ -41,6 +41,10 @@ Onder het paneel met de beschrijving van de oefening vind je het *indienpaneel*.
 
 Bij Python-oefeningen opent de knop `Naar sandbox` naast de indienknop [de Python-sandbox](../scratchpad/), waarin je je code in de browser kan uitvoeren en debuggen voor je ze indient.
 
+::: tip Werken met het toetsenbord
+De editor neemt je toetsenbord niet over wanneer de pagina opent: klik erin (of ga ernaartoe met <kbd>Tab</kbd>) om te beginnen typen. In de editor zelf laat <kbd>Tab</kbd> je code inspringen. Wil je met het toetsenbord verder naar de rest van de pagina, druk dan op <kbd>Esc</kbd> en daarna op <kbd>Tab</kbd>. Kom je met het toetsenbord in de editor terecht, dan herinnert hij je daaraan: `Esc en dan Tab verlaat de editor`.
+:::
+
 ::: tip Deadlines
 Als de deadline van de oefeningenreeks minder dan vijf minuten veraf is, verschijnt er boven de editor een melding met de exacte deadline. Is de deadline al verstreken, dan waarschuwt de melding je dat je nog kan indienen, maar dat er met je oplossingen mogelijk geen rekening meer gehouden wordt.
 :::
