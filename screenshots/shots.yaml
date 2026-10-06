@@ -2137,7 +2137,7 @@ shots:
     page: guides/students/courses
     file: course-sidebar
     url: /{locale}/courses/11/
-    state: [course11-naming, course11-sections]
+    state: [course11-naming, course11-sections, course11-sidebar-progress]
     user: 126
     # The nav element itself is stretched to full page height; bound the crop to
     # its actual content instead.
@@ -2148,6 +2148,7 @@ shots:
       - section names as group headers in the sidebar
       - series entries nested under their section
       - a per-series progress bar with coloured segments
+      - all four segment states (solved, wrong, solved earlier but latest wrong, not started)
       - the active (highlighted) series link
 
   # ---------------- teachers/exercise-series-management ----------------
