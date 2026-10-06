@@ -41,6 +41,10 @@ Below the panel with the exercise description, you will find the *hand-in panel*
 
 For Python exercises, the `To sandbox` button next to the submit button opens [the Python sandbox](../scratchpad/), where you can run and debug your code in the browser before submitting it.
 
+::: tip Using the keyboard
+The editor does not grab your keyboard when the page opens: click in it (or reach it with <kbd>Tab</kbd>) to start typing. Inside the editor, <kbd>Tab</kbd> indents your code. To move on to the rest of the page with the keyboard, press <kbd>Esc</kbd> and then <kbd>Tab</kbd>. When you reach the editor with the keyboard, it shows this as a reminder: `Esc, then Tab, leaves the editor`.
+:::
+
 ::: tip Deadlines
 When the deadline of the exercise series is less than five minutes away, an alert appears above the editor with the exact deadline. Once the deadline has passed, the alert warns you that you can still submit, but that your submissions may no longer be taken into account.
 :::
