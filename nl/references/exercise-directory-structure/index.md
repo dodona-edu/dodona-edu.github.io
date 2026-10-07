@@ -12,6 +12,7 @@ Binnenin een oefeningmap behandelt Dodona elke map met een `config.json`-bestand
 - **Een optioneel `readme.md`-, `readme.en.md`- en/of `readme.nl.md`-bestand:** De inhoud van deze bestanden zal getoond worden op de oefening-infopagina. Deze bestanden hebben als doel extra informatie geven aan leerkrachten die deze oefening misschien willen gebruiken in een cursus. Als er een bestand beschikbaar is in de taal van de gebruiker (`readme.<taal>.md`), dan zal deze getoond worden in plaats van het generieke `readme.md`-bestand. Dit is nuttig omdat `readme.md` getoond wordt door GitHub in de oefeningmap. We suggereren om een `readme.md`-bestand te maken in de taal van je doelpubliek en dit optioneel te vertalen door `readme.nl.md` of `readme.en.md` te voorzien.
 - **Een `description`-map**: deze map bevat de volgende bestanden die de oefening beschrijven:
   - **Een `description.<taal>.md`-bestand** (bv. `description.en.md`, `description.nl.md`, `description.fr.md`): deze bestanden bevatten de beschrijving van de oefening per taal, aangeduid met een [tweelettercode](https://nl.wikipedia.org/wiki/Lijst_van_ISO_639-codes).
+  - **Een optionele `media`-map**: deze map bevat statische bestanden zoals afbeeldingen die gebruikt worden in de beschrijving.
 
 ::: tip Voorbeelden
 Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-edu/example-exercises) en [voorbeeldcursus](https://dodona.be/en/courses/358/) om een voorbeeld te vinden van hoe je deze bestanden gebruikt.
@@ -22,13 +23,14 @@ Neem een kijkje in de [voorbeeldoefeningenrepository](https://github.com/dodona-
 
 > Deze mappen zijn enkel relevant voor programmeeroefeningen en niet voor leesactiviteiten.
 
-Binnenin de `description`-map kan je volgende mappen specifiëren:
-- **Een optionele `media`-map**: deze map bevat statische bestanden zoals afbeeldingen die gebruikt worden in de oefeningbeschrijving.
+Binnenin de `description`-map kan je volgende map specifiëren:
 - **Een optionele `boilerplate`-map**: deze map bevat de bestanden `boilerplate.en`, `boilerplate.nl`, en/of `boilerplate`. De inhoud van deze bestanden worden automatisch ingeladen in het inzendingstekstveld van de gebruikers. Je kan deze bestanden gebruiken om startcode of structuur te voorzien voor de studenten.
-- **Een optionele `preparation`-map**: deze map kan je gebruiken om bestanden in op te slaan die je gebruikt hebt bij het maken van je oefening.
+
+Rechtstreeks in de oefeningmap, naast `config.json`, kan je volgende mappen specifiëren:
 - **Een `evaluation`-map**: de inhoud van deze map wordt beschikbaar gesteld voor de judge en kan bijvoorbeeld bestanden met de testcode bevatten. Kijk in de documentatie van de judge die je gebruikt om te zien welke bestanden worden verwacht. Je kan links naar de documentatie voor elke judge [hier](/nl/references/judges) vinden.
 - **Een optionele `workdir`-map**: de inhoud van deze map wordt beschikbaar gesteld tijdens het uitvoeren van de judge en kan bijvoorbeeld databestanden bevatten die nodig zijn tijdens het uitvoeren van de tests.
 - **Een optionele `solution`-map**: bestanden in deze map zullen getoond worden op de oefening-informatiepagina als voorbeeldoplossing. Meerdere voorbeeldoplossingen zijn mogelijk, maar bestanden met een naam beginnend met *solution* zullen vooraan staan.
+- **Een optionele `preparation`-map**: deze map kan je gebruiken om bestanden in op te slaan die je gebruikt hebt bij het maken van je oefening.
 
 Dodona negeert elk ander bestand of elke andere map. Je kan dus vrijuit andere bestanden (bijvoorbeeld met oplossingen voor je oefeningen) aanmaken of een persoonlijke oefeningenhiërarchie maken. Het enige dat niet is toegelaten is oefeningenmappen in andere oefeningenmappen plaatsen.
 
