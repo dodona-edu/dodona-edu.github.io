@@ -192,5 +192,5 @@ An example of how to do this can be found [here](/en/guides/exercises/creating-e
 
 The reading activity you just created can be found in [your repository](https://dodona.be/en/repositories/) on Dodona.
 Check the reading activity. Does everything look good?
-If so, you can publish it by clicking _Publish this exercise_ at the top of the reading activity.
+If so, you can publish it by clicking _Publish_ at the top of the reading activity.
 Your reading activity is now ready to be used on Dodona!

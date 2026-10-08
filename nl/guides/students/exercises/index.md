@@ -22,9 +22,16 @@ Op je startpagina kan je een lijst vinden van de vijf laatste oefeningen waar je
 
 :::
 
-Op elke oefeningenpagina staat bovenaan een paneel met de naam en de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde taal. Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
+Op elke oefeningenpagina zie je bovenaan de naam van de oefening, met daarboven de naam van de oefeningenreeks. Onder de naam volgt de beschrijving van de oefening. De weergave van deze componenten is afhankelijk van de geselecteerde taal. Als bij het opstellen van de oefening een vertaling voorzien werd van de naam en de beschrijving in de geselecteerde taal, dan zullen deze componenten van de oefening ook in die taal weergegeven worden.
 
-![Oefeningpagina met de beschrijvingskaart en daaronder het indienpaneel met de code-editor en de indienknop](./exercise-page-nl.png)
+![Oefeningpagina met de oefeningenreeks in de linkerkolom, de naam en de beschrijving van de oefening in het midden, en de lijst Op deze pagina rechts](./exercise-page-nl.png)
+
+Op grotere schermen heeft de oefeningpagina een kolom aan elke kant van de beschrijving:
+
+- Links zie je de oefeningenreeks met je voortgang: een voortgangsbalk, hoeveel activiteiten van de reeks je al opgelost hebt, de deadline, en elke activiteit van de reeks met haar status. Klik op een activiteit om ze te openen, of klik op haar status om je laatste oplossing te openen. Onder de lijst brengt `Volgende reeks` je naar de volgende oefeningenreeks van de cursus. Op een smartphone is deze lijst ingeklapt tot een strook boven de naam van de oefening: tik op de strook om ze open te klappen.
+- Rechts toont `Op deze pagina` de titels van de beschrijving. Klik op een titel om ernaartoe te springen; terwijl je scrolt, duidt de lijst aan welk deel je aan het lezen bent. Het laatste item, `Indienen`, brengt je meteen naar het indienpaneel en toont de status van je laatste oplossing.
+
+Onder de beschrijving linken twee kaarten naar de vorige en de volgende activiteit van de oefeningenreeks.
 
 ::: tip
 
@@ -35,9 +42,11 @@ Als je een actie aan het uitvoeren bent op een oefening dan verschijnt de naam v
 
 ## Indienen van een oplossing
 
-Onder het paneel met de beschrijving van de oefening vind je het *indienpaneel*. In de koptekst staat de naam van de oefening en, in de rechterbovenhoek, een knop met je aantal ingediende oplossingen voor deze oefening (bijvoorbeeld `1 oplossing`). De *code-editor* is altijd zichtbaar in dit paneel: plaats de broncode van je oplossing in de editor en klik rechtsonder op de knop `Indienen` om ze in te dienen. Zoals de balk onderaan het paneel je eraan herinnert: **je kan zo vaak indienen als je wil, en er wordt enkel rekening gehouden met je laatst ingediende oplossing**. Bij elke oplossing wordt [automatische feedback](../feedback/) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
+Onder de beschrijving van de oefening vind je het *indienpaneel*. In de koptekst staat de naam van de oefening en, in de rechterbovenhoek, een knop met je aantal ingediende oplossingen voor deze oefening (bijvoorbeeld `1 oplossing`). De *code-editor* is altijd zichtbaar in dit paneel: plaats de broncode van je oplossing in de editor en klik rechtsonder op de knop `Indienen` om ze in te dienen. Zoals de balk onderaan het paneel je eraan herinnert: **je kan zo vaak indienen als je wil, en er wordt enkel rekening gehouden met je laatst ingediende oplossing**. Bij elke oplossing wordt [automatische feedback](../feedback/) door de judge gegeven die je kan gebruiken om je oplossing te corrigeren of verder te verfijnen.
 
 ![Indienpaneel met een lege editor en de gemarkeerde indienknop](./handin-editor-nl.png)
+
+Kan je geen oplossing indienen, dan vertelt het indienpaneel je bovenaan waarom, en biedt het de volgende stap aan als die er is. Ben je bijvoorbeeld nog niet geregistreerd voor de cursus, dan staat er `Registreer voor <cursus> om oplossingen in te dienen.` met een knop om je te registreren; ben je niet aangemeld, dan vraagt het je om eerst aan te melden.
 
 Bij Python-oefeningen opent de knop `Naar sandbox` naast de indienknop [de Python-sandbox](../scratchpad/), waarin je je code in de browser kan uitvoeren en debuggen voor je ze indient.
 

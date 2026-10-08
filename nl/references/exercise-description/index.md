@@ -12,7 +12,7 @@ order: 1
 Dodona maakt voor de weergave van Markdown gebruik van [kramdown](https://kramdown.gettalong.org) waardoor heel wat uitbreidingen van de standaard Markdown ondersteund worden. Gevorderde gebruikers kunnen in [dit overzicht](https://kramdown.gettalong.org/quickref.html) meer uitleg vinden over hoe deze formattering werkt.
 :::
 
-De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een teksteditor hebben, terwijl leesactiviteiten een knop `Markeer als gelezen` hebben.
+De features die op deze pagina beschreven worden zijn beschikbaar voor zowel oefeningen als leesactiviteiten. Ze worden op exact dezelfde manier weergegeven. Het enige verschil is dat oefeningen onderaan de beschrijving een teksteditor hebben, terwijl leesactiviteiten een knop `Markeren als gelezen` hebben.
 
 ## Markdown
 
@@ -82,6 +82,8 @@ Opsommingen werken heel natuurlijk in Markdown. Afhankelijk of je een genummerde
 ## Afbeeldingen
 
 Om afbeeldingen te gebruiken in je opgave, dien je de afbeeldingen in de `description/media/` [map](/nl/references/exercise-directory-structure) te plaatsen.
+
+Een afbeelding is nooit breder dan de beschrijving, en een afbeelding op een eigen regel begint waar de tekst begint. Om een afbeelding te centreren, plaats je ze in een [gecentreerde groep](#gecentreerde-groepen) of geef je haar paragraaf `text-align: center`.
 
 ### Grootte instellen
 
@@ -194,7 +196,7 @@ Je kan een afbeelding ook inverteren in dark mode door de `dark-invert` klasse t
 
 ## Tabellen
 
-Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *class* toevoegen voor een mooiere opmaak.
+Tabellen worden ondersteund door zowel HTML als Markdown. Je kan de `table` *class* toevoegen voor een mooiere opmaak. Een tabel die breder is dan de beschrijving krijgt een horizontale scrollbalk.
 
 ##### HTML
 

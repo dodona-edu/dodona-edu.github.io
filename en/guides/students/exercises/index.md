@@ -22,9 +22,16 @@ On your homepage, you can find a list of the five most recent exercises you subm
 
 :::
 
-At the top of each exercise page, there is a panel with the name and description of the exercise. The display of these components depends on the selected language. If a translation of the name and description is provided in the selected language when creating the exercise, these components will also be displayed in that language.
+At the top of each exercise page, you see the name of the exercise, with the name of its exercise series above it. Below the name follows the description of the exercise. The display of these components depends on the selected language. If a translation of the name and description is provided in the selected language when creating the exercise, these components will also be displayed in that language.
 
-![Exercise page with the description card and, below it, the hand-in panel with the code editor and the Submit button](./exercise-page-en.png)
+![Exercise page with the exercise series in the left column, the name and description of the exercise in the middle, and the On this page list on the right](./exercise-page-en.png)
+
+On larger screens, the exercise page has a column on each side of the description:
+
+- On the left, you see the exercise series with your progress: a progress bar, how many activities of the series you have solved, the deadline, and every activity of the series with its status. Click an activity to open it, or click its status to open your latest submission. Below the list, `Next series` takes you to the next exercise series of the course. On a phone, this list is folded into a strip above the name of the exercise: tap the strip to open it.
+- On the right, `On this page` lists the headings of the description. Click a heading to jump to it; while you scroll, the list marks the part you are reading. The last item, `Hand in`, takes you straight to the hand-in panel and shows the status of your latest submission.
+
+Below the description, two cards link to the previous and the next activity of the exercise series.
 
 ::: tip
 
@@ -35,9 +42,11 @@ When performing an action on an exercise, the name of the exercise appears next 
 
 ## Submitting a Solution
 
-Below the panel with the exercise description, you will find the *hand-in panel*. Its header shows the name of the exercise and, in the top-right corner, a button with your number of submissions for this exercise (for example `1 submission`). The *code editor* is always visible in this panel: place the source code of your solution in the editor and click the `Submit` button at the bottom right to submit it. As the bar at the bottom of the panel reminds you: **you can submit as many times as you like, and only your latest submission will be taken into account**. Automatic feedback will be provided by the judge for each submission, which you can use to correct or further refine your solution.
+Below the exercise description, you will find the *hand-in panel*. Its header shows the name of the exercise and, in the top-right corner, a button with your number of submissions for this exercise (for example `1 submission`). The *code editor* is always visible in this panel: place the source code of your solution in the editor and click the `Submit` button at the bottom right to submit it. As the bar at the bottom of the panel reminds you: **you can submit as many times as you like, and only your latest submission will be taken into account**. Automatic feedback will be provided by the judge for each submission, which you can use to correct or further refine your solution.
 
 ![Hand-in panel with an empty editor and the highlighted Submit button](./handin-editor-en.png)
+
+If you cannot submit a solution, the hand-in panel tells you why at the top, and offers the next step when there is one. For example, if you are not registered for the course yet, it says `Register for <course> to hand in solutions.` with a button to register; when you are not signed in, it asks you to sign in first.
 
 For Python exercises, the `To sandbox` button next to the submit button opens [the Python sandbox](../scratchpad/), where you can run and debug your code in the browser before submitting it.
 

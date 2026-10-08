@@ -64,10 +64,10 @@ Je moet enkel nog op `Indienen` klikken.
 
 ![Kaart Voorbeeldoplossingen op de informatiepagina van de oefening met de knop Deze oplossing indienen gemarkeerd](./dodona-submit-nl.png)
 
-Eens de oplossing juist gerekend is, zal je de oefening kunnen publiceren door op `Deze oefening publiceren` te klikken in de banner bovenaan de oefeningpagina.
+Eens de oplossing juist gerekend is, zal je de oefening kunnen publiceren door op `Publiceren` te klikken in de melding `Deze activiteit is een concept` bovenaan de oefeningpagina.
 Je oefening is nu klaar om te gebruiken op Dodona!
 
-![Oefeningpagina van een conceptoefening met de publiceerbanner en de feedback voor een correcte oplossing](./minimum-nl.png)
+![Oefeningpagina van een conceptoefening met de conceptmelding en haar knop Publiceren, en de feedback voor een correcte oplossing](./minimum-nl.png)
 
 ::: tip
 Laat je oefening eens oplossen door iemand anders. Zo ontdek je vaak nog gaten in het testplan, en kan je de oefening verder verfijnen.

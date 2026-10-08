@@ -189,4 +189,4 @@ Een voorbeeld van hoe je dit kan doen vind je [hier](/nl/guides/exercises/creati
 
 ## 6. Leesactiviteit controleren
 
-De leesactiviteit die je daarnet gemaakt hebt, kan je terugvinden in [jouw repository](https://dodona.be/nl/repositories/) op Dodona. Controleer de leesactiviteit. Is alles naar wens? Dan kan je bovenaan de leesactiviteit publiceren (_Deze oefening publiceren_). Je leesactiviteit is nu klaar om te gebruiken op Dodona!
+De leesactiviteit die je daarnet gemaakt hebt, kan je terugvinden in [jouw repository](https://dodona.be/nl/repositories/) op Dodona. Controleer de leesactiviteit. Is alles naar wens? Dan kan je bovenaan de leesactiviteit publiceren (_Publiceren_). Je leesactiviteit is nu klaar om te gebruiken op Dodona!
