@@ -81,4 +81,6 @@ Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone 
 
 Dodona heeft een licht en een donker thema. Open het gebruikersmenu aan de rechterkant van de navigatiebalk en kies `Licht`, `Donker` of `Systeem` onder de titel `Stijl`. Kies je `Systeem` (de standaardinstelling), dan volgt Dodona de voorkeur van je apparaat.
 
+![Open gebruikersmenu met de opties Licht, Donker en Systeem onder de titel Stijl](./user-menu-theme-nl.png)
+
 Net als je taal wordt de gekozen stijl opgeslagen in je gebruikersprofiel, zodat Dodona ze onthoudt wanneer je opnieuw aanmeldt.

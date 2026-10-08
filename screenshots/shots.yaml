@@ -1088,11 +1088,27 @@ shots:
       - selector: 'a[href*="/users/"]'
         scope: '.dropdown-menu.show'
     crop:
-      clip: { x: 800, y: 0, width: 640, height: 420 }
+      clip: { x: 800, y: 0, width: 640, height: 400 }
     must_show:
-      - open menu (My profile / My submissions / My questions / Theme / Sign out)
+      - open menu (My profile / My submissions / My questions / Theme rows / Sign out)
       - highlight on My profile
     notes: NAVBAR shot.
+
+  - id: user-menu-theme
+    page: guides/students/login-and-settings
+    file: user-menu-theme
+    url: /{locale}/
+    user: 6
+    keepNavbar: true
+    hook: hooks/students-interact.mjs
+    openUserMenu: true
+    crop:
+      union: ['#user-menu-toggle', '.dropdown-menu.show']
+      pad: 8
+    must_show:
+      - '"Theme" heading in the open user menu (nl: "Stijl")'
+      - 'Light / Dark / System rows (nl: Licht / Donker / Systeem), check mark on System'
+    notes: NAVBAR shot. System is the seeded default for user 6; keep it that way.
 
   # ---------------------------------------------------------------------------------------
   # Stage C -- novice profile shots. One state change (C3), undone at the end.
@@ -1286,7 +1302,10 @@ shots:
     scrollTop: true # the click scrolls; the tall union crop needs document == viewport coords
     # The whole three-column page (dodona-edu/dodona#9328 phase 1): series sidebar on the
     # left, header + description + previous/next + hand-in card in the middle, On this page
-    # rail on the right. The rail needs a viewport of at least 1200 px.
+    # rail on the right. The rail needs a viewport of at least 1200 px. The previous/next
+    # cards are sticky to the bottom of the viewport, so a short viewport paints them over
+    # the description; make it taller than the page.
+    viewport: { width: 1440, height: 2400 }
     crop:
       selector: '.activity-page'
     must_show:
@@ -1396,6 +1415,24 @@ shots:
       - '"Submission history" panel header (nl: "Oplossingen") with the solved-state summary'
       - reverse-chronological rows (#2 wrong above #1 correct) with status icons, summaries, time-ago
 
+  - id: handin-result-notice
+    page: guides/students/exercises
+    file: handin-result-notice
+    url: /{locale}/courses/29/series/141/activities/369972474/
+    state: [students-series-deadlines, new-handin-flow]
+    # Staged: the hook opens submission #1 from the history, then hands the notice the
+    # latest submission (#2, wrong), as exercise.ts does when judging finishes while you
+    # look at something else. See hooks/handin-result-notice.mjs for why.
+    hook: hooks/handin-result-notice.mjs
+    resultNotice: { id: 1353, status: wrong }
+    crop:
+      union: ['.handin-card > :first-child', 'd-result-notice']
+      pad: 8
+    must_show:
+      - card eyebrow "Feedback / Submission #1" (nl: "Oplossing #1")
+      - status bar of the opened submission with "Back to editor" and "Edit this submission"
+      - '"New result!" callout with "Your new submission has finished judging: wrong." and "View result" (nl: "Nieuw resultaat!", "Bekijk resultaat")'
+
   - id: user-menu-my-submissions
     page: guides/students/exercises
     file: user-menu-my-submissions
@@ -1408,7 +1445,7 @@ shots:
       - text: { en: 'My submissions', nl: 'Mijn oplossingen' }
         scope: '.dodona-navbar'
     crop:
-      clip: { x: 800, y: 0, width: 640, height: 420 }
+      clip: { x: 800, y: 0, width: 640, height: 400 }
     must_show:
       - open menu
       - 'highlight on My submissions (nl: Mijn oplossingen)'
