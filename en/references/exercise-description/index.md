@@ -84,6 +84,8 @@ Which results in:
 
 To use images in your description, be sure to put the images in the `description/media/` [directory](/en/references/exercise-directory-structure) of your exercise.
 
+An image is never wider than the description, and an image on a line of its own starts where the text starts. To centre an image, place it in a [centered group](#centered-groups) or give its paragraph `text-align: center`.
+
 ### Set size
 
 It is possible to set the size of the image using both HTML and kramdown.
@@ -193,7 +195,7 @@ You can also invert an image for dark mode by adding the `dark-invert` class.
 
 ## Tables
 
-Both HTML and Markdown tables are supported. You can add the `table` class for prettier formatting.
+Both HTML and Markdown tables are supported. You can add the `table` class for prettier formatting. A table that is wider than the description gets a horizontal scroll bar.
 
 ##### HTML
 

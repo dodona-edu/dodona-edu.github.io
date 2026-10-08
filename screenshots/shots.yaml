@@ -1284,19 +1284,19 @@ shots:
     # intro wants.
     clickText: { en: 'Clear editor', nl: 'Maak de editor leeg' }
     scrollTop: true # the click scrolls; the tall union crop needs document == viewport coords
-    # Union of the two cards: #main-container also includes the right-hand series
-    # sidebar (clipped mid-word at this viewport) and the "Submit" jump link in the
-    # left gutter.
+    # The whole three-column page (dodona-edu/dodona#9328 phase 1): series sidebar on the
+    # left, header + description + previous/next + hand-in card in the middle, On this page
+    # rail on the right. The rail needs a viewport of at least 1200 px.
     crop:
-      union: ['.card.activity-description', '.handin-card']
+      selector: '.activity-page'
     must_show:
-      - exercise title header
-      - description
-      - hand-in card with the always-visible code editor
-      - submission-history button with submission count in the card eyebrow
-      - Submit button in the sticky footer
-      - '"You can submit as many times as you like..." hint'
-      - NO profiler badge in the description card's corner
+      - left sidebar with the course eyebrow, series name, progress bar, solved count and activity list (Echo marked as open)
+      - page header with the series name as eyebrow and the exercise name as h1
+      - description on the page background (no card)
+      - previous and next activity cards above the hand-in card
+      - hand-in card with the always-visible code editor and the Submit button
+      - '"On this page" rail on the right ending in "Hand in" with its status line'
+      - NO profiler badge in the description's corner
     notes: |
       description language follows the COURSE language -- Stage E's course29-dutch flip covers
       the NL pass, not the URL locale. Capture this (and handin-editor/handin-preloaded) while
@@ -2353,9 +2353,9 @@ shots:
     clickSelectorWait: 2500
     scrollTop: true # the clicks scroll; the tall union crop needs document == viewport coords
     crop:
-      union: ['.draft-notice', '.handin-card']
+      union: ['#activity-main > .callout', '.handin-card']
       pad: 8
     must_show:
-      - 'draft banner with "Publish activity." link (nl: "Deze oefening publiceren.")'
-      - description card of the Minimum exercise
+      - '"This activity is a draft" callout with its "Publish" button (nl: "Deze activiteit is een concept", "Publiceren")'
+      - page header and description of the Minimum exercise
       - hand-in card showing Correct in-place feedback

@@ -64,10 +64,10 @@ All you need to do is click `Submit`.
 
 ![Sample solutions card on the exercise information page with the Submit this solution button highlighted](./dodona-submit-en.png)
 
-Once the solution is marked as correct, you will be able to publish the exercise by clicking `Publish activity` in the banner at the top of the exercise page.
+Once the solution is marked as correct, you will be able to publish the exercise by clicking `Publish` in the `This activity is a draft` notice at the top of the exercise page.
 Your exercise is now ready to use on Dodona!
 
-![Exercise page of a draft exercise with the publish banner and the feedback for a correct submission](./minimum-en.png)
+![Exercise page of a draft exercise with the draft notice and its Publish button, and the feedback for a correct submission](./minimum-en.png)
 
 ::: tip
 Let someone else try your exercise. This often helps you discover gaps in the test suite and refine the exercise further.
