@@ -25,7 +25,9 @@ export function chromiumExecutable() {
 
 export async function launch({ width = 1600, height = 1200 } = {}) {
   const browser = await chromium.launch({ headless: true, executablePath: chromiumExecutable() });
-  const ctx = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 2 });
+  // reducedMotion: the course and series progress bars play an entrance wipe that a
+  // capture can catch half-way (grey segments, blank status icons).
+  const ctx = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 2, reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   return { browser, ctx, page };
 }

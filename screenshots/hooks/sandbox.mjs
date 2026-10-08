@@ -87,7 +87,8 @@ export async function prepare(page, { locale, shot }) {
 
   // Frame 0 is a static help card (no variables yet) -- jump to the last
   // step ("»") so the shot shows real frames/variables and a highlighted
-  // current line, not the placeholder state.
-  await offcanvas.locator('tc-frame-picker .btn-group button').nth(4).click();
+  // current line, not the placeholder state. The step counter between the
+  // arrows is an <output>, so "»" is the last button, not a fixed index.
+  await offcanvas.locator('tc-frame-picker .btn-group button').last().click();
   await page.waitForTimeout(500);
 }
