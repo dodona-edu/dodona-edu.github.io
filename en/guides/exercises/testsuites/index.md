@@ -289,15 +289,8 @@ A more extensive (fictional) example is:
           exit_code: 25
 ```
 
-You can also combine `stdin` with an expression. It is not mandatory to use arguments:
-
-```yaml
-- tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
-```
+You cannot combine `arguments` or `stdin` with an `expression` or `statement` in the same test case.
+If you want to test both, use separate test cases in the same context, as in the example above.
 
 ## Language-Specific Expressions and Statements
 

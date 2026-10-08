@@ -111,22 +111,25 @@ Een testgeval-object kan de volgende attributen hebben:
 
 Daarnaast kan een testgeval ook de attributen die hieronder beschreven worden hebben, maar merk op:
 
-- Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden. De uitzondering is dat `stdin` gecombineerd kan worden met een `expression` (zie [`stdin`](#stdin)).
+- Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden.
 - Het attribuut `return` werkt enkel met een `expression`.
 
 #### `stdin`
 
 De gegevens voor [standaardinvoer](https://nl.wikipedia.org/wiki/Standaardstromen).
 
-Als dit attribuut gebruikt wordt, kan `statement` niet meer gebruikt worden als invoer.
-Je kan `stdin` wel combineren met een `expression`; het is niet verplicht om argumenten te gebruiken:
+Als dit attribuut gebruikt wordt, kunnen `expression` en `statement` niet meer gebruikt worden als invoer,
+noch kan `return` als test gebruikt worden.
+Wil je zowel de invoer en uitvoer van een programma als een functie testen, gebruik dan aparte testgevallen in dezelfde context: een eerste met `stdin` en `stdout`, een volgende met `expression` en `return`:
 
 ```yaml
 - tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
+  contexts:
+  - testcases:
+    - stdin: "Jan"
+      stdout: "Hello, Jan."
+    - expression: "greet('Jan')"
+      return: "Hello, Jan."
 ```
 
 #### `arguments`
