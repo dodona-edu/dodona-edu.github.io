@@ -347,21 +347,20 @@ The [reference guide](/en/references/tested/dsl#language-specific-expressions-an
 
 When creating an exercise on files, we recommend the following approach:
 
-1. Place the files you want to use during evaluation in the `workdir/` folder in the exercise folder.
+1. Place the files you want to use during evaluation in the `evaluation/` folder in the exercise folder, next to the test suite.
 2. Pass the name of the file as a parameter during a function call or as an argument when executing.
-3. Link the exercises to the file name in the test suite. This allows students to click on the file name in the feedback and download this file.
+3. List the file under `input_files` on the test case. TESTed then copies it to the working directory, and Dodona turns the file name in the feedback into a link. This allows students to click on the file name and download this file.
 
-To do this, it is necessary to also place the files in the `description/media/` folder of the exercise folder.
-In the test suite, you then specify the `files` attribute:
+To make that link work, it is necessary to also place a copy of the file in the `description/media/` folder of the exercise folder.
+In the test suite, you then specify the `input_files` attribute:
 
 ```yaml
 - tab: "Example with files"
   testcases:
   - expression: "read_the_file('file.txt')"
     return: "This is the content of the file"
-    files:
-      - name: "file.txt"
-        url: "media/file.txt"
+    input_files:
+      - path: "file.txt"
 ```
 
 The structure of the exercise folder will then look like this:
@@ -370,16 +369,20 @@ The structure of the exercise folder will then look like this:
 repository/  # The repo with exercises
 └── example/ # The actual exercise
    ├── evaluation/
-   |  └── suite.yaml
+   |  ├── suite.yaml
+   |  └── file.txt  # The file to evaluate
    ├── description/
    |  ├── media/
-   |  |   └── file.txt  # The file to link
+   |  |   └── file.txt  # A copy of the file to link
    |  └── description.en.md
    ├── solution/
    |  └── solution.py
-   ├── workdir/
-   |  └── file.txt  # The file to evaluate
    └── config.json
 ```
 
-The `files` attribute is described in the [reference guide](/en/references/tested/dsl#files).
+::: info Note
+As soon as a test case uses `input_files`, TESTed no longer copies the `workdir/` folder of the exercise for the context of that test case: only the files you list are available.
+A file in `workdir/` is therefore only available in contexts where no test case uses `input_files`.
+:::
+
+The `input_files` attribute is described in the [reference guide](/en/references/tested/dsl#test-cases).

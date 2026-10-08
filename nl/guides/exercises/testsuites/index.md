@@ -351,21 +351,20 @@ In de [referentiegids](/nl/references/tested/dsl#taalspecifieke-expressies-en-st
 
 Bij het opstellen van een oefening op bestanden raden we de volgende werkwijze aan:
 
-1. Plaats de bestanden die je wilt gebruiken tijdens de evaluatie in de map `workdir/` in de oefeningenmap.
+1. Plaats de bestanden die je wilt gebruiken tijdens de evaluatie in de map `evaluation/` in de oefeningenmap, naast het testplan.
 2. Geef de naam van het bestand als parameter mee tijdens een functieoproep of als argument bij het uitvoeren.
-3. Link de oefeningen aan de bestandsnaam in het testplan. Hierdoor kunnen studenten in de feedback klikken op de naam van het bestand en dit bestand downloaden.
+3. Som het bestand op onder `input_files` bij het testgeval. TESTed kopieert het dan naar de werkmap, en Dodona maakt van de bestandsnaam in de feedback een link. Hierdoor kunnen studenten klikken op de naam van het bestand en dit bestand downloaden.
 
-Om dat laatste te doen, is het nodig om de bestanden ook in de map `description/media/` van de oefeningenmap te steken.
-In het testplan geef je vervolgens het attribuut `files` mee:
+Om die link te laten werken, is het nodig om een kopie van het bestand ook in de map `description/media/` van de oefeningenmap te steken.
+In het testplan geef je vervolgens het attribuut `input_files` mee:
 
 ```yaml
 - tab: "Voorbeeld met bestanden"
   testcases:
   - expression: "lees_het_bestand('bestand.txt')"
     return: "Dit is de inhoud van het bestand"
-    files:
-      - name: "bestand.txt"
-        url: "media/bestand.txt"
+    input_files:
+      - path: "bestand.txt"
 ```
 
 De structuur van de oefeningenmap zal er dus als volgt uitzien:
@@ -374,16 +373,20 @@ De structuur van de oefeningenmap zal er dus als volgt uitzien:
 repository/  # De repo met oefeningen
 └── example/ # De eigenlijke oefening
    ├── evaluation/
-   |  └── suite.yaml
+   |  ├── suite.yaml
+   |  └── bestand.txt  # Het bestand om te evalueren
    ├── description/
    |  ├── media/
-   |  |   └── bestand.txt  # Het bestand om te linken
+   |  |   └── bestand.txt  # Een kopie van het bestand om te linken
    |  └── description.nl.md
    ├── solution/
    |  └── solution.py
-   ├── workdir/
-   |  └── bestand.txt  # Het bestand om te evalueren
    └── config.json
 ```
 
-Het attribuut `files` wordt beschreven in de [referentiegids](/nl/references/tested/dsl#bestanden).
+::: info Merk op
+Zodra een testgeval `input_files` gebruikt, kopieert TESTed de map `workdir/` van de oefening niet meer voor de context van dat testgeval: enkel de bestanden die je opsomt zijn beschikbaar.
+Een bestand in `workdir/` is dus enkel beschikbaar in contexten waarin geen enkel testgeval `input_files` gebruikt.
+:::
+
+Het attribuut `input_files` wordt beschreven in de [referentiegids](/nl/references/tested/dsl#testgevallen).
