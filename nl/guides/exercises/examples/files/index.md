@@ -28,7 +28,6 @@ Maak daarna, in deze nieuwe map, nog drie mappen:
 - `description`: map waarin de opgave komt
 - `evaluation`: map met informatie over hoe een oplossing beoordeeld moet worden
 - `solution`: map waarin een voorbeeldoplossing komt
-- `workdir`: map met bestanden ter beschikking van de oplossing
 
 Hierna moet je repository er als volgt uitzien:
 
@@ -37,8 +36,7 @@ repository/
 └── sort/
    ├── evaluation/
    ├── description/
-   ├── solution/
-   └── workdir/
+   └── solution/
 ```
 
 ## 2. Configuratie
@@ -83,7 +81,6 @@ repository/
    ├── evaluation/
    ├── description/
    ├── solution/
-   ├── workdir/
    └── config.json
 ```
 
@@ -155,7 +152,6 @@ repository/
    |  └── description.nl.md
    ├── solution/
    |  └── solution.py
-   ├── workdir/
    └── config.json
 ```
 
@@ -175,12 +171,11 @@ Maak een bestand `suite.yaml` in de map `evaluation` met volgende inhoud:
 - tab: "Sorteren"
   testcases:
   - arguments: ["ongesorteerd.txt", "gesorteerd.txt"]
-    file:
-      content: "oplossing.txt"
-      location: "gesorteerd.txt"
-    files:
-    - name: "ongesorteerd.txt"
-      url: "media/ongesorteerd.txt"
+    input_files:
+    - path: "ongesorteerd.txt"
+    output_files:
+    - path: "gesorteerd.txt"
+      content: !path "expected_sorted.txt"
 ```
 
 Een testplan wordt geschreven in YAML, en moet ook voldoen aan een bepaalde structuur.
@@ -189,16 +184,16 @@ In het voorbeeld hierboven maken we één tabblad met als naam "Sorteren", en de
 Deze test bestaat uit drie grote stukken:
 
 - Met `arguments` geven we de argumenten aan het programma door, met het eerste argument het bronbestand en het tweede argument het doelbestand.
-- Met `file` geven we aan dat we willen controleren of het bestand "gesorteerd.txt" bestaat en of de inhoud overeenkomt met "oplossing.txt".
-- Met `files` geven we aan dat we willen dat de tekst "ongesorteerd.txt" in de argumenten op Dodona vervangen wordt met een link naar dat bestand. Dit is optioneel, maar maakt het voor de studenten wel makkelijker om de oefening op te lossen.
+- Met `input_files` geven we aan dat "ongesorteerd.txt" uit de map `evaluation` naar de werkmap gekopieerd moet worden, zodat het programma het kan lezen. Dodona vervangt ook de tekst "ongesorteerd.txt" in de argumenten door een link naar dat bestand, wat het voor de studenten makkelijker maakt om de oefening op te lossen.
+- Met `output_files` geven we aan dat we willen controleren of het bestand "gesorteerd.txt" bestaat en of de inhoud overeenkomt met "expected_sorted.txt".
 
 ::: warning
-Momenteel is het nodig om het bronbestand zowel in de `workdir` (voor tijdens het beoordelen van de oplossing) en de map `description/media` te plaatsen (voor het tonen op Dodona). In de toekomst hopen we dit op te lossen.
+Momenteel is het nodig om het bronbestand zowel in de map `evaluation` (voor tijdens het beoordelen van de oplossing) als in de map `description/media` te plaatsen (voor de link op Dodona en voor `sandbox_files`). In de toekomst hopen we dit op te lossen.
 Zie [hier](/nl/guides/exercises/testsuites/#bestanden-koppelen-aan-expressies) voor meer informatie.
 :::
 
-We hebben nu nog het bronbestand en het oplossingsbestand nodig.
-Het bronbestand moet in de `workdir` komen, met de naam die we in het testplan gespecifieerd hebben: `ongesorteerd.txt`:
+We hebben nu nog het bronbestand en het bestand met de verwachte uitvoer nodig.
+Het bronbestand moet in de map `evaluation` komen, met de naam die we in het testplan gespecifieerd hebben: `ongesorteerd.txt`:
 
 ```txt
 2
@@ -208,8 +203,8 @@ Het bronbestand moet in de `workdir` komen, met de naam die we in het testplan g
 
 Plaats dit bestand ook in `description/media`.
 
-Het oplossingsbestand is het bestand waarmee het doelbestand van de studenten mee vergeleken wordt.
-Dit bestand moet in de map `evaluation` komen, met de naam die in het testplan staat: `oplossing.txt`:
+Het bestand met de verwachte uitvoer is het bestand waarmee het doelbestand van de studenten vergeleken wordt.
+Dit bestand moet in de map `evaluation` komen, met de naam die in het testplan staat: `expected_sorted.txt`:
 
 ```txt
 1
@@ -223,7 +218,8 @@ Hierna ziet de repository er als volgt uit:
 repository/
 └── sort/
    ├── evaluation/
-   |  ├── oplossing.txt
+   |  ├── expected_sorted.txt
+   |  ├── ongesorteerd.txt
    |  └── suite.yaml
    ├── description/
    |  ├── media/
@@ -231,8 +227,6 @@ repository/
    |  └── description.nl.md
    ├── solution/
    |  └── solution.py
-   ├── workdir/
-   |  └── ongesorteerd.txt
    └── config.json
 ```
 

@@ -28,7 +28,6 @@ Then, within this new folder, create three more folders:
 - `description`: folder containing the assignment
 - `evaluation`: folder with information on how to assess a solution
 - `solution`: folder containing an example solution
-- `workdir`: folder with files available to the solution
 
 After this, your repository should look like this:
 
@@ -37,8 +36,7 @@ repository/
 └── sort/
    ├── evaluation/
    ├── description/
-   ├── solution/
-   └── workdir/
+   └── solution/
 ```
 
 ## 2. Configuration
@@ -83,7 +81,6 @@ repository/
    ├── evaluation/
    ├── description/
    ├── solution/
-   ├── workdir/
    └── config.json
 ```
 
@@ -150,7 +147,6 @@ repository/
    |  └── description.en.md
    ├── solution/
    |  └── solution.py
-   ├── workdir/
    └── config.json
 ```
 
@@ -170,12 +166,11 @@ Create a file `suite.yaml` in the `evaluation` folder with the following content
 - tab: "Sorting"
   testcases:
   - arguments: ["unordered.txt", "sorted.txt"]
-    file:
-      content: "solution.txt"
-      location: "sorted.txt"
-    files:
-    - name: "unordered.txt"
-      url: "media/unordered.txt"
+    input_files:
+    - path: "unordered.txt"
+    output_files:
+    - path: "sorted.txt"
+      content: !path "expected_sorted.txt"
 ```
 
 A test suite is written in YAML and must follow a specific structure.
@@ -183,16 +178,16 @@ In the example above, we create one tab named "Sorting" and define a single test
 
 This test consists of three main parts:
 - `arguments`: Specifies the arguments passed to the program, with the first argument as the source file and the second as the target file.
-- `file`: Ensures that the file "sorted.txt" exists and that its contents match "solution.txt".
-- `files`: Replaces "unordered.txt" in the arguments with a link to that file on Dodona. This is optional but makes it easier for students to solve the exercise.
+- `input_files`: Copies "unordered.txt" from the `evaluation` folder to the working directory, so the program can read it. Dodona also replaces "unordered.txt" in the arguments with a link to that file, which makes it easier for students to solve the exercise.
+- `output_files`: Ensures that the file "sorted.txt" exists and that its contents match "expected_sorted.txt".
 
 ::: warning
-Currently, the source file must be placed both in `workdir` (for evaluation) and in `description/media` (for display on Dodona).
+Currently, the source file must be placed both in `evaluation` (for evaluation) and in `description/media` (for the link on Dodona and for `sandbox_files`).
 We hope to resolve this in the future. See [here](/en/guides/exercises/testsuites/#linking-files-to-expressions) for more information.
 :::
 
-Now we need the source file and the expected solution file.
-The source file should go into `workdir`, named `unordered.txt`:
+Now we need the source file and the file with the expected output.
+The source file should go into `evaluation`, named `unordered.txt`:
 
 ```txt
 2
@@ -202,7 +197,7 @@ The source file should go into `workdir`, named `unordered.txt`:
 
 Place this file in `description/media` as well.
 
-The solution file should go into `evaluation`, named `solution.txt`:
+The file with the expected output should go into `evaluation`, named `expected_sorted.txt`:
 
 ```txt
 1
@@ -216,16 +211,15 @@ Now, the repository structure will be:
 repository/
 └── sort/
    ├── evaluation/
-   |  ├── solution.txt
-   |  └── suite.yaml
+   |  ├── expected_sorted.txt
+   |  ├── suite.yaml
+   |  └── unordered.txt
    ├── description/
    |  ├── media/
    |  |  └── unordered.txt
    |  └── description.en.md
    ├── solution/
    |  └── solution.py
-   ├── workdir/
-   |  └── unordered.txt
    └── config.json
 ```
 
