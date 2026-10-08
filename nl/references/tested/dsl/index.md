@@ -45,7 +45,7 @@ Dat object heeft zes attributen:
 - `namespace`: de "namespace" voor de code van de ingediende oplossing, zoals de klassennaam in Java.
 - `config`: de globale [configuratieopties](#configuratieopties)
 - `language`: de [programmeertaal van de expressies en statements](#taalspecifieke-expressies-en-statements). Als dit attribuut niet op `"tested"` staat, zullen alle expressies en statements (uitgezonderd returnwaarden) een programmeertaalspecifieke expressie of statement zijn.
-- `files`: een optionele lijst van [bestanden](#bestanden)
+- `files`: een optionele lijst van [bestanden](#bestanden). Dit attribuut is verouderd (_deprecated_): gebruik `input_files` op een [testgeval](#testgevallen).
 - `definitions`: herbruikbare [definities](#definities)
 
 ### Tabs
@@ -59,7 +59,7 @@ Het heeft zes mogelijke attributen:
 - `testcases`*: een lijst van [testgevallen](#testgevallen) (als dit gebruikt wordt, mag het attribuut `contexts` niet
   gebruikt worden)
 - `config`: de [configuratieopties](#configuratieopties) voor deze tab en al zijn kinderen
-- `files`: een optionele lijst van [bestanden](#bestanden) voor deze tab en al zijn kinderen
+- `files`: een optionele lijst van [bestanden](#bestanden) voor deze tab en al zijn kinderen. Dit attribuut is verouderd (_deprecated_): gebruik `input_files` op een [testgeval](#testgevallen).
 - `definitions`: herbruikbare [definities](#definities)
 
 In veel oefeningen is er precies een testgeval per context.
@@ -78,7 +78,7 @@ Het context-object heeft vier attributen:
 - `testcases`*: een lijst van [testgevallen](#testgevallen)
 - `config`: de [configuratieopties](#configuratieopties) voor deze context en al zijn kinderen
 - `context`: een optionele beschrijving van de context
-- `files`: een optionele lijst van [bestanden](#bestanden)
+- `files`: een optionele lijst van [bestanden](#bestanden). Dit attribuut is verouderd (_deprecated_): gebruik `input_files` op een [testgeval](#testgevallen).
 
 In de meeste gevallen is aangewezen om de beschrijving leeg te laten.
 
@@ -106,27 +106,33 @@ als er maar een testgeval is, kan het zowel de _main call_ als de test voor de e
 Een testgeval-object kan de volgende attributen hebben:
 
 - `description`: een optionele beschrijving van het testgeval, die Dodona toont in plaats van de gegenereerde beschrijving. Ofwel een string, ofwel een object met de attributen `description` (de te tonen tekst) en `format` (het formaat van die tekst: standaard `text`, ook `html` of een programmeertaal is mogelijk).
-- `files`: een optionele lijst van [bestanden](#bestanden). Op het niveau van een testgeval is dit attribuut verouderd (_deprecated_): gebruik `input_files`.
+- `files`: een optionele lijst van [bestanden](#bestanden). Dit attribuut is verouderd (_deprecated_): gebruik `input_files`.
 - `input_files`: een optionele lijst van invoerbestanden voor dit testgeval. Elk bestand is een object met een `path` (de locatie van het bestand in de werkmap) en optioneel `content` (de inhoud van het bestand; gebruik de tag `!path` om de inhoud uit een bestand in de map `evaluation` te lezen).
+  - Zonder `content` kopieert TESTed het bestand met die naam uit de map `evaluation` naar de werkmap.
+  - Voor bestanden die uit de map `evaluation` komen, toont Dodona in de feedback een link naar hetzelfde bestand in `description/media`. Plaats daar een kopie als studenten het bestand moeten kunnen openen. Voor `content` die rechtstreeks in het testplan staat, toont Dodona die inhoud wanneer studenten op de bestandsnaam klikken, dus dan is er geen kopie nodig.
+  - Als een testgeval `input_files` heeft, kopieert TESTed de map `workdir` van de oefening niet voor de context van dat testgeval: enkel de opgesomde bestanden zijn beschikbaar.
 
 Daarnaast kan een testgeval ook de attributen die hieronder beschreven worden hebben, maar merk op:
 
-- Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden. De uitzondering is dat `stdin` gecombineerd kan worden met een `expression` (zie [`stdin`](#stdin)).
+- Een testgeval kan slechts één "invoer" hebben, wat betekent dat de attributen `arguments`/`stdin`, `expression` en `statement` niet tegelijk gebruikt kunnen worden.
 - Het attribuut `return` werkt enkel met een `expression`.
 
 #### `stdin`
 
 De gegevens voor [standaardinvoer](https://nl.wikipedia.org/wiki/Standaardstromen).
 
-Als dit attribuut gebruikt wordt, kan `statement` niet meer gebruikt worden als invoer.
-Je kan `stdin` wel combineren met een `expression`; het is niet verplicht om argumenten te gebruiken:
+Als dit attribuut gebruikt wordt, kunnen `expression` en `statement` niet meer gebruikt worden als invoer,
+noch kan `return` als test gebruikt worden.
+Wil je zowel de invoer en uitvoer van een programma als een functie testen, gebruik dan aparte testgevallen in dezelfde context: een eerste met `stdin` en `stdout`, een volgende met `expression` en `return`:
 
 ```yaml
 - tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
+  contexts:
+  - testcases:
+    - stdin: "Jan"
+      stdout: "Hello, Jan."
+    - expression: "greet('Jan')"
+      return: "Hello, Jan."
 ```
 
 #### `arguments`
@@ -327,14 +333,20 @@ Meer informatie over deze orakelfuncties staat in de referentie voor het [geavan
 
 ### Bestanden
 
+:::warning Verouderd
+Het attribuut `files` is verouderd (_deprecated_), maar werkt nog.
+Gebruik voor nieuwe testplannen [`input_files`](#testgevallen) op een testgeval.
+:::
+
+Je kan dit attribuut nog tegenkomen in oudere testplannen.
 Soms zijn parameters of andere strings de naam van een bestand.
 Als die bestanden een snelkoppeling naar het eigenlijke bestand moeten worden, dan moet er een lijst van bestanden meegegeven worden.
 Elk object in die lijst heeft twee attributen:
 
 - `name`: de naam van het bestand zoals het voorkomt in de invoer
-- `url`: de locatie waar de snelkoppeling naar moet wijzen, relatief ten opzicht van de map van de oefening.
+- `url`: waar de snelkoppeling naar moet wijzen, als `media/` gevolgd door de bestandsnaam (bijvoorbeeld `media/data.txt`). Dodona zoekt het bestand op in de map `description/media` van de oefening.
 
-De lijst van bestanden kan op het niveau van de top, een tab of een context staan en zal ook van toepassing zijn op alle onderliggende niveaus.
+De lijst van bestanden kan op het niveau van de top, een tab, een context of een testgeval staan en zal ook van toepassing zijn op alle onderliggende niveaus.
 
 ### Definities
 
@@ -579,13 +591,12 @@ Hieronder staat een testplan waar alle opties gebruikt worden:
 # Een tab op Dodona.
 - tab: "Naam van de tab"
   contexts:
-    # De bestanden gebruikt in deze context.
-    - files:
-        - name: "file.txt"
-          url: "media/workdir/file.txt"
-      testcases:
+    - testcases:
         # Een assignment van de variable "data".
         - statement: 'data = ["list\nline", "file.txt"]'
+          # Het invoerbestand dat in deze context gebruikt wordt, gekopieerd uit de map "evaluation".
+          input_files:
+            - path: "file.txt"
           # Functieoproep waarbij de variabele gebruikt wordt.
         - expression: 'function(data, 0.5)'
           # Verwachte returnwaarde van die functie.

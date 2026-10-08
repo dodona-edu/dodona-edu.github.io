@@ -44,7 +44,7 @@ The root object contains six attributes:
 - `namespace`: the "namespace" for the code of the submission, such as the class name in Java.
 - `config`: the global [configuration options](#configuration-options)
 - `language`: the [language of the expressions and statements](#language-specific-expressions-and-statements). If this attribute is not set to `"tested"`, all expressions and statements (except for return values) will be programming-language-specific expressions or statements.
-- `files`: optional list of [files](#files)
+- `files`: optional list of [files](#files). This attribute is deprecated: use `input_files` on a [test case](#test-cases) instead.
 - `definitions`: reusable [definitions](#definitions)
 
 ### Tabs
@@ -56,7 +56,7 @@ It has six possible attributes:
 - `contexts`*: a list of [contexts](#contexts) (if this is given, you cannot use the attribute `testcases`)
 - `testcases`*: a list of [test cases](#test-cases) (if this is given, you cannot use the attribute `contexts`)
 - `config`: the [configuration options](#configuration-options) for this tab and all children
-- `files`: optional list of [files](#files) for this tab and all children
+- `files`: optional list of [files](#files) for this tab and all children. This attribute is deprecated: use `input_files` on a [test case](#test-cases) instead.
 - `definitions`: reusable [definitions](#definitions)
 
 In a lot of exercises, you have precisely one testcase per context.
@@ -76,7 +76,7 @@ The context object has four attributes:
 - `testcases`*: a list of [test cases](#test-cases)
 - `config`: the [configuration options](#configuration-options) for this context and all children
 - `context`: an optional description of the context
-- `files`: optional list of [files](#files)
+- `files`: optional list of [files](#files). This attribute is deprecated: use `input_files` on a [test case](#test-cases) instead.
 
 In most cases, it is fine to leave the description empty.
 
@@ -103,27 +103,32 @@ if you only have one test case, it may be a main call and have a check for the e
 A test case can have the following attributes:
 
 - `description`: an optional description of the test case, which Dodona shows instead of the generated one. Either a string, or an object with the attributes `description` (the text to show) and `format` (the format of that text: `text` by default, `html` or a programming language).
-- `files`: optional list of [files](#files). On a test case, this attribute is deprecated: use `input_files` instead.
+- `files`: optional list of [files](#files). This attribute is deprecated: use `input_files` instead.
 - `input_files`: optional list of input files for this test case. Each file is an object with a `path` (the location of the file in the working directory) and optionally `content` (the content of the file; tag the value with `!path` to read the content from a file in the `evaluation` folder instead).
+  - Without `content`, TESTed copies the file with that name from the `evaluation` folder to the working directory.
+  - For files that come from the `evaluation` folder, Dodona shows a link in the feedback to the same file in `description/media`. Place a copy there if students should be able to open the file. For `content` that is written inline, Dodona shows that content when students click the file name, so no copy is needed.
+  - If a test case has `input_files`, TESTed does not copy the `workdir` folder of the exercise for the context of that test case: only the listed files are available.
 
 Additionally, a test case can have all attributes described below, but do note:
 
-- A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive. The exception is that `stdin` can be combined with an `expression` (see [`stdin`](#stdin)).
+- A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive.
 - The attribute `return` requires the attribute `expression`.
 
 #### `stdin`
 
 The data to provide to the [standard input](https://en.wikipedia.org/wiki/Standard_streams#Standard_input_(stdin)).
 
-If this attribute is used, you cannot specify a `statement` as input.
-You can combine `stdin` with an `expression`; it is not mandatory to use `arguments`:
+If this attribute is used, you cannot specify `expression` or `statement` as input, nor can you use `return` as tests.
+To test both the input and output of a program and a function, use separate test cases in the same context: the first one with `stdin` and `stdout`, the next one with `expression` and `return`:
 
 ```yaml
 - tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
+  contexts:
+  - testcases:
+    - stdin: "Jan"
+      stdout: "Hello, Jan."
+    - expression: "greet('Jan')"
+      return: "Hello, Jan."
 ```
 
 #### `arguments`
@@ -325,14 +330,20 @@ More information about these check functions is available in the reference for t
 
 ### Files
 
+:::warning Deprecated
+The `files` attribute is deprecated, but it still works.
+For new test suites, use [`input_files`](#test-cases) on a test case.
+:::
+
+You may still come across this attribute in older test suites.
 Some parameters or other strings are a name of a file.
 If you want that parameter to link to the actual file, it needs to be added to the list of files.
 Each object in this list has two attributes:
 
 - `name`: the name of the file as it appears in the input
-- `url`: the location where the link should point to, relative to the exercise folder
+- `url`: where the link should point to, as `media/` followed by the file name (for example `media/data.txt`). Dodona looks the file up in the `description/media` folder of the exercise.
 
-The list of files can be specified at the root, tab and context level, and applies to all levels below it.
+The list of files can be specified at the root, tab, context and test case level, and applies to all levels below it.
 
 ### Definitions
 
@@ -570,13 +581,12 @@ YAML supports tags to give values another type:
 # A tab on Dodona.
 - tab: "Name of the tab"
   contexts:
-    # The files used in this context.
-    - files:
-        - name: "file.txt"
-          url: "media/workdir/file.txt"
-      testcases:
+    - testcases:
         # An assignment of the variable data.
         - statement: 'data = ["list\nline", "file.txt"]'
+          # The input file used in this context, copied from the "evaluation" folder.
+          input_files:
+            - path: "file.txt"
           # Function call that uses the variable.
         - expression: 'function(data, 0.5)'
           # Expected return value of the function.
