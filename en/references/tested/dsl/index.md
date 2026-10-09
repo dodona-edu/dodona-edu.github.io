@@ -108,22 +108,23 @@ A test case can have the following attributes:
 
 Additionally, a test case can have all attributes described below, but do note:
 
-- A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive. The exception is that `stdin` can be combined with an `expression` (see [`stdin`](#stdin)).
+- A test case can only have one "input", meaning the `arguments`/`stdin`, `expression` and `statement` attributes are mutually exclusive. To give `stdin` to an `expression`, put them in separate test cases of the same context (see [`stdin`](#stdin)).
 - The attribute `return` requires the attribute `expression`.
 
 #### `stdin`
 
 The data to provide to the [standard input](https://en.wikipedia.org/wiki/Standard_streams#Standard_input_(stdin)).
 
-If this attribute is used, you cannot specify a `statement` as input.
-You can combine `stdin` with an `expression`; it is not mandatory to use `arguments`:
+If this attribute is used, you cannot specify an `expression` or `statement` as input on the same test case.
+To test a function that reads standard input, give the `stdin` on the first test case of a context and call the function in a later test case of that context; it is not mandatory to use `arguments`:
 
 ```yaml
 - tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
+  contexts:
+    - testcases:
+        - stdin: "Jan"
+        - expression: "greet()"
+          return: "Hello, Jan."
 ```
 
 #### `arguments`
