@@ -292,16 +292,20 @@ Een uitgebreider (fictief) voorbeeld is:
           exit_code: 25 
 ```
 
-Je kan ook `stdin` combineren met een expressie.
+Om een functie te testen die standaardinvoer leest, geef je de `stdin` mee in het eerste testgeval van een context en roep je de functie op in een later testgeval van dezelfde context.
+Eén testgeval kan niet tegelijk `stdin` en een `expression` hebben.
 Het is niet verplicht om argumenten te gebruiken:
 
 ```yaml
 - tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
+  contexts:
+    - testcases:
+        - stdin: "Jan"
+        - expression: "greet()"
+          return: "Hello, Jan."
 ```
+
+Gebruik hier `contexts`: in een gewone lijst van `testcases` is elk testgeval een eigen context, waardoor de `stdin` en de functie-oproep in aparte uitvoeringen terechtkomen.
 
 ## Taalspecifieke expressies en statements
 

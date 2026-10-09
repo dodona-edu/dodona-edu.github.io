@@ -289,15 +289,20 @@ A more extensive (fictional) example is:
           exit_code: 25
 ```
 
-You can also combine `stdin` with an expression. It is not mandatory to use arguments:
+To test a function that reads standard input, give the `stdin` on the first test case of a context and call the function in a later test case of the same context.
+A single test case cannot have both `stdin` and an `expression`.
+It is not mandatory to use arguments:
 
 ```yaml
 - tab: "example"
-  testcases:
-  - stdin: "Jan"
-    expression: "greet()"
-    return: "Hello, Jan."
+  contexts:
+    - testcases:
+        - stdin: "Jan"
+        - expression: "greet()"
+          return: "Hello, Jan."
 ```
+
+Use `contexts` here: in a flat list of `testcases`, every test case is its own context, so the `stdin` and the function call would end up in separate executions.
 
 ## Language-Specific Expressions and Statements
 
