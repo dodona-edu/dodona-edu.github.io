@@ -13,34 +13,32 @@ This judge is no longer actively developed.
 Use [TESTed](/en/guides/exercises/) to create new Python exercises instead.
 :::
 
-All Python judges are written in Python and share a common base class `Judge`. The base class for master judges is called `MasterJudge`. The base class for interactive judges is called `TestcaseJudge`. Two generic interactive judges have already been implemented:
+The Python judge can evaluate a submission in two ways:
 
--   The [**`OutputJudge`**](#output-judge) class implements a judge that evaluates the submitted source code based on the output written to `stdout` based on input read via `stdin`. This judge is therefore suitable for exercises that ask for input via `input()` and print the results via `print()`.
--   The [**`DoctestJudge`**](#doctest-judge) class implements a judge that evaluates the submitted source code by running a series of *unit tests* on it, described using an extended version of the Python `doctest` module format. This judge is suitable for testing Python **functions**.
+-   The [**output judge**](#output-judge) runs the submitted code with the input you provide on `stdin` and compares what it writes to `stdout` with the expected output. It is suitable for exercises that ask for input via `input()` and print the results via `print()`.
+-   The [**doctest judge**](#doctest-judge) runs a series of tests on the submitted code, described in an extended version of the format of Python's `doctest` module. It is suitable for testing Python **functions** and classes.
 
-You must let the Python judge know which of these two options you want to use by setting this in the [`config.json`](/en/references/exercise-config/) file of your exercise. Under `evaluation`, add the key `pythia_judge` with the value `output` or `doctest`, depending on the type of exercise you are creating.
+You must let the Python judge know which of these two options you want to use by setting this in the [`config.json`](/en/references/exercise-config/) file of your exercise. Under `evaluation`, add the field `pythia_judge` with the value `output` or `doctest`, depending on the type of exercise you are creating.
+
+The tests of an exercise are in its `evaluation` directory, as pairs of files with the same number: `0.in` and `0.out`, `1.in` and `1.out`, and so on. Each pair becomes a tab in the feedback.
 
 ::: tip Examples
 Take a look at the [example exercises repository](https://github.com/dodona-edu/example-exercises) and [example course](https://dodona.be/en/courses/358/) to find an example of how to use these judges.
 :::
 
-The hierarchy of the judge classes developed within the Python project is as follows:
-
-    Judge -> MasterJudge
-          -> TestcaseJudge -> OutputJudge
-                           -> DoctestJudge
-
 ## General settings
 
 The following settings can be used for both the output judge and the doctest judge. Settings specific to a judge will be discussed separately in [Output judge](#output-judge) and [Doctest judge](#doctest-judge).
 
-- **`time limit`**:   This setting specifies the time limit as a natural number in seconds.
+- **`time limit`**:   The time limit for the tests of this file, as a natural number in seconds. By default, the judge divides the time limit of the exercise over its test files.
 
 - **`continue upon wrong answer`**:   Boolean indicating whether to continue running tests when a wrong answer is generated. Default `true`.
 
 - **`continue upon failure`**:   Boolean indicating whether to continue running tests when a runtime error occurs. Default `true`.
 
 - **`tab name`**:   String indicating the name of the tab in the feedback. Tab names are also exposed to translations performed by the judge, but all types of names are translated separately, meaning names of functions, methods, classes, and keyword arguments are detected as tokens.
+
+- **`show expected output`**:   Boolean indicating whether the feedback shows the expected output next to the generated output. Default `true`.
 
 You can change these default settings at the bottom of a `.out` file, preceded by a line consisting of (at least 3) hyphens. For example:
 
@@ -63,7 +61,7 @@ The default operation of the judge can be changed using a number of parameters. 
 
 ### Parameters to adjust the judge's operation
 
-- **`python input without prompt`**:   Boolean indicating whether the prompt of the built-in functions `input` and `raw_input` should be written to standard output or not. Default `false` (meaning the prompt **is** written to standard output).
+- **`python input without prompt`**:   Boolean indicating whether the prompt of the built-in function `input` should be written to standard output or not. Default `false` (meaning the prompt **is** written to standard output).
 
 - **`block count`**:   String indicating how many blocks of input the judge can expect.
 
@@ -78,6 +76,11 @@ The default operation of the judge can be changed using a number of parameters. 
   - **`ends with <string>`**: Each block is terminated with a line equal to `<string>`. If no string is specified, an empty line is considered a terminator/separator. If the last block ends with `<string>`, the `<string>` is considered a terminator and is part of the actual input to be processed by the submitted code. In case the last block does not end with `<string>`, `<string>` is considered a separator and is not part of the input to be processed by the submitted code.
   - **`<integer>`**: Each block consists of `<integer>` lines.
 
+- **`output block size`**:   String indicating what each block of the expected output looks like. It takes the same values as `input block size`, plus one more:
+
+  - **`first line`** (default), **`ends with <string>`** and **`<integer>`**: as for `input block size`.
+  - **`input block size`**: Each block of expected output has as many lines as the corresponding block of input.
+
 - **`blockwise execution`**:   Boolean indicating whether the output should be compared block by block or not.
     This is default `true` and then output is generated per block and compared with the expected output. If set to `false`, only the global generated and expected output will be compared.
 
@@ -89,22 +92,17 @@ The default operation of the judge can be changed using a number of parameters. 
   - **`ignore extra whitespace`** (default): The expected and generated output must be the same, but consecutive whitespace characters are reduced to a single whitespace character.
   - **`ignore whitespace`**: The expected and generated output must be the same but whitespace is ignored for the comparison.
 
-- **`ignore fp rounding`**:   Determines how floating point numbers are compared.
-
-  -   `default`: Numbers are compared character by character and must match in all characters.
-  -   `number <e>`: The numbers $n$ and $m$ are equal if $|n-m| < 10^e$; in other words, if $e = -2$, the two numbers must be equal up to two digits after the decimal point.
+- **`ignore fp rounding`**:   An integer $e$ that determines how floating point numbers are compared. With this setting, the numbers $n$ and $m$ are equal if $|n-m| < 10^e$; in other words, with `ignore fp rounding: -2`, the two numbers must be equal up to two digits after the decimal point. Without this setting, numbers are compared character by character, like the rest of the output.
 
 - **`case sensitive`**:   Boolean indicating whether the difference between uppercase and lowercase letters should be taken into account when comparing the generated and expected output. Default `true`.
 
-- **`field order sensitive`**:   Boolean indicating whether the order of fields on a line should be taken into account when comparing the generated and expected output. Default `true`.
-
-- **`field separator`**:   Field separator used for the `field order sensitive` setting. By default, a consecutive series of whitespace characters is used as a field separator.
+- **`field order sensitive`**:   Boolean indicating whether the order of fields on a line should be taken into account when comparing the generated and expected output. Fields are separated by whitespace. Default `true`.
 
 - **`line order sensitive`**:   Boolean indicating whether the order of lines should be taken into account when comparing the generated and expected output. Default `true`.
 
 ### Defining a custom evaluation function
 
-In the file with expected output, there is also the possibility to define a custom function that evaluates whether the solution is correct or incorrect. This function must receive the expected and generated output as arguments and return `True` or `False` depending on the correctness.
+In the file with expected output, there is also the possibility to define a custom function that evaluates whether the solution is correct or incorrect. Put it in a `<DEFINITION>` tag after the line of hyphens, with the `def` line of the function as the first line of the tag. The function receives the expected and generated output as lists of lines, and returns `True` or `False` depending on the correctness. It can also return a pair: the verdict and a list of messages to show to the student. When there is a custom evaluation function, the comparison settings above are not used.
 
 In the following example, a different allowed floating point margin is used per line:
 
@@ -183,13 +181,13 @@ Output file (`0.out`):
 
 ## Doctest judge
 
-The doctest judge uses doctests to check students' solutions.
+The doctest judge uses doctests to check students' solutions. Each `.in` file holds a doctest, and the matching `.out` file only holds the settings (after the line of hyphens) and the translations (see [Doctests in multiple languages](#doctests-in-multiple-languages)).
 
 ### Parameters
 
-- **`used output channel`**:   Sets the output channel for the entire doctest. See [Output channels](#output-channels) for the explanation regarding output channels. By default, all doctests use `return` as the sole output channel. Possible values are `stdout`, `return` and `stdout return`.
+- **`used output channel`**:   Sets the output channel for the entire doctest. See [Output channels](#output-channels) for the explanation regarding output channels. By default, all doctests use `return` as the sole output channel. Possible values are `stdout`, `return` and `stdout return`. With `stdout return`, the first line of the expected output is the return value and the other lines are the printed output.
 
-- **`independent examples`**:   Boolean indicating whether all doctests should be considered dependent or independent of each other. (See [Execution context](#execution-context) for more info on execution contexts for the Python Tutor.) Default is `true`, meaning each statement forms its own execution context. If `false`, statements are bundled to form an execution context.
+- **`independent examples`**:   Boolean indicating whether all doctests should be considered dependent or independent of each other. (See [Execution context](#execution-context) for more info on execution contexts for Dodona's debugger.) Default is `true`, meaning each statement forms its own execution context. If `false`, statements are bundled to form an execution context.
 
 ### Output channels
 
@@ -223,20 +221,21 @@ By default, the doctest judge will only compare return values. This can be chang
 >>> my_print(5) #doctest: +STDOUT
 5
 >>> # If we add the 'STDOUT' option flag, it will be checked that None is returned.
->>> # If we want both the prints and the return value, we explicitly add both:
+>>> # If we want both the prints and the return value, we explicitly add both flags.
+>>> # The first line of the expected output is then the return value,
+>>> # and the other lines are the printed output:
 >>> my_print(5) #doctest: +STDOUT, +RETURN
-5
 None
+5
 >>> my_combination(5) #doctest: +STDOUT, +RETURN
 5
 5
->>> # Note that the last line in the expected output is interpreted as the return value
+>>> # With only the 'RETURN' flag, the full expected output is the return value,
+>>> # and the feedback shows the expected and generated value over multiple lines
 >>> my_multiline(5) #doctest: +RETURN
 5
 5
 5
->>> # Note that in this case the full output is considered the return value,
->>> # and that the feedback table will show the expected and generated output over multiple lines
 >>>
 >>> # Tracebacks are simply placed in the expected output. Indented lines are ignored
 >>> # just like the output channels.
@@ -257,7 +256,7 @@ There is one special option flag (`REPR`) that is used when the representation o
 ...
 >>> MyObject() #doctest: +REPR
 I present to you:
-the representation of myself.
+the representation of myself
 ```
 
 The `REPR` flag cannot be combined with other flags (the flag overrides all other flags).
@@ -290,32 +289,35 @@ OutputProcessor(expected_type=float, precision=6)
 0.002
 >>> 0.003 # this will still fail
 0.004
->>> 0.005 #doctest: +NOSTICKY
-0.006
->>> # This test was correct, the sticky was cleared for one test case with +NOSTICKY
->>> 0.007 # this test will fail again
-0.008
 >>> 0.005 #doctest: +CLEARSTICKY
 0.006
->>> # The test above succeeded
+>>> # The test above succeeded: +CLEARSTICKY cleared the sticky processor
+>>> 0.007 # and so does this one
+0.008
 ```
 
-Defining a *sticky* output processor adds it to the list of stickies. These stickies will be added to an output processor explicitly defined in the tags for each test unless the `NOSTICKY` flag was used. The `CLEARSTICKY` flag clears the list of *stickies*.
+Defining a *sticky* output processor adds it to the list of stickies. Every following test is then also checked by the sticky processors, besides any processor it defines itself. The `CLEARSTICKY` flag clears the list of *stickies*, starting with the test that has the flag.
 
-There are more standard processors, but these are quite specific. They are all defined in `output_processors.py` together with enough documentation to explain their operation and parameters. In general:
+`OutputProcessor` takes these parameters:
 
-- **`FileContentChecker`**:   Checks if a file with a given name exists on the local file system and if the content corresponds to that of another file. This second file can be located in the local file system or the content can be retrieved from the block (where the latter option takes precedence).
+- **`expected_type`**:   The type the return value must have, such as `float`, `[int]` (a list of integers), `(int, str)` (a tuple of an integer and a string), `{str: int}` (a dictionary) or `{float}` (a set). By default, the type is derived from the expected return value.
+- **`expected_types`**:   A list of types the return value may have.
+- **`precision`**:   The number of decimals to which floating point numbers are compared. Default `2`.
 
-  -   `ignoreTrailingNewlines`: Boolean indicating whether extra newlines at the end of the generated (and expected) output should be removed.
+Two more standard processors are available for specific cases:
 
-- **`ImageRenderer`**:   This output processor renders 2-dimensional matrices as colored images. If the output is correct, the matrix will be shown in the feedback table.
+- **`FileContentChecker`**:   Checks whether the submission wrote a file with the expected content. The first argument is the name of the file the submission must write. The expected content comes from a `FILE` tag with `src="memory"` and the same name, or else from the file given by the `expectedFileName` parameter (by default a file with the same name).
+
+  -   `ignoreTrailingNewlines`: Boolean indicating whether extra newlines at the end of the generated (and expected) file should be ignored. Default `true`.
+
+- **`ImageRenderer`**:   Checks that the return value is a matrix of pixels and shows it as an image in the feedback. A matrix is a list of rows: integers from 0 to 255 or floats from 0 to 1 for a grayscale image, or lists of three such numbers for a colour image.
 
 ### Defining output processors
 
-To define a custom output processor, we introduce the `DEFINITION` tag. This tag allows defining anything within the scope of the doctest.
+To define your own output processor, use the `DEFINITION` tag. This tag allows defining anything within the scope of the doctest.
 
 ```python
->>> my_new_function() #doctest: STDOUT
+>>> my_new_function() #doctest: +STDOUT
 <DEFINITION>
 def my_new_function():
     print('hello world')
@@ -323,66 +325,79 @@ def my_new_function():
 hello world
 ```
 
-This example would of course be confusing for students, as they cannot see the definitions, but they can see the test itself. However, the tag can be used to define new output processors. The examples below make the standard processors friendlier. First a brief overview of the structure of the standard processors:
+This example would of course be confusing for students, as they cannot see the definitions, but they can see the test itself. The tag is mostly used to define new output processors: a subclass of `OutputProcessor` that overrides one or more of these methods. Each method returns whether the output is correct.
 
--   `BasicProcessor`: Both processing standard output (`process_stdout`) and the return value (`process_return`) set the block status to "WA" (*wrong answer*).
--   `OutputComparator(BasicProcessor)`: Overrides `process_stdout` and sets the status to "AC" (*answer correct*) if the expected and generated output are equal (comparing strings). Also adds the expected and generated output to the block so they can be shown with a diff in the feedback table.
--   `TypedContentChecker(BasicProcessor)`: Overrides `process_return` and sets the status to "AC" if the type and values of the expected return and generated return are equal. Also adds the expected and generated return to the block after annotating them so they can be shown in the feedback table.
--   `OutputProcessor(OutputComparator, TypedContentChecker)`: Inherits from the previous two output processors and combines their functionality: `process_stdout` calls `OutputComparator.process_stdout` and `process_return` calls `TypedContentChecker.process_return`.
+-   **`checkReturnValue(self, expected, generated, **kwargs)`**: compares the return value, after its type has been checked.
+-   **`checkStdout(self, expected, generated, **kwargs)`**: compares the standard output (as strings).
+-   **`checkReturnType(self, generated, expected_types=None, **kwargs)`**: checks the type of the return value.
+
+Within these methods, you can use:
+
+-   **`self.addMessage(message)`**: shows a message to the student in this test.
+-   **`self.executeStatement(channels=['return'], expected_type=...)`**: runs the statement of the test again and returns the requested output, for example to check a function that returns a random value.
+-   **`self.setExpectedOutput(channel='return', output=...)`** and **`self.setGeneratedOutput(channel='return', output=...)`**: change the expected or generated output shown in the feedback. The channel is `return`, `stdout` or `stderr`.
+-   **`self.getTranslator()`**: the translator of the exercise, whose `translate(text)` translates a text to the language of the student.
+
+The example below makes the standard processor friendlier. It calls the method it overrides to do the actual comparison, and adds a message to the result:
 
 ```python
->>> print('hello') #doctest: STDOUT
-<DEFINITION>
-class FriendlyOutputComparator(OutputComparator):
-    def process_stdout(self, block, expected_output, generated_output, **kwargs):
-        retval = super().process_stdout(self, block, expected_output, generated_output, **kwargs)
-        if block.status == 'AC':
-            block.addMessage("That's a job nice done!")
-        else:
-            block.addMessage("Nice try, but it's not entirely correct.")
-        return retval
-</DEFINITION>
-hello
 >>> 'hello'
 <DEFINITION>
-class FriendlyTypedContentChecker(TypedContentChecker):
-    def process_return(self, block, expected_output, generated_output, expected_type=None, **kwargs):
-        retval = super().process_return(self, block, expected_output, generated_output, expected_type=None, **kwargs)
-        if block.status == 'AC':
-            block.addMessage('That's a job nice done!')
-        else:
-            block.addMessage('Nice try, but it's not entirely correct.')
-        return retval
-</DEFINITION>
-'hello'
->>> print('hello') or 'hello'
-<DEFINITION>
 class FriendlyProcessor(OutputProcessor):
-    def process_stdout(self, block, expected_output, generated_output, **kwargs):
-        retval = super().process_stdout(self, block, expected_output, generated_output, **kwargs)
-        if block.status == 'AC':
-            block.addMessage('My God, I love that printing of yours!')
+
+    def checkReturnValue(self, expected, generated, **kwargs):
+        correct = super().checkReturnValue(expected, generated, **kwargs)
+        if correct:
+            self.addMessage('You return it just the way I like it!')
         else:
-            block.addMessage('Nice try, but you printed not entirely correct.')
-        return retval
-    def process_return(self, block, expected_output, generated_output, expected_type=None, **kwargs):
-        retval = super().process_return(self, block, expected_output, generated_output, expected_type=None, **kwargs)
-        if block.status == 'AC':
-            block.addMessage('You return it the way I like!')
-        else:
-            block.addMessage('I gave you everything, and you return it wrong?')
-        return retval
+            self.addMessage('Nice try, but that is not the right return value.')
+        return correct
 </DEFINITION>
-hello
+<OUTPUTPROCESSOR>
+FriendlyProcessor()
+</OUTPUTPROCESSOR>
 'hello'
+```
+
+The next example checks a function `roll_die()` that returns a random number of eyes. The expected value `4` is only shown as an example: the processor runs the statement again until every number from 1 to 6 has come up.
+
+```python
+>>> roll_die()
+<DEFINITION>
+class DieChecker(OutputProcessor):
+
+    def checkReturnValue(self, expected, generated, **kwargs):
+        # the first roll must be a valid number of eyes
+        if generated not in range(1, 7):
+            self.addMessage('Error: a die only has the numbers 1 to 6')
+            return False
+        # roll again until every number has come up (at most 1000 times)
+        seen = {generated}
+        for _ in range(1000):
+            generated = self.executeStatement(channels=['return'], expected_type=int)
+            if generated not in range(1, 7):
+                self.addMessage('Error: a die only has the numbers 1 to 6')
+                return False
+            seen.add(generated)
+            if len(seen) == 6:
+                break
+        if len(seen) < 6:
+            missing = ', '.join(str(eyes) for eyes in sorted(set(range(1, 7)) - seen))
+            self.addMessage(f'Error: these numbers never came up: {missing}')
+            return False
+        return True
+</DEFINITION>
+<OUTPUTPROCESSOR>
+DieChecker(expected_type=int)
+</OUTPUTPROCESSOR>
+4
 ```
 
 Some remarks:
 
--   If the content needs to be compared using a custom method, the `content_check=False` parameter can be passed to `super().process_return`. The function will then only determine if the types match (and set the block status to "AC" or "WA"). If the types did not match, the block will already contain annotations. If the types did match, `setExpectedReturn` and `setGeneratedReturn` must be called with annotated strings if the returns should be shown. However, it is also possible to limit feedback to a message calculated from the returns, for example.
--   Use only the functionality you need. If no printing is expected, override `TypedContentChecker`. Any unexpected standard output will then be caught and correctly shown to the user. With `OutputProcessor`, a diff would still be shown, but the "unexpected output" message would not be shown.
--   Do not forget to return whether the answer is accepted or not. `continueUponWrongAnswer` depends on this.
--   Set the expected/generated pairs with `Feedbacktable.setOutputPair(channel, exp, gen)`, where `channel` is one of `return`, `stderr`, and `stdout`. Add messages to each pair with `Feedbacktable.addOutputMessage(channel, message, ...)`.
+-   Do not forget to return whether the output is correct. `continue upon wrong answer` depends on this.
+-   A class or function defined in a `DEFINITION` tag stays available in the following tests of the same file, so you only have to define a processor once.
+-   The methods you do not override keep their standard checks. For example, a processor that only overrides `checkReturnValue` still reports printed output when the test expects none.
 
 ### Hidden and unexecuted test cases
 
@@ -414,13 +429,13 @@ class HtmlParagraph(object):
     <class from="HtmlParagraph" to="HtmlParagraaf" />
     <method from="to_html" to="naar_html"/>
     <fixed from="&quot;usage&quot;" to="&quot;gebruik&quot;" />
-    <fixed from="&quot;    just use it.&quot;" to="&quot;    gebruik het dan toch gewoon.&quot"/>
+    <fixed from="&quot;    just use it.&quot;" to="&quot;    gebruik het dan toch gewoon.&quot;"/>
 </LANGUAGE>
 ```
 
-The possible substitution types are `function`, `method`, `class`, `kwarg`, `fixed`, and `regex`. With `kwarg`, the names of keyword arguments will be replaced. `fixed` ensures literal substitutions without extra boundaries.
+The possible substitution types are `function`, `method`, `class`, `kwarg`, `token`, `fixed`, and `regex`. With `kwarg`, the names of keyword arguments will be replaced. `token` replaces a whole word. `fixed` ensures literal substitutions without extra boundaries, also inside words. With `regex`, `from` is a regular expression and `to` can refer to its groups with `\1`, `\2`, and so on.
 
-Each substitution tag also has an optional parameter `detect` which defaults to `true`. This means that the `to` parameter of the tag is also used to detect the language. However, if `detect` is set to `false`, the substitution is ignored for language detection.
+Each substitution tag also has an optional parameter `detect` which defaults to `true`. This means that the `to` parameter of the tag is also used to detect the language. However, if `detect` is set to `false`, the substitution is ignored for language detection. A `<detect token="..." />` tag adds a word that is only used to detect the language.
 
 Once the language is detected, translation is fully automatic. However, the language must be detected. The detected language is the language with the most words in the global scope if there is one with more than 0. If no words are found, no translation or selection is performed.
 
@@ -464,7 +479,7 @@ languages)" and None
 
 ### Files
 
-This tag has three forms. Each form will ensure that the name of the file ends up in the feedback table as a link to the content of the file. If the optional `href` parameter is not filled in, the content of the file will be shown with a pop-up. This can lead to long waiting times for large files, as the content is processed twice in the feedback table. For large files, the `href` parameter can be used. This will ensure that the name of the file is a link to a download of the file. If the `href` parameter is empty, there will be no link to the content of the file.
+The `FILE` tag has four forms. The first three ensure that the name of the file ends up in the feedback table as a link to the content of the file. If the optional `href` parameter is not filled in, the content of the file will be shown with a pop-up. This can lead to long waiting times for large files, as the content is processed twice in the feedback table. For large files, the `href` parameter can be used. This will ensure that the name of the file is a link to a download of the file. If the `href` parameter is empty, there will be no link to the content of the file.
 
 -   Embedded
 
@@ -502,13 +517,27 @@ This tag has three forms. Each form will ensure that the name of the file ends u
     This is the content of text.txt.
     ```
 
-To allow the use of the Python Tutor for exercises with files, a `FILE` tag must be used. If it is not an embedded file, a (valid) `href` attribute must also be present. In this latter case, the Python Tutor will also only work if the exercise is public.
+-   Expected file
+
+    With `src="memory"`, the tag gives the content of a file that the submission must write. The `FileContentChecker` output processor then compares the file the submission wrote with this content.
+
+    ``` python
+    >>> write_greeting('greeting.txt')
+    <FILE name="greeting.txt" src="memory">
+    Hello world!
+    </FILE>
+    <OUTPUTPROCESSOR>
+    FileContentChecker('greeting.txt')
+    </OUTPUTPROCESSOR>
+    ```
+
+To allow the use of Dodona's debugger for exercises with files, a `FILE` tag must be used. If it is not an embedded file, a (valid) `href` attribute must also be present. In this latter case, the debugger will also only work if the exercise is public.
 
 ### Execution context
 
-When a session is started from the online Python Tutor for the current statement, the execution of the statement may depend on previously executed statements. Therefore, we have introduced the concept of an execution context. The execution context can be adjusted in two ways.
+When a student starts Dodona's debugger for a test, the execution of the statement may depend on previously executed statements. Therefore, we have introduced the concept of an execution context. The execution context can be adjusted in two ways.
 
-The parameter `independent examples` indicates whether each statement forms its own execution context. If this parameter is `True` (the default value), each statement will be executed separately and only the current statement will be added to the source code when the Python Tutor is started. If the parameter is `False`, all statements will form an execution context by default. With the `NEWCONTEXT` flag, a new context can be started.
+The parameter `independent examples` indicates whether each statement forms its own execution context. If this parameter is `True` (the default value), each statement will be executed separately and only the current statement will be added to the source code when the debugger is started. If the parameter is `False`, all statements will form an execution context by default. With the `NEWCONTEXT` flag, a new context can be started.
 
 ``` python
 # first context
@@ -523,31 +552,3 @@ The parameter `independent examples` indicates whether each statement forms its 
 >>> statement5 #doctest: +NEWCONTEXT
 >>> statement6
 ```
-
-### Namespaces
-
-Doctests can be conditionally executed depending on whether some names are defined in the global namespace or some namespaces in the global namespace. This can be done by adding a (single) `NAMESPACE` tag to the doctest.
-
-The elements of the `NAMESPACE` tag describe conditions on multiple named objects. Each element has a mandatory `name` attribute, resulting in a test whether the name exists in the enclosed namespace (`NAMESPACE` or `CLASS`) and has the correct type (as given by the name of the tag).
-
-The namespace tests are executed in the order they appear in the `NAMESPACE` tag. As soon as a test fails, the execution of doctest and the following namespace tests stops. Only one block will be shown with the error message of the block that failed.
-
-Namespace tests are always *sticky* in that a failed namespace test does not execute the current doctest and all subsequent doctests until a doctest is found with its own `NAMESPACE` tag (and this tag does not have the `extend` attribute set to `true`).
-
-The `arg` attributes of `FUNCTION` and `METHOD` are implemented in a generic way and refer to the suffixes of the `function.__code__.co_` attributes. For example, `names` can be used to check that the function itself calls all mandatory functions. The value in the argument is evaluated as a python object.
-
-``` xml
-<NAMESPACE extends="true|false">
-    <FUNCTION name="function_name" args="arg1,arg2" names="function1,function2"/>
-    <CLASS name="Classname1">
-        <METHOD name="method_name" args="arg5" names="function3"/>
-    </CLASS>
-</NAMESPACE>
-```
-
-The attributes are as follows:
-
-- **`extends`**: When a new namespace tag is found with `extends="true"`, the tests in the new namespace tag are only executed if there were no previous namespace errors.
-- **`name`**: Name of the function/method/class that must be present in the namespace. This field is mandatory.
-- **`args`**: The mandatory arguments that must be present in the definition
-- **`names`**: The mandatory functions/methods that must be called in the function/method.
