@@ -94,17 +94,20 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - An optional `description`, a `Message` object.
   - `messages`, a list of `Message` objects.
   - `groups`, a list of `Testcase` objects.
+  - `data`, an optional `DebugData` object.
 - A `Testcase` object consists of:
   - `accepted`, a boolean indicating whether this testcase (could be a single statement or expression) is considered correct. Reflected in the feedback as a green checkmark or a red cross on the right side of the testcase.
   - An optional `description`, a `Message` object (probably a statement formatted as `code`).
   - `tests`, a list of `Test` objects.
   - `messages`, a list of message objects.
-  - `data`, an optional `DebugData` object.
+  - `data`, an optional object with `files`, as in `DebugData`: the files of this testcase, added to those of its context.
 - A `Test` object (used, e.g. to test either the returned and printed output of a statement) consists of:
   - An optional `description`, a `Message` object.
   - `accepted`, a boolean indicating whether this test is considered correct. `true` results in only showing the `generated` string, `false` results in showing a "diff" between the `generated` and `expected` strings.
   - `generated`, a string containing the output of the user.
   - `expected`, a string containing what the user should have outputted. Only used when this test is not `accepted`.
+  - An optional `channel`, a short string naming the output that is tested (e.g. `"stdout"` or `"return"`). It is shown as a badge when the test has no `description`.
+  - An optional `format`, either `"text"` (the default) or `"csv"`, which determines how `generated` and `expected` are compared and shown.
   - `messages`, a list of message objects.
 - An `Annotation` object consists of:
 
@@ -118,10 +121,12 @@ The full output returns a single JSON at the end. You must ensure that this is e
 - A `Message` object is either a plain string or consists of:
 
   - `format`, the format in which the message should be rendered. This format can be any of
-    - `"plain"`, which will render the message as normal text;
+    - `"plain"` (or `"text"`), which will render the message as normal text;
     - `"html"`, which allows for HTML markup in this message. Note that the HTML output is sanitised to prevent [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting) issues. JavaScript, for example, is not allowed, but most other tags should work.
-    - `"markdown"`, so the containing string is interpreted as markdown and converted to HTML;
+    - `"markdown"` (or `"md"`), so the containing string is interpreted as markdown and converted to HTML;
+    - `"callout"` (or `"callout-info"`, `"callout-warning"`, `"callout-danger"`), which renders the HTML message in a coloured box;
     - `"code"`, which will render the message in monospace and preserve all included whitespace;
+    - `"traceback"`, which renders the message as code, marked as an error;
     - `"python"`, which is the same as `"code"` with Python highlighting;
     - `"javascript"`, which is the same as `"code"` with JavaScript highlighting.
   - `description`, the actual text of the message as a string.
@@ -144,9 +149,10 @@ The full output returns a single JSON at the end. You must ensure that this is e
     - `"internal error"`, the judge exited with a non-zero status code.
     - `"unknown"`, something went wrong.
 
-- A `DebugData` object is used to run the Python Tutor that gives students a debug interface. Currently it is only relevant for Python. It consists of:
-  - `statements`, a string containing the extra code to be executed in the Python Tutor, to mimic this testcase.
-  - `stdin`, a string containing the input to be given to the Python Tutor, to mimic this testcase.
+- A `DebugData` object is used to run Dodona's debugger, which gives students a debug interface. Currently it is only relevant for Python. It consists of:
+  - `statements`, a string containing the extra code to be executed in the debugger, to mimic this context.
+  - `stdin`, a string containing the input to be given to the debugger, to mimic this context.
+  - `files`, an object that maps file names to the files the debugger needs. Each file is an object with `location`, either `"inline"` (then `content` is the content of the file) or `"href"` (then `content` is a link to the file, which may be relative to the exercise, e.g. `"media/data.txt"`).
 
 ![judge-output-reflection](./judge-output.png)
 
