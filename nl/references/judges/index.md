@@ -45,6 +45,13 @@ Het geeft wel de markdown code van een leerling weer en kan handig zijn om de ui
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-markdown) \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
+## PostgreSQL
+De PostgreSQL judge voert de query van een student uit op een PostgreSQL-databank en vergelijkt het resultaat met dat van de modeloplossing.
+Dodona host die databank niet: elke oefening geeft de PostgreSQL-server op waarmee de judge verbindt, dus je hebt toegang nodig tot een eigen server.\
+**Programmeertalen:** PostgreSQL\
+**Aan de slag** Er is geen publieke documentatie, neem contact op met de makers voor meer informatie over deze judge. \
+**Gemaakt door:** [DDCM, Universiteit Gent](https://ddcm.ugent.be)
+
 ## Prolog
 Prolog is een judge die gebruikt kan worden voor oefeningen in de programmeertaal Prolog.
 Het ondersteunt PLUnit, QuickCheck en eenvoudige input-outputtests.\

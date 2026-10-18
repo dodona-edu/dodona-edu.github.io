@@ -45,6 +45,13 @@ It does render the Markdown code of a student and can be useful to manually eval
 **Get started** [Documentation](https://github.com/dodona-edu/judge-markdown) \
 **Created by:** [Team Dodona](mailto:team@dodona.be)
 
+## PostgreSQL
+The PostgreSQL judge runs the query of a student on a PostgreSQL database and compares its result with that of the model solution.
+Dodona does not host the database: each exercise names the PostgreSQL server the judge connects to, so you need access to a server of your own.\
+**Programming languages:** PostgreSQL\
+**Get started** There is no public documentation, contact the creators to get more info about this judge. \
+**Created by:** [DDCM, Ghent University](https://ddcm.ugent.be)
+
 ## Prolog
 Prolog is a judge that can be used for exercises on the Prolog programming language.
 It supports PLUnit, QuickCheck and simple input output tests.\
