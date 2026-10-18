@@ -113,19 +113,6 @@ Csharp is a judge that can be used for exercises in C#.\
 **Get started** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
 **Created by:** [Team Dodona](mailto:team@dodona.be)
 
-### Javascript
-
-::: danger Note
-We do not recommend using this judge for new exercises.
-Use [TESTed](/en/guides/exercises/) for new Javascript exercises instead.
-:::
-
-Javascript is a judge that can be used for exercises on the JavaScript programming language.
-It is undocumented and has a lot of very usecase specific implementations.\
-**Programming languages:** JavaScript\
-**Get started** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/javascript) \
-**Created by:** [Team Dodona](mailto:team@dodona.be)
-
 ### Python
 ::: danger Note
 We do not recommend using this judge for new exercises.
@@ -141,6 +128,17 @@ It is a Python judge that allows simple input/output tests or more advanced doct
 ## Removed judges
 
 These judges have been removed from Dodona. Exercises that use them can no longer be evaluated or opened. We keep their entries here as a record, so that anyone wondering what happened to a judge can still find out, instead of finding no trace of it at all.
+
+### Javascript
+
+::: tip Alternative
+Use [TESTed](/en/guides/exercises/) instead.
+:::
+
+**Removed on:** 2026-10-19\
+**Programming languages:** JavaScript\
+**Get started** [Github repo](https://github.com/dodona-edu/judge-javascript), [examples](https://github.com/dodona-edu/example-exercises/tree/master/tested/javascript) \
+**Created by:** [Team Dodona](mailto:team@dodona.be)
 
 ### JUnit
 
