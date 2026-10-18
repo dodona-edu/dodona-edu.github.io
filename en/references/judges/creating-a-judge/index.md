@@ -132,7 +132,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - `description`, the actual text of the message as a string.
   - `permission`, a string specifying the visibility of this message. The permission can be any of
     - `"student"`, which makes the message visible for everyone;
-    - `"staff"`, which makes the message visible only for staff members (e.g. for judge debug output);
+    - `"educator"`, which makes the message visible only for educators, such as the course administrators (e.g. for judge debug output). `"staff"` is the deprecated name for this permission: Dodona still accepts it and stores it as `"educator"`;
     - `"zeus"`, which makes it visible only for almighty Zeus (e.g. for application debug output);
 
 - A `Status` string indicates the status of the submission. They can be separated in two categories
