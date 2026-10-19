@@ -13,7 +13,7 @@ We will implement a `Counter` class that allows us to keep track of a count.
 This guide assumes that you already have a working exercise repository.
 If that is not the case, first follow the guide [_Creating Exercises_](/en/guides/exercises/creating-exercises/introduction/).
 
-The final result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/class/).
+The final result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/class/).
 
 ## 1. Structure
 

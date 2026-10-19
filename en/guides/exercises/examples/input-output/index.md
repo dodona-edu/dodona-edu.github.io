@@ -14,7 +14,7 @@ This guide will provide a complete walkthrough for using this exercise in Dodona
 We assume that you already have a working exercise repository.
 If that is not the case, please first follow the guide [_Creating Exercises_](/en/guides/exercises/creating-exercises/introduction/).
 
-The result of this guide (the complete exercise) can also be found in our [repository of examples](https://github.com/dodona-edu/example-exercises/tree/master/tested/input-output/).
+The result of this guide (the complete exercise) can also be found in our [repository of examples](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/input-output/).
 
 ## 1. Structure
 

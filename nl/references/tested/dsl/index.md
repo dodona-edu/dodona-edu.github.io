@@ -276,7 +276,7 @@ Dit object bevat een aantal velden:
 - `evaluation_directory`: het pad van de map `evaluation` uit de oefening (waar dus het testplan in zit)
 - `programming_language`: de programmeertaal van de oplossing van de student
 - `natural_language`: de natuurlijke taal van de student die de oplossing indiende
-- `submission_path`: het pad van het ingediende bestand, of `None` als dat niet beschikbaar is. TESTed vult dit enkel in als het orakel in het testplan een lijst `languages` heeft; zonder die lijst is dit altijd `None`. [Deze voorbeeldoefening](https://github.com/dodona-edu/example-exercises/tree/master/tested/forbidden-construct) gebruikt het om na te gaan hoe een oplossing geschreven is.
+- `submission_path`: het pad van het ingediende bestand, of `None` als dat niet beschikbaar is. TESTed vult dit enkel in als het orakel in het testplan een lijst `languages` heeft; zonder die lijst is dit altijd `None`. [Deze voorbeeldoefening](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/forbidden-construct) gebruikt het om na te gaan hoe een oplossing geschreven is.
 
 De overige argumenten zijn dezelfde als in het attribuut `arguments` uit het testplan.
 In het voorbeeld zou de orakelfunctie dus drie argumenten hebben: de context en de twee getallen uit het testplan.

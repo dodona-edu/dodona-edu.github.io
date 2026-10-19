@@ -14,7 +14,7 @@ We zullen deze oefening hier volledig uitwerken voor gebruik met Dodona.
 We gaan er in deze handleiding van uit dat je al een werkende oefeningenrepository hebt.
 Is dat niet het geval, volg dan eerst de handleiding [_Oefeningen opstellen_](/nl/guides/exercises/creating-exercises/introduction/).
 
-Het resultaat van deze handleiding (de volledige oefening) kan je ook vinden in onze [repository met voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/tested/input-output/).
+Het resultaat van deze handleiding (de volledige oefening) kan je ook vinden in onze [repository met voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/input-output/).
 
 ## 1. Structuur
 
