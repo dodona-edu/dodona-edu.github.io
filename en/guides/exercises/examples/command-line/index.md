@@ -14,7 +14,7 @@ The program should then print the sum of these numbers to _stdout_.
 This guide assumes you already have a working exercise repository.
 If that is not the case, first follow the guide [_Creating Exercises_](/en/guides/exercises/creating-exercises/introduction/).
 
-The result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/command-line/).
+The result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/command-line/).
 
 ## 1. Structure
 

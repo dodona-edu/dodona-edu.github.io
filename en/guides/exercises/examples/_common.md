@@ -1,4 +1,4 @@
-The result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/function/).
+The result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/function/).
 
 ## 1. Structure
 

@@ -273,7 +273,7 @@ This object has a few attributes:
 - `evaluation_directory`: path to the `evaluation` folder of the exercise (that contains the test suite)
 - `programming_language`: the programming language of the submission
 - `natural_language`: the natural language of the user that submitted this submission
-- `submission_path`: path to the submitted file, or `None` if it is not available. TESTed only fills this in when the oracle has a `languages` list in the test suite; without it, this is always `None`. [This example exercise](https://github.com/dodona-edu/example-exercises/tree/master/tested/forbidden-construct) uses it to check how a submission is written.
+- `submission_path`: path to the submitted file, or `None` if it is not available. TESTed only fills this in when the oracle has a `languages` list in the test suite; without it, this is always `None`. [This example exercise](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/forbidden-construct) uses it to check how a submission is written.
 
 The other arguments are the same as the `arguments` attribute from the test suite.
 In this example, the check function would have three arguments: the context and the two numbers from the test suite.

@@ -16,7 +16,7 @@ We will fully develop this exercise for use with Dodona.
 This guide assumes that you already have a working exercise repository.
 If that is not the case, first follow the guide [_Creating Exercises_](/en/guides/exercises/creating-exercises/introduction/).
 
-The result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/files/).
+The result of this guide (the complete exercise) can also be found in our [example repository](https://github.com/dodona-edu/example-exercises/tree/master/tested/python/files/).
 
 ## 1. Structure
 
