@@ -144,8 +144,7 @@ These judges have been removed from Dodona. Exercises that use them can no longe
 
 ### JUnit
 
-::: danger Note
-This judge has been removed. Exercises that use it can no longer be evaluated.
+::: tip Alternative
 Use the [Java judge](#java) instead.
 :::
 

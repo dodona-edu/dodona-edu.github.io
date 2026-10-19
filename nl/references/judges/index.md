@@ -146,8 +146,7 @@ Onderstaande judges zijn verwijderd van Dodona. Oefeningen die deze judges gebru
 
 ### JUnit
 
-::: danger Opgepast
-Deze judge is verwijderd. Oefeningen die deze judge gebruiken, kunnen niet meer geëvalueerd worden.
+::: tip Alternatief
 Gebruik in plaats daarvan de [Java-judge](#java).
 :::
 
