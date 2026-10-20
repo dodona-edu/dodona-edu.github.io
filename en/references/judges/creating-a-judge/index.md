@@ -117,6 +117,7 @@ The full output returns a single JSON at the end. You must ensure that this is e
   - `type`, the severity of the annotation, either `"info"`, `"warning"` or `"error"`.
   - An optional `rows`, the number of rows to mark. This should be at least `1`. The default value is `1`.
   - An optional `columns`, the number of characters to mark in the last `row`. The default value is `0`, which will put a marker before the `column` character.
+  - An optional `format`, either `"plain"` (the default) or `"markdown"`. Plain text is shown in monospace with its whitespace preserved, which suits raw linter output. Markdown text is converted to HTML and sanitised like a markdown message, so you can, for example, show a rule code in bold and a name as inline code.
 
 - A `Message` object is either a plain string or consists of:
 
@@ -166,6 +167,7 @@ Because the format is split up in smaller commands, it can be parsed partially (
     { "command": "start-judgement" }
     { "command": "append-message", "message": "will be added to the judgement" }
     { "command": "annotate-code", "row": 3, "column": 4, "text": "some info on the fourth line, fifth column of the source" }
+    { "command": "annotate-code", "row": 0, "text": "**F401** `os` imported but unused", "type": "warning", "format": "markdown" }
     { "command": "start-tab", "title": "Tab One" }
     { "command": "start-context" }
     { "command": "start-testcase", "description": "case 1" }
