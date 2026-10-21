@@ -33,7 +33,7 @@ The HTML judge evaluates both the HTML and CSS code of a student, based on a mod
 **Created by:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Java
-The java judge uses the JUnit4 framework to run tests on Java exercises.\
+The Java judge runs JUnit tests on Java 25 exercises: JUnit 6 (JUnit Jupiter) by default, and JUnit 4 and JUnit 5 tests work too.\
 **Programming languages:** Java\
 **Get started** [Documentation](https://github.com/dodona-edu/judge-java), [examples](https://github.com/dodona-edu/judge-java/tree/master/examples) \
 **Created by:** [Team Dodona](mailto:team@dodona.be)

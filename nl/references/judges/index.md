@@ -33,7 +33,7 @@ De HTML judge beoordeelt zowel de HTML- als de CSS-code van een student, op basi
 **Gemaakt door:** [Brecht Willems](mailto:Brecht.Willems@UGent.be)
 
 ## Java
-Java is judge die het JUnit4-framework gebruikt om tests op Java-oefeningen uit te voeren.\
+Java is een judge die JUnit-tests uitvoert op Java-oefeningen (Java 25): standaard JUnit 6 (JUnit Jupiter), maar ook tests voor JUnit 4 en JUnit 5 werken.\
 **Programmeertalen:** Java\
 **Aan de slag** [Documentatie](https://github.com/dodona-edu/judge-java), [voorbeelden](https://github.com/dodona-edu/judge-java/tree/master/examples) \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
