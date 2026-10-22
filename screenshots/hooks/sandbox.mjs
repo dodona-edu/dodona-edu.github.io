@@ -33,16 +33,16 @@ const RUN_CODE = 'name = input("What is your name? ")\nprint(f"Hello, {name}! We
 // one-liner.
 const DEBUG_CODE = 'price = 12\nquantity = 3\ntotal = price * quantity\nprint(total)\n';
 
-async function openOffcanvasAndWaitReady(page) {
-  await page.locator('#scratchpad-offcanvas-show-btn').click();
+async function openSandboxAndWaitReady(page) {
+  await page.locator('#scratchpad-show-btn').click();
   // First run downloads Pyodide (~10-20s on a cold cache); give it room.
   await page
-    .locator('#scratchpad-offcanvas p-code-runner[backend-ready]')
+    .locator('#scratchpad p-code-runner[backend-ready]')
     .waitFor({ state: 'attached', timeout: 90000 });
 }
 
 async function replaceCode(page, code) {
-  const cm = page.locator('#scratchpad-offcanvas .cm-content').first();
+  const cm = page.locator('#scratchpad .cm-content').first();
   await cm.click();
   await page.keyboard.press('ControlOrMeta+A');
   await page.keyboard.press('Backspace');
@@ -52,24 +52,26 @@ async function replaceCode(page, code) {
 export async function prepare(page, { locale, shot }) {
   if (shot.id !== 'SB-2' && shot.id !== 'SB-3') return;
 
-  await openOffcanvasAndWaitReady(page);
-  const offcanvas = page.locator('#scratchpad-offcanvas');
+  await openSandboxAndWaitReady(page);
+  // Since dodona#9435 the sandbox is a column of the activity page (a
+  // section#scratchpad inside d-scratchpad) instead of an offcanvas.
+  const sandbox = page.locator('#scratchpad');
 
   if (shot.id === 'SB-2') {
     await replaceCode(page, RUN_CODE);
-    await offcanvas.getByText(RUN_LABEL[locale], { exact: true }).first().click();
+    await sandbox.getByText(RUN_LABEL[locale], { exact: true }).first().click();
     await page.waitForTimeout(1200);
 
     // The program blocks on input(); answer it through the real shadow <input>
     // inside md-outlined-text-field (Playwright pierces it, but .fill() needs
     // the actual <input>, not the custom-element host).
-    const realInput = offcanvas.locator('md-outlined-text-field input').first();
+    const realInput = sandbox.locator('md-outlined-text-field input').first();
     await realInput.fill('Ada');
     await page.keyboard.press('Enter');
 
     // Wait for the real, produced output -- not just the run finishing --
     // so the shot never ships a blank/placeholder output panel.
-    await offcanvas
+    await sandbox
       .locator('p-output .content pre', { hasText: 'Ada' })
       .waitFor({ state: 'visible', timeout: 15000 });
     await page.waitForTimeout(500);
@@ -78,17 +80,17 @@ export async function prepare(page, { locale, shot }) {
 
   // SB-3
   await replaceCode(page, DEBUG_CODE);
-  await offcanvas.getByText(DEBUG_LABEL[locale], { exact: true }).first().click();
+  await sandbox.getByText(DEBUG_LABEL[locale], { exact: true }).first().click();
 
   // Debugging activates once the trace is back from the worker; the frame
   // picker only renders then.
-  await offcanvas.locator('tc-frame-picker').waitFor({ state: 'attached', timeout: 15000 });
+  await sandbox.locator('tc-frame-picker').waitFor({ state: 'attached', timeout: 15000 });
   await page.waitForTimeout(500);
 
   // Frame 0 is a static help card (no variables yet) -- jump to the last
   // step ("»") so the shot shows real frames/variables and a highlighted
   // current line, not the placeholder state. The step counter between the
   // arrows is an <output>, so "»" is the last button, not a fixed index.
-  await offcanvas.locator('tc-frame-picker .btn-group button').last().click();
+  await sandbox.locator('tc-frame-picker .btn-group button').last().click();
   await page.waitForTimeout(500);
 }
