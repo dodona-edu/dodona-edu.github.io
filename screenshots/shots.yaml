@@ -2080,6 +2080,9 @@ shots:
     page: guides/students/scratchpad
     file: to-sandbox-button
     url: /{locale}/activities/576967365/
+    # The runner keeps the last viewport set; without this, the nl pass runs
+    # at SB-3's 1440 px and the hint next to the buttons wraps.
+    viewport: { width: 1600, height: 1200 }
     crop:
       selector: '.card-actions.card-actions-sticky'
       pad: 8
@@ -2098,8 +2101,11 @@ shots:
     # run finishing) before the shot is taken.
     viewport: { width: 1440, height: 900 }
     crop:
-      selector: '#scratchpad'
+      # The whole page: the description on the left, the sandbox column on
+      # the right. y 40 drops the empty band left by the hidden navbar.
+      clip: { x: 0, y: 40, width: 1440, height: 860 }
     must_show:
+      - the exercise description on the left, with the sandbox as a column next to it
       - '"Sandbox" header with "Runs in your browser. Nothing here is handed in." and the close button'
       - code editor with the short program, Run/Debug buttons, "Copy to hand-in" / "Kopiëren naar indienen"
       - input field and output panel with the produced output
@@ -2114,12 +2120,15 @@ shots:
     url: /{locale}/activities/576967365/
     hook: hooks/sandbox.mjs
     # Hook types a short flat (unindented) program, clicks Debug, waits for
-    # the frame picker to attach, then jumps to the last step so real
-    # frames/variables are showing instead of the frame-0 placeholder card.
+    # the stepper of the debugger panel, then jumps to the last step so real
+    # variables are showing instead of the step-1 help card.
     viewport: { width: 1440, height: 900 }
     crop:
-      selector: '#scratchpad'
+      # The folded "Show description" tab (x 68) plus the sandbox, which
+      # takes the rest of the width while debugging.
+      clip: { x: 56, y: 50, width: 1384, height: 850 }
     must_show:
+      - the description folded into the "Show description" / "Beschrijving tonen" tab on the left
       - the debugger next to the code, under a DEBUGGER header with "Close debugger" / "Debugger sluiten", with the step slider and arrow buttons
       - variables/frames shown for the current step
       - highlighted current line in the editor on the left

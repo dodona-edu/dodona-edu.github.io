@@ -29,7 +29,7 @@ The sandbox runs Python entirely in your browser. The first time you run code, y
 
 Write your code in the editor and click `Run`. The output of your program appears in the output panel below. While your code is running, you can interrupt it at any time with the `Stop` button.
 
-![Python sandbox with a short program, its produced output, and the input field](./sandbox-run-en.png)
+![Exercise description on the left and, next to it, the sandbox with a short program, its produced output, and the input field](./sandbox-run-en.png)
 
 Some more things the sandbox can do:
 
@@ -57,7 +57,7 @@ Click the `Debug` button next to `Run` to start the debugger. The debugger appea
 - Click `Stop debugging` to end the run. The debugger stays open, so you can start it again with `Debug` without anything on the page moving.
 - Click `Close debugger` to go back to the normal layout of the sandbox.
 
-![Debugger with the step slider, arrow buttons, the current step's variables, and the highlighted current line in the editor](./sandbox-debugger-en.png)
+![Debugger next to the code, with the step slider, arrow buttons, the current step's variables, and the highlighted current line in the editor; the description is folded into the Show description tab on the left](./sandbox-debugger-en.png)
 
 ### Debugging a Failed Test Case
 

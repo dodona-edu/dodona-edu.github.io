@@ -29,7 +29,7 @@ De sandbox voert Python volledig in je browser uit. De eerste keer dat je code u
 
 Schrijf je code in de editor en klik op `Uitvoeren`. De uitvoer van je programma verschijnt in het uitvoerpaneel eronder. Terwijl je code loopt, kan je ze op elk moment onderbreken met de knop `Stop`.
 
-![Python-sandbox met een kort programma, de geproduceerde uitvoer en het invoerveld](./sandbox-run-nl.png)
+![Beschrijving van de oefening links en daarnaast de sandbox met een kort programma, de geproduceerde uitvoer en het invoerveld](./sandbox-run-nl.png)
 
 Nog enkele dingen die de sandbox kan:
 
@@ -57,7 +57,7 @@ Klik op de knop `Debuggen` naast `Uitvoeren` om de debugger te starten. De debug
 - Klik op `Stop debugger` om de uitvoering te beëindigen. De debugger blijft open staan, zodat je hem opnieuw kan starten met `Debuggen` zonder dat er iets op de pagina verschuift.
 - Klik op `Debugger sluiten` om terug te keren naar de gewone indeling van de sandbox.
 
-![Debugger met de schuifbalk, pijltjesknoppen, de variabelen van de huidige stap en de gemarkeerde huidige regel in de editor](./sandbox-debugger-nl.png)
+![Debugger naast de code, met de schuifbalk, pijltjesknoppen, de variabelen van de huidige stap en de gemarkeerde huidige regel in de editor; de beschrijving is ingeklapt tot de tab Beschrijving tonen links](./sandbox-debugger-nl.png)
 
 ### Een fout testgeval debuggen
 

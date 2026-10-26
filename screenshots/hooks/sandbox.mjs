@@ -23,15 +23,22 @@ const DEBUG_LABEL = { en: 'Debug', nl: 'Debuggen' };
 
 // A short program with input(): demonstrates the input field and produces
 // real, checkable output.
-const RUN_CODE = 'name = input("What is your name? ")\nprint(f"Hello, {name}! Welcome to Dodona.")\n';
+// Localised, so the nl shot shows Dutch code next to the Dutch UI.
+const RUN_CODE = {
+  en: 'name = input("What is your name? ")\nprint(f"Hello, {name}! Welcome to Dodona.")\n',
+  nl: 'naam = input("Wat is je naam? ")\nprint(f"Hallo, {naam}! Welkom op Dodona.")\n',
+};
 
 // A short, flat (no indentation) program: typing indentation via
 // keyboard.type() fights CodeMirror's own auto-indent (verified live --
 // typing an indented for-loop by hand double-indents/dedents and throws an
-// IndentationError). Three assignments give the frame picker several real
+// IndentationError). Three assignments give the debugger several real
 // steps with growing state, which is more useful for a debugger shot than a
 // one-liner.
-const DEBUG_CODE = 'price = 12\nquantity = 3\ntotal = price * quantity\nprint(total)\n';
+const DEBUG_CODE = {
+  en: 'price = 12\nquantity = 3\ntotal = price * quantity\nprint(total)\n',
+  nl: 'prijs = 12\naantal = 3\ntotaal = prijs * aantal\nprint(totaal)\n',
+};
 
 async function openSandboxAndWaitReady(page) {
   await page.locator('#scratchpad-show-btn').click();
@@ -39,6 +46,10 @@ async function openSandboxAndWaitReady(page) {
   await page
     .locator('#scratchpad p-code-runner[backend-ready]')
     .waitFor({ state: 'attached', timeout: 90000 });
+  // The To sandbox button sits at the bottom of the page, so clicking it
+  // leaves the page scrolled down to the hand-in card. The sandbox column is
+  // sticky; scrolling back up puts the start of the description next to it.
+  await page.evaluate(() => window.scrollTo(0, 0));
 }
 
 async function replaceCode(page, code) {
@@ -58,7 +69,7 @@ export async function prepare(page, { locale, shot }) {
   const sandbox = page.locator('#scratchpad');
 
   if (shot.id === 'SB-2') {
-    await replaceCode(page, RUN_CODE);
+    await replaceCode(page, RUN_CODE[locale]);
     await sandbox.getByText(RUN_LABEL[locale], { exact: true }).first().click();
     await page.waitForTimeout(1200);
 
@@ -79,18 +90,20 @@ export async function prepare(page, { locale, shot }) {
   }
 
   // SB-3
-  await replaceCode(page, DEBUG_CODE);
+  await replaceCode(page, DEBUG_CODE[locale]);
   await sandbox.getByText(DEBUG_LABEL[locale], { exact: true }).first().click();
 
-  // Debugging activates once the trace is back from the worker; the frame
-  // picker only renders then.
-  await sandbox.locator('tc-frame-picker').waitFor({ state: 'attached', timeout: 15000 });
+  // Debugging activates once the trace is back from the worker; the stepper
+  // only renders then. The visible stepper is the row of md-icon-buttons
+  // (first, previous, next, last) in p-debugger > tc-trace. The sandbox also
+  // holds a tc-frame-picker, but it renders at zero size, so don't target it.
+  const stepper = sandbox.locator('p-debugger tc-trace .stepper md-icon-button');
+  await stepper.last().waitFor({ state: 'visible', timeout: 15000 });
   await page.waitForTimeout(500);
 
-  // Frame 0 is a static help card (no variables yet) -- jump to the last
-  // step ("»") so the shot shows real frames/variables and a highlighted
-  // current line, not the placeholder state. The step counter between the
-  // arrows is an <output>, so "»" is the last button, not a fixed index.
-  await sandbox.locator('tc-frame-picker .btn-group button').last().click();
-  await page.waitForTimeout(500);
+  // Step 1 is a static help card (no variables yet) -- jump to the last step
+  // so the shot shows real variables, the printed output and a highlighted
+  // current line, not the placeholder state.
+  await stepper.last().click();
+  await page.waitForTimeout(800);
 }
