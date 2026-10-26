@@ -8,7 +8,7 @@ title: Courses
 
 ## Why is my course archived? <Badge type="tip" text="teacher" />
 
-Every course on Dodona belongs to one academic year. After the academic year has ended, at the start of October, Dodona archives the courses of that year. An archived course remains visible, but becomes read-only: students can no longer register or submit solutions, and you can no longer change the course, its series or its evaluations. All submissions, scores and feedback are kept.
+Every course on Dodona belongs to one academic year. After the academic year has ended, at the start of October, Dodona archives the courses of that year. An archived course remains visible, but becomes read-only: students can no longer register or submit solutions, and you can no longer change the course, its series or its evaluations. The one exception is visibility: you can still choose who sees the course and each of its series, for example to hide last year's assessments. All submissions, scores and feedback are kept.
 
 On Dodona, a course stands for one group of students in one academic year. Archiving keeps that group together after the year is over:
 
