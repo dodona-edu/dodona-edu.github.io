@@ -8,7 +8,7 @@ title: Cursussen
 
 ## Waarom is mijn cursus gearchiveerd? <Badge type="tip" text="lesgever" />
 
-Elke cursus op Dodona hoort bij één academiejaar. Als het academiejaar voorbij is, archiveert Dodona begin oktober de cursussen van dat jaar. Een gearchiveerde cursus blijft zichtbaar, maar wordt alleen-lezen: studenten kunnen zich niet meer registreren en geen oplossingen meer indienen, en jij kan de cursus, de reeksen en de evaluaties niet meer aanpassen. Alle ingediende oplossingen, scores en feedback blijven bewaard.
+Elke cursus op Dodona hoort bij één academiejaar. Als het academiejaar voorbij is, archiveert Dodona begin oktober de cursussen van dat jaar. Een gearchiveerde cursus blijft zichtbaar, maar wordt alleen-lezen: studenten kunnen zich niet meer registreren en geen oplossingen meer indienen, en jij kan de cursus, de reeksen en de evaluaties niet meer aanpassen. Enkel de zichtbaarheid is een uitzondering: je kiest nog altijd wie de cursus en elk van de reeksen ziet, bijvoorbeeld om de toetsen van vorig jaar te verbergen. Alle ingediende oplossingen, scores en feedback blijven bewaard.
 
 Op Dodona staat een cursus voor één groep studenten in één academiejaar. Door te archiveren blijft die groep samen, ook als het jaar voorbij is:
 
