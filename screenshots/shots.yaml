@@ -2053,9 +2053,13 @@ shots:
 #
 # Capture notes (from the dev-and-media cookbook, refined against the live
 # instance):
-# - The sandbox opens as an off-canvas `#scratchpad-offcanvas`: code editor +
-#   Run/output on the left, the exercise description in an <iframe> on the
-#   right.
+# - Since dodona#9435 (Oct 2026) the sandbox is a column of the activity
+#   page (`section#scratchpad` in `d-scratchpad`, opened by
+#   `#scratchpad-show-btn`), next to the page's own description; there is
+#   no second description and no Description/Debugger tab any more. While
+#   debugging, the description folds into a "Show description" tab by
+#   default (dodona#9437). Below 992 px it is a bottom sheet (dodona#9438),
+#   so SB-2/SB-3 set a 1440 x 900 viewport.
 # - The Run/Debug buttons (md-filled-button/md-outlined-button) sit a few
 #   shadow roots deep (p-code-runner > p-button-lint). Playwright's own
 #   locators pierce open shadow roots natively, so a scoped text locator
@@ -2076,6 +2080,9 @@ shots:
     page: guides/students/scratchpad
     file: to-sandbox-button
     url: /{locale}/activities/576967365/
+    # The runner keeps the last viewport set; without this, the nl pass runs
+    # at SB-3's 1440 px and the hint next to the buttons wraps.
+    viewport: { width: 1600, height: 1200 }
     crop:
       selector: '.card-actions.card-actions-sticky'
       pad: 8
@@ -2088,21 +2095,24 @@ shots:
     file: sandbox-run
     url: /{locale}/activities/576967365/
     hook: hooks/sandbox.mjs
-    # Hook opens the offcanvas, waits for backend-ready, types a short
+    # Hook opens the sandbox column, waits for backend-ready, types a short
     # program that prints something and reads input(), clicks Run, answers
     # the input prompt, and waits for the real produced output (not just the
     # run finishing) before the shot is taken.
+    viewport: { width: 1440, height: 900 }
     crop:
-      selector: '#scratchpad-offcanvas'
+      # The whole page: the description on the left, the sandbox column on
+      # the right. y 40 drops the empty band left by the hidden navbar.
+      clip: { x: 0, y: 40, width: 1440, height: 860 }
     must_show:
-      - '"Python sandbox" header'
-      - code editor with the short program, Run/Debug buttons, "Finalize and submit" / "Naar indienbox"
+      - the exercise description on the left, with the sandbox as a column next to it
+      - '"Sandbox" header with "Runs in your browser. Nothing here is handed in." and the close button'
+      - code editor with the short program, Run/Debug buttons, "Copy to hand-in" / "Kopiëren naar indienen"
       - input field and output panel with the produced output
       - >-
         the input mode tabs "One at a time" / "All at once"
         ("Eén per keer" / "Alles ineens"), which replaced the two switch
         buttons in papyros 4.13.0
-      - Description tab with the exercise description on the right
 
   - id: SB-3
     page: guides/students/scratchpad
@@ -2110,12 +2120,16 @@ shots:
     url: /{locale}/activities/576967365/
     hook: hooks/sandbox.mjs
     # Hook types a short flat (unindented) program, clicks Debug, waits for
-    # the frame picker to attach, then jumps to the last step so real
-    # frames/variables are showing instead of the frame-0 placeholder card.
+    # the stepper of the debugger panel, then jumps to the last step so real
+    # variables are showing instead of the step-1 help card.
+    viewport: { width: 1440, height: 900 }
     crop:
-      selector: '#scratchpad-offcanvas'
+      # The folded "Show description" tab (x 68) plus the sandbox, which
+      # takes the rest of the width while debugging.
+      clip: { x: 56, y: 50, width: 1384, height: 850 }
     must_show:
-      - Debugger tab active on the right with the step slider and arrow buttons
+      - the description folded into the "Show description" / "Beschrijving tonen" tab on the left
+      - the debugger next to the code, under a DEBUGGER header with "Close debugger" / "Debugger sluiten", with the step slider and arrow buttons
       - variables/frames shown for the current step
       - highlighted current line in the editor on the left
       - '"Stop debugging" / "Stop debugger" button'
