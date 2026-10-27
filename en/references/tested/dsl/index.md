@@ -84,7 +84,9 @@ Each context must have at least one test case.
 Since each context is executed separately, the following two constraints apply:
 
 - Only the first test case may have a "main call", i.e. command line arguments or _stdin_.
+- Only the first test case may have `input_files`: they apply to the whole context.
 - Only the last test case may have a test for the program's exit code.
+- Only the last test case may have `output_files`: TESTed compares them after the whole context has run.
 
 Do note that the first and last test case may be the same one:
 if you only have one test case, it may be a main call and have a check for the exit code.
@@ -95,7 +97,9 @@ Test cases are the building blocks of a test suite, and contain some input and t
 Within each context, the following constraints apply to test cases:
 
 - Only the first test case may have a "main call", i.e. command line arguments or _stdin_.
+- Only the first test case may have `input_files`: they apply to the whole context.
 - Only the last test case may have a test for the program's exit code.
+- Only the last test case may have `output_files`: TESTed compares them after the whole context has run.
 
 Do note that the first and last test case may be the same one:
 if you only have one test case, it may be a main call and have a check for the exit code.
@@ -108,6 +112,7 @@ A test case can have the following attributes:
   - Without `content`, TESTed copies the file with that name from the `evaluation` folder to the working directory.
   - For files that come from the `evaluation` folder, Dodona shows a link in the feedback to the same file in `description/media`. Place a copy there if students should be able to open the file. For `content` that is written inline, Dodona shows that content when students click the file name, so no copy is needed.
   - If a test case has `input_files`, TESTed does not copy the `workdir` folder of the exercise for the context of that test case: only the listed files are available.
+  - Only the first test case of a context can have `input_files`. They can't be set on the root, a tab or a context.
 
 Additionally, a test case can have all attributes described below, but do note:
 
@@ -193,6 +198,8 @@ If you need more advanced return values, there are two options:
 #### `output_files` {#output-files}
 
 Specifies the files that the submission should create.
+
+Only the last test case of a context can have this attribute, because TESTed compares the files after the whole context has run. It can't be set on the root, a tab or a context.
 
 The attribute is a list of expected files, each an object with two attributes:
 

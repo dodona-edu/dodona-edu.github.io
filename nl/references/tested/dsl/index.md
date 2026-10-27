@@ -87,7 +87,9 @@ Omdat elke context apart wordt uitgevoerd, zijn de volgende beperkingen van toep
 
 - Enkel het eerste testgeval mag de "_main
   call_" bevatten, bijvoorbeeld met argumenten voor de commandoregel of standaardinvoer.
+- Enkel het eerste testgeval mag `input_files` bevatten: die gelden voor de hele context.
 - Enkel het laatste testgeval mag de test voor de exitcode bevatten.
+- Enkel het laatste testgeval mag `output_files` bevatten: TESTed vergelijkt die pas nadat de hele context uitgevoerd is.
 
 Merk op dat het eerste en laatste testgeval wel hetzelfde testgeval kunnen zijn:
 als er maar een testgeval is, kan het zowel de _main call_ als de test voor de exitcode bevatten.
@@ -98,7 +100,9 @@ Testgevallen zijn de bouwstenen van een testplannen, en bevatten de invoer en de
 Binnen dezelfde context zijn de volgende beperkingen van toepassing:
 
 - Enkel het eerste testgeval mag de _main call_ bevatten, bijvoorbeeld met argumenten voor de commandoregel of standaardinvoer.
+- Enkel het eerste testgeval mag `input_files` bevatten: die gelden voor de hele context.
 - Enkel het laatste testgeval mag de test voor de exitcode bevatten.
+- Enkel het laatste testgeval mag `output_files` bevatten: TESTed vergelijkt die pas nadat de hele context uitgevoerd is.
 
 Merk op dat het eerste en laatste testgeval wel hetzelfde testgeval kunnen zijn:
 als er maar een testgeval is, kan het zowel de _main call_ als de test voor de exitcode bevatten.
@@ -111,6 +115,7 @@ Een testgeval-object kan de volgende attributen hebben:
   - Zonder `content` kopieert TESTed het bestand met die naam uit de map `evaluation` naar de werkmap.
   - Voor bestanden die uit de map `evaluation` komen, toont Dodona in de feedback een link naar hetzelfde bestand in `description/media`. Plaats daar een kopie als studenten het bestand moeten kunnen openen. Voor `content` die rechtstreeks in het testplan staat, toont Dodona die inhoud wanneer studenten op de bestandsnaam klikken, dus dan is er geen kopie nodig.
   - Als een testgeval `input_files` heeft, kopieert TESTed de map `workdir` van de oefening niet voor de context van dat testgeval: enkel de opgesomde bestanden zijn beschikbaar.
+  - Enkel het eerste testgeval van een context kan `input_files` hebben. In de top van het testplan, een tab of een context kan dit attribuut niet.
 
 Daarnaast kan een testgeval ook de attributen die hieronder beschreven worden hebben, maar merk op:
 
@@ -196,6 +201,8 @@ Voor geavanceerde returnwaarden zijn er twee opties:
 #### `output_files` {#output-files}
 
 Specifieert de bestanden die de ingediende oplossing moet aanmaken.
+
+Enkel het laatste testgeval in een context kan dit attribuut hebben, want TESTed vergelijkt de bestanden pas nadat de hele context uitgevoerd is. In de top van het testplan, een tab of een context kan het niet.
 
 Het attribuut is een lijst van verwachte bestanden, elk een object met twee attributen:
 
