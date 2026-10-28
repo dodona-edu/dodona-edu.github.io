@@ -448,7 +448,6 @@ Deze naam is programeertaalafhankelijk:
       c: "to_string(1+1)"
       cpp: "to_string(1+1)"
       haskell: "Submission.toString (1+1)"
-      runhaskell: "Submission.toString (1+1)"
       java: "Submission.toString(1+1)"
       javascript: "submission.toString(1+1)"
       kotlin: "toString(1+1)"
