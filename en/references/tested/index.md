@@ -33,8 +33,6 @@ Currently, the following languages are supported:
 * Python
 * TypeScript (NodeJS)
 
-For Haskell, TESTed also provides the `runhaskell` variant, which interprets submissions with `runhaskell` instead of compiling them with `ghc`.
-
 Because programming exercises underpinned by TESTed are independent of any programming language,
 TESTed is best suited for the following kinds of exercises:
 

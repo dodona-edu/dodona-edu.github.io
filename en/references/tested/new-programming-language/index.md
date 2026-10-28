@@ -600,7 +600,6 @@ LANGUAGES = {
     "typescript": TypeScript,
     "kotlin": Kotlin,
     "python": Python,
-    "runhaskell": RunHaskell,
     "csharp": CSharp,
     "cpp": CPP,
 }
