@@ -969,10 +969,10 @@ mdast-util-to-hast@^13.0.0:
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
-medium-zoom@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.1.0.tgz#6efb6bbda861a02064ee71a2617a8dc4381ecc71"
-  integrity sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==
+medium-zoom@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.1.2.tgz#66918b266333b6f5f6c7d554ddd1d6e2b93410ce"
+  integrity sha512-0wTqeCQ4NGzjPghi7i2lMI6RyGj9N60fGvzY9HiNcxDTcvOw7S+ri7K3xVkrIZ+2uzUg4w/KSVMDdZXYMtHkdw==
 
 micromark-util-character@^2.0.0:
   version "2.1.0"
