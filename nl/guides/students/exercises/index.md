@@ -50,6 +50,8 @@ Kan je geen oplossing indienen, dan vertelt het indienpaneel je bovenaan waarom,
 
 Bij Python-oefeningen opent de knop `Naar sandbox` naast de indienknop [de Python-sandbox](../scratchpad/), waarin je je code in de browser kan uitvoeren en debuggen voor je ze indient.
 
+Op een breed scherm kan je het indienpaneel in beeld houden terwijl je de oefening leest. Klik op de punaise in de hoofding van het paneel (`Vastzetten naast de beschrijving`): het paneel verhuist naar een kolom naast de beschrijving en scrolt op zichzelf, zodat je de opgave kan lezen terwijl je je code schrijft en de feedback doorneemt. Op de plaats waar het paneel stond, zet de knop `Losmaken` het terug onder de beschrijving. Dodona onthoudt je keuze voor de volgende oefeningen. Meer plaats nodig voor je code? Met `Beschrijving inklappen` klap je de beschrijving in tot een smalle tab `Beschrijving tonen`, zodat het paneel de volledige breedte van de pagina krijgt.
+
 ::: tip Werken met het toetsenbord
 De editor neemt je toetsenbord niet over wanneer de pagina opent: klik erin (of ga ernaartoe met <kbd>Tab</kbd>) om te beginnen typen. In de editor zelf laat <kbd>Tab</kbd> je code inspringen. Wil je met het toetsenbord verder naar de rest van de pagina, druk dan op <kbd>Esc</kbd> en daarna op <kbd>Tab</kbd>. Kom je met het toetsenbord in de editor terecht, dan herinnert hij je daaraan: `Esc en dan Tab verlaat de editor`.
 :::
