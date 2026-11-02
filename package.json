@@ -20,7 +20,7 @@
     "@types/node": "^26.6.5",
     "gray-matter": "^4.0.3",
     "markdown-it-imsize": "^2.0.1",
-    "medium-zoom": "^1.1.0",
+    "medium-zoom": "^1.1.2",
     "resolve-accept-language": "^3.2.2",
     "vitepress": "^1.6.4",
     "playwright-core": "^1.64.0",
