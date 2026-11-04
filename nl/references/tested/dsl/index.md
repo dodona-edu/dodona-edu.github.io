@@ -308,7 +308,7 @@ Een `Message` is een klasse van de module `evaluation_utils` en heeft de volgend
 
 1. `description`: het bericht om te tonen.
 2. `format`: het formaat van het bericht, zoals `text`, `code` en `html`.
-3. `permission`: wie het bericht kan zien: `staff`, `student` of `zeus`.
+3. `permission`: wie het bericht kan zien: `educator`, `student` of `zeus`.
 
 Concreet wordt dit:
 
@@ -323,7 +323,7 @@ def evaluate_test(context):
       messages=[Message(
         description="Hallo",
         format="html",
-        permission="staff"
+        permission="educator"
       )]
     )
 ```

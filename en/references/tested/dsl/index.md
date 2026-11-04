@@ -306,7 +306,7 @@ A `Message` is a class from the `evaluation_utils` module and has the following 
 
 1. `description`: the message to show.
 2. `format`: the format of the message, like `text`, `code` or `html`.
-3. `permission`: who can see the message: `staff`, `student` or `zeus`.
+3. `permission`: who can see the message: `educator`, `student` or `zeus`.
 
 This becomes:
 
@@ -321,7 +321,7 @@ def evaluate_test(context):
       messages=[Message(
         description="Hallo",
         format="html",
-        permission="staff"
+        permission="educator"
       )]
     )
 ```
