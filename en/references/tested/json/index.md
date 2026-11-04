@@ -814,7 +814,7 @@ def evaluate_test(context):
       messages=[Message(
         description="Hallo",
         format="html",
-        permission="staff"
+        permission="educator"
       )]
     )
 ```
