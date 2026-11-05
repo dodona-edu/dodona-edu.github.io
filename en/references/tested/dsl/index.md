@@ -71,12 +71,14 @@ since `contexts` and `testcases` are mutually exclusive.
 
 A context is a group of test cases that depend on each other.
 For example, test cases that use variables must be in the same context.
-The context object has four attributes:
+The context object has six attributes:
 
 - `testcases`*: a list of [test cases](#test-cases)
 - `config`: the [configuration options](#configuration-options) for this context and all children
 - `context`: an optional description of the context
 - `files`: optional list of [files](#files). This attribute is deprecated: use `input_files` on a [test case](#test-cases) instead.
+- `before`: optional code that runs before the test cases of this context, see [below](#before-and-after)
+- `after`: optional code that runs after the test cases of this context
 
 In most cases, it is fine to leave the description empty.
 
@@ -90,6 +92,45 @@ Since each context is executed separately, the following two constraints apply:
 
 Do note that the first and last test case may be the same one:
 if you only have one test case, it may be a main call and have a check for the exit code.
+
+#### `before` and `after` {#before-and-after}
+
+Use `before` and `after` to make the test cases of a context predictable, for example by seeding a random generator, overriding a function such as `input` or `prompt`, or setting module state.
+`before` runs before the first test case of the context, `after` after the last one.
+
+Usually the [root](#root-of-the-test-suite) sets `language`, and `before` and `after` are plain strings with code in that programming language:
+
+```yaml
+language: "python"
+tabs:
+- tab: "Dice"
+  contexts:
+  - before: "import random; random.seed(7)"
+    testcases:
+    - expression: "submission.roll()"
+      return: 3
+```
+
+Without a root `language`, the value maps each programming language to its own code, just like a [language-specific `expression` or `statement`](#language-specific-expressions-and-statements).
+A plain string is then an error.
+
+```yaml
+- tab: "Dice"
+  contexts:
+    - before:
+        python: "import random; random.seed(7)"
+      testcases:
+        - expression: "roll()"
+          return: 3
+```
+
+- They can only be set on a context, not on a tab or the root.
+  A tab that uses the `testcases` shorthand has to switch to `contexts` to use them.
+- They don't limit the programming languages the exercise supports: a language without an entry runs without that code.
+  Give `before` and `after` an entry for every programming language the exercise supports.
+- The same seed gives different numbers in each programming language, so the expected values of a seeded context only hold for one programming language.
+- In Python, `before` runs before the submission is imported.
+  It needs its own imports and can't refer to functions or variables of the submission.
 
 ### Test cases
 

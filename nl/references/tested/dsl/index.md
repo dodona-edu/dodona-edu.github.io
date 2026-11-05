@@ -73,12 +73,14 @@ Hoewel er zes mogelijke attributen zijn, zal elk tab-object hoogstens vijf attri
 
 Een context is een groep testgevallen die afhankelijk zijn van elkaar.
 Testgevallen die variabelen gebruiken, moeten bijvoorbeeld in dezelfde context zitten.
-Het context-object heeft vier attributen:
+Het context-object heeft zes attributen:
 
 - `testcases`*: een lijst van [testgevallen](#testgevallen)
 - `config`: de [configuratieopties](#configuratieopties) voor deze context en al zijn kinderen
 - `context`: een optionele beschrijving van de context
 - `files`: een optionele lijst van [bestanden](#bestanden). Dit attribuut is verouderd (_deprecated_): gebruik `input_files` op een [testgeval](#testgevallen).
+- `before`: optionele code die uitgevoerd wordt vóór de testgevallen van deze context, zie [hieronder](#before-and-after)
+- `after`: optionele code die uitgevoerd wordt na de testgevallen van deze context
 
 In de meeste gevallen is aangewezen om de beschrijving leeg te laten.
 
@@ -93,6 +95,45 @@ Omdat elke context apart wordt uitgevoerd, zijn de volgende beperkingen van toep
 
 Merk op dat het eerste en laatste testgeval wel hetzelfde testgeval kunnen zijn:
 als er maar een testgeval is, kan het zowel de _main call_ als de test voor de exitcode bevatten.
+
+#### `before` en `after` {#before-and-after}
+
+Gebruik `before` en `after` om de testgevallen van een context voorspelbaar te maken, bijvoorbeeld door een toevalsgenerator te seeden, een functie zoals `input` of `prompt` te overschrijven of de toestand van een module in te stellen.
+`before` wordt uitgevoerd vóór het eerste testgeval van de context, `after` na het laatste.
+
+Meestal stelt de [top van het testplan](#top-van-het-testplan) `language` in, en zijn `before` en `after` gewone strings met code in die programmeertaal:
+
+```yaml
+language: "python"
+tabs:
+- tab: "Dice"
+  contexts:
+  - before: "import random; random.seed(7)"
+    testcases:
+    - expression: "submission.roll()"
+      return: 3
+```
+
+Zonder `language` in de top van het testplan koppelt de waarde elke programmeertaal aan de eigen code, net zoals bij een [taalspecifieke `expression` of `statement`](#taalspecifieke-expressies-en-statements).
+Een gewone string is dan een fout.
+
+```yaml
+- tab: "Dice"
+  contexts:
+    - before:
+        python: "import random; random.seed(7)"
+      testcases:
+        - expression: "roll()"
+          return: 3
+```
+
+- Je kan ze enkel op een context instellen, niet op een tab of in de top van het testplan.
+  Een tab die de afkorting `testcases` gebruikt, moet overschakelen naar `contexts` om ze te gebruiken.
+- Ze beperken de programmeertalen die de oefening ondersteunt niet: in een programmeertaal zonder waarde wordt de context uitgevoerd zonder die code.
+  Geef `before` en `after` dus een waarde voor elke programmeertaal die de oefening ondersteunt.
+- Dezelfde seed geeft in elke programmeertaal andere getallen, dus de verwachte waarden van een context met een seed gelden maar voor één programmeertaal.
+- In Python wordt `before` uitgevoerd voordat de inzending geïmporteerd wordt.
+  Er zijn dus eigen imports nodig, en je kan er niet naar functies of variabelen van de inzending verwijzen.
 
 ### Testgevallen
 
