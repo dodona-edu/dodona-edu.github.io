@@ -115,6 +115,19 @@ print("Hallo, " + name + "!")
 
 Die code wordt uitgevoerd in de browser van de student en kan invoer lezen, dus een programma dat iets vraagt, werkt gewoon.
 
+Las een trinket een databestand in, zoals een tekstbestand naast `main.py`, dan kan dat hier ook. Zet het bestand in de map `description/media/` van de leesactiviteit en geef het op in een `files`-attribuut:
+
+```html
+<dw-code-playground files="media/grades.txt">
+<pre>
+with open("grades.txt") as f:
+    print(f.read())
+</pre>
+</dw-code-playground>
+```
+
+Het pad is relatief ten opzichte van de beschrijving en begint dus met `media/`. In de code open je het bestand met enkel zijn naam, zonder map. Studenten zien elk bestand in een eigen tabblad naast de code: ze kunnen het lezen, maar niet aanpassen. Meerdere bestanden scheid je met een spatie. Elke keer dat de code uitgevoerd wordt, vertrekt ze van de oorspronkelijke bestanden, dus een programma dat naar een bestand schrijft, geeft telkens hetzelfde resultaat.
+
 ::: warning Code playgrounds zijn nog een vroege versie
 
 Dit is een proof of concept. Zowel het uitzicht als de manier waarop je ze schrijft, verandert wellicht nog, dus reken erop dat je pagina's met een playground later nog moet bijwerken. Voorlopig draaien ze enkel Python.

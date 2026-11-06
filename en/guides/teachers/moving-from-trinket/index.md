@@ -115,6 +115,19 @@ print("Hello, " + name + "!")
 
 The block runs in the student's browser and can read input, so a program that asks a question works as expected.
 
+A trinket that read a data file, such as a text file next to `main.py`, can keep it. Put the file in the `description/media/` folder of the reading activity and list it in a `files` attribute:
+
+```html
+<dw-code-playground files="media/grades.txt">
+<pre>
+with open("grades.txt") as f:
+    print(f.read())
+</pre>
+</dw-code-playground>
+```
+
+The path is relative to the description, so it starts with `media/`. In the code, you open the file by its name alone, without the folder. Students see each file in its own tab next to the code, where they can read it but not change it. Separate several files with a space. Every run starts from the original files, so a program that writes to a file gives the same result each time.
+
 ::: warning Code playgrounds are an early preview
 
 This is a proof of concept. Both the way playgrounds look and the way you write them are likely to change, so expect to revisit pages that use them. They currently run Python only.
