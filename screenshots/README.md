@@ -10,6 +10,10 @@ expedition. Built during the 2026-07 docs refresh.
   development database (`bin/rails db:seed`). The manifests reference seeded objects by
   id (course 11 "Visualisation Test", course 29 "Programming 1", users 1/5/6, …); if the
   seeds change materially, the manifests need a review.
+  The seed of November 2026 no longer creates course 29 and gives activities random
+  ids, so the students shots need a copy of an older seeded dev database (dump it into a
+  scratch database and migrate the copy). `DODONA_BASE` points the runner at another
+  host or port, e.g. `http://dodona.localhost:3100`.
 - `yarn install` in this repo (provides `playwright-core` and `yaml`).
 - A cached Chromium headless shell (`npx playwright-core install chromium-headless-shell`
   once, or an existing `~/Library/Caches/ms-playwright` cache). Override with
