@@ -1291,7 +1291,7 @@ shots:
     page: guides/students/exercises
     file: exercise-page
     url: /{locale}/courses/29/series/140/activities/347592237/
-    state: [students-series-deadlines, new-handin-flow]
+    state: [students-series-deadlines, new-handin-flow, course29-repo-access]
     hook: hooks/students-interact.mjs
     iframeProfilerFix: true
     # This URL already has a submission for user 5, so the editor preloads it with the
@@ -1314,6 +1314,7 @@ shots:
       - description on the page background (no card)
       - previous and next activity cards above the hand-in card
       - hand-in card with the always-visible code editor and the Submit button
+      - pin button next to the submission-count button in the hand-in card header (from 1280 px, dodona-edu/dodona#9638)
       - '"On this page" rail on the right ending in "Hand in" with its status line'
       - NO profiler badge in the description's corner
     notes: |
@@ -1341,7 +1342,7 @@ shots:
     page: guides/students/exercises
     file: handin-editor
     url: /{locale}/courses/29/series/140/activities/347592237/
-    state: [students-series-deadlines, new-handin-flow]
+    state: [students-series-deadlines, new-handin-flow, course29-repo-access]
     hook: hooks/students-interact.mjs
     # This URL already has submission #1347 on it (needed later for D14/D15), so the editor
     # preloads that submission's code with a "We have preloaded your latest submission"
@@ -1356,9 +1357,30 @@ shots:
     must_show:
       - empty editor line 1
       - submission-history button with submission count in the card eyebrow
+      - pin button next to it (from 1280 px)
       - highlighted Submit button
       - '"To sandbox" button'
       - '"You can submit as many times as you like..." hint line'
+
+  - id: handin-pinned
+    page: guides/students/exercises
+    file: handin-pinned
+    url: /{locale}/courses/29/series/140/activities/347592237/
+    state: [students-series-deadlines, new-handin-flow, course29-repo-access]
+    # Clears the preloaded submission (as handin-editor), pins the card and types a short
+    # solution; the hook removes the stored pin choice again so the shots after this one
+    # load unpinned.
+    hook: hooks/handin-pinned.mjs
+    clickText: { en: 'Clear editor', nl: 'Maak de editor leeg' }
+    iframeProfilerFix: true
+    viewport: { width: 1440, height: 900 }
+    crop:
+      # The whole page below the hidden navbar, as SB-2.
+      clip: { x: 0, y: 40, width: 1440, height: 860 }
+    must_show:
+      - description on the left, the hand-in card pinned in a column on the right with the filled pin icon
+      - '"Collapse description" (nl: "Beschrijving inklappen") above the exercise title'
+      - code in the editor, the Submit button in the card footer
 
   - id: handin-preloaded
     page: guides/students/exercises
@@ -1380,7 +1402,7 @@ shots:
     page: guides/students/exercises
     file: handin-feedback
     url: /{locale}/courses/29/series/140/activities/347592237/
-    state: [students-series-deadlines, students-submission-echo-correct, new-handin-flow]
+    state: [students-series-deadlines, students-submission-echo-correct, new-handin-flow, course29-repo-access]
     hook: hooks/students-interact.mjs
     # In-place feedback (replaces the retired Feedback tab): open the submission-history
     # dropdown in the card eyebrow, then click the newest (throwaway, correct) row; the
@@ -1390,7 +1412,7 @@ shots:
     crop:
       selector: '.handin-card'
     must_show:
-      - '"Feedback / Submission #N" card eyebrow'
+      - '"Feedback / Submission #N" card eyebrow, with the pin button in the header (from 1280 px)'
       - submission bar with green Correct status, "Back to editor" and "Edit this submission"
       - at least 2 context cards
       - '"Edit & resubmit" button in the card footer'
@@ -1419,7 +1441,7 @@ shots:
     page: guides/students/exercises
     file: handin-result-notice
     url: /{locale}/courses/29/series/141/activities/369972474/
-    state: [students-series-deadlines, new-handin-flow]
+    state: [students-series-deadlines, new-handin-flow, course29-repo-access]
     # Staged: the hook opens submission #1 from the history, then hands the notice the
     # latest submission (#2, wrong), as exercise.ts does when judging finishes while you
     # look at something else. See hooks/handin-result-notice.mjs for why.
@@ -1429,7 +1451,7 @@ shots:
       union: ['.handin-card > :first-child', 'd-result-notice']
       pad: 8
     must_show:
-      - card eyebrow "Feedback / Submission #1" (nl: "Oplossing #1")
+      - card eyebrow "Feedback / Submission #1" (nl: "Oplossing #1"), with the pin button in the header
       - status bar of the opened submission with "Back to editor" and "Edit this submission"
       - '"New result!" callout with "Your new submission has finished judging: wrong." and "View result" (nl: "Nieuw resultaat!", "Bekijk resultaat")'
 
@@ -2106,6 +2128,7 @@ shots:
       clip: { x: 0, y: 40, width: 1440, height: 860 }
     must_show:
       - the exercise description on the left, with the sandbox as a column next to it
+      - '"Collapse description" (nl: "Beschrijving inklappen") above the exercise title (dodona-edu/dodona#9652)'
       - '"Sandbox" header with "Runs in your browser. Nothing here is handed in." and the close button'
       - code editor with the short program, Run/Debug buttons, "Copy to hand-in" / "Kopiëren naar indienen"
       - input field and output panel with the produced output

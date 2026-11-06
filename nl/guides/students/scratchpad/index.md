@@ -13,13 +13,13 @@ De sandbox is beschikbaar op de pagina van elke Python-oefening. Onderaan het pa
 
 ![Indienbalk met de knop Naar sandbox naast Indienen](./to-sandbox-button-nl.png)
 
-Op een breed scherm opent de `Sandbox` in een kolom rechts op de oefeningpagina, naast de beschrijving. De beschrijving blijft op haar plaats staan, zodat je de opgave kan blijven lezen terwijl je je code schrijft. De lijst van de reeks links wordt intussen een smalle kolom met de status van elke activiteit; de knop bovenaan (`Reeks tonen`) toont de volledige lijst over de pagina. Sluit de sandbox met de sluitknop rechtsboven (`Sandbox sluiten`).
+Op een breed scherm opent de `Sandbox` in een kolom rechts op de oefeningpagina, naast de beschrijving. De beschrijving blijft op haar plaats staan, zodat je de opgave kan blijven lezen terwijl je je code schrijft. De lijst van de reeks links wordt intussen een smalle kolom met de status van elke activiteit; de knop bovenaan (`Reeks tonen`) toont de volledige lijst over de pagina. Sluit de sandbox met de sluitknop rechtsboven (`Sandbox sluiten`). Meer plaats nodig voor je code? Met `Beschrijving inklappen` klap je de beschrijving in tot een smalle tab `Beschrijving tonen`; als je de sandbox sluit, klapt de beschrijving weer open. Heb je [het indienpaneel vastgezet](../exercises/#indienen-van-een-oplossing) naast de beschrijving, dan opent de sandbox op zijn plaats, en heet de sluitknop `Terug naar indienen`.
 
 De sandbox bevat een **code-editor** met een knop `Uitvoeren`, een veld om **invoer** te geven en de **uitvoer** van je code.
 
 Op een smartphone of in een smal venster opent de sandbox als een paneel dat onderaan het scherm omhoog schuift. Tik op de verduisterde pagina erboven, of gebruik de sluitknop, om het weer te sluiten.
 
-Had je al code geschreven in de editor van de oefeningpagina, dan start de sandbox automatisch met die code. Bevat de sandbox nog andere code van een vorige sessie, dan vraagt Dodona eerst of je die wil overschrijven met je laatste aanpassingen.
+Had je al code geschreven in de editor van de oefeningpagina, dan start de sandbox automatisch met die code. Daarna houdt de sandbox zijn eigen code bij: sluit je hem en open je hem opnieuw, dan staat je code er nog, net als je aanpassingen aan de bestanden van de oefening. Heb je intussen de code in de editor van de oefeningpagina gewijzigd, dan biedt een melding bovenaan de sandbox die code aan: `Je code bij Indienen is gewijzigd. Wil je die in de sandbox gebruiken?`. Klik op `Gebruiken` om de code in de sandbox te vervangen, of op `Negeren` om ze te houden. Het werkt ook omgekeerd: sluit je de sandbox nadat je de code erin gewijzigd hebt, dan biedt het indienpaneel die code aan met `Je code in de sandbox is gewijzigd. Wil je die hier gebruiken?`.
 
 ::: tip De eerste uitvoering kan even duren
 De sandbox voert Python volledig in je browser uit. De eerste keer dat je code uitvoert, moet je browser de Python-omgeving nog downloaden en opstarten, waardoor het even kan duren voor je uitvoer ziet. Daarna gaat het een stuk sneller.
@@ -61,7 +61,7 @@ Klik op de knop `Debuggen` naast `Uitvoeren` om de debugger te starten. De debug
 
 ### Een fout testgeval debuggen
 
-Je kan de debugger ook rechtstreeks starten vanuit de feedback op een oplossing. Op de feedbackpagina van een Python-oefening staat bij testgevallen een knop `Debuggen`. Als je erop klikt, opent de sandbox met de code van je oplossing, wordt dat specifieke testgeval uitgevoerd met dezelfde invoer die de judge gebruikte, en start de debugger. Bovenaan de sandbox staat welke test je aan het debuggen bent (bijvoorbeeld `Test #1 aan het debuggen`), en bij de debugger zie je onder `Testgeval dat gedebugd wordt` het testgeval zelf. Zo kan je stap voor stap volgen waar je oplossing precies de mist ingaat bij een gefaalde test.
+Je kan de debugger ook rechtstreeks starten vanuit de feedback op een oplossing. Op de feedbackpagina van een Python-oefening staat bij testgevallen een knop `Debuggen`. Als je erop klikt, opent de sandbox met de code van je oplossing, wordt dat specifieke testgeval uitgevoerd met dezelfde invoer die de judge gebruikte, en start de debugger. Bovenaan de sandbox staat welke test je aan het debuggen bent (bijvoorbeeld `Test #1 aan het debuggen`), en de test zelf opent in een tab naast je code (bijvoorbeeld `Test #1`). Zodra je een stap zet, schakelt de sandbox over naar de tab `Code` om de regel te tonen die wordt uitgevoerd; klik op de tab van de test om de test opnieuw te bekijken. Zo kan je stap voor stap volgen waar je oplossing precies de mist ingaat bij een gefaalde test.
 
 ![Testgeval op de feedbackpagina met de knop Debuggen](./feedback-debug-button-nl.png)
 
