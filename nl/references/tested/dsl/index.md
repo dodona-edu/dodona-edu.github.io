@@ -239,6 +239,24 @@ Voor geavanceerde returnwaarden zijn er twee opties:
 - Een string met de tag `!expression` gebruikt het dezelfde Python-syntaxis te gebruiken als voor de [expressies en statements](#expressies-en-statements).
 - Een object met de tag `!oracle` is het object voor een eigen orakel (een eigen checkfunctie) (zie [hieronder](#eigen-orakelfunctie-custom-check)).
 
+Zonder `return`-attribuut verwacht TESTed dat de expressie niets teruggeeft, bijvoorbeeld `None` in Python of een `void`-methode in Java. Dat past bij een functie die enkel iets uitschrijft of aanpast. `return: null` en een lege `return:` betekenen hetzelfde.
+
+- Geeft de expressie niets terug, dan slaagt het testgeval en toont de feedback geen regel voor de returnwaarde.
+- Geeft ze wel een waarde terug, dan faalt het testgeval en toont de feedback die waarde tegenover een lege verwachte waarde. Een functie die een waarde teruggeeft, heeft dus altijd een `return`-attribuut nodig.
+
+Om te controleren of een functie `None` teruggeeft en dat ook in de feedback te tonen, gebruik je `!expression "None"`. TESTed vertaalt die waarde naar de programmeertaal van de ingediende oplossing, bijvoorbeeld `Nothing` in Haskell en `null` in Java en JavaScript. Schrijf altijd `None`: TESTed aanvaardt `!expression "Nothing"` niet.
+
+```yaml
+- expression: 'greet("Jan")'
+  stdout: "Hello, Jan!"
+- expression: "find_index([1, 2, 3], 5)"
+  return: !expression "None"
+```
+
+Het eerste testgeval verwacht dat `greet` niets teruggeeft en toont enkel de uitvoer. Het tweede verwacht dat `find_index` `None` teruggeeft en toont dat in de feedback.
+
+Wil je de returnwaarde helemaal niet controleren, schrijf de oproep dan als [`statement`](#expression-statement).
+
 #### `output_files` {#output-files}
 
 Specifieert de bestanden die de ingediende oplossing moet aanmaken.
