@@ -236,6 +236,24 @@ If you need more advanced return values, there are two options:
 - string tagged as `!expression` use the same Python syntax as for [expressions and statements](#expressions-and-statements)
 - objects tagged as `!oracle` denote the return value oracle (a custom check function) (see [below](#custom-check-function-oracles))
 
+Without a `return` attribute, TESTed expects the expression to return nothing, for example `None` in Python or a `void` method in Java. This suits a function that only prints or changes something. `return: null` and an empty `return:` mean the same thing.
+
+- If the expression returns nothing, the test case passes and the feedback shows no line for the return value.
+- If it returns a value, the test case fails and the feedback shows that value against an empty expected value. A function that returns a value therefore always needs a `return` attribute.
+
+To check that a function returns `None` and show that in the feedback, use `!expression "None"`. TESTed translates this value to the programming language of the submission, for example `Nothing` in Haskell and `null` in Java and JavaScript. Always write `None`: TESTed does not accept `!expression "Nothing"`.
+
+```yaml
+- expression: 'greet("Jan")'
+  stdout: "Hello, Jan!"
+- expression: "find_index([1, 2, 3], 5)"
+  return: !expression "None"
+```
+
+The first test case expects `greet` to return nothing and only shows its output. The second one expects `find_index` to return `None` and shows that in the feedback.
+
+To not check the return value at all, write the call as a [`statement`](#expression-statement) instead.
+
 #### `output_files` {#output-files}
 
 Specifies the files that the submission should create.
