@@ -20,12 +20,6 @@ C is a judge that uses the GTester framework to run tests on C exercises.\
 **Get started** [Documentation](https://github.com/mvdcamme/C-Judge), [examples](https://github.com/mvdcamme/C-Judge/tree/master/example_exercises) \
 **Created by:** [Maarten Vandercammen](mailto:mvdcamme@vub.ac.be)
 
-## Haskell
-Haskell is a judge that uses HUnit to test Haskell exercises. \
-**Programming languages:** Haskell\
-**Get started** [Github repo](https://github.com/dodona-edu/judge-haskell), [examples](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
-**Created by:** [Team Dodona](mailto:team@dodona.be)
-
 ## HTML
 The HTML judge evaluates both the HTML and CSS code of a student, based on a model solution or a checklist of criteria.\
 **Programming languages:** HTML, CSS\
@@ -111,6 +105,18 @@ Use [TESTed](/en/guides/exercises/) for new C# exercises instead.
 Csharp is a judge that can be used for exercises in C#.\
 **Programming languages:** C#\
 **Get started** [Examples](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
+**Created by:** [Team Dodona](mailto:team@dodona.be)
+
+### Haskell
+
+::: danger Note
+We do not recommend using this judge for new exercises.
+Use [TESTed](/en/guides/exercises/) for new Haskell exercises instead.
+:::
+
+Haskell is a judge that uses HUnit to test Haskell exercises. \
+**Programming languages:** Haskell\
+**Get started** [Github repo](https://github.com/dodona-edu/judge-haskell), [examples](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
 **Created by:** [Team Dodona](mailto:team@dodona.be)
 
 ### Python
