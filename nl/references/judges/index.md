@@ -20,12 +20,6 @@ C is een judge die het GTester-framework gebruikt om testen uit te voeren op C-o
 **Aan de slag** [Documentatie](https://github.com/mvdcamme/C-Judge), [voorbeelden](https://github.com/mvdcamme/C-Judge/tree/master/example_exercises) \
 **Gemaakt door:** [Maarten Vandercammen](mailto:mvdcamme@vub.ac.be)
 
-## Haskell
-Haskell is een judge die HUnit gebruikt om Haskell-oefeningen te testen. \
-**Programmeertalen:** Haskell\
-**Aan de slag** [Github repo](https://github.com/dodona-edu/judge-haskell), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
-**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
-
 ## HTML
 De HTML judge beoordeelt zowel de HTML- als de CSS-code van een student, op basis van een modeloplossing of een checklist met criteria.\
 **Programmeertalen:** HTML, CSS\
@@ -112,6 +106,18 @@ Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe C#-oefenin
 Csharp is een judge die gebruikt kan worden voor oefeningen in C#.\
 **Programmeertalen:** C# \
 **Aan de slag** [Voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/c%23) \
+**Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
+
+### Haskell
+
+::: danger Opgepast
+We raden af om nieuwe oefeningen te maken voor deze judge.
+Gebruik in plaats daarvan [TESTed](/nl/guides/exercises/) voor nieuwe Haskell-oefeningen.
+:::
+
+Haskell is een judge die HUnit gebruikt om Haskell-oefeningen te testen. \
+**Programmeertalen:** Haskell\
+**Aan de slag** [Github repo](https://github.com/dodona-edu/judge-haskell), [voorbeelden](https://github.com/dodona-edu/example-exercises/tree/master/haskell) \
 **Gemaakt door:** [Team Dodona](mailto:team@dodona.be)
 
 ### Python
