@@ -99,7 +99,7 @@ Dit zijn de linters die TESTed op dit moment gebruikt:
 | Java            | [Checkstyle](https://github.com/checkstyle/checkstyle) |
 | JavaScript      | [ESLint](https://eslint.org/)                          |
 | Kotlin          | [Ktlint](https://ktlint.github.io/)                    |
-| Python          | [Pylint](https://pylint.pycqa.org/en/latest/)          |
+| Python          | [Ruff](https://docs.astral.sh/ruff/)                   |
 | TypeScript      | [ESLint](https://eslint.org/)                          |
 
 Het Booleaanse veld `options.linter` kan gebruikt worden om linters in (`true`) of uit (`false`) te schakelen voor een programmeeroefening,
@@ -245,9 +245,9 @@ Hier is een voorbeeld dat het gebruik van een aantal van deze velden toont:
 
 ### Python
 
-In het veld `pylint_config` kan de locatie van een configuratiebestand voor PyLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
+In het veld `ruff_config` kan de locatie van een configuratiebestand voor [Ruff](https://docs.astral.sh/ruff/) gegeven worden, zoals `ruff.toml`, relatief ten opzichte van de `evaluation`-map van de oefening.
 TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in Python.
-Hier is een voorbeeld dat het bestand `pylint.rc` instelt als configuratiebestand voor PyLint:
+Hier is een voorbeeld dat het bestand `ruff.toml` instelt als configuratiebestand voor Ruff:
 
 ```json
 {
@@ -255,13 +255,27 @@ Hier is een voorbeeld dat het bestand `pylint.rc` instelt als configuratiebestan
     "options": {
       "language": {
         "python": {
-          "pylint_config": "pylint.rc"
+          "ruff_config": "ruff.toml"
         }
       }
     }   
   }
 }
 ```
+
+Dit configuratiebestand vervangt de standaardregels van TESTed volledig, het vult ze niet aan.
+Wil je een uitzondering toevoegen, vertrek dan van een kopie van de [standaardregels](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/python/rules/ruff.toml) en voeg de uitzondering toe aan die kopie.
+Met `ignore` zet je bijvoorbeeld een regel uit, en met een `builtins`-lijst bovenaan geef je namen op die tijdens het uitvoeren beschikbaar zijn:
+
+```toml
+builtins = ["get_choice"]
+
+[lint]
+ignore = ["SIM115"]
+```
+
+Laat de `target-version` in je kopie gelijk aan de Python-versie waarmee TESTed ingediende oplossingen uitvoert (momenteel `py315`).
+Anders meldt Ruff syntax die Python wel aanvaardt als fout.
 
 ### TypeScript
 
@@ -317,7 +331,7 @@ Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) 
           "ktlint_ruleset": "ktlint_rules.jar"
         },
         "python": {
-          "pylint_config": "pylint.rc"
+          "ruff_config": "ruff.toml"
         },
         "typescript": {
           "eslint_config": "eslintrc.yaml"
