@@ -101,7 +101,7 @@ TESTed currently uses the following linters:
 | Java       | [Checkstyle](https://github.com/checkstyle/checkstyle) |
 | JavaScript | [ESLint](https://eslint.org/)                          |
 | Kotlin     | [Ktlint](https://ktlint.github.io/)                    |
-| Python     | [Pylint](https://pylint.pycqa.org/en/latest/)          |
+| Python     | [Ruff](https://docs.astral.sh/ruff/)                   |
 | TypeScript | [ESLint](https://eslint.org/)                          |
 
 The boolean attribute `options.linter` can be used to enable (`true`) or disable (`false`) linting for a programming exercise,
@@ -250,10 +250,10 @@ Here's an example that shows some of these attributes in action:
 
 ### Python
 
-The attribute `pylint_config` takes the path name of a PyLint configuration file,
+The attribute `ruff_config` takes the path name of a [Ruff](https://docs.astral.sh/ruff/) configuration file such as `ruff.toml`,
 relative to the `evaluation` directory of the exercise.
 TESTed will use this configuration file when linting Python submissions.
-Here's an example that configures a PyLint configuration file `pylint.rc`:
+Here's an example that configures a Ruff configuration file `ruff.toml`:
 
 ```json
 {
@@ -261,13 +261,27 @@ Here's an example that configures a PyLint configuration file `pylint.rc`:
     "options": {
       "language": {
         "python": {
-          "pylint_config": "pylint.rc"
+          "ruff_config": "ruff.toml"
         }
       }
     }   
   }
 }
 ```
+
+The configuration file replaces the default rules of TESTed entirely, it does not extend them.
+To add an exception, start from a copy of the [default rules](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/python/rules/ruff.toml) and add the exception to that copy.
+For example, `ignore` turns off a rule, and a top-level `builtins` list declares names that are available at runtime:
+
+```toml
+builtins = ["get_choice"]
+
+[lint]
+ignore = ["SIM115"]
+```
+
+Keep the `target-version` of your copy equal to the Python version TESTed runs submissions on (currently `py315`).
+Otherwise Ruff reports syntax that Python accepts as an error.
 
 ### TypeScript
 
@@ -324,7 +338,7 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
           "ktlint_ruleset": "ktlint_rules.jar"
         },
         "python": {
-          "pylint_config": "pylint.rc"
+          "ruff_config": "ruff.toml"
         },
         "typescript": {
           "eslint_config": "eslintrc.yaml"
