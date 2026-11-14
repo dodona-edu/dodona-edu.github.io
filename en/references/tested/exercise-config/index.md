@@ -205,10 +205,11 @@ Here's an example that configures a Checkstyle configuration file `java_style.xm
 
 ### JavaScript
 
-The attribute `eslint_config` takes the path name of a ESLint configuration file,
+The attribute `eslint_config` takes the path name of an [ESLint](https://eslint.org/) configuration file,
 relative to the `evaluation` directory of the exercise.
 TESTed will use this configuration file when linting JavaScript submissions.
-Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
+ESLint only reads configuration files in the [flat config format](https://eslint.org/docs/latest/use/configure/configuration-files), a JavaScript module such as `eslint.config.mjs`.
+Here's an example that configures an ESLint configuration file `eslint.config.mjs`:
 
 ```json
 {
@@ -216,13 +217,49 @@ Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
     "options": {
       "language": {
         "javascript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }
   }
 }
 ```
+
+The configuration file replaces the default configuration of TESTed entirely, it does not extend it.
+To add an exception, start from a copy of the [default configuration](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/javascript/eslint.config.mjs) and change that copy.
+For example, this copy also turns on `eqeqeq` and declares `prompt` as a name that is available at runtime:
+
+```js
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const js = require("@eslint/js");
+const globals = require("globals");
+
+const files = ["**/!(*.*)", "**/*.js"];
+
+export default [
+  { files, ...js.configs.recommended },
+  {
+    files,
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "commonjs",
+      globals: { ...globals.node, ...globals.es2020, prompt: "readonly" },
+    },
+    rules: {
+      "no-var": "warn",
+      semi: "warn",
+      "no-unused-vars": "off",
+      eqeqeq: "error",
+    },
+  },
+];
+```
+
+Keep two things from the default configuration in your copy:
+
+- `files` on every configuration object. The submitted file has no extension, and ESLint skips a file that no `files` pattern matches, so without it the submission is not linted at all. The pattern `**/!(*.*)` matches files without an extension.
+- `createRequire` to load packages. An `import` doesn't find the packages installed in the judge. The packages `@eslint/js`, `globals`, `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` are available.
 
 ### Kotlin
 
@@ -285,10 +322,10 @@ Otherwise Ruff reports syntax that Python accepts as an error.
 
 ### TypeScript
 
-The attribute `eslint_config` takes the path name of a ESLint configuration file,
+The attribute `eslint_config` takes the path name of an ESLint configuration file,
 relative to the `evaluation` directory of the exercise.
 TESTed will use this configuration file when linting TypeScript submissions.
-Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
+Here's an example that configures an ESLint configuration file `eslint.config.mjs`:
 
 ```json
 {
@@ -296,13 +333,16 @@ Here's an example that configures a ESLint configuration file `eslintrc.yaml`:
     "options": {
       "language": {
         "typescript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }
   }
 }
 ```
+
+The configuration file works as for [JavaScript](#javascript): it replaces the default configuration entirely and needs the same `files` and `createRequire`.
+Start from a copy of the [default TypeScript configuration](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/typescript/eslint.config.mjs), which uses the `@typescript-eslint` plugin and parser and matches `**/*.ts` instead of `**/*.js`.
 
 ## Complete example
 
@@ -331,7 +371,7 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
           "checkstyle_config": "java_style.xml"
         },
         "javascript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         },
         "kotlin": {
           "editorconfig": "kotlin.editorconfig",
@@ -341,7 +381,7 @@ Here's an example of a complete configuration file (`config.json`) for a Dodona 
           "ruff_config": "ruff.toml"
         },
         "typescript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }

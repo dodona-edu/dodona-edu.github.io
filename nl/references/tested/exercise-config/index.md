@@ -203,7 +203,8 @@ Hier is een voorbeeld dat het bestand `java_style.xml` instelt als configuratieb
 
 In het veld `eslint_config` kan de locatie van een configuratiebestand voor ESLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
 TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in JavaScript.
-Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebestand voor ESLint:
+ESLint leest enkel configuratiebestanden in het [flat config-formaat](https://eslint.org/docs/latest/use/configure/configuration-files), een JavaScript-module zoals `eslint.config.mjs`.
+Hier is een voorbeeld dat het bestand `eslint.config.mjs` instelt als configuratiebestand voor ESLint:
 
 ```json
 {
@@ -211,13 +212,49 @@ Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebe
     "options": {
       "language": {
         "javascript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }   
   }
 }
 ```
+
+Dit configuratiebestand vervangt de standaardconfiguratie van TESTed volledig, het vult ze niet aan.
+Wil je een uitzondering toevoegen, vertrek dan van een kopie van de [standaardconfiguratie](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/javascript/eslint.config.mjs) en pas die kopie aan.
+Deze kopie zet bijvoorbeeld ook `eqeqeq` aan en geeft `prompt` op als naam die tijdens het uitvoeren beschikbaar is:
+
+```js
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const js = require("@eslint/js");
+const globals = require("globals");
+
+const files = ["**/!(*.*)", "**/*.js"];
+
+export default [
+  { files, ...js.configs.recommended },
+  {
+    files,
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "commonjs",
+      globals: { ...globals.node, ...globals.es2020, prompt: "readonly" },
+    },
+    rules: {
+      "no-var": "warn",
+      semi: "warn",
+      "no-unused-vars": "off",
+      eqeqeq: "error",
+    },
+  },
+];
+```
+
+Neem twee dingen uit de standaardconfiguratie over in je kopie:
+
+- `files` in elk configuratieobject. Het ingediende bestand heeft geen extensie, en ESLint slaat een bestand over als geen enkel `files`-patroon erop past. Zonder `files` wordt de ingediende oplossing dus helemaal niet gelint. Het patroon `**/!(*.*)` past op bestanden zonder extensie.
+- `createRequire` om packages te laden. Een `import` vindt de packages die in de judge geïnstalleerd zijn niet. De packages `@eslint/js`, `globals`, `@typescript-eslint/eslint-plugin` en `@typescript-eslint/parser` zijn beschikbaar.
 
 ### Kotlin
 
@@ -281,7 +318,7 @@ Anders meldt Ruff syntax die Python wel aanvaardt als fout.
 
 In het veld `eslint_config` kan de locatie van een configuratiebestand voor ESLint gegeven worden, relatief ten opzicht van de `evaluation`-map van de oefening.
 TESTed zal dit configuratiebestand gebruiken bij het uitvoeren van de linter op ingediende oplossingen in TypeScript.
-Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebestand voor ESLint:
+Hier is een voorbeeld dat het bestand `eslint.config.mjs` instelt als configuratiebestand voor ESLint:
 
 ```json
 {
@@ -289,13 +326,16 @@ Hier is een voorbeeld dat het bestand `eslintrc.yaml` instelt als configuratiebe
     "options": {
       "language": {
         "typescript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }
   }
 }
 ```
+
+Dit configuratiebestand werkt zoals bij [JavaScript](#javascript): het vervangt de standaardconfiguratie volledig en heeft dezelfde `files` en `createRequire` nodig.
+Vertrek van een kopie van de [standaardconfiguratie voor TypeScript](https://github.com/dodona-edu/universal-judge/blob/master/tested/languages/typescript/eslint.config.mjs), die de plugin en parser van `@typescript-eslint` gebruikt en `**/*.ts` in plaats van `**/*.js`.
 
 ## Volledig voorbeeld
 
@@ -324,7 +364,7 @@ Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) 
           "checkstyle_config": "java_style.xml"
         },
         "javascript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         },
         "kotlin": {
           "editorconfig": "kotlin.editorconfig",
@@ -334,7 +374,7 @@ Hieronder is een voorbeeld van een volledig configuratiebestand (`config.json`) 
           "ruff_config": "ruff.toml"
         },
         "typescript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }
