@@ -30,11 +30,16 @@ De eerste keer dat je Dodona gebruikt vanuit Ufora, moeten we je Ufora-profiel k
 
 ## 3. Selecteer oefeningen
 
-In het dialoogvenster verschijnt een overzicht van alle cursussen waar je toegang tot hebt. Nadat je een cursus kiest, verschijnen alle oefeningenreeksen voor dat vak. Als je vervolgens een reeks kiest, dan verschijnen alle oefeningen binnen die reeks.
+In het dialoogvenster verschijnt een overzicht van alle cursussen waar je toegang tot hebt. Nadat je een cursus kiest, verschijnen alle oefeningenreeksen voor dat vak. Als je geen reeks selecteert, dan voeg je een link naar de cursus in Dodona aan Ufora toe.
+
+Nadat je een reeks kiest, vraagt Dodona `Wat wil je toevoegen?`:
+
+- `Hele reeks` (standaard) voegt één link naar de volledige reeks toe.
+- `Specifieke leeractiviteiten` toont alle oefeningen binnen die reeks. Met behulp van de ctrl-knop (of command op een mac) op je toetsenbord kan je een of meer oefeningen selecteren.
 
 ![select activity](./select-activity.png)
 
-Met behulp van de ctrl-knop (of command op een mac) op je toetsenbord kan je een of meer oefeningen selecteren. Klik vervolgens op de knop `Bevestigen` om die oefeningen aan Ufora toe te voegen. Als je geen oefeningen of geen reeks selecteert dan zal je respectievelijk een link naar de reeks of de cursus in Dodona aan Ufora toevoegen.
+Klik vervolgens op de knop `Bevestigen` om de reeks of de geselecteerde oefeningen aan Ufora toe te voegen.
 
 ## 4. Selecteer 'Als externe bron openen' 
 

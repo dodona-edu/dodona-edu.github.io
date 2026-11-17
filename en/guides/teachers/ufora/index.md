@@ -31,11 +31,16 @@ The first time you use Dodona from Ufora, we need to link your Ufora profile wit
 
 ## 3. Select exercises
 
-The dialog should display an overview of all courses you have access to. After picking a course, a list with all exercise series of that course should appear. If you select an exercise series, all exercises of that series appear.
+The dialog should display an overview of all courses you have access to. After picking a course, a list with all exercise series of that course should appear. If you don't select an exercise series, you'll add a link to the course.
+
+After you select an exercise series, Dodona asks `What do you want to add?`:
+
+- `Entire series` (the default) adds one link to the whole series.
+- `Specific activities` shows all exercises of that series. Using the ctrl button (or command on a Mac) on your keyboard, you can select one or more exercises.
 
 ![select activity](./select-activity.png)
 
-Using the ctrl button (or command on a Mac) on your keyboard, you can select one or more exercises. Next, click on the `Confirm` button to add those exercises to Ufora. If you don't select exercises or an exercise series, you'll add a link to the series or course respectively.
+Next, click on the `Confirm` button to add the series or the selected exercises to Ufora.
 
 ## 4. Select 'Open as external resource'
 
