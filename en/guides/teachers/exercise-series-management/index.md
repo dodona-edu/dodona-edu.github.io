@@ -116,7 +116,7 @@ The main actions are `Evaluate series` and `Series scoresheet`; other actions ca
   (if the course user has indeed submitted a solution based on which the submission status could be determined).
   You can also filter by students who have started at least one activity, hide reading activities, and search by name or student labels in this overview.
 
-* `Export student submissions`: This action allows you to [export](../series-export-and-retest/#export-exercise-series-submissions) the submitted solutions of students for the exercises in the series as a zip file.
+* `Export student submissions`: This action allows you to [export](../series-export-and-retest/#export-exercise-series-submissions) the submitted solutions of students for the exercises in the series as a zip file or a summary csv.
 
 * `Retest submissions`: This action [retests](../series-export-and-retest/#retest-submissions) all solutions that course users have submitted for exercises in the exercise series.
   This can be useful if, for example, you have added or modified a number of tests and want to retest the already submitted solutions.
