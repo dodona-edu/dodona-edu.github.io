@@ -102,7 +102,7 @@ Onderaan de reeks vind je enkele handige acties die cursusbeheerders kunnen uitv
 
   Klik op het icoontje van een indienstatus om naar de oplossing te navigeren die gebruikt werd om de indienstatus te bepalen (als de cursusgebruiker effectief een oplossing heeft ingediend op basis waarvan de indienstatus kon bepaald worden). Je kan in dit overzicht ook filteren op studenten die aan minstens één activiteit begonnen zijn, leesactiviteiten verbergen, en zoeken op naam of studentlabel.
 
-* `Oplossingen van studenten exporteren`: deze actie stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te [exporteren](../series-export-and-retest/#oefeningenreeks-oplossingen-exporteren) als zip-bestand.
+* `Oplossingen van studenten exporteren`: deze actie stelt je in staat om de ingezonden oplossingen van studenten voor de oefeningen in de reeks te [exporteren](../series-export-and-retest/#oefeningenreeks-oplossingen-exporteren) als zip-bestand of samenvattende csv.
 
 * `Oplossingen hertesten`: deze actie [hertest](../series-export-and-retest/#oplossing-hertesten) alle oplossingen die cursusgebruikers ingediend hebben voor oefeningen van de oefeningenreeks. Dit kan nuttig zijn als je bijvoorbeeld een aantal testen hebt toegevoegd of aangepast en je de al ingediende oplossingen opnieuw wil testen.
 

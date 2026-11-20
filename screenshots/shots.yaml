@@ -315,7 +315,7 @@ shots:
     crop:
       selector: '#choose-options-panel'
     must_show:
-      - export option checkboxes/radios
+      - What should the export contain? group with its three options (code and summary preselected)
       - Start export button
 
   - id: SE-4

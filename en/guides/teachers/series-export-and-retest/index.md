@@ -11,8 +11,8 @@ This page walks you through both.
 
 ## Export exercise series submissions
 
-In the action menu of a series, you as a teacher can choose to export the submitted code of your students as a zip file.
-This can be useful if you prefer to grade on paper and want to print the code.
+In the action menu of a series, you as a teacher can choose to export the submitted code of your students as a zip file, or only a summary of their submissions as a csv file.
+The code can be useful if you prefer to grade on paper and want to print it.
 
 ![Series card bottom bar with the open action menu showing the Export student submissions row](./series-export-action-en.png)
 
@@ -22,14 +22,19 @@ This will take you to an export page where you will first be asked to select the
 
 If you want to download all of them, select the checkbox in the table header. Then click `Next step` to continue.
 
-Next, you can check various options that affect the content of the export.
-You can obtain a summary csv, choose whether you want all solutions or only the latest ones, whether the deadline should be considered,
+Next, you can choose various options that affect the content of the export.
+Under `What should the export contain?` you choose between `The code and a summary` (the default), `Only the code` and `Only the summary`.
+You can also choose whether you want all solutions or only the latest ones, whether the deadline should be considered,
 whether the files should be grouped per student or per exercise, and which students should be included.
+The grouping question is hidden when you only want the summary.
 
-![Export wizard step 2: option checkboxes and radio buttons with the Start export button](./export-options-en.png)
+![Export wizard step 2: the question what the export should contain, followed by the other options and the Start export button](./export-options-en.png)
 
 Click `Start export` to start the download.
-At that moment, all submitted solutions will be zipped, which may take a moment. Then the download will start automatically.
+At that moment, the submitted solutions are zipped, which may take a moment. Then the download will start automatically.
+With `Only the summary` you get a single csv file named after the series instead of a zip file. This is faster, because no code needs to be read.
+The deadline, the submission history and the student options decide which rows it contains.
+If you want a row for every submission and not only the last one, answer `Should the submission history be included?` with `Yes, include all submissions`.
 
 ![Export wizard step 3 showing the "preparing submissions for download" progress message](./export-started-en.png)
 

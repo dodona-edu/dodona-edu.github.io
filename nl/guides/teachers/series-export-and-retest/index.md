@@ -11,7 +11,7 @@ Op deze pagina overlopen we ze allebei.
 
 ## Oefeningenreeks oplossingen exporteren
 
-In het actiemenu van een reeks kan je als lesgever kiezen om de ingezonden code van je studenten te exporteren als een zip-bestand. Dit is bijvoorbeeld handig als je liever op papier verbetert en de code wil afdrukken.
+In het actiemenu van een reeks kan je als lesgever kiezen om de ingezonden code van je studenten te exporteren als een zip-bestand, of enkel een samenvatting van hun oplossingen als csv-bestand. De code is bijvoorbeeld handig als je liever op papier verbetert en ze wil afdrukken.
 
 ![Onderste balk van de reekskaart met het geopende actiemenu en de rij Oplossingen van studenten exporteren](./series-export-action-nl.png)
 
@@ -21,11 +21,11 @@ Dit brengt je naar een exporteerpagina waar je eerst gevraagd wordt om de oefeni
 
 Als je ze allemaal wenst te downloaden, dan kies je het selectievakje in de hoofding van de tabel. Daarna klik je op `Volgende stap` om verder te gaan.
 
-Vervolgens kan je verschillende opties aanvinken die de inhoud van de export beïnvloeden. Je kan een samenvattende csv verkrijgen, kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per oefening gegroepeerd moeten worden en welke studenten meegerekend moeten worden.
+Vervolgens kan je verschillende opties kiezen die de inhoud van de export beïnvloeden. Bij `Wat moet de export bevatten?` kies je tussen `De code en een samenvatting` (de standaardkeuze), `Enkel de code` en `Enkel de samenvatting`. Je kan ook kiezen of je alle oplossingen of enkel de laatste wil, of er rekening gehouden moet worden met de deadline, of de bestanden per student of per oefening gegroepeerd moeten worden en welke studenten meegerekend moeten worden. De vraag over de groepering verdwijnt als je enkel de samenvatting wil.
 
-![Exporteerwizard stap 2: aanvinkbare opties met de knop Start export](./export-options-nl.png)
+![Exporteerwizard stap 2: de vraag wat de export moet bevatten, gevolgd door de andere opties en de knop Start export](./export-options-nl.png)
 
-Klik op `Start export` om de download te starten. Op dat moment worden alle ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart.
+Klik op `Start export` om de download te starten. Op dat moment worden de ingediende oplossingen gezipt, dit kan even duren. Daarna wordt de download automatisch gestart. Met `Enkel de samenvatting` krijg je in plaats van een zip-bestand één csv-bestand dat naar de reeks genoemd is. Dit gaat sneller, omdat er geen code ingelezen moet worden. De deadline, de indiengeschiedenis en de studentenopties bepalen welke rijen erin staan. Wil je een rij voor elke oplossing en niet enkel voor de laatste, antwoord dan op `Wil je de indiengeschiedenis downloaden?` met `Ja, alle oplossingen`.
 
 ![Exporteerwizard stap 3 met het voortgangsbericht "oplossingen aan het voorbereiden om te downloaden"](./export-started-nl.png)
 
