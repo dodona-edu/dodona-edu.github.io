@@ -128,6 +128,19 @@ with open("grades.txt") as f:
 
 The path is relative to the description, so it starts with `media/`. In the code, you open the file by its name alone, without the folder. Students see each file in its own tab next to the code, where they can read it but not change it. Separate several files with a space. Every run starts from the original files, so a program that writes to a file gives the same result each time.
 
+A trinket that drew with the `turtle` module works as well. The drawing appears in a `Drawing` panel below the output, on a white canvas:
+
+```html
+<dw-code-playground>
+<pre>
+import turtle
+for _ in range(5):
+    turtle.forward(100)
+    turtle.right(144)
+</pre>
+</dw-code-playground>
+```
+
 ::: warning Code playgrounds are an early preview
 
 This is a proof of concept. Both the way playgrounds look and the way you write them are likely to change, so expect to revisit pages that use them. They currently run Python only.

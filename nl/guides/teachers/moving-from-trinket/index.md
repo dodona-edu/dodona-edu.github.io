@@ -128,6 +128,19 @@ with open("grades.txt") as f:
 
 Het pad is relatief ten opzichte van de beschrijving en begint dus met `media/`. In de code open je het bestand met enkel zijn naam, zonder map. Studenten zien elk bestand in een eigen tabblad naast de code: ze kunnen het lezen, maar niet aanpassen. Meerdere bestanden scheid je met een spatie. Elke keer dat de code uitgevoerd wordt, vertrekt ze van de oorspronkelijke bestanden, dus een programma dat naar een bestand schrijft, geeft telkens hetzelfde resultaat.
 
+Ook een trinket die tekende met de `turtle`-module, werkt hier. De tekening verschijnt in een paneel `Tekening` onder de uitvoer, op een wit canvas:
+
+```html
+<dw-code-playground>
+<pre>
+import turtle
+for _ in range(5):
+    turtle.forward(100)
+    turtle.right(144)
+</pre>
+</dw-code-playground>
+```
+
 ::: warning Code playgrounds zijn nog een vroege versie
 
 Dit is een proof of concept. Zowel het uitzicht als de manier waarop je ze schrijft, verandert wellicht nog, dus reken erop dat je pagina's met een playground later nog moet bijwerken. Voorlopig draaien ze enkel Python.
