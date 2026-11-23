@@ -51,6 +51,7 @@ You can also access these submissions in other ways:
 * An overview of the submissions for a **specific user** can be found by clicking on `Solutions` on the [course page of that user](../user-management/#tracking-students).
 
 In the submissions overview, you will find a button `Retest submissions` at the top right. This button allows you to [retest](../series-export-and-retest/#retest-submissions) all solutions in the overview.
+Dodona first shows how many submissions match the current filters and asks you to confirm. You can retest at most 1000 submissions at once from this overview: for a longer list, Dodona shows `Too many submissions` and nothing is retested. Filter the list first, for example on a status or a student, or turn on `Most recent per user` on the submissions of a single exercise.
 
 You can also filter for the `Most recent submissions per user` by clicking on the three dots to the right of the filter bar. Here you'll also find the option to `automatically reload submissions` every 5 seconds, which can be useful when you want to follow the progress of your students in real-time.
 
