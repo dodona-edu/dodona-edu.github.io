@@ -52,6 +52,7 @@ Deze oplossingen kan je ook op andere manieren bereiken:
 * Een overzicht van de oplossingen voor **specifieke gebruiker** vind je door op `Oplossingen` te klikken op de [cursuspagina van die gebruiker](../user-management/#studenten-opvolgen).
 
 In het oplossingenoverzicht vind je rechtsboven de knop `Oplossingen hertesten`. Met deze knop kan je [alle oplossingen uit het overzicht hertesten](../series-export-and-retest/#oplossing-hertesten).
+Dodona toont eerst hoeveel oplossingen er met de huidige filters overeenkomen en vraagt je om te bevestigen. Vanuit dit overzicht kan je maximaal 1000 oplossingen tegelijk hertesten: bij een langere lijst toont Dodona `Te veel oplossingen` en wordt er niets hertest. Filter de lijst dan eerst, bijvoorbeeld op status of op een student, of zet `Meest recente per gebruiker` aan bij de oplossingen van één oefening.
 
 Rechts van de filterbalk vind je een knop met 3 puntjes. Hier kan je filteren op de `Meest recente correcte oplossing per gebruiker`, en de inzendingen `automatisch laten herladen` om de voortgang van je studenten in real-time op te volgen.
 
