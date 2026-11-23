@@ -33,6 +33,8 @@ A pattern without a leading slash matches anywhere in the repository, a pattern 
 
 The file is read on every synchronisation, so adding or editing it takes effect on your next push: paths that were copied before are then removed from Dodona as well. Remove a pattern again and the files reappear on the push after that.
 
+An excluded directory never becomes a learning activity, even when it contains a `config.json`, and Dodona does not write to that file. This makes `.dodonaignore` the place for templates or tools that look like an exercise but are not one. An existing activity whose directory you exclude is removed, just like a deleted directory, and comes back as the same activity once you drop the pattern again.
+
 ::: warning Keep the files that Dodona needs
 A pattern that is too broad, such as an unanchored `tests` or a stray `*`, also excludes files that Dodona needs to judge submissions. For judge repositories this is checked: a `.dodonaignore` that would exclude `config.json` or `run` makes the synchronisation fail and the last working version stays in place. The administrator of the repository receives an email whenever a synchronisation fails.
 :::

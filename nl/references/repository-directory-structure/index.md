@@ -33,6 +33,8 @@ Een patroon zonder schuine streep vooraan komt overal in de repository overeen, 
 
 Het bestand wordt bij elke synchronisatie gelezen, dus een `.dodonaignore` toevoegen of aanpassen heeft effect bij je volgende push: paden die eerder wel gekopieerd werden, worden dan ook uit Dodona verwijderd. Verwijder je een patroon weer, dan komen die bestanden terug bij de push daarna.
 
+Een uitgesloten map wordt nooit een leeractiviteit, ook niet als ze een `config.json` bevat, en Dodona schrijft ook niets naar dat bestand. Zo kan je met `.dodonaignore` sjablonen of hulpmiddelen buiten houden die op een oefening lijken maar er geen zijn. Een bestaande activiteit waarvan je de map uitsluit, wordt verwijderd, net zoals bij een verwijderde map, en komt terug als dezelfde activiteit zodra je het patroon weer weghaalt.
+
 ::: warning Behoud de bestanden die Dodona nodig heeft
 Een patroon dat te breed is, zoals een niet-verankerde `tests` of een verdwaalde `*`, sluit ook bestanden uit die Dodona nodig heeft om oplossingen te verbeteren. Voor judge-repositories wordt dit gecontroleerd: een `.dodonaignore` die `config.json` of `run` zou uitsluiten laat de synchronisatie mislukken, en de laatst werkende versie blijft staan. De beheerder van de repository krijgt een e-mail wanneer een synchronisatie mislukt.
 :::
