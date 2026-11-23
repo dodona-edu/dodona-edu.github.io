@@ -52,9 +52,11 @@ series.exam_sessions.destroy_all
 # Two activities, from the repositories already usable on course 11 (verified live:
 # course 11's usable_repositories are #1 "Example Python Activities" and #2 "A lot of
 # python activities" -- no extra CourseRepository grant needed, unlike course 29).
-exercise_ids = [9_328_740, 14_589_228]
-exercise_ids.each do |id|
-  exercise = Exercise.find(id)
+# The seed of November 2026 gives activities random ids, so fall back to the first two
+# exercises of those repositories when the original ids don't exist.
+exercises = Exercise.where(id: [9_328_740, 14_589_228]).to_a
+exercises = Exercise.where(repository_id: [1, 2]).order(:id).limit(2).to_a if exercises.size < 2
+exercises.each do |exercise|
   next if series.exercises.include?(exercise)
 
   series.exercises << exercise
