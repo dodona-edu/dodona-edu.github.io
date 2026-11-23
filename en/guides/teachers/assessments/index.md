@@ -17,7 +17,7 @@ If you want to use Dodona for a graded test or exam, you can turn a series into 
 This guide walks through the full journey: setting up the series, what your students see, monitoring and stopping sessions while the assessment runs, publishing the results afterwards, and what exactly is logged.
 
 ::: tip Important
-An assessment series controls access *within* Dodona: it does not lock down the student's computer, record their screen, or block other websites. Treat it as one layer of a supervised exam, alongside supervision in the room or the exam environment your school uses.
+An assessment series controls access *within* Dodona: it does not lock down the student's computer, record their screen, or block other websites. Treat it as one layer of a supervised exam, alongside supervision in the room or the exam environment your school uses. To also lock down the student's computer, you can require [Safe Exam Browser](#safe-exam-browser) (beta).
 :::
 
 ## Creating an assessment series
@@ -36,7 +36,9 @@ When you select the assessment kind, an extra `Assessment options` section appea
 
 * `Automatically stop assessment sessions`: when the deadline is reached, all assessment sessions are automatically stopped. Students then no longer have access to the exercises and their submissions. This option requires the series to have a deadline. Sessions stopped this way show `System` as the actor in the assessment timeline.
 
-![Assessment options section of the series form, with a generated password, and the restrict-Dodona and auto-stop checkboxes checked](assessment-options-en.png)
+* `Require Safe Exam Browser` (beta): students can only take the assessment in Safe Exam Browser, which locks down their computer during the assessment. See [Safe Exam Browser](#safe-exam-browser) below.
+
+![Assessment options section of the series form, with a generated password, the restrict-Dodona and auto-stop checkboxes checked, and the Require Safe Exam Browser checkbox unchecked](assessment-options-en.png)
 
 All other properties of the form (name, deadline, description, visibility, …) work as for any series and are described in the [series settings](../series-settings/) reference. The visibility settings combine nicely with an assessment: with `Visible for students after start time`, for example, the series only appears at the moment the exam starts. Note that even a visible assessment series never shows its exercises to students until they start their session.
 
@@ -72,7 +74,7 @@ During the exam, the assessment overview is your control room. You reach it via 
 
 ![Assessment overview page with the status panel, the not-yet-started/in-progress/stopped counters, the timeline callout, and the sessions table listing started and stopped times per student](assessment-overview-en.png)
 
-At the top you find the assessment status panel with the current phase (`Not yet started`, `In progress`, `Stopped, awaiting publication` or `Published`) and the effective settings: `Dodona access` (`Restricted` or `Unrestricted`), `Password` (`Required`, with the `Show` button, or `Not required`) and `Auto-stop` (`Enabled` or `Disabled`). Next to it, three counters show how many students are `Not yet started`, `In progress` and `Stopped`; clicking a counter filters the table below.
+At the top you find the assessment status panel with the current phase (`Not yet started`, `In progress`, `Stopped, awaiting publication` or `Published`) and the effective settings: `Dodona access` (`Restricted` or `Unrestricted`), `Password` (`Required`, with the `Show` button, or `Not required`) and `Auto-stop` (`Enabled` or `Disabled`). An assessment that requires Safe Exam Browser also shows a `Safe Exam Browser` row, with a `Show` button for the [quit password](#setting-it-up). Next to it, three counters show how many students are `Not yet started`, `In progress` and `Stopped`; clicking a counter filters the table below.
 
 The table lists every student in the course with their `Started at` and `Stopped at` times. You can search by name, filter on `Member labels`, `Started` and `Stopped`, and sort the columns. Per row you can:
 
@@ -116,6 +118,69 @@ You can filter the timeline by `User`, `Action`, `Actor`, `IP address` and `Brow
 
 ![Assessment timeline with User/Action/Actor/IP address/Browser filters, the Export button, and a mix of event rows including a System-actor row](assessment-timeline-en.png)
 
+## Safe Exam Browser
+
+::: info Beta
+Safe Exam Browser support is in beta: the option only appears for teachers who take part in the beta. Would you like to try it? Contact us at [support@dodona.be](mailto:support@dodona.be).
+:::
+
+[Safe Exam Browser](https://safeexambrowser.org) is a free browser that locks down the student's computer during an exam: students can't switch to other programs, and they can only open Dodona and the websites you allow. When an assessment requires Safe Exam Browser, Dodona starts it for your students and signs them in, so you don't have to hand out a `.seb` file or a link.
+
+### Setting it up
+
+Tick `Require Safe Exam Browser` in the `Assessment options` section of the series form. Also tick [`Restrict Dodona to assessment content`](#creating-an-assessment-series), because Safe Exam Browser allows all of Dodona.
+
+![Assessment options with Require Safe Exam Browser ticked, the quit password and a stored configuration file](assessment-safe-exam-browser-en.png)
+
+Ticking `Require Safe Exam Browser` adds two fields:
+
+* `Quit password`: closes Safe Exam Browser when a student has to leave it without finalizing the assessment, for example because they're stuck. Pick a password yourself, or keep the one that was generated; you can change it on the series form later. Keep it from your students: with it, they can leave Safe Exam Browser in the middle of the assessment.
+* `Configuration file`: optional, see [your own configuration file](#your-own-configuration-file) below.
+
+If you untick `Require Safe Exam Browser` later, Dodona keeps the quit password and the configuration file for when you tick it again. A copy of the series still requires Safe Exam Browser, with a new quit password but without your configuration file: upload it again in the copy.
+
+::: warning Changing the quit password during an assessment
+A new quit password only applies to students who start Safe Exam Browser afterwards: students who are already in it still need the old one. So change it before the assessment starts, or note the old password first. Without it, a student whose Safe Exam Browser can no longer reach Dodona, for example because the network is down, can only get out by restarting their computer. As long as Dodona can be reached, stopping their session still works: within about a minute, Safe Exam Browser shows a `Close Safe Exam Browser` button.
+:::
+
+### Your own configuration file
+
+Upload your own configuration file when you want other Safe Exam Browser settings than the defaults, for example to allow an extra website such as the documentation of a programming language. Without one, Safe Exam Browser uses its default settings and only allows Dodona. Create the file with Safe Exam Browser's configuration tool, and keep these points in mind:
+
+* Save it for starting an exam, without a settings password: Dodona can't read an encrypted file.
+* Turn on the URL filter. Safe Exam Browser turns it off by default, and Dodona keeps your choice: with the filter off, students can open any website.
+* Don't put passwords or other secrets in the file: every student who starts the assessment receives it.
+
+Dodona keeps your settings and only sets what the assessment needs: the start page, the quit page and the quit password, and rules in the URL filter that allow `dodona.be` and `sandbox.dodona.be`. A quit password or start page in your own file is therefore replaced.
+
+Dodona refuses a file, and keeps the previous one, when the file:
+
+* is encrypted with a settings password;
+* is larger than 1 MB;
+* is not a `.seb` file that Dodona can read;
+* has a block rule in its URL filter that could block Dodona, such as `*` or `dodona.be`. A block rule with a regular expression is always refused, because Dodona can't check it: use a rule without a regular expression, such as `facebook.com`.
+
+The message under the field names the refused file and the reason. To remove your file, click the bin next to the field and save the form.
+
+### What your students need and see
+
+Students install [Safe Exam Browser](https://safeexambrowser.org/download_en.html) before the assessment, on the device they take it on. Safe Exam Browser exists for Windows, macOS and iPad; there is no version for Linux or Chromebooks. Before the assessment starts, `How this assessment works` tells them that the assessment runs in Safe Exam Browser, with a link to download it.
+
+![Series card before the assessment has started, with the Safe Exam Browser notice in "How this assessment works" and the Start assessment button](assessment-start-safe-exam-browser-en.png)
+
+The assessment then runs as described in [what your students see](#what-your-students-see), with these differences:
+
+* Students enter the assessment password (if required) in their usual browser. After `Start assessment`, Safe Exam Browser opens, checks its settings and signs them in, and the assessment opens by itself.
+* If Safe Exam Browser doesn't open, for example because it isn't installed yet, the student clicks `Start assessment again`. The link that opens Safe Exam Browser only works for 5 minutes, so a student who installs Safe Exam Browser in the meantime also uses that button.
+* `Finalize assessment` closes Safe Exam Browser by itself.
+* When you stop a session, or Dodona stops it at the deadline, Safe Exam Browser shows that the assessment has ended, with a `Close Safe Exam Browser` button.
+
+When a student is stuck in Safe Exam Browser, click its quit button and enter the quit password, which you find in the [status panel](#monitoring-the-assessment). If Safe Exam Browser closes during the assessment, the student's session stays in progress and they can't start again yet. Restore access as for a [closed browser](#what-your-students-see): `Stop session` and then `Re-open session`.
+
+::: tip Try it before the exam
+Course administrators can't start an assessment themselves. Try the whole flow before the exam with an account that is a student in the course, on the kind of device your students will use.
+:::
+
 ## Privacy considerations
 
 Questions your school (or your students) may ask about assessments:
@@ -123,6 +188,6 @@ Questions your school (or your students) may ask about assessments:
 * **What is logged?** The events listed above, with timestamps, the student's IP address, and browser information. Logging starts when the student starts the assessment and is limited to actions related to the assessment.
 * **Are students informed?** Yes. The start screen explicitly tells students that their actions are logged, what is included, and that these data are used solely to ensure a fair and correct examination process. A student only starts the assessment after seeing this notice.
 * **Who can see the log?** Only the course administrators of the course (and Dodona staff). Students cannot see the assessment timeline.
-* **Is this proctoring software?** No. Dodona does not record screens, webcams, or keystrokes, and cannot prevent students from opening other applications or websites. The IP address and browser information in the log can help detect anomalies (such as a session continuing from a different network), but physical supervision remains your responsibility.
+* **Is this proctoring software?** No. Dodona does not record screens, webcams, or keystrokes. Without [Safe Exam Browser](#safe-exam-browser), it cannot prevent students from opening other applications or websites. The IP address and browser information in the log can help detect anomalies (such as a session continuing from a different network), but physical supervision remains your responsibility.
 
 If you have questions about running an exam with Dodona that this guide doesn't answer, feel free to contact us at [support@dodona.be](mailto:support@dodona.be).
