@@ -121,33 +121,33 @@ You can filter the timeline by `User`, `Action`, `Actor`, `IP address` and `Brow
 ## Safe Exam Browser
 
 ::: info Beta
-Safe Exam Browser support is in beta: the option only appears for teachers who take part in the beta. Would you like to try it? Contact us at [support@dodona.be](mailto:support@dodona.be).
+Safe Exam Browser support is in beta: the option only appears for teachers who take part in the beta. Would you like to try it? Join through the [beta announcement](https://github.com/orgs/dodona-edu/discussions/categories/announcements) on our forum, where you'll also find the latest changes and can leave feedback.
 :::
 
 [Safe Exam Browser](https://safeexambrowser.org) is a free browser that locks down the student's computer during an exam: students can't switch to other programs, and they can only open Dodona and the websites you allow. When an assessment requires Safe Exam Browser, Dodona starts it for your students and signs them in, so you don't have to hand out a `.seb` file or a link.
 
 ### Setting it up
 
-Tick `Require Safe Exam Browser` in the `Assessment options` section of the series form. Also tick [`Restrict Dodona to assessment content`](#creating-an-assessment-series), because Safe Exam Browser allows all of Dodona.
+Tick `Require Safe Exam Browser` in the `Assessment options` section of the series form. Safe Exam Browser allows all of Dodona: to only allow the assessment, also tick [`Restrict Dodona to assessment content`](#creating-an-assessment-series).
 
 ![Assessment options with Require Safe Exam Browser ticked, the quit password and a stored configuration file](assessment-safe-exam-browser-en.png)
 
 Ticking `Require Safe Exam Browser` adds two fields:
 
-* `Quit password`: closes Safe Exam Browser when a student has to leave it without finalizing the assessment, for example because they're stuck. Pick a password yourself, or keep the one that was generated; you can change it on the series form later. Keep it from your students: with it, they can leave Safe Exam Browser in the middle of the assessment.
+* `Quit password`: closes Safe Exam Browser when a student is stuck in Dodona and can't get out of it otherwise. Pick a password yourself, or keep the one that was generated; you can change it on the series form later.
 * `Configuration file`: optional, see [your own configuration file](#your-own-configuration-file) below.
 
 If you untick `Require Safe Exam Browser` later, Dodona keeps the quit password and the configuration file for when you tick it again. A copy of the series still requires Safe Exam Browser, with a new quit password but without your configuration file: upload it again in the copy.
 
 ::: warning Changing the quit password during an assessment
-A new quit password only applies to students who start Safe Exam Browser afterwards: students who are already in it still need the old one. So change it before the assessment starts, or note the old password first. Without it, a student whose Safe Exam Browser can no longer reach Dodona, for example because the network is down, can only get out by restarting their computer. As long as Dodona can be reached, stopping their session still works: within about a minute, Safe Exam Browser shows a `Close Safe Exam Browser` button.
+A new quit password only applies to students who start Safe Exam Browser afterwards: students who already started still need the old one. So change it before the assessment starts, or note the old password first. Without it, a student whose Safe Exam Browser can no longer reach Dodona, for example because the network is down, can only get out by restarting their computer. As long as Dodona can be reached, you can also stop their session from the [assessment overview](#monitoring-the-assessment): within about a minute, Safe Exam Browser shows a `Close Safe Exam Browser` button.
 :::
 
 ### Your own configuration file
 
 Upload your own configuration file when you want other Safe Exam Browser settings than the defaults, for example to allow an extra website such as the documentation of a programming language. Without one, Safe Exam Browser uses its default settings and only allows Dodona. Create the file with Safe Exam Browser's configuration tool, and keep these points in mind:
 
-* Save it for starting an exam, without a settings password: Dodona can't read an encrypted file.
+* Don't set a settings password: Dodona can't read an encrypted file.
 * Turn on the URL filter. Safe Exam Browser turns it off by default, and Dodona keeps your choice: with the filter off, students can open any website.
 * Don't put passwords or other secrets in the file: every student who starts the assessment receives it.
 
@@ -171,11 +171,11 @@ Students install [Safe Exam Browser](https://safeexambrowser.org/download_en.htm
 The assessment then runs as described in [what your students see](#what-your-students-see), with these differences:
 
 * Students enter the assessment password (if required) in their usual browser. After `Start assessment`, Safe Exam Browser opens, checks its settings and signs them in, and the assessment opens by itself.
-* If Safe Exam Browser doesn't open, for example because it isn't installed yet, the student clicks `Start assessment again`. The link that opens Safe Exam Browser only works for 5 minutes, so a student who installs Safe Exam Browser in the meantime also uses that button.
+* If Safe Exam Browser doesn't open, for example because it isn't installed yet, the student clicks `Start assessment again`.
 * `Finalize assessment` closes Safe Exam Browser by itself.
 * When you stop a session, or Dodona stops it at the deadline, Safe Exam Browser shows that the assessment has ended, with a `Close Safe Exam Browser` button.
 
-When a student is stuck in Safe Exam Browser, click its quit button and enter the quit password, which you find in the [status panel](#monitoring-the-assessment). If Safe Exam Browser closes during the assessment, the student's session stays in progress and they can't start again yet. Restore access as for a [closed browser](#what-your-students-see): `Stop session` and then `Re-open session`.
+When a student is stuck in Safe Exam Browser, click its quit button and enter the quit password, which you find in the [status panel](#monitoring-the-assessment). The quit password also unlocks the `SEB LOCKED` screen, which Safe Exam Browser shows when it starts after an earlier session wasn't closed properly, for example because the computer was switched off during the assessment. If Safe Exam Browser closes during the assessment, the student's session stays in progress and they can't start again yet. Restore access as for a [closed browser](#what-your-students-see): `Stop session` and then `Re-open session`.
 
 ::: tip Try it before the exam
 Course administrators can't start an assessment themselves. Try the whole flow before the exam with an account that is a student in the course, on the kind of device your students will use.

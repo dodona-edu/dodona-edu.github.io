@@ -121,33 +121,33 @@ Je kan de tijdslijn filteren op `Gebruiker`, `Actie`, `Uitvoerder`, `IP adres` e
 ## Safe Exam Browser
 
 ::: info Bèta
-Ondersteuning voor Safe Exam Browser is in bèta: de optie verschijnt enkel voor lesgevers die aan de bèta deelnemen. Wil je ze uitproberen? Contacteer ons via [support@dodona.be](mailto:support@dodona.be).
+Ondersteuning voor Safe Exam Browser is in bèta: de optie verschijnt enkel voor lesgevers die aan de bèta deelnemen. Wil je ze uitproberen? Meld je aan via de [aankondiging van de bèta](https://github.com/orgs/dodona-edu/discussions/categories/announcements) op ons forum, waar je ook de laatste wijzigingen vindt en feedback kan achterlaten.
 :::
 
 [Safe Exam Browser](https://safeexambrowser.org) is een gratis browser die de computer van de student vergrendelt tijdens een examen: studenten kunnen niet naar andere programma's wisselen, en ze kunnen enkel Dodona en de websites die jij toelaat openen. Als een toets Safe Exam Browser vereist, start Dodona het voor je studenten en meldt het hen aan, zodat je geen `.seb`-bestand of link hoeft te verdelen.
 
 ### Instellen
 
-Vink `Verplicht Safe Exam Browser` aan in de sectie `Toetsopties` van het reeksformulier. Vink ook [`Beperk Dodona tot de inhoud van de toets`](#een-toetsreeks-aanmaken) aan, want Safe Exam Browser laat heel Dodona toe.
+Vink `Verplicht Safe Exam Browser` aan in de sectie `Toetsopties` van het reeksformulier. Safe Exam Browser laat heel Dodona toe: vink ook [`Beperk Dodona tot de inhoud van de toets`](#een-toetsreeks-aanmaken) aan om enkel de toets toe te laten.
 
 ![Toetsopties met Verplicht Safe Exam Browser aangevinkt, het afsluitwachtwoord en een opgeslagen configuratiebestand](assessment-safe-exam-browser-nl.png)
 
 Met `Verplicht Safe Exam Browser` aangevinkt verschijnen er twee extra velden:
 
-* `Afsluitwachtwoord`: sluit Safe Exam Browser af wanneer een student het moet verlaten zonder de toets af te ronden, bijvoorbeeld omdat die vastzit. Kies zelf een wachtwoord, of behoud het gegenereerde; je kan het later wijzigen op het reeksformulier. Houd het weg van je studenten: daarmee kunnen ze Safe Exam Browser midden in de toets verlaten.
+* `Afsluitwachtwoord`: sluit Safe Exam Browser af wanneer een student vastzit in Dodona en er niet op een andere manier uit kan. Kies zelf een wachtwoord, of behoud het gegenereerde; je kan het later wijzigen op het reeksformulier.
 * `Configuratiebestand`: optioneel, zie [je eigen configuratiebestand](#je-eigen-configuratiebestand) hieronder.
 
 Vink je `Verplicht Safe Exam Browser` later uit, dan bewaart Dodona het afsluitwachtwoord en het configuratiebestand voor wanneer je het opnieuw aanvinkt. Een kopie van de reeks vereist nog steeds Safe Exam Browser, met een nieuw afsluitwachtwoord maar zonder je configuratiebestand: upload het opnieuw in de kopie.
 
 ::: warning Het afsluitwachtwoord wijzigen tijdens een toets
-Een nieuw afsluitwachtwoord geldt pas voor studenten die Safe Exam Browser daarna starten: studenten die er al in zitten, hebben nog het oude nodig. Wijzig het dus voor de toets begint, of noteer eerst het oude wachtwoord. Zonder dat wachtwoord kan een student van wie Safe Exam Browser Dodona niet meer bereikt, bijvoorbeeld omdat het netwerk uitvalt, er enkel uit door de computer opnieuw op te starten. Zolang Dodona bereikbaar is, werkt het stoppen van de sessie nog: binnen ongeveer een minuut toont Safe Exam Browser een knop `Safe Exam Browser afsluiten`.
+Een nieuw afsluitwachtwoord geldt pas voor studenten die Safe Exam Browser daarna starten: studenten die al begonnen zijn, hebben nog het oude nodig. Wijzig het dus voor de toets begint, of noteer eerst het oude wachtwoord. Zonder dat wachtwoord kan een student van wie Safe Exam Browser Dodona niet meer bereikt, bijvoorbeeld omdat het netwerk uitvalt, er enkel uit door de computer opnieuw op te starten. Zolang Dodona bereikbaar is, kan je de sessie ook stoppen via het [toetsoverzicht](#de-toets-opvolgen): binnen ongeveer een minuut toont Safe Exam Browser een knop `Safe Exam Browser afsluiten`.
 :::
 
 ### Je eigen configuratiebestand
 
 Upload je eigen configuratiebestand wanneer je andere instellingen voor Safe Exam Browser wil dan de standaardinstellingen, bijvoorbeeld om een extra website toe te laten zoals de documentatie van een programmeertaal. Zonder bestand gebruikt Safe Exam Browser zijn standaardinstellingen en laat het enkel Dodona toe. Maak het bestand met de configuratietool van Safe Exam Browser, en let op deze punten:
 
-* Bewaar het om een examen te starten, zonder instellingenwachtwoord: Dodona kan een versleuteld bestand niet lezen.
+* Stel geen instellingenwachtwoord in: Dodona kan een versleuteld bestand niet lezen.
 * Zet de URL-filter aan. Safe Exam Browser zet die standaard uit, en Dodona behoudt je keuze: met de filter uit kunnen studenten elke website openen.
 * Zet geen wachtwoorden of andere geheimen in het bestand: elke student die de toets start, krijgt het.
 
@@ -171,11 +171,11 @@ Studenten installeren [Safe Exam Browser](https://safeexambrowser.org/download_e
 De toets verloopt daarna zoals beschreven in [wat je studenten zien](#wat-je-studenten-zien), met deze verschillen:
 
 * Studenten vullen het toetswachtwoord in (indien vereist) in hun gewone browser. Na `Start toets` gaat Safe Exam Browser open, controleert het de instellingen en meldt het hen aan, en de toets opent vanzelf.
-* Gaat Safe Exam Browser niet open, bijvoorbeeld omdat het nog niet geïnstalleerd is, dan klikt de student op `Start toets opnieuw`. De link die Safe Exam Browser opent, werkt maar 5 minuten, dus een student die Safe Exam Browser intussen installeert, gebruikt ook die knop.
+* Gaat Safe Exam Browser niet open, bijvoorbeeld omdat het nog niet geïnstalleerd is, dan klikt de student op `Start toets opnieuw`.
 * `Toets afronden` sluit Safe Exam Browser vanzelf af.
 * Wanneer jij een sessie stopt, of Dodona ze stopt op de deadline, toont Safe Exam Browser dat de toets afgelopen is, met een knop `Safe Exam Browser afsluiten`.
 
-Zit een student vast in Safe Exam Browser, klik dan op de afsluitknop en geef het afsluitwachtwoord in, dat je in het [statuspaneel](#de-toets-opvolgen) vindt. Sluit Safe Exam Browser af tijdens de toets, dan blijft de sessie van de student bezig en kan die nog niet opnieuw starten. Herstel de toegang zoals bij een [dichtgeklikte browser](#wat-je-studenten-zien): `Stop sessie` en daarna `Heropen sessie`.
+Zit een student vast in Safe Exam Browser, klik dan op de afsluitknop en geef het afsluitwachtwoord in, dat je in het [statuspaneel](#de-toets-opvolgen) vindt. Met het afsluitwachtwoord ontgrendel je ook het scherm `SEB LOCKED`, dat Safe Exam Browser toont wanneer het start nadat een vorige sessie niet goed afgesloten werd, bijvoorbeeld omdat de computer tijdens de toets uitgezet werd. Sluit Safe Exam Browser af tijdens de toets, dan blijft de sessie van de student bezig en kan die nog niet opnieuw starten. Herstel de toegang zoals bij een [dichtgeklikte browser](#wat-je-studenten-zien): `Stop sessie` en daarna `Heropen sessie`.
 
 ::: tip Probeer het uit voor het examen
 Cursusbeheerders kunnen een toets niet zelf starten. Probeer het volledige verloop voor het examen uit met een account dat student is in de cursus, op het soort toestel dat je studenten zullen gebruiken.

@@ -1872,6 +1872,7 @@ shots:
     crop:
       selector: '#exam_mode_section'
     must_show:
+      - Restrict Dodona to assessment content checkbox (checked); the password and auto-stop checkboxes unchecked
       - Require Safe Exam Browser checkbox (checked) with its help text
       - Quit password field with the fixed password and its refresh/show buttons
       - Configuration file field showing the stored file name and the bin, with its help text
@@ -1886,7 +1887,8 @@ shots:
       selector: '#series-card-{seriesId}'
     must_show:
       - '"How this assessment works" callout including the Safe Exam Browser notice and its install link'
-      - password input ("Enter password") + Start assessment button
+      - only the restrict-Dodona notice next to it (no password input, no auto-stop line)
+      - Start assessment button
 
   - id: ASSESS-5
     page: guides/teachers/assessments
