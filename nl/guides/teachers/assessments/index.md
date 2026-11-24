@@ -170,7 +170,7 @@ Studenten installeren [Safe Exam Browser](https://safeexambrowser.org/download_e
 
 De toets verloopt daarna zoals beschreven in [wat je studenten zien](#wat-je-studenten-zien), met deze verschillen:
 
-* Studenten vullen het toetswachtwoord in (indien vereist) in hun gewone browser. Na `Start toets` gaat Safe Exam Browser open, controleert het de instellingen en meldt het hen aan, en de toets opent vanzelf.
+* Studenten vullen het toetswachtwoord in (indien vereist) in hun gewone browser. Na `Start toets` gaat Safe Exam Browser open en meldt het hen aan, en de toets opent vanzelf.
 * Gaat Safe Exam Browser niet open, bijvoorbeeld omdat het nog niet geïnstalleerd is, dan klikt de student op `Start toets opnieuw`.
 * `Toets afronden` sluit Safe Exam Browser vanzelf af.
 * Wanneer jij een sessie stopt, of Dodona ze stopt op de deadline, toont Safe Exam Browser dat de toets afgelopen is, met een knop `Safe Exam Browser afsluiten`.
@@ -178,7 +178,7 @@ De toets verloopt daarna zoals beschreven in [wat je studenten zien](#wat-je-stu
 Zit een student vast in Safe Exam Browser, klik dan op de afsluitknop en geef het afsluitwachtwoord in, dat je in het [statuspaneel](#de-toets-opvolgen) vindt. Met het afsluitwachtwoord ontgrendel je ook het scherm `SEB LOCKED`, dat Safe Exam Browser toont wanneer het start nadat een vorige sessie niet goed afgesloten werd, bijvoorbeeld omdat de computer tijdens de toets uitgezet werd. Sluit Safe Exam Browser af tijdens de toets, dan blijft de sessie van de student bezig en kan die nog niet opnieuw starten. Herstel de toegang zoals bij een [dichtgeklikte browser](#wat-je-studenten-zien): `Stop sessie` en daarna `Heropen sessie`.
 
 ::: tip Probeer het uit voor het examen
-Cursusbeheerders kunnen een toets niet zelf starten. Probeer het volledige verloop voor het examen uit met een account dat student is in de cursus, op het soort toestel dat je studenten zullen gebruiken.
+Cursusbeheerders kunnen niet zelf deelnemen aan een toets. Probeer het volledige verloop voor het examen uit met een account dat student is in de cursus, op het soort toestel dat je studenten zullen gebruiken.
 :::
 
 ## Privacyoverwegingen

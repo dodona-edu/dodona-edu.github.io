@@ -170,7 +170,7 @@ Students install [Safe Exam Browser](https://safeexambrowser.org/download_en.htm
 
 The assessment then runs as described in [what your students see](#what-your-students-see), with these differences:
 
-* Students enter the assessment password (if required) in their usual browser. After `Start assessment`, Safe Exam Browser opens, checks its settings and signs them in, and the assessment opens by itself.
+* Students enter the assessment password (if required) in their usual browser. After `Start assessment`, Safe Exam Browser opens and signs them in, and the assessment opens by itself.
 * If Safe Exam Browser doesn't open, for example because it isn't installed yet, the student clicks `Start assessment again`.
 * `Finalize assessment` closes Safe Exam Browser by itself.
 * When you stop a session, or Dodona stops it at the deadline, Safe Exam Browser shows that the assessment has ended, with a `Close Safe Exam Browser` button.
@@ -178,7 +178,7 @@ The assessment then runs as described in [what your students see](#what-your-stu
 When a student is stuck in Safe Exam Browser, click its quit button and enter the quit password, which you find in the [status panel](#monitoring-the-assessment). The quit password also unlocks the `SEB LOCKED` screen, which Safe Exam Browser shows when it starts after an earlier session wasn't closed properly, for example because the computer was switched off during the assessment. If Safe Exam Browser closes during the assessment, the student's session stays in progress and they can't start again yet. Restore access as for a [closed browser](#what-your-students-see): `Stop session` and then `Re-open session`.
 
 ::: tip Try it before the exam
-Course administrators can't start an assessment themselves. Try the whole flow before the exam with an account that is a student in the course, on the kind of device your students will use.
+Course administrators can't take part in an assessment themselves. Try the whole flow before the exam with an account that is a student in the course, on the kind of device your students will use.
 :::
 
 ## Privacy considerations
