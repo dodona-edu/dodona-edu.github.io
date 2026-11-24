@@ -10,7 +10,7 @@ Dodona allows setting the configuration of an **exercise** and a **reading activ
 
 ## Config file structure for exercises
 
-- **`type`**: Must be set to `exercise` for exercises. Defaults to `exercise` if not present.
+- **`type`**: Must be set to `exercise` for exercises. Defaults to `exercise` if not present. Changing the `type` of an exercise that already has submissions does not convert it: Dodona keeps the old exercise as a removed exercise, together with its submissions, and creates a new learning activity in the same directory. You have to add that new learning activity to your series again.
 - **`programming_language`** (string): the programming language of the exercise, used for syntax highlighting and correct file extensions. The available programming languages can be found [here](https://dodona.be/en/programming_languages/).
 - **`access`** (`public` or `private`): determines who can use this exercise
   - `public`: any other teacher on Dodona can use this exercise

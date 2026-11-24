@@ -10,7 +10,7 @@ Dodona laat toe om de configuratie van een **oefening** of een **leesactiviteit*
 
 ## Configuratiebestandsstructuur voor oefeningen
 
-- **`type`**: Moet ingesteld worden op `exercise` voor oefeningen. De standaardwaarde indien afwezig is `exercise`.
+- **`type`**: Moet ingesteld worden op `exercise` voor oefeningen. De standaardwaarde indien afwezig is `exercise`. Pas je het `type` aan van een oefening waarvoor al oplossingen ingediend zijn, dan wordt die oefening niet omgezet: Dodona bewaart de oude oefening als verwijderde oefening, samen met haar ingediende oplossingen, en maakt in dezelfde map een nieuwe leeractiviteit aan. Die nieuwe leeractiviteit moet je zelf opnieuw toevoegen aan je reeksen.
 - **`programming_language`** (string): de programmeertaal van de oefening, wordt gebruikt voor *syntax highlighting* en om de juiste bestandsextensie te bepalen. Een overzicht van de mogelijke programmeertalen vind je [hier](https://dodona.be/nl/programming_languages/).
 - **`access`** (`public` of `private`): bepaalt wie deze oefening kan gebruiken
   - **`public`**: elke lesgever op Dodona kan deze oefening gebruiken
