@@ -121,7 +121,7 @@ Je kan de tijdslijn filteren op `Gebruiker`, `Actie`, `Uitvoerder`, `IP adres` e
 ## Safe Exam Browser
 
 ::: info Bèta
-Ondersteuning voor Safe Exam Browser is in bèta: de optie verschijnt enkel voor lesgevers die aan de bèta deelnemen. Wil je ze uitproberen? Meld je aan via de [aankondiging van de bèta](https://github.com/orgs/dodona-edu/discussions/categories/announcements) op ons forum, waar je ook de laatste wijzigingen vindt en feedback kan achterlaten.
+Ondersteuning voor Safe Exam Browser is in bèta: de optie verschijnt enkel voor lesgevers die aan de bèta deelnemen. Wil je ze uitproberen? Meld je aan via de [aankondiging van de bèta](https://github.com/orgs/dodona-edu/discussions/208) op ons forum, waar je ook de laatste wijzigingen vindt en feedback kan achterlaten.
 :::
 
 [Safe Exam Browser](https://safeexambrowser.org) is een gratis browser die de computer van de student vergrendelt tijdens een examen: studenten kunnen niet naar andere programma's wisselen, en ze kunnen enkel Dodona en de websites die jij toelaat openen. Als een toets Safe Exam Browser vereist, start Dodona het voor je studenten en meldt het hen aan, zodat je geen `.seb`-bestand of link hoeft te verdelen.

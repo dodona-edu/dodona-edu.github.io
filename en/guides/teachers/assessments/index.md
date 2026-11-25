@@ -121,7 +121,7 @@ You can filter the timeline by `User`, `Action`, `Actor`, `IP address` and `Brow
 ## Safe Exam Browser
 
 ::: info Beta
-Safe Exam Browser support is in beta: the option only appears for teachers who take part in the beta. Would you like to try it? Join through the [beta announcement](https://github.com/orgs/dodona-edu/discussions/categories/announcements) on our forum, where you'll also find the latest changes and can leave feedback.
+Safe Exam Browser support is in beta: the option only appears for teachers who take part in the beta. Would you like to try it? Join through the [beta announcement](https://github.com/orgs/dodona-edu/discussions/208) on our forum, where you'll also find the latest changes and can leave feedback.
 :::
 
 [Safe Exam Browser](https://safeexambrowser.org) is a free browser that locks down the student's computer during an exam: students can't switch to other programs, and they can only open Dodona and the websites you allow. When an assessment requires Safe Exam Browser, Dodona starts it for your students and signs them in, so you don't have to hand out a `.seb` file or a link.
