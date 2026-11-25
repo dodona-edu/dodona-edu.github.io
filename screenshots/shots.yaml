@@ -1818,6 +1818,7 @@ shots:
       - Require a password to start the assessment checkbox (checked) + Password field
       - Restrict Dodona to assessment content checkbox (checked)
       - Automatically stop assessment sessions checkbox (checked)
+      - Require Safe Exam Browser checkbox (unchecked); it only shows with the safe_exam_browser flag, which the development seeds enable for zeus
 
   - id: ASSESS-2
     page: guides/teachers/assessments
@@ -1862,6 +1863,32 @@ shots:
         stopped with a teacher actor, one System actor row if auto-stop fired)
       - User/Action/Actor/IP address/Browser filter dropdowns
       - Export button
+
+  - id: ASSESS-6
+    page: guides/teachers/assessments
+    file: assessment-safe-exam-browser
+    url: /{locale}/courses/11/ # placeholder; the hook navigates to the real series edit URL
+    state: [assessments-exam-series, assessments-safe-exam-browser]
+    crop:
+      selector: '#exam_mode_section'
+    must_show:
+      - Restrict Dodona to assessment content checkbox (checked); the password and auto-stop checkboxes unchecked
+      - Require Safe Exam Browser checkbox (checked) with its help text
+      - Quit password field with the fixed password and its refresh/show buttons
+      - Configuration file field showing the stored file name and the bin, with its help text
+
+  - id: ASSESS-7
+    page: guides/teachers/assessments
+    file: assessment-start-safe-exam-browser
+    url: /{locale}/courses/11/
+    user: 5
+    state: [assessments-exam-series, assessments-safe-exam-browser]
+    crop:
+      selector: '#series-card-{seriesId}'
+    must_show:
+      - '"How this assessment works" callout including the Safe Exam Browser notice and its install link'
+      - only the restrict-Dodona notice next to it (no password input, no auto-stop line)
+      - Start assessment button
 
   - id: ASSESS-5
     page: guides/teachers/assessments

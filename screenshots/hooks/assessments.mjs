@@ -36,6 +36,7 @@ const REAL_URL = {
   'ASSESS-1': (locale, id) => `/${locale}/series/${id}/edit`,
   'ASSESS-3': (locale, id) => `/${locale}/series/${id}/assessment_overview`,
   'ASSESS-4': (locale, id) => `/${locale}/series/${id}/exam_logs`,
+  'ASSESS-6': (locale, id) => `/${locale}/series/${id}/edit`,
 };
 
 export async function prepare(page, { locale, shot }) {
