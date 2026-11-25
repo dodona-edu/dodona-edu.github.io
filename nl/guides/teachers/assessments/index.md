@@ -145,10 +145,10 @@ Een nieuw afsluitwachtwoord geldt pas voor studenten die Safe Exam Browser daarn
 
 ### Je eigen configuratiebestand
 
-Upload je eigen configuratiebestand wanneer je andere instellingen voor Safe Exam Browser wil dan de standaardinstellingen, bijvoorbeeld om een extra website toe te laten zoals de documentatie van een programmeertaal. Zonder bestand gebruikt Safe Exam Browser zijn standaardinstellingen en laat het enkel Dodona toe. Maak het bestand met de configuratietool van Safe Exam Browser, en let op deze punten:
+Upload je eigen configuratiebestand wanneer je andere instellingen voor Safe Exam Browser wil dan de standaardinstellingen, bijvoorbeeld om een extra website toe te laten zoals de documentatie van een programmeertaal. Zonder bestand gelden de instellingen van Dodona zelf, en die laten enkel Dodona toe. Maak het bestand met de configuratietool van Safe Exam Browser, en let op deze punten:
 
 * Stel geen instellingenwachtwoord in: Dodona kan een versleuteld bestand niet lezen.
-* Zet de URL-filter aan. Safe Exam Browser zet die standaard uit, en Dodona behoudt je keuze: met de filter uit kunnen studenten elke website openen.
+* Mogen studenten enkel Dodona en de websites die jij toelaat openen, zet dan de URL-filter aan. De configuratietool zet die standaard uit, en Dodona behoudt je keuze: met de filter uit kunnen studenten elke website openen.
 * Zet geen wachtwoorden of andere geheimen in het bestand: elke student die de toets start, krijgt het.
 
 Dodona behoudt je instellingen en stelt enkel in wat de toets nodig heeft: de startpagina, de afsluitpagina en het afsluitwachtwoord, en regels in de URL-filter die `dodona.be` en `sandbox.dodona.be` toelaten. Een afsluitwachtwoord of startpagina in je eigen bestand wordt dus vervangen.
@@ -175,10 +175,12 @@ De toets verloopt daarna zoals beschreven in [wat je studenten zien](#wat-je-stu
 * `Toets afronden` sluit Safe Exam Browser vanzelf af.
 * Wanneer jij een sessie stopt, of Dodona ze stopt op de deadline, toont Safe Exam Browser dat de toets afgelopen is, met een knop `Safe Exam Browser afsluiten`.
 
-Zit een student vast in Safe Exam Browser, klik dan op de afsluitknop en geef het afsluitwachtwoord in, dat je in het [statuspaneel](#de-toets-opvolgen) vindt. Met het afsluitwachtwoord ontgrendel je ook het scherm `SEB LOCKED`, dat Safe Exam Browser toont wanneer het start nadat een vorige sessie niet goed afgesloten werd, bijvoorbeeld omdat de computer tijdens de toets uitgezet werd. Sluit Safe Exam Browser af tijdens de toets, dan blijft de sessie van de student bezig en kan die nog niet opnieuw starten. Herstel de toegang zoals bij een [dichtgeklikte browser](#wat-je-studenten-zien): `Stop sessie` en daarna `Heropen sessie`.
+Zit een student vast in Safe Exam Browser, ga dan naar het toestel van de student, klik op de afsluitknop van Safe Exam Browser en geef het afsluitwachtwoord in, dat je in het [statuspaneel](#de-toets-opvolgen) vindt. De sessie van de student is dan nog bezig, dus die kan de toets niet zelf opnieuw starten: klik op `Stop sessie` en daarna op `Heropen sessie`, zoals bij een student die [de browser dichtklikte](#wat-je-studenten-zien). Hetzelfde geldt wanneer Safe Exam Browser om een andere reden afsluit, bijvoorbeeld omdat het crasht.
+
+Met het afsluitwachtwoord ontgrendel je ook het scherm `SEB LOCKED`, dat Safe Exam Browser toont wanneer het start nadat een vorige sessie niet goed afgesloten werd, bijvoorbeeld omdat de computer tijdens de toets uitgezet werd.
 
 ::: tip Probeer het uit voor het examen
-Cursusbeheerders kunnen niet zelf deelnemen aan een toets. Probeer het volledige verloop voor het examen uit met een account dat student is in de cursus, op het soort toestel dat je studenten zullen gebruiken.
+Cursusbeheerders kunnen niet zelf deelnemen aan een toets. Probeer het volledige verloop voor het examen uit met een account dat student is in de cursus, op het soort toestel dat je studenten zullen gebruiken. Met een korte oefentoets die Safe Exam Browser vereist, kunnen je studenten ook voor het echte examen nagaan of Safe Exam Browser werkt op hun eigen toestel.
 :::
 
 ## Privacyoverwegingen
