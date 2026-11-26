@@ -33,9 +33,9 @@ If you want to quickly copy an existing course, follow these steps:
 
 :::
 
-If you have chosen to copy an existing course, you will see a list of all visible courses on Dodona. You can filter using the search bar to quickly find the desired course. Click the link button on the right side of the table to open the respective course in a new window. This way, you can quickly check if this is the correct course. Click the circle in the left column to confirm your choice.
+If you have chosen to copy an existing course, you will see a list of all visible courses on Dodona. You can filter using the search bar to quickly find the desired course. Click the name of a course to open it in a new tab. This way, you can quickly check if this is the correct course. Click anywhere else in its row to choose it.
 
-![List of visible courses to copy from, with a search bar and a link button per row](./course-new-copy-course-options-en.png)
+![List of visible courses to copy from, with a search bar, filters and a radio button per row](./course-new-copy-course-options-en.png)
 
 Next, you need to specify which elements of the course you want to copy. The series structure, including descriptions, is always copied. You can then choose whether to copy the exercises, deadlines, and course administrators. You can also choose to set all copied series to hidden by default. This is very useful if you do not want to release the entire course to your students yet.
 
