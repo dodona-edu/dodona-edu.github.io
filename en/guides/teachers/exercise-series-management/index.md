@@ -20,7 +20,7 @@ On this page, you will find the `Copy existing series` and `Create series` butto
 
 ![Manage series page with the Copy existing series and Create series buttons in the top right corner](./course-new-series-button-en.png)
 
-When copying an existing series, you can pick the series you want to copy. This is filtered to the current course by default, but you can pick series from any course you are an admin of.
+When copying an existing series, you can pick the series you want to copy. This is filtered to the current course by default, but you can pick series from any course you are an admin of. Click the name of a series to open it in a new tab, or click anywhere else in its row to choose it, and then click `Next`.
 
 ![Copy series dialog listing series from the current course](./series-new-copy-en.png)
 

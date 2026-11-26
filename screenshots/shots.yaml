@@ -265,6 +265,18 @@ shots:
       - per-exercise columns
       - the two filter checkboxes
 
+  - id: ESM-5
+    page: guides/teachers/exercise-series-management
+    file: series-new-copy
+    url: /{locale}/courses/11/series/new/copy
+    state: [course11-naming]
+    crop:
+      selector: '#main-container .card'
+    must_show:
+      - academic year and course filters on the current course
+      - a radio button per series, series names as links
+      - Next button
+
   # ---------------- series-settings ----------------
   - id: SS-1
     page: guides/teachers/series-settings
@@ -504,6 +516,20 @@ shots:
       pad: 8
     must_show:
       - Copy this course row in the header-card menu
+
+  - id: CC-2
+    page: guides/teachers/creating-a-course
+    file: course-new-copy-course-options
+    url: /{locale}/courses/new
+    state: [course11-naming]
+    hook: hooks/new-course-copy.mjs
+    cap_height: 525
+    crop:
+      selector: '#course-step'
+    must_show:
+      - search bar and filters
+      - a radio button per course row, course names as links
+      - no separate "open" button per row
 
 ---
 # FAQ area shot manifest. See ../README.md for the schema.

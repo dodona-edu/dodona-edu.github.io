@@ -18,7 +18,7 @@ Op deze pagina vind je rechtsboven de knoppen `Bestaande reeks kopiëren` en `Re
 
 ![Pagina Reeksen beheren met de knoppen Bestaande reeks kopiëren en Reeks aanmaken rechtsboven](./course-new-series-button-nl.png)
 
-Bij het kopiëren van een bestaande reeks selecteer je de reeks die je wil kopiëren. Dit wordt standaard gefilterd op de huidige cursus, maar je kan reeksen kiezen uit elke cursus die je beheert.
+Bij het kopiëren van een bestaande reeks selecteer je de reeks die je wil kopiëren. Dit wordt standaard gefilterd op de huidige cursus, maar je kan reeksen kiezen uit elke cursus die je beheert. Klik op de naam van een reeks om die in een nieuw tabblad te openen, of klik ergens anders in de rij om die reeks te kiezen, en klik daarna op `Volgende`.
 
 ![Dialoogvenster om een reeks te kopiëren, met reeksen uit de huidige cursus](./series-new-copy-nl.png)
 

@@ -33,9 +33,9 @@ Als je een bestaande cursus snel wil kopiëren kan dat door onderstaande stappen
 
 :::
 
-Als je gekozen hebt om een bestaande cursus te kopiëren, dan krijg je een lijst van alle zichtbare cursussen op Dodona te zien. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Via de link-knop aan de rechterkant van de tabel open je de betreffende cursus in een nieuw venster. Zo kan je snel controleren of dit de juiste cursus is. Klik het bolletje in de linkerkolom aan om je keuze te bevestigen.
+Als je gekozen hebt om een bestaande cursus te kopiëren, dan krijg je een lijst van alle zichtbare cursussen op Dodona te zien. Via de zoekbalk kan je filteren om snel de gewenste cursus te vinden. Klik op de naam van een cursus om die in een nieuw tabblad te openen. Zo kan je snel controleren of dit de juiste cursus is. Klik ergens anders in de rij om die cursus te kiezen.
 
-![Lijst van zichtbare cursussen om van te kopiëren, met een zoekbalk en een linkknop per rij](./course-new-copy-course-options-nl.png)
+![Lijst van zichtbare cursussen om van te kopiëren, met een zoekbalk, filters en een keuzerondje per rij](./course-new-copy-course-options-nl.png)
 
 Vervolgens moet je aangeven welke elementen van de cursus je wil overnemen. De reeksstructuur inclusief beschrijvingen worden altijd gekopieerd. Je kan dan nog kiezen of je de oefeningen, de deadlines en de cursusbeheerders wil overnemen. Vervolgens kan je er ook voor kiezen om de gekopieerde reeksen standaard allemaal op verborgen te zetten. Dit is zeer handig als je nog niet de volledige cursus wil vrijgeven aan je studenten.
 
