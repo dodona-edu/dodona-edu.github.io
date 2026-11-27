@@ -71,11 +71,13 @@ Wat je wel kan aanpassen is de **tijdzone** die gebruikt wordt voor het weergeve
 
 ![Pagina om profiel te bewerken met het veld Tijdzone gemarkeerd](./profile-timezone-nl.png)
 
-Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de lokale tijdzone zoals die door je browser gedetecteerd wordt, dan krijg je bovenaan elke pagina een mededeling te zien die erop wijst dat alle tijdsaanduidingen op het platform niet overeenkomen met de lokale tijdzone.
+Wanneer je je voor het eerst aanmeldt op Dodona, wordt je tijdzone ingesteld op de tijdzone van de plaats waar je je aanmeldt. Lukt dat niet, dan gebruikt Dodona de tijdzone van het land van je onderwijsinstelling.
 
-![Waarschuwing voor verkeerde tijdzone bovenaan een pagina](./timezone-warning-nl.png)
+Als de tijdzone uit je gebruikersprofiel niet overeenkomt met de tijdzone van je toestel, dan krijg je bovenaan elke pagina een waarschuwing te zien. Die waarschuwing vermeldt beide tijdzones, elk met het huidige tijdstip.
 
-Je kunt deze mededeling enkel weghalen door in je gebruikersprofiel de tijdzone in te stellen op de lokale tijdzone. Merk op dat de mededeling een link bevat waarmee je rechtstreeks naar je profielpagina kunt navigeren.
+![Waarschuwing voor de tijdzone bovenaan een pagina, met de tijdzone Seoul uit het profiel en de tijdzone Brussels van het toestel met hun huidige tijdstip, en een knop Schakel over naar Brussels](./timezone-warning-nl.png)
+
+Klik op de knop `Schakel over naar ...` in de waarschuwing (bijvoorbeeld `Schakel over naar Brussels`) om voortaan de tijdzone van je toestel te gebruiken. De pagina wordt opnieuw geladen en alle tijdstippen worden in je nieuwe tijdzone getoond. Wil je een andere tijdzone, volg dan de link `een andere tijdzone kiezen` in de waarschuwing om je profiel te bewerken. De waarschuwing verdwijnt zodra de tijdzone in je profiel overeenkomt met de tijdzone van je toestel.
 
 ## Selecteren van de stijl
 

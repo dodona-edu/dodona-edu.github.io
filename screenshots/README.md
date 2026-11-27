@@ -59,6 +59,8 @@ Review the diff (`git diff --stat`, view the images) before committing, and run
   the NL pass of course-bound shots needs the course flipped to Dutch (a state scenario).
 - Element crops include the element's own padding; even it out with per-shot `css` when
   a crop comes out lopsided.
+- The browser's clock is pinned to `Europe/Brussels` (override with `CAPTURE_TIME_ZONE`),
+  so the time zone warning only shows where a state scenario sets another zone.
 - Lit components hydrate after `load` — the default 1.8s wait exists for a reason.
 - Localised shots are `<name>-en.png` / `<name>-nl.png` next to their page;
   locale-independent ones use an explicit `path:` (shot once).

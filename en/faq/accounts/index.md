@@ -38,7 +38,7 @@ Dodona automatically gets your name and email from the login provider (e.g. Smar
 
 ## I get a warning that my time zone is wrong, what should I do?
 
-All deadlines on Dodona are displayed in your local time. To do this, Dodona needs to associate a time zone with your account. If we detect that the timezone of your browser is different from the timezone of your account, we will show a warning. You can change your timezone in your [Account Settings](https://dodona.be/en/profile).
+All deadlines on Dodona are displayed in your local time. To do this, Dodona needs to associate a time zone with your account. If we detect that the time zone of your device is different from the time zone of your account, we will show a warning that names both time zones. Click the `Switch to ...` button in the warning to use the time zone of your device, or pick another time zone in your [Account Settings](https://dodona.be/en/profile). See [setting your personal preferences](/en/guides/students/login-and-settings/#setting-your-personal-preferences) for more details.
 
 ## How do I get teacher rights? <Badge type="tip" text="teacher" />
 

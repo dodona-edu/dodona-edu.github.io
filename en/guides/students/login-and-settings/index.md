@@ -71,11 +71,13 @@ What you can modify is the **time zone** used for displaying all time indication
 
 ![Edit profile page with the Time zone field highlighted](./profile-timezone-en.png)
 
-If the time zone in your user profile does not match the local time zone detected by your browser, you will see a notification at the top of every page indicating that all time indications on the platform do not match the local time zone.
+When you sign in to Dodona for the first time, your time zone is set to the time zone of the place you sign in from. If that does not work out, Dodona uses the time zone of your institution's country.
 
-![Timezone mismatch warning banner at the top of a page](./timezone-warning-en.png)
+If the time zone in your user profile does not match the time zone of your device, you will see a warning at the top of every page. The warning names both time zones, each with its current time.
 
-You can only remove this notification by setting the time zone in your user profile to the local time zone. Note that the notification contains a link that allows you to navigate directly to your profile page.
+![Time zone warning at the top of a page, naming the Seoul time zone of the profile and the Brussels time zone of the device with their current times, with a Switch to Brussels button](./timezone-warning-en.png)
+
+Click the `Switch to ...` button in the warning (for example `Switch to Brussels`) to use the time zone of your device from now on. The page reloads and all times are shown in your new time zone. If you want another time zone, follow the `pick another time zone` link in the warning to edit your profile. The warning disappears as soon as the time zone in your profile matches the time zone of your device.
 
 ## Selecting a Theme
 

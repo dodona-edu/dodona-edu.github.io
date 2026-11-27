@@ -27,7 +27,14 @@ export async function launch({ width = 1600, height = 1200 } = {}) {
   const browser = await chromium.launch({ headless: true, executablePath: chromiumExecutable() });
   // reducedMotion: the course and series progress bars play an entrance wipe that a
   // capture can catch half-way (grey segments, blank status icons).
-  const ctx = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 2, reducedMotion: 'reduce' });
+  // timezoneId: the browser's clock decides whether the time zone warning shows and what it
+  // names, so pin it to the default Dodona zone instead of the capturing machine's.
+  const ctx = await browser.newContext({
+    viewport: { width, height },
+    deviceScaleFactor: 2,
+    reducedMotion: 'reduce',
+    timezoneId: process.env.CAPTURE_TIME_ZONE || 'Europe/Brussels',
+  });
   const page = await ctx.newPage();
   return { browser, ctx, page };
 }
