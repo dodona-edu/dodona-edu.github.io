@@ -1186,7 +1186,8 @@ shots:
       union: ['.alert-warning']
       pad: 16
     must_show:
-      - '"Your timezone is currently set to Seoul... change your timezone on your profile page." warning, with the profile-page link visible'
+      - 'warning naming the Seoul time zone of the profile and the Brussels time zone of the device (the runner pins the browser to Europe/Brussels), each with its current time'
+      - 'the "pick another time zone" link and the "Switch to Brussels" button'
 
   # ---------------------------------------------------------------------------------------
   # Stage D -- student 5, course 29, EN pass. Stage E repeats this whole block on /nl/...
